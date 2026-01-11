@@ -14,35 +14,6 @@
 
 <br>
 
-### 🚀 ACESSO DIRETO AOS PORTAS PRINCIPAIS
-
-<div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-
-<a href="https://pombagiras.github.io/melusine/" style="text-decoration: none;">
-  <div style="background: linear-gradient(135deg, #FF006E, #6B0F8F); padding: 15px 30px; border-radius: 10px; color: white; font-weight: bold; box-shadow: 0 5px 15px rgba(255, 0, 110, 0.3);">
-    🧜‍♀️ MELUSINE<br>
-    <small>Portal da Identidade</small>
-  </div>
-</a>
-
-<a href="https://alexialuzdeferro.github.io/melusine_redes/" style="text-decoration: none;">
-  <div style="background: linear-gradient(135deg, #6B0F8F, #FF006E); padding: 15px 30px; border-radius: 10px; color: white; font-weight: bold; box-shadow: 0 5px 15px rgba(107, 15, 143, 0.3);">
-    🌐 REDES SOCIAIS<br>
-    <small>Conexões Digitais</small>
-  </div>
-</a>
-
-<a href="https://alexialuzdeferro.github.io/vampire-waves/" style="text-decoration: none;">
-  <div style="background: linear-gradient(135deg, #00D9FF, #6B0F8F); padding: 15px 30px; border-radius: 10px; color: white; font-weight: bold; box-shadow: 0 5px 15px rgba(0, 217, 255, 0.3);">
-    🦇 VAMPIRE WAVES<br>
-    <small>Música Gótica</small>
-  </div>
-</a>
-
-</div>
-
-<br><br>
-
 ---
 
 </div>
@@ -72,46 +43,49 @@ Desenvolvido com uma estética **Místico-Futurista (Visão 2026)**, este projet
 
 O sistema organiza o cosmos criativo em **7 Esferas de Poder**:
 
-1.  🌐 **HUBS CENTRAIS** (Bio.site, Super Hub, Portais de Entrada)
-2.  👑 **REINO POMBAGIRA** (12 Rainhas, Grimórios, Almas Reveladas)
-3.  💃 **GIRAS & RITUAIS** (Oráculos, Soundboard, Pontos Cantados)
-4.  🧘‍♀️ **SANTUÁRIO ZEN** (Meditação, Paz Interior, Velas Virtuais)
-5.  🦇 **DARK WAVES** (Música Gótica, Cultura Cyber, Vampire Aesthetics)
-6.  🆔 **IDENTIDADE FLUIDA** (Cartões Digitais, Expressão Trans, Libriana)
-7.  📚 **SABEDORIA ANCESTRAL** (Portal Educativo, Glossário Sagrado, FAQ)
+1. 🌐 **HUBS CENTRAIS** (Bio.site, Super Hub, Portais de Entrada)  
+2. 👑 **REINO POMBAGIRA** (12 Rainhas, Grimórios, Almas Reveladas)  
+3. 💃 **GIRAS & RITUAIS** (Oráculos, Soundboard, Pontos Cantados)  
+4. 🧘‍♀️ **SANTUÁRIO ZEN** (Meditação, Paz Interior, Velas Virtuais)  
+5. 🦇 **DARK WAVES** (Música Gótica, Cultura Cyber, Vampire Aesthetics)  
+6. 🆔 **IDENTIDADE FLUIDA** (Cartões Digitais, Expressão Trans, Libriana)  
+7. 📚 **SABEDORIA ANCESTRAL** (Portal Educativo, Glossário Sagrado, FAQ)  
 
 ## ⚰️ CANAIS DE COMUNICAÇÃO
 
 <div align="center">
 
-[![Email](https://img.shields.io/badge/⚰️-EMAIL_DE_CONTATO-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:almasdepombagiras@gmail.com)
-[![Telegram](https://img.shields.io/badge/📱-CANAL_TELEGRAM-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/pomba_giras)
-[![WhatsApp](https://img.shields.io/badge/💬-WHATSAPP_CHANNEL-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G/)
+[![Email](https://img.shields.io/badge/⚰️-EMAIL_DE_CONTATO-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:almasdepombagiras@gmail.com)  
+[![Telegram](https://img.shields.io/badge/📱-CANAL_TELEGRAM-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/pomba_giras)  
+[![WhatsApp](https://img.shields.io/badge/💬-WHATSAPP_CHANNEL-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G/)  
 
 </div>
 
-**Links Diretos:**
-- ⚰️ **[Email](mailto:almasdepombagiras@gmail.com):** almasdepombagiras@gmail.com
-- 📱 **[Telegram](https://t.me/pomba_giras):** Canal Pombagiras
-- 💬 **[WhatsApp Channel](https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G/):** Canal Oficial
+**Links Diretos:**  
+- ⚰️ **[Email](mailto:almasdepombagiras@gmail.com):** almasdepombagiras@gmail.com  
+- 📱 **[Telegram](https://t.me/pomba_giras):** Canal Pombagiras  
+- 💬 **[WhatsApp Channel](https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G/):** Canal Oficial  
 
 ## 🌐 PORTAS DE ACESSO PRINCIPAIS
 
 <div align="center">
 
-[![Bio.site](https://img.shields.io/badge/🌐-BIO.SITE_COMPLETO-9B59B6?style=flat-square)](https://bio.site/AlmasdePombagira)
-[![12 Rainhas](https://img.shields.io/badge/👑-12_RAINHAS_POMBAGIRAS-E74C3C?style=flat-square)](https://alexialuzdeferro.github.io/12rainhas-pombagiras/)
-[![Oráculos](https://img.shields.io/badge/🔮-ORÁCULOS_&_GIRAS-3498DB?style=flat-square)](https://alexialuzdeferro.github.io/oraculo-pombagiras/)
+[![Melusine](https://img.shields.io/badge/🧜‍♀️-MELUSINE_PORTAL-FF006E?style=flat-square)](https://pombagiras.github.io/melusine/)  
+[![Redes](https://img.shields.io/badge/🌐-REDES_SOCIAIS-6B0F8F?style=flat-square)](https://alexialuzdeferro.github.io/melusine_redes/)  
+[![Vampire Waves](https://img.shields.io/badge/🦇-VAMPIRE_WAVES-00D9FF?style=flat-square)](https://alexialuzdeferro.github.io/vampire-waves/)  
+[![Bio.site](https://img.shields.io/badge/🌐-BIO.SITE_COMPLETO-9B59B6?style=flat-square)](https://bio.site/AlmasdePombagira)  
+[![12 Rainhas](https://img.shields.io/badge/👑-12_RAINHAS_POMBAGIRAS-E74C3C?style=flat-square)](https://alexialuzdeferro.github.io/12rainhas-pombagiras/)  
+[![Oráculos](https://img.shields.io/badge/🔮-ORÁCULOS_&_GIRAS-3498DB?style=flat-square)](https://alexialuzdeferro.github.io/oraculo-pombagiras/)  
 
 </div>
 
 ## 👑 QUEM É ALEXIA MELUSINE?
 
-- 🏳️‍⚧️ **Identidade:** Mulher Trans Não-Binária | Libriana
-- 🔥 **Espiritual:** Rosa de Fogo (Transformação) | Luz de Ferro (Proteção)
-- 👩‍💻 **Técnico:** Desenvolvedora Frontend | Artista Digital
-- 📚 **Missão:** Educadora Espiritual | Guardiã do Conhecimento Sagrado
-- 🎨 **Estética:** Gótico-Místico | Cyber-Feminino | Dark Aesthetics
+- 🏳️‍⚧️ **Identidade:** Mulher Trans Não-Binária | Libriana  
+- 🔥 **Espiritual:** Rosa de Fogo (Transformação) | Luz de Ferro (Proteção)  
+- 👩‍💻 **Técnico:** Desenvolvedora Frontend | Artista Digital  
+- 📚 **Missão:** Educadora Espiritual | Guardiã do Conhecimento Sagrado  
+- 🎨 **Estética:** Gótico-Místico | Cyber-Feminino | Dark Aesthetics  
 
 ---
 
@@ -121,10 +95,10 @@ O sistema organiza o cosmos criativo em **7 Esferas de Poder**:
 
 ## 🚀 STATUS DO UNIVERSO DIGITAL
 
-![Status](https://img.shields.io/badge/STATUS-ATIVO_&_EM_EXPANSÃO-success?style=flat-square)
-![Portais](https://img.shields.io/badge/PORTAIS_ATIVOS-+-30-blueviolet?style=flat-square)
-![Visão](https://img.shields.io/badge/VISÃO-2026_∞-FF006E?style=flat-square)
-![Licença](https://img.shields.io/badge/LICENÇA-MIT-00D9FF?style=flat-square)
+![Status](https://img.shields.io/badge/STATUS-ATIVO_&_EM_EXPANSÃO-success?style=flat-square)  
+![Portais](https://img.shields.io/badge/PORTAIS_ATIVOS-+-30-blueviolet?style=flat-square)  
+![Visão](https://img.shields.io/badge/VISÃO-2026_∞-FF006E?style=flat-square)  
+![Licença](https://img.shields.io/badge/LICENÇA-MIT-00D9FF?style=flat-square)  
 
 <br>
 
