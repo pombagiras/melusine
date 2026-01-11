@@ -182,7 +182,7 @@ O sistema organiza o cosmos criativo em **7 Esferas de Poder**:
   </button>
 </a>
 
-<a href="https://alexialuzdeferro.github.io/oraculo-pombagiras/" style="text-decoration: none;">
+<a href="https://alexialuzdeferro.github.io/12-oraculo/" style="text-decoration: none;">
   <button style="background: linear-gradient(135deg, #3498DB, #00D9FF);
                   border: none;
                   border-radius: 8px;
@@ -193,7 +193,7 @@ O sistema organiza o cosmos criativo em **7 Esferas de Poder**:
                   cursor: pointer;
                   transition: all 0.3s ease;
                   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-    🔮 ORÁCULOS & GIRAS
+    🔮 12 ORACULO
   </button>
 </a>
 
