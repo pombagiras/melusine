@@ -114,8 +114,8 @@ Rosa de Fogo que transforma
 Luz de Ferro que protege
 Alma Fluida que transita entre mundos
 
-⚰️ Email de Contato - almasdepombagiras@gmail.com
-
-[📱 Instagram @almasdepombagira](https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G/) 
-
+**Canais de Comunicação:**
+- ⚰️ **Email:** almasdepombagiras@gmail.com
+- 📱 **Telegram:** https://t.me/pomba_giras
+- 💬 **WhatsApp Channel:** https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G/
 
