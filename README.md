@@ -16,21 +16,23 @@
 
 ### 🚀 ACESSO DIRETO AOS PORTAS PRINCIPAIS
 
-<a href="https://alexialuzdeferro.github.io/grimorio-das-pombagiras/">
-  <img src="https://img.shields.io/badge/📖_GRIMÓRIO_DAS_POMBAGIRAS-CONHECIMENTO_SAGRADO-FF006E?style=for-the-badge&logo=book&logoColor=white" alt="Grimório">
+<a href="https://pombagiras.github.io/melusine/">
+  <img src="https://img.shields.io/badge/🧜‍♀️_MELUSINE-PORTAL_DA_IDENTIDADE-FF006E?style=for-the-badge&logo=sparkles&logoColor=white" alt="Melusine">
 </a>
 
-<a href="https://bio.site/AlmasdePombagira">
-  <img src="https://img.shields.io/badge/🌐_BIO.SITE_COMPLETO-PORTAL_DE_LINKS-6B0F8F?style=for-the-badge&logo=linktree&logoColor=white" alt="Bio.site">
+<a href="https://alexialuzdeferro.github.io/melusine_redes/">
+  <img src="https://img.shields.io/badge/🌐_REDES_SOCIAIS-CONEXÕES_DIGITAIS-6B0F8F?style=for-the-badge&logo=instagram&logoColor=white" alt="Redes Sociais">
 </a>
 
-<a href="https://github.com/pombagiras">
-  <img src="https://img.shields.io/badge/💻_GITHUB_POMBAGIRAS-CÓDIGO_FONTE-00D9FF?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+<a href="https://alexialuzdeferro.github.io/vampire-waves/">
+  <img src="https://img.shields.io/badge/🦇_VAMPIRE_WAVES-MÚSICA_GÓTICA-00D9FF?style=for-the-badge&logo=music&logoColor=white" alt="Vampire Waves">
 </a>
 
 <br><br>
 
 ---
+
+</div>
 
 </div>
 
