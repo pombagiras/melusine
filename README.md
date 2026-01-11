@@ -114,8 +114,6 @@ Rosa de Fogo que transforma
 Luz de Ferro que protege
 Alma Fluida que transita entre mundos
 
-🏠 Voltar ao Topo
-
-</div> ```
+⚰️ Email de Contato - almasdepombagiras@gmail.com
 
 
