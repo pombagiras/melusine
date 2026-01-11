@@ -115,7 +115,17 @@ Luz de Ferro que protege
 Alma Fluida que transita entre mundos
 
 **Canais de Comunicação:**
-- ⚰️ **Email:** almasdepombagiras@gmail.com
-- 📱 **Telegram:** https://t.me/pomba_giras
-- 💬 **WhatsApp Channel:** https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G/
+<div align="center">
+
+[![Email](https://img.shields.io/badge/⚰️-Email_Contato-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:almasdepombagiras@gmail.com)
+[![Telegram](https://img.shields.io/badge/📱-Telegram_Canal-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/pomba_giras)
+[![WhatsApp](https://img.shields.io/badge/💬-WhatsApp_Channel-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G/)
+
+</div>
+
+**Ou em formato de lista clicável:**
+- ⚰️ **[Email](mailto:almasdepombagiras@gmail.com):** almasdepombagiras@gmail.com
+- 📱 **[Telegram](https://t.me/pomba_giras):** Canal Pombagiras
+- 💬 **[WhatsApp Channel](https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G/):** Canal Oficial
+
 
