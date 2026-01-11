@@ -101,11 +101,7 @@ Conhecimento Tradicional: Domínio Público Cultural - Respeito às origens
 
 💖 AVISO HUMANO: Feito por uma pessoa real com sentimentos reais. Trate com a gentileza que deseja receber.
 
-<div align="center">
-Saravá todos os guias! Agô a todos os mentores!
-Que as Pombagiras iluminem seu caminho com sabedoria
-Que a Rosa de Fogo transforme suas dificuldades
-Que a Luz de Ferro proteja sua jornada
+
 
 ✨ Axé para todos que chegam com bom coração! ✨
 
@@ -114,22 +110,4 @@ Rosa de Fogo que transforma
 Luz de Ferro que protege
 Alma Fluida que transita entre mundos
 
-### 📞 Canais de Comunicação
-
-**Email:** [almasdepombagiras@gmail.com](mailto:almasdepombagiras@gmail.com)  
-**Telegram:** [Canal Pombagiras](https://t.me/pomba_giras)  
-**WhatsApp:** [Canal Oficial](https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G/)
-
-### Clique nos links abaixo para conectar:
-
-🔗 **Email:** [almasdepombagiras@gmail.com](mailto:almasdepombagiras@gmail.com)  
-🔗 **Telegram:** [t.me/pomba_giras](https://t.me/pomba_giras)  
-🔗 **WhatsApp Channel:** [whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G](https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G)
-
-### Formato alternativo (também clicável):
-
-⚰️ **[Email de Contato](mailto:almasdepombagiras@gmail.com)**  
-📱 **[Telegram Canal](https://t.me/pomba_giras)**  
-💬 **[WhatsApp Channel](https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G/)**
-
-
+🔱 - Email - almasdepombagiras@gmail.com
