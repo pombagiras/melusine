@@ -114,18 +114,22 @@ Rosa de Fogo que transforma
 Luz de Ferro que protege
 Alma Fluida que transita entre mundos
 
-**Canais de Comunicação:**
-<div align="center">
+### 📞 Canais de Comunicação
 
-[![Email](https://img.shields.io/badge/⚰️-Email_Contato-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:almasdepombagiras@gmail.com)
-[![Telegram](https://img.shields.io/badge/📱-Telegram_Canal-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/pomba_giras)
-[![WhatsApp](https://img.shields.io/badge/💬-WhatsApp_Channel-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G/)
+**Email:** [almasdepombagiras@gmail.com](mailto:almasdepombagiras@gmail.com)  
+**Telegram:** [Canal Pombagiras](https://t.me/pomba_giras)  
+**WhatsApp:** [Canal Oficial](https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G/)
 
-</div>
+### Clique nos links abaixo para conectar:
 
-**Ou em formato de lista clicável:**
-- ⚰️ **[Email](mailto:almasdepombagiras@gmail.com):** almasdepombagiras@gmail.com
-- 📱 **[Telegram](https://t.me/pomba_giras):** Canal Pombagiras
-- 💬 **[WhatsApp Channel](https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G/):** Canal Oficial
+🔗 **Email:** [almasdepombagiras@gmail.com](mailto:almasdepombagiras@gmail.com)  
+🔗 **Telegram:** [t.me/pomba_giras](https://t.me/pomba_giras)  
+🔗 **WhatsApp Channel:** [whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G](https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G)
+
+### Formato alternativo (também clicável):
+
+⚰️ **[Email de Contato](mailto:almasdepombagiras@gmail.com)**  
+📱 **[Telegram Canal](https://t.me/pomba_giras)**  
+💬 **[WhatsApp Channel](https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G/)**
 
 
