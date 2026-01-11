@@ -1,9 +1,3 @@
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/Al%C3%AA%20(3)%20(3)%20(1).png" width="200" style="border-radius: 50%; border: 4px solid #FF006E; box-shadow: 0 0 20px #FF006E;">
-
-<br><br>
-
 # 🌹 ALEXIA MELUSINE | PORTAL POMBAGIRA
 
 <h3 style="color: #FF006E;">Rosa de Fogo ∞ Luz de Ferro</h3>
@@ -12,15 +6,17 @@
   <a href="https://alexialuzdeferro.github.io/grimorio-das-pombagiras/">
     <img src="https://img.shields.io/badge/ACESSE_O_GRIMÓRIO_COMPLETO-GRIMÓRIO_DAS_POMBAGIRAS-FF006E?style=for-the-badge&logo=book&logoColor=white" alt="Grimório das Pombagiras">
   </a>
+  
+  <br><br>
+  
+  <a href="https://bio.site/AlmasdePombagira">
+    <img src="https://img.shields.io/badge/🌐_BIO.SITE_COMPLETO-PORTAL_DE_TODOS_OS_LINKS-6B0F8F?style=for-the-badge&logo=linktree&logoColor=white" alt="Bio.site Completo">
+  </a>
+  
+  <a href="https://github.com/pombagiras">
+    <img src="https://img.shields.io/badge/💻_REPOSITÓRIO_GITHUB-CÓDIGO_FONTE_&_PROJETOS-00D9FF?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pombagiras">
+  </a>
 </p>
-
-<p>
-  <i>"Eu transformo tradições ancestrais em código digital, a tela em encruzilhada e cada clique em ritual."</i>
-</p>
-
----
-
-</div>
 
 ## 🔥 O MANIFESTO DA ENCRUZILHADA DIGITAL
 
