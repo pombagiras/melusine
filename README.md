@@ -16,23 +16,34 @@
 
 ### 🚀 ACESSO DIRETO AOS PORTAS PRINCIPAIS
 
-<a href="https://pombagiras.github.io/melusine/">
-  <img src="https://img.shields.io/badge/🧜‍♀️_MELUSINE-PORTAL_DA_IDENTIDADE-FF006E?style=for-the-badge&logo=sparkles&logoColor=white" alt="Melusine">
+<div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+
+<a href="https://pombagiras.github.io/melusine/" style="text-decoration: none;">
+  <div style="background: linear-gradient(135deg, #FF006E, #6B0F8F); padding: 15px 30px; border-radius: 10px; color: white; font-weight: bold; box-shadow: 0 5px 15px rgba(255, 0, 110, 0.3);">
+    🧜‍♀️ MELUSINE<br>
+    <small>Portal da Identidade</small>
+  </div>
 </a>
 
-<a href="https://alexialuzdeferro.github.io/melusine_redes/">
-  <img src="https://img.shields.io/badge/🌐_REDES_SOCIAIS-CONEXÕES_DIGITAIS-6B0F8F?style=for-the-badge&logo=instagram&logoColor=white" alt="Redes Sociais">
+<a href="https://alexialuzdeferro.github.io/melusine_redes/" style="text-decoration: none;">
+  <div style="background: linear-gradient(135deg, #6B0F8F, #FF006E); padding: 15px 30px; border-radius: 10px; color: white; font-weight: bold; box-shadow: 0 5px 15px rgba(107, 15, 143, 0.3);">
+    🌐 REDES SOCIAIS<br>
+    <small>Conexões Digitais</small>
+  </div>
 </a>
 
-<a href="https://alexialuzdeferro.github.io/vampire-waves/">
-  <img src="https://img.shields.io/badge/🦇_VAMPIRE_WAVES-MÚSICA_GÓTICA-00D9FF?style=for-the-badge&logo=music&logoColor=white" alt="Vampire Waves">
+<a href="https://alexialuzdeferro.github.io/vampire-waves/" style="text-decoration: none;">
+  <div style="background: linear-gradient(135deg, #00D9FF, #6B0F8F); padding: 15px 30px; border-radius: 10px; color: white; font-weight: bold; box-shadow: 0 5px 15px rgba(0, 217, 255, 0.3);">
+    🦇 VAMPIRE WAVES<br>
+    <small>Música Gótica</small>
+  </div>
 </a>
+
+</div>
 
 <br><br>
 
 ---
-
-</div>
 
 </div>
 
