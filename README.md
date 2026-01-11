@@ -193,7 +193,7 @@ O sistema organiza o cosmos criativo em **7 Esferas de Poder**:
                   cursor: pointer;
                   transition: all 0.3s ease;
                   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-    🔮 12 ORACULO
+    🔮 ORÁCULO DAS 12 LUAS
   </button>
 </a>
 
