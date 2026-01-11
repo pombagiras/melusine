@@ -1,113 +1,117 @@
-# 🌹 Alexia Melusine: Portal Pombagira Revelada
+<div align="center">
 
-![Alexia Melusine](https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/Al%C3%AA%20(3)%20(3)%20(1).png)
+<img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/Al%C3%AA%20(3)%20(3)%20(1).png" width="200" style="border-radius: 50%; border: 4px solid #FF006E; box-shadow: 0 0 20px #FF006E;">
 
-**Rosa de Fogo ∞ Luz de Ferro**  
-🏳️‍⚧️ Espiritualidade Fluida • Pombagiras Reveladas • Identidade Trans Libriana
+<br><br>
 
-[🌐 Grimório ](https://alexialuzdeferro.github.io/grimorio-das-pombagiras/) •
-[📱 Instagram @almasdepombagira](https://www.instagram.com/almasdepombagira/) •
-[📜 MIT License](LICENSE)
+# 🌹 ALEXIA MELUSINE | PORTAL POMBAGIRA
 
-## ✨ Sobre Mim
-Sou Alexia Melusine - alma fluida que transita entre mundos, carregando a força ancestral das Pombagiras e a luz transformadora da identidade trans. Este portal é a materialização digital da minha jornada espiritual e técnica.
+<h3 style="color: #FF006E;">Rosa de Fogo ∞ Luz de Ferro</h3>
 
-## 🎯 Missão Tríplice
-1. **Educar** com respeito sobre tradições afro-brasileiras
-2. **Desmistificar** Pombagiras e entidades espirituais
-3. **Conectar** espiritualidade, tecnologia e identidade trans não-binária
+<p align="center">
+  <a href="https://alexialuzdeferro.github.io/super-hub-central/">
+    <img src="https://img.shields.io/badge/ACESSE_O_PORTAL_COMPLETO-SUPER_HUB_CENTRAL-FF006E?style=for-the-badge&logo=github&logoColor=white" alt="Super Hub Central">
+  </a>
+</p>
 
-## 📚 Conteúdo Educativo
-- 📖 **Glossário Sagrado:** 50+ termos explicados (Axé, Orixá, Médium, Egregora)
-- ✨ **Curiosidades:** 8 categorias históricas (Origem, Sincretismo, Linhas)
-- ❓ **FAQ Expandido:** 12 questões fundamentais de desmistificação
-- 📚 **Bibliografia:** Fontes acadêmicas (Prandi, Verger, Carneiro)
-- 🎬 **Documentários:** Conteúdo audiovisual sério
+<p>
+  <i>"Eu transformo tradições ancestrais em código digital, a tela em encruzilhada e cada clique em ritual."</i>
+</p>
 
-## 🔮 Ecossistema de Portais
-Este projeto faz parte de **+30 portais interconectados**:
-- 🌐 **Super Hub Central** (Porta de entrada)
-- 👑 **12 Rainhas Pombagiras** (Pombagira Revelada, Almas de Pombagira)
-- 🔮 **Oráculos & Giras** (12 Oráculo, Gira Completa, Soundboard)
-- 📖 **Grimório das Pombagiras** (Conhecimento sagrado)
-- 🧘‍♀️ **Meditação & Paz Interior** (Paz, Velas Virtuais, Relaxamento)
-- 🎵 **Música Gótica Espiritual** (Dark Melancholy, Vampire Waves)
-- 🌹 **Cartões de Identidade** (Alexia Melusine Card, Business Cards)
+---
 
-## 🛠️ Tecnologias
-- **Frontend:** HTML5, CSS3, JavaScript Vanilla
-- **Design:** CSS Grid, Flexbox, Animations CSS
-- **UI/UX:** Google Fonts, Font Awesome 6
-- **Hospedagem:** GitHub Pages
-- **Responsivo:** Mobile-first approach
+</div>
 
-## 👑 Minha Identidade
-- 🏳️‍⚧️ **Gênero:** Mulher Trans Não-Binária
-- 🔥 **Espiritual:** Rosa de Fogo, Luz de Ferro
-- ⚖️ **Astrológico:** Libriana em Movimento
-- 👩‍💻 **Profissional:** Desenvolvedora & Artista Digital
-- 📚 **Comunitária:** Educadora & Guardiã do Conhecimento
+## 🔥 O MANIFESTO DA ENCRUZILHADA DIGITAL
 
-## 🌐 Conexões
-**Portais Principais:**
-- [Super Hub Central](https://alexialuzdeferro.github.io/super-hub-central/)
-- [12 Rainhas Pombagiras](https://alexialuzdeferro.github.io/12rainhas-pombagiras/)
-- [Oráculos & Giras](https://alexialuzdeferro.github.io/oraculo-pombagiras/)
+Este portal não é apenas um site. É o **coração pulsante** de um ecossistema com **+30 dimensões interconectadas** do trabalho de **Alexia Melusine**.
 
-**Redes Sociais:**
-- [Instagram @almasdepombagira](https://www.instagram.com/almasdepombagira/)
-- [Bio.site Completo](https://bio.site/AlmasdePombagira)
-- [Linktree Alexia](https://linktr.ee/alexiarosadefogo)
+Desenvolvido com uma estética **Místico-Futurista (Visão 2026)**, este projeto utiliza **Glassmorphism, Neon Glow e Design Fluido** para criar uma experiência que une:
+- 🏳️‍⚧️ **Identidade Trans Não-Binária**
+- 👑 **Espiritualidade Afro-Brasileira (Pombagiras)**
+- 💻 **Tecnologia como Expressão Sagrada**
+- 🎨 **Arte Digital como Manifestação Mística**
 
-**Portfólio Criativo:**
-- [Portais de Meditação](https://alexialuzdeferro.github.io/paz/)
-- [Música Gótica Espiritual](https://alexialuzdeferro.github.io/dark-melancholy/)
-- [Cartões de Identidade](https://alexialuzdeferro.github.io/alexia-melusine/)
+## 🔮 TECNOLOGIAS & ENERGIA VIBRACIONAL
 
-## 📄 Estrutura do Projeto
+| Elemento | Tecnologia / Conceito |
+| :--- | :--- |
+| **Estrutura** | HTML5 Semântico (Os Ossos do Portal) |
+| **Estilo** | CSS3 Moderno, Grid & Flexbox (A Pele Digital) |
+| **Visual** | Glassmorphism & Neon Glow (A Aura Cibernética) |
+| **Responsividade** | Mobile First (Onipresença Mística) |
+| **Alma** | Identidade Visual Pombagira & Dark Aesthetics |
+| **Conexão** | GitHub Pages & RAW Hosting (Transmissão Eterna) |
 
-alexia-melusine-portal/
-├── index.html # Página principal
-├── LICENSE # Licença MIT
-├── README.md # Este arquivo
-└── assets/ # Recursos estáticos
+## 📂 ARQUITETURA DOS 7 REINOS MÍSTICOS
 
-## 🚀 Como Usar
-**Para Usuários:**
-1. Acesse qualquer portal pelo [Grimório ](https://alexialuzdeferro.github.io/grimorio-das-pombagiras/)
-2. Explore o conteúdo educativo com respeito
-3. Compartilhe com quem precisa desta educação
+O sistema organiza o cosmos criativo em **7 Esferas de Poder**:
 
-**Para Desenvolvedores:**
-```bash
-git clone https://github.com/alexialuzdeferro/pombagira-revelada.git
-cd pombagira-revelada
-open index.html
+1.  🌐 **HUBS CENTRAIS** (Super Hub, Portais de Entrada, Bio.site)
+2.  👑 **REINO POMBAGIRA** (12 Rainhas, Grimórios, Almas Reveladas)
+3.  💃 **GIRAS & RITUAIS** (Oráculos, Soundboard, Pontos Cantados)
+4.  🧘‍♀️ **SANTUÁRIO ZEN** (Meditação, Paz Interior, Velas Virtuais)
+5.  🦇 **DARK WAVES** (Música Gótica, Cultura Cyber, Vampire Aesthetics)
+6.  🆔 **IDENTIDADE FLUIDA** (Cartões Digitais, Expressão Trans, Libriana)
+7.  📚 **SABEDORIA ANCESTRAL** (Portal Educativo, Glossário Sagrado, FAQ)
 
+## ⚰️ CANAIS DE COMUNICAÇÃO
 
-📜 Licenciamento
-Código Fonte: MIT License - Uso comercial, modificação, distribuição
+<div align="center">
 
-Conteúdo Textual: CC BY 4.0 - Atribuição necessária
+[![Email](https://img.shields.io/badge/⚰️-EMAIL_DE_CONTATO-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:almasdepombagiras@gmail.com)
+[![Telegram](https://img.shields.io/badge/📱-CANAL_TELEGRAM-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/pomba_giras)
+[![WhatsApp](https://img.shields.io/badge/💬-WHATSAPP_CHANNEL-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G/)
 
-Imagens Próprias: CC BY-NC 4.0 - Uso não-comercial com créditos
+</div>
 
-Conhecimento Tradicional: Domínio Público Cultural - Respeito às origens
+**Links Diretos:**
+- ⚰️ **[Email](mailto:almasdepombagiras@gmail.com):** almasdepombagiras@gmail.com
+- 📱 **[Telegram](https://t.me/pomba_giras):** Canal Pombagiras
+- 💬 **[WhatsApp Channel](https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G/):** Canal Oficial
 
-⚠️ Avisos Importantes
-🛡️ AVISO ESPIRITUAL: Este não é um brinquedo. É conteúdo sério sobre tradições religiosas vivas. Entre com respeito ou não entre.
+## 🌐 PORTAS DE ACESSO PRINCIPAIS
 
-🔥 AVISO TÉCNICO: Todo código foi criado com dedicação artística. Plágio será energeticamente desfavorável.
+<div align="center">
 
-💖 AVISO HUMANO: Feito por uma pessoa real com sentimentos reais. Trate com a gentileza que deseja receber.
+[![Super Hub](https://img.shields.io/badge/🌐-SUPER_HUB_CENTRAL-9B59B6?style=flat-square)](https://alexialuzdeferro.github.io/super-hub-central/)
+[![12 Rainhas](https://img.shields.io/badge/👑-12_RAINHAS_POMBAGIRAS-E74C3C?style=flat-square)](https://alexialuzdeferro.github.io/12rainhas-pombagiras/)
+[![Oráculos](https://img.shields.io/badge/🔮-ORÁCULOS_&_GIRAS-3498DB?style=flat-square)](https://alexialuzdeferro.github.io/oraculo-pombagiras/)
 
+</div>
 
+## 👑 QUEM É ALEXIA MELUSINE?
 
-✨ Axé para todos que chegam com bom coração! ✨
+- 🏳️‍⚧️ **Identidade:** Mulher Trans Não-Binária | Libriana
+- 🔥 **Espiritual:** Rosa de Fogo (Transformação) | Luz de Ferro (Proteção)
+- 👩‍💻 **Técnico:** Desenvolvedora Frontend | Artista Digital
+- 📚 **Missão:** Educadora Espiritual | Guardiã do Conhecimento Sagrado
+- 🎨 **Estética:** Gótico-Místico | Cyber-Feminino | Dark Aesthetics
 
-Alexia Melusine
-Rosa de Fogo que transforma
-Luz de Ferro que protege
-Alma Fluida que transita entre mundos
+---
 
-🔱 - Email - almasdepombagiras@gmail.com
+<div align="center">
+
+<br><br>
+
+## 🚀 STATUS DO UNIVERSO DIGITAL
+
+![Status](https://img.shields.io/badge/STATUS-ATIVO_&_EM_EXPANSÃO-success?style=flat-square)
+![Portais](https://img.shields.io/badge/PORTAIS_ATIVOS-+-30-blueviolet?style=flat-square)
+![Visão](https://img.shields.io/badge/VISÃO-2026_∞-FF006E?style=flat-square)
+![Licença](https://img.shields.io/badge/LICENÇA-MIT-00D9FF?style=flat-square)
+
+<br>
+
+<h4 style="color: #6B0F8F;">Criado com 💜, 🔥 e ✨ por Alexia Melusine</h4>
+<p><i>Saravá! Agô a todos os guias e mentores!</i></p>
+
+[Instagram](https://www.instagram.com/almasdepombagira/) • 
+[Bio.site](https://bio.site/AlmasdePombagira) • 
+[Linktree](https://linktr.ee/alexiarosadefogo)
+
+<br>
+
+**✨ Axé para todos que chegam com bom coração! ✨**
+
+</div>
