@@ -9,8 +9,8 @@
 <h3 style="color: #FF006E;">Rosa de Fogo ∞ Luz de Ferro</h3>
 
 <p align="center">
-  <a href="https://alexialuzdeferro.github.io/super-hub-central/">
-    <img src="https://img.shields.io/badge/ACESSE_O_PORTAL_COMPLETO-SUPER_HUB_CENTRAL-FF006E?style=for-the-badge&logo=github&logoColor=white" alt="Super Hub Central">
+  <a href="https://alexialuzdeferro.github.io/grimorio-das-pombagiras/">
+    <img src="https://img.shields.io/badge/ACESSE_O_GRIMÓRIO_COMPLETO-GRIMÓRIO_DAS_POMBAGIRAS-FF006E?style=for-the-badge&logo=book&logoColor=white" alt="Grimório das Pombagiras">
   </a>
 </p>
 
@@ -47,7 +47,7 @@ Desenvolvido com uma estética **Místico-Futurista (Visão 2026)**, este projet
 
 O sistema organiza o cosmos criativo em **7 Esferas de Poder**:
 
-1.  🌐 **HUBS CENTRAIS** (Super Hub, Portais de Entrada, Bio.site)
+1.  🌐 **HUBS CENTRAIS** (Bio.site, Super Hub, Portais de Entrada)
 2.  👑 **REINO POMBAGIRA** (12 Rainhas, Grimórios, Almas Reveladas)
 3.  💃 **GIRAS & RITUAIS** (Oráculos, Soundboard, Pontos Cantados)
 4.  🧘‍♀️ **SANTUÁRIO ZEN** (Meditação, Paz Interior, Velas Virtuais)
@@ -74,7 +74,7 @@ O sistema organiza o cosmos criativo em **7 Esferas de Poder**:
 
 <div align="center">
 
-[![Super Hub](https://img.shields.io/badge/🌐-SUPER_HUB_CENTRAL-9B59B6?style=flat-square)](https://alexialuzdeferro.github.io/super-hub-central/)
+[![Bio.site](https://img.shields.io/badge/🌐-BIO.SITE_COMPLETO-9B59B6?style=flat-square)](https://bio.site/AlmasdePombagira)
 [![12 Rainhas](https://img.shields.io/badge/👑-12_RAINHAS_POMBAGIRAS-E74C3C?style=flat-square)](https://alexialuzdeferro.github.io/12rainhas-pombagiras/)
 [![Oráculos](https://img.shields.io/badge/🔮-ORÁCULOS_&_GIRAS-3498DB?style=flat-square)](https://alexialuzdeferro.github.io/oraculo-pombagiras/)
 
