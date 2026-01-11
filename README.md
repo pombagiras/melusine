@@ -5,7 +5,7 @@
 **Rosa de Fogo ∞ Luz de Ferro**  
 🏳️‍⚧️ Espiritualidade Fluida • Pombagiras Reveladas • Identidade Trans Libriana
 
-[🌐 Super Hub Central](https://alexialuzdeferro.github.io/super-hub-central/) •
+[🌐 Grimório ](https://alexialuzdeferro.github.io/grimorio-das-pombagiras/) •
 [📱 Instagram @almasdepombagira](https://www.instagram.com/almasdepombagira/) •
 [📜 MIT License](LICENSE)
 
@@ -74,7 +74,7 @@ alexia-melusine-portal/
 
 ## 🚀 Como Usar
 **Para Usuários:**
-1. Acesse qualquer portal pelo [Super Hub Central](https://alexialuzdeferro.github.io/super-hub-central/)
+1. Acesse qualquer portal pelo [Grimório ](https://alexialuzdeferro.github.io/grimorio-das-pombagiras/)
 2. Explore o conteúdo educativo com respeito
 3. Compartilhe com quem precisa desta educação
 
