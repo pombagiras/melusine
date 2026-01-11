@@ -115,6 +115,6 @@ Luz de Ferro que protege
 Alma Fluida que transita entre mundos
 
 ⚰️ Email de Contato - almasdepombagiras@gmail.com
-[🔱 Canal Whatssap](https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G/) 
+[🔱 Canal Whatssap].(https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G/) 
 
 
