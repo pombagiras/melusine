@@ -26,6 +26,10 @@
 
 <meta name="theme-color" content="#030303">
     <title>Alexia Melusine | Portal Educativo sobre Pomba-giras</title>
+
+    <!-- Adição Necessária: Conector Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;600;700&display=swap');
         
@@ -869,7 +873,6 @@
                 </div>
             </div>
             
-            <!-- Seção CURIOSIDADES NOVA -->
             <div id="curiosidades" class="edu-content-section">
                 <h3 class="edu-subtitle">✨ Curiosidades sobre Pomba-giras</h3>
                 <p style="text-align: center; margin-bottom: 2rem; opacity: 0.8;">Fatos fascinantes, histórias e detalhes pouco conhecidos sobre essas entidades poderosas</p>
@@ -925,7 +928,6 @@
                 </div>
             </div>
             
-            <!-- Seção FAQ EXPANDIDA -->
             <div id="faq" class="edu-content-section">
                 <h3 class="edu-subtitle">❓ Perguntas Frequentes Expandidas</h3>
                 <p style="text-align: center; margin-bottom: 2rem; opacity: 0.8;">Respostas detalhadas para as dúvidas mais comuns sobre Pomba-giras e religiões afro-brasileiras</p>
@@ -1066,7 +1068,6 @@
                 </div>
             </div>
             
-            <!-- Seção Bibliografia -->
             <div id="bibliografia" class="edu-content-section">
                 <h3 class="edu-subtitle">📚 Bibliografia Recomendada</h3>
                 <p style="text-align: center; margin-bottom: 2rem; opacity: 0.8;">Obras acadêmicas e literárias que abordam com seriedade as religiões afro-brasileiras</p>
@@ -1110,7 +1111,6 @@
                 </div>
             </div>
             
-            <!-- Seção Vídeos -->
             <div id="videos" class="edu-content-section">
                 <h3 class="edu-subtitle">🎬 Documentários e Entrevistas</h3>
                 <p style="text-align: center; margin-bottom: 2rem; opacity: 0.8;">Conteúdo audiovisual sério que aborda as religiões afro-brasileiras com respeito e profundidade</p>
@@ -1258,7 +1258,7 @@
             <div class="social-links">
                 <a href="https://bio.site/AlmasdePombagira" target="_blank">🔗 Bio.site</a>
                 <a href="https://linktr.ee/alexiarosadefogo" target="_blank">🔗 Linktree</a>
-               <a href="https://www.instagram.com/almasdepombagira/" target="_blank">🔗 Instagram</a>
+                <a href="https://www.instagram.com/almasdepombagira/" target="_blank">🔗 Instagram</a>
             </div>
         </section>
 
@@ -1266,6 +1266,10 @@
         <footer>
             <p style="font-size: 1.2rem; margin-bottom: 1rem;">✦ Alexia Melusine ✦</p>
             <p style="opacity: 0.7;">Rosa de Fogo • Luz de Ferro • Alma Fluida </p>
+            <!-- Adição do Contador Discreto no Rodapé -->
+            <div style="margin-top: 15px; font-size: 9px; letter-spacing: 5px; text-transform: uppercase; opacity: 0.5;">
+                O Olho que tudo vê registrou <span id="contagem-visceral">...</span> almas mundo afora.
+            </div>
             <p style="margin-top: 2rem; opacity: 0.5;">© 2026 - Todos os direitos ao Sagrado Feminino</p>
         </footer>
     </div>
@@ -1342,6 +1346,34 @@
                 });
             });
         });
+
+        // ========== ADIÇÃO: LÓGICA DO CONTADOR SUPABASE ==========
+        const _URL = 'https://rbygxkbewzknvjjhxdvw.supabase.co';
+        const _KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJieWd4a2Jld3prbnZqamh4ZHZ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjYwMDcxNjQsImV4cCI6MjA4MTU4MzE2NH0.YrHF9HEGo6yv9MyNsPzFgBhaAB1DRh2SLU8f7L6s1nY';
+        const _supabase = supabase.createClient(_URL, _KEY);
+
+        async function atualizarPortalVisceral() {
+            try {
+                // 1. Incrementa o acesso mundial no banco
+                await _supabase.rpc('increment_visceral_view', { target_page: 'pombagiras.com' });
+
+                // 2. Busca o valor total para exibir no rodapé
+                const { data, error } = await _supabase
+                    .from('access_stats')
+                    .select('view_count')
+                    .eq('page_name', 'pombagiras.com')
+                    .single();
+
+                if (data) {
+                    document.getElementById('contagem-visceral').innerText = data.view_count;
+                }
+            } catch (e) {
+                console.log("O olho observa em silêncio.");
+            }
+        }
+
+        // Dispara a função assim que carregar o portal
+        window.addEventListener('load', atualizarPortalVisceral);
     </script>
 </body>
 </html>
