@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="vibrant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO e Identidade Mundial -->
+    <title>POMBAGIRAS.COM | Conhecimento Sagrado & Arte Visceral</title>
+    <meta name="description" content="O olho que tudo vê nas encruzilhadas do mundo. Desmistificando o feminino proibido através da tecnologia e da ancestralidade. Alexia Melusine revela o que as sombras escondem. Laroyê.">
+
+    <!-- Open Graph / Redes Sociais (WhatsApp, Instagram, Facebook) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pombagiras.com/">
+    <meta property="og:title" content="POMBAGIRAS.COM | Conhecimento Sagrado & Arte Visceral">
+    <meta property="og:description" content="O olho que tudo vê nas encruzilhadas do mundo. Desmistificando o feminino proibido através da tecnologia e da ancestralidade. Alexia Melusine revela o que as sombras escondem. Laroyê.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/pombagiras/melusine-oficial/refs/heads/main/Ale%20Ultra%20(1).png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://pombagiras.com/">
+    <meta name="twitter:title" content="POMBAGIRAS.COM | Conhecimento Sagrado & Arte Visceral">
+    <meta name="twitter:description" content="O olho que tudo vê nas encruzilhadas do mundo. Desmistificando o feminino proibido através da tecnologia e da ancestralidade. Laroyê.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/pombagiras/melusine-oficial/refs/heads/main/Ale%20Ultra%20(1).png">
+    
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/pombagiras/melusine/main/Al%C3%AA%20(3)%20(3)%20(1).png">
+    <meta name="theme-color" content="#030303">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* --- DEFINIÇÃO DE TEMAS --- */
+        :root {
+            --transition-speed: 0.5s;
+        }
+
+        /* TEMA: Pombagira Vibrante (Padrão Original/Místico) */
+        [data-theme="vibrant"] {
+            --primary-color: #8B0000; /* Vermelho Sangue */
+            --secondary-color: #FFD700; /* Dourado */
+            --accent-color: #4A0E4E; /* Roxo Profundo */
+            --text-color: #333;
+            --light-bg: #FFF8DC; /* Creme */
+            --dark-bg: #2C1810;
+            --card-bg: #ffffff;
+            --gradient-header: linear-gradient(135deg, #8B0000 0%, #4A0E4E 100%);
+            --hero-overlay: linear-gradient(rgba(139, 0, 0, 0.7), rgba(74, 14, 78, 0.7));
+            --shadow-color: rgba(0,0,0,0.3);
+            --border-highlight: #8B0000;
+        }
+
+        /* TEMA: Modo Dia (Claro e Limpo) */
+        [data-theme="day"] {
+            --primary-color: #b30000;
+            --secondary-color: #d4af37;
+            --accent-color: #666;
+            --text-color: #1a1a1a;
+            --light-bg: #f4f4f4;
+            --dark-bg: #333333;
+            --card-bg: #ffffff;
+            --gradient-header: linear-gradient(135deg, #b30000 0%, #333 100%);
+            --hero-overlay: linear-gradient(rgba(255, 255, 255, 0.8), rgba(200, 200, 200, 0.8));
+            --shadow-color: rgba(0,0,0,0.1);
+            --border-highlight: #ccc;
+        }
+
+        /* TEMA: Modo Noite (Escuro e Confortável) */
+        [data-theme="night"] {
+            --primary-color: #ff6666; /* Vermelho mais suave */
+            --secondary-color: #FFD700;
+            --accent-color: #9370db;
+            --text-color: #e0e0e0;
+            --light-bg: #121212; /* Fundo quase preto */
+            --dark-bg: #000000;
+            --card-bg: #1e1e1e;
+            --gradient-header: linear-gradient(135deg, #1f1f1f 0%, #000 100%);
+            --hero-overlay: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+            --shadow-color: rgba(0,0,0,0.5);
+            --border-highlight: #333;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: var(--light-bg);
+            transition: background var(--transition-speed), color var(--transition-speed);
+            overflow-x: hidden; /* Evita rolagem horizontal acidental */
+        }
+
+        [data-theme="day"] .hero h1, 
+        [data-theme="day"] .hero p {
+            color: #333;
+            text-shadow: none;
+        }
+
+        /* --- ALTERAÇÃO SOLICITADA --- */
+        /* Força o título H1 dentro da HERO a ser amarelo/dourado apenas no tema VIBRANT */
+        [data-theme="vibrant"] .hero h1 {
+            color: var(--secondary-color); /* Amarelo/Dourado definido no tema */
+        }
+        /* --------------------------- */
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        /* Header */
+        header {
+            background: var(--gradient-header);
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px var(--shadow-color);
+            transition: background var(--transition-speed);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: var(--secondary-color);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            z-index: 1001; /* Garante que o logo fique acima do menu mobile se necessário */
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 0.95em;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+            background: rgba(255,255,255,0.1);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8em;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* Hero Section - ÚNICA PARTE ALTERADA ANTERIORMENTE */
+        .hero {
+            position: relative;
+            background: var(--hero-overlay), 
+                        url('https://raw.githubusercontent.com/pombagiras/melusine-oficial/refs/heads/main/Ale%20Ultra%20(1).png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+            margin-bottom: 40px;
+            transition: background var(--transition-speed);
+            backdrop-filter: blur(8px); /* Efeito de vidro/foco */
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+            animation: fadeInUp 1s ease;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 25px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            padding: 0 10px; /* Margem de segurança para texto não tocar a borda */
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        .cta-button {
+            background: var(--secondary-color);
+            color: #2C1810;
+            padding: 12px 35px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            display: inline-block;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        /* Main Content */
+        main { padding: 20px 0; }
+        .section { margin-bottom: 60px; padding: 20px 0; }
+        .section-header { text-align: center; margin-bottom: 40px; }
+        
+        .section-header h2 {
+            font-size: 2.2em;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            position: relative;
+            line-height: 1.3;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        .section-header p {
+            font-size: 1em;
+            color: var(--text-color);
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+
+        /* Cards General - AJUSTADO PARA MOBILE */
+        .cards-grid {
+            display: grid;
+            /* Alterado de 300px para 280px para telas estreitas */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px var(--shadow-color);
+            transition: all 0.3s ease;
+            border-top: 5px solid var(--primary-color);
+            color: var(--text-color);
+        }
+        
+        .card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px var(--shadow-color); }
+        .card-icon { font-size: 2.5em; color: var(--primary-color); margin-bottom: 15px; text-align: center; }
+        .card h3 { font-size: 1.4em; color: var(--primary-color); margin-bottom: 10px; text-align: center; }
+        .card p { line-height: 1.7; text-align: justify; opacity: 0.9; font-size: 0.95em; }
+
+        /* ENTITY CARDS - AJUSTADO PARA MOBILE */
+        .entity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); /* Reduzido para caber melhor */
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .entity-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-highlight);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px var(--shadow-color);
+        }
+
+        .entity-card:hover {
+            transform: scale(1.02);
+            border-color: var(--secondary-color);
+        }
+
+        .entity-header {
+            background: var(--gradient-header);
+            color: white;
+            padding: 12px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .entity-header i { font-size: 1.1em; color: var(--secondary-color); }
+        .entity-header h4 { font-size: 1.1em; margin: 0; }
+
+        .entity-body { padding: 15px; color: var(--text-color); }
+        
+        .entity-archetype {
+            font-weight: bold;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--border-highlight);
+            padding-bottom: 8px;
+        }
+
+        .entity-details { list-style: none; font-size: 0.9em; }
+        .entity-details li { margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px; }
+        .entity-details strong { color: var(--accent-color); min-width: 65px; }
+        [data-theme="night"] .entity-details strong { color: var(--secondary-color); }
+
+        /* Social Media Section */
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        .social-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px var(--shadow-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-card:hover { transform: translateY(-3px); }
+        .social-icon { font-size: 1.8em; min-width: 40px; text-align: center; }
+        .social-content h3 { font-size: 1em; margin-bottom: 2px; }
+        .social-handle { font-size: 0.8em; opacity: 0.7; }
+
+        /* Cores Sociais - Mantidas */
+        .instagram .social-icon { color: #E4405F; }
+        .youtube .social-icon { color: #FF0000; }
+        .tiktok .social-icon { color: #000; }
+        [data-theme="night"] .tiktok .social-icon { color: #fff; }
+        .kwai .social-icon { color: #ff8c00; }
+        .threads .social-icon { color: #000; }
+        [data-theme="night"] .threads .social-icon { color: #fff; }
+        .whatsapp .social-icon { color: #25D366; }
+        .telegram .social-icon { color: #0088cc; }
+        .discord .social-icon { color: #5865F2; }
+        .pinterest .social-icon { color: #bd081c; }
+
+        /* Article/Quote Styles */
+        .article-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px var(--shadow-color);
+            margin-bottom: 30px;
+            color: var(--text-color);
+        }
+        .article-header { background: var(--gradient-header); color: white; padding: 20px; text-align: center; }
+        .article-content { padding: 25px; }
+        .quote-box {
+            background: var(--accent-color);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border-left: 5px solid var(--secondary-color);
+            font-style: italic;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        .warning-box {
+            background: rgba(255, 243, 205, 0.1);
+            border: 1px solid var(--secondary-color);
+            border-left: 5px solid #F39C12;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            color: var(--text-color);
+        }
+
+        /* Footer & Theme Switcher */
+        footer {
+            background: var(--dark-bg);
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .footer-section h3 { color: var(--secondary-color); margin-bottom: 15px; font-size: 1.2em; }
+        .footer-section a { color: #ccc; text-decoration: none; font-size: 0.9em; }
+        .footer-section p { font-size: 0.9em; }
+        .footer-bottom { border-top: 1px solid #555; padding-top: 20px; text-align: center; color: #ccc; font-size: 0.85em; }
+
+        .theme-switcher {
+            position: fixed; bottom: 25px; right: 25px;
+            background: var(--card-bg); padding: 8px; border-radius: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4); display: flex; gap: 8px;
+            z-index: 2000; border: 2px solid var(--secondary-color);
+        }
+        .theme-btn {
+            background: none; border: none; cursor: pointer;
+            font-size: 1.2em; padding: 5px; border-radius: 50%; opacity: 0.6;
+        }
+        .theme-btn.active { opacity: 1; transform: scale(1.1); background: rgba(0,0,0,0.1); }
+        [data-theme="night"] .theme-btn.active { background: rgba(255,255,255,0.1); }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in { animation: fadeInUp 1s ease; }
+
+        /* --- MEDIA QUERIES PARA MOBILE --- */
+        @media (max-width: 900px) {
+             .hero h1 { font-size: 2.8em; }
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 0 15px; }
+            
+            /* Menu Mobile Estilizado */
+            .nav-links { 
+                display: none; 
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                flex-direction: column; 
+                gap: 0; 
+                background: var(--dark-bg); /* Fundo sólido para leitura */
+                padding: 10px 0;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+                border-bottom: 2px solid var(--secondary-color);
+            }
+            
+            .nav-links.active { display: flex; animation: slideDown 0.3s ease forwards; }
+            
+            @keyframes slideDown {
+                from { opacity: 0; transform: translateY(-10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+
+            .nav-links li { width: 100%; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1); }
+            .nav-links a { display: block; padding: 15px; width: 100%; border-radius: 0; }
+            
+            .menu-toggle { display: block; }
+            
+            /* Ajustes Hero e Títulos */
+            .hero { padding: 60px 0; background-attachment: scroll; /* Fix para alguns mobiles */ }
+            .hero h1 { font-size: 2.2em; }
+            .hero p { font-size: 1em; }
+            
+            .section-header h2 { font-size: 1.8em; }
+            
+            /* Botão flutuante */
+            .theme-switcher { 
+                bottom: 20px; right: 20px; 
+                padding: 5px;
+                opacity: 0.9;
+            }
+            .theme-btn { font-size: 1.1em; padding: 5px; }
+        }
+
+        @media (max-width: 480px) {
+            .logo { font-size: 1.5em; }
+            .hero h1 { font-size: 1.8em; }
+            .cta-button { width: 100%; max-width: 250px; }
+            .cards-grid, .entity-grid { grid-template-columns: 1fr; } /* Coluna única em telas muito pequenas */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="theme-switcher">
+        <button class="theme-btn" onclick="setTheme('day')" title="Modo Dia">☀️</button>
+        <button class="theme-btn" onclick="setTheme('night')" title="Modo Noite">🌙</button>
+        <button class="theme-btn active" onclick="setTheme('vibrant')" title="Modo Pombagira Vibrante">🌹</button>
+    </div>
+
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <i class="fas fa-moon"></i> Pombagiras
+            </div>
+            <button class="menu-toggle" aria-label="Abrir menu de navegação">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#artigos">Artigos</a></li>
+                <li><a href="#linha">Linha</a></li>
+                <li><a href="#respeito">Respeito</a></li>
+                <li><a href="#redes">Redes Sociais</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+        <div class="container">
+            <h1>Pombagiras: Guardiãs de Caminhos</h1>
+            <p>Um espaço dedicado ao conhecimento respeitoso e responsável sobre essas poderosas entidades da Umbanda e Quimbanda</p>
+            <a href="#sobre" class="cta-button">Conheça Mais</a>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="section" id="sobre">
+            <div class="section-header">
+                <h2>Sobre as Pombagiras</h2>
+                <p>Entidades femininas de grande força e sabedoria, guardiãs dos caminhos e protetoras dos necessitados</p>
+            </div>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-route"></i></div>
+                    <h3>Guardiãs dos Caminhos</h3>
+                    <p>As Pombagiras são conhecidas como guardiãs dos caminhos e encruzilhadas, protegendo aqueles que transitam pelos diversos aspectos da life.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-female"></i></div>
+                    <h3>Força Feminina</h3>
+                    <p>Representam o poder feminino em sua plenitude, a independência, a sensualidade sagrada e a capacidade de transformação.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Proteção e Justiça</h3>
+                    <p>Oferecem proteção contra energias negativas, injustiças e perseguições. São conhecidas por sua atuação rápida e eficaz.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="redes">
+            <div class="section-header">
+                <h2>Conecte-se Conosco</h2>
+                <p>Junte-se a nossa comunidade em todas as plataformas</p>
+            </div>
+
+            <div class="social-grid">
+                <a href="https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G" target="_blank" class="social-card whatsapp">
+                    <div class="social-icon"><i class="fab fa-whatsapp"></i></div>
+                    <div class="social-content">
+                        <h3>Canal WhatsApp</h3>
+                        <span class="social-handle">Acesse Agora</span>
+                    </div>
+                </a>
+
+                <a href="https://t.me/pomba_giras" target="_blank" class="social-card telegram">
+                    <div class="social-icon"><i class="fab fa-telegram"></i></div>
+                    <div class="social-content">
+                        <h3>Canal Telegram</h3>
+                        <span class="social-handle">Acesse Agora</span>
+                    </div>
+                </a>
+
+                <a href="https://discord.gg/gWZP8R7Dqu" target="_blank" class="social-card discord">
+                    <div class="social-icon"><i class="fab fa-discord"></i></div>
+                    <div class="social-content">
+                        <h3>Servidor Discord</h3>
+                        <span class="social-handle">Comunidade</span>
+                    </div>
+                </a>
+
+                <a href="https://instagram.com/almasdepombagira" target="_blank" class="social-card instagram">
+                    <div class="social-icon"><i class="fab fa-instagram"></i></div>
+                    <div class="social-content">
+                        <h3>Instagram</h3>
+                        <span class="social-handle">@almasdepombagira</span>
+                    </div>
+                </a>
+
+                <a href="https://youtube.com/@almasdepombagira" target="_blank" class="social-card youtube">
+                    <div class="social-icon"><i class="fab fa-youtube"></i></div>
+                    <div class="social-content">
+                        <h3>YouTube</h3>
+                        <span class="social-handle">@almasdepombagira</span>
+                    </div>
+                </a>
+
+                <a href="https://br.pinterest.com/almasdepombagira/" target="_blank" class="social-card pinterest">
+                    <div class="social-icon"><i class="fab fa-pinterest"></i></div>
+                    <div class="social-content">
+                        <h3>Pinterest</h3>
+                        <span class="social-handle">@almasdepombagira</span>
+                    </div>
+                </a>
+
+                <a href="https://tiktok.com/@almasdepombagira" target="_blank" class="social-card tiktok">
+                    <div class="social-icon"><i class="fab fa-tiktok"></i></div>
+                    <div class="social-content">
+                        <h3>TikTok</h3>
+                        <span class="social-handle">@almasdepombagira</span>
+                    </div>
+                </a>
+
+                 <a href="https://kwai.com/@AlmasdePombagira" target="_blank" class="social-card kwai">
+                    <div class="social-icon"><i class="fas fa-video"></i></div>
+                    <div class="social-content">
+                        <h3>Kwai</h3>
+                        <span class="social-handle">@AlmasdePombagira</span>
+                    </div>
+                </a>
+
+                 <a href="https://threads.net/@almasdepombagira" target="_blank" class="social-card threads">
+                    <div class="social-icon"><i class="fas fa-at"></i></div>
+                    <div class="social-content">
+                        <h3>Threads</h3>
+                        <span class="social-handle">@almasdepombagira</span>
+                    </div>
+                </a>
+
+            <!-- CARD SUBSTACK - CORRIGIDO PARA EVITAR ADBLOCKERS -->
+<a href="https://substack.com/@alexiamelusine" target="_blank" class="social-card blog-pessoal">
+    <div class="social-icon">
+        <!-- SVG oficial do Substack -->
+        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 28px; fill: #FF6719;">
+            <path d="M22.539 8.242H1.46V5.405h21.079v2.837zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
+        </svg>
+    </div>
+    <div class="social-content">
+        <h3>Substack</h3>
+        <span class="social-handle">@alexiamelusine</span>
+    </div>
+</a>
+
+                <a href="https://www.behance.net/alexiamelusine" target="_blank" class="social-card">
+                    <div class="social-icon"><i class="fab fa-behance"></i></div>
+                    <div class="social-content">
+                        <h3>Behance</h3>
+                        <span class="social-handle">Alexia Melusine</span>
+                    </div>
+                </a>
+
+                <a href="https://open.spotify.com/show/0oeCL1QScD3v7dHeUvJjgJ" target="_blank" class="social-card">
+                    <div class="social-icon"><i class="fab fa-spotify"></i></div>
+                    <div class="social-content">
+                        <h3>Spotify</h3>
+                        <span class="social-handle">Podcast</span>
+                    </div>
+                </a>
+                <!-- FIM DOS LINKS -->
+
+            </div>
+        </section>
+
+        <section class="section" id="artigos">
+            <div class="section-header">
+                <h2>Artigos e Conhecimento</h2>
+            </div>
+            
+            <article class="article-card">
+                <div class="article-header">
+                    <h3>A Origem Histórica das Pombagiras</h3>
+                </div>
+                <div class="article-content">
+                    <p>As Pombagiras têm suas raízes profundas na tradição afro-brasileira. Sua origem está intimamente ligada aos Exus, sendo consideradas a manifestação feminina desta linha de trabalho espiritual.</p>
+                </div>
+            </article>
+
+            <h3 style="text-align:center; color:var(--primary-color); margin-top:50px; font-size:1.8em; margin-bottom: 10px;">As 12 Guardiãs Principais</h3>
+            <p style="text-align:center; margin-bottom:30px; opacity:0.8;">Resumo de arquétipos, simbologias e atribuições</p>
+            
+            <div class="entity-grid">
+                <div class="entity-card">
+                    <div class="entity-header">
+                        <i class="fas fa-crown"></i> <h4>Maria Padilha</h4>
+                    </div>
+                    <div class="entity-body">
+                        <div class="entity-archetype">Comando / Realeza</div>
+                        <ul class="entity-details">
+                            <li><strong>Cores:</strong> Vermelho, Preto e Dourado</li>
+                            <li><strong>Dia:</strong> Segunda-feira</li>
+                            <li><strong>Ítens:</strong> Tridente, Rosas Vermelhas, Taça, Cigarro</li>
+                            <li><strong>Símbolo:</strong> A Rainha, o poder de decisão e magnetismo.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="entity-card">
+                    <div class="entity-header">
+                        <i class="fas fa-broom"></i> <h4>Maria Mulambo</h4>
+                    </div>
+                    <div class="entity-body">
+                        <div class="entity-archetype">Cura / Humildade</div>
+                        <ul class="entity-details">
+                            <li><strong>Cores:</strong> Roxo, Preto e Dourado</li>
+                            <li><strong>Dia:</strong> Segunda-feira</li>
+                            <li><strong>Ítens:</strong> Vassoura (simbólica), Flores, Xale</li>
+                            <li><strong>Símbolo:</strong> Acolhimento, cura emocional, transformação do lixo em luxo.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="entity-card">
+                    <div class="entity-header">
+                        <i class="fas fa-khanda"></i> <h4>Maria Quitéria</h4>
+                    </div>
+                    <div class="entity-body">
+                        <div class="entity-archetype">Guerra / Proteção</div>
+                        <ul class="entity-details">
+                            <li><strong>Cores:</strong> Vermelho e Verde (ou Militar)</li>
+                            <li><strong>Dia:</strong> Terça-feira (vibração de Ogum)</li>
+                            <li><strong>Ítens:</strong> Espada, Punhal, Escudo</li>
+                            <li><strong>Símbolo:</strong> Coragem, disciplina, defesa dos injustiçados.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="entity-card">
+                    <div class="entity-header">
+                        <i class="fas fa-skull"></i> <h4>Rosa Caveira</h4>
+                    </div>
+                    <div class="entity-body">
+                        <div class="entity-archetype">Justiça / Morte</div>
+                        <ul class="entity-details">
+                            <li><strong>Cores:</strong> Preto, Vermelho e Amarelo</li>
+                            <li><strong>Dia:</strong> Segunda-feira (Almas)</li>
+                            <li><strong>Ítens:</strong> Caveira, Rosas Amarelas, Punhal</li>
+                            <li><strong>Símbolo:</strong> Guardiã dos cemitérios, ceifadora de ilusões, lealdade.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="entity-card">
+                    <div class="entity-header">
+                        <i class="fas fa-moon"></i> <h4>Dama da Noite</h4>
+                    </div>
+                    <div class="entity-body">
+                        <div class="entity-archetype">Mistério / Oculto</div>
+                        <ul class="entity-details">
+                            <li><strong>Cores:</strong> Preto e Azul Meia-Noite</li>
+                            <li><strong>Dia:</strong> Segunda-feira</li>
+                            <li><strong>Ítens:</strong> Lua, Estrelas, Véus, Incensos</li>
+                            <li><strong>Símbolo:</strong> O desconhecido, intuição profunda, feitiçaria.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="entity-card">
+                    <div class="entity-header">
+                        <i class="fas fa-music"></i> <h4>Sete Saias</h4>
+                    </div>
+                    <div class="entity-body">
+                        <div class="entity-archetype">Alegria / Intensidade</div>
+                        <ul class="entity-details">
+                            <li><strong>Cores:</strong> 7 Cores ou Vermelho/Preto</li>
+                            <li><strong>Dia:</strong> Sexta-feira</li>
+                            <li><strong>Ítens:</strong> Fitas coloridas, Pandeiro, Cartas</li>
+                            <li><strong>Símbolo:</strong> Movimento, sedução, caminhos abertos no amor.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="entity-card">
+                    <div class="entity-header">
+                        <i class="fas fa-coins"></i> <h4>Pombagira Cigana</h4>
+                    </div>
+                    <div class="entity-body">
+                        <div class="entity-archetype">Liberdade / Prosperidade</div>
+                        <ul class="entity-details">
+                            <li><strong>Cores:</strong> Colorido, Dourado, Vermelho</li>
+                            <li><strong>Dia:</strong> Quinta-feira ou Sábado</li>
+                            <li><strong>Ítens:</strong> Baralho, Cristais, Moedas, Leque</li>
+                            <li><strong>Símbolo:</strong> Vidência, fartura, alegria de viver, andarilho.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="entity-card">
+                    <div class="entity-header">
+                        <i class="fas fa-hat-cowboy-side"></i> <h4>Maria Navalha</h4>
+                    </div>
+                    <div class="entity-body">
+                        <div class="entity-archetype">Malandragem / Rua</div>
+                        <ul class="entity-details">
+                            <li><strong>Cores:</strong> Vermelho e Branco (ou listrado)</li>
+                            <li><strong>Dia:</strong> Segunda-feira (Linha de Malandros)</li>
+                            <li><strong>Ítens:</strong> Navalha, Chapéu, Dados, Cerveja</li>
+                            <li><strong>Símbolo:</strong> Esperteza, jogo de cintura, proteção nas ruas.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="entity-card">
+                    <div class="entity-header">
+                        <i class="fas fa-water"></i> <h4>Da Praia</h4>
+                    </div>
+                    <div class="entity-body">
+                        <div class="entity-archetype">Emoção / Limpeza (Água)</div>
+                        <ul class="entity-details">
+                            <li><strong>Cores:</strong> Azul Escuro, Prata, Champanhe</li>
+                            <li><strong>Dia:</strong> Sábado (Vibração de Iemanjá)</li>
+                            <li><strong>Ítens:</strong> Conchas, Espelho, Areia, Rosas Brancas</li>
+                            <li><strong>Símbolo:</strong> Purificação, sensualidade fluida, mistérios do mar.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="entity-card">
+                    <div class="entity-header">
+                        <i class="fas fa-tshirt"></i> <h4>Maria Farrapo</h4>
+                    </div>
+                    <div class="entity-body">
+                        <div class="entity-archetype">Sanidade / Caos (Mental)</div>
+                        <ul class="entity-details">
+                            <li><strong>Cores:</strong> Roxo e Preto (Trapos simbólicos)</li>
+                            <li><strong>Dia:</strong> Segunda-feira</li>
+                            <li><strong>Ítens:</strong> Retalhos, Agulhas, Ervas secas</li>
+                            <li><strong>Símbolo:</strong> Reorganização mental, magia antiga, descarrego pesado.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="entity-card">
+                    <div class="entity-header">
+                        <i class="fas fa-child"></i> <h4>Pombagira Menina</h4>
+                    </div>
+                    <div class="entity-body">
+                        <div class="entity-archetype">Renovação / Inocência</div>
+                        <ul class="entity-details">
+                            <li><strong>Cores:</strong> Rosa, Vermelho e Dourado</li>
+                            <li><strong>Dia:</strong> Sexta-feira</li>
+                            <li><strong>Ítens:</strong> Doces finos, Fitas, Bonecas (simbólico)</li>
+                            <li><strong>Símbolo:</strong> Pureza na intenção, renovação, quebra de demandas.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="entity-card">
+                    <div class="entity-header">
+                        <i class="fas fa-tree"></i> <h4>Da Figueira</h4>
+                    </div>
+                    <div class="entity-body">
+                        <div class="entity-archetype">Raiz / Ancestralidade</div>
+                        <ul class="entity-details">
+                            <li><strong>Cores:</strong> Verde Escuro, Marrom e Vermelho</li>
+                            <li><strong>Dia:</strong> Segunda-feira</li>
+                            <li><strong>Ítens:</strong> Folhas de figueira, Terra, Raízes</li>
+                            <li><strong>Símbolo:</strong> Conexão com a terra, fertilidade, sabedoria ancestral.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="linha">
+            <div class="section-header">
+                <h2>A Linha das Pombagiras</h2>
+            </div>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-heart"></i></div>
+                    <h3>Trabalhos do Amor</h3>
+                    <p>Auxiliam na conquista, reconciliação e abertura do coração para novas possibilidades amorosas.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3>Prosperidade</h3>
+                    <p>Abertura de caminhos profissionais e crescimento dos negócios, especialmente para mulheres.</p>
+                </div>
+            </div>
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> Importante</h4>
+                <p>Todo trabalho com Pombagiras deve ser realizado com respeito, ética e responsabilidade.</p>
+            </div>
+        </section>
+
+        <section class="section" id="respeito">
+            <div class="section-header"><h2>Respeito e Responsabilidade</h2></div>
+            <article class="article-card">
+                <div class="article-content">
+                    <p>As Pombagiras não são entidades "diabólicas", mas sim espíritos que trabalham pela lei e evolução. É fundamental combater a intolerância religiosa através do conhecimento.</p>
+                    <div class="quote-box">
+                        O verdadeiro poder espiritual não está em dominar, mas em evoluir.
+                    </div>
+                </div>
+            </article>
+        </section>
+
+    </main>
+
+    <footer id="contato">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sobre Este Blog</h3>
+                    <p>Este espaço foi criado com o objetivo de divulgar conhecimento respeitoso e responsável sobre as Pombagiras, combatendo preconceitos.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#artigos">Artigos</a></li>
+                        <li><a href="#linha">Linha</a></li>
+                        <li><a href="#respeito">Ética</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Respeito às Tradições</h3>
+                    <p>Honramos e respeitamos todas as tradições espirituais afro-brasileiras. Mojubá!</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Almas de Pombagiras ☆ Todos direitos reservados ☆ BY: Alexia Melusine - Mojubá as Guardiãs</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- LÓGICA DO TEMA ---
+        function setTheme(themeName) {
+            document.documentElement.setAttribute('data-theme', themeName);
+            localStorage.setItem('theme', themeName);
+            
+            const activeBtn = document.querySelector(`.theme-btn[onclick="setTheme('${themeName}')"]`);
+            if (activeBtn) {
+                document.querySelectorAll('.theme-btn').forEach(btn => btn.classList.remove('active'));
+                activeBtn.classList.add('active');
+            }
+        }
+
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'vibrant';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            const activeBtn = document.querySelector(`.theme-btn[onclick="setTheme('${savedTheme}')"]`);
+            if(activeBtn) activeBtn.classList.add('active');
+            else document.querySelector('.theme-btn:last-child')?.classList.add('active');
+        })();
+
+        // --- MENU MOBILE ---
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+
+        // --- ANIMAÇÕES ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.card, .article-card, .entity-card').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
