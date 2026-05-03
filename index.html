@@ -157,18 +157,18 @@
             line-height: 1.1;
         }
 
-        /* Estilo idêntico ao h1 para o destaque POMBAGIRAS.COM */
+        /* ESTILO CORRIGIDO: POMBAGIRAS.COM MENOR */
         .pombagiras-destaque {
             font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(3rem, 10vw, 7rem);
+            font-size: clamp(1.8rem, 6vw, 3.5rem);
             font-weight: 700;
             background: linear-gradient(135deg, var(--fire-rose), var(--iron-light), var(--cosmic-gold));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin: 1rem 0 0.5rem;
+            margin: 0.5rem 0 0.5rem;
             animation: titleGlow 3s ease-in-out infinite;
-            line-height: 1.1;
+            line-height: 1.2;
         }
         
         @keyframes titleGlow {
@@ -647,7 +647,7 @@
             background: linear-gradient(135deg, rgba(107,15,143,0.3), rgba(255,0,110,0.2));
         }
         
-        /* RESPONSIVE */
+        /* RESPONSIVE - BOTÕES CORRIGIDOS NO CELULAR */
         @media (max-width: 1100px) {
             .featured-card { grid-column: span 1; }
         }
@@ -657,8 +657,19 @@
             .about-grid { grid-template-columns: 1fr; }
             .edu-nav { flex-direction: column; }
             .edu-nav-item { min-width: auto; }
-            .cta-container { flex-direction: column; align-items: stretch; }
-            .cta-btn { text-align: center; }
+            
+            /* CORREÇÃO DOS BOTÕES NO CELULAR */
+            .cta-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            .cta-btn {
+                width: auto;
+                min-width: 220px;
+                text-align: center;
+                padding: 0.8rem 1.5rem;
+            }
             .social-links a { font-size: 1.3rem; }
         }
         
@@ -706,7 +717,7 @@
                 <h1>Alexia Melusine</h1>
                 <p class="subtitle">Rosa de Fogo ∞ Luz de Ferro</p>
                 <p class="tagline">Educational Portal: Demystifying the forbidden feminine through technology and ancestry.</p>
-                <!-- NOVO DESTAQUE POMBAGIRAS.COM -->
+                <!-- DESTAQUE POMBAGIRAS.COM - Tamanho reduzido -->
                 <div class="pombagiras-destaque">POMBAGIRAS.COM</div>
                 <div class="cta-container">
                      <a href="#educativo" class="cta-btn cta-secondary">Sacred Knowledge</a>
