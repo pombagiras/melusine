@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/pombagiras/melusine/main/Al%C3%AA%20(3)%20(3)%20(1).png">
+
+<meta name="theme-color" content="#030303">
+  <!-- SEO e Identidade Mundial -->
+<title>POMBAGIRAS.COM | Conhecimento Sagrado & Arte Visceral</title>
+<meta name="description" content="O olho que tudo vê nas encruzilhadas do mundo. Desmistificando o feminino proibido através da tecnologia e da ancestralidade. Alexia Melusine revela o que as sombras escondem. Laroyê.">
+
+<!-- Open Graph / Redes Sociais (WhatsApp, Instagram, Facebook) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pombagiras.com/">
+<meta property="og:title" content="POMBAGIRAS.COM | Conhecimento Sagrado & Arte Visceral">
+<meta property="og:description" content="O olho que tudo vê nas encruzilhadas do mundo. Desmistificando o feminino proibido através da tecnologia e da ancestralidade. Alexia Melusine revela o que as sombras escondem. Laroyê.">
+<meta property="og:image" content="https://raw.githubusercontent.com/pombagiras/melusine-oficial/refs/heads/main/Ale%20Ultra%20(1).png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://pombagiras.com/">
+<meta name="twitter:title" content="POMBAGIRAS.COM | Conhecimento Sagrado & Arte Visceral">
+<meta name="twitter:description" content="O olho que tudo vê nas encruzilhadas do mundo. Desmistificando o feminino proibido através da tecnologia e da ancestralidade. Laroyê.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/pombagiras/melusine-oficial/refs/heads/main/Ale%20Ultra%20(1).png">
+<title>POMBAGIRAS.COM — Regina Noctis Aeternae</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;900&family=IM+Fell+English:ital@0;1&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crimson: #8B0000;
+    --crimson-bright: #C41E3A;
+    --crimson-glow: #FF2244;
+    --gold: #B8860B;
+    --gold-bright: #DAA520;
+    --gold-light: #FFD700;
+    --obsidian: #0A0A0A;
+    --void: #040404;
+    --smoke: #1A1A1A;
+    --bone: #E8DCC8;
+    --bone-dark: #C4B89A;
+    --purple-abyss: #2D0B3C;
+    --purple-mid: #4A1060;
+    --rose-blood: #7B1C2E;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--void);
+    color: var(--bone);
+    font-family: 'IM Fell English', Georgia, serif;
+    overflow-x: hidden;
+    cursor: crosshair;
+  }
+
+  /* ── NOISE OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.6;
+  }
+
+  /* ── CUSTOM SCROLLBAR ── */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--void); }
+  ::-webkit-scrollbar-thumb { background: var(--crimson); border-radius: 0; }
+
+  /* ── HERO SECTION ── */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: radial-gradient(ellipse at 50% 60%, #1a0010 0%, #0a0006 40%, var(--void) 100%);
+    overflow: hidden;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  /* Animated sigil background */
+  #hero::before {
+    content: '';
+    position: absolute;
+    inset: -20%;
+    background-image:
+      repeating-conic-gradient(from 0deg at 50% 50%, transparent 0deg, transparent 29deg, rgba(139,0,0,0.04) 30deg, rgba(139,0,0,0.04) 31deg),
+      repeating-conic-gradient(from 15deg at 50% 50%, transparent 0deg, transparent 59deg, rgba(184,134,11,0.03) 60deg, rgba(184,134,11,0.03) 61deg);
+    animation: sigilRotate 60s linear infinite;
+  }
+
+  #hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, transparent 20%, rgba(4,4,4,0.7) 70%);
+    pointer-events: none;
+  }
+
+  @keyframes sigilRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* Candle flicker elements */
+  .candle-left, .candle-right {
+    position: absolute;
+    bottom: 5%;
+    width: 3px;
+    background: linear-gradient(to top, var(--crimson), transparent);
+    animation: candleFlicker 3s ease-in-out infinite;
+  }
+  .candle-left { left: 8%; height: 180px; animation-delay: 0.5s; }
+  .candle-right { right: 8%; height: 200px; animation-delay: 1.2s; }
+  .candle-left::after, .candle-right::after {
+    content: '✦';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--gold-bright);
+    font-size: 18px;
+    animation: flameFlicker 1.5s ease-in-out infinite;
+  }
+
+  @keyframes candleFlicker {
+    0%, 100% { opacity: 1; height: 180px; }
+    50% { opacity: 0.8; height: 175px; }
+  }
+  @keyframes flameFlicker {
+    0%, 100% { transform: translateX(-50%) scale(1); opacity: 1; }
+    25% { transform: translateX(-50%) scale(1.1) translateY(-2px); opacity: 0.9; }
+    75% { transform: translateX(-50%) scale(0.9) translateY(1px); opacity: 1; }
+  }
+
+  .hero-eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(0.6rem, 1.5vw, 0.75rem);
+    letter-spacing: 0.5em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+    animation: fadeInDown 1.5s ease both;
+  }
+
+  .hero-title {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: clamp(2.8rem, 10vw, 8rem);
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    color: transparent;
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-bright) 30%, var(--crimson-bright) 60%, var(--gold) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    position: relative;
+    z-index: 2;
+    animation: fadeInDown 1.5s ease 0.3s both;
+    text-shadow: none;
+    filter: drop-shadow(0 0 40px rgba(139,0,0,0.6));
+  }
+
+  .hero-subtitle-latin {
+    font-family: 'Cinzel', serif;
+    font-style: italic;
+    font-size: clamp(0.9rem, 2.5vw, 1.3rem);
+    color: var(--crimson-bright);
+    letter-spacing: 0.15em;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 2;
+    animation: fadeInDown 1.5s ease 0.6s both;
+  }
+
+  .hero-divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    position: relative;
+    z-index: 2;
+    animation: fadeInDown 1.5s ease 0.9s both;
+  }
+  .hero-divider span {
+    font-size: 1.5rem;
+    color: var(--gold);
+    animation: pulseGold 2s ease-in-out infinite;
+  }
+  .hero-divider::before, .hero-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    max-width: 200px;
+  }
+
+  @keyframes pulseGold {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.2); }
+  }
+
+  .hero-desc {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.8;
+    max-width: 680px;
+    color: var(--bone-dark);
+    position: relative;
+    z-index: 2;
+    animation: fadeInDown 1.5s ease 1.2s both;
+  }
+
+  .hero-cta {
+    display: inline-block;
+    margin-top: 2.5rem;
+    padding: 1rem 3rem;
+    border: 1px solid var(--crimson-bright);
+    color: var(--crimson-bright);
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+    transition: all 0.4s ease;
+    animation: fadeInDown 1.5s ease 1.5s both;
+  }
+  .hero-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--crimson);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+    z-index: -1;
+  }
+  .hero-cta:hover { color: var(--bone); border-color: var(--crimson); }
+  .hero-cta:hover::before { transform: scaleX(1); }
+
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0.5;
+    animation: fadeInDown 2s ease 2s both;
+  }
+  .scroll-indicator span {
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+  }
+  .scroll-line {
+    width: 1px;
+    height: 50px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    animation: scrollDrop 2s ease-in-out infinite;
+  }
+  @keyframes scrollDrop {
+    0%, 100% { transform: scaleY(0); transform-origin: top; }
+    50% { transform: scaleY(1); transform-origin: top; }
+  }
+
+  /* ── SECTION BASE ── */
+  section {
+    padding: 6rem 2rem;
+    position: relative;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-tag {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.5em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .section-title {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: clamp(1.8rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--bone);
+    margin-bottom: 1.5rem;
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--crimson-bright);
+  }
+
+  .latin-quote {
+    font-family: 'Cinzel', serif;
+    font-style: italic;
+    font-size: clamp(0.85rem, 1.8vw, 1rem);
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    border-left: 2px solid var(--crimson);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    opacity: 0.9;
+  }
+
+  /* ── WHO ARE THEY ── */
+  #origens {
+    background: linear-gradient(180deg, var(--void) 0%, #0f0005 50%, var(--void) 100%);
+  }
+
+  .origens-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 4rem;
+  }
+
+  @media (max-width: 768px) {
+    .origens-grid { grid-template-columns: 1fr; gap: 2rem; }
+  }
+
+  .origens-text p {
+    font-size: clamp(1rem, 1.8vw, 1.15rem);
+    line-height: 1.9;
+    color: var(--bone-dark);
+    margin-bottom: 1.5rem;
+  }
+
+  .origens-text p strong {
+    color: var(--bone);
+    font-style: italic;
+  }
+
+  .sigil-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .sigil-svg {
+    width: min(400px, 90vw);
+    height: min(400px, 90vw);
+    animation: sigilSpin 30s linear infinite;
+    filter: drop-shadow(0 0 20px rgba(139,0,0,0.5));
+  }
+
+  @keyframes sigilSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* ── ENTIDADES SECTION ── */
+  #entidades {
+    background: var(--void);
+    overflow: hidden;
+  }
+
+  .entidades-header {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2px;
+  }
+
+  .entity-card {
+    background: var(--smoke);
+    border: 1px solid rgba(139,0,0,0.2);
+    padding: 2.5rem 2rem;
+    position: relative;
+    transition: all 0.4s ease;
+    overflow: hidden;
+  }
+
+  .entity-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(139,0,0,0.05) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .entity-card:hover {
+    border-color: var(--crimson);
+    transform: translateY(-4px);
+    z-index: 2;
+    background: #1a0008;
+  }
+
+  .entity-card:hover::before { opacity: 1; }
+
+  .entity-number {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 3rem;
+    color: rgba(139,0,0,0.15);
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    line-height: 1;
+    transition: color 0.4s ease;
+  }
+  .entity-card:hover .entity-number { color: rgba(196,30,58,0.2); }
+
+  .entity-name {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 1.2rem;
+    color: var(--gold-bright);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+
+  .entity-epithet {
+    font-family: 'Cinzel', serif;
+    font-style: italic;
+    font-size: 0.75rem;
+    color: var(--crimson-bright);
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+  }
+
+  .entity-desc {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(232,220,200,0.7);
+  }
+
+  .entity-symbol {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+    filter: drop-shadow(0 0 6px rgba(218,165,32,0.5));
+  }
+
+  /* ── OFFERINGS / GIRAS ── */
+  #giras {
+    background: linear-gradient(180deg, var(--void) 0%, #100008 50%, var(--void) 100%);
+    position: relative;
+  }
+
+  #giras::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--crimson), transparent);
+  }
+  #giras::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--crimson), transparent);
+  }
+
+  .giras-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5rem;
+    margin-top: 4rem;
+    align-items: start;
+  }
+
+  @media (max-width: 900px) {
+    .giras-layout { grid-template-columns: 1fr; gap: 2rem; }
+  }
+
+  .offerings-list {
+    list-style: none;
+  }
+
+  .offerings-list li {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(139,0,0,0.15);
+  }
+
+  .offering-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+    filter: drop-shadow(0 0 4px rgba(218,165,32,0.4));
+  }
+
+  .offering-text strong {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    color: var(--gold-bright);
+    margin-bottom: 0.4rem;
+  }
+
+  .offering-text span {
+    font-size: 0.9rem;
+    color: rgba(232,220,200,0.65);
+    line-height: 1.6;
+  }
+
+  .giras-prose p {
+    font-size: clamp(1rem, 1.8vw, 1.15rem);
+    line-height: 1.9;
+    color: var(--bone-dark);
+    margin-bottom: 1.5rem;
+  }
+
+  .highlight-box {
+    border: 1px solid rgba(196,30,58,0.3);
+    border-left: 3px solid var(--crimson);
+    padding: 1.5rem 2rem;
+    background: rgba(139,0,0,0.05);
+    margin: 2rem 0;
+  }
+
+  .highlight-box p {
+    font-size: 1rem;
+    color: var(--bone);
+    line-height: 1.8;
+    margin: 0 !important;
+  }
+
+  /* ── PODER / MYSTICISM ── */
+  #poder {
+    background: var(--void);
+    text-align: center;
+  }
+
+  .poder-intro {
+    max-width: 700px;
+    margin: 0 auto 5rem;
+  }
+
+  .poder-intro p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.9;
+    color: var(--bone-dark);
+  }
+
+  .trinity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    max-width: 900px;
+    margin: 0 auto;
+    border: 1px solid rgba(139,0,0,0.2);
+  }
+
+  @media (max-width: 700px) {
+    .trinity-grid { grid-template-columns: 1fr; }
+  }
+
+  .trinity-item {
+    padding: 3rem 2rem;
+    border-right: 1px solid rgba(139,0,0,0.15);
+    position: relative;
+    transition: background 0.4s ease;
+  }
+  .trinity-item:last-child { border-right: none; }
+  .trinity-item:hover { background: rgba(139,0,0,0.06); }
+
+  .trinity-rune {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 0 8px rgba(196,30,58,0.6));
+  }
+
+  .trinity-title {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 1rem;
+    color: var(--bone);
+    margin-bottom: 0.5rem;
+  }
+
+  .trinity-latin {
+    font-family: 'Cinzel', serif;
+    font-style: italic;
+    font-size: 0.7rem;
+    color: var(--crimson-bright);
+    letter-spacing: 0.15em;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .trinity-desc {
+    font-size: 0.9rem;
+    color: rgba(232,220,200,0.6);
+    line-height: 1.7;
+  }
+
+  /* ── MANIFESTO SECTION ── */
+  #manifesto {
+    background: linear-gradient(135deg, #100008 0%, #0a0010 50%, #100008 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  #manifesto::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(139,0,0,0.04) 80px),
+      repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(139,0,0,0.04) 80px);
+  }
+
+  .manifesto-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .manifesto-english {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: clamp(1.5rem, 4vw, 2.8rem);
+    font-weight: 900;
+    color: transparent;
+    background: linear-gradient(to right, var(--crimson-bright), var(--gold-bright), var(--crimson-bright));
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+  }
+
+  .manifesto-body {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 2;
+    color: var(--bone-dark);
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+
+  .manifesto-verse {
+    font-family: 'Cinzel', serif;
+    font-style: italic;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    color: var(--gold);
+    line-height: 1.8;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(218,165,32,0.2);
+    border-bottom: 1px solid rgba(218,165,32,0.2);
+    margin: 3rem 0;
+  }
+
+  /* ── RITUAL / CTA ── */
+  #ritual {
+    background: var(--void);
+    text-align: center;
+    padding-bottom: 8rem;
+  }
+
+  .ritual-sigil {
+    font-size: 4rem;
+    display: block;
+    margin: 0 auto 2rem;
+    animation: breathe 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 15px rgba(196,30,58,0.7));
+  }
+
+  @keyframes breathe {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.05); opacity: 1; }
+  }
+
+  .ritual-title {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: var(--bone);
+    margin-bottom: 1rem;
+  }
+
+  .ritual-latin {
+    font-family: 'Cinzel', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    margin-bottom: 2rem;
+  }
+
+  .ritual-desc {
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--bone-dark);
+  }
+
+  .domain-badge {
+    display: inline-block;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    color: transparent;
+    background: linear-gradient(135deg, var(--gold-light), var(--gold-bright), var(--crimson-bright), var(--gold));
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: goldShift 4s ease infinite;
+    letter-spacing: 0.05em;
+    padding: 1rem 2rem;
+    border: 1px solid rgba(218,165,32,0.3);
+    position: relative;
+  }
+
+  .domain-badge::before, .domain-badge::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border: 1px solid rgba(139,0,0,0.2);
+  }
+
+  @keyframes goldShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--void);
+    border-top: 1px solid rgba(139,0,0,0.2);
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .footer-title {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 1.5rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  .footer-latin {
+    font-family: 'Cinzel', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: rgba(196,30,58,0.8);
+    letter-spacing: 0.2em;
+    margin-bottom: 2rem;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .footer-links a {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: rgba(232,220,200,0.4);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .footer-links a:hover { color: var(--gold); }
+
+  .footer-copy {
+    font-size: 0.8rem;
+    color: rgba(232,220,200,0.2);
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.1em;
+  }
+
+  /* ── DECORATIVE SEPARATORS ── */
+  .ornament {
+    text-align: center;
+    color: var(--crimson);
+    font-size: 1.2rem;
+    letter-spacing: 0.5em;
+    margin: 2rem 0;
+    opacity: 0.6;
+  }
+
+  /* ── MARQUEE ── */
+  .marquee-wrap {
+    overflow: hidden;
+    border-top: 1px solid rgba(139,0,0,0.2);
+    border-bottom: 1px solid rgba(139,0,0,0.2);
+    padding: 1rem 0;
+    background: rgba(139,0,0,0.04);
+  }
+
+  .marquee-track {
+    display: flex;
+    white-space: nowrap;
+    animation: marqueeScroll 40s linear infinite;
+    gap: 4rem;
+  }
+
+  .marquee-track span {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.4em;
+    color: rgba(218,165,32,0.5);
+    text-transform: uppercase;
+    flex-shrink: 0;
+  }
+
+  .marquee-sep { color: var(--crimson) !important; }
+
+  @keyframes marqueeScroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    section { padding: 4rem 1.5rem; }
+    .cards-grid { grid-template-columns: 1fr; }
+    .trinity-grid { grid-template-columns: 1fr; }
+    .trinity-item { border-right: none; border-bottom: 1px solid rgba(139,0,0,0.15); }
+  }
+
+  /* Fade in on scroll */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section id="hero">
+  <div class="candle-left"></div>
+  <div class="candle-right"></div>
+
+  <p class="hero-eyebrow">Est. In Aeternum · Umbrae et Ignis</p>
+
+  <h1 class="hero-title">POMBAGIRAS</h1>
+
+  <p class="hero-subtitle-latin">Regina Noctis Aeternae — Domina Viarum et Crucis</p>
+
+  <div class="hero-divider">
+    <span>✦</span>
+  </div>
+
+  <p class="hero-desc">
+    Nas encruzilhadas do mundo e do além, elas aguardam.<br>
+    Soberanas da madrugada, detentoras dos segredos que o dia não ousaria revelar.
+  </p>
+
+  <a href="#origens" class="hero-cta">Adentrar o Mistério</a>
+
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+    <span>Descendere</span>
+  </div>
+</section>
+
+<!-- ═══════════════ MARQUEE ═══════════════ -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>Pombagira Maria Padilha</span><span class="marquee-sep">✦</span>
+    <span>Exu das Almas</span><span class="marquee-sep">✦</span>
+    <span>Rainha das Sete Encruzilhadas</span><span class="marquee-sep">✦</span>
+    <span>Umbanda · Quimbanda · Candomblé</span><span class="marquee-sep">✦</span>
+    <span>In Nomine Ignis et Noctis</span><span class="marquee-sep">✦</span>
+    <span>Pombagira Cigana</span><span class="marquee-sep">✦</span>
+    <span>Senhora da Madrugada</span><span class="marquee-sep">✦</span>
+    <span>Pombagira da Lua</span><span class="marquee-sep">✦</span>
+    <span>Domina Crucis Mundi</span><span class="marquee-sep">✦</span>
+    <!-- repeat for seamless loop -->
+    <span>Pombagira Maria Padilha</span><span class="marquee-sep">✦</span>
+    <span>Exu das Almas</span><span class="marquee-sep">✦</span>
+    <span>Rainha das Sete Encruzilhadas</span><span class="marquee-sep">✦</span>
+    <span>Umbanda · Quimbanda · Candomblé</span><span class="marquee-sep">✦</span>
+    <span>In Nomine Ignis et Noctis</span><span class="marquee-sep">✦</span>
+    <span>Pombagira Cigana</span><span class="marquee-sep">✦</span>
+    <span>Senhora da Madrugada</span><span class="marquee-sep">✦</span>
+    <span>Pombagira da Lua</span><span class="marquee-sep">✦</span>
+    <span>Domina Crucis Mundi</span><span class="marquee-sep">✦</span>
+  </div>
+</div>
+
+<!-- ═══════════════ ORIGENS ═══════════════ -->
+<section id="origens">
+  <div class="container">
+    <div class="origens-grid">
+      <div class="origens-text fade-in">
+        <span class="section-tag">Filiis Noctis · Origens</span>
+        <h2 class="section-title">Quem São as <em>Pombagiras</em></h2>
+
+        <p class="latin-quote">
+          "Non sunt daemones — sunt matricis mundi, custodes transitus inter lux et umbra."
+        </p>
+
+        <p>
+          As <strong>Pombagiras</strong> são entidades femininas de enorme poder na Umbanda e na Quimbanda — espíritos soberanos que habitam o espaço sagrado das encruzilhadas, limiares entre o mundo dos vivos e o dos mortos.
+        </p>
+        <p>
+          São a manifestação do <strong>princípio feminino selvagem</strong>: irreverentes, poderosas, libertas de julgamentos. Portam a sabedoria ancestral de mulheres que viveram em suas bordas — ciganas, feiticeiras, prostitutas sagradas, dançarinas, rainhas de povos bantos e iorubás.
+        </p>
+        <p>
+          Suas raízes mergulham nas tradições dos povos africanos trazidos ao Brasil, na magia ibérica, no esoterismo indígena. São, antes de tudo, <strong>forças da natureza</strong> — nem santas, nem demônias. Simplesmente, elas <em>são</em>.
+        </p>
+      </div>
+
+      <div class="sigil-container fade-in">
+        <svg class="sigil-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+          <!-- Outer ring -->
+          <circle cx="200" cy="200" r="180" fill="none" stroke="#8B0000" stroke-width="0.5" opacity="0.6"/>
+          <circle cx="200" cy="200" r="165" fill="none" stroke="#B8860B" stroke-width="0.3" opacity="0.4"/>
+          <!-- Star of 7 -->
+          <polygon points="200,30 245,155 380,155 270,235 310,365 200,285 90,365 130,235 20,155 155,155" fill="none" stroke="#8B0000" stroke-width="0.8" opacity="0.5"/>
+          <!-- Inner star -->
+          <polygon points="200,80 222,148 295,148 238,188 260,258 200,218 140,258 162,188 105,148 178,148" fill="none" stroke="#B8860B" stroke-width="0.6" opacity="0.4"/>
+          <!-- Cross roads -->
+          <line x1="200" y1="20" x2="200" y2="380" stroke="#8B0000" stroke-width="0.5" opacity="0.3"/>
+          <line x1="20" y1="200" x2="380" y2="200" stroke="#8B0000" stroke-width="0.5" opacity="0.3"/>
+          <line x1="72" y1="72" x2="328" y2="328" stroke="#8B0000" stroke-width="0.4" opacity="0.2"/>
+          <line x1="328" y1="72" x2="72" y2="328" stroke="#8B0000" stroke-width="0.4" opacity="0.2"/>
+          <!-- Center rose -->
+          <circle cx="200" cy="200" r="40" fill="none" stroke="#C41E3A" stroke-width="1" opacity="0.7"/>
+          <circle cx="200" cy="200" r="25" fill="none" stroke="#DAA520" stroke-width="0.8" opacity="0.6"/>
+          <circle cx="200" cy="200" r="8" fill="#8B0000" opacity="0.8"/>
+          <!-- Petals -->
+          <g opacity="0.5">
+            <ellipse cx="200" cy="165" rx="6" ry="20" fill="#C41E3A"/>
+            <ellipse cx="200" cy="235" rx="6" ry="20" fill="#C41E3A"/>
+            <ellipse cx="165" cy="200" rx="20" ry="6" fill="#C41E3A"/>
+            <ellipse cx="235" cy="200" rx="20" ry="6" fill="#C41E3A"/>
+            <ellipse cx="176" cy="176" rx="6" ry="18" fill="#C41E3A" transform="rotate(45 176 176)"/>
+            <ellipse cx="224" cy="176" rx="6" ry="18" fill="#C41E3A" transform="rotate(-45 224 176)"/>
+            <ellipse cx="176" cy="224" rx="6" ry="18" fill="#C41E3A" transform="rotate(-45 176 224)"/>
+            <ellipse cx="224" cy="224" rx="6" ry="18" fill="#C41E3A" transform="rotate(45 224 224)"/>
+          </g>
+          <!-- Rune marks -->
+          <text x="200" y="16" text-anchor="middle" fill="#B8860B" font-size="8" opacity="0.6" font-family="serif">✦</text>
+          <text x="200" y="392" text-anchor="middle" fill="#B8860B" font-size="8" opacity="0.6" font-family="serif">✦</text>
+          <text x="12" y="204" text-anchor="middle" fill="#B8860B" font-size="8" opacity="0.6" font-family="serif">✦</text>
+          <text x="392" y="204" text-anchor="middle" fill="#B8860B" font-size="8" opacity="0.6" font-family="serif">✦</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ENTIDADES ═══════════════ -->
+<section id="entidades">
+  <div class="container">
+    <div class="entidades-header fade-in">
+      <span class="section-tag">The Sovereign Ones · As Soberanas</span>
+      <h2 class="section-title">As Grandes <em>Entidades</em></h2>
+      <p style="max-width:600px;margin:0 auto;color:var(--bone-dark);font-size:1.05rem;line-height:1.8;">
+        Cada Pombagira é um mundo, uma força, uma vibração única. Conheça as mais reverenciadas das correntes sagradas.
+      </p>
+    </div>
+
+    <div class="cards-grid">
+
+      <div class="entity-card fade-in">
+        <span class="entity-number">I</span>
+        <span class="entity-symbol">🌹</span>
+        <h3 class="entity-name">Maria Padilha</h3>
+        <p class="entity-epithet">Regina Rosarum · Rainha das Rosas</p>
+        <p class="entity-desc">A mais famosa e poderosa de todas. Diz-se que foi amante de um rei de Castela e aprendeu os segredos mais obscuros da magia ibérica. Governa o amor, a sedução e a magia da conquista. Sua cor é o vermelho e seu perfume é o de rosas embebidas em sangue.</p>
+      </div>
+
+      <div class="entity-card fade-in">
+        <span class="entity-number">II</span>
+        <span class="entity-symbol">🔱</span>
+        <h3 class="entity-name">Pombagira das Sete Encruzilhadas</h3>
+        <p class="entity-epithet">Domina Septem Viis · Senhora dos Sete Caminhos</p>
+        <p class="entity-desc">Governa os sete destinos, os sete amores, as sete mortes. Ela abre e fecha caminhos com igual maestria. É invocada naqueles momentos em que apenas ela pode decidir qual trilha o supplicante merece percorrer.</p>
+      </div>
+
+      <div class="entity-card fade-in">
+        <span class="entity-number">III</span>
+        <span class="entity-symbol">🌙</span>
+        <h3 class="entity-name">Pombagira da Lua</h3>
+        <p class="entity-epithet">Luna Atra · Filha das Trevas Lunares</p>
+        <p class="entity-desc">Entidade de magia lunare profunda. Atua nos ciclos — amor que cresce e mingua, feitiços que exigem tempo e paciência, trabalhos que dependem da fase certa. Sua presença é sentida às margens d'água na lua nova.</p>
+      </div>
+
+      <div class="entity-card fade-in">
+        <span class="entity-number">IV</span>
+        <span class="entity-symbol">🔥</span>
+        <h3 class="entity-name">Pombagira Cigana</h3>
+        <p class="entity-epithet">Vitam Vagam Colens · A Que Habita o Vento</p>
+        <p class="entity-desc">Carrega a sabedoria milenar dos povos nômades. Lê o destino nas cartas, nas palmas e nos olhos. Liberta os amarrados, abre os caminhos bloqueados e dança com fogo. Sua roupa é de cores vivas que ardem na madrugada.</p>
+      </div>
+
+      <div class="entity-card fade-in">
+        <span class="entity-number">V</span>
+        <span class="entity-symbol">⚰️</span>
+        <h3 class="entity-name">Pombagira do Cemitério</h3>
+        <p class="entity-epithet">Custos Mortis et Vitae · Guardiã do Limiar</p>
+        <p class="entity-desc">Habita entre os mortos e os vivos. Conhece os segredos dos que partiram e os que estão para partir. Trabalha com espíritos ancestrais, desfaz magias pesadas e protege os seus com o manto frio da morte que ela tantas vezes contemplou.</p>
+      </div>
+
+      <div class="entity-card fade-in">
+        <span class="entity-number">VI</span>
+        <span class="entity-symbol">🌺</span>
+        <h3 class="entity-name">Maria Mulambo</h3>
+        <p class="entity-epithet">Ex Pulvere, Regina · Do Pó, Rainha</p>
+        <p class="entity-desc">Nascida do lixo e do esquecimento, tornou-se rainha. Entidade de imensa compaixão pelos abandonados, pelos que caíram. Ela pega o que foi descartado pelo mundo e transforma em ouro. Prova que de toda humilhação nasce poder.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ GIRAS / OFERENDAS ═══════════════ -->
+<section id="giras">
+  <div class="container">
+    <div class="giras-layout">
+
+      <div class="fade-in">
+        <span class="section-tag">Sacred Offerings · Sagradas Dádivas</span>
+        <h2 class="section-title" style="font-size:clamp(1.5rem,3vw,2.2rem);">O Que Elas<br><em>Recebem</em></h2>
+        <p class="latin-quote">
+          "Da ut des — oferece para que sejas atendido"
+        </p>
+
+        <ul class="offerings-list">
+          <li>
+            <span class="offering-icon">🌹</span>
+            <div class="offering-text">
+              <strong>Rosas Vermelhas</strong>
+              <span>Símbolo do amor apaixonado e da sedução. Quanto mais abertas e perfumadas, maior a receptividade da entidade.</span>
+            </div>
+          </li>
+          <li>
+            <span class="offering-icon">🕯️</span>
+            <div class="offering-text">
+              <strong>Velas Vermelhas e Pretas</strong>
+              <span>O vermelho pela paixão e força, o preto pela proteção e trabalho nas sombras. Nunca se mistura com branco em rituais de Quimbanda.</span>
+            </div>
+          </li>
+          <li>
+            <span class="offering-icon">🥃</span>
+            <div class="offering-text">
+              <strong>Champanhe e Cachaça</strong>
+              <span>A champanhe pela nobreza e alegria; a cachaça pela potência crua. Pombagira aprecia o que arde e o que borbulha.</span>
+            </div>
+          </li>
+          <li>
+            <span class="offering-icon">💄</span>
+            <div class="offering-text">
+              <strong>Perfume e Maquiagem</strong>
+              <span>Entidade da vaidade sagrada, ela recebe com alegria cosméticos e perfumes — armas do feminino que ela jamais abandona.</span>
+            </div>
+          </li>
+          <li>
+            <span class="offering-icon">🎴</span>
+            <div class="offering-text">
+              <strong>Baralho Cigano</strong>
+              <span>Para consulta e ligação com as Pombagiras Ciganas. As cartas falam a língua delas.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="giras-prose fade-in">
+        <span class="section-tag">The Crossroads Ritual · O Ritual da Encruzilhada</span>
+        <h2 class="section-title" style="font-size:clamp(1.5rem,3vw,2.2rem);">A Gira da <em>Madrugada</em></h2>
+
+        <p>
+          Na Umbanda e na Quimbanda, a <strong>Gira de Pombagira</strong> é um dos rituais mais intensos e transformadores do espiritismo brasileiro. Acontece preferencialmente à meia-noite ou à madrugada — hora em que o véu entre os mundos se afina como seda.
+        </p>
+
+        <p>
+          Os médiuns incorporados carregam a vibração dessas entidades: dançam, fumam charutos, bebem, riem com gargalhadas que ecoam como trovões. Não há fingimento — há canalização de uma força que não pede licença.
+        </p>
+
+        <div class="highlight-box">
+          <p>
+            <em>"Elas chegam com o cheiro de rosas e o sabor de pólvora. Chegam com a memória de cada mulher que foi perseguida, silenciada, queimada. E chegam para cobrar — e para libertar."</em>
+          </p>
+        </div>
+
+        <p>
+          A encruzilhada é seu templo — não apenas o cruzamento físico de ruas, mas todo ponto de decisão, de ruptura, de recomeço. É lá que as oferendas são deixadas; é lá que os pedidos são feitos; é lá que a vida se divide entre o que foi e o que pode vir a ser.
+        </p>
+
+        <div class="ornament">⚜ ✦ ⚜</div>
+
+        <p>
+          O contato respeitoso com essas entidades requer <strong>fé, humildade e verdade</strong>. Pombagira não aceita mentiras — ela as vê antes que saiam da boca. Mas para aqueles que chegam com o coração aberto, ela devolve dez vezes o que foi oferecido.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PODER ═══════════════ -->
+<section id="poder">
+  <div class="container">
+    <div class="poder-intro fade-in">
+      <span class="section-tag">The Threefold Power · Tria Potestates</span>
+      <h2 class="section-title">As Três Faces do<br><em>Poder Feminino</em></h2>
+      <p>
+        Pombagira não é uma — são muitas. Mas em sua essência, toda Pombagira carrega em si três forças primordiais, três chamas que nunca se apagam desde que o mundo começou a girar.
+      </p>
+    </div>
+
+    <div class="trinity-grid fade-in">
+
+      <div class="trinity-item">
+        <span class="trinity-rune">🔥</span>
+        <h3 class="trinity-title">Paixão</h3>
+        <span class="trinity-latin">Ardor Sine Fine</span>
+        <p class="trinity-desc">Governa o amor, o desejo, a atração magnética. Atua nas questões do coração com violência e precisão cirúrgica. Nenhuma corrente de amor resiste ao seu fogo.</p>
+      </div>
+
+      <div class="trinity-item">
+        <span class="trinity-rune">⚔️</span>
+        <h3 class="trinity-title">Poder</h3>
+        <span class="trinity-latin">Potestas Absoluta</span>
+        <p class="trinity-desc">Quebra amarrações, abre caminhos bloqueados, inverte feitiços contra seus filhos. Onde outros espíritos recuam, Pombagira avança — sem medo, sem negociação.</p>
+      </div>
+
+      <div class="trinity-item">
+        <span class="trinity-rune">🌙</span>
+        <h3 class="trinity-title">Mistério</h3>
+        <span class="trinity-latin">Arcana Nocturna</span>
+        <p class="trinity-desc">Conhece os segredos que o sol nunca viu. Vê o que está oculto, o que foi escondido, o que foi enterrado. Suas revelações chegam em sonhos e no sussurro da madrugada.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ MANIFESTO ═══════════════ -->
+<section id="manifesto">
+  <div class="container">
+    <div class="manifesto-content fade-in">
+      <h2 class="manifesto-english">The Queens of the Abyss<br>Have Always Been Here</h2>
+
+      <p class="manifesto-body">
+        Antes que os templos fossem construídos, antes que os deuses recebessem nomes em línguas humanas, antes que qualquer livro sagrado fosse escrito — <strong>elas já estavam nas encruzilhadas</strong>. Dançando. Esperando. Governando.
+      </p>
+
+      <p class="manifesto-body">
+        A Pombagira não é invenção do Brasil, embora o Brasil a tenha nomeado, codificado, amado como nenhuma outra civilização. Ela é a feiticeira de Hécate, a Lilith dos hebreus, a Kali dos hindus, a Marie Laveau do Voodoo. Ela é o arquétipo da mulher que recusou ser domada.
+      </p>
+
+      <div class="manifesto-verse">
+        <em>"Ego sum quae non vincor.<br>
+        Ego sum quae non taceor.<br>
+        Ego sum Pombagira —<br>
+        et mundus meus est crux."</em>
+      </div>
+
+      <p style="font-family:'Cinzel',serif;font-style:italic;font-size:0.85rem;color:var(--bone-dark);letter-spacing:0.08em;margin-bottom:2rem;">
+        "Sou aquela que não é vencida. Sou aquela que não se cala. Sou Pombagira — e meu mundo é a encruzilhada."
+      </p>
+
+      <p class="manifesto-body">
+        Hoje, no século XXI, enquanto o mundo redescobre o sagrado feminino, enquanto mulheres ao redor do planeta reivindicam poder, magia e autonomia — <strong>Pombagira sorri</strong>. Porque ela sabia. Ela sempre soube que esse dia chegaria.
+      </p>
+
+      <p class="manifesto-body">
+        E ela estará na encruzilhada. Como sempre esteve. Como sempre estará.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ RITUAL / CTA ═══════════════ -->
+<section id="ritual">
+  <div class="container">
+    <div class="fade-in">
+      <span class="ritual-sigil">✦</span>
+      <h2 class="ritual-title">Você Está na Encruzilhada</h2>
+      <p class="ritual-latin">Nunc aut numquam — agora ou nunca</p>
+      <p class="ritual-desc">
+        Não há coincidência em chegar até aqui. A encruzilhada te chamou — e Pombagira aguarda. Seja para conhecer, para aprender, para pedir ou para reverenciar. O portal está aberto.
+      </p>
+      <div class="domain-badge">POMBAGIRAS.COM</div>
+      <br><br>
+      <p style="font-family:'Cinzel',serif;font-style:italic;font-size:0.8rem;color:rgba(218,165,32,0.5);letter-spacing:0.2em;margin-top:2rem;">
+        Sub Luna Atra · In Cruce Aeterna
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer>
+  <p class="footer-title">POMBAGIRAS.COM</p>
+  <p class="footer-latin">Regina Noctis Aeternae · Domina Viarum et Crucis</p>
+
+  <div class="footer-links">
+    <a href="#origens">As Origens</a>
+    <a href="#entidades">As Entidades</a>
+    <a href="#giras">A Gira</a>
+    <a href="#poder">O Poder</a>
+    <a href="#manifesto">O Manifesto</a>
+  </div>
+
+  <p class="footer-copy">
+    © POMBAGIRAS.COM — In Nominae Antiquarum Reginarum · Todos os direitos reservados
+  </p>
+</footer>
+
+<script>
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const el = document.querySelector(a.getAttribute('href'));
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  // Fade in on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Subtle parallax on hero
+  window.addEventListener('scroll', () => {
+    const hero = document.getElementById('hero');
+    const scroll = window.scrollY;
+    if (hero && scroll < window.innerHeight) {
+      hero.style.transform = `translateY(${scroll * 0.3}px)`;
+    }
+  });
+</script>
+</body>
+</html>
