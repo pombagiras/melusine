@@ -156,6 +156,20 @@
             animation: titleGlow 3s ease-in-out infinite;
             line-height: 1.1;
         }
+
+        /* Estilo idêntico ao h1 para o destaque POMBAGIRAS.COM */
+        .pombagiras-destaque {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(3rem, 10vw, 7rem);
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--fire-rose), var(--iron-light), var(--cosmic-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 1rem 0 0.5rem;
+            animation: titleGlow 3s ease-in-out infinite;
+            line-height: 1.1;
+        }
         
         @keyframes titleGlow {
             0%, 100% { filter: drop-shadow(0 0 20px rgba(255,0,110,0.5)); }
@@ -692,6 +706,8 @@
                 <h1>Alexia Melusine</h1>
                 <p class="subtitle">Rosa de Fogo ∞ Luz de Ferro</p>
                 <p class="tagline">Educational Portal: Demystifying the forbidden feminine through technology and ancestry.</p>
+                <!-- NOVO DESTAQUE POMBAGIRAS.COM -->
+                <div class="pombagiras-destaque">POMBAGIRAS.COM</div>
                 <div class="cta-container">
                      <a href="#educativo" class="cta-btn cta-secondary">Sacred Knowledge</a>
                     <a href="#portfolio" class="cta-btn cta-primary">Explore My Mystic Universe</a>
