@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO e Identidade Mundial -->
-<title>POMBAGIRAS.COM | Conhecimento Sagrado & Arte Visceral</title>
+<title>Alexia Melusine | Conhecimento Sagrado & Arte Visceral</title>
 <meta name="description" content="O olho que tudo vê nas encruzilhadas do mundo. Desmistificando o feminino proibido através da tecnologia e da ancestralidade. Alexia Melusine revela o que as sombras escondem. Laroyê.">
 
 <!-- Open Graph / Redes Sociais (WhatsApp, Instagram, Facebook) -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://pombagiras.com/">
-<meta property="og:title" content="POMBAGIRAS.COM | Conhecimento Sagrado & Arte Visceral">
+<meta property="og:title" content="Alexia Melusine | Conhecimento Sagrado & Arte Visceral">
 <meta property="og:description" content="O olho que tudo vê nas encruzilhadas do mundo. Desmistificando o feminino proibido através da tecnologia e da ancestralidade. Alexia Melusine revela o que as sombras escondem. Laroyê.">
 <meta property="og:image" content="https://raw.githubusercontent.com/pombagiras/melusine-oficial/refs/heads/main/Ale%20Ultra%20(1).png">
 <meta property="og:image:width" content="1200">
@@ -19,7 +19,7 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://pombagiras.com/">
-<meta name="twitter:title" content="POMBAGIRAS.COM | Conhecimento Sagrado & Arte Visceral">
+<meta name="twitter:title" content="Alexia Melusine | Conhecimento Sagrado & Arte Visceral">
 <meta name="twitter:description" content="O olho que tudo vê nas encruzilhadas do mundo. Desmistificando o feminino proibido através da tecnologia e da ancestralidade. Laroyê.">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/pombagiras/melusine-oficial/refs/heads/main/Ale%20Ultra%20(1).png">
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/pombagiras/melusine/main/Al%C3%AA%20(3)%20(3)%20(1).png">
@@ -96,9 +96,7 @@
             height: 100%;
             top: 0;
             left: 0;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0;
+            display: block;
             opacity: 0.15;
             filter: grayscale(30%);
         }
@@ -117,10 +115,6 @@
         .hero-images img:hover {
             filter: grayscale(0%);
         }
-        
-        .hero-images img:nth-child(1) { animation-delay: 0s; }
-        .hero-images img:nth-child(2) { animation-delay: 2s; }
-        .hero-images img:nth-child(3) { animation-delay: 4s; }
         
         @keyframes imagePulse {
             0%, 100% { opacity: 0.3; transform: scale(1); }
@@ -155,20 +149,6 @@
             margin-bottom: 1rem;
             animation: titleGlow 3s ease-in-out infinite;
             line-height: 1.1;
-        }
-
-        /* ESTILO CORRIGIDO: POMBAGIRAS.COM MENOR */
-        .pombagiras-destaque {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(1.8rem, 6vw, 3.5rem);
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--fire-rose), var(--iron-light), var(--cosmic-gold));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin: 0.5rem 0 0.5rem;
-            animation: titleGlow 3s ease-in-out infinite;
-            line-height: 1.2;
         }
         
         @keyframes titleGlow {
@@ -229,6 +209,20 @@
         .cta-btn:hover {
             transform: translateY(-5px) scale(1.05);
             box-shadow: 0 20px 60px rgba(255,0,110,0.5);
+        }
+
+        /* EFEITO COLOR REVEAL / HOVER FILTER */
+        .color-reveal-img {
+            max-width: 100%; 
+            border-radius: 24px; 
+            box-shadow: 0 20px 60px rgba(255,0,110,0.4);
+            filter: grayscale(100%);
+            transition: filter 0.6s ease;
+            cursor: pointer;
+        }
+
+        .color-reveal-img:hover {
+            filter: grayscale(0%);
         }
         
         /* SEÇÕES */
@@ -708,21 +702,17 @@
         <!-- HERO -->
         <section class="hero">
             <div class="hero-images">
-                <img src="https://raw.githubusercontent.com/alexialuzdeferro/pombagira-revelada/refs/heads/main/Al%C3%AA%20(3).png" alt="Alexia Melusine">
-                <img src="https://raw.githubusercontent.com/alexialuzdeferro/pombagira-revelada/refs/heads/main/Al%C3%AA%20(4).png" alt="Rosa de Fogo">
-                <img src="https://raw.githubusercontent.com/alexialuzdeferro/pombagira-revelada/refs/heads/main/Al%C3%AA%20(5).png" alt="Luz de Ferro">
+                <img src="https://raw.githubusercontent.com/pombagiras/melusine-oficial/refs/heads/main/Ale%20Ultra%20(1).png" alt="Alexia Melusine Banner Ultra">
             </div>
             <div class="hero-content">
                 <div class="mystical-symbol">✦ ☾ ✦</div>
                 <h1>Alexia Melusine</h1>
                 <p class="subtitle">Rosa de Fogo ∞ Luz de Ferro</p>
-                <p class="tagline">Porta Educationis: Demystificatio femininae vetitae per technologiam et originem..</p>
-                <!-- DESTAQUE POMBAGIRAS.COM - Tamanho reduzido -->
-                <div class="pombagiras-destaque">POMBAGIRAS.COM</div>
+                <p class="tagline">Onde o silício encontra a encruzilhada: a tecnologia a serviço do sagrado feminino proibido.</p>
                 <div class="cta-container">
-                     <a href="#educativo" class="cta-btn cta-secondary">Conhecimento Sagrado</a>
-                    <a href="#portfolio" class="cta-btn cta-primary">Explore Meu Ecossistema</a>
-                   <a href="https://pombagiras.com/guardias/" class="cta-btn cta-secondary">Guardiãs</a>
+                     <a href="#educativo" class="cta-btn cta-secondary">Decifre o Mistério</a>
+                    <a href="#portfolio" class="cta-btn cta-primary">Vortex Visceral</a>
+                   <a href="https://pombagiras.com/guardias/" class="cta-btn cta-secondary">Corte das Rainhas</a>
                 </div>
             </div>
         </section>
@@ -731,23 +721,23 @@
         <section style="background: rgba(10,10,10,0.5);">
             <div class="about-grid">
                 <div class="about-text">
-                    <h2>Animae in Igne, Lux in Ferro</h2>
-                    <p>I am Alexia Melusine, a fluid soul that moves between worlds, carrying the ancestral strength of the Pombagiras and the transformative light of trans identity.</p>
-                    <p>My work combines spirituality, art, technology, and activism. I create digital portals that connect people to the wisdom of crossroads, the beauty of nonconformity, and the power of authenticity.</p>
+                    <h2>Alma em Fogo, Luz em Ferro</h2>
+                    <p>Sou Alexia Melusine, uma alma fluida que transita entre mundos, carregando a força ancestral das Pombagiras e a luz transformadora da identidade trans. Atuo na intersecção entre a espiritualidade e a tecnologia de ponta como desenvolvedora web e diretora de mídia assistida por IA, canalizando visões abissais em experiências digitais.</p>
+                    <p>Através do podcast Limbo Sonoro — Anatomia do Abismo.</p>
                     <div class="identity-tags">
-                       
+                        
                     </div>
                 </div>
                 <div style="text-align: center;">
-                    <img src="https://raw.githubusercontent.com/pombagiras/melusine-oficial/refs/heads/main/Ale%20Ultra%20(1).png" style="max-width: 100%; border-radius: 24px; box-shadow: 0 20px 60px rgba(255,0,110,0.4);" alt="Alexia">
+                    <img src="https://raw.githubusercontent.com/pombagiras/melusine-oficial/refs/heads/main/Ale%20Red%20(2).jpg" class="color-reveal-img" alt="Alexia Melusine">
                 </div>
             </div>
         </section>
 
         <!-- PORTAL EDUCATIVO -->
         <section id="educativo" style="background: rgba(107,15,143,0.1);">
-            <h2 class="section-title">Educational Portal de Pomba-Giras</h2>
-            <p class="section-subtitle">A space for knowledge, respect, and demystification of Afro-Brazilian traditions.</p>
+            <h2 class="section-title">Portal Educativo das Pombagiras</h2>
+            <p class="section-subtitle">Um espaço de saber, respeito e desmistificação das tradições Afro.</p>
             
             <!-- Navegação por abas -->
             <div class="edu-nav">
@@ -772,7 +762,7 @@
                     
                     <div class="edu-card">
                         <div class="term-name">Orixá</div>
-                        <p>Divindades que representam forças da natureza e aspectos humanos, como Ogum (guerra), Iemanjá (mares), Oxalá (criação).</p>
+                        <p>Divindades que representam forces da natureza e aspects humanos, como Ogum (guerra), Iemanjá (mares), Oxalá (criação).</p>
                     </div>
                     
                     <div class="edu-card">
@@ -803,6 +793,11 @@
                     <div class="edu-card">
                         <div class="term-name">Ibejada</div>
                         <p>Linha espiritual das crianças (Ibejis) que trabalha com pureza, alegria e renovação, ajudando em casos de fertilidade e proteção infantil.</p>
+                    </div>
+
+                    <div class="edu-card">
+                        <div class="term-name">Aruanda</div>
+                        <p>Plano espiritual superior de luz e paz, onde residem entidades de alta evolução que atuam no amparo e orientação da humanidade.</p>
                     </div>
                 </div>
                 
@@ -846,6 +841,11 @@
                     <div class="edu-card">
                         <div class="term-name">Peji/Congá</div>
                         <p>Altar ou santuário dentro do terreiro onde ficam as imagens dos santos, orixás e guias, ponto focal das energias espirituais.</p>
+                    </div>
+
+                    <div class="edu-card">
+                        <div class="term-name">Quartinha</div>
+                        <p>Vaso de barro ou louça usado para conter água ou bebidas sagradas, servindo como ponto de imantação e renovação energética.</p>
                     </div>
                 </div>
                 
@@ -904,6 +904,11 @@
                     <div class="edu-card">
                         <div class="term-name">Pade</div>
                         <p>Oferenda ritualística, geralmente comida preparada de forma específica para determinada entidade ou finalidade.</p>
+                    </div>
+
+                    <div class="edu-card">
+                        <div class="term-name">Fundamento</div>
+                        <p>O conjunto de leis, doutrinas e segredos rituais que sustentam a prática religiosa, garantindo a ética e a eficácia espiritual.</p>
                     </div>
                 </div>
             </div>
@@ -1062,7 +1067,7 @@
                             <i class="fas fa-chevron-down faq-toggle-alexia"></i>
                         </div>
                         <div class="faq-answer-alexia">
-                            <p>Algumas linhas de Pombagira são consideradas mais "fortes" porque trabalham com energias de transformação profunda, justiça kármica e desmanche de trabalhos negativos. Isso não as torna "perigosas", mas sim <strong>poderosas e sérias</strong>. Assim como o fogo pode ser perigoso se mal manuseado, mas é essencial para cozinhar e aquecer, essas Pombagiras exigem respeito e conhecimento para trabalhar com elas. A reputação de "perigosas" muitas vezes vem de pessoas que tentaram manipular essas energias sem o devido preparo ou com más intenções.</p>
+                            <p>Algumas linhas de Pombagira são consideradas mais "fortes" porque trabalham com energias de transformation profunda, justiça kármica e desmanche de trabalhos negativos. Isso não as torna "perigosas", mas sim <strong>poderosas e sérias</strong>. Assim como o fogo pode ser perigoso se mal manuseado, mas é essencial para cozinhar e aquecer, essas Pombagiras exigem respeito e conhecimento para trabalhar com elas. A reputação de "perigosas" muitas vezes vem de pessoas que tentaram manipular essas energias sem o devido preparo ou com más intenções.</p>
                         </div>
                     </div>
                     
@@ -1197,8 +1202,8 @@
 
         <!-- PORTFOLIO -->
         <section id="portfolio">
-            <h2 class="section-title">Mystici Opera Omnia</h2>
-            <p class="section-subtitle">Digital portals that connect the sacred feminine, the power of the Pombagiras, and the trans journey to the spiritual universe.</p>
+            <h2 class="section-title">Obra Mística Completa</h2>
+            <p class="section-subtitle">Portais digitais que conectam o sagrado feminino, o poder das Pombagiras e a jornada trans ao universo espiritual.</p>
             
             <div class="grid-modern">
                 <!-- POMBAGIRAS -->
@@ -1286,13 +1291,41 @@
                         <li><a href="https://alexialuzdeferro.github.io/redes_sociais/" target="_blank">Redes Sociais</a></li>
                     </ul>
                 </div>
+
+                <!-- CAMINHOS & CONEXÕES -->
+                <div class="card-modern">
+                    <i class="fa-solid fa-road"></i>
+                    <h3>Caminhos & Conexões</h3>
+                    <ul>
+                        <li><a href="https://alexialuzdeferro.github.io/caminhos-da-rosa/" target="_blank">Caminhos da Rosa</a></li>
+                        <li><a href="https://alexialuzdeferro.github.io/Grid-Social/" target="_blank">Grid Social</a></li>
+                        <li><a href="https://pombagiras.github.io/anatomia-do-abismo/" target="_blank">Anatomia do Abismo</a></li>
+                        <li><a href="https://pombagiras.github.io/falando-direto/" target="_blank">Falando Direto</a></li>
+                        <li><a href="https://alexialuzdeferro.github.io/Fale-Comigo/" target="_blank">Fale Comigo</a></li>
+                        <li><a href="https://pombagiras.github.io/rainhas/" target="_blank">Rainhas</a></li>
+                    </ul>
+                </div>
+
+                <!-- NOVA COLUNA: ECOS DO ABISMO -->
+                <div class="card-modern">
+                    <i class="fa-solid fa-ghost"></i>
+                    <h3>Ecos do Abismo</h3>
+                    <ul>
+                        <li><a href="https://alexialuzdeferro.github.io/24-Pombagiras/" target="_blank"> Pombagiras</a></li>
+                        <li><a href="https://pombagiras.github.io/24-entidades/" target="_blank"> Entidades</a></li>
+                        <li><a href="https://pombagiras.github.io/forca-reveladas/" target="_blank">Forças Reveladas</a></li>
+                        <li><a href="https://pombagiras.github.io/sumario-do-abismo/" target="_blank">Sumário do Abismo</a></li>
+                        <li><a href="https://alexialuzdeferro.github.io/Limbo-Sonoro/" target="_blank">Limbo Sonoro</a></li>
+                    </ul>
+                </div>
+
             </div>
         </section>
 
         <!-- CONTATO -->
         <section id="contato" style="background: rgba(107,15,143,0.2);">
-            <h2 class="section-title">Connect to Fire & Light</h2>
-            <p class="section-subtitle">"<i class="fa-solid fa-triangle-exclamation"></i> Qui in quadriviis igne ludunt, comburuntur. Qui Pombagiras venerantur, protectionem et transformationem accipiunt. Cum reverentia intrate aut omnino non intrate."</p>
+            <h2 class="section-title">Conecte-se ao Fogo e à Luz</h2>
+            <p class="section-subtitle"></i>"Quem brinca com fogo nas encruzilhadas, fatalmente se queima nas próprias sombras. Mas quem reverencia o sagrado e caminha com as Pombagiras, encontra o escudo da proteção e o fogo da transformação absoluta. Este é um território de poder e verdade: entre com respeito e alma aberta, ou simplesmente não entre. Laroyê."</p>
             
             <div class="social-links">
                 <a href="https://www.youtube.com/@almasdepombagira" target="_blank"><i class="fab fa-youtube"></i></a>
@@ -1369,7 +1402,9 @@
         // ========== INICIALIZAÇÃO GERAL ==========
         document.addEventListener('DOMContentLoaded', () => {
             // Inicializar primeira FAQ aberta
-            document.querySelector('.faq-item-alexia').classList.add('active');
+            if(document.querySelector('.faq-item-alexia')) {
+                document.querySelector('.faq-item-alexia').classList.add('active');
+            }
             
             // Animação de scroll suave para links internos
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
