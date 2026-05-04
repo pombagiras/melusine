@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+  <title>ALEXIA MELUSINE | ALMAS DE POMBAGIRA</title>
+<meta name="description" content="Direção de arte visceral e o arquétipo do feminino proibido. Não é apenas um link, é um rito de passagem. Toque e desça ao Vortex. Laroyê.">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pombagiras.github.io/melusine-oficial/">
+<meta property="og:title" content="ALEXIA MELUSINE | ALMAS DE POMBAGIRA">
+<meta property="og:description" content="Direção de arte visceral e o arquétipo do feminino proibido. Não é apenas um link, é um rito de passagem. Toque e desça ao Vortex. Laroyê.">
+<meta property="og:image" content="https://raw.githubusercontent.com/pombagiras/melusine-oficial/refs/heads/main/Alexia%20Melusine.jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ALEXIA MELUSINE | ALMAS DE POMBAGIRA">
+<meta name="twitter:description" content="Não é apenas um link, é um rito de passagem. Direção de arte visceral e o feminino proibido. Laroyê.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/pombagiras/melusine-oficial/refs/heads/main/Alexia%20Melusine.jpeg">
+
+    
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/pombagiras/melusine/main/Al%C3%AA%20(3)%20(3)%20(1).png">
+
+<meta name="theme-color" content="#030303">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexia Melusine | Almas de Pombagira</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --sangue: #8b0000;
+            --fogo: #ff4500;
+            --mistério: #2e0854;
+            --fundo: #050505;
+            --card-bg: rgba(20, 20, 20, 0.95);
+            --texto: #f2f2f2;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background: radial-gradient(circle at top, #1a0000, var(--fundo));
+            color: var(--texto);
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 20px 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .header { text-align: center; margin-bottom: 30px; }
+        
+        /* Efeito Color Reveal na Foto de Perfil */
+        .foto-perfil {
+            width: 120px; height: 120px; border-radius: 50%;
+            border: 3px solid var(--sangue); box-shadow: 0 0 20px var(--sangue);
+            object-fit: cover; margin-bottom: 15px;
+            filter: grayscale(100%); /* Inicia em Preto e Branco */
+            transition: filter 0.5s ease, transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .foto-perfil:hover {
+            filter: grayscale(0%); /* Revela a cor ao passar o mouse */
+            transform: scale(1.05);
+        }
+
+        h1 { font-family: 'Cinzel', serif; font-size: 1.6rem; margin: 10px 0; letter-spacing: 2px; }
+        .bio-subtitle { font-size: 0.8rem; color: var(--fogo); font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+
+        .bento-grid {
+            display: grid; grid-template-columns: repeat(2, 1fr);
+            gap: 12px; max-width: 400px; width: 100%;
+        }
+
+        .card {
+            background: var(--card-bg); border: 1px solid #222; border-radius: 24px;
+            padding: 20px; text-decoration: none; color: var(--texto);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+        }
+
+        .card:hover { border-color: var(--fogo); transform: translateY(-5px); background: rgba(30, 30, 30, 0.95); }
+
+        .largo { grid-column: span 2; }
+        .alto { grid-row: span 2; background: linear-gradient(145deg, var(--card-bg), var(--mistério)); }
+        
+        .trans-card {
+            background: linear-gradient(45deg, #55CDFC, #F7A8B8, #FFFFFF, #F7A8B8, #55CDFC);
+            color: #111; border: none;
+        }
+
+        .icon-main { font-size: 28px; margin-bottom: 10px; color: var(--fogo); }
+        .trans-card .icon-main { color: #111; }
+        h2 { font-size: 0.9rem; margin: 0; font-family: 'Cinzel', serif; }
+        p { font-size: 0.7rem; opacity: 0.7; margin: 5px 0 0; line-height: 1.2; }
+
+        /* Efeito de Pulsação no WhatsApp */
+        .pulse { animation: pulse-red 2s infinite; }
+        @keyframes pulse-red {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); box-shadow: 0 0 10px rgba(255, 69, 0, 0.2); }
+            100% { transform: scale(1); }
+        }
+
+        .social-footer { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 12px; width: 100%; grid-column: span 2; }
+        .mini-card {
+            background: var(--card-bg); padding: 18px; border-radius: 20px; text-align: center;
+            font-size: 22px; text-decoration: none; color: #888; border: 1px solid #222;
+            transition: all 0.3s ease; display: flex; justify-content: center; align-items: center;
+        }
+        .mini-card:hover { color: var(--fogo); border-color: var(--fogo); transform: scale(1.1); }
+
+        .email-link { margin-top: 40px; font-size: 0.8rem; color: #555; text-decoration: none; }
+        .email-link:hover { color: var(--fogo); }
+
+        /* Estilo Adicional para o Botão Mãe */
+        .card-mae {
+            background: linear-gradient(90deg, #4b0000, #8b0000, #4b0000);
+            border: 1px solid var(--fogo);
+            box-shadow: 0 0 15px rgba(139, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/Al%C3%AA%20(3)%20(3)%20(1).png" alt="Alexia Melusine" class="foto-perfil">
+        <h1>Alexia Melusine</h1>
+        <div class="bio-subtitle">O MEU ECOSSISTEMA DIGITAL & REDES OFICIAIS</div>
+    </div>
+
+    <div class="bento-grid">
+        
+        <!-- Botão Domínio Mãe -->
+        <a href="https://pombagiras.com/" class="card largo card-mae">
+            <div class="icon-main" style="color: #fff;"><i class="fa-solid fa-house-chimney"></i></div>
+            <h2 style="color: #fff; letter-spacing: 1px;">PORTAL POMBAGIRAS.COM</h2>
+            <p style="color: #ccc; opacity: 1;">Voltar ao Domínio Principal</p>
+        </a>
+        
+        <a href="https://www.youtube.com/@almasdepombagira" class="card largo" style="border-left: 4px solid var(--sangue);">
+            <div class="icon-main"><i class="fa-brands fa-youtube"></i></div>
+            <h2>Canal Almas de Pombagira</h2>
+            <p>Conhecimento e Mistérios das Giras</p>
+        </a>
+
+        <a href="https://open.spotify.com/show/0oeCL1QScD3v7dHeUvJjgJ" class="card alto">
+            <div class="icon-main"><i class="fa-solid fa-microphone-lines"></i></div>
+            <h2>Podcast</h2>
+            <p>Ouça os ensinamentos em áudio</p>
+        </a>
+
+        <a href="https://www.tiktok.com/@almasdepombagira" class="card">
+            <div class="icon-main"><i class="fa-brands fa-tiktok"></i></div>
+            <h2>TikTok</h2>
+            <p>@almasdepombagira</p>
+        </a>
+
+        <a href="https://www.instagram.com/almasdepombagira/" class="card">
+            <div class="icon-main"><i class="fa-brands fa-instagram"></i></div>
+            <h2>Instagram</h2>
+            <p>Portal Oficial</p>
+        </a>
+
+        <a href="https://github.com/Orgulho-Trans" class="card largo trans-card">
+            <div class="icon-main"><i class="fa-solid fa-transgender"></i></div>
+            <h2 style="font-weight: 900;">Orgulho Trans & Tecnologia</h2>
+            <p>Projetos de Acolhimento e Código</p>
+        </a>
+
+        <a href="https://github.com/alexialuzdeferro" class="card">
+            <div class="icon-main"><i class="fa-brands fa-github"></i></div>
+            <h2>Luz de Ferro</h2>
+            <p>Dev & Códigos</p>
+        </a>
+
+        <a href="https://www.kwai.com/@AlexiaRosadeFogo" class="card">
+            <div class="icon-main"><i class="fa-solid fa-circle-play"></i></div>
+            <h2>Kwai</h2>
+            <p>Rosa de Fogo</p>
+        </a>
+
+        <a href="https://substack.com/@alexiamelusine" class="card largo">
+            <div class="icon-main"><i class="fa-solid fa-pen-nib"></i></div>
+            <h2>Substack</h2>
+            <p>Artigos: Entre Sombras e Luz</p>
+        </a>
+
+        <a href="https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G" class="card pulse">
+            <div class="icon-main"><i class="fa-brands fa-whatsapp"></i></div>
+            <h2>WhatsApp</h2>
+        </a>
+
+        <a href="https://t.me/pomba_giras" class="card">
+            <div class="icon-main"><i class="fa-brands fa-telegram"></i></div>
+            <h2>Telegram</h2>
+        </a>
+
+        <div class="social-footer">
+            <a href="https://br.pinterest.com/almasdepombagira/" class="mini-card" title="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="https://discord.gg/gWZP8R7Dqu" class="mini-card" title="Discord"><i class="fa-brands fa-discord"></i></a>
+            <a href="https://x.com/PambuNjila" class="mini-card" title="X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.threads.com/@almasdepombagira" class="mini-card" title="Threads"><i class="fa-brands fa-threads"></i></a>
+        </div>
+
+    </div>
+
+    <a href="mailto:alexiamelusine7@gmail.com" class="email-link">alexiamelusine7@gmail.com</a>
+
+</body>
+</html>
