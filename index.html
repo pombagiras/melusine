@@ -42,16 +42,16 @@
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;600;700&display=swap');
         
         :root {
-            --mystic-purple: #6B0F8F;
-            --fire-rose: #FF006E;
-            --iron-light: #00D9FF;
-            --trans-pink: #F5A9B8;
-            --trans-blue: #5BCEFA;
-            --cosmic-gold: #FFD700;
-            --deep-black: #0A0A0A;
+            --mystic-purple: #8B1E5C;      /* roxo intenso com toque carmesim */
+            --fire-rose: #D90429;          /* vermelho visceral principal */
+            --iron-light: #C1121F;          /* vermelho profundo (substituindo o tom ciano) */
+            --trans-pink: #E5383B;          /* vermelho-rosa vibrante */
+            --trans-blue: #6A0DAD;          /* roxo marcante (substitui azul) */
+            --cosmic-gold: #C79A2E;          /* ouro rubro / âmbar sombrio */
+            --deep-black: #030303;
             --glass-white: rgba(255,255,255,0.05);
-            --glow-intense: 0 0 40px rgba(255,0,110,0.6);
-            --card-bg: rgba(15, 15, 35, 0.8);
+            --glow-intense: 0 0 40px rgba(200, 30, 70, 0.7);    /* brilho vermelho-sangue */
+            --card-bg: rgba(10, 3, 15, 0.85);                    /* preto violáceo */
             --success-green: #00FF88;
         }
         
@@ -59,7 +59,7 @@
         
         body {
             font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, #0A0A0A 0%, #1a0033 50%, #0A0A0A 100%);
+            background: linear-gradient(135deg, #030303 0%, #2D0A2F 50%, #0A0108 100%);
             color: #fff;
             overflow-x: hidden;
             position: relative;
@@ -70,9 +70,9 @@
             position: fixed;
             top: 0; left: 0; right: 0; bottom: 0;
             background: 
-                radial-gradient(circle at 20% 30%, rgba(107,15,143,0.3) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(255,0,110,0.2) 0%, transparent 50%),
-                radial-gradient(circle at 50% 50%, rgba(0,217,255,0.1) 0%, transparent 70%);
+                radial-gradient(circle at 20% 30%, rgba(139,30,92,0.4) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(217,4,41,0.3) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(106,13,173,0.2) 0%, transparent 70%);
             pointer-events: none;
             z-index: 0;
             animation: cosmicBreath 20s ease-in-out infinite;
@@ -160,8 +160,8 @@
         }
         
         @keyframes titleGlow {
-            0%, 100% { filter: drop-shadow(0 0 20px rgba(255,0,110,0.5)); }
-            50% { filter: drop-shadow(0 0 40px rgba(0,217,255,0.8)); }
+            0%, 100% { filter: drop-shadow(0 0 20px rgba(217,4,41,0.6)); }
+            50% { filter: drop-shadow(0 0 40px rgba(106,13,173,0.8)); }
         }
         
         .subtitle {
@@ -216,14 +216,14 @@
         
         .cta-btn:hover {
             transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 20px 60px rgba(255,0,110,0.5);
+            box-shadow: 0 20px 60px rgba(200,30,70,0.6);
         }
 
         /* EFEITO COLOR REVEAL / HOVER FILTER */
         .color-reveal-img {
             max-width: 100%; 
             border-radius: 24px; 
-            box-shadow: 0 20px 60px rgba(255,0,110,0.4);
+            box-shadow: 0 20px 60px rgba(190, 20, 60, 0.5);
             filter: grayscale(100%);
             transition: filter 0.6s ease;
             cursor: pointer;
@@ -266,7 +266,7 @@
             flex-wrap: wrap;
             gap: 1rem;
             margin-bottom: 3rem;
-            background: rgba(10, 10, 10, 0.5);
+            background: rgba(10, 3, 15, 0.7);
             padding: 1.5rem;
             border-radius: 15px;
             backdrop-filter: blur(10px);
@@ -275,20 +275,22 @@
         
         .edu-nav-item {
             padding: 1rem 2rem;
-            background: rgba(107, 15, 143, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(139, 30, 92, 0.3);
+            border: 1px solid rgba(217,4,41,0.3);
             border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s ease;
             font-weight: 600;
             text-align: center;
             min-width: 180px;
+            color: #fff;
         }
         
         .edu-nav-item:hover, .edu-nav-item.active {
             background: linear-gradient(135deg, var(--fire-rose), var(--mystic-purple));
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(255, 0, 110, 0.3);
+            box-shadow: 0 10px 25px rgba(217,4,41,0.5);
+            border-color: var(--fire-rose);
         }
         
         /* CONTEÚDO EDUCATIVO */
@@ -333,16 +335,16 @@
             background: var(--card-bg);
             border-radius: 15px;
             padding: 1.8rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(217,4,41,0.2);
             backdrop-filter: blur(10px);
         }
         
         .edu-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(255, 0, 110, 0.2);
-            border-color: rgba(255, 0, 110, 0.2);
+            box-shadow: 0 20px 40px rgba(200, 30, 70, 0.4);
+            border-color: rgba(217,4,41,0.5);
         }
         
         .edu-card-title {
@@ -366,7 +368,7 @@
         }
         
         .warning-box {
-            background: rgba(255, 193, 7, 0.1);
+            background: rgba(217,4,41,0.08);
             border-left: 5px solid var(--cosmic-gold);
             padding: 1.5rem;
             margin: 2rem 0;
@@ -385,18 +387,18 @@
         
         /* CURIOSIDADES */
         .curiosity-card {
-            background: linear-gradient(135deg, rgba(107,15,143,0.3), rgba(255,0,110,0.2));
+            background: linear-gradient(135deg, rgba(106,13,173,0.3), rgba(217,4,41,0.2));
             border-radius: 15px;
             padding: 2rem;
             margin-bottom: 1.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(217,4,41,0.3);
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
         }
         
         .curiosity-card:hover {
             transform: translateX(10px);
-            border-color: rgba(255, 0, 110, 0.3);
+            border-color: rgba(217,4,41,0.6);
         }
         
         .curiosity-number {
@@ -427,17 +429,17 @@
             margin-bottom: 1.5rem;
             cursor: pointer;
             transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(217,4,41,0.2);
         }
         
         .faq-item-alexia:hover {
-            border-color: rgba(255, 0, 110, 0.3);
+            border-color: rgba(217,4,41,0.6);
             transform: translateX(5px);
         }
         
         .faq-item-alexia.active {
             border-color: var(--fire-rose);
-            background: rgba(255, 0, 110, 0.05);
+            background: rgba(217,4,41,0.08);
         }
         
         .faq-question-alexia {
@@ -455,7 +457,7 @@
             transition: max-height 0.3s ease;
             margin-top: 1rem;
             padding-top: 0;
-            border-top: 1px dashed rgba(255, 255, 255, 0.1);
+            border-top: 1px dashed rgba(217,4,41,0.3);
         }
         
         .faq-item-alexia.active .faq-answer-alexia {
@@ -508,7 +510,7 @@
         .tag {
             padding: 0.6rem 1.5rem;
             background: var(--glass-white);
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(217,4,41,0.3);
             border-radius: 50px;
             font-size: 0.9rem;
             backdrop-filter: blur(10px);
@@ -520,7 +522,7 @@
             text-align: center;
             background: var(--glass-white);
             backdrop-filter: blur(20px);
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(217,4,41,0.3);
         }
         
         .social-links {
@@ -559,7 +561,7 @@
         .card-modern {
             background: var(--glass-white);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(217,4,41,0.25);
             border-radius: 24px;
             padding: 2.5rem;
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -579,8 +581,8 @@
         
         .card-modern:hover {
             transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(255,0,110,0.3);
-            border-color: rgba(255,0,110,0.5);
+            box-shadow: 0 30px 60px rgba(200,30,70,0.4);
+            border-color: rgba(217,4,41,0.7);
         }
         
         .card-modern:hover::before {
@@ -646,7 +648,7 @@
         /* FEATURED CARD */
         .featured-card {
             grid-column: span 2;
-            background: linear-gradient(135deg, rgba(107,15,143,0.3), rgba(255,0,110,0.2));
+            background: linear-gradient(135deg, rgba(106,13,173,0.3), rgba(217,4,41,0.2));
         }
         
         /* RESPONSIVE - BOTÕES CORRIGIDOS NO CELULAR */
@@ -715,14 +717,10 @@
             <div class="hero-content">
                 <div class="mystical-symbol">✦ ☾ ✦</div>
                 <h1>Alexia Melusine</h1>
-                <p class="subtitle">Rosa de Fogo ∞ Luz de Ferro</p>
-                <p class="tagline">Onde o silício encontra a encruzilhada: a tecnologia a serviço do sagrado feminino proibido.</p>
+                <p class="subtitle">Educação e tecnologia a serviço das tradições afro-brasileiras</p>
+                <p class="tagline">Desenvolvimento web e mídia digital para projetos culturais e religiosos.</p>
                 <div class="cta-container">
-                     <a href="https://pombagiras.com/guardias/" class="cta-btn cta-secondary">Guardiãs de Caminhos</a>
-                     <a href="https://pombagiras.com/vortex/" class="cta-btn cta-primary">Vortex Hub</a>
-                    <a href="#portfolio" class="cta-btn cta-primary">Mística Completa</a>
-                    <a href="https://pombagiras.com/lebaras/" class="cta-btn cta-primary">Quem são as Pombagiras</a>
-                    <a href="#educativo" class="cta-btn cta-secondary">Mistérios Sagrados</a>
+                  
                     
                     
                 </div>
@@ -730,11 +728,11 @@
         </section>
 
         <!-- QUEM SOU -->
-        <section style="background: rgba(10,10,10,0.5);">
+        <section style="background: rgba(10,5,8,0.6);">
             <div class="about-grid">
                 <div class="about-text">
                     <h2>Alma em Fogo, Luz em Ferro</h2>
-                    <p>Sou Alexia Melusine, uma alma fluida que transita entre mundos, carregando a força ancestral das Pombagiras e a luz transformadora da identidade trans. Atuo na intersecção entre a espiritualidade e a tecnologia de ponta como desenvolvedora web e diretora de mídia assistida por IA, canalizando visões abissais em experiências digitais.</p>
+                    <p>Alexia Melusine e desenvolvedora web e diretora de mídia. Trabalha na intersecção entre tecnologia e espiritualidade, com foco em projetos que valorizam as tradições afro-brasileiras e a diversidade de gênero.</p>
                 
                     <div class="identity-tags">
                         
@@ -747,9 +745,9 @@
         </section>
 
         <!-- PORTAL EDUCATIVO -->
-        <section id="educativo" style="background: rgba(107,15,143,0.1);">
+        <section id="educativo" style="background: rgba(80,0,60,0.15);">
             <h2 class="section-title">Portal Educativo das Pombagiras</h2>
-            <p class="section-subtitle">Um espaço de saber, respeito e desmistificação das tradições Afro.</p>
+            <p class="section-subtitle">Um espaço de saber, respeito e desmistificação das tradições afro-brasileiras.</p>
             
             <!-- Navegação por abas -->
             <div class="edu-nav">
@@ -1132,7 +1130,7 @@
                     </div>
                     
                     <div class="edu-card">
-                        <h4 class="edu-card-title"><i class="fas fa-book"></i> "Candomblés da Bahia</h4>
+                        <h4 class="edu-card-title"><i class="fas fa-book"></i> "Candomblés da Bahia"</h4>
                         <p><strong>Autor:</strong> Edison Carneiro</p>
                         <p>Uma obra clássica que documenta as tradições afro-brasileiras na Bahia, incluindo aspectos relacionados às entidades e suas manifestações.</p>
                     </div>
@@ -1214,8 +1212,8 @@
 
         <!-- PORTFOLIO -->
         <section id="portfolio">
-            <h2 class="section-title">Obra Mística Completa</h2>
-            <p class="section-subtitle">Portais digitais que conectam o sagrado feminino, o poder das Pombagiras e a jornada trans ao universo espiritual.</p>
+            <h2 class="section-title">Plataformas de Pesquisa e Expressão Espiritual</h2>
+            <p class="section-subtitle">Conjunto de repositórios voltados ao desenvolvimento de portais digitais sobre religiões de matriz africana, com foco nas Pombagiras, abordando aspectos culturais, espirituais e identitários, incluindo a perspectiva da jornada trans no campo do sagrado.</p>
             
             <div class="grid-modern">
                 <!-- POMBAGIRAS -->
@@ -1335,9 +1333,9 @@
         </section>
 
         <!-- CONTATO -->
-        <section id="contato" style="background: rgba(107,15,143,0.2);">
+        <section id="contato" style="background: rgba(100,0,70,0.25);">
             <h2 class="section-title">Conecte-se ao Fogo e à Luz</h2>
-            <p class="section-subtitle"></i>"Quem brinca com fogo nas encruzilhadas, fatalmente se queima nas próprias sombras. Mas quem reverencia o sagrado e caminha com as Pombagiras, encontra o escudo da proteção e o fogo da transformação absoluta. Este é um território de poder e verdade: entre com respeito e alma aberta, ou simplesmente não entre. Laroyê."</p>
+            <p class="section-subtitle"></i>"Este e um espaço de aprendizado e respeito. As tradições aqui representadas são religiões vivas, com séculos de história. Agradecemos que aborde este contéudo com a mesma seriedade dedicada a outra fé."</p>
             
             <div class="social-links">
                 <a href="https://www.youtube.com/@almasdepombagira" target="_blank"><i class="fab fa-youtube"></i></a>
