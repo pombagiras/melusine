@@ -219,7 +219,7 @@
             box-shadow: 0 20px 60px rgba(200,30,70,0.6);
         }
 
-        /* EFEITO COLOR REVEAL / HOVER FILTER */
+        /* EFEITO COLOR REVEAL / HOVER FILTER (usado na foto e no carrossel) */
         .color-reveal-img {
             max-width: 100%; 
             border-radius: 24px; 
@@ -230,6 +230,20 @@
         }
 
         .color-reveal-img:hover {
+            filter: grayscale(0%);
+        }
+        
+        /* Efeito para as imagens do carrossel - mesmo princípio */
+        .carousel-img {
+            height: 100%;
+            width: auto;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: filter 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+        
+        .carousel-img:hover {
             filter: grayscale(0%);
         }
         
@@ -474,7 +488,52 @@
             transform: rotate(180deg);
         }
         
-        /* ABOUT SECTION */
+        /* SEÇÃO QUEM SOU - REESTRUTURADA */
+        .quemsou-container {
+            background: rgba(10,5,8,0.6);
+            border-radius: 30px;
+            padding: 2rem;
+            backdrop-filter: blur(5px);
+        }
+        
+        /* CARROSSEL EM LOOP (visível, não absoluto) */
+        .carrossel-loop {
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 3rem;
+            border-radius: 24px;
+            background: rgba(0,0,0,0.3);
+            padding: 1rem 0;
+        }
+        
+        .carrossel-track {
+            display: flex;
+            width: max-content;
+            animation: slideHorizontal 40s linear infinite;
+        }
+        
+        .carrossel-track img {
+            height: 200px;  /* altura fixa para uniformidade */
+            width: auto;
+            margin: 0 5px;
+            border-radius: 16px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            filter: grayscale(100%);
+            transition: filter 0.4s ease, transform 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .carrossel-track img:hover {
+            filter: grayscale(0%);
+            transform: scale(1.02);
+        }
+        
+        @keyframes slideHorizontal {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        /* Layout da foto e texto (abaixo do carrossel) */
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -482,6 +541,8 @@
             max-width: 1200px;
             margin: 0 auto;
             align-items: center;
+            position: relative;
+            z-index: 2;
         }
         
         .about-text h2 {
@@ -514,6 +575,20 @@
             border-radius: 50px;
             font-size: 0.9rem;
             backdrop-filter: blur(10px);
+        }
+        
+        /* Estilo da foto de Alexia (mantido o efeito color reveal) */
+        .foto-alexia {
+            max-width: 100%;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(190, 20, 60, 0.5);
+            filter: grayscale(100%);
+            transition: filter 0.6s ease;
+            cursor: pointer;
+        }
+        
+        .foto-alexia:hover {
+            filter: grayscale(0%);
         }
         
         /* FOOTER */
@@ -658,9 +733,10 @@
         
         @media (max-width: 768px) {
             .hero-images { grid-template-columns: 1fr; }
-            .about-grid { grid-template-columns: 1fr; }
+            .about-grid { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
             .edu-nav { flex-direction: column; }
             .edu-nav-item { min-width: auto; }
+            .carrossel-track img { height: 120px; }
             
             /* CORREÇÃO DOS BOTÕES NO CELULAR */
             .cta-container {
@@ -680,6 +756,7 @@
         @media (max-width: 480px) {
             .grid-educational { grid-template-columns: 1fr; }
             .grid-modern { grid-template-columns: 1fr; }
+            .carrossel-track img { height: 90px; }
         }
         
         /* SCROLL ANIMATIONS */
@@ -705,6 +782,77 @@
         .card-modern:nth-child(4), .edu-card:nth-child(4), .curiosity-card:nth-child(4) { animation-delay: 0.4s; }
         .card-modern:nth-child(5), .edu-card:nth-child(5), .curiosity-card:nth-child(5) { animation-delay: 0.5s; }
         .card-modern:nth-child(6), .edu-card:nth-child(6), .curiosity-card:nth-child(6) { animation-delay: 0.6s; }
+
+        /* ========== ESTILOS DO POPUP/MODAL ========== */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(12px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.2s, opacity 0.2s ease;
+        }
+        .modal-overlay.active {
+            visibility: visible;
+            opacity: 1;
+        }
+        .modal-container {
+            background: var(--card-bg);
+            border: 1px solid var(--fire-rose);
+            border-radius: 32px;
+            max-width: 500px;
+            width: 90%;
+            padding: 2rem;
+            position: relative;
+            box-shadow: var(--glow-intense);
+            animation: fadeInScale 0.3s ease;
+        }
+        @keyframes fadeInScale {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--iron-light);
+            transition: 0.2s;
+            line-height: 1;
+        }
+        .modal-close:hover {
+            color: var(--fire-rose);
+            transform: scale(1.1);
+        }
+        .modal-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--cosmic-gold);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--fire-rose);
+            padding-left: 1rem;
+        }
+        .modal-info p {
+            margin: 0.8rem 0;
+            font-size: 1rem;
+            line-height: 1.4;
+            border-bottom: 1px dashed rgba(217,4,41,0.3);
+            padding-bottom: 0.5rem;
+        }
+        .modal-info strong {
+            color: var(--iron-light);
+            display: inline-block;
+            width: 110px;
+        }
     </style>
 </head>
 <body>
@@ -727,19 +875,78 @@
             </div>
         </section>
 
-        <!-- QUEM SOU -->
-        <section style="background: rgba(10,5,8,0.6);">
-            <div class="about-grid">
-                <div class="about-text">
-                    <h2>Alma em Fogo, Luz em Ferro</h2>
-                    <p>Alexia Melusine e desenvolvedora web e diretora de mídia. Trabalha na intersecção entre tecnologia e espiritualidade, com foco em projetos que valorizam as tradições afro-brasileiras e a diversidade de gênero.</p>
-                
-                    <div class="identity-tags">
+        <!-- QUEM SOU - REESTRUTURADA: CARROSSEL ACIMA, FOTO E TEXTO ABAIXO -->
+        <section style="background: rgba(10,5,8,0.8);">
+            <div class="quemsou-container">
+                <!-- CARROSSEL EM LOOP INFINITO (visível) -->
+                <div class="carrossel-loop">
+                    <div class="carrossel-track">
+                        <!-- PRIMEIRA SEQUÊNCIA DE IMAGENS DAS POMBAGIRAS -->
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/cigana_1.png" alt="Cigana" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_figueira_1.png" alt="Da Figueira" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_praia_1.png" alt="Da Praia" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/dama_da_noite_1.png" alt="Dama da Noite" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/maria_farrapo_1.png" alt="Maria Farrapo" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/maria_mulambo_1%20(1).png" alt="Maria Mulambo" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/maria_navalha_1.png" alt="Maria Navalha" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/maria_padilha_1.png" alt="Maria Padilha" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/maria_quiteria_1.png" alt="Maria Quitéria" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/menina_1.png" alt="Menina" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/rosa_caveira_1.png" alt="Rosa Caveira" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/sete_saias_1.png" alt="Sete Saias" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_lua_1.png" alt="Da Lua" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_serra_1.png" alt="Da Serra" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_sombra_1.png" alt="Da Sombra" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/das_aguas_profundas_1.png" alt="Das Águas Profundas" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/das_almas_1.png" alt="Das Almas" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/das_trevas_1.png" alt="Das Trevas" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/do_fogo_1.png" alt="Do Fogo" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/sete_encruzilhadas_1.png" alt="Sete Encruzilhadas" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_fenda_1.png" alt="Da Fenda" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_calunga_profunda_1.png" alt="Da Calunga Profunda" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_neblina_1.png" alt="Da Neblina" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/das_correntes_1.png" alt="Das Correntes" class="carousel-img">
                         
+                        <!-- DUPLICAÇÃO EXATA PARA LOOP INFINITO -->
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/cigana_1.png" alt="Cigana" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_figueira_1.png" alt="Da Figueira" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_praia_1.png" alt="Da Praia" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/dama_da_noite_1.png" alt="Dama da Noite" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/maria_farrapo_1.png" alt="Maria Farrapo" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/maria_mulambo_1%20(1).png" alt="Maria Mulambo" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/maria_navalha_1.png" alt="Maria Navalha" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/maria_padilha_1.png" alt="Maria Padilha" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/maria_quiteria_1.png" alt="Maria Quitéria" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/menina_1.png" alt="Menina" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/rosa_caveira_1.png" alt="Rosa Caveira" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/sete_saias_1.png" alt="Sete Saias" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_lua_1.png" alt="Da Lua" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_serra_1.png" alt="Da Serra" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_sombra_1.png" alt="Da Sombra" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/das_aguas_profundas_1.png" alt="Das Águas Profundas" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/das_almas_1.png" alt="Das Almas" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/das_trevas_1.png" alt="Das Trevas" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/do_fogo_1.png" alt="Do Fogo" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/sete_encruzilhadas_1.png" alt="Sete Encruzilhadas" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_fenda_1.png" alt="Da Fenda" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_calunga_profunda_1.png" alt="Da Calunga Profunda" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_neblina_1.png" alt="Da Neblina" class="carousel-img">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/das_correntes_1.png" alt="Das Correntes" class="carousel-img">
                     </div>
                 </div>
-                <div style="text-align: center;">
-                    <img src="https://raw.githubusercontent.com/pombagiras/melusine-oficial/refs/heads/main/Ale%20Red%20(2).jpg" class="color-reveal-img" alt="Alexia Melusine">
+                
+                <!-- FOTO E TEXTO (abaixo do carrossel) -->
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h2>Alma em Fogo, Luz em Ferro</h2>
+                        <p>Alexia Melusine é desenvolvedora web e diretora de mídia. Trabalha na intersecção entre tecnologia e espiritualidade, com foco em projetos que valorizam as tradições afro-brasileiras e a diversidade de gênero.</p>
+                        <div class="identity-tags">
+                            <!-- Espaço para tags se desejar -->
+                        </div>
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine-oficial/refs/heads/main/Ale%20Red%20(2).jpg" class="foto-alexia" alt="Alexia Melusine">
+                    </div>
                 </div>
             </div>
         </section>
@@ -1360,6 +1567,23 @@
         </footer>
     </div>
 
+    <!-- MODAL POPUP (adicionado sem alterar nada original) -->
+    <div id="pombagiraModal" class="modal-overlay">
+        <div class="modal-container">
+            <span class="modal-close">&times;</span>
+            <div class="modal-title" id="modalTitle">Pombagira</div>
+            <div class="modal-info" id="modalInfo">
+                <p><strong>🌹 Nome:</strong> <span id="infoNome"></span></p>
+                <p><strong>🥂 Oferenda:</strong> <span id="infoOferenda"></span></p>
+                <p><strong>📅 Dia de força:</strong> <span id="infoDia"></span></p>
+                <p><strong>🎨 Cores:</strong> <span id="infoCores"></span></p>
+                <p><strong>🌙 Posição da Lua:</strong> <span id="InfoLua"></span></p>
+                <p><strong>♈ Signo / Orixá próximo:</strong> <span id="infoSigno"></span></p>
+                <p><strong>⏰ Horário ideal:</strong> <span id="infoHorario"></span></p>
+            </div>
+        </div>
+    </div>
+
     <!-- FONT AWESOME (para ícones) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -1442,10 +1666,7 @@
 
         async function atualizarPortalVisceral() {
             try {
-                // 1. Incrementa o acesso mundial no banco
                 await _supabase.rpc('increment_visceral_view', { target_page: 'pombagiras.com' });
-
-                // 2. Busca o valor total para exibir no rodapé
                 const { data, error } = await _supabase
                     .from('access_stats')
                     .select('view_count')
@@ -1460,8 +1681,333 @@
             }
         }
 
-        // Dispara a função assim que carregar o portal
         window.addEventListener('load', atualizarPortalVisceral);
+
+        // ========== NOVA FUNCIONALIDADE: POPUP POMBAGIRA + PAUSA DO CARROSSEL ==========
+        (function(){
+            // Dados das 24 Pombagiras (mapeados pelo alt da imagem)
+            const dadosPombagiras = {
+                "Cigana": {
+                    nome: "Pombagira Cigana",
+                    oferenda: "Moedas, vinho tinto, rosas amarelas e pão de mel",
+                    dia: "Sexta-feira",
+                    cores: "Vermelho, dourado e roxo",
+                    lua: "Lua Crescente",
+                    signo: "Escorpião / Orixá Iansã",
+                    horario: "18h – pôr do sol"
+                },
+                "Da Figueira": {
+                    nome: "Pombagira da Figueira",
+                    oferenda: "Figos frescos, mel de engenho, cachaça envelhecida",
+                    dia: "Terça-feira",
+                    cores: "Verde musgo, roxo e marrom",
+                    lua: "Lua Cheia",
+                    signo: "Touro / Orixá Oxóssi",
+                    horario: "21h – noite da figueira"
+                },
+                "Da Praia": {
+                    nome: "Pombagira da Praia",
+                    oferenda: "Areia de praia, conchas do mar, champanhe rosé",
+                    dia: "Segunda-feira",
+                    cores: "Azul marinho, branco e prata",
+                    lua: "Lua Minguante",
+                    signo: "Peixes / Orixá Iemanjá",
+                    horario: "6h – nascer do sol na praia"
+                },
+                "Dama da Noite": {
+                    nome: "Pombagira Dama da Noite",
+                    oferenda: "Flores brancas, velas pretas, café forte",
+                    dia: "Sábado",
+                    cores: "Preto, prata e violeta",
+                    lua: "Lua Nova",
+                    signo: "Câncer / Orixá Nanã",
+                    horario: "0h – meia-noite"
+                },
+                "Maria Farrapo": {
+                    nome: "Pombagira Maria Farrapo",
+                    oferenda: "Pão dormido, vinho tinto, moedas velhas",
+                    dia: "Quarta-feira",
+                    cores: "Marrom, laranja queimado e preto",
+                    lua: "Lua Crescente",
+                    signo: "Virgem / Orixá Omulu",
+                    horario: "15h – hora da misericórdia"
+                },
+                "Maria Mulambo": {
+                    nome: "Pombagira Maria Mulambo",
+                    oferenda: "Restos de comida (com respeito), farofa de azeite, cachaça",
+                    dia: "Segunda-feira",
+                    cores: "Preto, vermelho sangue e cinza",
+                    lua: "Lua Minguante",
+                    signo: "Capricórnio / Orixá Exu",
+                    horario: "12h – ao meio-dia"
+                },
+                "Maria Navalha": {
+                    nome: "Pombagira Maria Navalha",
+                    oferenda: "Navalha nova, rosas vermelhas, marafo",
+                    dia: "Sexta-feira",
+                    cores: "Vermelho, preto e metalizado",
+                    lua: "Lua Cheia",
+                    signo: "Áries / Orixá Ogum",
+                    horario: "21h – hora do corte"
+                },
+                "Maria Padilha": {
+                    nome: "Pombagira Maria Padilha",
+                    oferenda: "Rosas vermelhas, champagne, perfume doce",
+                    dia: "Sexta-feira",
+                    cores: "Rosa choque, vermelho e dourado",
+                    lua: "Lua Cheia",
+                    signo: "Libra / Orixá Oxum",
+                    horario: "20h – hora do amor"
+                },
+                "Maria Quitéria": {
+                    nome: "Pombagira Maria Quitéria",
+                    oferenda: "Espada de brinquedo, flores amarelas, licor de mel",
+                    dia: "Quinta-feira",
+                    cores: "Amarelo ouro, vermelho e laranja",
+                    lua: "Lua Crescente",
+                    signo: "Leão / Orixá Xangô",
+                    horario: "14h – força da justiça"
+                },
+                "Menina": {
+                    nome: "Pombagira Menina",
+                    oferenda: "Brinquedos novos, doces variados, suco de uva",
+                    dia: "Domingo",
+                    cores: "Rosa claro, branco e lilás",
+                    lua: "Lua Nova",
+                    signo: "Gêmeos / Ibejis",
+                    horario: "10h – manhã leve"
+                },
+                "Rosa Caveira": {
+                    nome: "Pombagira Rosa Caveira",
+                    oferenda: "Rosas pretas, velas roxas, cachaça de arruda",
+                    dia: "Sábado",
+                    cores: "Roxo profundo, preto e cinza",
+                    lua: "Lua Minguante",
+                    signo: "Escorpião / Orixá Omulu",
+                    horario: "23h – portal das almas"
+                },
+                "Sete Saias": {
+                    nome: "Pombagira Sete Saias",
+                    oferenda: "Sete fitas coloridas, champanhe, rosas multicoloridas",
+                    dia: "Sexta-feira",
+                    cores: "Todas as cores do arco-íris",
+                    lua: "Lua Cheia",
+                    signo: "Sagitário / Orixá Oxumaré",
+                    horario: "19h – encruzilhada de saias"
+                },
+                "Da Lua": {
+                    nome: "Pombagira da Lua",
+                    oferenda: "Cristal de quartzo, leite de cabra, flores brancas",
+                    dia: "Segunda-feira",
+                    cores: "Branco, prata e azul celeste",
+                    lua: "Lua Cheia",
+                    signo: "Câncer / Orixá Iemanjá",
+                    horario: "0h – plenilúnio"
+                },
+                "Da Serra": {
+                    nome: "Pombagira da Serra",
+                    oferenda: "Pedras de quartzito, ervas secas, vinho tinto encorpado",
+                    dia: "Quarta-feira",
+                    cores: "Verde escuro, marrom e cinza",
+                    lua: "Lua Minguante",
+                    signo: "Capricórnio / Orixá Oxóssi",
+                    horario: "18h – entardecer na serra"
+                },
+                "Da Sombra": {
+                    nome: "Pombagira da Sombra",
+                    oferenda: "Velas pretas, incenso de mirra, café sem açúcar",
+                    dia: "Sábado",
+                    cores: "Preto absoluto, cinza chumbo",
+                    lua: "Lua Nova",
+                    signo: "Escorpião / Exu Morcego",
+                    horario: "3h – hora morta"
+                },
+                "Das Águas Profundas": {
+                    nome: "Pombagira das Águas Profundas",
+                    oferenda: "Água do mar, conchas grandes, champanhe azul",
+                    dia: "Terça-feira",
+                    cores: "Azul marinho, turquesa e verde água",
+                    lua: "Lua Minguante",
+                    signo: "Peixes / Iemanjá",
+                    horario: "22h – maré alta"
+                },
+                "Das Almas": {
+                    nome: "Pombagira das Almas",
+                    oferenda: "Pão de oferta, velas brancas, flores de luto (cravo)",
+                    dia: "Segunda-feira",
+                    cores: "Branco, preto e cinza",
+                    lua: "Lua Nova",
+                    signo: "Câncer / Omulu",
+                    horario: "23h – hora das almas"
+                },
+                "Das Trevas": {
+                    nome: "Pombagira das Trevas",
+                    oferenda: "Sangue de animal (simbólico: suco de uva escuro), velas pretas, rum",
+                    dia: "Sábado",
+                    cores: "Preto, roxo noturno",
+                    lua: "Lua Nova",
+                    signo: "Escorpião / Exu Caveira",
+                    horario: "0h – escuridão completa"
+                },
+                "Do Fogo": {
+                    nome: "Pombagira do Fogo",
+                    oferenda: "Fósforos, pimenta calabresa, whisky",
+                    dia: "Terça-feira",
+                    cores: "Vermelho fogo, laranja e dourado",
+                    lua: "Lua Crescente",
+                    signo: "Áries / Ogum",
+                    horario: "12h – sol a pino"
+                },
+                "Sete Encruzilhadas": {
+                    nome: "Pombagira das Sete Encruzilhadas",
+                    oferenda: "Cachaça dos 7 cantos, charuto de 7 voltas, moedas de 7 caminhos",
+                    dia: "Segunda-feira",
+                    cores: "Preto, vermelho e branco",
+                    lua: "Lua Cheia",
+                    signo: "Gêmeos / Exu das Sete Cruzes",
+                    horario: "6h e 18h – passagem"
+                },
+                "Da Fenda": {
+                    nome: "Pombagira da Fenda",
+                    oferenda: "Cristais de quartzo fumê, terra de cemitério, champanhe tinto",
+                    dia: "Sexta-feira",
+                    cores: "Cinza, preto e marrom",
+                    lua: "Lua Minguante",
+                    signo: "Virgem / Nanã",
+                    horario: "3h – rachadura do mundo"
+                },
+                "Da Calunga Profunda": {
+                    nome: "Pombagira da Calunga Profunda",
+                    oferenda: "Areia de praia, ossos decorativos, cachaça de jurema",
+                    dia: "Segunda-feira",
+                    cores: "Preto, azul escuro e branco",
+                    lua: "Lua Minguante",
+                    signo: "Peixes / Omulu",
+                    horario: "0h – fundo do mar"
+                },
+                "Da Neblina": {
+                    nome: "Pombagira da Neblina",
+                    oferenda: "Fumaça de arruda, vinho branco, tecido esvoaçante",
+                    dia: "Quarta-feira",
+                    cores: "Branco fumê, cinza e prata",
+                    lua: "Lua Nova",
+                    signo: "Peixes / Oxalá",
+                    horario: "4h – bruma da manhã"
+                },
+                "Das Correntes": {
+                    nome: "Pombagira das Correntes",
+                    oferenda: "Correntes simbólicas, chaves antigas, marafo",
+                    dia: "Sábado",
+                    cores: "Ferrugem, preto e prata",
+                    lua: "Lua Minguante",
+                    signo: "Capricórnio / Exu Corrente",
+                    horario: "2h – hora da corrente"
+                }
+            };
+
+            // Elementos do DOM
+            const track = document.querySelector('.carrossel-track');
+            const modal = document.getElementById('pombagiraModal');
+            const closeBtn = document.querySelector('.modal-close');
+            let isModalOpen = false;
+            let currentAlt = null;
+
+            // Funções para pausar/continuar carrossel
+            function pauseCarousel() {
+                if (track) track.style.animationPlayState = 'paused';
+            }
+            function resumeCarousel() {
+                if (track) track.style.animationPlayState = 'running';
+            }
+
+            // Fechar modal e continuar carrossel
+            function closeModal() {
+                if (!isModalOpen) return;
+                modal.classList.remove('active');
+                isModalOpen = false;
+                currentAlt = null;
+                resumeCarousel();
+            }
+
+            // Abrir modal com dados da Pombagira (pausa o carrossel)
+            function openModal(alt) {
+                if (!alt) return;
+                const info = dadosPombagiras[alt];
+                if (!info) {
+                    console.warn(`Dados não encontrados para: ${alt}`);
+                    return;
+                }
+                // Preenche os campos
+                document.getElementById('infoNome').innerText = info.nome;
+                document.getElementById('infoOferenda').innerText = info.oferenda;
+                document.getElementById('infoDia').innerText = info.dia;
+                document.getElementById('infoCores').innerText = info.cores;
+                document.getElementById('InfoLua').innerText = info.lua;
+                document.getElementById('infoSigno').innerText = info.signo;
+                document.getElementById('infoHorario').innerText = info.horario;
+                document.getElementById('modalTitle').innerHTML = `🌹 ${info.nome}`;
+                
+                modal.classList.add('active');
+                isModalOpen = true;
+                currentAlt = alt;
+                pauseCarousel();
+            }
+
+            // Evento de clique nas imagens do carrossel
+            function attachCarouselClick() {
+                const images = document.querySelectorAll('.carrossel-track img');
+                images.forEach(img => {
+                    img.removeEventListener('click', carouselClickHandler);
+                    img.addEventListener('click', carouselClickHandler);
+                });
+            }
+
+            function carouselClickHandler(e) {
+                e.stopPropagation();
+                const clickedAlt = this.getAttribute('alt');
+                if (!clickedAlt) return;
+
+                // Se modal estiver aberto e for a mesma imagem -> fecha
+                if (isModalOpen && currentAlt === clickedAlt) {
+                    closeModal();
+                } 
+                // Se modal estiver aberto e for outra imagem -> atualiza conteúdo
+                else if (isModalOpen && currentAlt !== clickedAlt) {
+                    const info = dadosPombagiras[clickedAlt];
+                    if (info) {
+                        document.getElementById('infoNome').innerText = info.nome;
+                        document.getElementById('infoOferenda').innerText = info.oferenda;
+                        document.getElementById('infoDia').innerText = info.dia;
+                        document.getElementById('infoCores').innerText = info.cores;
+                        document.getElementById('InfoLua').innerText = info.lua;
+                        document.getElementById('infoSigno').innerText = info.signo;
+                        document.getElementById('infoHorario').innerText = info.horario;
+                        document.getElementById('modalTitle').innerHTML = `🌹 ${info.nome}`;
+                        currentAlt = clickedAlt;
+                    }
+                    // carrossel já está pausado, não precisa mexer
+                }
+                // Se modal fechado -> abre
+                else if (!isModalOpen) {
+                    openModal(clickedAlt);
+                }
+            }
+
+            // Botão fechar do modal
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeModal);
+            }
+            // Clicar fora do container fecha também (overlay)
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+
+            // Inicializar eventos (as imagens são estáticas, mas como o DOM pode carregar depois, usamos MutationObserver como fallback)
+            attachCarouselClick();
+            // Observar se novas imagens forem adicionadas (não é o caso, mas por segurança)
+            const observer = new MutationObserver(() => attachCarouselClick());
+            observer.observe(document.querySelector('.carrossel-track'), { childList: true, subtree: true });
+        })();
     </script>
 </body>
 </html>
