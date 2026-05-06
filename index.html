@@ -19,7 +19,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://pombagiras.com/">
 <meta property="og:title" content="Alexia Melusine | Conhecimento Sagrado & Arte Visceral">
-<meta property="og:description" content="O olho que tudo vê nas encruzilhadas do mundo. Desmistificando o feminino proibido através da tecnologia e da ancestralidade. Alexia Melusine revela o que as sombras escondem. Laroyê.">
+<meta property="og:description" content="O olho que tudo vê nas encruzilhadas do mundo. Desmistificando o feminino proibido através da tecnologia e da ancestralidade. Laroyê.">
 <meta property="og:image" content="https://raw.githubusercontent.com/pombagiras/melusine-oficial/refs/heads/main/Ale%20Ultra%20(1).png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -500,7 +500,7 @@
         .carrossel-loop {
             width: 100%;
             overflow: hidden;
-            margin-bottom: 3rem;
+            margin-bottom: 1rem; /* Diminuído para controle manual do espaço via div */
             border-radius: 24px;
             background: rgba(0,0,0,0.3);
             padding: 1rem 0;
@@ -537,7 +537,7 @@
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 8rem;   /* AUMENTADO significativamente para mais espaço horizontal entre texto e foto */
             max-width: 1200px;
             margin: 0 auto;
             align-items: center;
@@ -814,6 +814,8 @@
             position: relative;
             box-shadow: var(--glow-intense);
             animation: fadeInScale 0.3s ease;
+            max-height: 90vh; /* Garante que não ultrapasse a tela */
+            overflow-y: auto; /* Permite rolar se o texto for grande */
         }
         @keyframes fadeInScale {
             from { transform: scale(0.9); opacity: 0; }
@@ -828,6 +830,7 @@
             color: var(--iron-light);
             transition: 0.2s;
             line-height: 1;
+            z-index: 10;
         }
         .modal-close:hover {
             color: var(--fire-rose);
@@ -847,11 +850,49 @@
             line-height: 1.4;
             border-bottom: 1px dashed rgba(217,4,41,0.3);
             padding-bottom: 0.5rem;
+            display: flex;
+            align-items: flex-start;
         }
         .modal-info strong {
             color: var(--iron-light);
             display: inline-block;
-            width: 110px;
+            width: 120px;
+            flex-shrink: 0;
+        }
+
+        /* CORREÇÃO ESPECÍFICA PARA CELULAR - TEXTO GRANDE E FECHAMENTO */
+        @media (max-width: 600px) {
+            .modal-container {
+                padding: 1.5rem 1rem;
+                border-radius: 20px;
+                width: 95%;
+            }
+            .modal-title {
+                font-size: 1.4rem;
+                margin-bottom: 1rem;
+                padding-right: 2rem; /* Espaço para o X */
+            }
+            .modal-info p {
+                font-size: 0.85rem;
+                margin: 0.6rem 0;
+                flex-direction: column; /* No celular o rótulo fica em cima do texto */
+            }
+            .modal-info strong {
+                width: 100%;
+                margin-bottom: 2px;
+            }
+            .modal-close {
+                top: 0.8rem;
+                right: 1rem;
+                font-size: 1.6rem;
+                background: rgba(0,0,0,0.3);
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
         }
 
         /* ===== NOVA SEPARAÇÃO HARMÔNICA (ADICIONADA) ===== */
@@ -890,8 +931,8 @@
                 <img src="https://raw.githubusercontent.com/pombagiras/melusine-oficial/refs/heads/main/Ale%20Ultra%20(1).png" alt="Alexia Melusine Banner Ultra">
             </div>
             <div class="hero-content">
-                <div class="mystical-symbol">✦ ☾ ✦</div>
-                <h1>Alexia Melusine</h1>
+                <div class="mystical-symbol">⛧ ✥ ⛧</div>
+                <h1>POMBAGIRAS</h1>
                 <p class="subtitle">Educação e tecnologia a serviço das tradições afro-brasileiras</p>
                 <p class="tagline">Desenvolvimento web e mídia digital para projetos culturais e religiosos.</p>
                 <div class="cta-container">
@@ -966,13 +1007,15 @@
                 <div class="separador-harmonico">
                     <p class="separador-frase">POMBAGIRAS: GUARDIÃS DE CAMINHO</p>
                 </div>
-                <!-- ============================================================= -->
+                <!-- ===== ADICIONADO: ESPAÇAMENTO VERTICAL DE 2 LINHAS ===== -->
+                <div style="height: 3rem;"></div>
+                <!-- ================================================= -->
                 
                 <!-- FOTO E TEXTO (abaixo do carrossel) -->
                 <div class="about-grid">
                     <div class="about-text">
-                        <h2>Alma em Fogo, Luz em Ferro</h2>
-                        <p>Alexia Melusine é desenvolvedora web e diretora de mídia. Trabalha na intersecção entre tecnologia e espiritualidade, com foco em projetos que valorizam as tradições afro-brasileiras e a diversidade de gênero.</p>
+                        <h2>Alexia Melusine</h2>
+                        <p>Desenvolvedora web e diretora de mídia. Trabalha na intersecção entre tecnologia e espiritualidade, com foco em projetos que valorizam as tradições afro-brasileiras e a diversidade de gênero.</p>
                         <div class="identity-tags">
                             <!-- Espaço para tags se desejar -->
                         </div>
@@ -1259,7 +1302,7 @@
                             <i class="fas fa-chevron-down faq-toggle-alexia"></i>
                         </div>
                         <div class="faq-answer-alexia">
-                            <p>Não. A incorporação de entidades é uma <strong>mediunidade específica</strong> que se manifesta em algumas pessoas, seguindo um processo de desenvolvimento dentro do terreiro. Isso envolve orientação espiritual, preparação (como tomar passes, frequentar giras, estudar a doutrina) e, principalmente, a confirmação através do jogo de búzios ou consulta ao guia espiritual do terreiro. Não é algo que se escolhe ou força, mas que se descobre e desenvolve com responsabilidade ao longo do tempo, muitas vezes levando anos de preparação.</p>
+                            <p>Não. A incorporação de entidades é uma <strong>mediunidade específica</strong> que se manifesta em algumas pessoas, seguindo um processo de desenvolvimento dentro do terreiro. Isso envolve orientação espiritual, preparo (como tomar passes, frequentar giras, estudar a doutrina) e, principalmente, a confirmação através do jogo de búzios ou consulta ao guia espiritual do terreiro. Não é algo que se escolhe ou força, mas que se descobre e desenvolve com responsabilidade ao longo do tempo, muitas vezes levando anos de preparação.</p>
                         </div>
                     </div>
                     
@@ -1574,7 +1617,7 @@
 
         <!-- CONTATO -->
         <section id="contato" style="background: rgba(100,0,70,0.25);">
-            <h2 class="section-title">Conecte-se ao Fogo e à Luz</h2>
+            <h2 class="section-title">Sabedoria Viva em Frequência Digital</h2>
             <p class="section-subtitle"></i>"Este e um espaço de aprendizado e respeito. As tradições aqui representadas são religiões vivas, com séculos de história. Agradecemos que aborde este contéudo com a mesma seriedade dedicada a outra fé."</p>
             
             <div class="social-links">
