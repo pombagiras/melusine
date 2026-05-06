@@ -853,6 +853,33 @@
             display: inline-block;
             width: 110px;
         }
+
+        /* ===== NOVA SEPARAÇÃO HARMÔNICA (ADICIONADA) ===== */
+        .separador-harmonico {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1rem 0;
+            border-top: 2px solid;
+            border-bottom: 2px solid;
+            border-image: linear-gradient(90deg, var(--fire-rose), var(--mystic-purple), var(--cosmic-gold), var(--mystic-purple), var(--fire-rose)) 1;
+            background: linear-gradient(135deg, rgba(217,4,41,0.1), rgba(139,30,92,0.1));
+            backdrop-filter: blur(4px);
+            border-radius: 16px;
+        }
+
+        .separador-frase {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.2rem, 4vw, 1.8rem);
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--cosmic-gold), var(--iron-light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 1px;
+            margin: 0;
+            text-shadow: 0 0 8px rgba(217,4,41,0.3);
+        }
+        /* ============================================= */
     </style>
 </head>
 <body>
@@ -934,6 +961,12 @@
                         <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/das_correntes_1.png" alt="Das Correntes" class="carousel-img">
                     </div>
                 </div>
+                
+                <!-- ===== SEPARAÇÃO HARMÔNICA ADICIONADA (FRASE DE IMPACTO) ===== -->
+                <div class="separador-harmonico">
+                    <p class="separador-frase">POMBAGIRAS: GUARDIÃS DE CAMINHO</p>
+                </div>
+                <!-- ============================================================= -->
                 
                 <!-- FOTO E TEXTO (abaixo do carrossel) -->
                 <div class="about-grid">
