@@ -897,6 +897,115 @@
             margin: 0;
             text-shadow: 0 0 8px rgba(217,4,41,0.3);
         }
+
+        /* ======= MELHORIAS DE NITIDEZ E DESTAQUE ======= */
+        /* Hero textos mais vívidos e luminosos */
+        .hero-content h1 {
+            text-shadow: 0 0 15px rgba(217,4,41,0.5), 0 0 30px rgba(106,13,173,0.4);
+            -webkit-text-fill-color: transparent;
+            background: linear-gradient(135deg, #FF4D6D, var(--fire-rose), var(--cosmic-gold), #FF4D6D);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: titleGlow 3s ease-in-out infinite, textShimmer 8s linear infinite;
+        }
+        @keyframes textShimmer {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+
+        .hero-content .subtitle {
+            font-weight: 500;
+            text-shadow: 0 0 12px rgba(217,4,41,0.6);
+            background: linear-gradient(135deg, #FF8C9E, var(--trans-pink), #B026FF, var(--trans-pink));
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: textShimmer 10s linear infinite;
+        }
+
+        .hero-content .tagline {
+            opacity: 1;
+            font-weight: 500;
+            color: #fff;
+            text-shadow: 0 0 8px rgba(0,0,0,0.8), 0 0 5px rgba(217,4,41,0.5);
+            letter-spacing: 0.5px;
+        }
+
+        /* Botões com contraste e brilho intenso */
+        .cta-secondary {
+            background: rgba(0,0,0,0.55) !important;
+            backdrop-filter: blur(12px);
+            border-width: 2px;
+            transition: all 0.3s ease;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        /* Força cor do texto para branco vibrante, sobrescrevendo style inline */
+        .hero .cta-secondary {
+            color: #ffffff !important;
+            text-shadow: 0 0 6px rgba(0,0,0,0.7), 0 0 2px rgba(217,4,41,0.9);
+            border-color: currentColor;
+        }
+        .hero .cta-secondary:hover {
+            background: rgba(217,4,41,0.3) !important;
+            box-shadow: 0 0 20px rgba(217,4,41,0.8);
+            transform: translateY(-5px) scale(1.05);
+            color: #fff !important;
+            text-shadow: 0 0 10px #D90429;
+        }
+
+        .cta-primary {
+            box-shadow: 0 0 20px rgba(217,4,41,0.8), var(--glow-intense);
+            text-shadow: 0 0 4px rgba(0,0,0,0.5);
+        }
+        .cta-primary:hover {
+            box-shadow: 0 0 35px rgba(217,4,41,1);
+        }
+
+        /* Melhora legibilidade geral de textos escuros em cards */
+        .edu-card, .card-modern, .curiosity-card, .faq-item-alexia {
+            border-color: rgba(217,4,41,0.5);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+        }
+        .edu-card p, .card-modern li, .curiosity-card p, .faq-answer-alexia p {
+            color: #f0eef7;
+            font-weight: 400;
+            text-shadow: 0 0 1px rgba(0,0,0,0.3);
+        }
+        .term-name, .edu-card-title, .curiosity-title, .faq-question-alexia span {
+            text-shadow: 0 0 3px rgba(0,0,0,0.5);
+        }
+
+        /* Destaque nos botões de navegação educativa */
+        .edu-nav-item {
+            background: rgba(0,0,0,0.65);
+            backdrop-filter: blur(8px);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.25s;
+            border-width: 1px;
+        }
+        .edu-nav-item.active, .edu-nav-item:hover {
+            background: linear-gradient(135deg, var(--fire-rose), var(--mystic-purple));
+            box-shadow: 0 0 18px rgba(217,4,41,0.9);
+            color: #fff;
+            text-shadow: 0 0 2px black;
+        }
+
+        /* Melhora contraste no footer e textos informativos */
+        .section-subtitle, .about-text p, .tagline {
+            color: #f5f0ff;
+            opacity: 0.95;
+        }
+
+        /* Botões cta dentro de hero ganham mais presença */
+        .cta-btn {
+            font-size: 1.15rem;
+            padding: 1rem 2rem;
+            backdrop-filter: blur(8px);
+            transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
     </style>
 </head>
 <body>
