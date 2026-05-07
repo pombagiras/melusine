@@ -35,16 +35,16 @@
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;600;700&display=swap');
         
         :root {
-            --mystic-purple: #8B1E5C;      /* roxo intenso com toque carmesim */
-            --fire-rose: #D90429;          /* vermelho visceral principal */
-            --iron-light: #C1121F;          /* vermelho profundo (substituindo o tom ciano) */
-            --trans-pink: #E5383B;          /* vermelho-rosa vibrante */
-            --trans-blue: #6A0DAD;          /* roxo marcante (substitui azul) */
-            --cosmic-gold: #C79A2E;          /* ouro rubro / âmbar sombrio */
+            --mystic-purple: #8B1E5C;
+            --fire-rose: #D90429;
+            --iron-light: #C1121F;
+            --trans-pink: #E5383B;
+            --trans-blue: #6A0DAD;
+            --cosmic-gold: #C79A2E;
             --deep-black: #030303;
             --glass-white: rgba(255,255,255,0.05);
-            --glow-intense: 0 0 40px rgba(200, 30, 70, 0.7);    /* brilho vermelho-sangue */
-            --card-bg: rgba(10, 3, 15, 0.85);                    /* preto violáceo */
+            --glow-intense: 0 0 40px rgba(200, 30, 70, 0.7);
+            --card-bg: rgba(10, 3, 15, 0.85);
             --success-green: #00FF88;
         }
         
@@ -78,7 +78,6 @@
         
         .content-wrapper { position: relative; z-index: 1; }
         
-        /* HERO SECTION */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -107,7 +106,6 @@
             height: 100%;
             object-fit: cover;
             animation: imagePulse 8s ease-in-out infinite;
-            
             filter: grayscale(100%);
             transition: filter 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             will-change: filter;
@@ -151,9 +149,10 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-bottom: 1rem;
+            /* ALTERAÇÃO 1: mais espaço entre as linhas e título minúsculo */
+            margin-bottom: 3rem;
+            line-height: 1.2;
             animation: titleGlow 3s ease-in-out infinite;
-            line-height: 1.1;
         }
         
         @keyframes titleGlow {
@@ -501,7 +500,7 @@
         }
         
         .carrossel-track img {
-            height: 200px;  /* altura fixa para uniformidade */
+            height: 200px;
             width: auto;
             margin: 0 5px;
             border-radius: 16px;
@@ -898,8 +897,7 @@
             text-shadow: 0 0 8px rgba(217,4,41,0.3);
         }
 
-        /* ======= MELHORIAS DE NITIDEZ E DESTAQUE ======= */
-        /* Hero textos mais vívidos e luminosos */
+        /* MELHORIAS DE NITIDEZ E DESTAQUE */
         .hero-content h1 {
             text-shadow: 0 0 15px rgba(217,4,41,0.5), 0 0 30px rgba(106,13,173,0.4);
             -webkit-text-fill-color: transparent;
@@ -932,17 +930,14 @@
             letter-spacing: 0.5px;
         }
 
-        /* Botões com contraste e brilho intenso */
-        .cta-secondary {
-            background: rgba(0,0,0,0.55) !important;
+        /* ALTERAÇÃO 2: botões MUITO mais transparentes (fundo quase invisível) */
+        .hero .cta-secondary {
+            background: rgba(0, 0, 0, 0.1) !important;
             backdrop-filter: blur(12px);
             border-width: 2px;
             transition: all 0.3s ease;
             font-weight: 700;
             letter-spacing: 1px;
-        }
-        /* Força cor do texto para branco vibrante, sobrescrevendo style inline */
-        .hero .cta-secondary {
             color: #ffffff !important;
             text-shadow: 0 0 6px rgba(0,0,0,0.7), 0 0 2px rgba(217,4,41,0.9);
             border-color: currentColor;
@@ -963,7 +958,6 @@
             box-shadow: 0 0 35px rgba(217,4,41,1);
         }
 
-        /* Melhora legibilidade geral de textos escuros em cards */
         .edu-card, .card-modern, .curiosity-card, .faq-item-alexia {
             border-color: rgba(217,4,41,0.5);
             box-shadow: 0 10px 25px rgba(0,0,0,0.6);
@@ -977,7 +971,6 @@
             text-shadow: 0 0 3px rgba(0,0,0,0.5);
         }
 
-        /* Destaque nos botões de navegação educativa */
         .edu-nav-item {
             background: rgba(0,0,0,0.65);
             backdrop-filter: blur(8px);
@@ -993,13 +986,11 @@
             text-shadow: 0 0 2px black;
         }
 
-        /* Melhora contraste no footer e textos informativos */
         .section-subtitle, .about-text p, .tagline {
             color: #f5f0ff;
             opacity: 0.95;
         }
 
-        /* Botões cta dentro de hero ganham mais presença */
         .cta-btn {
             font-size: 1.15rem;
             padding: 1rem 2rem;
@@ -1015,8 +1006,9 @@
                 <img src="https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Ogimage%20e%20Twitter%20Card.png" alt="Alexia Melusine Banner Ultra">
             </div>
             <div class="hero-content">
-                <div class="mystical-symbol">☩♆⚝</div>
-                <h1>POMBAGIRAS</h1>
+                <div class="mystical-symbol">∞♆∞</div>
+                <!-- ALTERAÇÃO 1: título em minúsculo -->
+                <h1>Pombagiras.com</h1>
                 <p class="subtitle">Educação e tecnologia a serviço das tradições afro-brasileiras</p>
                 <p class="tagline">Desenvolvimento web e mídia digital para projetos culturais e religiosos.</p>
                 <div class="cta-container">
@@ -1626,7 +1618,7 @@
                 <div class="card-modern">
                    
                     <i class="fa-solid fa-headphones"></i>
-                    <h3>Música Gótica & Sombras</h3>
+                    <h3>Música e Pontos</h3>
                     <ul>
                         <li><a href="https://alexialuzdeferro.github.io/dark-melancholy/" target="_blank">Dark Melancholy</a></li>
                         <li><a href="https://alexialuzdeferro.github.io/tv-cyber-goth/" target="_blank">TV Cyber Goth</a></li>
@@ -1707,13 +1699,13 @@
             <span class="modal-close">×</span>
             <div class="modal-title" id="modalTitle">Pombagira</div>
             <div class="modal-info" id="modalInfo">
-                <p><strong>🌹 Nome:</strong> <span id="infoNome"></span></p>
-                <p><strong>🥂 Oferenda:</strong> <span id="infoOferenda"></span></p>
-                <p><strong>📅 Dia de força:</strong> <span id="infoDia"></span></p>
-                <p><strong>🎨 Cores:</strong> <span id="infoCores"></span></p>
-                <p><strong>🌙 Posição da Lua:</strong> <span id="InfoLua"></span></p>
-                <p><strong>♈ Signo / Orixá próximo:</strong> <span id="infoSigno"></span></p>
-                <p><strong>⏰ Horário ideal:</strong> <span id="infoHorario"></span></p>
+                <p><strong>♚ Nome:</strong> <span id="infoNome"></span></p>
+                <p><strong>♚ Oferenda:</strong> <span id="infoOferenda"></span></p>
+                <p><strong>♚ Dia de força:</strong> <span id="infoDia"></span></p>
+                <p><strong>♚ Cores:</strong> <span id="infoCores"></span></p>
+                <p><strong>♚ Posição da Lua:</strong> <span id="InfoLua"></span></p>
+                <p><strong>♚ Signo / Orixá próximo:</strong> <span id="infoSigno"></span></p>
+                <p><strong>♚ Horário ideal:</strong> <span id="infoHorario"></span></p>
             </div>
         </div>
     </div>
@@ -1723,27 +1715,17 @@
     <script>
         // ========== FUNÇÕES PARA O PORTAL EDUCATIVO ==========
         
-        // Navegação entre seções educativas
         document.querySelectorAll('.edu-nav-item').forEach(item => {
             item.addEventListener('click', function() {
-                // Remove classe active de todos os itens de navegação
                 document.querySelectorAll('.edu-nav-item').forEach(nav => {
                     nav.classList.remove('active');
                 });
-                
-                // Adiciona classe active ao item clicado
                 this.classList.add('active');
-                
-                // Oculta todas as seções
                 document.querySelectorAll('.edu-content-section').forEach(section => {
                     section.classList.remove('active');
                 });
-                
-                // Mostra a seção correspondente
                 const targetId = this.getAttribute('data-target');
                 document.getElementById(targetId).classList.add('active');
-                
-                // Scroll suave para a seção
                 window.scrollTo({
                     top: document.getElementById('educativo').offsetTop - 80,
                     behavior: 'smooth'
@@ -1751,36 +1733,26 @@
             });
         });
         
-        // FAQ toggle
         document.querySelectorAll('.faq-item-alexia').forEach(item => {
             item.addEventListener('click', function() {
-                // Fecha todos os outros itens FAQ
                 document.querySelectorAll('.faq-item-alexia').forEach(faq => {
                     if (faq !== this) {
                         faq.classList.remove('active');
                     }
                 });
-                
-                // Alterna o item clicado
                 this.classList.toggle('active');
             });
         });
 
-        // ========== INICIALIZAÇÃO GERAL ==========
         document.addEventListener('DOMContentLoaded', () => {
-            // Inicializar primeira FAQ aberta
             if(document.querySelector('.faq-item-alexia')) {
                 document.querySelector('.faq-item-alexia').classList.add('active');
             }
-            
-            // Animação de scroll suave para links internos
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
-                    
                     const targetId = this.getAttribute('href');
                     if (targetId === '#') return;
-                    
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
                         window.scrollTo({
@@ -1792,7 +1764,6 @@
             });
         });
 
-        // ========== ADIÇÃO: LÓGICA DO CONTADOR SUPABASE ==========
         const _URL = 'https://rbygxkbewzknvjjhxdvw.supabase.co';
         const _KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJieWd4a2Jld3prbnZqamh4ZHZ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjYwMDcxNjQsImV4cCI6MjA4MTU4MzE2NH0.YrHF9HEGo6yv9MyNsPzFgBhaAB1DRh2SLU8f7L6s1nY';
         const _supabase = supabase.createClient(_URL, _KEY);
@@ -1805,7 +1776,6 @@
                     .select('view_count')
                     .eq('page_name', 'pombagiras.com')
                     .single();
-
                 if (data) {
                     document.getElementById('contagem-visceral').innerText = data.view_count;
                 }
@@ -1816,9 +1786,7 @@
 
         window.addEventListener('load', atualizarPortalVisceral);
 
-        // ========== NOVA FUNCIONALIDADE: POPUP POMBAGIRA + PAUSA DO CARROSSEL ==========
         (function(){
-            // Dados das 24 Pombagiras (mapeados pelo alt da imagem)
             const dadosPombagiras = {
                 "Cigana": {
                     nome: "Pombagira Cigana",
@@ -2038,31 +2006,55 @@
                 }
             };
 
-            // Elementos do DOM
             const track = document.querySelector('.carrossel-track');
+            const carrosselContainer = document.querySelector('.carrossel-loop');  // elemento pai para os eventos de mouse
             const modal = document.getElementById('pombagiraModal');
             const closeBtn = document.querySelector('.modal-close');
             let isModalOpen = false;
             let currentAlt = null;
+            let isMouseOverCarousel = false;  // estado do mouse sobre o carrossel
 
-            // Funções para pausar/continuar carrossel
             function pauseCarousel() {
                 if (track) track.style.animationPlayState = 'paused';
             }
             function resumeCarousel() {
-                if (track) track.style.animationPlayState = 'running';
+                if (track && !isMouseOverCarousel && !isModalOpen) {
+                    track.style.animationPlayState = 'running';
+                } else if (track && isMouseOverCarousel) {
+                    // mantém pausado se o mouse estiver em cima
+                    track.style.animationPlayState = 'paused';
+                }
             }
 
-            // Fechar modal e continuar carrossel
+            // eventos de mouse sobre o carrossel (pausa/continua)
+            if (carrosselContainer) {
+                carrosselContainer.addEventListener('mouseenter', () => {
+                    isMouseOverCarousel = true;
+                    pauseCarousel();
+                });
+                carrosselContainer.addEventListener('mouseleave', () => {
+                    isMouseOverCarousel = false;
+                    // só retoma se o modal não estiver aberto
+                    if (!isModalOpen) {
+                        resumeCarousel();
+                    }
+                });
+            }
+
             function closeModal() {
                 if (!isModalOpen) return;
                 modal.classList.remove('active');
                 isModalOpen = false;
                 currentAlt = null;
-                resumeCarousel();
+                // ao fechar, verifica se o mouse ainda está sobre o carrossel para decidir se retoma
+                if (!isMouseOverCarousel) {
+                    resumeCarousel();
+                } else {
+                    // se mouse está sobre, mantém pausado
+                    pauseCarousel();
+                }
             }
 
-            // Abrir modal com dados da Pombagira (pausa o carrossel)
             function openModal(alt) {
                 if (!alt) return;
                 const info = dadosPombagiras[alt];
@@ -2070,7 +2062,6 @@
                     console.warn(`Dados não encontrados para: ${alt}`);
                     return;
                 }
-                // Preenche os campos
                 document.getElementById('infoNome').innerText = info.nome;
                 document.getElementById('infoOferenda').innerText = info.oferenda;
                 document.getElementById('infoDia').innerText = info.dia;
@@ -2079,14 +2070,12 @@
                 document.getElementById('infoSigno').innerText = info.signo;
                 document.getElementById('infoHorario').innerText = info.horario;
                 document.getElementById('modalTitle').innerHTML = `🌹 ${info.nome}`;
-                
                 modal.classList.add('active');
                 isModalOpen = true;
                 currentAlt = alt;
                 pauseCarousel();
             }
 
-            // Evento de clique nas imagens do carrossel
             function attachCarouselClick() {
                 const images = document.querySelectorAll('.carrossel-track img');
                 images.forEach(img => {
@@ -2099,13 +2088,9 @@
                 e.stopPropagation();
                 const clickedAlt = this.getAttribute('alt');
                 if (!clickedAlt) return;
-
-                // Se modal estiver aberto e for a mesma imagem -> fecha
                 if (isModalOpen && currentAlt === clickedAlt) {
                     closeModal();
-                } 
-                // Se modal estiver aberto e for outra imagem -> atualiza conteúdo
-                else if (isModalOpen && currentAlt !== clickedAlt) {
+                } else if (isModalOpen && currentAlt !== clickedAlt) {
                     const info = dadosPombagiras[clickedAlt];
                     if (info) {
                         document.getElementById('infoNome').innerText = info.nome;
@@ -2118,25 +2103,19 @@
                         document.getElementById('modalTitle').innerHTML = `🌹 ${info.nome}`;
                         currentAlt = clickedAlt;
                     }
-                }
-                // Se modal fechado -> abre
-                else if (!isModalOpen) {
+                } else if (!isModalOpen) {
                     openModal(clickedAlt);
                 }
             }
 
-            // Botão fechar do modal
             if (closeBtn) {
                 closeBtn.addEventListener('click', closeModal);
             }
-            // Clicar fora do container fecha também (overlay)
             modal.addEventListener('click', (e) => {
                 if (e.target === modal) closeModal();
             });
 
-            // Inicializar eventos
             attachCarouselClick();
-            // Observar se novas imagens forem adicionadas (fallback)
             const observer = new MutationObserver(() => attachCarouselClick());
             observer.observe(document.querySelector('.carrossel-track'), { childList: true, subtree: true });
         })();
