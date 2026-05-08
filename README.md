@@ -2,7 +2,7 @@
 ### Rosa de Fogo ∞ Luz de Ferro
 **@almasdepombagira**
 
-![Alexia Melusine](https://raw.githubusercontent.com/pombagiras/melusine-oficial/refs/heads/main/Ale%20Red%20(2).jpg)
+![Alexia Melusine](https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Ogimage%20e%20Twitter%20Card.png)
 
 ---
 
