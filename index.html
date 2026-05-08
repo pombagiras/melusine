@@ -997,6 +997,40 @@
             backdrop-filter: blur(8px);
             transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
         }
+        
+        /* ===== ALTERAÇÃO PONTUAL: NOME POMBAGIRAS.COM COM BRANCO, GLOW VERMELHO E PULSAÇÃO MAIS LENTA ===== */
+        .hero-content h1 {
+            /* Remove gradiente e shimmers anteriores para aplicar estilo branco com glow vermelho */
+            background: none !important;
+            -webkit-text-fill-color: rgba(255, 255, 255, 0.9) !important;
+            color: rgba(255, 255, 255, 0.9) !important;
+            text-shadow: 0 0 8px #ff0000, 0 0 15px #b30000;
+            animation: pulseWhiteRed 3s ease-in-out infinite !important;
+            transform-origin: center;
+            display: inline-block;
+            width: auto;
+        }
+        
+        @keyframes pulseWhiteRed {
+            0% {
+                transform: scale(1);
+                text-shadow: 0 0 8px #ff0000, 0 0 15px #b30000;
+                -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+                color: rgba(255, 255, 255, 0.9);
+            }
+            50% {
+                transform: scale(1.12);
+                text-shadow: 0 0 20px #ff3333, 0 0 35px #cc0000, 0 0 5px #ff9999;
+                -webkit-text-fill-color: rgba(255, 255, 255, 1);
+                color: rgba(255, 255, 255, 1);
+            }
+            100% {
+                transform: scale(1);
+                text-shadow: 0 0 8px #ff0000, 0 0 15px #b30000;
+                -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+                color: rgba(255, 255, 255, 0.9);
+            }
+        }
     </style>
 </head>
 <body>
@@ -1006,8 +1040,7 @@
                 <img src="https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Ogimage%20e%20Twitter%20Card.png" alt="Alexia Melusine Banner Ultra">
             </div>
             <div class="hero-content">
-                <div class="mystical-symbol">∞♆∞</div>
-                <!-- ALTERAÇÃO 1: título em minúsculo -->
+                <div class="mystical-symbol"></div>
                 <h1>Pombagiras.com</h1>
                 <p class="subtitle">Educação e tecnologia a serviço das tradições afro-brasileiras</p>
                 <p class="tagline">Desenvolvimento web e mídia digital para projetos culturais e religiosos.</p>
