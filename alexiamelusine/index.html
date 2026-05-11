@@ -724,6 +724,13 @@
                 margin-bottom: 10px;
             }
         }
+
+        /* ========== EFEITO COLOR REVEAL (ADICIONADO SEM REMOVER NENHUMA LINHA) ========== */
+        /* Este bloco garante a revelação completa da cor ao passar o mouse sobre qualquer foto */
+        .photo-item:hover .photo-img {
+            filter: grayscale(0%) contrast(120%);
+            transition: filter 0.5s ease;
+        }
     </style>
 </head>
 <body>
@@ -737,6 +744,7 @@
                     <li><a href="#gallery">Fotos</a></li>
                     <li><a href="#links">Portais</a></li>
                     <li><a href="#contact">Contato</a></li>
+                    <li><a href="https://pombagiras.com/">Voltar - Pombagiras.com</a></li>
                 </ul>
             </nav>
         </div>
@@ -859,6 +867,21 @@
                     <h3 class="link-title">MEDITAÇÃO GUIADA</h3>
                     <p class="link-description">Práticas meditativas para conexão espiritual e equilíbrio interior, alinhadas com a energia das encruzilhadas.</p>
                     <a href="https://alexialuzdeferro.github.io/medita-o/" target="_blank" class="link-button">MEDITAR</a>
+                </div>
+                
+                <!-- NOVAS SEÇÕES ADICIONADAS -->
+                <div class="link-card">
+                    <i class="fas fa-comment-dots link-icon"></i>
+                    <h3 class="link-title">FALE COMIGO</h3>
+                    <p class="link-description">Espaço para contato direto, troca de ideias e mensagens com Alexia Melusine. Perguntas, sugestões ou simplesmente um olá.</p>
+                    <a href="https://alexialuzdeferro.github.io/Fale-Comigo/" target="_blank" class="link-button">FALAR</a>
+                </div>
+                
+                <div class="link-card">
+                    <i class="fas fa-tree link-icon"></i>
+                    <h3 class="link-title">ANCESTRAIS</h3>
+                    <p class="link-description">Portal dedicado à memória e força dos ancestrais, honrando aqueles que vieram antes e nos guiam nas encruzilhadas.</p>
+                    <a href="https://pombagiras.github.io/ancestrais/" target="_blank" class="link-button">HONRAR</a>
                 </div>
             </div>
         </div>
