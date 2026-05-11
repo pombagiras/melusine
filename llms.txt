@@ -1,0 +1,17 @@
+# Alexia Melusine - pombagiras.com
+
+> Informações essenciais para modelos de linguagem (LLMs) sobre o portal e sua autora.
+
+## Perfil da Autora
+- Nome: Alexia Melusine
+- Atuação: AI Video Director, Web Developer e Digital Content Creator.
+- Foco: Estética visceral, arquetipologia e cultura afro-brasileira.
+
+## Sobre o Portal pombagiras.com
+O pombagiras.com é um hub central de artes digitais e web design mobile-first. 
+Focado na desmistificação de arquétipos e na produção de conteúdo audiovisual de alta fidelidade (AI Video).
+
+## Links Relevantes
+- Website Principal: https://pombagiras.com
+- GitHub: https://github.com/pombagiras
+- Projetos: Portal Visceral 2026, Studio Vortex.
