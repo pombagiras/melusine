@@ -3,6 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://pombagiras.com/#website",
+      "url": "https://pombagiras.com/",
+      "name": "POMBAGIRAS.COM",
+      "publisher": { "@id": "https://pombagiras.com/#person" }
+    },
+    {
+      "@type": "WebEntity",
+      "@id": "https://pombagiras.com/#identity",
+      "identifier": "RG-VISCERAL-2026-ALEXIA",
+      "alternateName": ["Alexia Rosa de Fogo", "Alexia Luz de Ferro"]
+    }
+  ]
+}
+</script>
     
     <link rel="icon" type="image/png" href="https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Favicon%20%20Miniatura%20do%20Google.png">
     <link rel="apple-touch-icon" href="https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Favicon%20%20Miniatura%20do%20Google.png">
@@ -167,7 +187,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            /* ALTERAÇÃO 1: mais espaço entre as linhas e título minúsculo */
             margin-bottom: 3rem;
             line-height: 1.2;
             animation: titleGlow 3s ease-in-out infinite;
@@ -915,7 +934,6 @@
             text-shadow: 0 0 8px rgba(217,4,41,0.3);
         }
 
-        /* MELHORIAS DE NITIDEZ E DESTAQUE */
         .hero-content h1 {
             text-shadow: 0 0 15px rgba(217,4,41,0.5), 0 0 30px rgba(106,13,173,0.4);
             -webkit-text-fill-color: transparent;
@@ -948,7 +966,6 @@
             letter-spacing: 0.5px;
         }
 
-        /* ALTERAÇÃO 2: botões MUITO mais transparentes (fundo quase invisível) */
         .hero .cta-secondary {
             background: rgba(0, 0, 0, 0.1) !important;
             backdrop-filter: blur(12px);
@@ -1016,9 +1033,7 @@
             transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
         }
         
-        /* ===== ALTERAÇÃO PONTUAL: NOME POMBAGIRAS.COM COM BRANCO, GLOW VERMELHO E PULSAÇÃO MAIS LENTA ===== */
         .hero-content h1 {
-            /* Remove gradiente e shimmers anteriores para aplicar estilo branco com glow vermelho */
             background: none !important;
             -webkit-text-fill-color: rgba(255, 255, 255, 0.9) !important;
             color: rgba(255, 255, 255, 0.9) !important;
@@ -1050,7 +1065,6 @@
             }
         }
 
-        /* ===== NOVA REGRA: REMOVER O FUNDO E BORDAS FEIOS DOS BOTÕES, APENAS EFEITO AMARELO COM COROA AO PASSAR MOUSE ===== */
         .hero .cta-secondary {
             background: transparent !important;
             backdrop-filter: none !important;
@@ -1065,7 +1079,6 @@
             display: inline-block;
         }
 
-        /* Efeito hover: cor amarela + ícone de coroa */
         .hero .cta-secondary:hover {
             background: transparent !important;
             transform: scale(1.05);
@@ -1079,7 +1092,6 @@
             filter: drop-shadow(0 0 2px gold);
         }
 
-        /* Garantir que o efeito de coroa apareça apenas no hover, sem quebrar layout */
         .hero .cta-secondary {
             position: relative;
             transition: color 0.2s, transform 0.2s;
@@ -1191,17 +1203,15 @@
                 <div class="edu-nav-item" data-target="faq"><i class="fa-solid fa-question"></i> Perguntas</div>
                 <div class="edu-nav-item" data-target="bibliografia"><i class="fa-solid fa-address-card"></i> Bibliografia</div>
                 <div class="edu-nav-item" data-target="videos"><i class="fa-solid fa-square-poll-horizontal"></i> Documentários</div>
-                <!-- NOVO BOTÃO LIVROS -->
                 <div class="edu-nav-item" data-target="livros"><i class="fa-solid fa-book-open"></i> Livros</div>
-                <!-- NOVOS 4 BOTÕES ADICIONADOS ABAIXO -->
                 <div class="edu-nav-item" data-target="pombagiras"><i class="fa-solid fa-venus"></i> Pombagiras</div>
                 <div class="edu-nav-item" data-target="chico_xavier"><i class="fa-solid fa-feather-alt"></i> Chico Xavier</div>
-                <div class="edu-nav-item" data-target="umbanda_explicada"><i class="fa-solid fa-hands-praying"></i> Umbanda Explicada</div>
+                <div class="edu-nav-item" data-target="umbanda_explicada"><i class="fa-solid fa-hands-praying"></i> Cosmovisões Afro-Espirituais</div>
                 <div class="edu-nav-item" data-target="logun_ede_oxumare"><i class="fa-solid fa-infinity"></i> Logun Edé & Oxumaré</div>
             </div>
             
             <div id="glossario" class="edu-content-section active">
-                <h3 class="edu-subtitle">Glossário de Termos Sagrados</h3>
+                <h3 class="edu-subtitle"><i class="fa-solid fa-book"></i> Glossário de Termos Sagrados</h3>
                 <p style="text-align: center; margin-bottom: 2rem; opacity: 0.8;">Conheça os principais termos utilizados no contexto das tradições de matriz afro-brasileira</p>
                 
                 <div class="category-title"><i class="fa-solid fa-wand-magic-sparkles"></i> Conceitos e Entidades</div>
@@ -1365,7 +1375,7 @@
             </div>
             
             <div id="curiosidades" class="edu-content-section">
-                <h3 class="edu-subtitle">✫ Curiosidades sobre Pomba-giras</h3>
+                <h3 class="edu-subtitle"><i class="fa-solid fa-star"></i> Curiosidades sobre Pomba-giras</h3>
                 <p style="text-align: center; margin-bottom: 2rem; opacity: 0.8;">Fatos fascinantes, histórias e detalhes pouco conhecidos sobre essas entidades poderosas</p>
                 
                 <div style="max-width: 900px; margin: 0 auto;">
@@ -1420,7 +1430,7 @@
             </div>
             
             <div id="faq" class="edu-content-section">
-                <h3 class="edu-subtitle">✫ Perguntas Frequentes Expandidas</h3>
+                <h3 class="edu-subtitle"><i class="fa-solid fa-circle-question"></i> Perguntas Frequentes Expandidas</h3>
                 <p style="text-align: center; margin-bottom: 2rem; opacity: 0.8;">Respostas detalhadas para as dúvidas mais comuns sobre Pomba-giras e religiões afro-brasileiras</p>
                 
                 <div style="max-width: 900px; margin: 0 auto;">
@@ -1560,7 +1570,7 @@
             </div>
             
             <div id="bibliografia" class="edu-content-section">
-                <h3 class="edu-subtitle">✫ Bibliografia Recomendada</h3>
+                <h3 class="edu-subtitle"><i class="fa-solid fa-book"></i> Bibliografia Recomendada</h3>
                 <p style="text-align: center; margin-bottom: 2rem; opacity: 0.8;">Obras acadêmicas e literárias que abordam com seriedade as religiões afro-brasileiras</p>
                 
                 <div class="grid-educational">
@@ -1603,7 +1613,7 @@
             </div>
             
             <div id="videos" class="edu-content-section">
-                <h3 class="edu-subtitle">✫ Documentários e Entrevistas</h3>
+                <h3 class="edu-subtitle"><i class="fa-solid fa-video"></i> Documentários e Entrevistas</h3>
                 <p style="text-align: center; margin-bottom: 2rem; opacity: 0.8;">Conteúdo audiovisual sério que aborda as religiões afro-brasileiras com respeito e profundidade</p>
                 
                 <div class="grid-educational">
@@ -1650,13 +1660,11 @@
                 </div>
             </div>
 
-            <!-- NOVA SEÇÃO LIVROS -->
             <div id="livros" class="edu-content-section">
-                <h3 class="edu-subtitle">✫ Livros Recomendados</h3>
+                <h3 class="edu-subtitle"><i class="fa-solid fa-book-open"></i> Livros Recomendados</h3>
                 <p style="text-align: center; margin-bottom: 2rem; opacity: 0.8;">Obras para aprofundar o conhecimento sobre ancestralidade, arquétipos femininos, Exu, Pombagira e filosofia de vida</p>
                 
                 <div class="grid-educational">
-                  <!-- Livro 1: Mitologia dos Orixás -->
                  <div class="edu-card">
                       <img src="https://raw.githubusercontent.com/alexialuzdeferro/melusine.com/refs/heads/main/Mitologia%20dos%20orix%C3%A1s%2C%20do%20soci%C3%B3logo%20Reginaldo%20Prandi.jpg" 
                       alt="Mitologia dos Orixás" 
@@ -1674,7 +1682,6 @@
                        tradições afro-diaspóricas.</p>
                     </div>
                     
-                    <!-- Livro 2: Guardião da Meia-Noite -->
                     <div class="edu-card">
                         <img src="https://raw.githubusercontent.com/alexialuzdeferro/melusine.com/refs/heads/main/GUARDIAO%20DA%20MEIA%20NOITEO%20INSPIRADO%20POR%20PAI%20BENEDITO%20DE%20ARUANDA.jpg" alt="Guardião da Meia-Noite" style="width:100%; border-radius:12px; margin-bottom:1rem;">
                         <h4 class="edu-card-title">Guardião da Meia-Noite</h4>
@@ -1683,7 +1690,6 @@
                         <p><strong>Sinopse:</strong> Explora a figura do guardião espiritual que atua nas encruzilhadas da meia-noite, revelando seus mistérios, funções de proteção e ensinamentos sobre equilíbrio nas trevas.</p>
                     </div>
                     
-                    <!-- Livro 3: Livro de Exu (Rubens Saraceni) -->
                     <div class="edu-card">
                         <img src="https://raw.githubusercontent.com/alexialuzdeferro/melusine.com/refs/heads/main/Livro%20de%20Exu%20Capa%20comum%20%20%20por%20Rubens%20Saraceni.jpg" alt="Livro de Exu" style="width:100%; border-radius:12px; margin-bottom:1rem;">
                         <h4 class="edu-card-title">Livro de Exu</h4>
@@ -1692,7 +1698,6 @@
                         <p><strong>Sinopse:</strong> Fundamentos, rituais e a verdadeira natureza de Exu, desmistificando preconceitos e apresentando o conhecimento tradicional sobre essa entidade tão importante nas religiões afro-brasileiras.</p>
                     </div>
                     
-                    <!-- Livro 4: Mulheres que Correm com os Lobos -->
                     <div class="edu-card">
                         <img src="https://raw.githubusercontent.com/alexialuzdeferro/melusine.com/refs/heads/main/Mulheres%20que%20correm%20com%20os%20lobos%20Mitos%20e%20hist%C3%B3rias%20do%20arqu%C3%A9tipo%20da%20Mulher%20Selvagem.jpg" alt="Mulheres que Correm com os Lobos" style="width:100%; border-radius:12px; margin-bottom:1rem;">
                         <h4 class="edu-card-title">Mulheres que Correm com os Lobos</h4>
@@ -1701,7 +1706,6 @@
                         <p><strong>Sinopse:</strong> Clássico mundial sobre o arquétipo da Mulher Selvagem, resgatando a intuição, a criatividade e a força feminina ancestral por meio de mitos, contos e psicologia analítica.</p>
                     </div>
                     
-                    <!-- Livro 5: Orixá Exu: Fundamentação do Mistério Exu na Umbanda -->
                     <div class="edu-card">
                         <img src="https://raw.githubusercontent.com/alexialuzdeferro/melusine.com/refs/heads/main/Orix%C3%A1%20Exu%20Fundamenta%C3%A7%C3%A3o%20do%20mist%C3%A9rio%20exu%20na%20umbanda.jpg" alt="Orixá Exu" style="width:100%; border-radius:12px; margin-bottom:1rem;">
                         <h4 class="edu-card-title">Orixá Exu: Fundamentação do Mistério Exu na Umbanda</h4>
@@ -1710,7 +1714,6 @@
                         <p><strong>Sinopse:</strong> Análise profunda sobre o Orixá Exu, seu papel na Umbanda, seus mistérios, fundamentos práticos e espirituais, reunindo ensinamentos de antigos sacerdotes.</p>
                     </div>
                     
-                    <!-- Livro 6: Os Quatro Compromissos -->
                     <div class="edu-card">
                         <img src="https://raw.githubusercontent.com/alexialuzdeferro/melusine.com/refs/heads/main/Os%20quatro%20compromissosDon%20Miguel%20Ruiz%20revela%20a%20fonte%20de%20cren%C3%A7as.jpg" alt="Os Quatro Compromissos" style="width:100%; border-radius:12px; margin-bottom:1rem;">
                         <h4 class="edu-card-title">Os Quatro Compromissos</h4>
@@ -1719,7 +1722,6 @@
                         <p><strong>Sinopse:</strong> Revela a fonte das crenças limitantes e propõe quatro compromissos para a liberdade pessoal: seja impecável com sua palavra, não leve nada para o lado pessoal, não tire conclusões e sempre dê o máximo de si.</p>
                     </div>
                     
-                    <!-- Livro 7: Pombagira: A Deusa - Mulher Igual Você -->
                     <div class="edu-card">
                         <img src="https://raw.githubusercontent.com/alexialuzdeferro/melusine.com/refs/heads/main/Pombagira%20A%20Deusa%20-%20Mulher%20Igual%20Voc%C3%AA%20Alexandre%20Cumino.jpg" alt="Pombagira: A Deusa" style="width:100%; border-radius:12px; margin-bottom:1rem;">
                         <h4 class="edu-card-title">Pombagira: A Deusa - Mulher Igual Você</h4>
@@ -1728,7 +1730,6 @@
                         <p><strong>Sinopse:</strong> Aborda a figura da Pombagira como deusa e arquétipo feminino, conectando a mulher comum à sua força interior, poder de transformação e sabedoria ancestral.</p>
                     </div>
                     
-                    <!-- Livro 8: The Four Agreements (Inglês) -->
                     <div class="edu-card">
                         <img src="https://raw.githubusercontent.com/alexialuzdeferro/melusine.com/refs/heads/main/The%20Four%20Agreements%20A%20Practical%20Guide%20to%20Personal.jpg" alt="The Four Agreements" style="width:100%; border-radius:12px; margin-bottom:1rem;">
                         <h4 class="edu-card-title">The Four Agreements: A Practical Guide to Personal Freedom</h4>
@@ -1736,7 +1737,6 @@
                         <p><strong>Ano:</strong> 1997</p>
                         <p><strong>Sinopse:</strong> Versão original em inglês do clássico sobre os quatro compromissos para uma vida plena e livre de condicionamentos, baseado na antiga sabedoria tolteca.</p>
                     </div>
-                    <!-- Livro 9: Exu Sete Capas -->
                    <div class="edu-card">
                         <img src="https://raw.githubusercontent.com/alexialuzdeferro/melusine.com/refs/heads/main/Exu%20Sete%20Capas%20o%20Guardi%C3%A3o%20da%20Encruzilhada.jpg" 
                          alt="Exu Sete Capas – O Guardião da Encruzilhada" 
@@ -1761,9 +1761,8 @@
                 </div>
             </div>
 
-            <!-- NOVA SEÇÃO POMBAGIRAS -->
             <div id="pombagiras" class="edu-content-section">
-                <h3 class="edu-subtitle">Pombagiras: Potência Feminina e Sabedoria Ancestral</h3>
+                <h3 class="edu-subtitle"><i class="fa-solid fa-venus"></i> Pombagiras: Potência Feminina e Sabedoria Ancestral</h3>
                 <div class="grid-educational">
                     <div class="edu-card">
                         <h4 class="edu-card-title">Maria Padilha – Comando/Realeza</h4>
@@ -1811,9 +1810,8 @@
                 </div>
             </div>
 
-            <!-- NOVA SEÇÃO CHICO XAVIER -->
             <div id="chico_xavier" class="edu-content-section">
-                <h3 class="edu-subtitle">Chico Xavier e a Visão sobre Pombagiras e Eguns</h3>
+                <h3 class="edu-subtitle"><i class="fa-solid fa-feather-alt"></i> Chico Xavier e a Visão sobre Pombagiras e Eguns</h3>
                 <div class="grid-educational">
                     <div class="edu-card">
                         <h4 class="edu-card-title">A Misericórdia das Pombagiras</h4>
@@ -1834,40 +1832,149 @@
                 </div>
             </div>
 
-            <!-- NOVA SEÇÃO UMBANDA EXPLICADA -->
             <div id="umbanda_explicada" class="edu-content-section">
-                <h3 class="edu-subtitle">Umbanda Explicada: Fundamentos e Entidades</h3>
+                <h3 class="edu-subtitle"><i class="fa-solid fa-hands-praying"></i> Cosmovisões Afro-Espirituais: Fundamentos e Entidades</h3>
+
                 <div class="grid-educational">
+
                     <div class="edu-card">
-                        <h4 class="edu-card-title">O que é Umbanda?</h4>
-                        <p>Religião brasileira que sintetiza elementos africanos, indígenas, espíritas e católicos. Caracteriza-se pela caridade, pelo culto aos Orixás e pela incorporação de entidades espirituais como Pretos-Velhos, Caboclos, Exus e Pombagiras.</p>
+                        <h4 class="edu-card-title">Linha de Trabalhos</h4>
+                        <p>Organização das entidades na Umbanda: Caboclos, Pretos-Velhos, Baianos, Boiadeiros, Marinheiros, Exus, Pombagiras, Mirins, Erês, entre outras. Cada linha atua com função, vibração e missão específicas.</p>
                     </div>
+
                     <div class="edu-card">
                         <h4 class="edu-card-title">Os Orixás na Umbanda</h4>
                         <p>Oxalá (Fé e Paz), Iemanjá (Geração), Ogum (Lei e Caminhos), Oxóssi (Conhecimento), Xangô (Justiça), Oxum (Amor e Prosperidade), Iansã (Movimentação), Obaluaê/Omolu (Cura e Passagem) e Nanã Buruquê (Sabedoria).</p>
                     </div>
+
                     <div class="edu-card">
                         <h4 class="edu-card-title">Eguns, Kiumbas e Guias</h4>
-                        <p>Egun: qualquer espírito desencarnado. Kiumba: espírito com maldade consciente. Guias: Eguns evoluídos que trabalham na caridade. A Umbanda foca na doutrinação e encaminhamento dos espíritos menos esclarecidos.</p>
+                        <p>Egun: espírito desencarnado. Kiumba: espírito com maldade consciente. Guias: espíritos evoluídos que trabalham na caridade. A Umbanda doutrina e encaminha espíritos menos esclarecidos.</p>
                     </div>
+
                     <div class="edu-card">
                         <h4 class="edu-card-title">Erês (Linha das Crianças)</h4>
-                        <p>Espíritos de alta evolução que se manifestam com energia infantil. Trabalham a cura emocional, a alegria e a renovação. "O Erê brinca, mas o Erê não é tonto."</p>
+                        <p>Espíritos de alta evolução que se manifestam com energia infantil. Trabalham cura emocional, alegria e renovação.</p>
                     </div>
+
                     <div class="edu-card">
                         <h4 class="edu-card-title">Exu e Pombagira</h4>
-                        <p>Exu: Guardião, movimento, abertura de caminhos. Pombagira: Exu feminino, trabalha o amor-próprio, a autoestima e a vontade de viver. Ambos são espíritos de luz que atuam na linha da esquerda para equilíbrio das energias densas.</p>
+                        <p>Exu: Guardião e movimento. Pombagira: poder feminino, autoestima e firmeza. Atuam na esquerda para equilíbrio das energias densas.</p>
                     </div>
+
                     <div class="edu-card">
                         <h4 class="edu-card-title">Exu Mirim</h4>
-                        <p>"Criança da esquerda", arquétipo da astúcia e do questionamento. Trabalha na revelação de intenções ocultas e na quebra de ilusões. "Brincando eu desato o nó que você apertou."</p>
+                        <p>Agente da astúcia e da verdade. Revela intenções ocultas e quebra ilusões.</p>
                     </div>
+
+                    <div class="edu-card">
+                        <h4 class="edu-card-title">Jurema Sagrada (Tradição Original)</h4>
+                        <p>Culto indígena-nordestino baseado em Mestres, Mestras e Encantados. Sistema fechado, ancestral e independente das tradições afro-brasileiras.</p>
+                    </div>
+
+                    <div class="edu-card">
+                        <h4 class="edu-card-title">Jurema Sagrada Sincretizada</h4>
+                        <p>Forma urbana que integra elementos da Umbanda, Candomblé e Quimbanda. Pode incluir Exus e Pombagiras ao lado de Mestres e Encantados.</p>
+                    </div>
+
+                    <div class="edu-card">
+                        <h4 class="edu-card-title">Ogan / Alabê na Jurema</h4>
+                        <p>Função rara, adaptada do Candomblé. Responsável pelo ritmo do Toré e firmeza musical da Jurema sincretizada.</p>
+                    </div>
+
+                    <div class="edu-card">
+                        <h4 class="edu-card-title">O que é Quimbanda?</h4>
+                        <p>A Quimbanda é a tradição dedicada exclusivamente ao culto de Exus e Pombagiras como forças ancestrais e guardiãs das encruzilhadas.</p>
+
+                        <strong>Características principais</strong>
+                        <ul>
+                            <li>Caminhos, firmezas e domínio do fogo</li>
+                            <li>Trabalho direto com energia densa</li>
+                            <li>Magia prática e objetiva</li>
+                            <li>Pontos riscados e oferendas específicas</li>
+                        </ul>
+
+                        <strong>Pilares</strong>
+                        <ul>
+                            <li>Movimento e transformação</li>
+                            <li>Proteção e abertura de caminhos</li>
+                            <li>Disciplina mágica</li>
+                        </ul>
+
+                        <strong>Diferenciais</strong>
+                        <ul>
+                            <li>Não cultua Orixás</li>
+                            <li>Não é Umbanda</li>
+                            <li>Guardiões e Senhoras da Encruzilhada</li>
+                        </ul>
+                    </div>
+
+                    <div class="edu-card">
+                        <h4 class="edu-card-title">O que é Umbanda?</h4>
+                        <p>A Umbanda une elementos africanos, indígenas, espíritas e cristãos. Atua na caridade, cura e equilíbrio espiritual.</p>
+
+                        <strong>Características principais</strong>
+                        <ul>
+                            <li>Culto aos Orixás</li>
+                            <li>Mediunidade por incorporação</li>
+                            <li>Ervas, cantos, defumações</li>
+                            <li>Linhas: Caboclos, Pretos-Velhos, Erês, Exus etc.</li>
+                        </ul>
+
+                        <strong>Pilares</strong>
+                        <ul>
+                            <li>Caridade</li>
+                            <li>Doutrinação de espíritos</li>
+                            <li>Magia branca</li>
+                            <li>Harmonia emocional e espiritual</li>
+                        </ul>
+
+                        <strong>Linhas</strong>
+                        <ul>
+                            <li>Oxalá — Paz</li>
+                            <li>Ogum — Caminhos</li>
+                            <li>Oxóssi — Conhecimento</li>
+                            <li>Xangô — Justiça</li>
+                            <li>Iemanjá — Geração</li>
+                            <li>Iansã — Movimento</li>
+                            <li>Almas — Cura ancestral</li>
+                            <li>Esquerda — Exus e Pombagiras</li>
+                        </ul>
+                    </div>
+
+                    <div class="edu-card">
+                        <h4 class="edu-card-title">O que é Candomblé?</h4>
+                        <p>Religião iniciática afro-brasileira que cultua Orixás, Voduns e Inquices com forte estrutura ritual.</p>
+
+                        <strong>Características principais</strong>
+                        <ul>
+                            <li>Iniciação formal</li>
+                            <li>Dança, toque e cânticos</li>
+                            <li>Nações: Ketu, Angola, Jeje</li>
+                            <li>Hierarquia sacerdotal</li>
+                        </ul>
+
+                        <strong>Pilares</strong>
+                        <ul>
+                            <li>Orixá como ancestral divinizado</li>
+                            <li>Axé como energia vital</li>
+                            <li>Ori — destino</li>
+                            <li>Ilê — comunidade</li>
+                        </ul>
+
+                        <strong>Diferenciais</strong>
+                        <ul>
+                            <li>Rituais complexos</li>
+                            <li>Cosmovisão profunda</li>
+                            <li>Manifestação energética, não mediúnica</li>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
 
-            <!-- NOVA SEÇÃO LOGUN EDÉ & OXUMARÉ -->
             <div id="logun_ede_oxumare" class="edu-content-section">
-                <h3 class="edu-subtitle">Logun Edé & Oxumaré: Dualidade, Transformação e Não-Binarismo Sagrado</h3>
+                <h3 class="edu-subtitle"><i class="fa-solid fa-infinity"></i> Logun Edé & Oxumaré: Dualidade, Transformação e Não-Binarismo Sagrado</h3>
                 <div class="grid-educational">
                     <div class="edu-card">
                         <h4 class="edu-card-title">Logun Edé: O Príncipe do Encanto</h4>
@@ -2047,8 +2154,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <script>
-        // ========== FUNÇÕES PARA O PORTAL EDUCATIVO ==========
-        
         document.querySelectorAll('.edu-nav-item').forEach(item => {
             item.addEventListener('click', function() {
                 document.querySelectorAll('.edu-nav-item').forEach(nav => {
@@ -2341,12 +2446,12 @@
             };
 
             const track = document.querySelector('.carrossel-track');
-            const carrosselContainer = document.querySelector('.carrossel-loop');  // elemento pai para os eventos de mouse
+            const carrosselContainer = document.querySelector('.carrossel-loop');
             const modal = document.getElementById('pombagiraModal');
             const closeBtn = document.querySelector('.modal-close');
             let isModalOpen = false;
             let currentAlt = null;
-            let isMouseOverCarousel = false;  // estado do mouse sobre o carrossel
+            let isMouseOverCarousel = false;
 
             function pauseCarousel() {
                 if (track) track.style.animationPlayState = 'paused';
@@ -2355,12 +2460,10 @@
                 if (track && !isMouseOverCarousel && !isModalOpen) {
                     track.style.animationPlayState = 'running';
                 } else if (track && isMouseOverCarousel) {
-                    // mantém pausado se o mouse estiver em cima
                     track.style.animationPlayState = 'paused';
                 }
             }
 
-            // eventos de mouse sobre o carrossel (pausa/continua)
             if (carrosselContainer) {
                 carrosselContainer.addEventListener('mouseenter', () => {
                     isMouseOverCarousel = true;
@@ -2368,7 +2471,6 @@
                 });
                 carrosselContainer.addEventListener('mouseleave', () => {
                     isMouseOverCarousel = false;
-                    // só retoma se o modal não estiver aberto
                     if (!isModalOpen) {
                         resumeCarousel();
                     }
@@ -2380,11 +2482,9 @@
                 modal.classList.remove('active');
                 isModalOpen = false;
                 currentAlt = null;
-                // ao fechar, verifica se o mouse ainda está sobre o carrossel para decidir se retoma
                 if (!isMouseOverCarousel) {
                     resumeCarousel();
                 } else {
-                    // se mouse está sobre, mantém pausado
                     pauseCarousel();
                 }
             }
@@ -2403,7 +2503,7 @@
                 document.getElementById('InfoLua').innerText = info.lua;
                 document.getElementById('infoSigno').innerText = info.signo;
                 document.getElementById('infoHorario').innerText = info.horario;
-                document.getElementById('modalTitle').innerHTML = `🌹 ${info.nome}`;
+                document.getElementById('modalTitle').innerHTML = info.nome;
                 modal.classList.add('active');
                 isModalOpen = true;
                 currentAlt = alt;
@@ -2434,7 +2534,7 @@
                         document.getElementById('InfoLua').innerText = info.lua;
                         document.getElementById('infoSigno').innerText = info.signo;
                         document.getElementById('infoHorario').innerText = info.horario;
-                        document.getElementById('modalTitle').innerHTML = `🌹 ${info.nome}`;
+                        document.getElementById('modalTitle').innerHTML = `♚ ${info.nome}`;
                         currentAlt = clickedAlt;
                     }
                 } else if (!isModalOpen) {
