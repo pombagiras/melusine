@@ -1049,13 +1049,48 @@
                 color: rgba(255, 255, 255, 0.9);
             }
         }
+
+        /* ===== NOVA REGRA: REMOVER O FUNDO E BORDAS FEIOS DOS BOTÕES, APENAS EFEITO AMARELO COM COROA AO PASSAR MOUSE ===== */
+        .hero .cta-secondary {
+            background: transparent !important;
+            backdrop-filter: none !important;
+            border: none !important;
+            box-shadow: none !important;
+            color: white !important;
+            text-shadow: 0 0 3px rgba(0,0,0,0.8);
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            transition: all 0.2s ease-in-out;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        /* Efeito hover: cor amarela + ícone de coroa */
+        .hero .cta-secondary:hover {
+            background: transparent !important;
+            transform: scale(1.05);
+            color: #FFD700 !important;
+            text-shadow: 0 0 6px rgba(255, 215, 0, 0.8);
+        }
+
+        .hero .cta-secondary:hover::before {
+            content: "♛";
+            font-size: 1.1rem;
+            filter: drop-shadow(0 0 2px gold);
+        }
+
+        /* Garantir que o efeito de coroa apareça apenas no hover, sem quebrar layout */
+        .hero .cta-secondary {
+            position: relative;
+            transition: color 0.2s, transform 0.2s;
+        }
     </style>
 </head>
 <body>
     <div class="content-wrapper">
         <section class="hero">
             <div class="hero-images">
-                <img src="https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Ogimage%20e%20Twitter%20Card.png" alt="Alexia Melusine Banner Ultra">
+                <img src="https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Ale-Escrita-Forte.png"alt="Alexia Melusine Banner Ultra">
             </div>
             <div class="hero-content">
                 <div class="mystical-symbol"></div>
@@ -1063,10 +1098,11 @@
                 <p class="subtitle">Tecnologia, educação e criação digital a serviço das tradições afro-brasileiras.</p>
                 <p class="tagline">Desenvolvimento web, mídia espiritual e produção cultural para projetos religiosos, artísticos e comunitários.</p>
                 <div class="cta-container">
-                    <a href="https://pombagiras.com/guardias/" class="cta-btn cta-secondary" style="color: #8B1E5C; border-color: #8B1E5C;">Guardiãs</a>
-                    <a href="https://pombagiras.com/vortex/" class="cta-btn cta-secondary" style="color: #030303; border-color: #030303;">Bio</a>
-                    <a href="https://pombagiras.com/lebaras/" class="cta-btn cta-secondary" style="color: #D90429; border-color: #D90429;">Adentrar</a>
-                    <a href="https://pombagiras.com/alexiamelusine/" class="cta-btn cta-secondary" style="color: #6A0DAD; border-color: #6A0DAD;">Alexia</a>
+                    <a href="https://pombagiras.com/guardias/" class="cta-btn cta-secondary" style="color: #ffffff; border-color: transparent;">Guardiãs</a>
+                    <a href="https://pombagiras.com/vortex/" class="cta-btn cta-secondary" style="color: #ffffff; border-color: transparent;">Bio</a>
+                    <a href="https://pombagiras.com/lebaras/" class="cta-btn cta-secondary" style="color: #ffffff; border-color: transparent;">Conhecimento</a>
+                    <a href="https://pombagiras.com/alexiamelusine/" class="cta-btn cta-secondary" style="color: #ffffff; border-color: transparent;">Melusine</a>
+                     <a href="https://pombagiras.com/github/" class="cta-btn cta-secondary" style="color: #ffffff; border-color: transparent;">Github</a>
                 </div>
             </div>
         </section>
@@ -1157,6 +1193,11 @@
                 <div class="edu-nav-item" data-target="videos"><i class="fa-solid fa-square-poll-horizontal"></i> Documentários</div>
                 <!-- NOVO BOTÃO LIVROS -->
                 <div class="edu-nav-item" data-target="livros"><i class="fa-solid fa-book-open"></i> Livros</div>
+                <!-- NOVOS 4 BOTÕES ADICIONADOS ABAIXO -->
+                <div class="edu-nav-item" data-target="pombagiras"><i class="fa-solid fa-venus"></i> Pombagiras</div>
+                <div class="edu-nav-item" data-target="chico_xavier"><i class="fa-solid fa-feather-alt"></i> Chico Xavier</div>
+                <div class="edu-nav-item" data-target="umbanda_explicada"><i class="fa-solid fa-hands-praying"></i> Umbanda Explicada</div>
+                <div class="edu-nav-item" data-target="logun_ede_oxumare"><i class="fa-solid fa-infinity"></i> Logun Edé & Oxumaré</div>
             </div>
             
             <div id="glossario" class="edu-content-section active">
@@ -1719,6 +1760,134 @@
                     <p>Estes livros trazem diferentes perspectivas sobre espiritualidade, ancestralidade e desenvolvimento pessoal. Respeite as tradições e busque sempre o conhecimento com humildade e mente aberta.</p>
                 </div>
             </div>
+
+            <!-- NOVA SEÇÃO POMBAGIRAS -->
+            <div id="pombagiras" class="edu-content-section">
+                <h3 class="edu-subtitle">Pombagiras: Potência Feminina e Sabedoria Ancestral</h3>
+                <div class="grid-educational">
+                    <div class="edu-card">
+                        <h4 class="edu-card-title">Maria Padilha – Comando/Realeza</h4>
+                        <p>Maria Padilha é frequentemente associada à figura de uma rainha, exalando autoridade, magnetismo e um luxo inerente. Seu arquétipo rege a autonomia feminina e o poder de escolha, manifestando-se como uma força que não se submete. "Rainha não pede, rainha ordena."</p>
+                    </div>
+                    <div class="edu-card">
+                        <h4 class="edu-card-title">Maria Mulambo – Cura/Humildade</h4>
+                        <p>Maria Mulambo encarna o arquétipo da transmutação e do acolhimento. Conhecida como a "mulher do lixo", ela simboliza a capacidade de transformar a dor e o descarte em algo valioso. "Onde você vê lixo, eu vejo luxo."</p>
+                    </div>
+                    <div class="edu-card">
+                        <h4 class="edu-card-title">Maria Quitéria – Guerra/Proteção</h4>
+                        <p>Maria Quitéria é a guerreira e sentinela, cujo arquétipo está intrinsecamente ligado à justiça implacável. "Minha navalha corta o mal antes dele chegar.""Não sou de briga, mas não fujo da guerra" ilustram sua função de defesa ativa e de corte de energias negativas, garantindo a segurança e a retidão.
+                        </p>
+                    </div>
+                    <div class="edu-card">
+                        <h4 class="edu-card-title">Rosa Caveira – Justiça/Morte</h4>
+                        <p>Rosa Caveira representa o rigor, a disciplina e a transmutação inerente à morte. "A morte é apenas o começo da minha justiça." Médiuns que a incorporam manifestam uma postura austera, de poucas palavras, mas de muita ação.</p>
+                    </div>
+                    <div class="edu-card">
+                        <h4 class="edu-card-title">Dama da Noite – Mistério/Oculto</h4>
+                        <p>A Dama da Noite personifica a elegância noturna, os segredos e a intuição aguçada. "O que a luz esconde, a noite revela."destacam seu domínio sobre o desconhecido e o subconsciente, revelando verdades ocultas e guiando através da intuição.
+                        </p>
+                    </div>
+                    <div class="edu-card">
+                        <h4 class="edu-card-title">Sete Saias – Alegria/Intensidade</h4>
+                        <p>Sete Saias é o arquétipo do movimento, da expansão e da versatilidade, irradiando uma alegria contagiante. "Cada saia que eu rodo é um caminho que eu abro."ela representa o dinamismo e a abertura de caminhos através de uma vibração positiva e da celebração da vida.
+                        </p>
+                    </div>
+                    <div class="edu-card">
+                        <h4 class="edu-card-title">Pombagira Cigana – Liberdade/Prosperidade</h4>
+                        <p>Arquétipo do nomadismo, da leitura do destino, da abundância e do desapego. "Meu destino está escrito nas estrelas, mas quem segura a caneta sou eu." enfatizam a prosperidade material e espiritual, sempre aliada à liberdade de ser e de escolher o próprio caminho.</p>
+                    </div>
+                    <div class="edu-card">
+                        <h4 class="edu-card-title">Maria Navalha – Malandragem/Rua</h4>
+                        <p>Representa a sobrevivência, a esperteza e a proteção dos marginalizados. "Minha navalha não fere, ela liberta." destacam sua resiliência e sua capacidade de oferecer proteção e justiça nas adversidades urbanas, cortando laços que aprisionam e abrindo novos caminhos.</p>
+                    </div>
+                     <div class="edu-card">
+                        <h4 class="edu-card-title">Pombagira da Figueira –  Raiz/Ancestralidade</h4>
+                        <p>A Pombagira da Figueira é o arquétipo da sacerdotisa, da feiticeira antiga, e da conexão profunda com a terra e os antepassados. "Suas histórias a associam a cultos antigos e à sabedoria das ervas, sendo não apenas uma guardiã, mas uma mestra da feitiçaria."</p>
+                    </div>
+                </div>
+                <div class="warning-box">
+                    <h4 class="warning-title"><i class="fas fa-heart"></i> Axé!</h4>
+                    <p>As Pombagiras são guias espirituais complexas e multifacetadas, que oferecem auxílio e orientação em diferentes aspectos da vida. Compreender a essência de cada Pombagira é mergulhar em um universo de poder feminino, resiliência e sabedoria ancestral.</p>
+                </div>
+            </div>
+
+            <!-- NOVA SEÇÃO CHICO XAVIER -->
+            <div id="chico_xavier" class="edu-content-section">
+                <h3 class="edu-subtitle">Chico Xavier e a Visão sobre Pombagiras e Eguns</h3>
+                <div class="grid-educational">
+                    <div class="edu-card">
+                        <h4 class="edu-card-title">A Misericórdia das Pombagiras</h4>
+                        <p>Certa vez, Chico Xavier foi indagado sobre sua opinião a respeito de espíritos que fumam, bebem cachaça, champanhe e outras bebidas. Sua resposta foi surpreendente, repleta de respeito e compreensão. Ele declarou que tinha profunda admiração por esses espíritos e afirmou que sua presença é indispensável. Para ilustrar, mencionou as Pombagiras, figuras frequentemente temidas e incompreendidas, muitas vezes vistas como espíritos tenebrosos.</p>
+                    </div>
+                    <div class="edu-card">
+                        <h4 class="edu-card-title">O Vale dos Suicidas</h4>
+                        <p>Chico revelou algo que desafia os preconceitos: as mães de filhos que tiraram a própria vida, ao desencarnarem, ficam em desespero, buscando por seus filhos no além. Esses jovens, no entanto, encontram-se em uma região sombria e inacessível, conhecida como o Vale dos Suicidas, protegida por espíritos que não permitem a entrada de outros. Somente as Pombagiras, segundo Chico, possuem a força e a permissão para transitar nesse território sem restrições. E, em um ato de misericórdia e compaixão, elas organizam, uma vez por ano, o reencontro dessas mães com seus filhos perdidos.</p>
+                    </div>
+                    <div class="edu-card">
+                        <h4 class="edu-card-title">Força Feminina e Liberdade</h4>
+                        <p>Para Chico Xavier, elas são entidades de luz intensa, repletas de liberdade espiritual, carregando consigo uma essência feminina poderosa. Muito antes de serem demonizadas pela visão judaico-cristã ou excluídas dos cultos espíritas tradicionais, as Pombagiras já existiam como manifestações femininas do Exu, com profundas conexões com os orixás. Vestidas de escarlate, exalando sensualidade, cigarrilha entre os lábios e maquiagem marcante, elas se tornaram um símbolo de força, liberdade e empoderamento espiritual.</p>
+                    </div>
+                </div>
+                <div class="warning-box">
+                    <h4 class="warning-title"><i class="fas fa-feather-alt"></i> Legado</h4>
+                    <p>A visão de Chico Xavier sobre as Pombagiras é, em última análise, um convite para refletirmos sobre liberdade e intensidade de viver. Que as Pombagiras, com sua essência vibrante e destemida, nos ensinem a abraçar nossa própria luz e a desafiar o que nos prende. Afinal, viver é um ato de coragem.</p>
+                </div>
+            </div>
+
+            <!-- NOVA SEÇÃO UMBANDA EXPLICADA -->
+            <div id="umbanda_explicada" class="edu-content-section">
+                <h3 class="edu-subtitle">Umbanda Explicada: Fundamentos e Entidades</h3>
+                <div class="grid-educational">
+                    <div class="edu-card">
+                        <h4 class="edu-card-title">O que é Umbanda?</h4>
+                        <p>Religião brasileira que sintetiza elementos africanos, indígenas, espíritas e católicos. Caracteriza-se pela caridade, pelo culto aos Orixás e pela incorporação de entidades espirituais como Pretos-Velhos, Caboclos, Exus e Pombagiras.</p>
+                    </div>
+                    <div class="edu-card">
+                        <h4 class="edu-card-title">Os Orixás na Umbanda</h4>
+                        <p>Oxalá (Fé e Paz), Iemanjá (Geração), Ogum (Lei e Caminhos), Oxóssi (Conhecimento), Xangô (Justiça), Oxum (Amor e Prosperidade), Iansã (Movimentação), Obaluaê/Omolu (Cura e Passagem) e Nanã Buruquê (Sabedoria).</p>
+                    </div>
+                    <div class="edu-card">
+                        <h4 class="edu-card-title">Eguns, Kiumbas e Guias</h4>
+                        <p>Egun: qualquer espírito desencarnado. Kiumba: espírito com maldade consciente. Guias: Eguns evoluídos que trabalham na caridade. A Umbanda foca na doutrinação e encaminhamento dos espíritos menos esclarecidos.</p>
+                    </div>
+                    <div class="edu-card">
+                        <h4 class="edu-card-title">Erês (Linha das Crianças)</h4>
+                        <p>Espíritos de alta evolução que se manifestam com energia infantil. Trabalham a cura emocional, a alegria e a renovação. "O Erê brinca, mas o Erê não é tonto."</p>
+                    </div>
+                    <div class="edu-card">
+                        <h4 class="edu-card-title">Exu e Pombagira</h4>
+                        <p>Exu: Guardião, movimento, abertura de caminhos. Pombagira: Exu feminino, trabalha o amor-próprio, a autoestima e a vontade de viver. Ambos são espíritos de luz que atuam na linha da esquerda para equilíbrio das energias densas.</p>
+                    </div>
+                    <div class="edu-card">
+                        <h4 class="edu-card-title">Exu Mirim</h4>
+                        <p>"Criança da esquerda", arquétipo da astúcia e do questionamento. Trabalha na revelação de intenções ocultas e na quebra de ilusões. "Brincando eu desato o nó que você apertou."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NOVA SEÇÃO LOGUN EDÉ & OXUMARÉ -->
+            <div id="logun_ede_oxumare" class="edu-content-section">
+                <h3 class="edu-subtitle">Logun Edé & Oxumaré: Dualidade, Transformação e Não-Binarismo Sagrado</h3>
+                <div class="grid-educational">
+                    <div class="edu-card">
+                        <h4 class="edu-card-title">Logun Edé: O Príncipe do Encanto</h4>
+                        <p>Filho de Oxum (feminilidade máxima) e Oxóssi (masculinidade caçadora). A lenda diz que Logun Edé vive 6 meses nas matas com o pai (energia masculina/yang) e 6 meses nas águas doces com a mãe (energia feminina/yin). Ele não é "metade um, metade outro", ele é a soma. É muito venerado por quem não se encaixa nos padrões rígidos de gênero.</p>
+                    </div>
+                    <div class="edu-card">
+                        <h4 class="edu-card-title">Oxumaré: A Serpente e o Arco-Íris</h4>
+                        <p>Oxumaré é a cobra que morde a própria cauda (o infinito) e o arco-íris. Em muitos itans, conta-se que Oxumaré passa um tempo como homem e um tempo como mulher. Ele representa a continuidade, a renovação e mostra que a mudança de estado (inclusive de gênero ou forma) faz parte da natureza divina. Nada é estático.</p>
+                    </div>
+                    <div class="edu-card">
+                        <h4 class="edu-card-title">Representatividade nos Dias Atuais</h4>
+                        <p>Logun Edé e Oxumaré são orixás que naturalmente acolhem a pluralidade de gênero e a fluidez. Suas histórias ancestrais quebram o binário e oferecem representatividade sagrada para pessoas trans, não-binárias e LGBTQIA+ dentro das religiões de matriz africana.</p>
+                    </div>
+                </div>
+                <div class="warning-box">
+                    <h4 class="warning-title"><i class="fas fa-infinity"></i> Cíclico e Infinito</h4>
+                    <p>Assim como a cobra troca de pele, nós trocamos de fases. Logun Edé nos ensina a ser belo e feroz, doce e caçador, tudo ao mesmo tempo. Oxumaré nos lembra que somos múltiplos em constante transformação.</p>
+                </div>
+            </div>
+
         </section>
 
         <section id="portfolio">
