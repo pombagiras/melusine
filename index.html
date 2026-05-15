@@ -1411,6 +1411,127 @@
                 width: 28px;
             }
         }
+
+        /* ============================================ */
+        /* ESTILOS EXCLUSIVOS PARA O GUIA POMBAGIRA SEM TABUS */
+        /* ============================================ */
+        #conteudo-markdown-pombagira {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.7;
+            color: #f0eef7;
+        }
+        
+        #conteudo-markdown-pombagira h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin: 2rem 0 1rem;
+            background: linear-gradient(135deg, var(--fire-rose, #D90429), var(--cosmic-gold, #C79A2E));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        #conteudo-markdown-pombagira h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--fire-rose, #D90429);
+            border-left: 4px solid var(--fire-rose, #D90429);
+            padding-left: 20px;
+            margin: 2rem 0 1rem;
+        }
+        
+        #conteudo-markdown-pombagira h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            color: var(--cosmic-gold, #C79A2E);
+            margin: 1.5rem 0 0.8rem;
+        }
+        
+        #conteudo-markdown-pombagira p {
+            margin-bottom: 1rem;
+            opacity: 0.92;
+        }
+        
+        #conteudo-markdown-pombagira strong {
+            color: var(--fire-rose, #D90429);
+            font-weight: 600;
+        }
+        
+        #conteudo-markdown-pombagira blockquote {
+            background: rgba(139, 30, 92, 0.2);
+            border-left: 5px solid var(--fire-rose, #D90429);
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            border-radius: 0 12px 12px 0;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+        }
+        
+        #conteudo-markdown-pombagira table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        
+        #conteudo-markdown-pombagira th,
+        #conteudo-markdown-pombagira td {
+            border: 1px solid rgba(217, 4, 41, 0.3);
+            padding: 12px 16px;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        #conteudo-markdown-pombagira th {
+            background: linear-gradient(135deg, var(--mystic-purple, #8B1E5C), var(--fire-rose, #D90429));
+            color: white;
+            font-weight: 600;
+        }
+        
+        #conteudo-markdown-pombagira td {
+            background: rgba(10, 3, 15, 0.5);
+        }
+        
+        #conteudo-markdown-pombagira ul, 
+        #conteudo-markdown-pombagira ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+        
+        #conteudo-markdown-pombagira li {
+            margin: 0.5rem 0;
+        }
+        
+        #conteudo-markdown-pombagira hr {
+            margin: 2rem 0;
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--fire-rose, #D90429), var(--mystic-purple, #8B1E5C), transparent);
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); text-shadow: 0 0 10px var(--fire-rose); }
+        }
+        
+        @media (max-width: 768px) {
+            #conteudo-markdown-pombagira h1 { font-size: 1.8rem; }
+            #conteudo-markdown-pombagira h2 { font-size: 1.4rem; }
+            #conteudo-markdown-pombagira h3 { font-size: 1.2rem; }
+            #conteudo-markdown-pombagira table { font-size: 0.85rem; }
+            #conteudo-markdown-pombagira th, 
+            #conteudo-markdown-pombagira td { padding: 8px 10px; }
+            #conteudo-markdown-pombagira ul, 
+            #conteudo-markdown-pombagira ol { margin-left: 1rem; }
+        }
+        
+        @media (max-width: 480px) {
+            #conteudo-markdown-pombagira table { display: block; overflow-x: auto; }
+            #conteudo-markdown-pombagira blockquote { padding: 0.8rem 1rem; font-size: 1rem; }
+        }
     </style>
 </head>
 <body>
@@ -1422,23 +1543,23 @@
         <div class="floating-social-menu">
             <!-- Botão WhatsApp (Vibe Vermelha) -->
             <a href="https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G" class="glass-btn btn-whatsapp" target="_blank" title="Falar no WhatsApp" rel="noopener noreferrer">
-                <img src="	https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/whatsapp.svg" alt="WhatsApp" loading="lazy">
+                <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/whatsapp.svg" alt="WhatsApp" loading="lazy">
             </a>
 
             <!-- Botão Telegram (Vibe Roxa) -->
             <a href="https://t.me/pomba_giras" class="glass-btn btn-telegram" target="_blank" title="Entrar no Telegram" rel="noopener noreferrer">
-                <img src="	https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/telegram.svg" alt="Telegram" loading="lazy">
+                <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/telegram.svg" alt="Telegram" loading="lazy">
             </a>
 
             <!-- Botão Discord (Vibe Azul Discord) - ADICIONADO -->
             <a href="https://discord.gg/gWZP8R7Dqu" class="glass-btn btn-discord" target="_blank" title="Entrar no Discord" rel="noopener noreferrer">
-                <img src="	https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/discord.svg" alt="Discord" loading="lazy">
+                <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/discord.svg" alt="Discord" loading="lazy">
             </a>
         </div>
 
         <section class="hero">
             <div class="hero-images">
-                <img src="https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Ale-Escrita-Forte.png"alt="Alexia Melusine Banner Ultra">
+                <img src="https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Ale-Escrita-Forte.png" alt="Alexia Melusine Banner Ultra">
             </div>
             <div class="hero-content">
                 <div class="mystical-symbol"></div>
@@ -1450,7 +1571,7 @@
                     <a href="https://pombagiras.com/vortex/" class="cta-btn cta-secondary" style="color: #ffffff; border-color: transparent;">Bio</a>
                     <a href="https://pombagiras.com/lebaras/" class="cta-btn cta-secondary" style="color: #ffffff; border-color: transparent;">Conhecimento</a>
                     <a href="https://pombagiras.com/alexiamelusine/" class="cta-btn cta-secondary" style="color: #ffffff; border-color: transparent;">Melusine</a>
-                     <a href="https://pombagiras.com/github/" class="cta-btn cta-secondary" style="color: #ffffff; border-color: transparent;">Github</a>
+                    <a href="https://pombagiras.com/github/" class="cta-btn cta-secondary" style="color: #ffffff; border-color: transparent;">Github</a>
                 </div>
             </div>
         </section>
@@ -1519,8 +1640,7 @@
                     <div class="about-text">
                         <h2>Alexia Melusine</h2>
                         <p>Desenvolvedora web e diretora de mídia. Trabalha na intersecção entre tecnologia e espiritualidade, com foco em projetos que valorizam as tradições afro-brasileiras e a diversidade de gênero.</p>
-                        <div class="identity-tags">
-                            </div>
+                        <div class="identity-tags"></div>
                     </div>
                     <div style="text-align: center;">
                         <img src="https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Favicon%20%20Miniatura%20do%20Google.png" class="foto-alexia" alt="Alexia Melusine">
@@ -1559,7 +1679,7 @@
                     
                     <div class="edu-card">
                         <div class="term-name">Orixá</div>
-                        <p>Divindades que representam forces da natureza e aspects humanos, como Ogum (guerra), Iemanjá (mares), Oxalá (criação).</p>
+                        <p>Divindades que representam forças da natureza e aspectos humanos, como Ogum (guerra), Iemanjá (mares), Oxalá (criação).</p>
                     </div>
                     
                     <div class="edu-card">
@@ -1816,7 +1936,7 @@
                             <i class="fas fa-chevron-down faq-toggle-alexia"></i>
                         </div>
                         <div class="faq-answer-alexia">
-                            <p>Cada elemento tem um <strong>significado simbólico profundo</strong> dentro da tradição:
+                            <p>Cada elemento tem um <strong>significado simbólico profundo</strong> dentro da tradição:</p>
                             <ul>
                                 <li><strong>Rosas:</strong> Representam amor, beleza, paixão e a vibração do coração. Cada cor tem significado diferente: vermelha (amor), branca (paz), amarela (prosperidade).</li>
                                 <li><strong>Champagne:</strong> Simboliza celebração, alegria, elevação espiritual e a efervescência da vida. Representa também a espuma do mar (ligação com Iemanjá).</li>
@@ -1824,7 +1944,7 @@
                                 <li><strong>Perfumes:</strong> Simbolizam atração, doçura, sedução e elevação das vibrações, criando uma atmosfera propícia para o trabalho espiritual.</li>
                                 <li><strong>Lençóis/Tecidos:</strong> Representam proteção, envolvimento e a trama do destino.</li>
                             </ul>
-                            Esses elementos são oferendas que sintonizam com a energia específica de cada Pomba-gira.</p>
+                            <p>Esses elementos são oferendas que sintonizam com a energia específica de cada Pomba-gira.</p>
                         </div>
                     </div>
                     
@@ -1864,7 +1984,7 @@
                             <i class="fas fa-chevron-down faq-toggle-alexia"></i>
                         </div>
                         <div class="faq-answer-alexia">
-                            <p>Algumas linhas de Pombagira são consideradas mais "fortes" porque trabalham com energias de transformation profunda, justiça kármica e desmanche de trabalhos negativos. Isso não as torna "perigosas", mas sim <strong>poderosas e sérias</strong>. Assim como o fogo pode ser perigoso se mal manuseado, mas é essencial para cozinhar e aquecer, essas Pombagiras exigem respeito e conhecimento para trabalhar com elas. A reputação de "perigosas" muitas vezes vem de pessoas que tentaram manipular essas energias sem o devido preparo ou com más intenções.</p>
+                            <p>Algumas linhas de Pombagira são consideradas mais "fortes" porque trabalham com energias de transformação profunda, justiça kármica e desmanche de trabalhos negativos. Isso não as torna "perigosas", mas sim <strong>poderosas e sérias</strong>. Assim como o fogo pode ser perigoso se mal manuseado, mas é essencial para cozinhar e aquecer, essas Pombagiras exigem respeito e conhecimento para trabalhar com elas. A reputação de "perigosas" muitas vezes vem de pessoas que tentaram manipular essas energias sem o devido preparo ou com más intenções.</p>
                         </div>
                     </div>
                     
@@ -2001,21 +2121,12 @@
                 <p style="text-align: center; margin-bottom: 2rem; opacity: 0.8;">Obras para aprofundar o conhecimento sobre ancestralidade, arquétipos femininos, Exu, Pombagira e filosofia de vida</p>
                 
                 <div class="grid-educational">
-                 <div class="edu-card">
-                      <img src="https://raw.githubusercontent.com/alexialuzdeferro/melusine.com/refs/heads/main/Mitologia%20dos%20orix%C3%A1s%2C%20do%20soci%C3%B3logo%20Reginaldo%20Prandi.jpg" 
-                      alt="Mitologia dos Orixás" 
-                      style="width:100%; border-radius:12px; margin-bottom:1rem;">
-    
-                      <h4 class="edu-card-title">Mitologia dos Orixás</h4>
-    
-                      <p><strong>Autor:</strong> Reginaldo Prandi</p>
-                      <p><strong>Ano:</strong> 2001</p>
-    
-                      <p><strong>Sinopse:</strong> Uma das obras mais completas sobre os mitos dos Orixás. 
-                       Reúne mais de 300 histórias tradicionais do panteão iorubá e afro-brasileiro, preservando 
-                       a profundidade religiosa, simbólica e cultural dessas divindades. É leitura essencial para 
-                       quem deseja compreender a raiz espiritual que fundamenta a Umbanda, o Candomblé e diversas 
-                       tradições afro-diaspóricas.</p>
+                    <div class="edu-card">
+                        <img src="https://raw.githubusercontent.com/alexialuzdeferro/melusine.com/refs/heads/main/Mitologia%20dos%20orix%C3%A1s%2C%20do%20soci%C3%B3logo%20Reginaldo%20Prandi.jpg" alt="Mitologia dos Orixás" style="width:100%; border-radius:12px; margin-bottom:1rem;">
+                        <h4 class="edu-card-title">Mitologia dos Orixás</h4>
+                        <p><strong>Autor:</strong> Reginaldo Prandi</p>
+                        <p><strong>Ano:</strong> 2001</p>
+                        <p><strong>Sinopse:</strong> Uma das obras mais completas sobre os mitos dos Orixás. Reúne mais de 300 histórias tradicionais do panteão iorubá e afro-brasileiro, preservando a profundidade religiosa, simbólica e cultural dessas divindades. É leitura essencial para quem deseja compreender a raiz espiritual que fundamenta a Umbanda, o Candomblé e diversas tradições afro-diaspóricas.</p>
                     </div>
                     
                     <div class="edu-card">
@@ -2073,21 +2184,13 @@
                         <p><strong>Ano:</strong> 1997</p>
                         <p><strong>Sinopse:</strong> Versão original em inglês do clássico sobre os quatro compromissos para uma vida plena e livre de condicionamentos, baseado na antiga sabedoria tolteca.</p>
                     </div>
-                   <div class="edu-card">
-                        <img src="https://raw.githubusercontent.com/alexialuzdeferro/melusine.com/refs/heads/main/Exu%20Sete%20Capas%20o%20Guardi%C3%A3o%20da%20Encruzilhada.jpg" 
-                         alt="Exu Sete Capas – O Guardião da Encruzilhada" 
-                         style="width:100%; border-radius:12px; margin-bottom:1rem;">
-
+                    <div class="edu-card">
+                        <img src="https://raw.githubusercontent.com/alexialuzdeferro/melusine.com/refs/heads/main/Exu%20Sete%20Capas%20o%20Guardi%C3%A3o%20da%20Encruzilhada.jpg" alt="Exu Sete Capas – O Guardião da Encruzilhada" style="width:100%; border-radius:12px; margin-bottom:1rem;">
                         <h4 class="edu-card-title">Exu Sete Capas – O Guardião da Encruzilhada</h4>
-
                         <p><strong>Autor:</strong> Carlos Casimiro</p>
                         <p><strong>Ano:</strong> 2023</p>
                         <p><strong>Editora:</strong> Madras Editora</p>
-
-                        <p><strong>Sinopse:</strong> Exu Sete Capas – O Guardião da Encruzilhada narra a jornada de Akin, 
-                        cuja trajetória o leva a se tornar uma figura espiritual poderosa, guardião das encruzilhadas 
-                        e símbolo das decisões e caminhos da vida, explorando tradições, mitos e desafios da espiritualidade 
-                        afro-brasileira.</p>
+                        <p><strong>Sinopse:</strong> Exu Sete Capas – O Guardião da Encruzilhada narra a jornada de Akin, cuja trajetória o leva a se tornar uma figura espiritual poderosa, guardião das encruzilhadas e símbolo das decisões e caminhos da vida, explorando tradições, mitos e desafios da espiritualidade afro-brasileira.</p>
                     </div>
                 </div>
                 
@@ -2110,8 +2213,7 @@
                     </div>
                     <div class="edu-card">
                         <h4 class="edu-card-title">Maria Quitéria – Guerra/Proteção</h4>
-                        <p>Maria Quitéria é a guerreira e sentinela, cujo arquétipo está intrinsecamente ligado à justiça implacável. "Minha navalha corta o mal antes dele chegar.""Não sou de briga, mas não fujo da guerra" ilustram sua função de defesa ativa e de corte de energias negativas, garantindo a segurança e a retidão.
-                        </p>
+                        <p>Maria Quitéria é a guerreira e sentinela, cujo arquétipo está intrinsecamente ligado à justiça implacável. "Minha navalha corta o mal antes dele chegar." "Não sou de briga, mas não fujo da guerra" ilustram sua função de defesa ativa e de corte de energias negativas, garantindo a segurança e a retidão.</p>
                     </div>
                     <div class="edu-card">
                         <h4 class="edu-card-title">Rosa Caveira – Justiça/Morte</h4>
@@ -2119,13 +2221,11 @@
                     </div>
                     <div class="edu-card">
                         <h4 class="edu-card-title">Dama da Noite – Mistério/Oculto</h4>
-                        <p>A Dama da Noite personifica a elegância noturna, os segredos e a intuição aguçada. "O que a luz esconde, a noite revela."destacam seu domínio sobre o desconhecido e o subconsciente, revelando verdades ocultas e guiando através da intuição.
-                        </p>
+                        <p>A Dama da Noite personifica a elegância noturna, os segredos e a intuição aguçada. "O que a luz esconde, a noite revela." destacam seu domínio sobre o desconhecido e o subconsciente, revelando verdades ocultas e guiando através da intuição.</p>
                     </div>
                     <div class="edu-card">
                         <h4 class="edu-card-title">Sete Saias – Alegria/Intensidade</h4>
-                        <p>Sete Saias é o arquétipo do movimento, da expansão e da versatilidade, irradiando uma alegria contagiante. "Cada saia que eu rodo é um caminho que eu abro."ela representa o dinamismo e a abertura de caminhos através de uma vibração positiva e da celebração da vida.
-                        </p>
+                        <p>Sete Saias é o arquétipo do movimento, da expansão e da versatilidade, irradiando uma alegria contagiante. "Cada saia que eu rodo é um caminho que eu abro." ela representa o dinamismo e a abertura de caminhos através de uma vibração positiva e da celebração da vida.</p>
                     </div>
                     <div class="edu-card">
                         <h4 class="edu-card-title">Pombagira Cigana – Liberdade/Prosperidade</h4>
@@ -2135,8 +2235,8 @@
                         <h4 class="edu-card-title">Maria Navalha – Malandragem/Rua</h4>
                         <p>Representa a sobrevivência, a esperteza e a proteção dos marginalizados. "Minha navalha não fere, ela liberta." destacam sua resiliência e sua capacidade de oferecer proteção e justiça nas adversidades urbanas, cortando laços que aprisionam e abrindo novos caminhos.</p>
                     </div>
-                     <div class="edu-card">
-                        <h4 class="edu-card-title">Pombagira da Figueira –  Raiz/Ancestralidade</h4>
+                    <div class="edu-card">
+                        <h4 class="edu-card-title">Pombagira da Figueira – Raiz/Ancestralidade</h4>
                         <p>A Pombagira da Figueira é o arquétipo da sacerdotisa, da feiticeira antiga, e da conexão profunda com a terra e os antepassados. "Suas histórias a associam a cultos antigos e à sabedoria das ervas, sendo não apenas uma guardiã, mas uma mestra da feitiçaria."</p>
                     </div>
                 </div>
@@ -2172,44 +2272,19 @@
                 <h3 class="edu-subtitle"><i class="fa-solid fa-hands-praying"></i> Cosmovisões Afro-Espirituais: Fundamentos e Entidades</h3>
 
                 <div class="grid-educational">
-                          <div class="edu-card">
+                    <div class="edu-card">
                         <h4 class="edu-card-title">Ori na Umbanda</h4>
-                        <p>Na Umbanda, Ori aparece como:
-
-                         Força de alinhamento com o Astral Superior
-                         Ponto de equilíbrio mediúnico
-                         Conexão com Ancestralidade e Guias
-
-                         Médiuns com Ori desequilibrado geralmente:
-
-                         Têm confusão espiritual
-                         Permitem influências densas
-                         Têm mediunidade instável
-                         Sentem travas, bloqueios ou cansaço espiritual</p>
+                        <p>Na Umbanda, Ori aparece como: Força de alinhamento com o Astral Superior, Ponto de equilíbrio mediúnico, Conexão com Ancestralidade e Guias. Médiuns com Ori desequilibrado geralmente: Têm confusão espiritual, Permitem influências densas, Têm mediunidade instável, Sentem travas, bloqueios ou cansaço espiritual</p>
                     </div>
 
                     <div class="edu-card">
                         <h4 class="edu-card-title">Ori no Candomblé</h4>
-                        <p>Aqui o conceito é mais estruturado.
-
-                         Existem ritos como:
-
-                         Bori (dar de comer ao Ori)
-                         Ossé Ori (rito de limpeza e frescor)
-                         Ojé (renovação de axé)
-
-                         Objetivo: nutrir seu destino.</p>
+                        <p>Aqui o conceito é mais estruturado. Existem ritos como: Bori (dar de comer ao Ori), Ossé Ori (rito de limpeza e frescor), Ojé (renovação de axé). Objetivo: nutrir seu destino.</p>
                     </div>
 
                     <div class="edu-card">
                         <h4 class="edu-card-title">Ori na Quimbanda</h4>
-                        <p>Apesar da cosmovisão ser diferente da Umbanda:
-
-                         Ori é entendido como ponto de poder
-                         A força que regula acordos espirituais
-                         O campo onde Exus e Pombagiras trabalham para alinhamento interno, não para submissão
-
-                         Quimbanda séria não quebra Ori — fortalece.</p>
+                        <p>Apesar da cosmovisão ser diferente da Umbanda: Ori é entendido como ponto de poder, A força que regula acordos espirituais, O campo onde Exus e Pombagiras trabalham para alinhamento interno, não para submissão. Quimbanda séria não quebra Ori — fortalece.</p>
                     </div>
 
                     <div class="edu-card">
@@ -2260,7 +2335,6 @@
                     <div class="edu-card">
                         <h4 class="edu-card-title">O que é Quimbanda?</h4>
                         <p>A Quimbanda é a tradição dedicada exclusivamente ao culto de Exus e Pombagiras como forças ancestrais e guardiãs das encruzilhadas.</p>
-
                         <strong>Características principais</strong>
                         <ul>
                             <li>Caminhos, firmezas e domínio do fogo</li>
@@ -2268,14 +2342,12 @@
                             <li>Magia prática e objetiva</li>
                             <li>Pontos riscados e oferendas específicas</li>
                         </ul>
-
                         <strong>Pilares</strong>
                         <ul>
                             <li>Movimento e transformação</li>
                             <li>Proteção e abertura de caminhos</li>
                             <li>Disciplina mágica</li>
                         </ul>
-
                         <strong>Diferenciais</strong>
                         <ul>
                             <li>Não cultua Orixás</li>
@@ -2287,7 +2359,6 @@
                     <div class="edu-card">
                         <h4 class="edu-card-title">O que é Umbanda?</h4>
                         <p>A Umbanda une elementos africanos, indígenas, espíritas e cristãos. Atua na caridade, cura e equilíbrio espiritual.</p>
-
                         <strong>Características principais</strong>
                         <ul>
                             <li>Culto aos Orixás</li>
@@ -2295,7 +2366,6 @@
                             <li>Ervas, cantos, defumações</li>
                             <li>Linhas: Caboclos, Pretos-Velhos, Erês, Exus etc.</li>
                         </ul>
-
                         <strong>Pilares</strong>
                         <ul>
                             <li>Caridade</li>
@@ -2303,7 +2373,6 @@
                             <li>Magia branca</li>
                             <li>Harmonia emocional e espiritual</li>
                         </ul>
-
                         <strong>Linhas</strong>
                         <ul>
                             <li>Oxalá — Paz</li>
@@ -2320,7 +2389,6 @@
                     <div class="edu-card">
                         <h4 class="edu-card-title">O que é Candomblé?</h4>
                         <p>Religião iniciática afro-brasileira que cultua Orixás, Voduns e Inquices com forte estrutura ritual.</p>
-
                         <strong>Características principais</strong>
                         <ul>
                             <li>Iniciação formal</li>
@@ -2328,7 +2396,6 @@
                             <li>Nações: Ketu, Angola, Jeje</li>
                             <li>Hierarquia sacerdotal</li>
                         </ul>
-
                         <strong>Pilares</strong>
                         <ul>
                             <li>Orixá como ancestral divinizado</li>
@@ -2336,16 +2403,13 @@
                             <li>Ori — destino</li>
                             <li>Ilê — comunidade</li>
                         </ul>
-
                         <strong>Diferenciais</strong>
                         <ul>
                             <li>Rituais complexos</li>
                             <li>Cosmovisão profunda</li>
                             <li>Manifestação energética, não mediúnica</li>
                         </ul>
-                   
                     </div>
-
                 </div>
             </div>
 
@@ -2373,13 +2437,67 @@
 
         </section>
 
+        <!-- ============================================ -->
+        <!-- SEÇÃO: GUIA DEFINITIVO POMBAGIRA SEM TABUS    -->
+        <!-- Adaptado ao estilo original do pombagiras.com -->
+        <!-- ============================================ -->
+
+        <section id="guia-pombagira" style="background: rgba(10,5,8,0.6); padding: 6rem 2rem; position: relative; z-index: 1;">
+            
+            <div class="container-guia" style="max-width: 1400px; margin: 0 auto;">
+                
+                <!-- Título da Seção (padrão do site) -->
+                <h2 class="section-title" style="text-align: center; margin-bottom: 0.5rem;">
+                    Pombagira sem Tabus
+                </h2>
+                <p class="section-subtitle" style="text-align: center; margin-bottom: 3rem;">
+                    O Guia Definitivo Sobre a Guardiã das Encruzilhadas
+                </p>
+                
+                <!-- Separador decorativo -->
+                <div class="separador-harmonico" style="margin-bottom: 3rem;">
+                    <p class="separador-frase">Desmistificando com respeito e conhecimento ancestral</p>
+                </div>
+                
+                <!-- CONTEÚDO PRINCIPAL (será carregado via Markdown) -->
+                <div id="conteudo-markdown-pombagira">
+                    <div class="loading-spinner" style="text-align: center; padding: 60px 20px;">
+                        <i class="fas fa-skull-crossbones" style="font-size: 3rem; color: var(--fire-rose, #D90429); animation: pulse 1.5s infinite;"></i>
+                        <p style="margin-top: 20px; font-family: 'Montserrat', sans-serif; opacity: 0.8;">Carregando conhecimento sagrado...</p>
+                    </div>
+                </div>
+                
+                <!-- Botão de Acesso ao Markdown Bruto -->
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="#" id="btn-acessar-markdown" class="cta-btn cta-primary" style="display: inline-flex; align-items: center; gap: 12px; background: linear-gradient(135deg, var(--fire-rose, #D90429), var(--mystic-purple, #8B1E5C));">
+                        Compartilhar em Markdown Bruto
+                    </a>
+                    <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 15px;">
+                        Clique para copiar o conteúdo em formato Markdown e editar separadamente
+                    </p>
+                </div>
+                
+                <!-- Selo de respeito às tradições -->
+                <div class="warning-box" style="margin-top: 3rem; text-align: center;">
+                    <h4 class="warning-title" style="justify-content: center;">
+                     
+                    </h4>
+                    <p style="font-size: 0.9rem;">Este guia foi desenvolvido com respeito às tradições de matriz africana. Compartilhe com consciência e responsabilidade.</p>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- FIM DA SEÇÃO: GUIA POMBAGIRA SEM TABUS        -->
+        <!-- ============================================ -->
+
         <section id="portfolio">
             <h2 class="section-title">Plataformas de Pesquisa e Expressão Espiritual</h2>
             <p class="section-subtitle">Conjunto de repositórios voltados ao desenvolvimento de portais digitais sobre religiões de matriz africana, com foco nas Pombagiras, abordando aspectos culturais, espirituais e identitários, incluindo a perspectiva da jornada trans no campo do sagrado.</p>
             
             <div class="grid-modern">
                 <div class="card-modern featured-card">
-                    
                     <i class="fa-solid fa-skull-crossbones"></i>
                     <h3>Universo das Pombagiras</h3>
                     <ul>
@@ -2393,7 +2511,6 @@
                 </div>
 
                 <div class="card-modern">
-                    
                     <i class="fa-solid fa-hands-praying"></i>
                     <h3>Oráculos & Giras</h3>
                     <ul>
@@ -2407,7 +2524,7 @@
                 </div>
 
                 <div class="card-modern">
-                  <i class="fa-solid fa-fire-flame-curved"></i>
+                    <i class="fa-solid fa-fire-flame-curved"></i>
                     <h3>Meditação & Paz Interior</h3>
                     <ul>
                         <li><a href="https://alexialuzdeferro.github.io/paz/" target="_blank">Paz</a></li>
@@ -2419,7 +2536,6 @@
                 </div>
 
                 <div class="card-modern">
-                    
                     <i class="fa-solid fa-photo-film"></i>
                     <h3>Identidade & Cartões</h3>
                     <ul>
@@ -2433,7 +2549,6 @@
                 </div>
 
                 <div class="card-modern">
-                   
                     <i class="fa-solid fa-headphones"></i>
                     <h3>Música e Pontos</h3>
                     <ul>
@@ -2488,60 +2603,29 @@
 
         <section id="contato" style="background: rgba(100,0,70,0.25);">
             <h2 class="section-title">Sabedoria Viva em Frequência Digital</h2>
-            <p class="section-subtitle"></i>"Este e um espaço de aprendizado e respeito. As tradições aqui representadas são religiões vivas, com séculos de história. Agradecemos que aborde este contéudo com a mesma seriedade dedicada a outra fé."</p>
+            <p class="section-subtitle">"Este é um espaço de aprendizado e respeito. As tradições aqui representadas são religiões vivas, com séculos de história. Agradecemos que aborde este conteúdo com a mesma seriedade dedicada a outra fé."</p>
             
-           <div class="social-links">
-    <a href="https://www.youtube.com/@almasdepombagira" target="_blank"><i class="fab fa-youtube"></i></a>
-    <a href="https://www.instagram.com/almasdepombagira/" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://open.spotify.com/show/0oeCL1QScD3v7dHeUvJjgJ" target="_blank"><i class="fab fa-spotify"></i></a>
-    <a href="https://www.tiktok.com/@almasdepombagira?lang=pt-BR/" target="_blank"><i class="fab fa-tiktok"></i></a>
-    
-<a href="https://www.threads.net/@almasdepombagira" target="_blank">
-    <i class="fas fa-at"></i>
-</a>
-    
-   <!-- Telegram em Dourado -->
-<a href="https://t.me/MarcadePombagira" target="_blank" style="color: #ff9900;">
-    <i class="fab fa-telegram"></i>
-</a>
-
-<!-- WhatsApp em Roxo Neon -->
-<a href="https://bit.ly/4d9EViv" target="_blank" style="color: #bc13fe;">
-    <i class="fab fa-whatsapp"></i>
-</a>
-</div>
-         <div style="width: 100%; display: flex; justify-content: center; margin: 40px 0;">
-    <a href="https://alexiamelusine.substack.com/embed" 
-       target="_blank"
-       style="
-        background: transparent;
-        color: #800080; /* Roxo profundo */
-        border: 1px solid #800080;
-        padding: 12px 24px;
-        text-decoration: none;
-        font-family: serif;
-        font-size: 1.1rem;
-        border-radius: 4px;
-        transition: all 0.3s ease;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-    " onmouseover="this.style.background='#800080'; this.style.color='#000';" 
-       onmouseout="this.style.background='transparent'; this.style.color='#800080';">
-        Newsletter Substack
-    </a>
-</div>
-    </div>
-</div>
-</div>
+            <div class="social-links">
+                <a href="https://www.youtube.com/@almasdepombagira" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/almasdepombagira/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://open.spotify.com/show/0oeCL1QScD3v7dHeUvJjgJ" target="_blank"><i class="fab fa-spotify"></i></a>
+                <a href="https://www.tiktok.com/@almasdepombagira?lang=pt-BR/" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.threads.net/@almasdepombagira" target="_blank"><i class="fas fa-at"></i></a>
+                <a href="https://t.me/MarcadePombagira" target="_blank" style="color: #ff9900;"><i class="fab fa-telegram"></i></a>
+                <a href="https://bit.ly/4d9EViv" target="_blank" style="color: #bc13fe;"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div style="width: 100%; display: flex; justify-content: center; margin: 40px 0;">
+                <a href="https://alexiamelusine.substack.com/embed" target="_blank" style="background: transparent; color: #800080; border: 1px solid #800080; padding: 12px 24px; text-decoration: none; font-family: serif; font-size: 1.1rem; border-radius: 4px; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 2px;" onmouseover="this.style.background='#800080'; this.style.color='#000';" onmouseout="this.style.background='transparent'; this.style.color='#800080';">Newsletter Substack</a>
+            </div>
         </section>
 
         <footer>
             <p style="font-size: 1.2rem; margin-bottom: 1rem;">✦ Alexia Melusine ✦</p>
-            <p style="opacity: 0.7;">Rosa de Fogo • Luz de Ferro • Alma Fluida </p>
+            <p style="opacity: 0.7;">Rosa de Fogo • Luz de Ferro • Alma Fluida</p>
             <div style="margin-top: 15px; font-size: 9px; letter-spacing: 5px; text-transform: uppercase; opacity: 0.5;">
                 O Olho que tudo vê registrou <span id="contagem-visceral">...</span> almas mundo afora.
             </div>
-            <p style="margin-top: 2rem; opacity: 0.5;">ALL RIGHTS RESERVED © 2026 | 2029 | @almasdepombagira </p>
+            <p style="margin-top: 2rem; opacity: 0.5;">ALL RIGHTS RESERVED © 2026 | 2029 | @almasdepombagira</p>
         </footer>
     </div>
 
@@ -2562,6 +2646,9 @@
     </div>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Biblioteca Markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
     <script>
         document.querySelectorAll('.edu-nav-item').forEach(item => {
@@ -2635,6 +2722,162 @@
 
         window.addEventListener('load', atualizarPortalVisceral);
 
+        // ============================================ //
+        // SCRIPT DO GUIA POMBAGIRA SEM TABUS (MARKDOWN) //
+        // ============================================ //
+        
+        (function() {
+            // Conteúdo Markdown completo do guia "Pombagira sem Tabus"
+            const markdownContent = `# Pombagira sem Tabus: O Guia Definitivo Sobre a Guardiã das Encruzilhadas
+
+Para quem nunca pisou em um terreiro de Umbanda ou Quimbanda, o universo que cerca a figura da Pombagira costuma ser coberto por uma névoa de mistério, preconceito e desinformação. Muitas pessoas alimentam dúvidas profundas, mas esbarram no medo do julgamento ou na falta de fontes confiáveis para perguntar.
+
+Diferente do que o senso comum e o sincretismo distorcido pregaram por décadas, a Pombagira **não é um demônio**, não pune por capricho e não está no mundo para destruir casamentos. Ela é uma força ancestral de liberdade, transmutação e justiça.
+
+Abaixo, desmistificamos as principais dúvidas que a maioria das pessoas tem receio de fazer, estruturadas em um guia esclarecedor e direto.
+
+---
+
+## ♚ Parte 1: O que Todo Mundo Quer Saber (Mas Tem Medo de Perguntar)
+
+### 1. Afinal, a Pombagira é o "diabo em forma de mulher"?
+
+**Não.** O conceito de "diabo" (uma força de maldade pura e oposição a Deus) pertence às religiões abraâmicas (cristianismo, judaísmo e islamismo). Na cosmovisão de matriz africana, especialmente na Umbanda e na Quimbanda, a dualidade maniqueísta entre "bem absoluto" e "mal absoluto" não existe.
+
+A Pombagira é um Exu feminino. Ela é um espírito humano em evolução que atua como guardiã, mensageira e executora da lei cármica. Ela trabalha na limpeza de energias densas, na quebra de feitiços e na proteção dos caminhos.
+
+### 2. É verdade que elas foram prostitutas ou mulheres "da vida" quando vivas?
+
+Essa é uma das maiores simplificações e distorções históricas. A falange das Pombagiras abriga espíritos de mulheres que, em suas encarnações terrenas, **desafiaram as amarras do patriarcado** de suas respectivas épocas.
+
+Podem ter sido cortesãs? **Sim.**  
+Mas também foram rainhas, curandeiras, ciganas, aristocratas, donas de cabaré, piratas ou mulheres que simplesmente se recusaram a ser submissas e sofreram violência por isso.
+
+> O que une esses espíritos não é a sua atividade sexual, mas sim a energia de **insubmissão, autonomia** e o profundo conhecimento da psicologia humana e das dores do mundo.
+
+### 3. Elas fazem "amarração amorosa" para prender alguém?
+
+Esta é uma dúvida clássica e cercada de perigo espiritual. **Uma Pombagira de Lei** — que trabalha sob a égide da justiça e da evolução — **nunca quebra o livre-arbítrio de ninguém**.
+
+Se você for a um lugar onde cobram fortunas prometendo "trazer a pessoa amada em 7 dias" humilhada aos seus pés usando o nome de uma Pombagira, saiba que ali **não está atuando um espírito de luz**, mas sim um Kiumba (espírito obsessor, atrasado e mistificador).
+
+A verdadeira Pombagira trabalha a autoestima, o magnetismo pessoal e a cura de traumas afetivos. Ela te **liberta** de relações tóxicas, em vez de te acorrentar a elas.
+
+### 4. Por que elas dão gargalhadas tão altas e intimidadoras?
+
+A gargalhada da Pombagira é uma das suas ferramentas mágicas mais poderosas. Não é uma risada de deboche ou maldade, mas sim um **grito de poder e dispersão energética**.
+
+A vibração sonora da gargalhada quebra vibrações densas, afasta formas-pensamento negativas, assusta espíritos obsessores e desmagnetiza os miasmas acumulados no ambiente. Além disso, é o manifesto de uma mulher que venceu a dor e a opressão: ela ri das ilusões e das fraquezas humanas para nos ensinar a sermos fortes.
+
+### 5. Se eu olhar para uma Pombagira ou disser o nome dela, posso ficar "amaldiçoado"?
+
+**Absolutamente não.** Os espíritos da Quimbanda e da Umbanda não agem como monstros de filmes de terror. Eles respondem à **intenção e ao respeito**. Pronunciar o nome de uma Pombagira com respeito evoca sua proteção.
+
+---
+
+## ♚ Parte 2: Anatomia do Arquétipo e Elementos Sagrados
+
+Para entender a Pombagira sem ter frequentado um terreiro, é preciso compreender a simbologia que ela manipula:
+
+| **Elemento** | **Significado Mágico e Espiritual** |
+|--------------|--------------------------------------|
+| A Encruzilhada em "T" | O ponto de encontro de caminhos femininos. Onde as decisões são tomadas e o destino se transforma. É o útero da criação e da escolha. |
+| As Cores (Preto e Vermelho) | O Preto representa o vazio primordial, a proteção, a absorção de energias negativas e o mistério do oculto. O Vermelho representa a vitalidade, o sangue que corre nas veias, o fogo da transformação e a paixão pela vida. |
+| A Saia Rodada | Funciona como um vórtice dinâmico. Ao rodar, a Pombagira cria um campo magnético que limpa o plano astral do terreiro ou do consulente. |
+| O Cigarro/Cigarrilha | A fumaça atua como elemento defumador direto, transmutando toxinas espirituais e limpando o campo áureo das pessoas. |
+| A Bebida (Champanhe/Anis) | Utilizada como elemento condensador de energia quântica, servindo para descarregar o aparelho meditativo e limpar larvas astrais. |
+
+---
+
+## ♚ Parte 3: Tutorial Prático e Seguro de Conexão (Para Iniciantes)
+
+Se você nunca foi a um terreiro, sente simpatia por essa energia, mas tem receio de errar ou atrair o que não deve, siga este protocolo seguro e baseado no respeito mútuo. Você não precisa fazer rituais complexos na rua para ser ouvido por elas.
+
+### Passo 1: Limpeza da Intenção
+
+Antes de qualquer aproximação mental, sintonize seu propósito. Pombagiras não toleram futilidade ou pedidos de destruição. Aproxime-se dela se você busca:
+
+- Resgatar seu poder pessoal e autoestima
+- Proteção contra inveja, abusos ou perseguições
+- Abertura de caminhos profissionais e financeiros (sim, elas são excelentes para negócios!)
+
+### Passo 2: O Altar Mental e o Respeito ao Lar
+
+**Regra de Ouro:** Não se acende vela para Exu ou Pombagira dentro das áreas íntimas da casa (como quartos), a menos que você seja um iniciado com firmeza espiritual adequada.
+
+**Se quiser se conectar em casa sem riscos de desequilíbrio energético:**
+
+1. Escolha um momento em que esteja sozinho(a) e a casa esteja tranquila
+2. Acenda uma vela palito comum (pode ser branca ou vermelha) em um local discreto, de preferência no chão (fora do alcance de materiais inflamáveis) na área de serviço, quintal ou varanda. Se não tiver esses espaços, faça a conexão apenas mentalmente, sem velas. A mente é o maior portal de todos.
+3. Ofereça um copo de água ou uma taça de espumante de boa qualidade ao lado da vela
+
+### Passo 3: A Conversa Sincera (A Oração)
+
+Pombagira não gosta de formalidades excessivas ou palavras arcaicas. Fale com ela como falaria com uma mulher sábia, experiente, forte e justa.
+
+**Exemplo de Direcionamento:**
+
+> *"Minha senhora, Guardiã das Encruzilhadas, eu não conheço profundamente seus mistérios, mas respeito sua força. Peço que a sua saia rode ao meu redor tirando toda a inveja, o desânimo e a estagnação da minha vida. Me dê a sua altivez, a sua força e abra os meus caminhos."*
+
+### Passo 4: O Descarte Seguro
+
+Após a vela queimar por completo, os restos de cera e o líquido podem ser descartados em água corrente ou no lixo comum, pois a energia sutil já foi consumida e transmutada pela entidade.
+
+---
+
+> **Nota de Consciência:** A espiritualidade de matriz africana é baseada no respeito à ancestralidade e à natureza. O maior tabu a ser quebrado é o medo nascido do desconhecimento. A Pombagira é, acima de tudo, a celebração da força que se levanta mesmo após ter sido pisoteada pelo mundo.
+
+---
+
+*Compartilhe este guia com quem busca conhecimento sem preconceito*
+`;
+
+            // Função para carregar e converter o Markdown
+            function carregarGuia() {
+                const container = document.getElementById('conteudo-markdown-pombagira');
+                if (container && typeof marked !== 'undefined') {
+                    try {
+                        const htmlConvertido = marked.parse(markdownContent);
+                        container.innerHTML = htmlConvertido;
+                    } catch(e) {
+                        console.error('Erro no processamento do Markdown:', e);
+                        container.innerHTML = '<p style="color: var(--fire-rose); text-align: center;">⚠️ Guardiã, ocorreu um erro ao carregar o guia. Recarregue a página ou volte em instantes.</p>';
+                    }
+                }
+            }
+
+            // Função para configurar o botão de copiar Markdown
+            function setupBotaoMarkdown() {
+                const btn = document.getElementById('btn-acessar-markdown');
+                if (btn) {
+                    btn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        navigator.clipboard.writeText(markdownContent).then(() => {
+                            const originalText = btn.innerHTML;
+                            btn.innerHTML = '<i class="fas fa-check"></i> ✅ Copiado para a área de transferência!';
+                            setTimeout(() => {
+                                btn.innerHTML = originalText;
+                            }, 2000);
+                        }).catch(() => {
+                            alert('Não foi possível copiar. Selecione o texto manualmente.');
+                        });
+                    });
+                }
+            }
+
+            // Aguardar o DOM e a biblioteca Markdown
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', () => {
+                    carregarGuia();
+                    setupBotaoMarkdown();
+                });
+            } else {
+                carregarGuia();
+                setupBotaoMarkdown();
+            }
+        })();
+
+        // Script do modal do carrossel (Pombagiras)
         (function(){
             const dadosPombagiras = {
                 "Cigana": {
