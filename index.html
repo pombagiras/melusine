@@ -298,27 +298,10 @@
     
     <!-- CSS INTERNO COMPLETO (JÁ POSSUI, MANTIDO) -->
     <style>
-        /* SEU CSS COMPLETO AQUI - INALTERADO */
-        :root {
-            --primary: #8b1e5c;
-            --secondary: #d90429;
-            --accent: #c79a2e;
-            --bg-dark: #0a0108;
-            --bg-card: rgba(25, 10, 20, 0.7);
-            --text-light: #f5f0ff;
-            --glass: rgba(255, 255, 255, 0.03);
-            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        html {
+            scroll-behavior: smooth;
         }
-        /* ... todo o restante do seu CSS permanece exatamente igual ... */
-    </style>
-</head>
-    </script>
-
-    <!-- Fontes e Ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
-
-    <style>
+        
         :root {
             --primary: #8b1e5c;
             --secondary: #d90429;
@@ -349,7 +332,7 @@
 
         h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond', serif; }
 
-        /* Floating Social Menu */
+        /* Floating Social Menu - CORRIGIDO PARA INCLUIR O BOTÃO DE VOLTAR AO TOPO */
         .floating-social {
             position: fixed;
             right: 20px;
@@ -361,7 +344,7 @@
             z-index: 1000;
         }
 
-        .social-icon {
+        .social-icon, .back-to-top {
             width: 50px;
             height: 50px;
             background: var(--bg-card);
@@ -374,10 +357,22 @@
             color: white;
             text-decoration: none;
             transition: var(--transition);
+            cursor: pointer;
         }
 
-        .social-icon:hover { transform: scale(1.1) translateX(-5px); border-color: var(--secondary); box-shadow: 0 0 20px rgba(217, 4, 41, 0.4); }
+        .social-icon:hover, .back-to-top:hover { 
+            transform: scale(1.1) translateX(-5px); 
+            border-color: var(--secondary); 
+            box-shadow: 0 0 20px rgba(217, 4, 41, 0.4); 
+        }
+        
         .social-icon img { width: 24px; filter: brightness(0) invert(1); }
+        
+        /* Estilo específico para o ícone da seta */
+        .back-to-top i {
+            font-size: 1.8rem;
+            color: white;
+        }
 
         /* Hero Section com Video Background */
         .hero {
@@ -531,8 +526,15 @@
             .about-grid { grid-template-columns: 1fr; text-align: center; gap: 40px; }
             .about-image { order: -1; max-width: 400px; margin: 0 auto; }
             .hero h1 { font-size: 3.5rem; }
-            .floating-social { bottom: 30px; top: auto; right: 50%; transform: translateX(50%); flex-direction: row; gap: 10px; }
-            .social-icon { width: 45px; height: 45px; }
+            .floating-social { 
+                bottom: 30px; 
+                top: auto; 
+                right: 50%; 
+                transform: translateX(50%); 
+                flex-direction: row; 
+                gap: 10px; 
+            }
+            .social-icon, .back-to-top { width: 45px; height: 45px; }
             .edu-nav { overflow-x: auto; justify-content: flex-start; padding-bottom: 15px; scrollbar-width: none; }
             .edu-nav::-webkit-scrollbar { display: none; }
             .nav-tab { white-space: nowrap; padding: 10px 20px; font-size: 0.7rem; }
@@ -543,7 +545,7 @@
 </head>
 <body>
 
-    <!-- Floating Social Menu -->
+    <!-- Floating Social Menu - CORRIGIDO: Incluindo o Botão de Voltar ao Topo -->
     <div class="floating-social">
         <a href="https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G" class="social-icon" target="_blank" title="WhatsApp">
             <img src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="WhatsApp">
@@ -558,8 +560,12 @@
             <img src="https://cdn.simpleicons.org/spotify/ffffff" alt="Spotify">
         </a>
         <a href="https://pombagiras.com/vortex/" class="social-icon" target="_blank" title="Vortex">
-        <img src="https://cdn.simpleicons.org/grafana/ffffff" alt="Vortex">
-    </a>
+            <img src="https://cdn.simpleicons.org/grafana/ffffff" alt="Vortex">
+        </a>
+        <!-- NOVO BOTÃO: Voltar ao topo, estilizado com a mesma classe e ícone de seta -->
+        <a class="back-to-top" id="backToTopBtn" title="Voltar ao topo">
+            <i class="fas fa-arrow-up"></i>
+        </a>
     </div>
 
     <!-- Hero Section com Video Background em Loop Infinito -->
@@ -1579,7 +1585,7 @@
                 <!-- EXU (COSMOVISÃO AMPLIADA) -->
                 <div class="card">
                     <h4><i class="fa-solid fa-fire"></i> Exu: O Guardião das Encruzilhadas</h4>
-                    <p><strong>Não é demônio, é mensageiro divino.</strong> No Candomblé, Exu é o Orixá da comunicação, dos caminhos, das portas e das transformações. É o primeiro a ser saudado em qualquer ritual. Na Umbanda e Quimbanda, os Exus são entidades que já foram humanas e trabalham na linha da justiça, proteção e quebra de demandas. São guardiões da lei espiritual, atuando nas sombras para que a luz possa brilhar.</p>
+                    <p><strong>Não é demônio, é mensageiro divino.</strong> No Candomblé, Exu é o Orixá da comunicação, dos caminhos, das portas e das transformações. É o primeiro a ser saudado em qualquer ritual. Na Umbanda e Quimbanda, os Exus são entidades que já foram humanas e trabalham na linha da justiça, proteção e quebra de demandas. São guardiães da lei espiritual, atuando nas sombras para que a luz possa brilhar.</p>
                     <strong><i class="fa-solid fa-tag"></i> Mensageiro • Guardião • Justiça • Caminhos</strong>
                 </div>
 
@@ -1669,8 +1675,6 @@
     <!-- FOOTER - ELEGANTE E COM PERSONALIDADE -->
     <footer style="padding: 80px 20px 60px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); background: linear-gradient(to bottom, rgba(5, 1, 4, 0.95), #050104); position: relative;">
        
-       
-        
         <div class="footer-logo serif" style="font-size: 2.5rem; margin-bottom: 25px; color: var(--secondary); letter-spacing: 3px; text-shadow: 0 0 20px rgba(217, 4, 41, 0.3);">
             Alexia Melusine
             <span style="display: block; font-size: 0.7rem; letter-spacing: 4px; color: var(--accent); margin-top: 5px;">ROSA DE FOGO • LUZ DE FERRO</span>
@@ -1726,6 +1730,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
+        // --- Dados e funcionalidades do site (INALTERADO) ---
         const pombagirasData = {
             "Cigana": { nome: "Pombagira Cigana", oferenda: "Moedas, vinho tinto, rosas amarelas e pão de mel", dia: "Sexta-feira", cores: "Vermelho, dourado e roxo", lua: "Lua Crescente", signo: "Escorpião / Iansã", horario: "18h" },
             "Da Figueira": { nome: "Pombagira da Figueira", oferenda: "Figos frescos, mel de engenho, cachaça envelhecida", dia: "Terça-feira", cores: "Verde musgo, roxo e marrom", lua: "Lua Cheia", signo: "Touro / Oxóssi", horario: "21h" },
@@ -1812,6 +1817,31 @@
             } catch (e) { console.log("Observation."); }
         }
         window.onload = updateStats;
+
+        // --- NOVA FUNCIONALIDADE: Botão "Voltar ao Topo" integrado ao menu flutuante ---
+        const backToTopButton = document.getElementById('backToTopBtn');
+
+        // Mostrar ou esconder o botão baseado na posição do scroll
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+
+        // Função para rolar suavemente até o topo da página
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Adicionar o evento de clique ao botão
+        if(backToTopButton) {
+            backToTopButton.addEventListener('click', scrollToTop);
+        }
     </script>
 </body>
 </html>
