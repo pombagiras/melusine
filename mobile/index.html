@@ -1894,7 +1894,7 @@
         window.addEventListener('click', (e) => { if(e.target == modal) closeModal(); });
         window.addEventListener('keydown', (e) => { if(e.key === 'Escape' && modal.classList.contains('active')) closeModal(); });
 
-        // Supabase Stats Integration (Otimizado para Performance Mobile)
+     // Supabase Stats Integration (Otimizado para Performance Mobile)
         window.addEventListener('load', () => {
             if ('requestIdleCallback' in window) {
                 requestIdleCallback(initSupabaseStats);
@@ -1922,6 +1922,22 @@
                 if (visitorElement) visitorElement.innerText = "2.800+";
             }
         }
+
+        // --- Otimização: Carregamento Inteligente de Vídeo (Mobile-First) ---
+        (function optimizeVideoLoading() {
+            const video = document.querySelector('.hero-video');
+            if (!video) return;
+
+            if (navigator.connection) {
+                const isSlowConnection = ['slow-2g', '2g', '3g'].includes(navigator.connection.effectiveType);
+                const isSaveDataMode = navigator.connection.saveData === true;
+
+                if (isSlowConnection || isSaveDataMode) {
+                    video.remove(); 
+                    console.log('Performance Otimizada: Vídeo removido para conexão lenta.');
+                }
+            }
+        })();
 
         // Gerenciador de scroll da Tab Bar
         window.addEventListener('scroll', () => {
