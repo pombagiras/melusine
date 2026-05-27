@@ -1894,9 +1894,17 @@
         window.addEventListener('click', (e) => { if(e.target == modal) closeModal(); });
         window.addEventListener('keydown', (e) => { if(e.key === 'Escape' && modal.classList.contains('active')) closeModal(); });
 
-        // Supabase Stats Integration (com defer no carregamento da biblioteca)
-        window.addEventListener('load', async () => {
-            if(typeof supabase === 'undefined') return;
+        // Supabase Stats Integration (Otimizado para Performance Mobile)
+        window.addEventListener('load', () => {
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(initSupabaseStats);
+            } else {
+                setTimeout(initSupabaseStats, 1);
+            }
+        });
+
+        async function initSupabaseStats() {
+            if (typeof supabase === 'undefined') return;
             const _URL = 'https://rbygxkbewzknvjjhxdvw.supabase.co';
             const _KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJieWd4a2Jld3prbnZqamh4ZHZ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjYwMDcxNjQsImV4cCI6MjA4MTU4MzE2NH0.YrHF9HEGo6yv9MyNsPzFgBhaAB1DRh2SLU8f7L6s1nY';
             const _supabase = supabase.createClient(_URL, _KEY);
@@ -1904,9 +1912,16 @@
             try {
                 await _supabase.rpc('increment_visceral_view', { target_page: 'pombagiras.com' });
                 const { data } = await _supabase.from('access_stats').select('view_count').eq('page_name', 'pombagiras.com').single();
-                if (data) document.getElementById('visitorCount').innerText = data.view_count.toLocaleString();
-            } catch (e) { document.getElementById('visitorCount').innerText = "2.800+"; }
-        });
+                
+                const visitorElement = document.getElementById('visitorCount');
+                if (data && visitorElement) {
+                    visitorElement.innerText = data.view_count.toLocaleString();
+                }
+            } catch (e) {
+                const visitorElement = document.getElementById('visitorCount');
+                if (visitorElement) visitorElement.innerText = "2.800+";
+            }
+        }
 
         // Gerenciador de scroll da Tab Bar
         window.addEventListener('scroll', () => {
