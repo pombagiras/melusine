@@ -2,19 +2,22 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <link rel="icon" type="image/png" href="https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Favicon%20%20Miniatura%20do%20Google.png">
 <link rel="apple-touch-icon" href="https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Favicon%20%20Miniatura%20do%20Google.png">
-<meta name="theme-color" content="#030303">
-  <!-- SEO e Identidade Mundial -->
+<meta name="theme-color" content="#040404">
+
+<!-- SEO Técnico & Identidade Mundial -->
 <title>POMBAGIRAS.COM | Cultura, Arquétipos & Conhecimento</title>
-<meta name="description" content="A maior plataforma de desmistificação das Pombagiras. Um mergulho profundo no conhecimento sagrado, história e arte, desconstruindo preconceitos com clareza e tecnologia por Alexia Melusine.">
+<!-- Descrição cravada em 154 caracteres para indexação perfeita no Google/Bing -->
+<meta name="description" content="A maior plataforma de desmistificação das Pombagiras. Mergulho profundo no conhecimento sagrado e arte, desconstruindo preconceitos com Alexia Melusine.">
 <meta name="keywords" content="Pombagira, Arquétipos Femininos, Cultura Brasileira, Arte Visceral, Desmistificação, Alexia Melusine, História das Guardiãs, Espiritualidade Consciente, Filosofia Ancestral">
 <meta name="author" content="Alexia Melusine">
-<meta name="robots" content="noodp, noydir, max-snippet:-1, notranslate">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://pombagiras.com/manifesto/"> <!-- Ajuste para o slug exato desta página -->
 
 <!-- Open Graph / Redes Sociais (WhatsApp, Instagram, Facebook) -->
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:url" content="https://pombagiras.com/">
 <meta property="og:title" content="POMBAGIRAS.COM | Conhecimento Sagrado e Verdade">
 <meta property="og:description" content="Explore a clareza sobre o papel das guardiãs de caminho. Desmistificando o feminino e a ancestralidade através da arte e do conhecimento consciente.">
@@ -22,16 +25,44 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:site_name" content="ALEXIA MELUSINE">
+<meta property="og:locale" content="pt_BR">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://pombagiras.com/">
+<meta name="twitter:domain" content="pombagiras.com">
 <meta name="twitter:title" content="POMBAGIRAS.COM | Arquétipos e Arte Visceral">
 <meta name="twitter:description" content="Desmistificando o feminino sagrado com tecnologia e ancestralidade. Conhecimento guiado por Alexia Melusine.">
 <meta name="twitter:image" content="https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Ogimage%20e%20Twitter%20Card.png">
-<title>POMBAGIRAS.COM | Cultura, Arquétipos & Conhecimento</title>
+
+<!-- Schema.org JSON-LD para Estruturação Semântica -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "POMBAGIRAS.COM | Cultura, Arquétipos & Conhecimento",
+  "description": "Manifesto e enciclopédia sobre o arquétipo feminino selvagem das Pombagiras nas tradições afro-brasileiras.",
+  "author": {
+    "@type": "Person",
+    "name": "Alexia Melusine",
+    "url": "https://pombagiras.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Almas de Pombagira",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Favicon%20%20Miniatura%20do%20Google.png"
+    }
+  }
+}
+</script>
+
+<!-- Fontes Preload & CSS -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;900&family=IM+Fell+English:ital@0;1&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" as="style">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;900&family=IM+Fell+English:ital@0;1&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
 <style>
   :root {
     --crimson: #8B0000;
@@ -90,6 +121,7 @@
     overflow: hidden;
     padding: 2rem;
     text-align: center;
+    will-change: transform;
   }
 
   /* Animated sigil background */
@@ -240,6 +272,7 @@
     z-index: 2;
     transition: all 0.4s ease;
   }
+  .hero-cta:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
   .hero-cta::before {
     content: '';
     position: absolute;
@@ -250,8 +283,8 @@
     transition: transform 0.4s ease;
     z-index: -1;
   }
-  .hero-cta:hover { color: var(--bone); border-color: var(--crimson); }
-  .hero-cta:hover::before { transform: scaleX(1); }
+  .hero-cta:hover, .hero-cta:focus-visible { color: var(--bone); border-color: var(--crimson); }
+  .hero-cta:hover::before, .hero-cta:focus-visible::before { transform: scaleX(1); }
 
   @keyframes fadeInDown {
     from { opacity: 0; transform: translateY(-20px); }
@@ -741,7 +774,10 @@
     padding: 1rem 2rem;
     border: 1px solid rgba(218,165,32,0.3);
     position: relative;
+    text-decoration: none;
   }
+
+  .domain-badge:focus-visible { outline: 2px solid var(--gold); outline-offset: 6px; }
 
   .domain-badge::before, .domain-badge::after {
     content: '';
@@ -797,7 +833,7 @@
     transition: color 0.3s;
   }
 
-  .footer-links a:hover { color: var(--gold); }
+  .footer-links a:hover, .footer-links a:focus-visible { color: var(--gold); outline: none; }
 
   .footer-copy {
     font-size: 0.8rem;
@@ -829,6 +865,7 @@
     display: flex;
     white-space: nowrap;
     animation: marqueeScroll 40s linear infinite;
+    will-change: transform;
     gap: 4rem;
   }
 
@@ -871,17 +908,17 @@
 <body>
 
 <!-- ═══════════════ HERO ═══════════════ -->
-<section id="hero">
-  <div class="candle-left"></div>
-  <div class="candle-right"></div>
+<header id="hero" aria-labelledby="hero-title">
+  <div class="candle-left" aria-hidden="true"></div>
+  <div class="candle-right" aria-hidden="true"></div>
 
-  <p class="hero-eyebrow">Est. In Aeternum · Umbrae et Ignis</p>
+  <p class="hero-eyebrow" aria-hidden="true">Est. In Aeternum · Umbrae et Ignis</p>
 
-  <h1 class="hero-title">POMBAGIRAS</h1>
+  <h1 id="hero-title" class="hero-title">POMBAGIRAS</h1>
 
-  <p class="hero-subtitle-latin">Regina Noctis Aeternae — Domina Viarum et Crucis</p>
+  <p class="hero-subtitle-latin" aria-hidden="true">Regina Noctis Aeternae — Domina Viarum et Crucis</p>
 
-  <div class="hero-divider">
+  <div class="hero-divider" aria-hidden="true">
     <span>✦</span>
   </div>
 
@@ -890,17 +927,19 @@
     Soberanas da madrugada, detentoras dos segredos que o dia não ousaria revelar.
   </p>
 
-  <a href="#origens" class="hero-cta">Adentrar o Mistério</a>
-  <a href="https://pombagiras.com/" class="hero-cta">POMBAGIRAS.COM</a>
+  <nav aria-label="Ações Iniciais" style="display:flex; flex-direction:column; align-items:center; gap: 10px;">
+      <a href="#origens" class="hero-cta">Adentrar o Mistério</a>
+      <a href="https://pombagiras.com/" class="hero-cta" target="_blank" rel="noopener">POMBAGIRAS.COM</a>
+  </nav>
 
-  <div class="scroll-indicator">
+  <div class="scroll-indicator" aria-hidden="true">
     <div class="scroll-line"></div>
     <span>Descendere</span>
   </div>
-</section>
+</header>
 
 <!-- ═══════════════ MARQUEE ═══════════════ -->
-<div class="marquee-wrap">
+<div class="marquee-wrap" aria-hidden="true">
   <div class="marquee-track">
     <span>Pombagira Maria Padilha</span><span class="marquee-sep">✦</span>
     <span>Exu das Almas</span><span class="marquee-sep">✦</span>
@@ -911,7 +950,7 @@
     <span>Senhora da Madrugada</span><span class="marquee-sep">✦</span>
     <span>Pombagira da Lua</span><span class="marquee-sep">✦</span>
     <span>Domina Crucis Mundi</span><span class="marquee-sep">✦</span>
-    <!-- repeat for seamless loop -->
+    <!-- loop para fluidez -->
     <span>Pombagira Maria Padilha</span><span class="marquee-sep">✦</span>
     <span>Exu das Almas</span><span class="marquee-sep">✦</span>
     <span>Rainha das Sete Encruzilhadas</span><span class="marquee-sep">✦</span>
@@ -924,323 +963,325 @@
   </div>
 </div>
 
-<!-- ═══════════════ ORIGENS ═══════════════ -->
-<section id="origens">
-  <div class="container">
-    <div class="origens-grid">
-      <div class="origens-text fade-in">
-        <span class="section-tag">Filiis Noctis · Origens</span>
-        <h2 class="section-title">Quem São as <em>Pombagiras</em></h2>
+<main>
+    <!-- ═══════════════ ORIGENS ═══════════════ -->
+    <section id="origens" aria-labelledby="origens-title">
+      <div class="container">
+        <div class="origens-grid">
+          <article class="origens-text fade-in">
+            <span class="section-tag" aria-hidden="true">Filiis Noctis · Origens</span>
+            <h2 id="origens-title" class="section-title">Quem São as <em>Pombagiras</em></h2>
 
-        <p class="latin-quote">
-          "Non sunt daemones — sunt matricis mundi, custodes transitus inter lux et umbra."
-        </p>
+            <p class="latin-quote" aria-hidden="true">
+              "Non sunt daemones — sunt matricis mundi, custodes transitus inter lux et umbra."
+            </p>
 
-        <p>
-          As <strong>Pombagiras</strong> são entidades femininas de enorme poder na Umbanda e na Quimbanda — espíritos soberanos que habitam o espaço sagrado das encruzilhadas, limiares entre o mundo dos vivos e o dos mortos.
-        </p>
-        <p>
-          São a manifestação do <strong>princípio feminino selvagem</strong>: irreverentes, poderosas, libertas de julgamentos. Portam a sabedoria ancestral de mulheres que viveram em suas bordas — ciganas, feiticeiras, prostitutas sagradas, dançarinas, rainhas de povos bantos e iorubás.
-        </p>
-        <p>
-          Suas raízes mergulham nas tradições dos povos africanos trazidos ao Brasil, na magia ibérica, no esoterismo indígena. São, antes de tudo, <strong>forças da natureza</strong> — nem santas, nem demônias. Simplesmente, elas <em>são</em>.
-        </p>
+            <p>
+              As <strong>Pombagiras</strong> são entidades femininas de enorme poder na Umbanda e na Quimbanda — espíritos soberanos que habitam o espaço sagrado das encruzilhadas, limiares entre o mundo dos vivos e o dos mortos.
+            </p>
+            <p>
+              São a manifestação do <strong>princípio feminino selvagem</strong>: irreverentes, poderosas, libertas de julgamentos. Portam a sabedoria ancestral de mulheres que viveram em suas bordas — ciganas, feiticeiras, prostitutas sagradas, dançarinas, rainhas de povos bantos e iorubás.
+            </p>
+            <p>
+              Suas raízes mergulham nas tradições dos povos africanos trazidos ao Brasil, na magia ibérica, no esoterismo indígena. São, antes de tudo, <strong>forças da natureza</strong> — nem santas, nem demônias. Simplesmente, elas <em>são</em>.
+            </p>
+          </article>
+
+          <div class="sigil-container fade-in" aria-hidden="true">
+            <svg class="sigil-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+              <!-- Outer ring -->
+              <circle cx="200" cy="200" r="180" fill="none" stroke="#8B0000" stroke-width="0.5" opacity="0.6"/>
+              <circle cx="200" cy="200" r="165" fill="none" stroke="#B8860B" stroke-width="0.3" opacity="0.4"/>
+              <!-- Star of 7 -->
+              <polygon points="200,30 245,155 380,155 270,235 310,365 200,285 90,365 130,235 20,155 155,155" fill="none" stroke="#8B0000" stroke-width="0.8" opacity="0.5"/>
+              <!-- Inner star -->
+              <polygon points="200,80 222,148 295,148 238,188 260,258 200,218 140,258 162,188 105,148 178,148" fill="none" stroke="#B8860B" stroke-width="0.6" opacity="0.4"/>
+              <!-- Cross roads -->
+              <line x1="200" y1="20" x2="200" y2="380" stroke="#8B0000" stroke-width="0.5" opacity="0.3"/>
+              <line x1="20" y1="200" x2="380" y2="200" stroke="#8B0000" stroke-width="0.5" opacity="0.3"/>
+              <line x1="72" y1="72" x2="328" y2="328" stroke="#8B0000" stroke-width="0.4" opacity="0.2"/>
+              <line x1="328" y1="72" x2="72" y2="328" stroke="#8B0000" stroke-width="0.4" opacity="0.2"/>
+              <!-- Center rose -->
+              <circle cx="200" cy="200" r="40" fill="none" stroke="#C41E3A" stroke-width="1" opacity="0.7"/>
+              <circle cx="200" cy="200" r="25" fill="none" stroke="#DAA520" stroke-width="0.8" opacity="0.6"/>
+              <circle cx="200" cy="200" r="8" fill="#8B0000" opacity="0.8"/>
+              <!-- Petals -->
+              <g opacity="0.5">
+                <ellipse cx="200" cy="165" rx="6" ry="20" fill="#C41E3A"/>
+                <ellipse cx="200" cy="235" rx="6" ry="20" fill="#C41E3A"/>
+                <ellipse cx="165" cy="200" rx="20" ry="6" fill="#C41E3A"/>
+                <ellipse cx="235" cy="200" rx="20" ry="6" fill="#C41E3A"/>
+                <ellipse cx="176" cy="176" rx="6" ry="18" fill="#C41E3A" transform="rotate(45 176 176)"/>
+                <ellipse cx="224" cy="176" rx="6" ry="18" fill="#C41E3A" transform="rotate(-45 224 176)"/>
+                <ellipse cx="176" cy="224" rx="6" ry="18" fill="#C41E3A" transform="rotate(-45 176 224)"/>
+                <ellipse cx="224" cy="224" rx="6" ry="18" fill="#C41E3A" transform="rotate(45 224 224)"/>
+              </g>
+              <!-- Rune marks -->
+              <text x="200" y="16" text-anchor="middle" fill="#B8860B" font-size="8" opacity="0.6" font-family="serif">✦</text>
+              <text x="200" y="392" text-anchor="middle" fill="#B8860B" font-size="8" opacity="0.6" font-family="serif">✦</text>
+              <text x="12" y="204" text-anchor="middle" fill="#B8860B" font-size="8" opacity="0.6" font-family="serif">✦</text>
+              <text x="392" y="204" text-anchor="middle" fill="#B8860B" font-size="8" opacity="0.6" font-family="serif">✦</text>
+            </svg>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="sigil-container fade-in">
-        <svg class="sigil-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-          <!-- Outer ring -->
-          <circle cx="200" cy="200" r="180" fill="none" stroke="#8B0000" stroke-width="0.5" opacity="0.6"/>
-          <circle cx="200" cy="200" r="165" fill="none" stroke="#B8860B" stroke-width="0.3" opacity="0.4"/>
-          <!-- Star of 7 -->
-          <polygon points="200,30 245,155 380,155 270,235 310,365 200,285 90,365 130,235 20,155 155,155" fill="none" stroke="#8B0000" stroke-width="0.8" opacity="0.5"/>
-          <!-- Inner star -->
-          <polygon points="200,80 222,148 295,148 238,188 260,258 200,218 140,258 162,188 105,148 178,148" fill="none" stroke="#B8860B" stroke-width="0.6" opacity="0.4"/>
-          <!-- Cross roads -->
-          <line x1="200" y1="20" x2="200" y2="380" stroke="#8B0000" stroke-width="0.5" opacity="0.3"/>
-          <line x1="20" y1="200" x2="380" y2="200" stroke="#8B0000" stroke-width="0.5" opacity="0.3"/>
-          <line x1="72" y1="72" x2="328" y2="328" stroke="#8B0000" stroke-width="0.4" opacity="0.2"/>
-          <line x1="328" y1="72" x2="72" y2="328" stroke="#8B0000" stroke-width="0.4" opacity="0.2"/>
-          <!-- Center rose -->
-          <circle cx="200" cy="200" r="40" fill="none" stroke="#C41E3A" stroke-width="1" opacity="0.7"/>
-          <circle cx="200" cy="200" r="25" fill="none" stroke="#DAA520" stroke-width="0.8" opacity="0.6"/>
-          <circle cx="200" cy="200" r="8" fill="#8B0000" opacity="0.8"/>
-          <!-- Petals -->
-          <g opacity="0.5">
-            <ellipse cx="200" cy="165" rx="6" ry="20" fill="#C41E3A"/>
-            <ellipse cx="200" cy="235" rx="6" ry="20" fill="#C41E3A"/>
-            <ellipse cx="165" cy="200" rx="20" ry="6" fill="#C41E3A"/>
-            <ellipse cx="235" cy="200" rx="20" ry="6" fill="#C41E3A"/>
-            <ellipse cx="176" cy="176" rx="6" ry="18" fill="#C41E3A" transform="rotate(45 176 176)"/>
-            <ellipse cx="224" cy="176" rx="6" ry="18" fill="#C41E3A" transform="rotate(-45 224 176)"/>
-            <ellipse cx="176" cy="224" rx="6" ry="18" fill="#C41E3A" transform="rotate(-45 176 224)"/>
-            <ellipse cx="224" cy="224" rx="6" ry="18" fill="#C41E3A" transform="rotate(45 224 224)"/>
-          </g>
-          <!-- Rune marks -->
-          <text x="200" y="16" text-anchor="middle" fill="#B8860B" font-size="8" opacity="0.6" font-family="serif">✦</text>
-          <text x="200" y="392" text-anchor="middle" fill="#B8860B" font-size="8" opacity="0.6" font-family="serif">✦</text>
-          <text x="12" y="204" text-anchor="middle" fill="#B8860B" font-size="8" opacity="0.6" font-family="serif">✦</text>
-          <text x="392" y="204" text-anchor="middle" fill="#B8860B" font-size="8" opacity="0.6" font-family="serif">✦</text>
-        </svg>
+    <!-- ═══════════════ ENTIDADES ═══════════════ -->
+    <section id="entidades" aria-labelledby="entidades-title">
+      <div class="container">
+        <header class="entidades-header fade-in">
+          <span class="section-tag" aria-hidden="true">The Sovereign Ones · As Soberanas</span>
+          <h2 id="entidades-title" class="section-title">As Grandes <em>Entidades</em></h2>
+          <p style="max-width:600px;margin:0 auto;color:var(--bone-dark);font-size:1.05rem;line-height:1.8;">
+            Cada Pombagira é um mundo, uma força, uma vibração única. Conheça as mais reverenciadas das correntes sagradas.
+          </p>
+        </header>
+
+        <div class="cards-grid">
+
+          <article class="entity-card fade-in">
+            <span class="entity-number" aria-hidden="true">I</span>
+            <span class="entity-symbol" aria-hidden="true">🌹</span>
+            <h3 class="entity-name">Maria Padilha</h3>
+            <p class="entity-epithet" aria-hidden="true">Regina Rosarum · Rainha das Rosas</p>
+            <p class="entity-desc">A mais famosa e poderosa de todas. Diz-se que foi amante de um rei de Castela e aprendeu os segredos mais obscuros da magia ibérica. Governa o amor, a sedução e a magia da conquista. Sua cor é o vermelho e seu perfume é o de rosas embebidas em sangue.</p>
+          </article>
+
+          <article class="entity-card fade-in">
+            <span class="entity-number" aria-hidden="true">II</span>
+            <span class="entity-symbol" aria-hidden="true">🔱</span>
+            <h3 class="entity-name">Pombagira das Sete Encruzilhadas</h3>
+            <p class="entity-epithet" aria-hidden="true">Domina Septem Viis · Senhora dos Sete Caminhos</p>
+            <p class="entity-desc">Governa os sete destinos, os sete amores, as sete mortes. Ela abre e fecha caminhos com igual maestria. É invocada naqueles momentos em que apenas ela pode decidir qual trilha o supplicante merece percorrer.</p>
+          </article>
+
+          <article class="entity-card fade-in">
+            <span class="entity-number" aria-hidden="true">III</span>
+            <span class="entity-symbol" aria-hidden="true">🌙</span>
+            <h3 class="entity-name">Pombagira da Lua</h3>
+            <p class="entity-epithet" aria-hidden="true">Luna Atra · Filha das Trevas Lunares</p>
+            <p class="entity-desc">Entidade de magia lunar profunda. Atua nos ciclos — amor que cresce e mingua, feitiços que exigem tempo e paciência, trabalhos que dependem da fase certa. Sua presença é sentida às margens d'água na lua nova.</p>
+          </article>
+
+          <article class="entity-card fade-in">
+            <span class="entity-number" aria-hidden="true">IV</span>
+            <span class="entity-symbol" aria-hidden="true">🔥</span>
+            <h3 class="entity-name">Pombagira Cigana</h3>
+            <p class="entity-epithet" aria-hidden="true">Vitam Vagam Colens · A Que Habita o Vento</p>
+            <p class="entity-desc">Carrega a sabedoria milenar dos povos nômades. Lê o destino nas cartas, nas palmas e nos olhos. Liberta os amarrados, abre os caminhos bloqueados e dança com fogo. Sua roupa é de cores vivas que ardem na madrugada.</p>
+          </article>
+
+          <article class="entity-card fade-in">
+            <span class="entity-number" aria-hidden="true">V</span>
+            <span class="entity-symbol" aria-hidden="true">⚰️</span>
+            <h3 class="entity-name">Pombagira do Cemitério</h3>
+            <p class="entity-epithet" aria-hidden="true">Custos Mortis et Vitae · Guardiã do Limiar</p>
+            <p class="entity-desc">Habita entre os mortos e os vivos. Conhece os segredos dos que partiram e os que estão para partir. Trabalha com espíritos ancestrais, desfaz magias pesadas e protege os seus com o manto frio da morte que ela tantas vezes contemplou.</p>
+          </article>
+
+          <article class="entity-card fade-in">
+            <span class="entity-number" aria-hidden="true">VI</span>
+            <span class="entity-symbol" aria-hidden="true">🌺</span>
+            <h3 class="entity-name">Maria Mulambo</h3>
+            <p class="entity-epithet" aria-hidden="true">Ex Pulvere, Regina · Do Pó, Rainha</p>
+            <p class="entity-desc">Nascida do lixo e do esquecimento, tornou-se rainha. Entidade de imensa compaixão pelos abandonados, pelos que caíram. Ela pega o que foi descartado pelo mundo e transforma em ouro. Prova que de toda humilhação nasce poder.</p>
+          </article>
+
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ═══════════════ ENTIDADES ═══════════════ -->
-<section id="entidades">
-  <div class="container">
-    <div class="entidades-header fade-in">
-      <span class="section-tag">The Sovereign Ones · As Soberanas</span>
-      <h2 class="section-title">As Grandes <em>Entidades</em></h2>
-      <p style="max-width:600px;margin:0 auto;color:var(--bone-dark);font-size:1.05rem;line-height:1.8;">
-        Cada Pombagira é um mundo, uma força, uma vibração única. Conheça as mais reverenciadas das correntes sagradas.
-      </p>
-    </div>
+    <!-- ═══════════════ GIRAS / OFERENDAS ═══════════════ -->
+    <section id="giras" aria-labelledby="giras-title">
+      <div class="container">
+        <div class="giras-layout">
 
-    <div class="cards-grid">
+          <article class="fade-in">
+            <span class="section-tag" aria-hidden="true">Sacred Offerings · Sagradas Dádivas</span>
+            <h2 id="giras-title" class="section-title" style="font-size:clamp(1.5rem,3vw,2.2rem);">O Que Elas<br><em>Recebem</em></h2>
+            <p class="latin-quote" aria-hidden="true">
+              "Da ut des — oferece para que sejas atendido"
+            </p>
 
-      <div class="entity-card fade-in">
-        <span class="entity-number">I</span>
-        <span class="entity-symbol">🌹</span>
-        <h3 class="entity-name">Maria Padilha</h3>
-        <p class="entity-epithet">Regina Rosarum · Rainha das Rosas</p>
-        <p class="entity-desc">A mais famosa e poderosa de todas. Diz-se que foi amante de um rei de Castela e aprendeu os segredos mais obscuros da magia ibérica. Governa o amor, a sedução e a magia da conquista. Sua cor é o vermelho e seu perfume é o de rosas embebidas em sangue.</p>
+            <ul class="offerings-list">
+              <li>
+                <span class="offering-icon" aria-hidden="true">🌹</span>
+                <div class="offering-text">
+                  <strong>Rosas Vermelhas</strong>
+                  <span>Símbolo do amor apaixonado e da sedução. Quanto mais abertas e perfumadas, maior a receptividade da entidade.</span>
+                </div>
+              </li>
+              <li>
+                <span class="offering-icon" aria-hidden="true">🕯️</span>
+                <div class="offering-text">
+                  <strong>Velas Vermelhas e Pretas</strong>
+                  <span>O vermelho pela paixão e força, o preto pela proteção e trabalho nas sombras. Nunca se mistura com branco em rituais de Quimbanda.</span>
+                </div>
+              </li>
+              <li>
+                <span class="offering-icon" aria-hidden="true">🥃</span>
+                <div class="offering-text">
+                  <strong>Champanhe e Cachaça</strong>
+                  <span>A champanhe pela nobreza e alegria; a cachaça pela potência crua. Pombagira aprecia o que arde e o que borbulha.</span>
+                </div>
+              </li>
+              <li>
+                <span class="offering-icon" aria-hidden="true">💄</span>
+                <div class="offering-text">
+                  <strong>Perfume e Maquiagem</strong>
+                  <span>Entidade da vaidade sagrada, ela recebe com alegria cosméticos e perfumes — armas do feminino que ela jamais abandona.</span>
+                </div>
+              </li>
+              <li>
+                <span class="offering-icon" aria-hidden="true">🎴</span>
+                <div class="offering-text">
+                  <strong>Baralho Cigano</strong>
+                  <span>Para consulta e ligação com as Pombagiras Ciganas. As cartas falam a língua delas.</span>
+                </div>
+              </li>
+            </ul>
+          </article>
+
+          <article class="giras-prose fade-in">
+            <span class="section-tag" aria-hidden="true">The Crossroads Ritual · O Ritual da Encruzilhada</span>
+            <h2 class="section-title" style="font-size:clamp(1.5rem,3vw,2.2rem);">A Gira da <em>Madrugada</em></h2>
+
+            <p>
+              Na Umbanda e na Quimbanda, a <strong>Gira de Pombagira</strong> é um dos rituais mais intensos e transformadores do espiritismo brasileiro. Acontece preferencialmente à meia-noite ou à madrugada — hora em que o véu entre os mundos se afina como seda.
+            </p>
+
+            <p>
+              Os médiuns incorporados carregam a vibração dessas entidades: dançam, fumam charutos, bebem, riem com gargalhadas que ecoam como trovões. Não há fingimento — há canalização de uma força que não pede licença.
+            </p>
+
+            <blockquote class="highlight-box">
+              <p>
+                <em>"Elas chegam com o cheiro de rosas e o sabor de pólvora. Chegam com a memória de cada mulher que foi perseguida, silenciada, queimada. E chegam para cobrar — e para libertar."</em>
+              </p>
+            </blockquote>
+
+            <p>
+              A encruzilhada é seu templo — não apenas o cruzamento físico de ruas, mas todo ponto de decisão, de ruptura, de recomeço. É lá que as oferendas são deixadas; é lá que os pedidos são feitos; é lá que a vida se divide entre o que foi e o que pode vir a ser.
+            </p>
+
+            <div class="ornament" aria-hidden="true">⚜ ✦ ⚜</div>
+
+            <p>
+              O contato respeitoso com essas entidades requer <strong>fé, humildade e verdade</strong>. Pombagira não aceita mentiras — ela as vê antes que saiam da boca. Mas para aqueles que chegam com o coração aberto, ela devolve dez vezes o que foi oferecido.
+            </p>
+          </article>
+
+        </div>
       </div>
+    </section>
 
-      <div class="entity-card fade-in">
-        <span class="entity-number">II</span>
-        <span class="entity-symbol">🔱</span>
-        <h3 class="entity-name">Pombagira das Sete Encruzilhadas</h3>
-        <p class="entity-epithet">Domina Septem Viis · Senhora dos Sete Caminhos</p>
-        <p class="entity-desc">Governa os sete destinos, os sete amores, as sete mortes. Ela abre e fecha caminhos com igual maestria. É invocada naqueles momentos em que apenas ela pode decidir qual trilha o supplicante merece percorrer.</p>
-      </div>
-
-      <div class="entity-card fade-in">
-        <span class="entity-number">III</span>
-        <span class="entity-symbol">🌙</span>
-        <h3 class="entity-name">Pombagira da Lua</h3>
-        <p class="entity-epithet">Luna Atra · Filha das Trevas Lunares</p>
-        <p class="entity-desc">Entidade de magia lunare profunda. Atua nos ciclos — amor que cresce e mingua, feitiços que exigem tempo e paciência, trabalhos que dependem da fase certa. Sua presença é sentida às margens d'água na lua nova.</p>
-      </div>
-
-      <div class="entity-card fade-in">
-        <span class="entity-number">IV</span>
-        <span class="entity-symbol">🔥</span>
-        <h3 class="entity-name">Pombagira Cigana</h3>
-        <p class="entity-epithet">Vitam Vagam Colens · A Que Habita o Vento</p>
-        <p class="entity-desc">Carrega a sabedoria milenar dos povos nômades. Lê o destino nas cartas, nas palmas e nos olhos. Liberta os amarrados, abre os caminhos bloqueados e dança com fogo. Sua roupa é de cores vivas que ardem na madrugada.</p>
-      </div>
-
-      <div class="entity-card fade-in">
-        <span class="entity-number">V</span>
-        <span class="entity-symbol">⚰️</span>
-        <h3 class="entity-name">Pombagira do Cemitério</h3>
-        <p class="entity-epithet">Custos Mortis et Vitae · Guardiã do Limiar</p>
-        <p class="entity-desc">Habita entre os mortos e os vivos. Conhece os segredos dos que partiram e os que estão para partir. Trabalha com espíritos ancestrais, desfaz magias pesadas e protege os seus com o manto frio da morte que ela tantas vezes contemplou.</p>
-      </div>
-
-      <div class="entity-card fade-in">
-        <span class="entity-number">VI</span>
-        <span class="entity-symbol">🌺</span>
-        <h3 class="entity-name">Maria Mulambo</h3>
-        <p class="entity-epithet">Ex Pulvere, Regina · Do Pó, Rainha</p>
-        <p class="entity-desc">Nascida do lixo e do esquecimento, tornou-se rainha. Entidade de imensa compaixão pelos abandonados, pelos que caíram. Ela pega o que foi descartado pelo mundo e transforma em ouro. Prova que de toda humilhação nasce poder.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ GIRAS / OFERENDAS ═══════════════ -->
-<section id="giras">
-  <div class="container">
-    <div class="giras-layout">
-
-      <div class="fade-in">
-        <span class="section-tag">Sacred Offerings · Sagradas Dádivas</span>
-        <h2 class="section-title" style="font-size:clamp(1.5rem,3vw,2.2rem);">O Que Elas<br><em>Recebem</em></h2>
-        <p class="latin-quote">
-          "Da ut des — oferece para que sejas atendido"
-        </p>
-
-        <ul class="offerings-list">
-          <li>
-            <span class="offering-icon">🌹</span>
-            <div class="offering-text">
-              <strong>Rosas Vermelhas</strong>
-              <span>Símbolo do amor apaixonado e da sedução. Quanto mais abertas e perfumadas, maior a receptividade da entidade.</span>
-            </div>
-          </li>
-          <li>
-            <span class="offering-icon">🕯️</span>
-            <div class="offering-text">
-              <strong>Velas Vermelhas e Pretas</strong>
-              <span>O vermelho pela paixão e força, o preto pela proteção e trabalho nas sombras. Nunca se mistura com branco em rituais de Quimbanda.</span>
-            </div>
-          </li>
-          <li>
-            <span class="offering-icon">🥃</span>
-            <div class="offering-text">
-              <strong>Champanhe e Cachaça</strong>
-              <span>A champanhe pela nobreza e alegria; a cachaça pela potência crua. Pombagira aprecia o que arde e o que borbulha.</span>
-            </div>
-          </li>
-          <li>
-            <span class="offering-icon">💄</span>
-            <div class="offering-text">
-              <strong>Perfume e Maquiagem</strong>
-              <span>Entidade da vaidade sagrada, ela recebe com alegria cosméticos e perfumes — armas do feminino que ela jamais abandona.</span>
-            </div>
-          </li>
-          <li>
-            <span class="offering-icon">🎴</span>
-            <div class="offering-text">
-              <strong>Baralho Cigano</strong>
-              <span>Para consulta e ligação com as Pombagiras Ciganas. As cartas falam a língua delas.</span>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <div class="giras-prose fade-in">
-        <span class="section-tag">The Crossroads Ritual · O Ritual da Encruzilhada</span>
-        <h2 class="section-title" style="font-size:clamp(1.5rem,3vw,2.2rem);">A Gira da <em>Madrugada</em></h2>
-
-        <p>
-          Na Umbanda e na Quimbanda, a <strong>Gira de Pombagira</strong> é um dos rituais mais intensos e transformadores do espiritismo brasileiro. Acontece preferencialmente à meia-noite ou à madrugada — hora em que o véu entre os mundos se afina como seda.
-        </p>
-
-        <p>
-          Os médiuns incorporados carregam a vibração dessas entidades: dançam, fumam charutos, bebem, riem com gargalhadas que ecoam como trovões. Não há fingimento — há canalização de uma força que não pede licença.
-        </p>
-
-        <div class="highlight-box">
+    <!-- ═══════════════ PODER ═══════════════ -->
+    <section id="poder" aria-labelledby="poder-title">
+      <div class="container">
+        <header class="poder-intro fade-in">
+          <span class="section-tag" aria-hidden="true">The Threefold Power · Tria Potestates</span>
+          <h2 id="poder-title" class="section-title">As Três Faces do<br><em>Poder Feminino</em></h2>
           <p>
-            <em>"Elas chegam com o cheiro de rosas e o sabor de pólvora. Chegam com a memória de cada mulher que foi perseguida, silenciada, queimada. E chegam para cobrar — e para libertar."</em>
+            Pombagira não é uma — são muitas. Mas em sua essência, toda Pombagira carrega em si três forças primordiais, três chamas que nunca se apagam desde que o mundo começou a girar.
+          </p>
+        </header>
+
+        <div class="trinity-grid fade-in">
+
+          <article class="trinity-item">
+            <span class="trinity-rune" aria-hidden="true">🔥</span>
+            <h3 class="trinity-title">Paixão</h3>
+            <span class="trinity-latin" aria-hidden="true">Ardor Sine Fine</span>
+            <p class="trinity-desc">Governa o amor, o desejo, a atração magnética. Atua nas questões do coração com violência e precisão cirúrgica. Nenhuma corrente de amor resiste ao seu fogo.</p>
+          </article>
+
+          <article class="trinity-item">
+            <span class="trinity-rune" aria-hidden="true">⚔️</span>
+            <h3 class="trinity-title">Poder</h3>
+            <span class="trinity-latin" aria-hidden="true">Potestas Absoluta</span>
+            <p class="trinity-desc">Quebra amarrações, abre caminhos bloqueados, inverte feitiços contra seus filhos. Onde outros espíritos recuam, Pombagira avança — sem medo, sem negociação.</p>
+          </article>
+
+          <article class="trinity-item">
+            <span class="trinity-rune" aria-hidden="true">🌙</span>
+            <h3 class="trinity-title">Mistério</h3>
+            <span class="trinity-latin" aria-hidden="true">Arcana Nocturna</span>
+            <p class="trinity-desc">Conhece os segredos que o sol nunca viu. Vê o que está oculto, o que foi escondido, o que foi enterrado. Suas revelações chegam em sonhos e no sussurro da madrugada.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ MANIFESTO ═══════════════ -->
+    <section id="manifesto" aria-labelledby="manifesto-title">
+      <div class="container">
+        <article class="manifesto-content fade-in">
+          <h2 id="manifesto-title" class="manifesto-english">The Queens of the Abyss<br>Have Always Been Here</h2>
+
+          <p class="manifesto-body">
+            Antes que os templos fossem construídos, antes que os deuses recebessem nomes em línguas humanas, antes que qualquer livro sagrado fosse escrito — <strong>elas já estavam nas encruzilhadas</strong>. Dançando. Esperando. Governando.
+          </p>
+
+          <p class="manifesto-body">
+            A Pombagira não é invenção do Brasil, embora o Brasil a tenha nomeado, codificado, amado como nenhuma outra civilização. Ela é a feiticeira de Hécate, a Lilith dos hebreus, a Kali dos hindus, a Marie Laveau do Voodoo. Ela é o arquétipo da mulher que recusou ser domada.
+          </p>
+
+          <blockquote class="manifesto-verse">
+            <em>"Ego sum quae non vincor.<br>
+            Ego sum quae non taceor.<br>
+            Ego sum Pombagira —<br>
+            et mundus meus est crux."</em>
+          </blockquote>
+
+          <p style="font-family:'Cinzel',serif;font-style:italic;font-size:0.85rem;color:var(--bone-dark);letter-spacing:0.08em;margin-bottom:2rem;" aria-hidden="true">
+            "Sou aquela que não é vencida. Sou aquela que não se cala. Sou Pombagira — e meu mundo é a encruzilhada."
+          </p>
+
+          <p class="manifesto-body">
+            Hoje, no século XXI, enquanto o mundo redescobre o sagrado feminino, enquanto mulheres ao redor do planeta reivindicam poder, magia e autonomia — <strong>Pombagira sorri</strong>. Porque ela sabia. Ela sempre soube que esse dia chegaria.
+          </p>
+
+          <p class="manifesto-body">
+            E ela estará na encruzilhada. Como sempre esteve. Como sempre estará.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════════ RITUAL / CTA ═══════════════ -->
+    <section id="ritual" aria-labelledby="ritual-title">
+      <div class="container">
+        <div class="fade-in">
+          <span class="ritual-sigil" aria-hidden="true">✦</span>
+          <h2 id="ritual-title" class="ritual-title">Você Está na Encruzilhada</h2>
+          <p class="ritual-latin" aria-hidden="true">Nunc aut numquam — agora ou nunca</p>
+          <p class="ritual-desc">
+            Não há coincidência em chegar até aqui. A encruzilhada te chamou — e Pombagira aguarda. Seja para conhecer, para aprender, para pedir ou para reverenciar. O portal está aberto.
+          </p>
+          <a href="https://pombagiras.com/" class="domain-badge" target="_blank" rel="noopener">POMBAGIRAS.COM</a>
+          <br><br>
+          <p style="font-family:'Cinzel',serif;font-style:italic;font-size:0.8rem;color:rgba(218,165,32,0.5);letter-spacing:0.2em;margin-top:2rem;" aria-hidden="true">
+            Sub Luna Atra · In Cruce Aeterna
           </p>
         </div>
-
-        <p>
-          A encruzilhada é seu templo — não apenas o cruzamento físico de ruas, mas todo ponto de decisão, de ruptura, de recomeço. É lá que as oferendas são deixadas; é lá que os pedidos são feitos; é lá que a vida se divide entre o que foi e o que pode vir a ser.
-        </p>
-
-        <div class="ornament">⚜ ✦ ⚜</div>
-
-        <p>
-          O contato respeitoso com essas entidades requer <strong>fé, humildade e verdade</strong>. Pombagira não aceita mentiras — ela as vê antes que saiam da boca. Mas para aqueles que chegam com o coração aberto, ela devolve dez vezes o que foi oferecido.
-        </p>
       </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ PODER ═══════════════ -->
-<section id="poder">
-  <div class="container">
-    <div class="poder-intro fade-in">
-      <span class="section-tag">The Threefold Power · Tria Potestates</span>
-      <h2 class="section-title">As Três Faces do<br><em>Poder Feminino</em></h2>
-      <p>
-        Pombagira não é uma — são muitas. Mas em sua essência, toda Pombagira carrega em si três forças primordiais, três chamas que nunca se apagam desde que o mundo começou a girar.
-      </p>
-    </div>
-
-    <div class="trinity-grid fade-in">
-
-      <div class="trinity-item">
-        <span class="trinity-rune">🔥</span>
-        <h3 class="trinity-title">Paixão</h3>
-        <span class="trinity-latin">Ardor Sine Fine</span>
-        <p class="trinity-desc">Governa o amor, o desejo, a atração magnética. Atua nas questões do coração com violência e precisão cirúrgica. Nenhuma corrente de amor resiste ao seu fogo.</p>
-      </div>
-
-      <div class="trinity-item">
-        <span class="trinity-rune">⚔️</span>
-        <h3 class="trinity-title">Poder</h3>
-        <span class="trinity-latin">Potestas Absoluta</span>
-        <p class="trinity-desc">Quebra amarrações, abre caminhos bloqueados, inverte feitiços contra seus filhos. Onde outros espíritos recuam, Pombagira avança — sem medo, sem negociação.</p>
-      </div>
-
-      <div class="trinity-item">
-        <span class="trinity-rune">🌙</span>
-        <h3 class="trinity-title">Mistério</h3>
-        <span class="trinity-latin">Arcana Nocturna</span>
-        <p class="trinity-desc">Conhece os segredos que o sol nunca viu. Vê o que está oculto, o que foi escondido, o que foi enterrado. Suas revelações chegam em sonhos e no sussurro da madrugada.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ MANIFESTO ═══════════════ -->
-<section id="manifesto">
-  <div class="container">
-    <div class="manifesto-content fade-in">
-      <h2 class="manifesto-english">The Queens of the Abyss<br>Have Always Been Here</h2>
-
-      <p class="manifesto-body">
-        Antes que os templos fossem construídos, antes que os deuses recebessem nomes em línguas humanas, antes que qualquer livro sagrado fosse escrito — <strong>elas já estavam nas encruzilhadas</strong>. Dançando. Esperando. Governando.
-      </p>
-
-      <p class="manifesto-body">
-        A Pombagira não é invenção do Brasil, embora o Brasil a tenha nomeado, codificado, amado como nenhuma outra civilização. Ela é a feiticeira de Hécate, a Lilith dos hebreus, a Kali dos hindus, a Marie Laveau do Voodoo. Ela é o arquétipo da mulher que recusou ser domada.
-      </p>
-
-      <div class="manifesto-verse">
-        <em>"Ego sum quae non vincor.<br>
-        Ego sum quae non taceor.<br>
-        Ego sum Pombagira —<br>
-        et mundus meus est crux."</em>
-      </div>
-
-      <p style="font-family:'Cinzel',serif;font-style:italic;font-size:0.85rem;color:var(--bone-dark);letter-spacing:0.08em;margin-bottom:2rem;">
-        "Sou aquela que não é vencida. Sou aquela que não se cala. Sou Pombagira — e meu mundo é a encruzilhada."
-      </p>
-
-      <p class="manifesto-body">
-        Hoje, no século XXI, enquanto o mundo redescobre o sagrado feminino, enquanto mulheres ao redor do planeta reivindicam poder, magia e autonomia — <strong>Pombagira sorri</strong>. Porque ela sabia. Ela sempre soube que esse dia chegaria.
-      </p>
-
-      <p class="manifesto-body">
-        E ela estará na encruzilhada. Como sempre esteve. Como sempre estará.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ RITUAL / CTA ═══════════════ -->
-<section id="ritual">
-  <div class="container">
-    <div class="fade-in">
-      <span class="ritual-sigil">✦</span>
-      <h2 class="ritual-title">Você Está na Encruzilhada</h2>
-      <p class="ritual-latin">Nunc aut numquam — agora ou nunca</p>
-      <p class="ritual-desc">
-        Não há coincidência em chegar até aqui. A encruzilhada te chamou — e Pombagira aguarda. Seja para conhecer, para aprender, para pedir ou para reverenciar. O portal está aberto.
-      </p>
-      <div class="domain-badge">POMBAGIRAS.COM</div>
-      <br><br>
-      <p style="font-family:'Cinzel',serif;font-style:italic;font-size:0.8rem;color:rgba(218,165,32,0.5);letter-spacing:0.2em;margin-top:2rem;">
-        Sub Luna Atra · In Cruce Aeterna
-      </p>
-    </div>
-  </div>
-</section>
+    </section>
+</main>
 
 <!-- ═══════════════ FOOTER ═══════════════ -->
-<footer>
+<footer role="contentinfo" aria-label="Rodapé Principal">
   <p class="footer-title">POMBAGIRAS.COM</p>
-  <p class="footer-latin">Regina Noctis Aeternae · Domina Viarum et Crucis</p>
+  <p class="footer-latin" aria-hidden="true">Regina Noctis Aeternae · Domina Viarum et Crucis</p>
 
-  <div class="footer-links">
+  <nav class="footer-links" aria-label="Links de navegação do rodapé">
     <a href="#origens">As Origens</a>
     <a href="#entidades">As Entidades</a>
     <a href="#giras">A Gira</a>
     <a href="#poder">O Poder</a>
     <a href="#manifesto">O Manifesto</a>
-  </div>
+  </nav>
 
   <p class="footer-copy">
     © POMBAGIRAS.COM — In Nominae Antiquarum Reginarum · Todos os direitos reservados
@@ -1257,26 +1298,33 @@
     });
   });
 
-  // Fade in on scroll
-  const observer = new IntersectionObserver((entries) => {
+  // Fade in on scroll (Otimizado)
+  const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+        obs.unobserve(entry.target); // Para a observação após animar (Performance)
       }
     });
   }, { threshold: 0.1 });
 
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-  // Subtle parallax on hero
+  // Subtle parallax on hero (Otimizado com RequestAnimationFrame para 60fps)
+  let ticking = false;
   window.addEventListener('scroll', () => {
-    const hero = document.getElementById('hero');
-    const scroll = window.scrollY;
-    if (hero && scroll < window.innerHeight) {
-      hero.style.transform = `translateY(${scroll * 0.3}px)`;
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const hero = document.getElementById('hero');
+        const scroll = window.scrollY;
+        if (hero && scroll < window.innerHeight) {
+          hero.style.transform = `translateY(${scroll * 0.3}px)`;
+        }
+        ticking = false;
+      });
+      ticking = true;
     }
-  });
+  }, { passive: true });
 </script>
 </body>
 </html>
