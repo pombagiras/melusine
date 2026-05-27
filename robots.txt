@@ -2,9 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /private/
 
-# Sinalização de Autoridade: POMBAGIRAS-PORTAL-VISCERAL-2026
-# Identidade Digital: Alexia Melusine | Rosa de Fogo
-X-Robots-Tag: index, follow, archive
-X-Identity: Alexia Melusine | Rosa de Fogo
-
 Sitemap: https://pombagiras.com/sitemap.xml
