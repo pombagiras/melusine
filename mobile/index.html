@@ -276,9 +276,9 @@
         }
 
         .hero h1 {
-            font-size: clamp(2.8rem, 10vw, 4.5rem);
+            font-size: clamp(1.6rem, 6vw, 2.6rem);
             font-weight: 700;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             background: linear-gradient(to bottom, #fff 40%, #ff4d6d 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -286,10 +286,10 @@
         }
 
         .hero p.subtitle { 
-            font-size: 0.95rem; 
+            font-size: 0.75rem; 
             font-weight: 300; 
-            line-height: 1.5;
-            margin-bottom: 28px; 
+            line-height: 1.4;
+            margin-bottom: 18px; 
             color: rgba(245, 240, 255, 0.9);
         }
 
@@ -297,23 +297,23 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            padding: 0 20px;
-            gap: 12px;
+            padding: 0 30px;
+            gap: 8px;
         }
 
         .btn {
-            padding: 14px 28px;
+            padding: 10px 20px;
             border-radius: 16px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: var(--transition);
             border: 1px solid rgba(255,255,255,0.15);
             display: block;
             text-align: center;
-            min-height: 48px; /* Tap target */
+            min-height: 44px; /* Tap target */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1751,7 +1751,7 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
         const pombagirasData = {
             "Cigana": { nome: "Pombagira Cigana", oferenda: "Moedas, vinho tinto, rosas amarelas", dia: "Sexta-feira", cores: "Vermelho, dourado e roxo", lua: "Lua Crescente", horario: "18h" },
@@ -1959,26 +1959,38 @@
 
      // Supabase Stats Integration (Otimizado para Performance Mobile)
         window.addEventListener('load', () => {
-            if ('requestIdleCallback' in window) {
-                requestIdleCallback(initSupabaseStats);
-            } else {
-                setTimeout(initSupabaseStats, 1);
-            }
+            waitForSupabaseAndInit();
         });
 
+        function waitForSupabaseAndInit(retries) {
+            retries = retries || 0;
+            if (typeof supabase !== 'undefined' && typeof supabase.createClient === 'function') {
+                if ('requestIdleCallback' in window) {
+                    requestIdleCallback(initSupabaseStats);
+                } else {
+                    setTimeout(initSupabaseStats, 1);
+                }
+            } else if (retries < 20) {
+                setTimeout(function() { waitForSupabaseAndInit(retries + 1); }, 250);
+            } else {
+                var el = document.getElementById('visitorCount');
+                if (el) el.innerText = "2.800+";
+            }
+        }
+
         async function initSupabaseStats() {
-            if (typeof supabase === 'undefined') return;
             const _URL = 'https://rbygxkbewzknvjjhxdvw.supabase.co';
             const _KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJieWd4a2Jld3prbnZqamh4ZHZ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjYwMDcxNjQsImV4cCI6MjA4MTU4MzE2NH0.YrHF9HEGo6yv9MyNsPzFgBhaAB1DRh2SLU8f7L6s1nY';
-            const _supabase = supabase.createClient(_URL, _KEY);
-
             try {
+                const _supabase = supabase.createClient(_URL, _KEY);
                 await _supabase.rpc('increment_visceral_view', { target_page: 'pombagiras.com' });
-                const { data } = await _supabase.from('access_stats').select('view_count').eq('page_name', 'pombagiras.com').single();
+                const { data, error } = await _supabase.from('access_stats').select('view_count').eq('page_name', 'pombagiras.com').single();
                 
                 const visitorElement = document.getElementById('visitorCount');
-                if (data && visitorElement) {
-                    visitorElement.innerText = data.view_count.toLocaleString();
+                if (data && !error && visitorElement) {
+                    visitorElement.innerText = data.view_count.toLocaleString('pt-BR');
+                } else if (visitorElement) {
+                    visitorElement.innerText = "2.800+";
                 }
             } catch (e) {
                 const visitorElement = document.getElementById('visitorCount');
@@ -2013,7 +2025,8 @@
             });
             
             if (eduSection && scrollPos >= (eduSection.offsetTop - 250)) {
-                const activeTab = document.querySelector('.nav-tab.active').dataset.target;
+                const activeTabEl = document.querySelector('.nav-tab.active');
+                const activeTab = activeTabEl ? activeTabEl.dataset.target : '';
                 let activeNavItem;
                 if (activeTab === 'faq') {
                     activeNavItem = document.querySelector('.mobile-nav-item[data-nav="faq"]');
@@ -2022,12 +2035,16 @@
                 } else {
                     activeNavItem = document.querySelector('.mobile-nav-item[data-nav="portal"]');
                 }
-                activeNavItem.classList.add('active');
-                activeNavItem.setAttribute('aria-current', 'page');
+                if (activeNavItem) {
+                    activeNavItem.classList.add('active');
+                    activeNavItem.setAttribute('aria-current', 'page');
+                }
             } else {
                 const homeNavItem = document.querySelector('.mobile-nav-item[data-nav="home"]');
-                homeNavItem.classList.add('active');
-                homeNavItem.setAttribute('aria-current', 'page');
+                if (homeNavItem) {
+                    homeNavItem.classList.add('active');
+                    homeNavItem.setAttribute('aria-current', 'page');
+                }
             }
         }, { passive: true });
     </script>
