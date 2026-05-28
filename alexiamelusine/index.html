@@ -279,6 +279,23 @@
             text-shadow: 0 0 5px var(--accent-color);
         }
 
+        /* Keyframes para about-image */
+        @keyframes aboutIdleFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); box-shadow: 0 20px 40px rgba(0,0,0,0.85), 0 0 0px rgba(139,0,0,0); }
+            33% { transform: translateY(-6px) rotate(0.3deg); box-shadow: 0 28px 50px rgba(0,0,0,0.9), 0 0 20px rgba(139,0,0,0.15); }
+            66% { transform: translateY(-3px) rotate(-0.2deg); box-shadow: 0 24px 45px rgba(0,0,0,0.87), 0 0 12px rgba(139,0,0,0.1); }
+        }
+
+        @keyframes aboutHoverGlow {
+            0%, 100% { box-shadow: 0 0 0 3px #8b0000, 0 0 35px rgba(139,0,0,0.65), 0 30px 60px rgba(139,0,0,0.4); }
+            50% { box-shadow: 0 0 0 4px #cc0000, 0 0 60px rgba(200,0,0,0.85), 0 40px 80px rgba(139,0,0,0.55); }
+        }
+
+        @keyframes aboutImgFloat {
+            0%, 100% { background-size: 105% auto; background-position: center; }
+            50% { background-size: 110% auto; background-position: center 48%; }
+        }
+
         .about-image {
             flex: 1;
             min-width: 300px;
@@ -288,9 +305,31 @@
             background-position: center;
             border-radius: 4px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.85);
-            border: 1px solid rgba(139, 0, 0, 0.15);
+            border: 1px solid rgba(139, 0, 0, 0.2);
             position: relative;
             overflow: hidden;
+            cursor: pointer;
+            animation: aboutIdleFloat 5s ease-in-out infinite;
+            transition: border-color 0.5s ease;
+        }
+
+        .about-image:hover {
+            border-color: #8b0000;
+            animation: aboutHoverGlow 1.5s ease-in-out infinite;
+        }
+
+        .about-image:hover::after {
+            opacity: 1;
+        }
+
+        .about-image::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(139,0,0,0.12) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: 2;
         }
 
         .about-image::before {
@@ -336,39 +375,66 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 25px;
+            overflow: visible;
+            padding: 20px 10px;
+        }
+
+        /* Keyframe: pulso suave no idle */
+        @keyframes photoIdlePulse {
+            0%, 100% { box-shadow: 0 12px 24px rgba(0,0,0,0.8), 0 0 0px rgba(139,0,0,0); }
+            50% { box-shadow: 0 12px 24px rgba(0,0,0,0.8), 0 0 18px rgba(139,0,0,0.18); }
+        }
+
+        /* Keyframe: brilho vermelho pulsante no hover */
+        @keyframes photoHoverGlow {
+            0%, 100% { box-shadow: 0 0 0 2px #8b0000, 0 0 25px rgba(139,0,0,0.6), 0 25px 50px rgba(139,0,0,0.35); }
+            50% { box-shadow: 0 0 0 3px #cc0000, 0 0 45px rgba(200,0,0,0.8), 0 30px 60px rgba(139,0,0,0.5); }
+        }
+
+        /* Keyframe: imagem flutuando no hover */
+        @keyframes imgFloat {
+            0%, 100% { transform: scale(1.08) translateY(0px); }
+            50% { transform: scale(1.1) translateY(-4px); }
         }
 
         .photo-item {
             position: relative;
             height: 380px;
             border-radius: 4px;
-            overflow: hidden;
+            overflow: visible;
             cursor: pointer;
             background-color: #050508;
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+            border: 1px solid rgba(139, 0, 0, 0.15);
+            transition: transform 0.55s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.4s ease;
+            animation: photoIdlePulse 3.5s ease-in-out infinite;
+        }
+
+        /* clip interno para a imagem não vazar enquanto o glow fica fora */
+        .photo-item > * {
+            border-radius: 4px;
+            overflow: hidden;
         }
 
         .photo-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 35px rgba(139, 0, 0, 0.25);
-            border: 1px solid rgba(139, 0, 0, 0.3);
+            transform: translateY(-18px) scale(1.03);
+            border-color: #8b0000;
+            animation: photoHoverGlow 1.4s ease-in-out infinite;
+            z-index: 10;
         }
 
         .photo-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            /* Efeito Inicial: Escuro gótico, alto contraste com névoa mística */
-            filter: grayscale(100%) contrast(140%) brightness(75%);
-            transition: filter 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+            border-radius: 4px;
+            filter: grayscale(100%) contrast(140%) brightness(70%);
+            transition: filter 0.55s cubic-bezier(0.25, 1, 0.5, 1), transform 0.55s cubic-bezier(0.25, 1, 0.5, 1);
         }
 
-        /* ESSA REGRA TRATA O HOVER DO COLOR REVEAL MÁXIMO SOLICITADO */
         .photo-item:hover .photo-img {
-            filter: grayscale(0%) contrast(120%) brightness(100%);
-            transform: scale(1.05);
+            filter: grayscale(0%) contrast(115%) brightness(105%) saturate(1.2);
+            animation: imgFloat 2.2s ease-in-out infinite;
         }
 
         .photo-overlay {
@@ -376,15 +442,45 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0,0,0,0.4) 70%, transparent 100%);
+            background: linear-gradient(to top, rgba(139, 0, 0, 0.75) 0%, rgba(0,0,0,0.5) 60%, transparent 100%);
             padding: 25px 20px;
             transform: translateY(100%);
             transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             z-index: 2;
+            border-radius: 0 0 4px 4px;
         }
 
         .photo-item:hover .photo-overlay {
             transform: translateY(0);
+        }
+
+        /* Corner accent lines aparecem no hover */
+        .photo-item::before,
+        .photo-item::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            opacity: 0;
+            transition: opacity 0.4s ease, width 0.4s ease, height 0.4s ease;
+            z-index: 5;
+            pointer-events: none;
+        }
+        .photo-item::before {
+            top: -1px; left: -1px;
+            border-top: 2px solid #cc0000;
+            border-left: 2px solid #cc0000;
+        }
+        .photo-item::after {
+            bottom: -1px; right: -1px;
+            border-bottom: 2px solid #cc0000;
+            border-right: 2px solid #cc0000;
+        }
+        .photo-item:hover::before,
+        .photo-item:hover::after {
+            opacity: 1;
+            width: 40px;
+            height: 40px;
         }
 
         .photo-overlay p {
