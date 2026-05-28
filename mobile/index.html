@@ -2,93 +2,155 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    
+
+    <!-- VIEWPORT MOBILE-FIRST -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" as="style">
+
+    <!-- PRECONNECT: deve vir antes dos preloads para garantir DNS+TLS antecipados -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://rbygxkbewzknvjjhxdvw.supabase.co">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://rbygxkbewzknvjjhxdvw.supabase.co" crossorigin>
 
-    <title>Pombagiras.com | Maior Portal de Conhecimento sobre Pombagiras, Exus e Umbanda</title>
-    <meta name="description" content="Enciclopédia completa sobre Pombagiras, Exus, Umbanda, Quimbanda e Candomblé. +200 artigos, 26 entidades, 28 FAQ, glossário com 34 termos. Conteúdo sagrado com tecnologia e respeito.">
-    <meta name="keywords" content="Pombagira, Exu, Umbanda, Quimbanda, Candomblé, Maria Padilha, Rosa Caveira, Maria Mulambo, Encruzilhada, Calunga, Orixás, Kimbanda, Afro-Brasileira, Desmistificação, Alexia Melusine">
+    <!-- TITLE + META SEO (BLINDAGEM CONFORME BRIEF) -->
+    <title>POMBAGIRAS.COM | Cultura, Arquétipos &amp; Conhecimento</title>
+    <meta name="description" content="A maior plataforma de desmistificação das Pombagiras. Um mergulho profundo no conhecimento sagrado, história e arte, desconstruindo preconceitos com clareza e tecnologia por Alexia Melusine.">
+    <meta name="keywords" content="Pombagira, Exu, Umbanda, Quimbanda, Candomblé, Maria Padilha, Rosa Caveira, Maria Mulambo, Encruzilhada, Calunga, Orixás, Kimbanda, Arquétipos Femininos, Cultura Brasileira, Arte Visceral, Desmistificação, Alexia Melusine, História das Guardiãs, Espiritualidade Consciente, Filosofia Ancestral">
     <meta name="author" content="Alexia Melusine">
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    
+    <!-- robots: noodp/noydir bloqueiam descrições de diretórios legados; max-snippet e notranslate protegem conteúdo -->
+    <meta name="robots" content="index, follow, noodp, noydir, max-snippet:-1, max-image-preview:large, max-video-preview:-1, notranslate">
+    <meta name="theme-color" content="#8b1e5c">
+
+    <!-- CANONICAL + SITEMAP -->
     <link rel="canonical" href="https://pombagiras.com/">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="https://pombagiras.com/sitemap.xml">
+
+    <!-- FAVICON -->
     <link rel="icon" type="image/png" href="https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Favicon%20%20Miniatura%20do%20Google.png">
     <link rel="apple-touch-icon" href="https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Favicon%20%20Miniatura%20do%20Google.png">
-    <meta name="theme-color" content="#8b1e5c">
-    
+
+    <!-- HREFLANG: apenas URLs que existem (pt-BR e x-default). Remover /en/ /pt/ /es/ evita 404 que penalizam crawl budget -->
     <link rel="alternate" href="https://pombagiras.com/" hreflang="pt-BR">
-    <link rel="alternate" href="https://pombagiras.com/en/" hreflang="en">
-    <link rel="alternate" href="https://pombagiras.com/pt/" hreflang="pt">
-    <link rel="alternate" href="https://pombagiras.com/es/" hreflang="es">
     <link rel="alternate" href="https://pombagiras.com/" hreflang="x-default">
 
+    <!-- OPEN GRAPH (completo, com dimensões obrigatórias para preview correto) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pombagiras.com/">
-    <meta property="og:site_name" content="Pombagiras.com">
+    <meta property="og:site_name" content="ALEXIA MELUSINE">
     <meta property="og:locale" content="pt_BR">
-    <meta property="og:title" content="Pombagiras.com | Conhecimento Ancestral, Tecnologia e Respeito">
-    <meta property="og:description" content="A maior enciclopédia online sobre Pombagiras, Exus e tradições afro-brasileiras. +200 páginas de conteúdo sagrado.">
+    <meta property="og:title" content="POMBAGIRAS.COM | Conhecimento Sagrado e Verdade">
+    <meta property="og:description" content="Explore a clareza sobre o papel das guardiãs de caminho. Desmistificando o feminino e a ancestralidade através da arte e do conhecimento consciente.">
     <meta property="og:image" content="https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Ogimage%20e%20Twitter%20Card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Pombagiras.com — Cultura, Arquétipos e Conhecimento Sagrado">
 
+    <!-- TWITTER CARD -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:domain" content="pombagiras.com">
-    <meta name="twitter:title" content="Pombagiras.com | Maior Portal Afro-Brasileiro">
-    <meta name="twitter:description" content="Desmistificação, história e fundamentos das Pombagiras, Exus, Umbanda e Quimbanda.">
+    <meta name="twitter:title" content="POMBAGIRAS.COM | Arquétipos e Arte Visceral">
+    <meta name="twitter:description" content="Desmistificando o feminino sagrado com tecnologia e ancestralidade. Conhecimento guiado por Alexia Melusine.">
     <meta name="twitter:image" content="https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Ogimage%20e%20Twitter%20Card.png">
     <meta name="twitter:creator" content="@AlexiaMelusine">
 
+    <!-- SCHEMA.ORG — @graph unificado: Person + WebSite + WebPage + BreadcrumbList + FAQPage -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pombagiras.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Glossário", "item": "https://pombagiras.com/#glossario" },
-        { "@type": "ListItem", "position": 3, "name": "Pombagiras", "item": "https://pombagiras.com/#pombagiras" },
-        { "@type": "ListItem", "position": 4, "name": "Curiosidades", "item": "https://pombagiras.com/#curiosidades" },
-        { "@type": "ListItem", "position": 5, "name": "Cosmovisões", "item": "https://pombagiras.com/#cosmovisoes" }
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://pombagiras.com/#author",
+          "name": "Alexia Melusine",
+          "alternateName": ["Alexia Rosa de Fogo", "Alexia Luz de Ferro"],
+          "jobTitle": ["Desenvolvedora Web", "Diretora de Vídeo IA", "Engenheira de Prompt", "Criadora de Conteúdo Digital"],
+          "url": "https://pombagiras.com/",
+          "sameAs": [
+            "https://alexialuzdeferro.github.io/",
+            "https://github.com/alexialuzdeferro",
+            "https://alexiamelusine.substack.com/",
+            "https://www.instagram.com/almasdepombagira/",
+            "https://www.youtube.com/@almasdepombagira",
+            "https://www.tiktok.com/@almasdepombagira"
+          ],
+          "knowsAbout": ["Arquétipos Femininos", "Cultura Brasileira", "Arte Visceral", "Inteligência Artificial", "Desenvolvimento Front-End", "Umbanda", "Quimbanda", "Candomblé"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pombagiras.com/#website",
+          "url": "https://pombagiras.com/",
+          "name": "POMBAGIRAS.COM",
+          "alternateName": "Cultura, Arquétipos &amp; Conhecimento",
+          "description": "A maior plataforma de desmistificação das Pombagiras. Um mergulho profundo no conhecimento sagrado, história e arte, desconstruindo preconceitos com clareza e tecnologia.",
+          "publisher": { "@id": "https://pombagiras.com/#author" },
+          "inLanguage": "pt-BR",
+          "sameAs": [
+            "https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G",
+            "https://t.me/pomba_giras",
+            "https://discord.gg/gWZP8R7Dqu",
+            "https://open.spotify.com/show/0oeCL1QScD3v7dHeUvJjgJ",
+            "https://www.youtube.com/@almasdepombagira",
+            "https://www.instagram.com/almasdepombagira/",
+            "https://www.tiktok.com/@almasdepombagira",
+            "https://alexiamelusine.substack.com/"
+          ],
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": { "@type": "EntryPoint", "urlTemplate": "https://pombagiras.com/?s={search_term_string}" },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://pombagiras.com/#webpage",
+          "url": "https://pombagiras.com/",
+          "name": "POMBAGIRAS.COM | Cultura, Arquétipos &amp; Conhecimento",
+          "isPartOf": { "@id": "https://pombagiras.com/#website" },
+          "about": { "@id": "https://pombagiras.com/#website" },
+          "author": { "@id": "https://pombagiras.com/#author" },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "@id": "https://pombagiras.com/#primaryimage",
+            "url": "https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Ogimage%20e%20Twitter%20Card.png",
+            "width": 1200,
+            "height": 630
+          },
+          "inLanguage": "pt-BR"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://pombagiras.com/#breadcrumb",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Portal Visceral", "item": "https://pombagiras.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Glossário", "item": "https://pombagiras.com/#glossario" },
+            { "@type": "ListItem", "position": 3, "name": "Guardiãs", "item": "https://pombagiras.com/#pombagiras" },
+            { "@type": "ListItem", "position": 4, "name": "Curiosidades", "item": "https://pombagiras.com/#curiosidades" },
+            { "@type": "ListItem", "position": 5, "name": "Cosmovisões", "item": "https://pombagiras.com/#cosmovisoes" }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://pombagiras.com/#faqpage",
+          "isPartOf": { "@id": "https://pombagiras.com/#webpage" },
+          "mainEntity": [
+            { "@type": "Question", "name": "Pomba-gira é um demônio ou entidade maligna?", "acceptedAnswer": { "@type": "Answer", "text": "Não, absolutamente não. É uma entidade espiritual evoluída que trabalha exclusivamente para o bem, atuando em questões como justiça, amor e fortalecimento pessoal." } },
+            { "@type": "Question", "name": "Qual a diferença entre Umbanda e Quimbanda?", "acceptedAnswer": { "@type": "Answer", "text": "Na Umbanda, a atuação é mais suave e ritualizada com foco em caridade e cura. Na Quimbanda, a atuação tende a ser mais direta, energética e pragmática com culto exclusivo a Exus e Pombagiras." } },
+            { "@type": "Question", "name": "Quais são as Pombagiras mais famosas?", "acceptedAnswer": { "@type": "Answer", "text": "As mais conhecidas são: Maria Padilha, Maria Mulambo, Pombagira das Almas, Pombagira Rainha, Sete Saias, Dama da Noite e Rosa Caveira." } },
+            { "@type": "Question", "name": "Como saber qual Pombagira é a minha guia?", "acceptedAnswer": { "@type": "Answer", "text": "Isso normalmente é descoberto em um terreiro sério, através do jogo de búzios ou na hora da incorporação. Procure um pai ou mãe de santo de confiança." } },
+            { "@type": "Question", "name": "Homem pode cultuar e incorporar Pombagira?", "acceptedAnswer": { "@type": "Answer", "text": "Pode e muitos cultuam. Na Quimbanda e em alguns terreiros de Umbanda, homens incorporam Pombagiras com muita força, independentemente do gênero do médium." } }
+          ]
+        }
       ]
     }
     </script>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Pombagiras.com",
-      "url": "https://pombagiras.com/",
-      "sameAs": [
-        "https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G",
-        "https://t.me/pomba_giras",
-        "https://discord.gg/gWZP8R7Dqu",
-        "https://open.spotify.com/show/0oeCL1QScD3v7dHeUvJjgJ",
-        "https://www.youtube.com/@almasdepombagira",
-        "https://www.instagram.com/almasdepombagira/",
-        "https://www.tiktok.com/@almasdepombagira",
-        "https://alexiamelusine.substack.com/"
-      ],
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://pombagiras.com/?s={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
+    <!-- FONTES: defer via media=print trick (carregamento não-bloqueante, mantendo fallback noscript) -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" as="style" onload="this.onload=null;this.removeAttribute('as');this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap"></noscript>
 
+    <!-- FONT AWESOME: carregamento não-bloqueante (melhora CLS e FCP mobile) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap">
     
     <style>
         html {
@@ -354,8 +416,9 @@
 
         .grid-cards { display: flex; flex-direction: column; gap: 16px; }
         .card { background: var(--bg-card); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 24px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.06); }
-        .card h4 { color: var(--accent); font-size: 1.35rem; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
-        .card h4 i { color: var(--secondary); font-size: 1.1rem; }
+        /* H3 nos cards: hierarquia semântica correta H1 > H2 (seção) > H3 (card) */
+        .card h3 { color: var(--accent); font-size: 1.35rem; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; font-family: 'Cormorant Garamond', serif; font-weight: 600; }
+        .card h3 i { color: var(--secondary); font-size: 1.1rem; }
         .card p { font-size: 0.9rem; opacity: 0.85; font-weight: 300; line-height: 1.5; margin-bottom: 12px; }
         .card strong { color: var(--secondary); display: block; margin-top: 12px; font-size: 0.75rem; letter-spacing: 0.5px; text-transform: uppercase; }
 
@@ -491,7 +554,7 @@
        <div id="glossario" class="tab-content active" role="tabpanel" tabindex="0">
             <div class="grid-cards">
                 <article class="card">
-                    <h4><i class="fa-solid fa-sun" aria-hidden="true"></i> Axé</h4>
+                    <h3><i class="fa-solid fa-sun" aria-hidden="true"></i> Axé</h3>
                     <p><strong>Força vital, energia sagrada que permeia tudo.</strong> Axé é o poder espiritual que mantém o equilíbrio do universo e dos seres. É a centelha divina presente nas pedras, nas águas, nas folhas, no sangue, no som do atabaque e no silêncio da prece.</p>
                     <p>Nos terreiros, o axé é transmitido através de rituais, cantos, danças, oferendas e toques sagrados. Ele não se explica — <strong>se sente, se incorpora, se vive</strong>. Ter axé significa estar em harmonia com o divino, com a natureza e com o próprio destino. É a diferença entre existir e <strong>florescer</strong>.</p>
                     <p><i class="fa-solid fa-feather" aria-hidden="true"></i> <strong>Curiosidade:</strong> A saudação "Axé!" é usada como cumprimento, bênção e afirmação de presença espiritual. É como dizer: <em>"Que a força vital esteja com você."</em></p>
@@ -499,194 +562,194 @@
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-cloud-sun" aria-hidden="true"></i> Orixá</h4>
+                    <h3><i class="fa-solid fa-cloud-sun" aria-hidden="true"></i> Orixá</h3>
                     <p><strong>Divindades que representam forças da natureza e aspectos humanos.</strong> Cada Orixá rege um elemento e uma gama de características: <strong>Ogum</strong> (guerra, tecnologia, justiça), <strong>Iemanjá</strong> (mares, maternidade, proteção), <strong>Oxalá</strong> (criação, paz, sabedoria), <strong>Xangô</strong> (justiça, raios, fogo), <strong>Oxum</strong> (amor, riqueza, água doce), <strong>Iansã</strong> (ventos, tempestades, transformação).</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Divindades • Natureza • Elementos • Mitologia</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-hand-sparkles" aria-hidden="true"></i> Médium</h4>
+                    <h3><i class="fa-solid fa-hand-sparkles" aria-hidden="true"></i> Médium</h3>
                     <p><strong>Indivíduo que serve de ponte entre o plano físico e espiritual.</strong> O médium é como uma ponte viva — um canal que se abre para que entidades como Pombagiras, Exus, Caboclos, Pretos-Velhos e Crianças possam transitar e atuar em auxílio da humanidade.</p>
                     <p>Além da incorporação, o médium pode desenvolver outras faculdades como <strong>vidência</strong> (ver além da matéria), <strong>psicofonia</strong> (falar com a voz do espírito), <strong>psicografia</strong> (escrever sob comando espiritual) e <strong>cura espiritual</strong> (passes, imposição de mãos, energizações).</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Incorporação • Vidência • Psicofonia • Cura</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-pen-fancy" aria-hidden="true"></i> Ponto Riscado</h4>
+                    <h3><i class="fa-solid fa-pen-fancy" aria-hidden="true"></i> Ponto Riscado</h3>
                     <p><strong>Desenho sagrado feito com pemba (giz de carvão ou calcário) para invocar, identificar ou firmar entidades.</strong> Cada Pombagira, Exu, Caboclo ou Preto-Velho tem seu ponto riscado específico, que funciona como sua "assinatura energética". O conhecimento dos pontos é tradicionalmente passado de geração em geração dentro dos terreiros.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Pemba • Assinatura Sagrada • Invocação • Magia</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-road" aria-hidden="true"></i> Tronqueira</h4>
+                    <h3><i class="fa-solid fa-road" aria-hidden="true"></i> Tronqueira</h3>
                     <p><strong>Local físico ou energético onde Exus e Pombagiras atuam com mais intensidade.</strong> Geralmente representado por encruzilhadas, entradas de cemitérios, portas de terreiros ou locais de grande circulação humana. A tronqueira é o "escritório espiritual" onde essas entidades recebem demandas, firmam trabalhos e realizam justiça.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Encruzilhada • Poder • Local de Força</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-drum" aria-hidden="true"></i> Atabaque</h4>
+                    <h3><i class="fa-solid fa-drum" aria-hidden="true"></i> Atabaque</h3>
                     <p><strong>Tambor principal da curimba, instrumento sagrado que marca o ritmo dos pontos cantados e chama as entidades.</strong> Feito de madeira e couro animal, o atabaque tem seu som considerado uma oferenda sonora que abre os portais espirituais. Cada toque (rum, rumpi, lé) tem uma função específica dentro do ritual.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Curimba • Pontos Cantados • Ritual • Música</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-star-of-david" aria-hidden="true"></i> Aruanda</h4>
+                    <h3><i class="fa-solid fa-star-of-david" aria-hidden="true"></i> Aruanda</h3>
                     <p><strong>Plano espiritual superior de luz e paz, onde residem entidades de alta evolução.</strong> Na Umbanda, Aruanda é a pátria espiritual, o reino de Oxalá. Muitos Guias, Caboclos e Pretos-Velhos vêm de Aruanda para auxiliar na Terra. Não é um lugar físico, mas uma vibração de amor, caridade e sabedoria.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Plano Espiritual • Luz • Paz • Oxalá</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-users" aria-hidden="true"></i> Egrégora</h4>
+                    <h3><i class="fa-solid fa-users" aria-hidden="true"></i> Egrégora</h3>
                     <p><strong>Campo energético coletivo formado por pensamentos e crenças de um grupo, que identifica seus membros.</strong> No terreiro, a egrégora é alimentada pelos rituais, pela fé e pela união da comunidade. Uma egrégora forte protege o ambiente e potencializa os trabalhos espirituais.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Energia Coletiva • Campo Mental • Fé</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-mask" aria-hidden="true"></i> Mandinga</h4>
+                    <h3><i class="fa-solid fa-mask" aria-hidden="true"></i> Mandinga</h3>
                     <p><strong>Conhecimento ancestral e prático de magia e proteção.</strong> No contexto sagrado, trata-se da arte de manusear forças espirituais, ervas, rezas e pontos riscados para defesa, abertura de caminhos e justiça. Não tem conotação negativa: é a sabedoria do quilombo, do terreiro, do povo de rua.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Magia • Proteção • Sabedoria Ancestral</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-champagne-glasses" aria-hidden="true"></i> Gira</h4>
+                    <h3><i class="fa-solid fa-champagne-glasses" aria-hidden="true"></i> Gira</h3>
                     <p><strong>Sessão espiritual realizada em terreiros onde ocorre a incorporação das entidades.</strong> Nas giras, Exus, Pombagiras, Caboclos, Pretos-Velhos e demais Guias descem para atender consulentes, dar passes, aconselhar e realizar trabalhos espirituais. Pode ser classificada em diferentes tipos: gira de esquerda (Exus e Pombagiras), gira de direita (Caboclos e Pretos-Velhos), gira de desenvolvimento (iniciantes) e gira de cura.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Sessão • Incorporação • Terreiro • Trabalho Espiritual</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-feather" aria-hidden="true"></i> Caboclo</h4>
+                    <h3><i class="fa-solid fa-feather" aria-hidden="true"></i> Caboclo</h3>
                     <p><strong>Entidade que representa o espírito de indígenas brasileiros ancestrais.</strong> São guerreiros, curadores e sábios da mata. Trabalham com ervas, fumo, flechas e forças da natureza. Os Caboclos são considerados a linha de "direita" na Umbanda, atuando na cura, no desmanche de demandas e na conexão com a energia da terra.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Indígena • Mata • Cura • Ervas</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-cane" aria-hidden="true"></i> Preto-Velho</h4>
+                    <h3><i class="fa-solid fa-cane" aria-hidden="true"></i> Preto-Velho</h3>
                     <p><strong>Entidade que representa os espíritos de antigos escravizados africanos no Brasil.</strong> São figuras de profunda sabedoria, humildade e paciência. Trabalham com rezas, café, cachimbo e bengalas. Os Pretos-Velhos atuam na linha da caridade, do aconselhamento fraterno e da cura de feridas emocionais profundas.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Ancestralidade • Sabedoria • Cachimbo • Cura</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-child" aria-hidden="true"></i> Criança (Erê)</h4>
+                    <h3><i class="fa-solid fa-child" aria-hidden="true"></i> Criança (Erê)</h3>
                     <p><strong>Entidade que representa a energia lúdica, alegre e descompromissada da infância.</strong> São espíritos de crianças desencarnadas ou a própria energia de pureza e renovação. Trabalham com brinquedos, doces, balões e cores vibrantes. Os Erês trazem leveza, quebram demandas pesadas e ensinam o valor da simplicidade e da alegria.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Alegria • Pureza • Leveza • Renovação</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-baby-carriage" aria-hidden="true"></i> Cigano</h4>
+                    <h3><i class="fa-solid fa-baby-carriage" aria-hidden="true"></i> Cigano</h3>
                     <p><strong>Entidade que trabalha com a energia da liberdade, prosperidade e magia cigana.</strong> Podem ser homens ou mulheres (ciganos e ciganas). Utilizam baralhos, lenços, moedas, vinho tinto e rosas. Regem sorte, viagens, negócios, relacionamentos e a arte de "ler o destino" por meio da vidência.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Liberdade • Prosperidade • Baralho • Magia</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-cauldron" aria-hidden="true"></i> Curimba</h4>
+                    <h3><i class="fa-solid fa-cauldron" aria-hidden="true"></i> Curimba</h3>
                     <p><strong>Conjunto de músicos e cantadores que tocam os atabaques e entoam os pontos durante as giras.</strong> A curimba é responsável por manter a energia do terreiro, chamar as entidades e sustentar a vibração do trabalho espiritual. Os pontos cantados são verdadeiros mantras que abrem portais e facilitam a incorporação.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Música • Pontos Cantados • Atabaque • Ritual</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-fire" aria-hidden="true"></i> Pemba</h4>
+                    <h3><i class="fa-solid fa-fire" aria-hidden="true"></i> Pemba</h3>
                     <p><strong>Giz ou carvão sagrado utilizado para riscar pontos no chão, em lajotas ou em objetos de rituais.</strong> A pemba pode ser de calcário (branca) para trabalhos de luz, ou de carvão (preta) para demandas mais pesadas ou para riscar pontos de Exu e Pombagira. É consagrada com rezas, defumações antes do uso.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Giz Sagrado • Pontos Riscados • Consagração</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-hand-fist" aria-hidden="true"></i> Despacho</h4>
+                    <h3><i class="fa-solid fa-hand-fist" aria-hidden="true"></i> Despacho</h3>
                     <p><strong>Oferenda ou trabalho espiritual deixada em local de força (encruzilhada, mata, cachoeira, cemitério).</strong> O despacho pode ser uma simples oferenda de gratidão ou um trabalho complexo com diversos elementos. Deve ser feito com conhecimento e respeito, sob orientação de um pai ou mãe de santo. Jamais se deve mexer em despachos alheios.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Oferenda • Trabalho Espiritual • Local de Força</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-hand-sparkles" aria-hidden="true"></i> Amaci</h4>
+                    <h3><i class="fa-solid fa-hand-sparkles" aria-hidden="true"></i> Amaci</h3>
                     <p><strong>Banho de ervas sagradas utilizado para limpeza espiritual, fortalecimento e iniciação de novos médiuns.</strong> Cada amaci é preparado com ervas específicas conforme o Orixá, a entidade ou a finalidade (abertura de caminhos, proteção, cura). É um ritual de "nascimento" espiritual no candomblé e na umbanda.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Banho • Ervas • Limpeza • Iniciação</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-skull" aria-hidden="true"></i> Calunga</h4>
+                    <h3><i class="fa-solid fa-skull" aria-hidden="true"></i> Calunga</h3>
                     <p><strong>Termo de origem bantu que designa o cemitério, o oceano (calunga grande) ou o próprio espírito que trabalha nesses locais.</strong> Na Quimbanda, a calunga é o campo de força da morte simbólica, da transmutação, da justiça espiritual e do resgate de almas. Pombagiras como Rosa Caveira e Exus Caveira são especialistas em trabalhos na calunga.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Cemitério • Transmutação • Justiça • Morte</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-book" aria-hidden="true"></i> Cambono</h4>
+                    <h3><i class="fa-solid fa-book" aria-hidden="true"></i> Cambono</h3>
                     <p><strong>Assistente ou auxiliar de médium dentro do terreiro, que dá suporte durante as giras e incorporações.</strong> O cambono ajuda o médium incorporado a receber consulentes, anota os recados das entidades, cuida da parte prática (acender velas, entregar oferendas) e protege o médium de ataques espirituais.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Assistente • Auxiliar • Terreiro • Proteção</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-dice-d6" aria-hidden="true"></i> Búzios (Jogo de)</h4>
+                    <h3><i class="fa-solid fa-dice-d6" aria-hidden="true"></i> Búzios (Jogo de)</h3>
                     <p><strong>Oráculo africano utilizado no Candomblé e, em algumas casas de Umbanda, para consultar os Orixás.</strong> O jogo de búzios (Ifá ou Dilogum) é feito por um Babalaô ou Ialorixá, que interpreta os padrões formados pelos búzios lançados. Revela o Orixá regente da pessoa, problemas espirituais, orientações de caminho e possíveis demandas.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Oráculo • Consulta • Orixás • Destino</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-leaf" aria-hidden="true"></i> Folhas Sagradas (Ervas)</h4>
+                    <h3><i class="fa-solid fa-leaf" aria-hidden="true"></i> Folhas Sagradas (Ervas)</h3>
                     <p><strong>Elemento fundamental nos rituais de Umbanda, Quimbanda e Candomblé.</strong> Cada erva tem sua função e energia: arruda (proteção), guiné (abre caminhos), alecrim (limpeza), manjericão (amor), eucalipto (cura), espada de São Jorge (corte de demandas), entre muitas outras. As folhas são colhidas com rezas e licença espiritual.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Ervas • Proteção • Cura • Limpeza</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i> Agô</h4>
+                    <h3><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i> Agô</h3>
                     <p><strong>Saudação e pedido de licença em iorubá.</strong> Pronunciada como "Agoô" ou "Agô", é utilizada ao entrar no terreiro, antes de falar com uma entidade ou realizar qualquer ritual. Significa reconhecimento da hierarquia espiritual e respeito aos mais velhos e às forças sagradas. "Agô, meu pai!", "Agô, minha mãe!"</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Saudação • Respeito • Licença • Hierarquia</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i> Padê</h4>
+                    <h3><i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i> Padê</h3>
                     <p><strong>Oferenda ritualística oferecida a Exu e Pombagira antes de grandes trabalhos ou festas.</strong> Composta geralmente por farofa de azeite de dendê, camarão seco, cebola, ovos e outros alimentos. É depositada na encruzilhada ou na tronqueira do terreiro. O padê "abre os caminhos", pacifica a energia do local e pede proteção para o evento.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Oferenda • Exu • Pombagira • Abertura</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-church" aria-hidden="true"></i> Terreiro</h4>
+                    <h3><i class="fa-solid fa-church" aria-hidden="true"></i> Terreiro</h3>
                     <p><strong>Casa ou espaço físico onde são realizados os rituais de Umbanda, Quimbanda e Candomblé.</strong> Também chamado de "ilê" ou "roça". O terreiro é um local sagrado, onde estão assentadas as forças dos Orixás, Exus e Guias. Cada terreiro tem sua hierarquia, tradição e fundamentos específicos, transmitidos pelo pai ou mãe de santo.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Casa • Templo • Comunidade • Hierarquia</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-crown" aria-hidden="true"></i> Babalorixá</h4>
+                    <h3><i class="fa-solid fa-crown" aria-hidden="true"></i> Babalorixá</h3>
                     <p><strong>Sacerdote responsável por um terreiro de Candomblé de nação iorubá.</strong> Também chamado de "Pai de Santo". O termo significa "Pai do Orixá". O Babalorixá comanda os rituais, inicia novos filhos de santo, interpreta o jogo de búzios e zela pela tradição e fundamentos da casa. Sua contraparte feminina é a Ialorixá.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Pai de Santo • Sacerdote • Candomblé • Comando</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-crown" aria-hidden="true"></i> Ialorixá</h4>
+                    <h3><i class="fa-solid fa-crown" aria-hidden="true"></i> Ialorixá</h3>
                     <p><strong>Sacerdotisa responsável por um terreiro de Candomblé de nação iorubá.</strong> Também chamada de "Mãe de Santo". A Ialorixá é a autoridade máxima em sua casa, responsável pelos rituais, iniciações, assentamentos e pela formação espiritual de seus filhos de santo. É figura de profundo respeito e sabedoria.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Mãe de Santo • Sacerdotisa • Candomblé • Comando</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-user-friends" aria-hidden="true"></i> Tata</h4>
+                    <h3><i class="fa-solid fa-user-friends" aria-hidden="true"></i> Tata</h3>
                     <p><strong>Sacerdote de Quimbanda (nação bantu).</strong> O termo tem origem no kimbundo (língua bantu) e significa "pai" ou "chefe". O Tata de Quimbanda é especialista no culto a Exus e Pombagiras, lidando com magia prática, encruzilhadas, cemitérios e demandas de justiça espiritual. Sua contraparte feminina é a Yá Quimbanda.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Quimbanda • Exu • Pombagira • Magia Prática</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-meteor" aria-hidden="true"></i> Bambador</h4>
+                    <h3><i class="fa-solid fa-meteor" aria-hidden="true"></i> Bambador</h3>
                     <p><strong>Médium ou pessoa que incorpora Exu ou Pombagira.</strong> O termo vem do kimbundo "mbamba" (força, magia). O bambador desenvolve sua mediunidade especificamente na linha da esquerda, trabalhando com demandas, magia e justiça espiritual sob a orientação de um Tata ou de uma Mãe de Quimbanda.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Incorporação • Esquerda • Exu • Pombagira</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-water" aria-hidden="true"></i> Ebó</h4>
+                    <h3><i class="fa-solid fa-water" aria-hidden="true"></i> Ebó</h3>
                     <p><strong>Sacrifício ou oferenda realizada no Candomblé para restabelecer o equilíbrio do consulente com seu Orixá.</strong> O ebó pode ser de alimentos, ou objetos, conforme orientação do jogo de búzios. Destina-se a "descarregar" energias negativas, abrir caminhos e fortalecer o axé da pessoa. Não tem conotação de "maldição" como no imaginário popular.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Sacrifício • Oferenda • Candomblé • Equilíbrio</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-quote-right" aria-hidden="true"></i> Ponto Cantado</h4>
+                    <h3><i class="fa-solid fa-quote-right" aria-hidden="true"></i> Ponto Cantado</h3>
                     <p><strong>Música ritualística entoada durante as giras para chamar as entidades.</strong> Os pontos podem ser curtos ou longos, em português ou em idiomas africanos. Contam histórias, exaltam virtudes ou descrevem as funções das entidades. Cada Pombagira, Exu, Caboclo ou Preto-Velho tem seus pontos específicos, que atuam como chaves vibratórias de conexão.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Música • Invocação • Vibração • Ponto</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-coins" aria-hidden="true"></i> Oferenda</h4>
+                    <h3><i class="fa-solid fa-coins" aria-hidden="true"></i> Oferenda</h3>
                     <p><strong>Elemento material oferecido às entidades como forma de agradecimento, pedido ou fortalecimento espiritual.</strong> Pode ser comida, bebida, flores, velas, objetos (pentes, espelhos, perfumes). A oferenda nunca é uma "troca", mas uma demonstração de fé e respeito. Deve ser depositada em local de força (encruzilhada, mata, cachoeira, cemitério) ou no assentamento da entidade.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Fé • Respeito • Agradecimento • Pedido</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-eye" aria-hidden="true"></i> Olho de Exu</h4>
+                    <h3><i class="fa-solid fa-eye" aria-hidden="true"></i> Olho de Exu</h3>
                     <p><strong>Símbolo gráfico que representa a vigilância, a justiça e o poder de Exu.</strong> É utilizado em pontos riscados, assentamentos e objetos de proteção. O "olho" representa a capacidade de Exu de ver tudo, de estar atento a todos os movimentos, tanto no plano físico quanto no espiritual. É um símbolo de proteção contra mau-olhado e demandas negativas.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Símbolo • Vigilância • Justiça • Proteção</strong>
                 </article>
@@ -697,109 +760,109 @@
         <div id="curiosidades" class="tab-content" role="tabpanel" tabindex="0">
             <div class="grid-cards">
                 <article class="card">
-                    <h4><i class="fa-solid fa-language" aria-hidden="true"></i> Origem do Nome</h4>
+                    <h3><i class="fa-solid fa-language" aria-hidden="true"></i> Origem do Nome</h3>
                     <p><strong>"Pombagira"</strong> vem da junção de "pomba" (feminino/espiritual) e "gira" (movimento). Também se relaciona ao termo cigano "pomba-gira", que significa <strong>"mulher que gira"</strong> ou "aquela que dança". Nas tradições africanas, a palavra remete à pomba como símbolo de mensageira espiritual.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Etimologia • Movimento • Feminino Sagrado</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-church" aria-hidden="true"></i> Sincretismo Religioso</h4>
+                    <h3><i class="fa-solid fa-church" aria-hidden="true"></i> Sincretismo Religioso</h3>
                     <p><strong>Estratégia de sobrevivência durante a perseguição colonial.</strong> As Pombagiras foram sincretizadas com santas católicas: Maria Padilha com <strong>Santa Marta</strong> (a domadora de dragões), a Cigana com <strong>Santa Sara Kali</strong>, as Almas com <strong>Nossa Senhora da Guia</strong>. Essa foi uma forma dos escravizados e seus descendentes manterem vivas suas tradições sob o disfarce do culto católico.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Resistência • Sincretismo • Santa Marta • Sara Kali</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-star-of-life" aria-hidden="true"></i> As 7 Linhas das Pombagiras</h4>
+                    <h3><i class="fa-solid fa-star-of-life" aria-hidden="true"></i> As 7 Linhas das Pombagiras</h3>
                     <p>As falanges clássicas se dividem em <strong>7 grandes linhas</strong>, cada uma regendo uma área de atuação: <strong>1. Amor</strong> (Maria Padilha), <strong>2. Justiça</strong> (Rosa Caveira), <strong>3. Prosperidade</strong> (Cigana), <strong>4. Cura</strong> (Maria Mulambo), <strong>5. Conhecimento</strong> (Dama da Noite), <strong>6. Proteção</strong> (Maria Navalha), <strong>7. Transformação</strong> (Sete Saias).</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Falanges • Linhas de Atuação • Hierarquia</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-cloud-moon" aria-hidden="true"></i> Correspondência com Orixás</h4>
+                    <h3><i class="fa-solid fa-cloud-moon" aria-hidden="true"></i> Correspondência com Orixás</h3>
                     <p>Assim como os Exus, cada Pombagira tem uma conexão vibratória com determinados Orixás: <strong>Maria Padilha</strong> ↔ Oxum (amor, vaidade), <strong>Rosa Caveira</strong> ↔ Iansã (justiça, vento), <strong>Maria Mulambo</strong> ↔ Omulu/Obaluaiê (cura, transmutação), <strong>Cigana</strong> ↔ Oxóssi (liberdade, fartura), <strong>Dama da Noite</strong> ↔ Nanã (mistério, ancestralidade).</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Orixás • Vibração • Conexão Espiritual</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-user-friends" aria-hidden="true"></i> Quebra de Tabus</h4>
+                    <h3><i class="fa-solid fa-user-friends" aria-hidden="true"></i> Quebra de Tabus</h3>
                     <p>Historicamente, as Pombagiras são entidades que <strong>quebram normas sociais</strong>: bebem, dançam, não se curvam a padrões de comportamento "recatado". Representam a <strong>soberania feminina</strong> sobre o próprio corpo, desejo e destino. Hoje, essa energia é ressignificada como <strong>empoderamento, liberdade sexual e autonomia</strong> especialmente para mulheres LGBTQIA+.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Tabus • Liberdade • Empoderamento • Soberania</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-microphone" aria-hidden="true"></i> Cultura Popular e Música</h4>
+                    <h3><i class="fa-solid fa-microphone" aria-hidden="true"></i> Cultura Popular e Música</h3>
                     <p><strong>Clara Nunes</strong> imortalizou "Conto de Areia" e "A Deusa dos Orixás". <strong>Jorge Amado</strong> retratou Pombagiras em "Tenda dos Milagres". <strong>Elza Soares, Gal Costa, Maria Bethânia</strong> também exaltaram essas entidades. Mais recentemente, <strong>Liniker, Jaloo e Duda Beat</strong> trazem a estética das Pombagiras para a música pop, combatendo estereótipos e celebrando a liberdade.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Clara Nunes • Música • Literatura • Artes</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-calendar" aria-hidden="true"></i> Datas e Comemorações</h4>
+                    <h3><i class="fa-solid fa-calendar" aria-hidden="true"></i> Datas e Comemorações</h3>
                     <p><strong>Dia de Santa Marta (29 de julho)</strong> é também o dia de Maria Padilha. <strong>Dia de Sara Kali (24/25 de maio)</strong> celebra as Ciganas. Muitas Pombagiras são homenageadas em <strong>sextas-feiras à noite</strong> (dia e horário do amor e da magia). Os terreiros realizam giras especiais em <strong>datas de virada de ano, primavera e festas juninas</strong>.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Santas • Sexta-Feira • Giras • Ciclos</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i> Oferendas e Símbolos</h4>
+                    <h3><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i> Oferendas e Símbolos</h3>
                     <p><strong>Rosas vermelhas, champagne, espelhos, perfumes doces</strong> são elementos clássicos. Mas cada Pombagira tem suas preferências: <strong>Maria Mulambo</strong> gosta de restos de comida (transmutação), <strong>Rosa Caveira</strong> de rosas pretas e velas roxas, <strong>Cigana</strong> de moedas e vinho tinto. O importante é a <strong>intenção sincera e o respeito</strong>.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Rosas • Champagne • Espelhos • Respeito</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-rainbow" aria-hidden="true"></i> Pombagiras e a Comunidade LGBTQIA+</h4>
+                    <h3><i class="fa-solid fa-rainbow" aria-hidden="true"></i> Pombagiras e a Comunidade LGBTQIA+</h3>
                     <p>Por sua natureza transgressora e acolhedora, as Pombagiras são <strong>ícones de resistência LGBTQIA+</strong>. Maria Padilha é frequentemente associada a <strong>travestis e mulheres trans</strong>, que veem nela um espelho de sua própria luta e beleza. Muitos terreiros são <strong>espaços seguros</strong> para pessoas LGBTQIA+.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Resistência • Acolhimento • Diversidade • Travestilidade</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-landmark" aria-hidden="true"></i> Onde Trabalham?</h4>
+                    <h3><i class="fa-solid fa-landmark" aria-hidden="true"></i> Onde Trabalham?</h3>
                     <p>Além dos terreiros, as Pombagiras atuam em <strong>encruzilhadas, cemitérios, beira de praia, cachoeiras, mercados, feiras e prostíbulos</strong>. Locais de grande circulação humana, sofrimento e transformação são seus campos de força favoritos. Na calunga (cemitério), Pombagiras como <strong>Rosa Caveira e Maria Quitéria</strong> realizam justiça espiritual e resgate de almas.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Encruzilhada • Cemitério • Praia • Mercado • Prostíbulo</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-chess-queen" aria-hidden="true"></i> As Pombagiras na Política e Sociedade</h4>
+                    <h3><i class="fa-solid fa-chess-queen" aria-hidden="true"></i> As Pombagiras na Política e Sociedade</h3>
                     <p>Nos últimos anos, <strong>políticas e ativistas</strong> têm assumido publicamente sua devoção às Pombagiras, como <strong>Marielle Franco</strong> (assassinada em 2018), que era devota das tradições e filha de Iemanjá. A defesa das religiões de matriz africana contra ataques fundamentalistas ganhou peso social.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Política • Marielle Franco • Resistência</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-book" aria-hidden="true"></i> Livros Proibidos e Queimados</h4>
+                    <h3><i class="fa-solid fa-book" aria-hidden="true"></i> Livros Proibidos e Queimados</h3>
                     <p>Durante a <strong>ditadura militar brasileira (1964-1985)</strong>, muitos livros sobre Umbanda, Quimbanda e Pombagiras foram apreendidos, acusados de "subversão". Essa perseguição contribuiu para a perda de parte da tradição oral e escrita. Hoje, autores como <strong>Alexandre Cumino e Diego de Oxóssi</strong> seguem reconstruindo essa bibliografia.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Ditadura • Censura • Resistência Cultural • Memória</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-dove" aria-hidden="true"></i> Chico Xavier e as Pombagiras</h4>
+                    <h3><i class="fa-solid fa-dove" aria-hidden="true"></i> Chico Xavier e as Pombagiras</h3>
                     <p>O médium <strong>Chico Xavier</strong> declarava profunda admiração pelas Pombagiras, a quem chamava de <strong>"anjicas"</strong>. Ele afirmava que apenas elas têm coragem e força para transitar no <strong>Vale dos Suicidas</strong>, região espiritual densa onde resgatam almas desesperadas. Para Chico, são entidades de <strong>luz intensa</strong> e misericórdia.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Chico Xavier • Vale dos Suicidas • Misericórdia</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-city" aria-hidden="true"></i> Terreiros Centenários</h4>
+                    <h3><i class="fa-solid fa-city" aria-hidden="true"></i> Terreiros Centenários</h3>
                     <p>O <strong>Terreiro da Casa Branca do Engenho Velho</strong> (Salvador, 1830) e o <strong>Ilê Axé Iyá Nassô</strong> são alguns dos mais antigos do Brasil. No Rio de Janeiro, o <strong>Terreiro da Tia Ciata</strong> foi fundamental para o surgimento do samba. Muitos desses terreiros mantêm <strong>tradições familiares de mais de 150 anos</strong>.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> História • Resistência • Tradição • Terreiro</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-genderless" aria-hidden="true"></i> Pombagiras e a Sexualidade</h4>
+                    <h3><i class="fa-solid fa-genderless" aria-hidden="true"></i> Pombagiras e a Sexualidade</h3>
                     <p>Diferente da visão patriarcal que reprimia o prazer feminino, as Pombagiras celebram a <strong>sexualidade livre, o desejo e a sensualidade como forças divinas</strong>. Maria Padilha, por exemplo, dignifica a mulher que comanda o próprio corpo e não se envergonha disso. Elas ensinam que <strong>sexo, prazer e espiritualidade podem coexistir</strong>.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Sexualidade • Prazer • Corpo Sagrado • Freedom</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-feather" aria-hidden="true"></i> Pontos Riscados e Magia</h4>
+                    <h3><i class="fa-solid fa-feather" aria-hidden="true"></i> Pontos Riscados e Magia</h3>
                     <p>Os <strong>pontos riscados</strong> são a <strong>assinatura mágica</strong> de cada Pombagira e Exu. Cada símbolo é um código energético que invoca a entidade, abre caminhos ou firma demandas. Existem livros e cadernos sagrados que guardam esses desenhos, passados de geração em geração dentro dos terreiros.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Pemba • Assinatura Mágica • Código Sagrado</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-globe" aria-hidden="true"></i> Pombagiras no Mundo</h4>
+                    <h3><i class="fa-solid fa-globe" aria-hidden="true"></i> Pombagiras no Mundo</h3>
                     <p>O culto às Pombagiras e Exus é <strong>exclusivamente brasileiro</strong> em sua forma atual, mas suas raízes estão na África (iorubá, bantu, fon). Hoje, existem terreiros e devotos em <strong>Portugal, Espanha, França, Alemanha, Estados Unidos, Argentina, Uruguai e Japão</strong> por meio da diáspora brasileira.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Diáspora • Internacionalização • Brasil • Raízes Africanas</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-leaf" aria-hidden="true"></i> Ervas e Banhos Sagrados</h4>
+                    <h3><i class="fa-solid fa-leaf" aria-hidden="true"></i> Ervas e Banhos Sagrados</h3>
                     <p>Cada Pombagira tem suas <strong>ervas de poder</strong>: arruda (proteção, Maria Padilha), alecrim (limpeza, Cigana), rosa branca (paz, Dama da Noite), guiné (abre caminhos, Maria Navalha), espada de São Jorge (Rosa Caveira). Os <strong>banhos de ervas</strong> (amaci) são fundamentais para limpeza e fortalecimento.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Ervas • Banhos • Amaci • Limpeza Espiritual</strong>
                 </article>
@@ -1093,7 +1156,7 @@
       <div id="pombagiras" class="tab-content" role="tabpanel" tabindex="0">
             <div class="grid-cards">
                 <article class="card">
-                    <h4><i class="fa-solid fa-crown" aria-hidden="true"></i> Maria Padilha</h4>
+                    <h3><i class="fa-solid fa-crown" aria-hidden="true"></i> Maria Padilha</h3>
                     <p><strong>Comando e Realeza.</strong> A mais conhecida e reverenciada. Maria Padilha rege o amor, a autonomia feminina, o poder de escolha e a justiça emocional. É a rainha que não implora, ordena. Sua presença é marcante, elegante e magnética. Ensina que a verdadeira realeza está na dignidade e no respeito próprio.</p>
                     <p><i class="fa-solid fa-palette" aria-hidden="true"></i> <strong>Cores:</strong> Rosa choque, Vermelho, Dourado, Branco<br>
                     <i class="fa-solid fa-candle" aria-hidden="true"></i> <strong>Velas:</strong> Rosa, Vermelha, Dourada (parafina ou gel)<br>
@@ -1104,7 +1167,7 @@
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i> Maria Mulambo</h4>
+                    <h3><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i> Maria Mulambo</h3>
                     <p><strong>Cura e Humildade.</strong> A Senhora da Transmutação. Transforma lágrimas em força, miséria em dignidade, doença em cura. Trabalha com almas profundamente feridas e rejeitadas. Ensina que a verdadeira cura vem da aceitação das próprias feridas.</p>
                     <p><i class="fa-solid fa-palette" aria-hidden="true"></i> <strong>Cores:</strong> Preto, Cinza, Vinho, Marrom, Laranja queimado<br>
                     <i class="fa-solid fa-candle" aria-hidden="true"></i> <strong>Velas:</strong> Preta, Marrom, Vinho (parafina preta ou de baixa fusão)<br>
@@ -1115,7 +1178,7 @@
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-shield" aria-hidden="true"></i> Maria Quitéria</h4>
+                    <h3><i class="fa-solid fa-shield" aria-hidden="true"></i> Maria Quitéria</h3>
                     <p><strong>Guerra e Proteção.</strong> Sentinela da justiça implacável. Protege mulheres em situação de violência, corta demandas pesadas, enfrenta a escuridão sem hesitação. Sua energia é direta, forte e sem meias-palavras.</p>
                     <p><i class="fa-solid fa-palette" aria-hidden="true"></i> <strong>Cores:</strong> Amarelo ouro, Vermelho sangue, Laranja, Preto<br>
                     <i class="fa-solid fa-candle" aria-hidden="true"></i> <strong>Velas:</strong> Vermelha, Amarela, Laranja (velas de 7 dias ou palito)<br>
@@ -1126,7 +1189,7 @@
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-skull" aria-hidden="true"></i> Rosa Caveira</h4>
+                    <h3><i class="fa-solid fa-skull" aria-hidden="true"></i> Rosa Caveira</h3>
                     <p><strong>Justiça e Morte.</strong> A Rainha da Calunga. Trabalha na linha da morte simbólica, do fim dos ciclos, da quebra de demandas e da justiça espiritual rigorosa. Corta laços kármicos e protege contra inimigos ocultos.</p>
                     <p><i class="fa-solid fa-palette" aria-hidden="true"></i> <strong>Cores:</strong> Roxo profundo, Preto, Cinza, Prata, Vermelho vinho<br>
                     <i class="fa-solid fa-candle" aria-hidden="true"></i> <strong>Velas:</strong> Roxa, Preta, Cinza (velas de 7 dias ou de cemitério)<br>
@@ -1137,7 +1200,7 @@
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-regular fa-moon" aria-hidden="true"></i> Dama da Noite</h4>
+                    <h3><i class="fa-regular fa-moon" aria-hidden="true"></i> Dama da Noite</h3>
                     <p><strong>Mistério e Oculto.</strong> Guardiã dos segredos da noite. Rege o oculto, os sonhos, a magia lunar, os segredos que não podem ser revelados. Trabalha com feitiços de proteção, revelações através de sonhos e quebra de sigilos.</p>
                     <p><i class="fa-solid fa-palette" aria-hidden="true"></i> <strong>Cores:</strong> Preto aveludado, Prata, Violeta, Azul meia-noite<br>
                     <i class="fa-solid fa-candle" aria-hidden="true"></i> <strong>Velas:</strong> Preta, Roxa, Prateada (velas longas de 7 dias)<br>
@@ -1148,7 +1211,7 @@
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-rainbow" aria-hidden="true"></i> Sete Saias</h4>
+                    <h3><i class="fa-solid fa-rainbow" aria-hidden="true"></i> Sete Saias</h3>
                     <p><strong>Alegria e Intensidade.</strong> A Dançarina dos Caminhos. Cada saia representa um caminho, uma possibilidade. Rege a versatilidade, a celebração da vida e a capacidade de rodar em diferentes esferas sem perder a essência.</p>
                     <p><i class="fa-solid fa-palette" aria-hidden="true"></i> <strong>Cores:</strong> Todas as cores do arco-íris (sete cores principais)<br>
                     <i class="fa-solid fa-candle" aria-hidden="true"></i> <strong>Velas:</strong> Coloridas (uma de cada cor do arco-íris) ou arco-íris giratória<br>
@@ -1159,7 +1222,7 @@
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-star" aria-hidden="true"></i> Pombagira Cigana</h4>
+                    <h3><i class="fa-solid fa-star" aria-hidden="true"></i> Pombagira Cigana</h3>
                     <p><strong>Liberdade e Prosperidade.</strong> A Andarilha da Liberdade. Rege o nomadismo, o desapego material, a prosperidade que vem do movimento. Especialista em leitura de caminhos (baralho, mãos) e magia da fartura.</p>
                     <p><i class="fa-solid fa-palette" aria-hidden="true"></i> <strong>Cores:</strong> Vermelho paixão, Dourado, Roxo, Verde esmeralda, Azul turquesa<br>
                     <i class="fa-solid fa-candle" aria-hidden="true"></i> <strong>Velas:</strong> Vermelha, Dourada, Verde (velas de 7 dias ou de cristal)<br>
@@ -1170,7 +1233,7 @@
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-asterisk" aria-hidden="true"></i> Maria Navalha</h4>
+                    <h3><i class="fa-solid fa-asterisk" aria-hidden="true"></i> Maria Navalha</h3>
                     <p><strong>Malandragem e Rua.</strong> A Protetora dos Marginalizados. Trabalha nas periferias, becos, noites escuras. Protege prostitutas, malandros, pessoas em situação de rua. Sua navalha corta demandas, falsidades e o mal pela raiz.</p>
                     <p><i class="fa-solid fa-palette" aria-hidden="true"></i> <strong>Cores:</strong> Vermelho sangue, Preto fosco, Metalizado, Laranja queimado<br>
                     <i class="fa-solid fa-candle" aria-hidden="true"></i> <strong>Velas:</strong> Vermelha, Preta, Laranja (velas curtas de ação rápida)<br>
@@ -1181,7 +1244,7 @@
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-water" aria-hidden="true"></i> Pombagira da Praia</h4>
+                    <h3><i class="fa-solid fa-water" aria-hidden="true"></i> Pombagira da Praia</h3>
                     <p><strong>Emoção e Limpeza (Água).</strong> A Mulher das Águas Salgadas. Trabalha na beira do mar, onde as ondas levam o sofrimento e trazem novas oportunidades. Ameniza dores de amor, afasta energias densas e abre caminhos para novos relacionamentos.</p>
                     <p><i class="fa-solid fa-palette" aria-hidden="true"></i> <strong>Cores:</strong> Azul marinho, Branco espuma, Prata, Verde água-marinha, Rosa clarinho<br>
                     <i class="fa-solid fa-candle" aria-hidden="true"></i> <strong>Velas:</strong> Azul, Branca, Prateada (velas flutuantes ou de areia)<br>
@@ -1192,7 +1255,7 @@
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-circle" aria-hidden="true"></i> Maria Farrapo</h4>
+                    <h3><i class="fa-solid fa-circle" aria-hidden="true"></i> Maria Farrapo</h3>
                     <p><strong>Sanidade e Caos (Mental).</strong> A Varredora das Demandas Mentais. Trabalha com almas em sofrimento psíquico, obsessão mental, loucura espiritual. Recolhe os restos de demandas que afetam a mente. Traz sanidade onde há caos e organização onde há confusão mental.</p>
                     <p><i class="fa-solid fa-palette" aria-hidden="true"></i> <strong>Cores:</strong> Marrom terra, Laranja queimado, Preto fosco, Cinza nuvem, Bege<br>
                     <i class="fa-solid fa-candle" aria-hidden="true"></i> <strong>Velas:</strong> Marrom, Preta, Laranja (velas baixas e grossas)<br>
@@ -1203,7 +1266,7 @@
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-child" aria-hidden="true"></i> Pombagira Menina</h4>
+                    <h3><i class="fa-solid fa-child" aria-hidden="true"></i> Pombagira Menina</h3>
                     <p><strong>Renovação e Inocência.</strong> A Alegria em Movimento. Trabalha com doçura, brincadeiras e leveza, mas sua força é imensa. Quebra demandas pesadas com risos, afasta energias densas com alegria e ensina que a simplicidade é o maior poder.</p>
                     <p><i class="fa-solid fa-palette" aria-hidden="true"></i> <strong>Cores:</strong> Rosa bebê, Branco puro, Lilás claro, Amarelo primavera, Azul céu<br>
                     <i class="fa-solid fa-candle" aria-hidden="true"></i> <strong>Velas:</strong> Rosa, Branca, Lilás (velas pequenas e delicadas)<br>
@@ -1214,7 +1277,7 @@
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-tree" aria-hidden="true"></i> Pombagira da Figueira</h4>
+                    <h3><i class="fa-solid fa-tree" aria-hidden="true"></i> Pombagira da Figueira</h3>
                     <p><strong>Raiz e Ancestralidade (Terra).</strong> A Sacerdotisa Ancestral. Trabalha em matas, cachoeiras e árvores sagradas (figueiras especialmente). Atua com cura profunda, proteção espiritual e resgate de ancestralidade. É uma das mais antigas e respeitadas falanges.</p>
                     <p><i class="fa-solid fa-palette" aria-hidden="true"></i> <strong>Cores:</strong> Verde musgo, Marrom terra, Roxo terroso, Dourado velho, Preto raiz<br>
                     <i class="fa-solid fa-candle" aria-hidden="true"></i> <strong>Velas:</strong> Verde, Marrom, Roxa (velas de cera de abelha ou parafina natural)<br>
@@ -1225,7 +1288,7 @@
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-dove" aria-hidden="true"></i> Pombagira das Almas</h4>
+                    <h3><i class="fa-solid fa-dove" aria-hidden="true"></i> Pombagira das Almas</h3>
                     <p><strong>Guardiã dos Desencarnados, Ponte entre Mundos.</strong> Trabalha na linha da calunga auxiliando almas em sofrimento. É invocada para missas de alma, ajudar entes queridos desencarnados a encontrar a luz e cortar demandas feitas com sangue e morte. Tem trânsito livre entre o plano físico e espiritual.</p>
                     <p><i class="fa-solid fa-palette" aria-hidden="true"></i> <strong>Cores:</strong> Branco fosco, Preto veludo, Cinza névoa, Prata lunar, Roxo claro<br>
                     <i class="fa-solid fa-candle" aria-hidden="true"></i> <strong>Velas:</strong> Branca e Preta (juntas), Cinza, Prateada (velas de vidro ou de 7 dias)<br>
@@ -1236,7 +1299,7 @@
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-road" aria-hidden="true"></i> Pombagira Sete Encruzilhadas</h4>
+                    <h3><i class="fa-solid fa-road" aria-hidden="true"></i> Pombagira Sete Encruzilhadas</h3>
                     <p><strong>Senhora dos Caminhos Múltiplos.</strong> Diferente da encruzilhada comum (2 ou 4 caminhos), a Sete Encruzilhadas rege os caminhos complexos, múltiplos e confusos. Ajuda a encontrar direção em meio ao caos, escolhas difíceis e situações de encruzilhada da vida. É poderosa para quem está perdido sem saber qual direção tomar.</p>
                     <p><i class="fa-solid fa-palette" aria-hidden="true"></i> <strong>Cores:</strong> Amarelo ouro, Branco, Preto, Cinza prata, Vermelho escarlate, Verde limão, Roxo místico<br>
                     <i class="fa-solid fa-candle" aria-hidden="true"></i> <strong>Velas:</strong> Sete velas coloridas (uma de cada cor) ou vela de 7 mechas prateada<br>
@@ -1247,7 +1310,7 @@
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-regular fa-moon" aria-hidden="true"></i> Pombagira da Lua</h4>
+                    <h3><i class="fa-regular fa-moon" aria-hidden="true"></i> Pombagira da Lua</h3>
                     <p><strong>Regente dos Ciclos Noturnos e da Magia Lunar.</strong> Trabalha com os ciclos da lua, as marés emocionais, os sonhos proféticos e a magia que se renova a cada fase lunar. É a guardiã das mulheres em seus ciclos, da intuição aguçada e dos segredos que a lua testemunha. Sua influência cresce e diminui com os astros.</p>
                     <p><i class="fa-solid fa-palette" aria-hidden="true"></i> <strong>Cores:</strong> Prata luzente, Branco lunar, Roxo violeta, Azul celeste, Cinza perolado<br>
                     <i class="fa-solid fa-candle" aria-hidden="true"></i> <strong>Velas:</strong> Branca, Prateada, Roxa (velas em formato de crescente ou esfera)<br>
@@ -1258,7 +1321,7 @@
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-circle-notch" aria-hidden="true"></i> Pombagira das Trevas</h4>
+                    <h3><i class="fa-solid fa-circle-notch" aria-hidden="true"></i> Pombagira das Trevas</h3>
                     <p><strong>Guardiã do Desconhecido e da Sombria Justiça.</strong> Atua onde a luz não alcança. Trabalha com demandas de alta gravidade, quebra de magia negra pesada, proteção contra ataques de magistas poderosos. Não é maligna, mas sua energia é intensa, séria e não tolera erros. Deve ser invocada apenas por quem tem conhecimento e respeito.</p>
                     <p><i class="fa-solid fa-palette" aria-hidden="true"></i> <strong>Cores:</strong> Preto absoluto, Roxo escuro, Azul meia-noite, Cinza chumbo, Vermelho sangue velho<br>
                     <i class="fa-solid fa-candle" aria-hidden="true"></i> <strong>Velas:</strong> Preta, Roxa escura, Vermelha escura (velas de proteção total)<br>
@@ -1269,7 +1332,7 @@
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-mountain" aria-hidden="true"></i> Pombagira da Serra</h4>
+                    <h3><i class="fa-solid fa-mountain" aria-hidden="true"></i> Pombagira da Serra</h3>
                     <p><strong>Altitude e Visão Estratégica.</strong> Trabalha em montanhas, serras e lugares altos. Tem visão ampla dos caminhos, enxergando o que vem à frente. Ajuda a planejar, a ter estratégia, a subir na vida com firmeza. É a guardiã dos que buscam evolução, ascensão profissional e elevação espiritual.</p>
                     <p><i class="fa-solid fa-palette" aria-hidden="true"></i> <strong>Cores:</strong> Verde montanha, Cinza rocha, Marrom pedra, Azul céu, Branco nuvem, Dourado pico<br>
                     <i class="fa-solid fa-candle" aria-hidden="true"></i> <strong>Velas:</strong> Verde, Marrom, Cinza, Branca (velas altas e finas)<br>
@@ -1280,7 +1343,7 @@
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-fire" aria-hidden="true"></i> Pombagira do Fogo</h4>
+                    <h3><i class="fa-solid fa-fire" aria-hidden="true"></i> Pombagira do Fogo</h3>
                     <p><strong>Transformação pela Chama e Justiça Rápida.</strong> Trabalha com a energia do fogo: queima demandas, acelera processos, traz justiça rápida e transformação intensa. É poderosa para situações urgentes, demandas que precisam de resolução imediata e proteção contra ataques rápidos. Seu elemento é a vela, a fogueira e o braseiro.</p>
                     <p><i class="fa-solid fa-palette" aria-hidden="true"></i> <strong>Cores:</strong> Vermelho fogo, Laranja brasa, Amarelo chama, Dourado faísca, Preto fuligem<br>
                     <i class="fa-solid fa-candle" aria-hidden="true"></i> <strong>Velas:</strong> Vermelha, Laranja, Amarela, Dourada (velas de ação rápida, palito ou 7 dias)<br>
@@ -1291,7 +1354,7 @@
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-water" aria-hidden="true"></i> Pombagira das Águas Profundas</h4>
+                    <h3><i class="fa-solid fa-water" aria-hidden="true"></i> Pombagira das Águas Profundas</h3>
                     <p><strong>Abismo Submarino e Mistérios Insondáveis.</strong> Trabalha nas profundezas dos oceanos, lagos e aquíferos. Rege o inconsciente coletivo, os segredos enterrados nas águas, as memórias ancestrais e a cura das feridas mais profundas da alma. É invocada para acessar o que está submerso, esquecido ou reprimido.</p>
                     <p><i class="fa-solid fa-palette" aria-hidden="true"></i> <strong>Cores:</strong> Azul profundo, Verde abismo, Preto marinho, Roxo submerso, Prata reflexo<br>
                     <i class="fa-solid fa-candle" aria-hidden="true"></i> <strong>Velas:</strong> Azul escura, Verde garrafa, Preta (velas que flutuam ou de vidro)<br>
@@ -1302,7 +1365,7 @@
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-user-secret" aria-hidden="true"></i> Pombagira da Sombra</h4>
+                    <h3><i class="fa-solid fa-user-secret" aria-hidden="true"></i> Pombagira da Sombra</h3>
                     <p><strong>Invisibilidade e Proteção Silenciosa.</strong> Trabalha na sombra, protegendo sem ser vista. É a guardiã dos que precisam passar despercebidos, fugir de perigos, se esconder de inimigos. Rege a discrição, a proteção silenciosa e a arte de desaparecer quando necessário. Muito invocada por quem precisa de proteção sem alarde.</p>
                     <p><i class="fa-solid fa-palette" aria-hidden="true"></i> <strong>Cores:</strong> Preto opaco, Cinza sombra, Roxo escurecido, Marrom terra noturna<br>
                     <i class="fa-solid fa-candle" aria-hidden="true"></i> <strong>Velas:</strong> Preta, Cinza, Roxa escura (velas de parafina macia)<br>
@@ -1313,7 +1376,7 @@
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-columns" aria-hidden="true"></i> Pombagira da Fenda</h4>
+                    <h3><i class="fa-solid fa-columns" aria-hidden="true"></i> Pombagira da Fenda</h3>
                     <p><strong>Abertura entre Mundos e Passagem Secreta.</strong> Trabalha nas fendas da terra, nas rachaduras da realidade, nos espaços entre dimensões. É a guardiã das passagens secretas, dos portais ocultos e das transições invisíveis. Invocada para acessar o que está entre mundos, atravessar barreiras espirituais e encontrar saídas onde aparentemente não há.</p>
                     <p><i class="fa-solid fa-palette" aria-hidden="true"></i> <strong>Cores:</strong> Marrom fenda, Preto brecha, Roxo portal, Cinza poeira, Verde musgo de caverna<br>
                     <i class="fa-solid fa-candle" aria-hidden="true"></i> <strong>Velas:</strong> Marrom, Preta, Roxa (velas queimadas em fendas)<br>
@@ -1324,7 +1387,7 @@
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-skull-crossbones" aria-hidden="true"></i> Pombagira da Calunda Profunda</h4>
+                    <h3><i class="fa-solid fa-skull-crossbones" aria-hidden="true"></i> Pombagira da Calunda Profunda</h3>
                     <p><strong>Rainha do Além e Justiça Ancestral dos Mortos.</strong> Trabalha no nível mais profundo do cemitério espiritual, onde repousam as almas mais antiga e os segredos mais guardados. É invocada para demandas que envolvem linhagem ancestral, justiça de sangue, proteção de família contra maldições hereditárias e resgate de dívidas kármicas antigas.</p>
                     <p><i class="fa-solid fa-palette" aria-hidden="true"></i> <strong>Cores:</strong> Preto absoluto, Roxo túmulo, Cinza cinzas, Branco osso, Vermelho sangue ancestral<br>
                     <i class="fa-solid fa-candle" aria-hidden="true"></i> <strong>Velas:</strong> Preta, Roxa, Vermelha (velas de cemitério, queimadas até o fim)<br>
@@ -1335,7 +1398,7 @@
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-link" aria-hidden="true"></i> Pombagira das Correntes</h4>
+                    <h3><i class="fa-solid fa-link" aria-hidden="true"></i> Pombagira das Correntes</h3>
                     <p><strong>Desamarração e Libertação de Amarras.</strong> Trabalha cortando correntes espirituais, emocionais e kármicas. É invocada para romper laços tóxicos, vícios, obsessões, amarras de relacionamentos abusivos e qualquer tipo de corrente que prenda a alma. Muito poderosa para quem busca libertação de situações sufocantes.</p>
                     <p><i class="fa-solid fa-palette" aria-hidden="true"></i> <strong>Cores:</strong> Cinza ferro, Preto corrente, Prata corte, Vermelho quebra, Azul liberdade<br>
                     <i class="fa-solid fa-candle" aria-hidden="true"></i> <strong>Velas:</strong> Preta, Cinza, Vermelha (velas queimadas com algo metálico)<br>
@@ -1346,7 +1409,7 @@
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-cloud-sun" aria-hidden="true"></i> Pombagira da Neblina</h4>
+                    <h3><i class="fa-solid fa-cloud-sun" aria-hidden="true"></i> Pombagira da Neblina</h3>
                     <p><strong>Confusão Estratégica e Ocultação de Caminhos.</strong> Trabalha com a névoa, o desconhecido, a confusão proposital para enganar inimigos. Rege a arte de esconder, disfarçar, criar neblina espiritual para que adversários não encontrem o caminho. É protetora dos que precisam se ocultar, mas também ajuda a dissipar a neblina da confusão mental.</p>
                     <p><i class="fa-solid fa-palette" aria-hidden="true"></i> <strong>Cores:</strong> Cinza névoa, Branco neblina, Prata difuso, Roxo nublado, Azul cinza<br>
                     <i class="fa-solid fa-candle" aria-hidden="true"></i> <strong>Velas:</strong> Cinza, Branca, Prateada (velas que queimam com fumaça abundante)<br>
@@ -1357,7 +1420,7 @@
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-road" aria-hidden="true"></i> Pombagira da Estrada</h4>
+                    <h3><i class="fa-solid fa-road" aria-hidden="true"></i> Pombagira da Estrada</h3>
                     <p><strong>Guardiã dos Viajantes e dos Caminhos Abertos.</strong> Trabalha nas estradas, rodovias, caminhos de viagem. Protege viajantes, motoristas, caminhoneiros e todos que estão em trânsito. Abre caminhos físicos e espirituais, afasta acidentes e protege contra perigos da estrada. É invocada antes de viagens longas.</p>
                     <p><i class="fa-solid fa-palette" aria-hidden="true"></i> <strong>Cores:</strong> Marrom estrada, Cinza asfalto, Amarelo linha, Vermelho distância, Verde caminho<br>
                     <i class="fa-solid fa-candle" aria-hidden="true"></i> <strong>Velas:</strong> Marrom, Amarela, Cinza (velas de viagem ou palito)<br>
@@ -1368,7 +1431,7 @@
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-wind" aria-hidden="true"></i> Pombagira do Vento</h4>
+                    <h3><i class="fa-solid fa-wind" aria-hidden="true"></i> Pombagira do Vento</h3>
                     <p><strong>Leveza, Mensagens Rápidas e Dissipação de Energias.</strong> Trabalha com o elemento ar, com os ventos que trazem mudanças. Rege as mensagens rápidas, a comunicação, a dissipação de energias densas e a leveza espiritual. É invocada para quebrar demandas de vento (inveja falada), agilizar processos e trazer notícias.</p>
                     <p><i class="fa-solid fa-palette" aria-hidden="true"></i> <strong>Cores:</strong> Branco vento, Azul céu, Cinza nuvem, Prata ar, Amarelo leve<br>
                     <i class="fa-solid fa-candle" aria-hidden="true"></i> <strong>Velas:</strong> Branca, Azul clara, Prateada (velas leves que queimam rápido, palito ou pequena)<br>
@@ -1383,25 +1446,25 @@
       <div id="chico" class="tab-content" role="tabpanel" tabindex="0">
             <div class="grid-cards">
                 <article class="card">
-                    <h4><i class="fa-solid fa-feather" aria-hidden="true"></i> Quem foi Chico Xavier?</h4>
+                    <h3><i class="fa-solid fa-feather" aria-hidden="true"></i> Quem foi Chico Xavier?</h3>
                     <p>Francisco Cândido Xavier (1910-2002) foi o mais importante médium da história do Brasil. Psicografou mais de <strong>450 livros</strong>, vendendo dezenas de milhões de exemplares em todo o mundo. Dedicou sua vida à caridade, nunca cobrou por suas obras e doou toda a renda dos direitos autorais a instituições de auxílio aos necessitados.</p>
                     <strong><i class="fa-solid fa-book-open" aria-hidden="true"></i> +450 livros • <i class="fa-solid fa-globe" aria-hidden="true"></i> 50 idiomas • <i class="fa-solid fa-clock" aria-hidden="true"></i> 70 anos de mediunidade</strong>
                 </article>
                 
                 <article class="card">
-                    <h4><i class="fa-solid fa-rose" aria-hidden="true"></i> A Visão de Chico sobre as Pombagiras</h4>
+                    <h3><i class="fa-solid fa-rose" aria-hidden="true"></i> A Visão de Chico sobre as Pombagiras</h3>
                     <p>Ao contrário do preconceito religioso comum, Chico Xavier expressava <strong>profunda admiração e respeito</strong> pelas Pombagiras. Ele as descrevia como entidades de <strong>luz intensa</strong>, missionárias que operam nas zonas mais densas do plano espiritual, onde poucos têm coragem ou força para atuar. Para ele, são verdadeiras "anjicas" que trabalham incansavelmente pelo resgate de almas sofredoras.</p>
                     <strong><i class="fa-solid fa-quote-left" aria-hidden="true"></i> "Não as julguem pelas aparências. Onde vocês veem escuridão, elas levam a luz da misericórdia." — Chico Xavier</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-regular fa-moon" aria-hidden="true"></i> Vale dos Suicidas</h4>
+                    <h3><i class="fa-regular fa-moon" aria-hidden="true"></i> Vale dos Suicidas</h3>
                     <p>Em suas obras psicografadas, Chico revelou a existência de regiões espirituais extremamente densas e dolorosas, como o chamado "Vale dos Suicidas". Segundo ele, <strong>apenas as Pombagiras e alguns Exus</strong> possuem a coragem e a vibração necessárias para penetrar nessas áreas e resgatar almas desesperadas. Elas atuam como verdadeiras <strong>mães espirituais</strong>, amparando aqueles que ninguém mais consegue alcançar.</p>
                     <strong><i class="fa-solid fa-quote-left" aria-hidden="true"></i> "Onde a luz comum não alcança, elas entram com a chama da compaixão."</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Principais Obras Psicografadas</h4>
+                    <h3><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Principais Obras Psicografadas</h3>
                     <p>Chico Xavier psicografou obras de espíritos como André Luiz, Emmanuel, Humberto de Campos e Irmão X. Entre os títulos mais importantes estão:</p>
                     <ul style="margin-top: 12px; padding-left: 20px; opacity: 0.9;">
                         <li><i class="fa-solid fa-book" aria-hidden="true"></i> <strong>"Nosso Lar"</strong> (André Luiz) — Retrato da colônia espiritual.</li>
@@ -1414,31 +1477,31 @@
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-regular fa-lightbulb" aria-hidden="true"></i> A Doutrina Espírita e as Pombagiras</h4>
+                    <h3><i class="fa-regular fa-lightbulb" aria-hidden="true"></i> A Doutrina Espírita e as Pombagiras</h3>
                     <p>Embora a doutrina espírita codificada por Allan Kardec não mencione diretamente as Pombagiras, Chico Xavier, em sua vivência mediúnica, reconhecia a existência e a importância dessas entidades. Ele ensinava que o plano espiritual é infinito em suas hierarquias e que o <strong>amor e a caridade</strong> são os verdadeiros marcadores da evolução, não os nomes ou títulos que as entidades recebem na Terra.</p>
                     <strong><i class="fa-solid fa-quote-left" aria-hidden="true"></i> "Deus não mede o coração pela etiqueta que ele usa."</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i> Caridade e Trabalho Social</h4>
+                    <h3><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i> Caridade e Trabalho Social</h3>
                     <p>Chico Xavier jamais cobrou um centavo por suas psicografias. Todo o dinheiro arrecadado com a venda de livros era destinado a obras de caridade, asilos, creches e hospitais. Esse exemplo de <strong>desapego material e serviço ao próximo</strong> é o mesmo ensinamento que as verdadeiras Pombagiras transmitem: a importância de doar sem esperar nada em troca.</p>
                     <strong><i class="fa-solid fa-quote-left" aria-hidden="true"></i> "A maior das preces é a que se transforma em ação."</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i> Justiça e Misericórdia</h4>
+                    <h3><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i> Justiça e Misericórdia</h3>
                     <p>Para Chico Xavier, a justiça divina é perfeita, mas a <strong>misericórdia é a chave que abre todas as portas</strong>. Ele dizia que as Pombagiras, em sua essência, representam o equilíbrio entre a lei (justiça) e o perdão (misericórdia). Maria Mulambo, por exemplo, era por ele vista como um símbolo da transmutação: do sofrimento para a cura, da miséria para a dignidade.</p>
                     <strong><i class="fa-solid fa-quote-left" aria-hidden="true"></i> "Justiça sem amor é frieza. Amor sem justiça é fraqueza. As Pombagiras nos ensinam o equilíbrio."</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-pen-fancy" aria-hidden="true"></i> A Mediunidade de Chico</h4>
+                    <h3><i class="fa-solid fa-pen-fancy" aria-hidden="true"></i> A Mediunidade de Chico</h3>
                     <p>Chico Xavier psicografava em média 3 a 4 livros por ano durante décadas, frequentemente recebendo mensagens de espíritos em línguas que não dominava. Sua humildade era lendária: mesmo com fama mundial, continuou morando em uma casa simples em Uberaba, atendendo gratuitamente a todos que o procuravam. Essa entrega e humildade são o mesmo caminho que as Pombagiras ensinam: <strong>servir sem vaidade</strong>.</p>
                     <strong><i class="fa-solid fa-quote-left" aria-hidden="true"></i> "Não sou eu quem escrevo. Sou apenas um lápis nas mãos de Deus."</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-regular fa-star" aria-hidden="true"></i> Legado e Reconhecimento</h4>
+                    <h3><i class="fa-regular fa-star" aria-hidden="true"></i> Legado e Reconhecimento</h3>
                     <p>Em 2010, a Câmara dos Deputados concedeu a Chico Xavier o título de <strong>Médium do Século XX</strong>. Sua influência transcende religiões: católicos, espíritas, umbandistas e até mesmo ateus reconhecem sua bondade e contribuição à cultura brasileira. As Pombagiras, guardiãs dos caminhos, certamente o acolheram com flores quando ele partiu em 2002.</p>
                     <strong><i class="fa-solid fa-building" aria-hidden="true"></i> Museum Chico Xavier • Uberaba/MG • <i class="fa-regular fa-heart" aria-hidden="true"></i> Legado eterno</strong>
                 </article>
@@ -1448,121 +1511,121 @@
       <div id="bibliografia" class="tab-content" role="tabpanel" tabindex="0">
             <div class="grid-cards">
                 <article class="card">
-                    <h4><i class="fa-solid fa-rose" aria-hidden="true"></i> Pombagira: A Deusa</h4>
+                    <h3><i class="fa-solid fa-rose" aria-hidden="true"></i> Pombagira: A Deusa</h3>
                     <p><strong>Alexandre Cumino</strong>. Conecta a mulher comum à sua força interior e sabedoria ancestral. Um dos primeiros livros a tratar as Pombagiras com respeito e profundidade, desmistificando preconceitos.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Pombagiras • Empoderamento Feminino</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-crown" aria-hidden="true"></i> Pomba Gira e a Fé Inabalável</h4>
+                    <h3><i class="fa-solid fa-crown" aria-hidden="true"></i> Pomba Gira e a Fé Inabalável</h3>
                     <p><strong>Alexandre Cumino</strong>. Aborda a relação íntima entre as Pombagiras e a fé de seus devotos, com relatos de experiências e orientações práticas para o culto respeitoso.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Devoção • Fé • Experiências</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-skull" aria-hidden="true"></i> Rosa Caveira: A Justiça da Pombagira</h4>
+                    <h3><i class="fa-solid fa-skull" aria-hidden="true"></i> Rosa Caveira: A Justiça da Pombagira</h3>
                     <p><strong>Diego de Oxóssi</strong>. Dedica-se à falange da Rosa Caveira, entidade conhecida por sua rigidez e justiça implacável. Traz fundamentos, pontos e histórias dessa guardiã poderosa.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Rosa Caveira • Justiça Espiritual</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-regular fa-moon" aria-hidden="true"></i> Pombagira Maria Mulambo</h4>
+                    <h3><i class="fa-regular fa-moon" aria-hidden="true"></i> Pombagira Maria Mulambo</h3>
                     <p><strong>Mãe Taiane de Iemanjá</strong>. Explora a energia da cura através do sofrimento transmutado. Maria Mulambo é apresentada como a guardiã que transforma lixo em luxo, miséria em dignidade.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Maria Mulambo • Cura • Transmutação</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-fire" aria-hidden="true"></i> Livro de Exu</h4>
+                    <h3><i class="fa-solid fa-fire" aria-hidden="true"></i> Livro de Exu</h3>
                     <p><strong>Rubens Saraceni</strong>. Fundamentos e a verdadeira natureza de Exu, desmistificando preconceitos. Uma obra essencial para entender o guardião das encruzilhadas e sua importância no equilíbrio espiritual.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Exu • Fundamentos • Encruzilhadas</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-mask" aria-hidden="true"></i> Exu Sete Capas</h4>
+                    <h3><i class="fa-solid fa-mask" aria-hidden="true"></i> Exu Sete Capas</h3>
                     <p><strong>Carlos Casimiro</strong>. Narra a jornada espiritual do guardião das encruzilhadas e caminhos da vida. Aborda a força de uma das falanges mais respeitadas de Exu.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Exu Sete Capas • Narrativa Espiritual</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-key" aria-hidden="true"></i> O Livro de Exu: O Guardião das Encruzilhadas</h4>
+                    <h3><i class="fa-solid fa-key" aria-hidden="true"></i> O Livro de Exu: O Guardião das Encruzilhadas</h3>
                     <p><strong>W. W. da Mata e Silva</strong>. Uma visão profunda sobre a origem, os rituais e a verdadeira função de Exu nas religiões afro-brasileiras, quebrando tabus e demonstrando sua importância.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Rituais • Origem • Desmistificação</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-hand-fist" aria-hidden="true"></i> Exu e a Força da Transformação</h4>
+                    <h3><i class="fa-solid fa-hand-fist" aria-hidden="true"></i> Exu e a Força da Transformação</h3>
                     <p><strong>Adriano de Oxalá</strong>. Mostra como a energia de Exu pode ser usada para quebrar demandas negativas, abrir caminhos e promover transformações profundas na vida do consulente.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Transformação • Abertura de Caminios</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-church" aria-hidden="true"></i> Umbanda: A Proto-Síntese Cósmica</h4>
+                    <h3><i class="fa-solid fa-church" aria-hidden="true"></i> Umbanda: A Proto-Síntese Cósmica</h3>
                     <p><strong>Rubens Saraceni</strong>. Uma das obras mais completas sobre a teologia e os fundamentos da Umbanda Sagrada. Aborda Orixás, Guias, rituais e a hierarquia espiritual da religião.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Umbanda • Teologia • Fundamentos</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-cauldron" aria-hidden="true"></i> Quimbanda: A Magia Negra e Positiva</h4>
+                    <h3><i class="fa-solid fa-cauldron" aria-hidden="true"></i> Quimbanda: A Magia Negra e Positiva</h3>
                     <p><strong>Marcelino de Andrade</strong>. Explora as diferenças entre a Umbanda e a Quimbanda, tratando dos rituais, das entidades e do poder transformador dessa linha de trabalho mais direta.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Quimbanda • Magia • Rituais Diretos</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i> O Catecismo de Umbanda</h4>
+                    <h3><i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i> O Catecismo de Umbanda</h3>
                     <p><strong>Mata e Silva</strong>. Um clássico que organiza os preceitos, rezas, curimbas e fundamentos da Umbanda de forma didática, sendo uma porta de entrada para muitos que chegam à religião.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Clássico • Didático • Curimba</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-tree" aria-hidden="true"></i> Mitologia dos Orixás</h4>
+                    <h3><i class="fa-solid fa-tree" aria-hidden="true"></i> Mitologia dos Orixás</h3>
                     <p><strong>Reginaldo Prandi</strong>. Reúne mais de 300 histórias tradicionais do panteão iorubá e afro-brasileiro. Uma obra monumental para quem deseja compreender os Orixás por meio de suas lendas e mitos.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Orixás • Mitologia • Iorubá</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-water" aria-hidden="true"></i> Iemanjá: A Mãe das Águas</h4>
+                    <h3><i class="fa-solid fa-water" aria-hidden="true"></i> Iemanjá: A Mãe das Águas</h3>
                     <p><strong>Pai Jorge de Xangô</strong>. Uma homenagem à rainha do mar, com histórias, saudações, oferendas e a profunda conexão entre Iemanjá e as Pombagiras que regem os caminhos líquidos.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Iemanjá • Águas • Oferendas</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-feather" aria-hidden="true"></i> Orixás: Os Deuses Vivos da África</h4>
+                    <h3><i class="fa-solid fa-feather" aria-hidden="true"></i> Orixás: Os Deuses Vivos da África</h3>
                     <p><strong>Pierre Verger</strong>. Fotografias e pesquisas antropológicas de altíssimo valor. Verger documenta como os Orixás são cultuados tanto na África quanto no Brasil, com riqueza de detalhes.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Antropologia • Raízes Africanas • Pesquisa</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-wolf" aria-hidden="true"></i> Mulheres que Correm com os Lobos</h4>
+                    <h3><i class="fa-solid fa-wolf" aria-hidden="true"></i> Mulheres que Correm com os Lobos</h3>
                     <p><strong>Clarissa Pinkola Estés</strong>. Resgate do arquétipo da Mulher Selvagem e da força feminina ancestral. Embora não trate diretamente das Pombagiras, é uma obra complementar essencial sobre o poder feminino.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Arquétipos • Psicologia Profunda • Feminino Selvagem</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-feather-pointed" aria-hidden="true"></i> Os Quatro Compromissos</h4>
+                    <h3><i class="fa-solid fa-feather-pointed" aria-hidden="true"></i> Os Quatro Compromissos</h3>
                     <p><strong>Don Miguel Ruiz</strong>. Sabedoria tolteca para a liberdade pessoal e quebra de crenças limitantes. Uma filosofia que dialoga perfeitamente com os ensinamentos de liberdade das Pombagiras.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Filosofia Tolteca • Liberdade Pessoal</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-book" aria-hidden="true"></i> A Cachaça, as Rosas e o Cachimbo</h4>
+                    <h3><i class="fa-solid fa-book" aria-hidden="true"></i> A Cachaça, as Rosas e o Cachimbo</h3>
                     <p><strong>Alexandre Cumino</strong>. Um guia prático e respeitoso sobre oferendas, pontos riscados e fundamentos de trabalho com Pombagiras e Exus. Muito procurado por médiuns e iniciantes.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Oferendas • Fundamentos • Pontos Riscados</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-hands-praying" aria-hidden="true"></i> Curimbas, Pontos e Rezas de Umbanda</h4>
+                    <h3><i class="fa-solid fa-hands-praying" aria-hidden="true"></i> Curimbas, Pontos e Rezas de Umbanda</h3>
                     <p><strong>Vovó Maria Conga</strong>. Uma coletânea de pontos cantados, rezas e rituais que preserva a tradição oral da Umbanda. Fundamental para entender a musicalidade e a força do canto sagrado.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Pontos Cantados • Tradição Oral • Curimba</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-brain" aria-hidden="true"></i> O Livro dos Médiuns</h4>
+                    <h3><i class="fa-solid fa-brain" aria-hidden="true"></i> O Livro dos Médiuns</h3>
                     <p><strong>Allan Kardec</strong>. Embora seja da doutrina espírita, esta obra é base para entender o fenômeno mediúnico que também ocorre nos terreiros. Kardec codificou as leis da comunicação espiritual.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Mediunidade • Comunicação Espiritual • Base</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-map" aria-hidden="true"></i> Umbanda: Um Caminho de Libertação</h4>
+                    <h3><i class="fa-solid fa-map" aria-hidden="true"></i> Umbanda: Um Caminho de Libertação</h3>
                     <p><strong>Norberto Peixoto</strong>. Trata da Umbanda como prática de autoconhecimento e evolução espiritual, destacando o papel transformador de Exus e Pombagiras na quebra de padrões limitantes.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Autoconhecimento • Evolução • Libertação</strong>
                 </article>
@@ -1572,73 +1635,73 @@
         <div id="cosmovisoes" class="tab-content" role="tabpanel" tabindex="0">
             <div class="grid-cards">
                 <article class="card">
-                    <h4><i class="fa-solid fa-church" aria-hidden="true"></i> Umbanda</h4>
+                    <h3><i class="fa-solid fa-church" aria-hidden="true"></i> Umbanda</h3>
                     <p><strong>União de elementos africanos, indígenas e cristãos.</strong> Religião brasileira que sintetiza Orixás, Guias e Entidades como Pretos-Velhos, Caboclos, Crianças, Exus e Pombagiras. Seu foco está na <strong>caridade, cura e equilíbrio espiritual</strong>. As giras acontecem em terreiros com curimbas, pontos cantados e incorporação. A Umbanda trabalha predominantemente com a energia da luz, do amor e da evolução moral dos médiuns e consulentes.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Caridade • Cura • Incorporação • Pontos Cantados</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-cauldron" aria-hidden="true"></i> Quimbanda</h4>
+                    <h3><i class="fa-solid fa-cauldron" aria-hidden="true"></i> Quimbanda</h3>
                     <p><strong>Dedicada ao culto de Exus e Pombagiras como forças ancestrais.</strong> Linha de trabalho mais direta, enérgica e pragmática. Seus rituais envolvem magia prática, uso de velas, pembas, oferendas em encruzilhadas e cemitérios. Diferente da Umbanda, a Quimbanda não se preocupa com "suavizações" — sua atuação é incisiva para quebrar demandas, fechar caminhos negativos e trazer justiça rápida. <strong>Domínio do fogo, da terra e das encruzilhadas.</strong></p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Magia Prática • Encruzilhadas • Exu • Pombagira • Fogo</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i> Candomblé</h4>
+                    <h3><i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i> Candomblé</h3>
                     <p><strong>Religião iniciática de matriz africana.</strong> Cultua os Orixás (iorubás), Voduns (jeje) e Inquices (bantu) com forte estrutura ritual, hierarquia sacerdotal e sacrifícios tradicionais. Cada nação tem suas particularidades: <strong>Ketu, Angola, Jeje</strong>. Não há incorporação de Exus e Pombagiras da mesma forma que na Umbanda/Quimbanda — os Orixás "montam" em seus filhos após longo processo iniciático. A música, a dança e os assentamentos sagrados são centrais.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Orixás • Iniciação • Sacrifício • Nações Africanas</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-fire" aria-hidden="true"></i> Exu: O Guardião das Encruzilhadas</h4>
+                    <h3><i class="fa-solid fa-fire" aria-hidden="true"></i> Exu: O Guardião das Encruzilhadas</h3>
                     <p><strong>Não é demônio, é mensageiro divino.</strong> No Candomblé, Exu é o Orixá da comunicação, dos caminhos, das portas e transformações. É o primeiro a ser saudado em qualquer ritual. Na Umbanda e Quimbanda, os Exus são entidades que já foram humanas e trabalham na linha da justiça, proteção e quebra de demandas. São guardiães da lei espiritual, atuando nas sombras para que a luz possa brilhar.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Mensageiro • Guardião • Justiça • Caminhos</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-rose" aria-hidden="true"></i> Pombagira: A Senhora dos Caminhos</h4>
+                    <h3><i class="fa-solid fa-rose" aria-hidden="true"></i> Pombagira: A Senhora dos Caminhos</h3>
                     <p><strong>Feminino sagrado em movimento.</strong> Enquanto no Candomblé as Pombagiras não existem como entidade separada, na Umbanda/Quimbanda elas são a contraparte feminina dos Exus. Representam a sabedoria da mulher que conhece a dor, o prazer, a luta e a liberdade. Regem o amor, a prosperidade, a justiça e a autonomia feminina. Maria Padilha, Maria Mulambo, Rosa Caveira são algumas de suas falanges mais conhecidas.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Feminino Sagrado • Amor • Justiça • Autonomia</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-rainbow" aria-hidden="true"></i> Logun Edé: O Príncipe do Encanto</h4>
+                    <h3><i class="fa-solid fa-rainbow" aria-hidden="true"></i> Logun Edé: O Príncipe do Encanto</h3>
                     <p><strong>Orixá da dualidade fluida.</strong> Filho de Oxum (doçura e riqueza) e Oxóssi (caça e fartura). Logun Edé é representado como um jovem que transita entre aspectos marcantes de realeza e caça com elegância. É o símbolo sagrado do equilíbrio das forças complementares dentro de cada ser. Suas cores são o amarelo, o dourado e o azul-esverdeado. Adora festas, pesca e artes.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Dualidade • Não-binarismo • Oxum • Oxóssi • Beleza</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-bolt" aria-hidden="true"></i> Oxumaré: A Serpente e o Arco-Íris</h4>
+                    <h3><i class="fa-solid fa-bolt" aria-hidden="true"></i> Oxumaré: A Serpente e o Arco-Íris</h3>
                     <p><strong>Orixá da continuidade e renovação.</strong> Representado pela serpente que morde o próprio rabo (símbolo do infinito) e pelo arco-íris que conecta o céu e a terra. Oxumaré rege os ciclos da natureza, a respiração do universo, a chuva e a seca, o movimento constante de transformação e renascimento. Suas cores reúnem todas as matizes cromáticas. Ensina que a vida é um fluxo eterno de renovação.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Ciclos • Renovação • Infinito • Chuva • Arco-Íris</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-brain" aria-hidden="true"></i> Ori: A Cabeça Sagrada</h4>
+                    <h3><i class="fa-solid fa-brain" aria-hidden="true"></i> Ori: A Cabeça Sagrada</h3>
                     <p><strong>O destino individual dentro de cada um.</strong> No Candomblé, Ori é a divindade pessoal, o ponto de luz que cada ser humano traz. Através do ritual de <strong>Bori</strong> (alimentar a cabeça), fortalece-se o Ori para que o destino positivo se manifeste. Na Umbanda, Ori é o alinhamento entre a mente, o espírito e o coração. Na Quimbanda, é o ponto de poder interno que o magista desenvolve para comandar suas próprias forças. <strong>Conhecer o Ori é conhecer a si mesmo.</strong></p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Destino • Autoconhecimento • Bori • Cabeça Sagrada</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-leaf" aria-hidden="true"></i> Voduns: Os Deuses da Tradição Jeje</h4>
+                    <h3><i class="fa-solid fa-leaf" aria-hidden="true"></i> Voduns: Os Deuses da Tradição Jeje</h3>
                     <p><strong>Divindades do povo fon (da região do atual Benim).</strong> Assim como os Orixás na tradição iorubá, os Voduns regem forças da natureza e aspectos da vida humana. Exemplos: <strong>Mawu (Lua, criação), Lisa (Sol, calor), Dan (serpente cósmica), Sakpata (terra, doenças e cura).</strong> O culto aos Voduns no Brasil é preservado principalmente na <strong>nação Jeje</strong> do Candomblé, com forte presença no Maranhão (Casa das Minas) e na Bahia.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Voduns • Jeje • Benim • Dan • Mawu • Lisa</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-mountain" aria-hidden="true"></i> Inquices: Os Ancestrais Bantu</h4>
+                    <h3><i class="fa-solid fa-mountain" aria-hidden="true"></i> Inquices: Os Ancestrais Bantu</h3>
                     <p><strong>Divindades da tradição bantu (Angola, Congo).</strong> Os Inquices são forças da natureza conectadas à terra, às águas e à floresta. Exemplos: <strong>Zambi (Deus supremo), Aluvaiá (equivalente a Exu), Kitembo (tempo/estações), Kisimbi (águas doces).</strong> No Brasil, o culto bantu se manifesta principalmente no <strong>Candomblé de Angola</strong> e também influenciou fortemente a Umbanda e a Quimbanda.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Inquices • Bantu • Angola • Congo • Ancestralidade</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-road" aria-hidden="true"></i> Encruzilhada: O Ponto de Poder</h4>
+                    <h3><i class="fa-solid fa-road" aria-hidden="true"></i> Encruzilhada: O Ponto de Poder</h3>
                     <p><strong>Símbolo máximo do encontro entre mundos.</strong> Na Quimbanda e na Umbanda, a encruzilhada (cruzamento de duas ou mais vias) é o local sagrado por excelência de Exus e Pombagiras. É ali que as demandas são depositadas, oferendas são deixadas e os caminhos se abrem ou se fecham. Representa a escolha, o livre-arbítrio, a decisão entre direções. <strong>Ela é a porta que conecta o céu, a terra e o submundo.</strong></p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Poder • Escolha • Portal • Demanda • Oferenda</strong>
                 </article>
 
                 <article class="card">
-                    <h4><i class="fa-solid fa-skull" aria-hidden="true"></i> Cemitério: O Campo de Força das Almas</h4>
+                    <h3><i class="fa-solid fa-skull" aria-hidden="true"></i> Cemitério: O Campo de Força das Almas</h3>
                     <p><strong>Local de transmutação e justiça espiritual.</strong> Os cemitérios são campos de força intensos onde atuam Pombagiras como <strong>Rosa Caveira, Maria Quitéria e Dama da Noite</strong>, além de Exus como <strong>Exu Caveira e Exu do Cemitério.</strong> As entidades que trabalham nesses locais lidam com demandas de alta gravidade, transmutação energética e resgate kármico. O respeito e a seriedade são obrigatórios.</p>
                     <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Transmutação • Justiça • Almas • Rosa Caveira • Exu Caveira</strong>
                 </article>
