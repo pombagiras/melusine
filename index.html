@@ -583,6 +583,7 @@
             padding: 20px;
             text-align: center;
             overflow: hidden;
+            z-index: 1;
         }
 
         .hero-video {
@@ -629,16 +630,22 @@
         .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: white; }
 
         /* Carousel Section */
-        .carousel-section { padding: 60px 0; background: rgba(0,0,0,0.4); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); }
-        .carousel-track-container { width: 100%; overflow: hidden; position: relative; }
+        .carousel-section { padding: 60px 0; background: rgba(0,0,0,0.4); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); position: relative; z-index: 10; }
+        .carousel-track-container { width: 100%; overflow: visible; position: relative; padding: 30px 0; }
         .carousel-track { display: flex; width: max-content; animation: scroll 80s linear infinite; }
         .carousel-track:hover { animation-play-state: paused; }
         .carousel-item {
-            width: 180px; height: 260px; margin: 0 12px; border-radius: 16px; overflow: hidden; position: relative; cursor: pointer; transition: var(--transition); border: 1px solid rgba(255,255,255,0.08);
+            width: 200px; height: 200px; margin: 0 12px; border-radius: 16px; overflow: hidden; position: relative; cursor: pointer; transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease, z-index 0s; border: 1px solid rgba(255,255,255,0.08); flex-shrink: 0; z-index: 1;
         }
-        .carousel-item img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); transition: var(--transition); }
-        .carousel-item:hover { transform: scale(1.08) translateY(-10px); border-color: var(--secondary); box-shadow: 0 15px 30px rgba(217, 4, 41, 0.4); }
-        .carousel-item:hover img { filter: grayscale(0%); }
+        .carousel-item img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); transition: filter 0.4s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .carousel-item:hover {
+            transform: scale(1.35) translateY(-18px);
+            border-color: var(--secondary);
+            box-shadow: 0 25px 60px rgba(217, 4, 41, 0.6), 0 0 40px rgba(217, 4, 41, 0.3);
+            z-index: 9999;
+            overflow: visible;
+        }
+        .carousel-item:hover img { filter: grayscale(0%); transform: scale(1.05); }
         .carousel-item span {
             position: absolute; bottom: 0; left: 0; width: 100%; padding: 12px; background: linear-gradient(transparent, rgba(0,0,0,0.9)); font-size: 0.75rem; font-weight: 600; text-align: center; opacity: 0; transition: var(--transition);
         }
@@ -833,17 +840,17 @@
         </div>
 
         <nav class="edu-nav" aria-label="Navegação Temática do Portal">
-            <div class="nav-tab active" data-target="glossario">Glossário</div>
+            <div class="nav-tab" data-target="glossario">Glossário</div>
             <div class="nav-tab" data-target="curiosidades">Curiosidades</div>
             <div class="nav-tab" data-target="faq">Perguntas</div>
             <div class="nav-tab" data-target="pombagiras">Guardiãs</div>
             <div class="nav-tab" data-target="chico">Chico Xavier</div>
             <div class="nav-tab" data-target="bibliografia">Livros & Mídia</div>
-            <div class="nav-tab" data-target="cosmovisoes">Cosmovisões</div>
+            <div class="nav-tab active" data-target="cosmovisoes">Cosmovisões</div>
         </nav>
 
         <main>
-            <div id="glossario" class="tab-content active">
+            <div id="glossario" class="tab-content">
                 <div class="grid-cards">
                     <div class="card">
                         <h4><i class="fa-solid fa-sun" aria-hidden="true"></i> Axé</h4>
@@ -1970,7 +1977,7 @@
                 </div>
             </div>
 
-            <div id="cosmovisoes" class="tab-content">
+            <div id="cosmovisoes" class="tab-content active">
                 <div class="grid-cards">
                     <div class="card">
                         <h4><i class="fa-solid fa-church" aria-hidden="true"></i> Umbanda</h4>
@@ -2154,7 +2161,7 @@
         [...carouselImages, ...carouselImages].forEach(img => {
             const div = document.createElement('div');
             div.className = 'carousel-item';
-            div.innerHTML = `<img src="${img.url}" alt="${img.name}" loading="lazy" width="180" height="260"><span>${img.name}</span>`;
+            div.innerHTML = `<img src="${img.url}" alt="${img.name}" loading="lazy" width="200" height="200"><span>${img.name}</span>`;
             div.onclick = () => openModal(img.name);
             track.appendChild(div);
         });
