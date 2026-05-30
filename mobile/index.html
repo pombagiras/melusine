@@ -1736,11 +1736,6 @@
         </nav>
         
         <p class="copyright">🌹 ALL RIGHTS RESERVED © 2026 | @ALMASDEPOMBAGIRA 🌹</p>
-        
-        <div style="margin-top: 20px; font-size: 0.7rem; opacity: 0.6; display: flex; align-items: center; justify-content: center; gap: 8px;" aria-live="polite">
-            <span>Vistas do Portal:</span>
-            <strong style="color: var(--accent); font-size: 0.95rem;" id="visitorCount">...</strong>
-        </div>
     </footer>
 
     <div class="modal" id="pombagiraModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
@@ -1956,47 +1951,6 @@
         closeBtn.addEventListener('click', closeModal);
         window.addEventListener('click', (e) => { if(e.target == modal) closeModal(); });
         window.addEventListener('keydown', (e) => { if(e.key === 'Escape' && modal.classList.contains('active')) closeModal(); });
-
-     // Supabase Stats Integration (Otimizado para Performance Mobile)
-        window.addEventListener('load', () => {
-            waitForSupabaseAndInit();
-        });
-
-        function waitForSupabaseAndInit(retries) {
-            retries = retries || 0;
-            if (typeof supabase !== 'undefined' && typeof supabase.createClient === 'function') {
-                if ('requestIdleCallback' in window) {
-                    requestIdleCallback(initSupabaseStats);
-                } else {
-                    setTimeout(initSupabaseStats, 1);
-                }
-            } else if (retries < 20) {
-                setTimeout(function() { waitForSupabaseAndInit(retries + 1); }, 250);
-            } else {
-                var el = document.getElementById('visitorCount');
-                if (el) el.innerText = "2.800+";
-            }
-        }
-
-        async function initSupabaseStats() {
-            const _URL = 'https://rbygxkbewzknvjjhxdvw.supabase.co';
-            const _KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJieWd4a2Jld3prbnZqamh4ZHZ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjYwMDcxNjQsImV4cCI6MjA4MTU4MzE2NH0.YrHF9HEGo6yv9MyNsPzFgBhaAB1DRh2SLU8f7L6s1nY';
-            try {
-                const _supabase = supabase.createClient(_URL, _KEY);
-                await _supabase.rpc('increment_visceral_view', { target_page: 'pombagiras.com' });
-                const { data, error } = await _supabase.from('access_stats').select('view_count').eq('page_name', 'pombagiras.com').single();
-                
-                const visitorElement = document.getElementById('visitorCount');
-                if (data && !error && visitorElement) {
-                    visitorElement.innerText = data.view_count.toLocaleString('pt-BR');
-                } else if (visitorElement) {
-                    visitorElement.innerText = "2.800+";
-                }
-            } catch (e) {
-                const visitorElement = document.getElementById('visitorCount');
-                if (visitorElement) visitorElement.innerText = "2.800+";
-            }
-        }
 
         // --- Otimização: Carregamento Inteligente de Vídeo (Mobile-First) ---
         (function optimizeVideoLoading() {
