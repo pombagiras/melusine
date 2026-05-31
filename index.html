@@ -498,46 +498,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@200;300;400;600&display=swap">
     
-    <style>
-    /* RESET MODERNO E PERFORMANCE */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     
-    :root {
-        --bg-color: #050505; /* O Abismo */
-        --text-color: #e0e0e0; /* O Espectral */
-        --accent-red: #8b0000; /* Arterial Red */
-        --font-base: 'Inter', system-ui, sans-serif;
-    }
-
-    body {
-        background-color: var(--bg-color);
-        color: var(--text-color);
-        font-family: var(--font-base);
-        line-height: 1.6;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-    }
-
-    /* CRITICAL LAYOUT - SEM CLS (Cumulative Layout Shift) */
-    main {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 2rem;
-        min-height: 100vh;
-    }
-
-    /* ESTILO VISCERAL PARA ELEMENTOS DE CONTEÚDO */
-    h1, h2 { color: var(--accent-red); margin-bottom: 1rem; }
-    
-    /* ANCORAGEM DE IMAGEM PARA EVITAR PULO NA TELA */
-    img { 
-        max-width: 100%; 
-        height: auto; 
-        display: block; 
-        aspect-ratio: 16 / 9; /* Mantém a estrutura blindada */
-        background-color: #1a1a1a; 
-    }
-</style>
     <style>
         html {
             scroll-behavior: smooth;
