@@ -381,7 +381,9 @@ if (track) {
     [...carouselImages, ...carouselImages].forEach(img => {
         const div = document.createElement('div');
         div.className = 'carousel-item';
-        div.innerHTML = `<img src="${img.url}" alt="${img.name}" loading="lazy" width="200" height="200"><span>${img.name}</span>`;
+        const displayName = getNormalizedName(img.name);
+        const altText = displayName.startsWith("Pombagira") ? `Representação artística conceitual da ${displayName}` : `Representação artística conceitual da Pombagira ${displayName}`;
+        div.innerHTML = `<img src="${img.url}" alt="${altText}" loading="lazy" width="200" height="200"><span>${img.name}</span>`;
         div.addEventListener('click', () => openModal(img.name));
         track.appendChild(div);
     });
@@ -501,3 +503,117 @@ if (backToTopButton) {
         });
     });
 }
+
+// ==========================================
+// Lógica de Busca e Filtros Facetados (SEO/UX)
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('pombagiraSearchInput');
+    const orixaButtons = document.querySelectorAll('#orixaFilters .filter-btn');
+    const elementoButtons = document.querySelectorAll('#elementoFilters .filter-btn');
+    const cards = document.querySelectorAll('#pombagiras .grid-cards .card');
+
+    if (!searchInput || cards.length === 0) return;
+
+    let activeOrixaFilter = 'all';
+    let activeElementoFilter = 'all';
+    let searchQuery = '';
+
+    function matchesElemento(dataLocal, filter) {
+        const local = dataLocal.toLowerCase();
+        if (filter === 'Encruzilhada') {
+            return local.includes('encruzilhada') || local.includes('rotatória') || local.includes('confluência') || local.includes('esquina') || local.includes('cruzamento') || local.includes('beco');
+        }
+        if (filter === 'Cemitério') {
+            return local.includes('cemitério') || local.includes('túmulo') || local.includes('calunga') || local.includes('ossário') || local.includes('capela') || local.includes('cripta') || local.includes('catacumba') || local.includes('cruzeiro');
+        }
+        if (filter === 'Mata') {
+            return local.includes('figueira') || local.includes('mata') || local.includes('árvore') || local.includes('raiz') || local.includes('gruta') || local.includes('cachoeira');
+        }
+        if (filter === 'Praia') {
+            return local.includes('mar') || local.includes('rio') || local.includes('praia') || local.includes('água') || local.includes('foz') || local.includes('piscina') || local.includes('lago');
+        }
+        if (filter === 'Estrada') {
+            return local.includes('estrada') || local.includes('serra') || local.includes('morro') || local.includes('rodovia') || local.includes('mirante') || local.includes('pedreira') || local.includes('montanha');
+        }
+        if (filter === 'Fogo') {
+            return local.includes('fogo') || local.includes('fogueira') || local.includes('braseiro') || local.includes('forno') || local.includes('chama');
+        }
+        return false;
+    }
+
+    function filterPombagiras() {
+        cards.forEach(card => {
+            const titleElement = card.querySelector('h4');
+            if (!titleElement) return;
+
+            // Limpa o nome extraído de FontAwesome e espaços
+            const rawTitle = titleElement.textContent.trim();
+            const normalizedTitle = getNormalizedName(rawTitle);
+            const data = pombagirasData[normalizedTitle] || pombagirasData[rawTitle];
+
+            if (!data) return;
+
+            // 1. Filtro de Texto
+            const textMatch = searchQuery === '' || 
+                data.nome.toLowerCase().includes(searchQuery) ||
+                data.cores.toLowerCase().includes(searchQuery) ||
+                data.velas.toLowerCase().includes(searchQuery) ||
+                data.local.toLowerCase().includes(searchQuery) ||
+                data.signo.toLowerCase().includes(searchQuery) ||
+                data.descricao.toLowerCase().includes(searchQuery) ||
+                data.oferenda.toLowerCase().includes(searchQuery);
+
+            // 2. Filtro de Orixá
+            let orixaMatch = activeOrixaFilter === 'all';
+            if (!orixaMatch) {
+                const signoText = data.signo.toLowerCase();
+                const filter = activeOrixaFilter.toLowerCase();
+                
+                if (filter === 'omulu') {
+                    orixaMatch = signoText.includes('omulu') || signoText.includes('obaluaiê') || signoText.includes('almas');
+                } else {
+                    orixaMatch = signoText.includes(filter);
+                }
+            }
+
+            // 3. Filtro de Elemento/Campo de Força
+            const elementoMatch = activeElementoFilter === 'all' || matchesElemento(data.local, activeElementoFilter);
+
+            // Aplica a visibilidade
+            if (textMatch && orixaMatch && elementoMatch) {
+                card.style.display = 'block';
+                card.style.opacity = '1';
+                card.style.transform = 'scale(1)';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    // Event Listener de digitação
+    searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value.toLowerCase().trim();
+        filterPombagiras();
+    });
+
+    // Event Listeners de botões Orixás
+    orixaButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            orixaButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            activeOrixaFilter = btn.dataset.filter;
+            filterPombagiras();
+        });
+    });
+
+    // Event Listeners de botões Elementos
+    elementoButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            elementoButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            activeElementoFilter = btn.dataset.filter;
+            filterPombagiras();
+        });
+    });
+});

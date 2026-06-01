@@ -701,3 +701,52 @@ Object.keys(pombagirasData).forEach(key => {
 });
 
 console.log('Todas as 27 páginas foram geradas com sucesso no subdiretório /guardias/.');
+
+// Função para atualizar sitemap.xml automaticamente
+function updateSitemap() {
+    const sitemapPath = path.join(__dirname, 'sitemap.xml');
+    
+    let urls = [
+        { loc: 'https://pombagiras.com/', priority: '1.00', changefreq: 'weekly' },
+        { loc: 'https://pombagiras.com/guardias/', priority: '0.80', changefreq: 'monthly' },
+        { loc: 'https://pombagiras.com/lebaras/', priority: '0.80', changefreq: 'monthly' },
+        { loc: 'https://pombagiras.com/vortex/', priority: '0.80', changefreq: 'monthly' },
+        { loc: 'https://pombagiras.com/alexiamelusine/', priority: '0.80', changefreq: 'monthly' },
+        { loc: 'https://pombagiras.com/mobile/', priority: '0.80', changefreq: 'monthly' },
+        { loc: 'https://pombagiras.com/portal/', priority: '0.80', changefreq: 'monthly' }
+    ];
+
+    Object.keys(pombagirasData).forEach(key => {
+        const file = normalizeFileName(key) + '.html';
+        urls.push({
+            loc: `https://pombagiras.com/guardias/${file}`,
+            priority: '0.70',
+            changefreq: 'monthly'
+        });
+    });
+
+    const currentDate = new Date().toISOString().split('T')[0];
+
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- Gerado dinamicamente via generate_pages.js | Atualizado em: ${currentDate} -->
+${urls.map(url => `
+<url>
+  <loc>${url.loc}</loc>
+  <lastmod>${currentDate}</lastmod>
+  <changefreq>${url.changefreq}</changefreq>
+  <priority>${url.priority}</priority>
+</url>`).join('')}
+
+</urlset>
+`;
+
+    fs.writeFileSync(sitemapPath, xml, 'utf-8');
+    console.log('Sitemap.xml atualizado dinamicamente com todas as 27 Guardiãs!');
+}
+
+updateSitemap();

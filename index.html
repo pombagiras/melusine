@@ -40,9 +40,6 @@
     <meta name="theme-color" content="#8b1e5c">
 
     <link rel="alternate" href="https://pombagiras.com/" hreflang="pt-BR">
-    <link rel="alternate" href="https://pombagiras.com/en/" hreflang="en">
-    <link rel="alternate" href="https://pombagiras.com/pt/" hreflang="pt">
-    <link rel="alternate" href="https://pombagiras.com/es/" hreflang="es">
     <link rel="alternate" href="https://pombagiras.com/" hreflang="x-default">
 
     <meta property="og:type" content="website">
@@ -1794,6 +1791,43 @@
             </div>
 
             <div id="pombagiras" class="tab-content">
+                <!-- Portal de Busca e Filtros Semânticos -->
+                <div class="search-filter-container">
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
+                        <input type="text" id="pombagiraSearchInput" placeholder="Buscar guardiã por nome, cores, velas, Orixá ou elementos..." aria-label="Buscar guardiã">
+                    </div>
+                    
+                    <div class="filter-group">
+                        <span class="filter-label"><i class="fa-solid fa-cloud-sun" aria-hidden="true"></i> Regência / Orixá:</span>
+                        <div class="filter-buttons" id="orixaFilters">
+                            <button class="filter-btn active" data-filter="all">Todos</button>
+                            <button class="filter-btn" data-filter="Oxum">Oxum</button>
+                            <button class="filter-btn" data-filter="Iansã">Iansã</button>
+                            <button class="filter-btn" data-filter="Omulu">Omulu / Obaluaiê</button>
+                            <button class="filter-btn" data-filter="Ogum">Ogum</button>
+                            <button class="filter-btn" data-filter="Iemanjá">Iemanjá</button>
+                            <button class="filter-btn" data-filter="Nanã">Nanã</button>
+                            <button class="filter-btn" data-filter="Xangô">Xangô</button>
+                            <button class="filter-btn" data-filter="Oxóssi">Oxóssi</button>
+                            <button class="filter-btn" data-filter="Exu">Exu</button>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <span class="filter-label"><i class="fa-solid fa-fire" aria-hidden="true"></i> Campo de Força / Elemento:</span>
+                        <div class="filter-buttons" id="elementoFilters">
+                            <button class="filter-btn active" data-filter="all">Todos</button>
+                            <button class="filter-btn" data-filter="Encruzilhada">Encruzilhada</button>
+                            <button class="filter-btn" data-filter="Cemitério">Cemitério / Calunga</button>
+                            <button class="filter-btn" data-filter="Mata">Matas / Figueira</button>
+                            <button class="filter-btn" data-filter="Praia">Águas / Praia / Mar</button>
+                            <button class="filter-btn" data-filter="Estrada">Estrada / Serra</button>
+                            <button class="filter-btn" data-filter="Fogo">Fogo / Brasa</button>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="grid-cards">
                     <div class="card">
                         <h4><i class="fa-solid fa-crown" aria-hidden="true"></i> Maria Padilha</h4>
