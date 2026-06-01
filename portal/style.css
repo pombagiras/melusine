@@ -626,6 +626,7 @@ p {
     border-radius: 20px;
     cursor: pointer;
     transition: var(--transition-fast);
+    white-space: nowrap;
 }
 
 .filter-btn:hover {
@@ -1679,15 +1680,41 @@ p {
         margin-bottom: 1rem !important;
     }
 
+    /* --- Otimização dos Botões de Filtro Horizontal no Mobile --- */
+    .filter-controls {
+        justify-content: flex-start !important;
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+        overflow-x: auto !important;
+        flex-wrap: nowrap !important;
+        -webkit-overflow-scrolling: touch !important;
+        width: 100% !important;
+    }
+
     /* --- Premium Apple-Style Sheet Modal for Mobile --- */
+    .card-modal-overlay {
+        align-items: flex-end !important;
+    }
+    
     .card-modal-content {
-        padding: 1.5rem !important;
-        max-height: 90vh !important;
-        width: 95% !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        border-radius: 24px 24px 0 0 !important;
+        max-height: 85vh !important;
+        margin-bottom: 0 !important;
+        padding: 1.5rem 1.5rem 3.5rem !important; /* Espaço inferior para o botão respirar */
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        transform: translateY(100%) !important;
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    
+    .card-modal-overlay.is-active .card-modal-content {
+        transform: translateY(0) !important;
     }
     
     .modal-img-container {
-        height: 220px !important;
+        height: 180px !important; /* Imagem mais compacta no mobile */
     }
     
     .modal-title {
@@ -1702,11 +1729,15 @@ p {
     }
     
     .modal-info-table {
-        gap: 0.8rem !important;
+        gap: 1rem !important;
     }
     
     .info-row {
-        padding-bottom: 0.6rem !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.25rem !important;
+        padding-bottom: 0.8rem !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
     }
     
     .info-label {
@@ -1714,6 +1745,13 @@ p {
     }
     
     .info-value {
-        font-size: 0.9rem !important;
+        text-align: left !important;
+        font-size: 0.92rem !important;
+        line-height: 1.4 !important;
+    }
+
+    #modalArticleLink {
+        margin-top: 2rem !important;
+        margin-bottom: 1rem !important;
     }
 }
