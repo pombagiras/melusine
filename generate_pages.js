@@ -369,6 +369,25 @@ function normalizeFileName(name) {
         .replace(/ /g, "-");
 }
 
+function getPombagiraImageUrl(key) {
+    let slug = key.toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "") // remove accents
+        .replace(/ – /g, "-")
+        .replace(/-/g, "_")
+        .replace(/ /g, "_")
+        .trim();
+    
+    if (slug.startsWith("maria_") || slug.startsWith("rosa_") || slug.startsWith("dama_") || slug.startsWith("sete_saias")) {
+        slug = "pombagira_" + slug;
+    }
+    if (slug.includes("cacurucaia")) {
+        slug = "pombagira_cacurucaia";
+    }
+    
+    return `https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/${slug}.png`;
+}
+
 Object.keys(pombagirasData).forEach(key => {
     const data = pombagirasData[key];
     const fileName = normalizeFileName(key) + '.html';
@@ -384,9 +403,17 @@ Object.keys(pombagirasData).forEach(key => {
     <meta name="keywords" content="${data.nome}, Pombagira, Umbanda, Quimbanda, Esquerda, Alexia Melusine, Cosmovisão, Guardiã">
     <meta name="author" content="Alexia Melusine">
     
+    <!-- Open Graph e Twitter Cards (SEO Premium) -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Pombagira ${data.nome} | Enciclopédia de Umbanda e Quimbanda">
+    <meta property="og:description" content="Estudo aprofundado sobre ${data.nome}: história, mistérios, guia de oferendas, oração sagrada e regência espiritual.">
+    <meta property="og:image" content="${getPombagiraImageUrl(key)}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="${getPombagiraImageUrl(key)}">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
     
@@ -461,6 +488,8 @@ Object.keys(pombagirasData).forEach(key => {
         }
         .specs-table td.value-cell {
             opacity: 0.9;
+            font-family: 'Geist Mono', monospace;
+            font-size: 0.9rem;
         }
         .section-title {
             font-size: 2.2rem;
@@ -478,24 +507,24 @@ Object.keys(pombagirasData).forEach(key => {
             text-align: justify;
         }
         .ponto-cantado-box {
-            background: rgba(139, 30, 92, 0.05);
+            background: rgba(74, 14, 23, 0.04);
             border: 1px dashed var(--secondary);
             padding: 30px;
             border-radius: 20px;
             margin: 40px 0;
             text-align: center;
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Fraunces', serif;
             font-size: 1.3rem;
             line-height: 1.6;
             font-style: italic;
         }
         .oracao-box {
-            background: linear-gradient(135deg, rgba(20, 5, 15, 0.95) 0%, rgba(35, 10, 25, 0.95) 100%);
+            background: linear-gradient(135deg, rgba(15, 5, 8, 0.95) 0%, rgba(47, 62, 70, 0.85) 100%);
             border: 1px solid var(--accent);
             padding: 40px;
             border-radius: 30px;
             margin: 50px 0;
-            box-shadow: 0 15px 40px rgba(199, 154, 46, 0.1);
+            box-shadow: 0 15px 40px rgba(74, 14, 23, 0.25);
         }
         .oracao-box h3 {
             color: var(--accent);
@@ -553,6 +582,7 @@ Object.keys(pombagirasData).forEach(key => {
       "@type": "Article",
       "headline": "Estudo Aprofundado sobre Pombagira ${data.nome}",
       "description": "Exploração completa das correspondências sagradas, história e oração da Guardiã ${data.nome}.",
+      "image": "${getPombagiraImageUrl(key)}",
       "author": {
         "@type": "Person",
         "name": "Alexia Melusine",
@@ -598,6 +628,10 @@ Object.keys(pombagirasData).forEach(key => {
                 <h1 class="article-title serif">${data.nome}</h1>
                 <p class="article-phrase">“${data.frase}”</p>
             </header>
+
+            <div class="article-image-container" style="text-align: center; margin-bottom: 40px;">
+                <img src="${getPombagiraImageUrl(key)}" alt="Representação conceitual da Guardiã ${data.nome}" style="max-width: 100%; width: 400px; height: 400px; object-fit: cover; border-radius: 24px; border: 1px solid rgba(217, 4, 41, 0.3); box-shadow: 0 15px 35px rgba(217, 4, 41, 0.15); display: inline-block;">
+            </div>
 
             <section class="article-intro">
                 ${data.descricao}

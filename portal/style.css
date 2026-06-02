@@ -4,19 +4,20 @@
 
 /* --- Custom Variables & Theme Tokens --- */
 :root {
-    --color-bg-pure: #050002;        /* Absolute Abyssal deep-red/black void */
-    --color-bg-card: hsl(350, 22%, 5%);        /* Velvet charcoal with a touch of dark wine */
-    --color-crimson: hsl(350, 78%, 45%);    /* Crimson red (heart visceral) */
-    --color-crimson-hover: hsl(350, 85%, 52%);
-    --color-gold: hsl(45, 60%, 55%);        /* Ancient luxury gold */
-    --color-text-main: hsl(0, 0%, 93%);     /* Off-white */
-    --color-text-muted: hsl(350, 8%, 70%);    /* Muted silver gray with a soft rosy hue */
-    --color-border: hsla(350, 78%, 45%, 0.15);
-    --color-border-focus: hsla(350, 78%, 45%, 0.5);
+    --color-bg-pure: #050505;        /* Absolute Abyssal Preto */
+    --color-bg-card: #121719;        /* Deep Slate-Black Ardósia/Preto combination */
+    --color-crimson: #4A0E17;        /* Oxblood Red */
+    --color-crimson-hover: #800020;  /* Vibrant Oxblood Burgundy */
+    --color-gold: #C5A059;           /* Latão / Brass */
+    --color-text-main: #FAF6EE;      /* Creme Quente */
+    --color-text-muted: #78868c;     /* Slate / Ardósia Muted */
+    --color-border: rgba(197, 160, 89, 0.15); /* Latão Border */
+    --color-border-focus: rgba(197, 160, 89, 0.5);
     
     /* Font pairings */
-    --font-heading: 'Outfit', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --font-heading: 'Fraunces', serif;
+    --font-body: 'Geist', sans-serif;
+    --font-mono: 'Geist Mono', monospace;
     
     /* Transitions & Borders */
     --border-radius-sm: 8px;

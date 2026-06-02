@@ -45,14 +45,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 this.life = Math.random() * 130 + 80;
                 this.maxLife = this.life;
                 
-                // Distribuição de cores gótico vermelho: 45% Carmesim Abissal, 40% Burgundy Profundo, 15% Centelha de Ouro Sagrado
+                // Distribuição de cores gótico: 45% Oxblood, 40% Ardósia, 15% Latão
                 const colorRand = Math.random();
                 if (colorRand < 0.45) {
-                    this.color = '245, 10, 30'; // Carmesim Abissal
+                    this.color = '128, 0, 32'; // Oxblood
                 } else if (colorRand < 0.85) {
-                    this.color = '180, 5, 45'; // Burgundy Profundo
+                    this.color = '74, 92, 100'; // Ardósia
                 } else {
-                    this.color = '255, 180, 30'; // Centelha de Ouro Sagrado
+                    this.color = '197, 160, 89'; // Latão
                 }
                 
                 this.phase = Math.random() * Math.PI * 2;
@@ -112,14 +112,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 const colorRand = Math.random();
                 if (colorRand < 0.45) {
-                    this.color = 'rgba(225, 15, 45, 0.035)'; // Carmesim Abissal
-                    this.glowColor = 'rgba(225, 15, 45, 0.08)';
+                    this.color = 'rgba(128, 0, 32, 0.035)'; // Oxblood
+                    this.glowColor = 'rgba(128, 0, 32, 0.08)';
                 } else if (colorRand < 0.85) {
-                    this.color = 'rgba(170, 10, 35, 0.025)'; // Burgundy Profundo
-                    this.glowColor = 'rgba(170, 10, 35, 0.06)';
+                    this.color = 'rgba(47, 62, 70, 0.025)'; // Ardósia
+                    this.glowColor = 'rgba(47, 62, 70, 0.06)';
                 } else {
-                    this.color = 'rgba(220, 175, 75, 0.025)'; // Ouro Sagrado
-                    this.glowColor = 'rgba(220, 175, 75, 0.06)';
+                    this.color = 'rgba(197, 160, 89, 0.025)'; // Latão
+                    this.glowColor = 'rgba(197, 160, 89, 0.06)';
                 }
                 
                 // Enter from top-left boundary
@@ -199,22 +199,22 @@ document.addEventListener('DOMContentLoaded', () => {
             embers.push(ember);
         }
 
-        // Setup 4 dynamic color orbs that mix like liquid ink on obsidian water (Gótico Vermelho Vermelho!)
+        // Setup 4 dynamic color orbs that mix like liquid ink on obsidian water (Gótico Oxblood/Ardósia/Latão!)
         const orbs = [
             {
                 x: width * 0.3, y: height * 0.3,
                 radius: Math.max(width, height) * 0.60,
-                colorStart: 'rgba(225, 10, 35, 0.45)', // Carmesim Abissal
+                colorStart: 'rgba(128, 0, 32, 0.45)', // Oxblood
                 colorEnd: 'rgba(0, 0, 0, 0)',
                 orbitRadiusX: width * 0.28,
                 orbitRadiusY: height * 0.22,
-                speed: 0.0035, // Movimento mais rápido e pulsante
+                speed: 0.0035,
                 phase: 0
             },
             {
                 x: width * 0.7, y: height * 0.7,
                 radius: Math.max(width, height) * 0.65,
-                colorStart: 'rgba(140, 5, 25, 0.40)', // Burgundy Gótico
+                colorStart: 'rgba(47, 62, 70, 0.40)', // Ardósia
                 colorEnd: 'rgba(0, 0, 0, 0)',
                 orbitRadiusX: width * 0.32,
                 orbitRadiusY: height * 0.25,
@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
             {
                 x: width * 0.5, y: height * 0.4,
                 radius: Math.max(width, height) * 0.58,
-                colorStart: 'rgba(175, 12, 50, 0.38)', // Vinho Aveludado
+                colorStart: 'rgba(128, 0, 32, 0.38)', // Oxblood
                 colorEnd: 'rgba(0, 0, 0, 0)',
                 orbitRadiusX: width * 0.24,
                 orbitRadiusY: height * 0.28,
@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
             {
                 x: width * 0.2, y: height * 0.8,
                 radius: Math.max(width, height) * 0.55,
-                colorStart: 'rgba(95, 10, 110, 0.26)', // Sombra Oculta Violeta-Vermelha
+                colorStart: 'rgba(47, 62, 70, 0.32)', // Ardósia
                 colorEnd: 'rgba(0, 0, 0, 0)',
                 orbitRadiusX: width * 0.30,
                 orbitRadiusY: height * 0.18,

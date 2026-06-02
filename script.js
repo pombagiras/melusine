@@ -353,18 +353,33 @@ const pombagirasData = {
 };
 
 const carouselImages = [
-    { name: "Cigana", url: "https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/cigana_1.png" },
-    { name: "Da Figueira", url: "https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_figueira_1.png" },
-    { name: "Da Praia", url: "https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_praia_1.png" },
-    { name: "Dama da Noite", url: "https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/dama_da_noite_1.png" },
-    { name: "Maria Farrapo", url: "https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/maria_farrapo_1.png" },
-    { name: "Maria Mulambo", url: "https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/maria_mulambo_1%20(1).png" },
-    { name: "Maria Navalha", url: "https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/maria_navalha_1.png" },
-    { name: "Maria Padilha", url: "https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/maria_padilha_1.png" },
-    { name: "Maria Quitéria", url: "https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/maria_quiteria_1.png" },
-    { name: "Menina", url: "https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/menina_1.png" },
-    { name: "Rosa Caveira", url: "https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/rosa_caveira_1.png" },
-    { name: "Sete Saias", url: "https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/sete_saias_1.png" }
+    { name: "Maria Padilha", url: "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_maria_padilha.png" },
+    { name: "Maria Mulambo", url: "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_maria_mulambo.png" },
+    { name: "Maria Quitéria", url: "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_maria_quiteria.png" },
+    { name: "Rosa Caveira", url: "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_rosa_caveira.png" },
+    { name: "Dama da Noite", url: "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_dama_da_noite.png" },
+    { name: "Sete Saias", url: "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_sete_saias.png" },
+    { name: "Cigana", url: "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_cigana.png" },
+    { name: "Maria Navalha", url: "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_maria_navalha.png" },
+    { name: "Da Praia", url: "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_da_praia.png" },
+    { name: "Maria Farrapo", url: "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_maria_farrapo.png" },
+    { name: "Menina", url: "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_menina.png" },
+    { name: "Da Figueira", url: "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_da_figueira.png" },
+    { name: "Das Almas", url: "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_das_almas.png" },
+    { name: "Sete Encruzilhadas", url: "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_sete_encruzilhadas.png" },
+    { name: "Da Lua", url: "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_da_lua.png" },
+    { name: "Das Trevas", url: "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_das_trevas.png" },
+    { name: "Da Serra", url: "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_da_serra.png" },
+    { name: "Do Fogo", url: "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_do_fogo.png" },
+    { name: "Das Águas Profundas", url: "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_das_aguas_profundas.png" },
+    { name: "Da Sombra", url: "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_da_sombra.png" },
+    { name: "Da Fenda", url: "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_da_fenda.png" },
+    { name: "Da Calunga Profunda", url: "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_da_calunga_profunda.png" },
+    { name: "Das Correntes", url: "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_das_correntes.png" },
+    { name: "Da Neblina", url: "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_da_neblina.png" },
+    { name: "Da Estrada", url: "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_da_estrada.png" },
+    { name: "Do Vento", url: "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_do_vento.png" },
+    { name: "Cacurucaia", url: "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_cacurucaia.png" }
 ];
 
 function getNormalizedName(name) {
@@ -372,11 +387,28 @@ function getNormalizedName(name) {
     if (name === "Da Figueira") return "Pombagira da Figueira";
     if (name === "Da Praia") return "Pombagira da Praia";
     if (name === "Menina") return "Pombagira Menina";
+    if (name === "Das Almas") return "Pombagira das Almas";
+    if (name === "Sete Encruzilhadas") return "Pombagira Sete Encruzilhadas";
+    if (name === "Da Lua") return "Pombagira da Lua";
+    if (name === "Das Trevas") return "Pombagira das Trevas";
+    if (name === "Da Serra") return "Pombagira da Serra";
+    if (name === "Do Fogo") return "Pombagira do Fogo";
+    if (name === "Das Águas Profundas") return "Pombagira das Águas Profundas";
+    if (name === "Da Sombra") return "Pombagira da Sombra";
+    if (name === "Da Fenda") return "Pombagira da Fenda";
+    if (name === "Da Calunga Profunda") return "Pombagira da Calunga Profunda";
+    if (name === "Das Correntes") return "Pombagira das Correntes";
+    if (name === "Da Neblina") return "Pombagira da Neblina";
+    if (name === "Da Estrada") return "Pombagira da Estrada";
+    if (name === "Do Vento") return "Pombagira do Vento";
+    if (name === "Cacurucaia") return "Pombagira Cacurucaia – Senhora do Cruzeiro";
     return name;
 }
 
 // Inicializa Carrossel Deslizante
 const track = document.getElementById('carouselTrack');
+const container = document.querySelector('.carousel-track-container');
+
 if (track) {
     [...carouselImages, ...carouselImages].forEach(img => {
         const div = document.createElement('div');
@@ -387,6 +419,50 @@ if (track) {
         div.addEventListener('click', () => openModal(img.name));
         track.appendChild(div);
     });
+
+    if (container) {
+        let containerWidth = container.offsetWidth;
+        let trackWidth = track.scrollWidth;
+        let maxTranslate = trackWidth / 2;
+        let isHovered = false;
+
+        const updateDimensions = () => {
+            containerWidth = container.offsetWidth;
+            trackWidth = track.scrollWidth;
+            maxTranslate = trackWidth / 2;
+        };
+
+        window.addEventListener('resize', updateDimensions);
+        // Execute dynamic sizing adjustments on fully loaded content
+        setTimeout(updateDimensions, 1000);
+
+        container.addEventListener('mouseenter', () => {
+            isHovered = true;
+            track.style.animationPlayState = 'paused';
+        });
+
+        container.addEventListener('mousemove', (e) => {
+            if (!isHovered) return;
+            // Stop CSS scrolling animation to allow custom mouse translation control
+            track.style.animation = 'none';
+            
+            const rect = container.getBoundingClientRect();
+            const mouseX = e.clientX - rect.left;
+            const percentage = mouseX / containerWidth;
+            
+            // Map mouse positioning to smoothly translate the track
+            const translateAmount = -percentage * maxTranslate;
+            track.style.transform = `translateX(${translateAmount}px)`;
+        });
+
+        container.addEventListener('mouseleave', () => {
+            isHovered = false;
+            // Clear custom positioning and restore automated infinite scrolling loop
+            track.style.transform = '';
+            track.style.animation = 'scroll 80s linear infinite';
+            track.style.animationPlayState = 'running';
+        });
+    }
 }
 
 // Inicializa Abas Navegáveis Semânticas
@@ -616,4 +692,291 @@ document.addEventListener('DOMContentLoaded', () => {
             filterPombagiras();
         });
     });
+
+    /* ==========================================================================
+       PREMIUM INTERACTIVE CURSOR & SCROLL EFFECTS
+       ========================================================================== */
+
+    // Check if device supports mouse hover
+    if (window.matchMedia('(pointer: fine)').matches) {
+        // 1. Create and inject custom cursor elements
+        const cursorDot = document.createElement('div');
+        cursorDot.className = 'custom-cursor-dot';
+        const cursorGlow = document.createElement('div');
+        cursorGlow.className = 'custom-cursor-glow';
+        document.body.appendChild(cursorDot);
+        document.body.appendChild(cursorGlow);
+
+        let mX = window.innerWidth / 2;
+        let mY = window.innerHeight / 2;
+        let gX = mX;
+        let gY = mY;
+
+        window.addEventListener('mousemove', (e) => {
+            mX = e.clientX;
+            mY = e.clientY;
+            cursorDot.style.left = `${mX}px`;
+            cursorDot.style.top = `${mY}px`;
+        });
+
+        // Loop de animação do anel externo com easing premium de 0.15
+        function animateGlowRing() {
+            const ease = 0.14;
+            gX += (mX - gX) * ease;
+            gY += (mY - gY) * ease;
+            cursorGlow.style.left = `${gX}px`;
+            cursorGlow.style.top = `${gY}px`;
+            requestAnimationFrame(animateGlowRing);
+        }
+        animateGlowRing();
+
+        // Configurar os detectores de hover em elementos clicáveis
+        function setupCursorHoverEffects() {
+            const items = document.querySelectorAll('a, button, .btn, .social-icon, .carousel-item, .card, .pombagira-card, .faq-question');
+            items.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursorDot.classList.add('hovered');
+                    cursorGlow.classList.add('hovered');
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursorDot.classList.remove('hovered');
+                    cursorGlow.classList.remove('hovered');
+                });
+            });
+        }
+        setupCursorHoverEffects();
+
+        // Opcional: Re-executar setup de cursor em elementos dinâmicos após filtragem
+        const searchInput = document.getElementById('searchQuery');
+        if (searchInput) {
+            searchInput.addEventListener('input', () => {
+                setTimeout(setupCursorHoverEffects, 100);
+            });
+        }
+    }
+
+    // 2. Create and inject Scroll Progress Bar
+    const progressBar = document.createElement('div');
+    progressBar.className = 'scroll-progress-bar';
+    document.body.appendChild(progressBar);
+
+    // 3. Scroll Listener: Progress + Up/Down direction background morphing
+    let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+    window.addEventListener('scroll', () => {
+        const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // A. Update scroll progress width
+        const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        if (totalHeight > 0) {
+            const scrolledPct = (currentScrollY / totalHeight) * 100;
+            progressBar.style.width = `${scrolledPct}%`;
+        }
+
+        // B. Dynamic morph direction classes
+        if (currentScrollY > lastScrollY) {
+            // Scrolling Down
+            document.body.classList.remove('scrolling-up');
+            document.body.classList.add('scrolling-down');
+        } else if (currentScrollY < lastScrollY) {
+            // Scrolling Up
+            document.body.classList.remove('scrolling-down');
+            document.body.classList.add('scrolling-up');
+        }
+
+        // Clean transition back to neutral at the absolute top
+        if (currentScrollY <= 10) {
+            document.body.classList.remove('scrolling-down', 'scrolling-up');
+        }
+
+        lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
+    });
+
+    // ==========================================================================
+    // PREMIUM BRAND STAMP VIP CLICK MIMO
+    // ==========================================================================
+    const brandStamp = document.querySelector('.hero-brand-stamp');
+    if (brandStamp) {
+        brandStamp.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+
+            // 1. Efeito 3D e Glow no próprio Selo
+            brandStamp.classList.remove('logo-vip-active');
+            void brandStamp.offsetWidth; // Força reflow do DOM para reiniciar animação CSS
+            brandStamp.classList.add('logo-vip-active');
+
+            // 2. Shimmer metálico no título H1 do Hero
+            const heroTitle = document.querySelector('.hero h1');
+            if (heroTitle) {
+                heroTitle.classList.remove('title-vip-shimmer');
+                void heroTitle.offsetWidth; // Força reflow
+                heroTitle.classList.add('title-vip-shimmer');
+            }
+
+            // 3. Onda de Choque (Shockwave Ripple) expandindo a partir do clique
+            const heroSection = document.querySelector('.hero');
+            if (heroSection) {
+                const ripple = document.createElement('div');
+                ripple.className = 'hero-ripple-shockwave';
+                
+                const rect = heroSection.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                ripple.style.left = `${x}px`;
+                ripple.style.top = `${y}px`;
+                
+                heroSection.appendChild(ripple);
+                setTimeout(() => ripple.remove(), 1200);
+            }
+
+            // 4. Explosão de Partículas (Canvas Spark Burst)
+            triggerMysticParticleBurst(e.clientX, e.clientY);
+        });
+    }
+
+    function triggerMysticParticleBurst(clickX, clickY) {
+        const canvas = document.createElement('canvas');
+        canvas.style.position = 'fixed';
+        canvas.style.top = '0';
+        canvas.style.left = '0';
+        canvas.style.width = '100vw';
+        canvas.style.height = '100vh';
+        canvas.style.pointerEvents = 'none';
+        canvas.style.zIndex = '99999';
+        document.body.appendChild(canvas);
+
+        const ctx = canvas.getContext('2d');
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }, { passive: true });
+
+        const particles = [];
+        // Cores da paleta (Creme Quente, Latão/Gold, Oxblood, Rosa-Místico, Escarlate)
+        const colors = [
+            'rgba(250, 246, 238, opacity)', // Creme Quente
+            'rgba(197, 160, 89, opacity)',  // Latão/Gold
+            'rgba(74, 14, 23, opacity)',    // Oxblood
+            'rgba(255, 77, 109, opacity)',  // Rosa-Místico
+            'rgba(217, 4, 41, opacity)'     // Escarlate
+        ];
+
+        // Cria 65 fagulhas
+        const particleCount = 65;
+        for (let i = 0; i < particleCount; i++) {
+            const angle = Math.random() * Math.PI * 2;
+            const velocity = 3 + Math.random() * 9;
+            
+            particles.push({
+                x: clickX,
+                y: clickY,
+                vx: Math.cos(angle) * velocity,
+                vy: Math.sin(angle) * velocity - (Math.random() * 1.5),
+                size: 2 + Math.random() * 4,
+                color: colors[Math.floor(Math.random() * colors.length)],
+                opacity: 0.95,
+                decay: 0.012 + Math.random() * 0.018,
+                gravity: 0.04,
+                friction: 0.955,
+                glow: 6 + Math.random() * 12
+            });
+        }
+
+        function animate() {
+            if (particles.length === 0) {
+                canvas.remove();
+                return;
+            }
+
+            ctx.clearRect(0, 0, width, height);
+            ctx.globalCompositeOperation = 'screen';
+
+            for (let i = particles.length - 1; i >= 0; i--) {
+                const p = particles[i];
+                
+                p.vx *= p.friction;
+                p.vy *= p.friction;
+                p.vy += p.gravity;
+                p.vy -= 0.035; // Flutuabilidade térmica
+
+                p.x += p.vx;
+                p.y += p.vy;
+                p.opacity -= p.decay;
+
+                if (p.opacity <= 0) {
+                    particles.splice(i, 1);
+                    continue;
+                }
+
+                ctx.save();
+                ctx.shadowBlur = p.glow;
+                ctx.shadowColor = p.color.replace('opacity', p.opacity.toFixed(2));
+                ctx.fillStyle = p.color.replace('opacity', p.opacity.toFixed(2));
+                
+                ctx.beginPath();
+                if (Math.random() > 0.45) {
+                    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                } else {
+                    // Diamante místico cintilante
+                    ctx.moveTo(p.x, p.y - p.size);
+                    ctx.lineTo(p.x + p.size, p.y);
+                    ctx.lineTo(p.x, p.y + p.size);
+                    ctx.lineTo(p.x - p.size, p.y);
+                    ctx.closePath();
+                }
+                ctx.fill();
+                ctx.restore();
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    }
+    // ==========================================================================
+    // TRANSIÇÃO DE ABAS INTELIGENTE A PARTIR DE ÂNCORAS DO RODAPÉ
+    // ==========================================================================
+    function activateTabFromAnchor(targetId) {
+        const tabBtn = document.querySelector(`.nav-tab[data-target="${targetId}"]`);
+        if (tabBtn) {
+            document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            
+            tabBtn.classList.add('active');
+            const targetContent = document.getElementById(targetId);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+            
+            const eduSection = document.getElementById('educativo');
+            if (eduSection) {
+                eduSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const hash = this.getAttribute('href');
+            if (hash && hash.length > 1) {
+                const targetId = hash.substring(1);
+                const isTab = ['glossario', 'curiosidades', 'faq', 'pombagiras', 'chico', 'bibliografia', 'cosmovisoes'].includes(targetId);
+                if (isTab) {
+                    e.preventDefault();
+                    activateTabFromAnchor(targetId);
+                }
+            }
+        });
+    });
+
+    if (window.location.hash) {
+        const hash = window.location.hash.substring(1);
+        if (['glossario', 'curiosidades', 'faq', 'pombagiras', 'chico', 'bibliografia', 'cosmovisoes'].includes(hash)) {
+            setTimeout(() => activateTabFromAnchor(hash), 300);
+        }
+    }
 });

@@ -478,7 +478,234 @@
 
         @keyframes modalIn { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
-    </style>
+
+        /* ==========================================================================
+           REMODELAGEM DE NEWSLETTER & RODAPÉ PREMIUM (MOBILE)
+           ========================================================================== */
+        .newsletter-section {
+            padding: 60px 16px;
+            text-align: center;
+            background: radial-gradient(ellipse at center, rgba(139, 30, 92, 0.15) 0%, transparent 85%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .newsletter-glass-card {
+            max-width: 100%;
+            margin: 0 auto;
+            background: rgba(10, 2, 4, 0.7);
+            border: 1px solid rgba(197, 160, 89, 0.16);
+            border-radius: 20px;
+            padding: 40px 20px;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7), inset 0 0 20px rgba(197, 160, 89, 0.04);
+            position: relative;
+            z-index: 2;
+        }
+
+        .newsletter-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(197, 160, 89, 0.08);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            color: var(--accent);
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            letter-spacing: 1.5px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+
+        .newsletter-badge i {
+            font-size: 0.75rem;
+            animation: floatFeatherMobile 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes floatFeatherMobile {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(-4px) rotate(8deg); }
+        }
+
+        .newsletter-title {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 50%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .newsletter-quote {
+            margin: 0 auto 20px;
+            opacity: 0.9;
+            font-weight: 300;
+            font-size: 0.95rem;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        .newsletter-meta {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .newsletter-meta span {
+            font-size: 0.75rem;
+            color: var(--warm-cream);
+            opacity: 0.85;
+            background: rgba(255,255,255,0.03);
+            padding: 5px 12px;
+            border-radius: 30px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .newsletter-btn-link {
+            background: linear-gradient(135deg, var(--secondary) 0%, #2e060d 100%) !important;
+            border: 1px solid rgba(197, 160, 89, 0.35) !important;
+            color: var(--warm-cream) !important;
+            padding: 12px 28px !important;
+            border-radius: 50px !important;
+            font-size: 0.88rem !important;
+            letter-spacing: 1px !important;
+            font-weight: 500 !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Footer Mobile */
+        footer.main-footer {
+            padding: 60px 16px 40px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            background: linear-gradient(to bottom, rgba(5, 1, 4, 0.98), #050104);
+        }
+
+        .footer-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+        }
+
+        footer.main-footer .footer-logo-title {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            color: var(--secondary);
+            letter-spacing: 2px;
+            text-shadow: 0 0 15px rgba(217, 4, 41, 0.3);
+            line-height: 1.2;
+        }
+
+        footer.main-footer .footer-subtitle {
+            display: block;
+            font-size: 0.65rem;
+            letter-spacing: 3px;
+            color: var(--accent);
+            margin-top: 4px;
+        }
+
+        .footer-bio {
+            font-size: 0.8rem;
+            line-height: 1.5;
+            color: var(--warm-cream);
+            opacity: 0.6;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+
+        .footer-col-title {
+            font-size: 1.15rem;
+            color: var(--accent);
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+            position: relative;
+            padding-bottom: 8px;
+            display: inline-block;
+            align-self: center;
+        }
+
+        .footer-col-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 25px;
+            height: 1px;
+            background: var(--accent);
+        }
+
+        .footer-nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .footer-nav-links a {
+            color: var(--warm-cream);
+            opacity: 0.7;
+            font-size: 0.82rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social-desc {
+            font-size: 0.8rem;
+            color: var(--warm-cream);
+            opacity: 0.6;
+            margin-bottom: 16px;
+            font-weight: 300;
+        }
+
+        /* Circular Social Circles on Mobile */
+        footer.main-footer .footer-links-container {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        footer.main-footer .footer-links-container .social-circle {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(197, 160, 89, 0.16);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--warm-cream);
+            font-size: 1.05rem;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        footer.main-footer .footer-links-container .social-circle i {
+            font-size: 1.1rem;
+        }
+    
+.footer-nav-links a i {
+    color: var(--accent);
+    margin-right: 6px;
+    font-size: 0.85rem;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+}
+
+.footer-nav-links a:hover i {
+    transform: rotate(-12deg) scale(1.15);
+    color: var(--primary);
+}
+</style>
 </head>
 <body>
 
@@ -501,15 +728,17 @@
     </nav>
 
     <section class="hero" id="home" aria-labelledby="hero-heading">
-        <video class="hero-video" autoplay loop muted playsinline poster="https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Ogimage%20e%20Twitter%20Card.png" aria-hidden="true">
-            <source src="https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/SEM%20SOM%2016M.mp4" type="video/mp4">
+        <video class="hero-video" autoplay loop muted playsinline poster="https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/VidVelas.mp4" aria-hidden="true">
+            <source src="https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/VidVelas.mp4" type="video/mp4">
         </video>
+        <div class="hero-brand-stamp" aria-hidden="true">
+            <img src="https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/LogoVip%20(1).png" alt="Selo de Qualidade Pombagiras.com">
+        </div>
         <div class="hero-content">
             <h1 id="hero-heading">Pombagiras.com</h1>
             <p class="subtitle">Educação e criação digital a serviço das tradições afro-brasileiras. Um mergulho profundo na sabedoria das guardiãs.</p>
             <div class="cta-group">
                 <a href="#educativo" class="btn btn-primary">Iniciar Jornada</a>
-                <a href="https://pombagiras.com/" class="btn btn-outline" target="_blank" rel="noopener"><i class="fa-solid fa-globe" aria-hidden="true"></i> Versão Web</a>
             </div>
         </div>
     </section>
@@ -1710,33 +1939,93 @@
     </main>
 
     <section class="newsletter-section" aria-labelledby="newsletter-heading">
-        <i class="fa-solid fa-feather" style="font-size: 2rem; color: var(--secondary); margin-bottom: 12px; display: inline-block;" aria-hidden="true"></i>
-        <h2 id="newsletter-heading" class="serif">Newsletter</h2>
-        <p style="font-style: italic; opacity: 0.9; margin-bottom: 16px;">
-            "Quem tem guardiã da calunga nunca anda desacompanhado"
-        </p>
-        <p style="font-size: 0.85rem; opacity: 0.6;"> Textos, reflexões e novidades do maior portal sobre Pombagiras..</p>
-        <a href="https://alexiamelusine.substack.com/" class="btn btn-primary" target="_blank" rel="noopener" style="margin-top: 15px; display: inline-block;">
-            <i class="fa-brands fa-substack" aria-hidden="true"></i> Inscreva-se no Substack
-        </a>
+        <div class="newsletter-glow-1"></div>
+        <div class="newsletter-glow-2"></div>
+        
+        <div class="newsletter-glass-card">
+            <div class="newsletter-badge">
+                <i class="fa-solid fa-feather" aria-hidden="true"></i>
+                <span>Escritos Abissais</span>
+            </div>
+            <h2 id="newsletter-heading" class="serif newsletter-title">Newsletter</h2>
+            
+            <p class="newsletter-quote">
+                "Quem tem uma pombagira, tem uma rainha, uma guardiã e uma força que nunca te deixa andar só."
+            </p>
+            
+            <div class="newsletter-meta">
+                <span>📜 Textos</span>
+                <span>✍️ Substack</span>
+                <span>🗝️ Ritos</span>
+            </div>
+            
+            <p class="newsletter-desc" style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 25px; font-weight: 300;">
+                Receba textos exclusivos, rituais modernos de conexão e reflexões profundas sobre as Guardiãs diretamente no seu e-mail.
+            </p>
+            
+            <a href="https://alexiamelusine.substack.com/" class="btn btn-primary newsletter-btn-link" target="_blank" rel="noopener">
+                <i class="fa-brands fa-substack" aria-hidden="true"></i> <span>Inscreva-se no Substack</span>
+            </a>
+        </div>
     </section>
 
-    <footer aria-label="Informações de Rodapé">
-        <div class="footer-logo serif">
-            Alexia Melusine
-            <span>ROSA DE FOGO • LUZ DE FERRO</span>
+    <footer class="main-footer" role="contentinfo" aria-label="Informações de Rodapé">
+        <div class="footer-grid">
+            <div class="footer-col footer-col-identity">
+                <div class="footer-logo-title serif">
+                    Alexia Melusine
+                    <span class="footer-subtitle">ROSA DE FOGO • LUZ DE FERRO</span>
+                </div>
+                <p class="footer-bio">
+                    Escritora, pesquisadora e guardiã digital dedicada à desmistificação e honra às Pombagiras na era moderna.
+                </p>
+            </div>
+            
+            <div class="footer-col footer-col-nav">
+                <h3 class="footer-col-title serif">Navegação</h3>
+                <ul class="footer-nav-links">
+                    <li><a href="#home"><i class="fa-solid fa-house" aria-hidden="true"></i> Início</a></li>
+                    <li><a href="#educativo"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Biblioteca</a></li>
+                    <li><a href="#faq"><i class="fa-solid fa-comments" aria-hidden="true"></i> Perguntas</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col footer-col-social">
+                <h3 class="footer-col-title serif">Conexão</h3>
+                <div class="footer-links-container">
+                    <a href="https://www.youtube.com/@almasdepombagira" target="_blank" rel="noopener" aria-label="YouTube" class="social-circle">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.instagram.com/almasdepombagira/" target="_blank" rel="noopener" aria-label="Instagram" class="social-circle">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@almasdepombagira" target="_blank" rel="noopener" aria-label="TikTok" class="social-circle">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://t.me/MarcadePombagira" target="_blank" rel="noopener" aria-label="Telegram" class="social-circle">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://pombagiras.com/whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-circle">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-        
-        <nav class="footer-links" aria-label="Redes Sociais">
-            <a href="https://www.youtube.com/@almasdepombagira" target="_blank" rel="noopener" aria-label="YouTube" style="color: #FF0000;"><i class="fab fa-youtube" aria-hidden="true"></i></a>
-            <a href="https://www.instagram.com/almasdepombagira/" target="_blank" rel="noopener" aria-label="Instagram" style="color: #E4405F;"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-            <a href="https://www.tiktok.com/@almasdepombagira" target="_blank" rel="noopener" aria-label="TikTok" style="color: #69C9D0;"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
-            <a href="https://t.me/pomba_giras" target="_blank" rel="noopener" aria-label="Telegram" style="color: #0088CC;"><i class="fab fa-telegram" aria-hidden="true"></i></a>
-            <a href="https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G" target="_blank" rel="noopener" aria-label="WhatsApp" style="color: #25D366;"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
-        </nav>
-        
-        <p class="copyright">🌹 ALL RIGHTS RESERVED © 2026 | @ALMASDEPOMBAGIRA 🌹</p>
+
+        <div class="footer-divider-container" style="margin: 40px 0 25px;">
+            <hr class="section-divider">
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-copyright" style="font-size: 0.7rem; opacity: 0.5; margin-bottom: 12px; letter-spacing: 2px;">
+                🌹 ALL RIGHTS RESERVED © 2026 | @ALMASDEPOMBAGIRA 🌹
+            </p>
+            <div class="footer-signature" style="font-size: 0.7rem; opacity: 0.5; display: inline-flex; align-items: center; gap: 5px;">
+                <i class="fa-solid fa-skull-crossbones" style="color: var(--accent);" aria-hidden="true"></i> Na encruzilhada do código e do sagrado
+            </div>
+        </div>
     </footer>
+
 
     <div class="modal" id="pombagiraModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <div class="modal-content">
@@ -2001,6 +2290,55 @@
                 }
             }
         }, { passive: true });
+        // ==========================================================================
+        // TRANSIÇÃO DE ABAS INTELIGENTE A PARTIR DE ÂNCORAS DO RODAPÉ (MOBILE)
+        // ==========================================================================
+        function activateMobileTabFromAnchor(targetId) {
+            const tabBtn = document.querySelector(`.nav-tab[data-target="${targetId}"]`);
+            if (tabBtn) {
+                document.querySelectorAll('.nav-tab').forEach(t => {
+                    t.classList.remove('active');
+                    t.setAttribute('aria-selected', 'false');
+                    t.setAttribute('tabindex', '-1');
+                });
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                tabBtn.classList.add('active');
+                tabBtn.setAttribute('aria-selected', 'true');
+                tabBtn.setAttribute('tabindex', '0');
+                
+                const targetContent = document.getElementById(targetId);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+                
+                const eduSection = document.getElementById('educativo');
+                if (eduSection) {
+                    eduSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const hash = this.getAttribute('href');
+                if (hash && hash.length > 1) {
+                    const targetId = hash.substring(1);
+                    const isTab = ['glossario', 'curiosidades', 'faq', 'pombagiras', 'chico', 'bibliografia', 'cosmovisoes'].includes(targetId);
+                    if (isTab) {
+                        e.preventDefault();
+                        activateMobileTabFromAnchor(targetId);
+                    }
+                }
+            });
+        });
+
+        if (window.location.hash) {
+            const hash = window.location.hash.substring(1);
+            if (['glossario', 'curiosidades', 'faq', 'pombagiras', 'chico', 'bibliografia', 'cosmovisoes'].includes(hash)) {
+                setTimeout(() => activateMobileTabFromAnchor(hash), 300);
+            }
+        }
     </script>
 </body>
 </html>

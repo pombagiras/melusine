@@ -3,14 +3,15 @@ html {
 }
 
 :root {
-    --primary: #8b1e5c;
-    --secondary: #d90429;
-    --accent: #c79a2e;
-    --bg-dark: #0a0108;
-    --bg-card: rgba(25, 10, 20, 0.7);
-    --text-light: #f5f0ff;
-    --glass: rgba(255, 255, 255, 0.03);
-    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --primary: #4A0E17;
+    --secondary: #800020;
+    --accent: #C5A059;
+    --bg-dark: #050505;
+    --bg-card: rgba(47, 62, 70, 0.12);
+    --text-light: #FAF6EE;
+    --slate-gray: #2F3E46;
+    --glass: rgba(255, 255, 255, 0.02);
+    --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 * {
@@ -21,14 +22,16 @@ html {
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Geist', sans-serif;
     background-color: var(--bg-dark);
     color: var(--text-light);
     line-height: 1.6;
     overflow-x: hidden;
     background-image:
-        radial-gradient(circle at 20% 30%, rgba(139, 30, 92, 0.15) 0%, transparent 40%),
-        radial-gradient(circle at 80% 70%, rgba(217, 4, 41, 0.1) 0%, transparent 40%);
+        radial-gradient(circle at 20% 30%, rgba(74, 14, 23, 0.22) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(47, 62, 70, 0.15) 0%, transparent 50%);
+    background-attachment: fixed;
+    transition: background-image 1.2s ease;
 }
 
 ::-webkit-scrollbar {
@@ -49,7 +52,7 @@ h2,
 h3,
 h4,
 .serif {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Fraunces', serif;
 }
 
 /* Floating Social Menu */
@@ -119,7 +122,58 @@ h4,
     height: 100%;
     z-index: -1;
     object-fit: cover;
-    opacity: 0.6;
+    opacity: 0.35; /* Dark state default */
+    filter: brightness(0.4) contrast(1.1) blur(0.5px);
+    transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hover reveal effect */
+.hero:hover .hero-video {
+    opacity: 0.75; /* Clear and bright state on hover */
+    filter: brightness(0.9) contrast(1.2) blur(0px);
+}
+
+/* Selo de marca premium cobrindo a marca d'água do Gemini */
+.hero-brand-stamp {
+    position: absolute;
+    bottom: 28px;
+    right: 28px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(5, 5, 5, 0.65);
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), inset 0 0 12px rgba(197, 160, 89, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    opacity: 0.45;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.hero-brand-stamp img {
+    width: 65%;
+    height: 65%;
+    object-fit: contain;
+    filter: brightness(1) contrast(1.05) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Efeito Hover Interativo no Selo */
+.hero-brand-stamp:hover {
+    opacity: 0.95;
+    border-color: rgba(197, 160, 89, 0.85);
+    transform: scale(1.12) rotate(8deg);
+    box-shadow: 0 8px 30px rgba(197, 160, 89, 0.4), inset 0 0 15px rgba(197, 160, 89, 0.25);
+}
+
+.hero-brand-stamp:hover img {
+    transform: scale(1.1);
 }
 
 .hero h1 {
@@ -645,18 +699,57 @@ h4,
     pointer-events: none;
 }
 
-.newsletter-icon {
-    font-size: 3rem;
-    color: var(--secondary);
-    opacity: 0.6;
+/* Glassmorphism Card para a Newsletter */
+.newsletter-glass-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(10, 2, 4, 0.65);
+    border: 1px solid rgba(197, 160, 89, 0.16);
+    border-radius: 24px;
+    padding: 60px 40px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), inset 0 0 30px rgba(197, 160, 89, 0.04);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    z-index: 2;
+}
+
+.newsletter-glass-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(197, 160, 89, 0.45);
+    box-shadow: 0 30px 60px rgba(74, 14, 23, 0.25), 0 0 40px rgba(197, 160, 89, 0.1), inset 0 0 30px rgba(197, 160, 89, 0.08);
+}
+
+.newsletter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(197, 160, 89, 0.1);
+    border: 1px solid rgba(197, 160, 89, 0.25);
+    color: var(--accent);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
     margin-bottom: 20px;
-    display: inline-block;
+    text-transform: uppercase;
+}
+
+.newsletter-badge i {
+    font-size: 0.85rem;
+    animation: floatFeather 3s ease-in-out infinite alternate;
+}
+
+@keyframes floatFeather {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(-4px) rotate(8deg); }
 }
 
 .newsletter-title {
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 6vw, 3.5rem);
     margin-bottom: 20px;
-    background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+    background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 50%, var(--secondary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -667,8 +760,9 @@ h4,
     margin: 0 auto 25px;
     opacity: 0.9;
     font-weight: 300;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-style: italic;
+    line-height: 1.5;
 }
 
 .newsletter-quote i {
@@ -683,96 +777,279 @@ h4,
     margin-left: 8px;
 }
 
+.newsletter-meta {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.newsletter-meta span {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    color: var(--warm-cream);
+    opacity: 0.85;
+    background: rgba(255,255,255,0.03);
+    padding: 6px 16px;
+    border-radius: 30px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
 .newsletter-desc {
     max-width: 550px;
     margin: 0 auto 40px;
     opacity: 0.7;
     font-weight: 300;
     font-size: 0.9rem;
+    line-height: 1.6;
 }
 
+/* Remodelagem do Botão do Substack */
 .newsletter-btn-link {
+    background: linear-gradient(135deg, var(--secondary) 0%, #2e060d 100%) !important;
+    border: 1px solid rgba(197, 160, 89, 0.4) !important;
+    color: var(--warm-cream) !important;
+    padding: 14px 35px !important;
+    border-radius: 50px !important;
+    font-size: 0.95rem !important;
+    letter-spacing: 1.5px !important;
+    font-weight: 500 !important;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(197, 160, 89, 0.05) !important;
+    position: relative;
+    overflow: hidden;
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
+}
+
+.newsletter-btn-link::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 20%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(250, 246, 238, 0.15), transparent);
+    transform: skewX(-25deg);
+    transition: 0.75s;
+}
+
+.newsletter-btn-link:hover::after {
+    left: 150%;
+    transition: 0.75s ease-in-out;
+}
+
+.newsletter-btn-link:hover {
+    transform: scale(1.04) translateY(-2px) !important;
+    border-color: var(--accent) !important;
+    box-shadow: 0 8px 25px rgba(197, 160, 89, 0.3), inset 0 0 15px rgba(197, 160, 89, 0.15) !important;
 }
 
 /* Footer Section */
 footer.main-footer {
-    padding: 80px 20px 60px;
+    padding: 85px 20px 60px;
     text-align: center;
-    border-top: 1px solid rgba(255,255,255,0.05);
-    background: linear-gradient(to bottom, rgba(5, 1, 4, 0.95), #050104);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background: linear-gradient(to bottom, rgba(5, 1, 4, 0.98), #050104);
     position: relative;
 }
 
+/* Footer Grid */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+}
+
 footer.main-footer .footer-logo-title {
-    font-size: 2.5rem;
-    margin-bottom: 25px;
+    font-size: 2.3rem;
+    margin-bottom: 15px;
     color: var(--secondary);
     letter-spacing: 3px;
-    text-shadow: 0 0 20px rgba(217, 4, 41, 0.3);
+    text-shadow: 0 0 20px rgba(217, 4, 41, 0.35);
+    line-height: 1.2;
 }
 
 footer.main-footer .footer-subtitle {
     display: block;
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     letter-spacing: 4px;
     color: var(--accent);
-    margin-top: 5px;
+    margin-top: 6px;
 }
 
+.footer-bio {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--warm-cream);
+    opacity: 0.65;
+    margin-top: 15px;
+    max-width: 400px;
+    font-weight: 300;
+}
+
+.footer-col-title {
+    font-size: 1.3rem;
+    color: var(--accent);
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-col-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 35px;
+    height: 1px;
+    background: var(--accent);
+}
+
+.footer-nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-nav-links a {
+    color: var(--warm-cream);
+    opacity: 0.7;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.footer-nav-links a:hover {
+    color: var(--accent);
+    opacity: 1;
+    transform: translateX(4px);
+}
+
+.footer-social-desc {
+    font-size: 0.85rem;
+    color: var(--warm-cream);
+    opacity: 0.65;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+/* Social Media Circular Buttons */
 footer.main-footer .footer-links-container {
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 45px;
+    gap: 14px !important;
+    margin-bottom: 0 !important;
+    justify-content: flex-start !important;
     flex-wrap: wrap;
 }
 
-footer.main-footer .footer-links-container a {
-    transition: var(--transition);
-    font-size: 1.8rem;
-    display: inline-block;
+footer.main-footer .footer-links-container .social-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(197, 160, 89, 0.16);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--warm-cream);
+    font-size: 1.15rem !important;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-footer.main-footer .footer-links-container a:hover {
-    transform: translateY(-5px);
+footer.main-footer .footer-links-container .social-circle:hover {
+    transform: translateY(-4px) rotate(8deg) !important;
 }
 
-footer.main-footer .footer-links-container a[href*="whatsapp"] {
-    color: #25D366;
+footer.main-footer .footer-links-container a[href*="youtube"]:hover {
+    border-color: #FF0000 !important;
+    background: rgba(255, 0, 0, 0.05) !important;
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.25) !important;
+    color: #FF0000 !important;
 }
 
-footer.main-footer .footer-links-container a[href*="telegram"] {
-    color: #0088CC;
+footer.main-footer .footer-links-container a[href*="instagram"]:hover {
+    border-color: #E4405F !important;
+    background: rgba(228, 64, 95, 0.05) !important;
+    box-shadow: 0 6px 20px rgba(228, 64, 95, 0.25) !important;
+    color: #E4405F !important;
 }
 
-footer.main-footer .footer-links-container a[href*="tiktok"] {
-    color: #69C9D0;
+footer.main-footer .footer-links-container a[href*="tiktok"]:hover {
+    border-color: #69C9D0 !important;
+    background: rgba(105, 201, 208, 0.05) !important;
+    box-shadow: 0 6px 20px rgba(105, 201, 208, 0.25) !important;
+    color: #69C9D0 !important;
 }
 
-footer.main-footer .footer-links-container a[href*="youtube"] {
-    color: #FF0000;
+footer.main-footer .footer-links-container a[href*="telegram"]:hover {
+    border-color: #0088CC !important;
+    background: rgba(0, 136, 204, 0.05) !important;
+    box-shadow: 0 6px 20px rgba(0, 136, 204, 0.25) !important;
+    color: #0088CC !important;
 }
 
-footer.main-footer .footer-links-container a[href*="instagram"] {
-    color: #E4405F;
+footer.main-footer .footer-links-container a[href*="whatsapp"]:hover {
+    border-color: #25D366 !important;
+    background: rgba(37, 211, 102, 0.05) !important;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.25) !important;
+    color: #25D366 !important;
+}
+
+/* Footer Bottom Layout */
+.footer-divider-container {
+    margin: 50px 0 35px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 footer.main-footer .footer-copyright {
-    font-size: 0.75rem;
-    opacity: 0.5;
-    letter-spacing: 3px;
+    margin-bottom: 0 !important;
+    font-size: 0.72rem;
+    opacity: 0.45;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 25px;
 }
 
 footer.main-footer .footer-signature {
-    margin-top: 40px;
-    font-size: 0.65rem;
-    opacity: 0.3;
+    margin-top: 0 !important;
+    font-size: 0.72rem;
+    opacity: 0.45;
+    color: var(--warm-cream);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     letter-spacing: 1px;
+}
+
+footer.main-footer .footer-signature i {
+    color: var(--accent);
+    text-shadow: 0 0 10px rgba(197, 160, 89, 0.6);
 }
 
 @keyframes modalIn {
@@ -1075,4 +1352,218 @@ footer.main-footer .footer-signature {
         padding: 6px 14px;
         font-size: 0.75rem;
     }
+}
+
+/* ==========================================================================
+   PREMIUM CUSTOM INTERACTIVE CURSOR & PULSING EFFECTS
+   ========================================================================== */
+
+/* Cursor Follower - Desativado em toque por pointer: fine */
+@media (pointer: fine) {
+    .custom-cursor-dot {
+        width: 8px;
+        height: 8px;
+        background-color: var(--accent); /* Latão */
+        border-radius: 50%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        z-index: 999999;
+        transition: width 0.2s, height 0.2s, background-color 0.2s;
+    }
+    .custom-cursor-glow {
+        width: 32px;
+        height: 32px;
+        border: 1px solid var(--secondary); /* Oxblood */
+        background-color: rgba(74, 14, 23, 0.04);
+        border-radius: 50%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        z-index: 999998;
+        transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s, background-color 0.3s;
+        will-change: top, left;
+    }
+    /* Hovered states */
+    .custom-cursor-dot.hovered {
+        width: 12px;
+        height: 12px;
+        background-color: var(--secondary); /* Oxblood */
+    }
+    .custom-cursor-glow.hovered {
+        width: 65px;
+        height: 65px;
+        border-color: var(--accent); /* Latão */
+        background-color: rgba(197, 160, 89, 0.08); /* Latão Glow */
+        box-shadow: 0 0 20px rgba(197, 160, 89, 0.3);
+    }
+}
+
+/* Pulsing Scroll Progress Indicator Bar */
+.scroll-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent) 0%, var(--secondary) 50%, var(--accent) 100%);
+    background-size: 200% auto;
+    z-index: 9999999;
+    width: 0%;
+    box-shadow: 0 0 10px rgba(197, 160, 89, 0.8), 0 0 20px rgba(128, 0, 32, 0.6);
+    animation: pulseGradient 4s linear infinite;
+    will-change: width;
+}
+
+@keyframes pulseGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Glowing, Pulsing Horizontal Dividers */
+.section-divider, hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0.8;
+    box-shadow: 0 0 8px rgba(197, 160, 89, 0.4);
+    animation: pulseDivider 4s ease-in-out infinite alternate;
+}
+
+@keyframes pulseDivider {
+    0% {
+        opacity: 0.3;
+        box-shadow: 0 0 4px rgba(197, 160, 89, 0.1);
+        background: linear-gradient(90deg, transparent, var(--slate-gray), transparent);
+    }
+    100% {
+        opacity: 0.9;
+        box-shadow: 0 0 12px rgba(197, 160, 89, 0.6);
+        background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    }
+}
+
+/* Card Glow modifications */
+.card:hover, .carousel-item:hover {
+    box-shadow: 0 15px 40px rgba(74, 14, 23, 0.4), 0 0 25px rgba(197, 160, 89, 0.15) !important;
+}
+
+/* Scrolling Gradient Directions */
+body.scrolling-down {
+    background-image:
+        radial-gradient(circle at 15% 20%, rgba(74, 14, 23, 0.25) 0%, transparent 55%),
+        radial-gradient(circle at 85% 80%, rgba(47, 62, 70, 0.18) 0%, transparent 55%) !important;
+}
+body.scrolling-up {
+    background-image:
+        radial-gradient(circle at 25% 25%, rgba(47, 62, 70, 0.25) 0%, transparent 55%),
+        radial-gradient(circle at 75% 75%, rgba(74, 14, 23, 0.18) 0%, transparent 55%) !important;
+}
+
+/* ==========================================================================
+   EFEITOS PREMIUM DE CLIQUE VIP (MIMO)
+   ========================================================================== */
+
+/* 1. Giro 3D e Glow para o Selo */
+@keyframes logoVip3DFlipping {
+    0% {
+        transform: scale(1) rotate(0deg);
+        filter: brightness(1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    }
+    15% {
+        transform: scale(0.85) rotate(-12deg);
+        filter: brightness(1.25) drop-shadow(0 0 10px rgba(197, 160, 89, 0.5));
+    }
+    45% {
+        transform: scale(1.25) rotate(360deg);
+        filter: brightness(1.65) drop-shadow(0 0 25px rgba(197, 160, 89, 0.85));
+    }
+    70% {
+        transform: scale(1.08) rotate(368deg);
+        filter: brightness(1.25) drop-shadow(0 0 12px rgba(197, 160, 89, 0.45));
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+        filter: brightness(1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    }
+}
+
+.hero-brand-stamp.logo-vip-active {
+    animation: logoVip3DFlipping 1.0s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    border-color: rgba(197, 160, 89, 0.95) !important;
+    opacity: 0.95 !important;
+}
+
+/* 2. Shimmer de Reflexão Metálica Dourada para o H1 */
+@keyframes textVipMetallicSweep {
+    0% {
+        background-position: -200% center;
+        filter: drop-shadow(0 0 10px rgba(197, 160, 89, 0.2));
+    }
+    50% {
+        filter: drop-shadow(0 0 25px rgba(197, 160, 89, 0.6)) brightness(1.15);
+    }
+    100% {
+        background-position: 200% center;
+        filter: drop-shadow(0 0 10px rgba(197, 160, 89, 0.2));
+    }
+}
+
+.hero h1.title-vip-shimmer {
+    background: linear-gradient(
+        90deg,
+        #FAF6EE 0%,
+        #FAF6EE 35%,
+        #C5A059 45%,
+        #FAF6EE 55%,
+        #ff4d6d 75%,
+        #FAF6EE 100%
+    ) !important;
+    background-size: 200% auto !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    animation: textVipMetallicSweep 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+}
+
+/* 3. Onda de Choque Cinemática (Shockwave Ripple) */
+.hero-ripple-shockwave {
+    position: absolute;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 2px;
+    height: 2px;
+    border: 2px solid rgba(197, 160, 89, 0.55);
+    background: radial-gradient(circle, rgba(197, 160, 89, 0.1) 0%, rgba(74, 14, 23, 0.05) 50%, transparent 100%);
+    box-shadow: 0 0 15px rgba(197, 160, 89, 0.3), inset 0 0 10px rgba(197, 160, 89, 0.2);
+    pointer-events: none;
+    z-index: 2;
+    animation: shockwaveRipple 1.2s cubic-bezier(0.1, 0.8, 0.1, 1) forwards;
+}
+
+@keyframes shockwaveRipple {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(800);
+        opacity: 0;
+        border-color: rgba(74, 14, 23, 0);
+    }
+}
+
+.footer-nav-links a i {
+    color: var(--accent);
+    margin-right: 6px;
+    font-size: 0.85rem;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+}
+
+.footer-nav-links a:hover i {
+    transform: rotate(-12deg) scale(1.15);
+    color: var(--primary);
 }
