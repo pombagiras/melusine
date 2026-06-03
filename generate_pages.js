@@ -586,8 +586,18 @@ Object.keys(pombagirasData).forEach(key => {
           "@id": "https://pombagiras.com/#website",
           "url": "https://pombagiras.com/",
           "name": "Pombagiras.com",
+          "description": "A maior enciclopédia online sobre Pombagiras, Exus e tradições afro-brasileiras. +200 páginas de conteúdo sagrado.",
           "publisher": {
             "@id": "https://pombagiras.com/#organization"
+          },
+          "inLanguage": "pt-BR",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://pombagiras.com/?s={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
           }
         },
         {
@@ -598,13 +608,31 @@ Object.keys(pombagirasData).forEach(key => {
           "logo": {
             "@type": "ImageObject",
             "url": "https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Favicon%20%20Miniatura%20do%20Google.png"
-          }
+          },
+          "sameAs": [
+            "https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G",
+            "https://t.me/pomba_giras",
+            "https://discord.gg/gWZP8R7Dqu",
+            "https://open.spotify.com/show/0oeCL1QScD3v7dHeUvJjgJ",
+            "https://www.youtube.com/@almasdepombagira",
+            "https://www.instagram.com/almasdepombagira/",
+            "https://www.tiktok.com/@almasdepombagira",
+            "https://alexiamelusine.substack.com/"
+          ]
         },
         {
           "@type": "Person",
           "@id": "https://pombagiras.com/#author",
           "name": "Alexia Melusine",
-          "url": "https://pombagiras.com/alexiamelusine/"
+          "alternateName": ["Alexia Rosa de Fogo", "Alexia Luz de Ferro"],
+          "url": "https://pombagiras.com/alexiamelusine/",
+          "jobTitle": ["Desenvolvedora Web", "Diretora de Vídeo IA", "Engenheira de Prompt"],
+          "sameAs": [
+            "https://github.com/pombagiras",
+            "https://github.com/alexialuzdeferro",
+            "https://alexiamelusine.substack.com/"
+          ],
+          "knowsAbout": ["Pombagira", "Umbanda", "Quimbanda", "Candomblé", "Orixás", "Exu", "AI", "SEO Técnico"]
         },
         {
           "@type": "WebPage",
@@ -658,8 +686,13 @@ Object.keys(pombagirasData).forEach(key => {
           "publisher": {
             "@id": "https://pombagiras.com/#organization"
           },
-          "mainEntityOfPage": "https://pombagiras.com/guardias/${fileName}",
-          "inLanguage": "pt-BR"
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://pombagiras.com/guardias/${fileName}#webpage"
+          },
+          "inLanguage": "pt-BR",
+          "datePublished": "2026-06-03T14:00:00-03:00",
+          "dateModified": "2026-06-03T14:00:00-03:00"
         },
         {
           "@type": "FAQPage",
@@ -845,6 +878,7 @@ function updateSitemap() {
         { loc: 'https://pombagiras.com/portal/', priority: '0.80', changefreq: 'monthly' }
     ];
 
+    // Adiciona as páginas geradas sob /guardias/
     Object.keys(pombagirasData).forEach(key => {
         const file = normalizeFileName(key) + '.html';
         urls.push({
@@ -853,6 +887,21 @@ function updateSitemap() {
             changefreq: 'monthly'
         });
     });
+
+    // Adiciona dinamicamente as páginas estáticas sob /portal/
+    const portalDir = path.join(__dirname, 'portal');
+    if (fs.existsSync(portalDir)) {
+        const portalFiles = fs.readdirSync(portalDir);
+        portalFiles.forEach(file => {
+            if (path.extname(file).toLowerCase() === '.html' && file !== 'index.html' && file !== 'whatsapp.html') {
+                urls.push({
+                    loc: encodeURI(`https://pombagiras.com/portal/${file}`),
+                    priority: '0.70',
+                    changefreq: 'monthly'
+                });
+            }
+        });
+    }
 
     const currentDate = new Date().toISOString().split('T')[0];
 
@@ -875,7 +924,7 @@ ${urls.map(url => `
 `;
 
     fs.writeFileSync(sitemapPath, xml, 'utf-8');
-    console.log('Sitemap.xml atualizado dinamicamente com todas as 27 Guardiãs!');
+    console.log('Sitemap.xml atualizado dinamicamente com todas as 27 Guardiãs e subpáginas do Portal!');
 }
 
 updateSitemap();

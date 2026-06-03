@@ -234,63 +234,172 @@
     
     <!-- Schema.org e SEO de Autoridade -->
     <script type="application/ld+json">
-    { 
-        "@context": "https://schema.org", 
-        "@graph": [ 
-            { 
-                "@type": "Person", 
-                "@id": "https://pombagiras.com/#author", 
-                "name": "Alexia Melusine", 
-                "alternateName": ["Alexia Rosa de Fogo", "Alexia Luz de Ferro"], 
-                "jobTitle": ["Desenvolvedora Web", "Diretora de Vídeo IA", "Engenheira de Prompt"], 
-                "url": "https://pombagiras.com/", 
-                "sameAs": ["https://alexialuzdeferro.github.io/"] 
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://pombagiras.com/#author",
+          "name": "Alexia Melusine",
+          "alternateName": [
+            "Alexia Rosa de Fogo",
+            "Alexia Luz de Ferro"
+          ],
+          "url": "https://pombagiras.com/alexiamelusine/",
+          "jobTitle": [
+            "Desenvolvedora Web",
+            "Diretora de Vídeo IA",
+            "Engenheira de Prompt"
+          ],
+          "sameAs": [
+            "https://github.com/pombagiras",
+            "https://github.com/alexialuzdeferro",
+            "https://alexiamelusine.substack.com/"
+          ],
+          "knowsAbout": [
+            "Pombagira",
+            "Umbanda",
+            "Quimbanda",
+            "Candomblé",
+            "Orixás",
+            "Exu",
+            "AI",
+            "SEO Técnico"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pombagiras.com/#website",
+          "url": "https://pombagiras.com/",
+          "name": "Pombagiras.com",
+          "description": "A maior enciclopédia online sobre Pombagiras, Exus e tradições afro-brasileiras. +200 páginas de conteúdo sagrado.",
+          "publisher": {
+            "@id": "https://pombagiras.com/#organization"
+          },
+          "inLanguage": "pt-BR",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://pombagiras.com/?s={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://pombagiras.com/#organization",
+          "name": "Pombagiras.com",
+          "url": "https://pombagiras.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Favicon%20%20Miniatura%20do%20Google.png"
+          },
+          "sameAs": [
+            "https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G",
+            "https://t.me/pomba_giras",
+            "https://discord.gg/gWZP8R7Dqu",
+            "https://open.spotify.com/show/0oeCL1QScD3v7dHeUvJjgJ",
+            "https://www.youtube.com/@almasdepombagira",
+            "https://www.instagram.com/almasdepombagira/",
+            "https://www.tiktok.com/@almasdepombagira",
+            "https://alexiamelusine.substack.com/"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://pombagiras.com/portal/das-almas.html#webpage",
+          "url": "https://pombagiras.com/portal/das-almas.html",
+          "name": "Das Almas | POMBAGIRAS.COM",
+          "isPartOf": {
+            "@id": "https://pombagiras.com/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://pombagiras.com/portal/das-almas.html#breadcrumb"
+          },
+          "inLanguage": "pt-BR"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://pombagiras.com/portal/das-almas.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://pombagiras.com/"
             },
             {
-                "@type": "WebSite",
-                "@id": "https://pombagiras.com/#website",
-                "url": "https://pombagiras.com/",
-                "name": "POMBAGIRAS.COM",
-                "publisher": { "@id": "https://pombagiras.com/#author" }
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Portal",
+              "item": "https://pombagiras.com/portal/"
             },
             {
-                "@type": "ProfilePage",
-                "@id": "https://pombagiras.com/das-almas/#profile",
-                "name": "Das Almas",
-                "description": "Guia caridosa que atua no amparo aos espíritos recém-desencarnados, confortando-os no limiar astral.",
-                "isPartOf": { "@id": "https://pombagiras.com/#website" }
-            },
-            {
-                "@type": "FAQPage",
-                "@id": "https://pombagiras.com/das-almas/#faq",
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "Quem é a Pombagira Das Almas?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Das Almas é uma entidade de esquerda que trabalha sob as vibrações de Consolo & Passagem. Ela atua guia caridosa que atua no amparo aos espíritos recém-desencarnados, confortando-os no limiar astral."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Qual o significado de seu arquétipo na espiritualidade?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "O arquétipo de Das Almas representa autonomia espiritual, a quebra de correntes materiais e a soberania do indivíduo. Ela ensina que a beleza e a sabedoria residem no equilíbrio interna e na responsabilidade kármica."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Qual o papel dessa guardiã na vida prática?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Ela atua abrindo caminhos profissionais, desfazendo amarras, protegendo contra energias nocivas e estimulando a autoestima consciente e libertadora."
-                        }
-                    }
-                ]
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Das Almas",
+              "item": "https://pombagiras.com/portal/das-almas.html"
             }
-        ]
+          ]
+        },
+        {
+          "@type": "Article",
+          "@id": "https://pombagiras.com/portal/das-almas.html#article",
+          "isPartOf": {
+            "@id": "https://pombagiras.com/portal/das-almas.html#webpage"
+          },
+          "headline": "Estudo e Fundamentos sobre a Guardiã Das Almas",
+          "description": "Guia caridosa que atua no amparo aos espíritos recém-desencarnados, confortando-os no limiar astral.",
+          "image": "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_das_almas.png",
+          "author": {
+            "@id": "https://pombagiras.com/#author"
+          },
+          "publisher": {
+            "@id": "https://pombagiras.com/#organization"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://pombagiras.com/portal/das-almas.html#webpage"
+          },
+          "inLanguage": "pt-BR",
+          "datePublished": "2026-06-03T14:00:00-03:00",
+          "dateModified": "2026-06-03T14:00:00-03:00"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://pombagiras.com/portal/das-almas.html#faq",
+          "isPartOf": {
+            "@id": "https://pombagiras.com/portal/das-almas.html#webpage"
+          },
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Quem é a Pombagira Das Almas?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Das Almas é uma entidade de esquerda que trabalha sob as vibrações de Consolo & Passagem. Ela atua guia caridosa que atua no amparo aos espíritos recém-desencarnados, confortando-os no limiar astral."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Qual o significado de seu arquétipo na espiritualidade?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "O arquétipo de Das Almas representa autonomia espiritual, a quebra de correntes materiais e a soberania do indivíduo. Ela ensina que a beleza e a sabedoria residem no equilíbrio interna e na responsabilidade kármica."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Qual o papel dessa guardiã na vida prática?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ela atua abrindo caminhos profissionais, desfazendo amarras, protegendo contra energias nocivas e estimulando a autoestima consciente e libertadora."
+              }
+            }
+          ]
+        }
+      ]
     }
     </script>
 </head>
