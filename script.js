@@ -584,18 +584,6 @@ if (backToTopButton) {
 // Lógica de Busca e Filtros Facetados (SEO/UX)
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
-    // Injeção dinâmica do vídeo do Hero (Apenas para telas grandes, economizando banda no celular)
-    if (window.innerWidth > 768) {
-        const video = document.querySelector('.hero-video');
-        if (video) {
-            const source = document.createElement('source');
-            source.src = 'https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/VidVelas.mp4';
-            source.type = 'video/mp4';
-            video.appendChild(source);
-            video.load();
-        }
-    }
-
     const searchInput = document.getElementById('pombagiraSearchInput');
     const orixaButtons = document.querySelectorAll('#orixaFilters .filter-btn');
     const elementoButtons = document.querySelectorAll('#elementoFilters .filter-btn');
@@ -773,8 +761,8 @@ document.addEventListener('DOMContentLoaded', () => {
        PREMIUM INTERACTIVE CURSOR & SCROLL EFFECTS
        ========================================================================== */
 
-    // Check if device supports mouse hover
-    if (window.matchMedia('(pointer: fine)').matches) {
+    // Check if device supports mouse hover and screen is wide enough
+    if (window.matchMedia('(pointer: fine)').matches && window.innerWidth > 768) {
         // 1. Create and inject custom cursor elements
         const cursorDot = document.createElement('div');
         cursorDot.className = 'custom-cursor-dot';
