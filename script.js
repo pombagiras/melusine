@@ -681,16 +681,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const slideshowContainer = document.getElementById('heroSlideshow');
     if (slideshowContainer) {
         const slides = [
-            "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/RAINHAS%20(1).jpeg",
-            "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/RAINHAS%20(1).png",
             "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/RAINHAS%20(2).jpeg",
-            "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/RAINHAS%20(2).png",
-            "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/RAINHAS%20(3).jpeg",
             "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/RAINHAS%20(4).jpeg",
-            "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/RAINHAS%20(5).jpeg",
-            "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/RAINHAS%20(6).jpeg",
-            "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/RAINHAS%20(7).jpeg",
-            "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/RAINHAS%20(8).jpeg"
+            "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/RAINHAS%20(5).jpeg"
         ];
 
         // Injeta os slides restantes de forma dinâmica no DOM
