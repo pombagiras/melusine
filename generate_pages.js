@@ -818,7 +818,7 @@ Object.keys(pombagirasData).forEach(key => {
             <span class="footer-subtitle">ROSA DE FOGO • LUZ DE FERRO</span>
         </div>
         <p class="footer-copyright">
-            🌹 ALL RIGHTS RESERVED © 2026 | @ALMASDEPOMBAGIRA 🌹
+            ALL RIGHTS RESERVED © 2026 | @ALMASDEPOMBAGIRA
         </p>
     </footer>
 </body>

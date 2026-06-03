@@ -666,6 +666,41 @@ if (backToTopButton) {
 // Lógica de Busca e Filtros Facetados (SEO/UX)
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
+    // Slideshow de Background do Hero
+    const slideshowContainer = document.getElementById('heroSlideshow');
+    if (slideshowContainer) {
+        const slides = [
+            "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/RAINHAS%20(1).jpeg",
+            "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/RAINHAS%20(1).png",
+            "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/RAINHAS%20(2).jpeg",
+            "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/RAINHAS%20(2).png",
+            "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/RAINHAS%20(3).jpeg",
+            "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/RAINHAS%20(4).jpeg",
+            "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/RAINHAS%20(5).jpeg",
+            "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/RAINHAS%20(6).jpeg",
+            "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/RAINHAS%20(7).jpeg",
+            "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/RAINHAS%20(8).jpeg"
+        ];
+
+        // Injeta os slides restantes de forma dinâmica no DOM
+        for (let i = 1; i < slides.length; i++) {
+            const slideDiv = document.createElement('div');
+            slideDiv.className = 'slide';
+            slideDiv.style.backgroundImage = `url('${slides[i]}')`;
+            slideshowContainer.appendChild(slideDiv);
+        }
+
+        const slideElements = slideshowContainer.querySelectorAll('.slide');
+        let currentSlideIndex = 0;
+        const slideInterval = 4000;
+
+        setInterval(() => {
+            slideElements[currentSlideIndex].classList.remove('active');
+            currentSlideIndex = (currentSlideIndex + 1) % slideElements.length;
+            slideElements[currentSlideIndex].classList.add('active');
+        }, slideInterval);
+    }
+
     const searchInput = document.getElementById('pombagiraSearchInput');
     const orixaButtons = document.querySelectorAll('#orixaFilters .filter-btn');
     const elementoButtons = document.querySelectorAll('#elementoFilters .filter-btn');
