@@ -445,6 +445,8 @@ if (track) {
         let touchStartTranslate = 0;
         let isTouchDragging = false;
         let dragDistance = 0;
+        let temporaryPause = false;
+        let tempPauseTimeout = null;
 
         const updateDimensions = () => {
             containerWidth = container.offsetWidth;
@@ -458,7 +460,7 @@ if (track) {
         // Loop de animação contínua (0.5px por frame)
         const scrollSpeed = 0.5;
         function updateCarousel() {
-            if (!isInteracting && !isTouchDragging) {
+            if (!isInteracting && !isTouchDragging && !temporaryPause) {
                 currentTranslate -= scrollSpeed;
                 
                 // Se passou da metade (loop infinito), volta ao início
@@ -533,12 +535,19 @@ if (track) {
         container.addEventListener('touchend', () => {
             isTouchDragging = false;
             
-            if (dragDistance > 10) {
+            // Pausa temporariamente o autoscroll para evitar deslocamento antes do clique sintético
+            temporaryPause = true;
+            if (tempPauseTimeout) clearTimeout(tempPauseTimeout);
+            tempPauseTimeout = setTimeout(() => {
+                temporaryPause = false;
+            }, 500);
+            
+            if (dragDistance > 25) {
                 wasJustDragging = true;
                 setTimeout(() => {
                     isDragging = false;
                     wasJustDragging = false;
-                }, 100);
+                }, 500);
             } else {
                 isDragging = false;
                 wasJustDragging = false;
