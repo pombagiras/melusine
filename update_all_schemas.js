@@ -515,7 +515,14 @@ function processPortalSubpage(fileName, html) {
         });
     }
     
-    return replaceJsonLd(html, newGraph);
+    let resultHtml = replaceJsonLd(html, newGraph);
+    
+    // Inject LCP image preload right after <head> if not already present
+    if (imageUrl && !resultHtml.includes('rel="preload"')) {
+        resultHtml = resultHtml.replace('<head>', `<head>\n    <!-- Preload critical LCP image immediately -->\n    <link rel="preload" href="${imageUrl}" as="image" fetchpriority="high">`);
+    }
+    
+    return resultHtml;
 }
 
 main();

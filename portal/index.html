@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Preconnects to speed up connection establishment -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Critical CSS & Fonts at the very top of head to prevent render blocking -->
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
     <title>POMBAGIRAS.COM | Cultura, Arquétipos & Conhecimento</title>
 <meta name="description" content="A maior plataforma de desmistificação das Pombagiras. Um mergulho profundo no conhecimento sagrado, história e arte, desconstruindo preconceitos com clareza e tecnologia por Alexia Melusine.">
 <meta name="keywords" content="Pombagira, Arquétipos Femininos, Cultura Brasileira, Arte Visceral, Desmistificação, Alexia Melusine, História das Guardiãs, Espiritualidade Consciente, Filosofia Ancestral">
@@ -413,14 +422,6 @@
       ]
     }
     </script>
-
-    <!-- Google Fonts integration -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
-    
-    <!-- Link to custom styles -->
-    <link rel="stylesheet" href="style.css">
 </head>
 <body class="visceral-theme">
     <!-- Dynamic Canvas for Fluid Mesh Gradient Background -->
@@ -1535,6 +1536,6 @@
     </div>
 
     <!-- Script File -->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
