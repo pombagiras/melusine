@@ -1193,6 +1193,17 @@ footer.main-footer .footer-signature i {
         padding: 15px;
         gap: 12px;
     }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
 }
 
 @media (max-width: 480px) {
