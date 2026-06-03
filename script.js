@@ -405,26 +405,46 @@ function getNormalizedName(name) {
     return name;
 }
 
-// Inicializa Carrossel Deslizante
+// Inicializa Carrossel Deslizante com Suporte Premium a Arraste e Movimento Fluido
 const track = document.getElementById('carouselTrack');
 const container = document.querySelector('.carousel-track-container');
 
 if (track) {
+    let isDragging = false;
+    let wasJustDragging = false;
+
     [...carouselImages, ...carouselImages].forEach(img => {
         const div = document.createElement('div');
         div.className = 'carousel-item';
         const displayName = getNormalizedName(img.name);
         const altText = displayName.startsWith("Pombagira") ? `Representação artística conceitual da ${displayName}` : `Representação artística conceitual da Pombagira ${displayName}`;
         div.innerHTML = `<img src="${img.url}" alt="${altText}" loading="lazy" width="200" height="200"><span>${img.name}</span>`;
-        div.addEventListener('click', () => openModal(img.name));
+        
+        // No clique, checamos se o usuário não estava apenas arrastando o carrossel
+        div.addEventListener('click', () => {
+            if (isDragging || wasJustDragging) return;
+            openModal(img.name);
+        });
         track.appendChild(div);
     });
 
     if (container) {
+        // Removemos a animação CSS e controlamos tudo via JS para evitar pulos
+        track.style.animation = 'none';
+        track.style.animationPlayState = 'paused';
+
         let containerWidth = container.offsetWidth;
         let trackWidth = track.scrollWidth;
         let maxTranslate = trackWidth / 2;
-        let isHovered = false;
+
+        let currentTranslate = 0;
+        let isInteracting = false; // flag para mouse-hover
+        
+        // Variáveis de Touch
+        let startX = 0;
+        let touchStartTranslate = 0;
+        let isTouchDragging = false;
+        let dragDistance = 0;
 
         const updateDimensions = () => {
             containerWidth = container.offsetWidth;
@@ -433,34 +453,96 @@ if (track) {
         };
 
         window.addEventListener('resize', updateDimensions);
-        // Execute dynamic sizing adjustments on fully loaded content
         setTimeout(updateDimensions, 1000);
 
+        // Loop de animação contínua (0.5px por frame)
+        const scrollSpeed = 0.5;
+        function updateCarousel() {
+            if (!isInteracting && !isTouchDragging) {
+                currentTranslate -= scrollSpeed;
+                
+                // Se passou da metade (loop infinito), volta ao início
+                if (Math.abs(currentTranslate) >= maxTranslate) {
+                    currentTranslate = 0;
+                }
+                
+                track.style.transform = `translateX(${currentTranslate}px)`;
+            }
+            requestAnimationFrame(updateCarousel);
+        }
+        
+        // Inicia a rolagem automatizada via JS
+        requestAnimationFrame(updateCarousel);
+
+        // CONTROLES DE MOUSE (Desktop)
         container.addEventListener('mouseenter', () => {
-            isHovered = true;
-            track.style.animationPlayState = 'paused';
+            isInteracting = true;
         });
 
         container.addEventListener('mousemove', (e) => {
-            if (!isHovered) return;
-            // Stop CSS scrolling animation to allow custom mouse translation control
-            track.style.animation = 'none';
+            if (!isInteracting || isTouchDragging) return;
             
             const rect = container.getBoundingClientRect();
             const mouseX = e.clientX - rect.left;
             const percentage = mouseX / containerWidth;
             
-            // Map mouse positioning to smoothly translate the track
-            const translateAmount = -percentage * maxTranslate;
-            track.style.transform = `translateX(${translateAmount}px)`;
+            currentTranslate = -percentage * maxTranslate;
+            track.style.transform = `translateX(${currentTranslate}px)`;
         });
 
         container.addEventListener('mouseleave', () => {
-            isHovered = false;
-            // Clear custom positioning and restore automated infinite scrolling loop
-            track.style.transform = '';
-            track.style.animation = 'scroll 80s linear infinite';
-            track.style.animationPlayState = 'running';
+            isInteracting = false;
+        });
+
+        // CONTROLES DE TOQUE (Mobile - Drag Livre)
+        container.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            isTouchDragging = true;
+            wasJustDragging = false;
+            dragDistance = 0;
+            
+            startX = e.touches[0].clientX;
+            touchStartTranslate = currentTranslate;
+        }, { passive: true });
+
+        container.addEventListener('touchmove', (e) => {
+            if (!isTouchDragging) return;
+            
+            const currentX = e.touches[0].clientX;
+            const deltaX = currentX - startX;
+            dragDistance = Math.abs(deltaX);
+            
+            let targetTranslate = touchStartTranslate + deltaX;
+            
+            // Loop infinito durante o arraste
+            if (targetTranslate > 0) {
+                targetTranslate = -maxTranslate + targetTranslate;
+            } else if (Math.abs(targetTranslate) >= maxTranslate) {
+                targetTranslate = targetTranslate + maxTranslate;
+            }
+            
+            currentTranslate = targetTranslate;
+            track.style.transform = `translateX(${currentTranslate}px)`;
+            
+            // Previne scroll de página vertical ao arrastar significativamente na horizontal
+            if (dragDistance > 10 && e.cancelable) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+
+        container.addEventListener('touchend', () => {
+            isTouchDragging = false;
+            
+            if (dragDistance > 10) {
+                wasJustDragging = true;
+                setTimeout(() => {
+                    isDragging = false;
+                    wasJustDragging = false;
+                }, 100);
+            } else {
+                isDragging = false;
+                wasJustDragging = false;
+            }
         });
     }
 }
