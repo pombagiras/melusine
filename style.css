@@ -1567,3 +1567,37 @@ body.scrolling-up {
     transform: rotate(-12deg) scale(1.15);
     color: var(--primary);
 }
+
+/* ==========================================================================
+   ESTILOS DE PAGINAÇÃO: BOTAO "CARREGAR MAIS"
+   ========================================================================== */
+.load-more-container {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.load-more-btn {
+    background: rgba(128, 0, 32, 0.1) !important;
+    border: 1px solid var(--secondary) !important;
+    color: var(--text-light) !important;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(128, 0, 32, 0.2);
+    transition: var(--transition);
+    outline: none;
+}
+
+.load-more-btn:hover {
+    background: var(--secondary) !important;
+    color: white !important;
+    box-shadow: 0 8px 25px rgba(217, 4, 41, 0.5) !important;
+    transform: translateY(-2px);
+}
+
+.load-more-btn:active {
+    transform: translateY(0);
+}
+

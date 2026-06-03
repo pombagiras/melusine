@@ -181,30 +181,125 @@
         }
     </style>
     
+    <!-- Unified Knowledge Graph Schema (Premium SEO/AI) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Estudo Aprofundado sobre Pombagira Maria Mulambo",
-      "description": "Exploração completa das correspondências sagradas, história e oração da Guardiã Maria Mulambo.",
-      "image": "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_maria_mulambo.png",
-      "author": {
-        "@type": "Person",
-        "name": "Alexia Melusine",
-        "url": "https://pombagiras.com/alexiamelusine/"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Pombagiras.com",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Favicon%20%20Miniatura%20do%20Google.png"
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://pombagiras.com/#website",
+          "url": "https://pombagiras.com/",
+          "name": "Pombagiras.com",
+          "publisher": {
+            "@id": "https://pombagiras.com/#organization"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://pombagiras.com/#organization",
+          "name": "Pombagiras.com",
+          "url": "https://pombagiras.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Favicon%20%20Miniatura%20do%20Google.png"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://pombagiras.com/#author",
+          "name": "Alexia Melusine",
+          "url": "https://pombagiras.com/alexiamelusine/"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://pombagiras.com/guardias/maria-mulambo.html#webpage",
+          "url": "https://pombagiras.com/guardias/maria-mulambo.html",
+          "name": "Pombagira Maria Mulambo | Enciclopédia de Umbanda e Quimbanda",
+          "isPartOf": {
+            "@id": "https://pombagiras.com/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://pombagiras.com/guardias/maria-mulambo.html#breadcrumb"
+          },
+          "inLanguage": "pt-BR"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://pombagiras.com/guardias/maria-mulambo.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://pombagiras.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Guardiãs",
+              "item": "https://pombagiras.com/#pombagiras"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Maria Mulambo",
+              "item": "https://pombagiras.com/guardias/maria-mulambo.html"
+            }
+          ]
+        },
+        {
+          "@type": "Article",
+          "@id": "https://pombagiras.com/guardias/maria-mulambo.html#article",
+          "isPartOf": {
+            "@id": "https://pombagiras.com/guardias/maria-mulambo.html#webpage"
+          },
+          "headline": "Estudo Aprofundado sobre Pombagira Maria Mulambo",
+          "description": "Exploração completa das correspondências sagradas, história, oração e fundamentos da Guardiã Maria Mulambo na Umbanda e Quimbanda.",
+          "image": "https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/pombagira_maria_mulambo.png",
+          "author": {
+            "@id": "https://pombagiras.com/#author"
+          },
+          "publisher": {
+            "@id": "https://pombagiras.com/#organization"
+          },
+          "mainEntityOfPage": "https://pombagiras.com/guardias/maria-mulambo.html",
+          "inLanguage": "pt-BR"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://pombagiras.com/guardias/maria-mulambo.html#faq",
+          "isPartOf": {
+            "@id": "https://pombagiras.com/guardias/maria-mulambo.html#webpage"
+          },
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Qual a oferenda recomendada para Pombagira Maria Mulambo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A oferenda recomendada para Maria Mulambo é: Restos de comida limpa, farofa de azeite de dendê, cachaça e velas pretas."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quais as cores e velas de Pombagira Maria Mulambo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "As cores de Maria Mulambo são: Preto, Cinza, Vinho, Marrom, Laranja queimado. E as velas indicadas são: Preta, Marrom, Vinho (parafina preta ou de baixa fusão)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Qual o local de força de Pombagira Maria Mulambo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "O local de força de Maria Mulambo é: Cemitério (túmulo antigo), encruzilhada de terra batida."
+              }
+            }
+          ]
         }
-      },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://pombagiras.com/guardias/maria-mulambo.html"
-      }
+      ]
     }
     </script>
 </head>

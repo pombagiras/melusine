@@ -584,6 +584,18 @@ if (backToTopButton) {
 // Lógica de Busca e Filtros Facetados (SEO/UX)
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
+    // Injeção dinâmica do vídeo do Hero (Apenas para telas grandes, economizando banda no celular)
+    if (window.innerWidth > 768) {
+        const video = document.querySelector('.hero-video');
+        if (video) {
+            const source = document.createElement('source');
+            source.src = 'https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/VidVelas.mp4';
+            source.type = 'video/mp4';
+            video.appendChild(source);
+            video.load();
+        }
+    }
+
     const searchInput = document.getElementById('pombagiraSearchInput');
     const orixaButtons = document.querySelectorAll('#orixaFilters .filter-btn');
     const elementoButtons = document.querySelectorAll('#elementoFilters .filter-btn');
@@ -618,54 +630,118 @@ document.addEventListener('DOMContentLoaded', () => {
         return false;
     }
 
-    function filterPombagiras() {
-        cards.forEach(card => {
-            const titleElement = card.querySelector('h4');
-            if (!titleElement) return;
+    // Sistema de Paginação Inteligente "Carregar Mais"
+    function setupPagination(tabId, limit = 6) {
+        const tabContainer = document.getElementById(tabId);
+        if (!tabContainer) return;
+        
+        const cardsList = tabContainer.querySelectorAll('.grid-cards > .card');
+        if (cardsList.length === 0) return;
 
-            // Limpa o nome extraído de FontAwesome e espaços
-            const rawTitle = titleElement.textContent.trim();
-            const normalizedTitle = getNormalizedName(rawTitle);
-            const data = pombagirasData[normalizedTitle] || pombagirasData[rawTitle];
+        tabContainer.dataset.limit = limit;
+        
+        const btnContainer = document.createElement('div');
+        btnContainer.className = 'load-more-container';
+        
+        const btn = document.createElement('button');
+        btn.className = 'btn btn-outline load-more-btn';
+        btn.textContent = 'Carregar Mais';
+        
+        btnContainer.appendChild(btn);
+        tabContainer.appendChild(btnContainer);
 
-            if (!data) return;
+        function updatePaginationVisibility() {
+            const isFiltering = tabId === 'pombagiras' && 
+                (searchQuery !== '' || activeOrixaFilter !== 'all' || activeElementoFilter !== 'all');
+            
+            let visibleIndex = 0;
+            let totalMatching = 0;
+            
+            cardsList.forEach(card => {
+                let matchesFilter = true;
+                if (tabId === 'pombagiras') {
+                    const titleElement = card.querySelector('h4');
+                    if (titleElement) {
+                        const rawTitle = titleElement.textContent.trim();
+                        const normalizedTitle = getNormalizedName(rawTitle);
+                        const data = pombagirasData[normalizedTitle] || pombagirasData[rawTitle];
+                        if (data) {
+                            const textMatch = searchQuery === '' || 
+                                data.nome.toLowerCase().includes(searchQuery) ||
+                                data.cores.toLowerCase().includes(searchQuery) ||
+                                data.velas.toLowerCase().includes(searchQuery) ||
+                                data.local.toLowerCase().includes(searchQuery) ||
+                                data.signo.toLowerCase().includes(searchQuery) ||
+                                data.descricao.toLowerCase().includes(searchQuery) ||
+                                data.oferenda.toLowerCase().includes(searchQuery);
 
-            // 1. Filtro de Texto
-            const textMatch = searchQuery === '' || 
-                data.nome.toLowerCase().includes(searchQuery) ||
-                data.cores.toLowerCase().includes(searchQuery) ||
-                data.velas.toLowerCase().includes(searchQuery) ||
-                data.local.toLowerCase().includes(searchQuery) ||
-                data.signo.toLowerCase().includes(searchQuery) ||
-                data.descricao.toLowerCase().includes(searchQuery) ||
-                data.oferenda.toLowerCase().includes(searchQuery);
+                            let orixaMatch = activeOrixaFilter === 'all';
+                            if (!orixaMatch) {
+                                const signoText = data.signo.toLowerCase();
+                                const filter = activeOrixaFilter.toLowerCase();
+                                if (filter === 'omulu') {
+                                    orixaMatch = signoText.includes('omulu') || signoText.includes('obaluaiê') || signoText.includes('almas');
+                                } else {
+                                    orixaMatch = signoText.includes(filter);
+                                }
+                            }
 
-            // 2. Filtro de Orixá
-            let orixaMatch = activeOrixaFilter === 'all';
-            if (!orixaMatch) {
-                const signoText = data.signo.toLowerCase();
-                const filter = activeOrixaFilter.toLowerCase();
-                
-                if (filter === 'omulu') {
-                    orixaMatch = signoText.includes('omulu') || signoText.includes('obaluaiê') || signoText.includes('almas');
-                } else {
-                    orixaMatch = signoText.includes(filter);
+                            const elementoMatch = activeElementoFilter === 'all' || matchesElemento(data.local, activeElementoFilter);
+                            matchesFilter = textMatch && orixaMatch && elementoMatch;
+                        }
+                    }
                 }
-            }
+                
+                if (matchesFilter) {
+                    totalMatching++;
+                    const currentLimit = parseInt(tabContainer.dataset.limit);
+                    
+                    if (isFiltering || visibleIndex < currentLimit) {
+                        card.style.display = 'block';
+                        card.style.opacity = '1';
+                        card.style.transform = 'scale(1)';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                    visibleIndex++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
 
-            // 3. Filtro de Elemento/Campo de Força
-            const elementoMatch = activeElementoFilter === 'all' || matchesElemento(data.local, activeElementoFilter);
-
-            // Aplica a visibilidade
-            if (textMatch && orixaMatch && elementoMatch) {
-                card.style.display = 'block';
-                card.style.opacity = '1';
-                card.style.transform = 'scale(1)';
+            const currentLimit = parseInt(tabContainer.dataset.limit);
+            if (isFiltering || totalMatching <= currentLimit) {
+                btnContainer.style.display = 'none';
             } else {
-                card.style.display = 'none';
+                btnContainer.style.display = 'flex';
             }
+            
+            if (typeof setupCursorHoverEffects === 'function') {
+                setupCursorHoverEffects();
+            }
+        }
+
+        btn.addEventListener('click', () => {
+            const currentLimit = parseInt(tabContainer.dataset.limit);
+            tabContainer.dataset.limit = currentLimit + limit;
+            updatePaginationVisibility();
         });
+
+        tabContainer.updatePagination = updatePaginationVisibility;
+        updatePaginationVisibility();
     }
+
+    function filterPombagiras() {
+        const pombagirasTab = document.getElementById('pombagiras');
+        if (pombagirasTab && typeof pombagirasTab.updatePagination === 'function') {
+            pombagirasTab.updatePagination();
+        }
+    }
+
+    // Inicializar Paginações
+    setupPagination('glossario', 6);
+    setupPagination('curiosidades', 6);
+    setupPagination('pombagiras', 6);
 
     // Event Listener de digitação
     searchInput.addEventListener('input', (e) => {

@@ -576,30 +576,125 @@ Object.keys(pombagirasData).forEach(key => {
         }
     </style>
     
+    <!-- Unified Knowledge Graph Schema (Premium SEO/AI) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Estudo Aprofundado sobre Pombagira ${data.nome}",
-      "description": "Exploração completa das correspondências sagradas, história e oração da Guardiã ${data.nome}.",
-      "image": "${getPombagiraImageUrl(key)}",
-      "author": {
-        "@type": "Person",
-        "name": "Alexia Melusine",
-        "url": "https://pombagiras.com/alexiamelusine/"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Pombagiras.com",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Favicon%20%20Miniatura%20do%20Google.png"
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://pombagiras.com/#website",
+          "url": "https://pombagiras.com/",
+          "name": "Pombagiras.com",
+          "publisher": {
+            "@id": "https://pombagiras.com/#organization"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://pombagiras.com/#organization",
+          "name": "Pombagiras.com",
+          "url": "https://pombagiras.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Favicon%20%20Miniatura%20do%20Google.png"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://pombagiras.com/#author",
+          "name": "Alexia Melusine",
+          "url": "https://pombagiras.com/alexiamelusine/"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://pombagiras.com/guardias/${fileName}#webpage",
+          "url": "https://pombagiras.com/guardias/${fileName}",
+          "name": "Pombagira ${data.nome} | Enciclopédia de Umbanda e Quimbanda",
+          "isPartOf": {
+            "@id": "https://pombagiras.com/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://pombagiras.com/guardias/${fileName}#breadcrumb"
+          },
+          "inLanguage": "pt-BR"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://pombagiras.com/guardias/${fileName}#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://pombagiras.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Guardiãs",
+              "item": "https://pombagiras.com/#pombagiras"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "${data.nome}",
+              "item": "https://pombagiras.com/guardias/${fileName}"
+            }
+          ]
+        },
+        {
+          "@type": "Article",
+          "@id": "https://pombagiras.com/guardias/${fileName}#article",
+          "isPartOf": {
+            "@id": "https://pombagiras.com/guardias/${fileName}#webpage"
+          },
+          "headline": "Estudo Aprofundado sobre Pombagira ${data.nome}",
+          "description": "Exploração completa das correspondências sagradas, história, oração e fundamentos da Guardiã ${data.nome} na Umbanda e Quimbanda.",
+          "image": "${getPombagiraImageUrl(key)}",
+          "author": {
+            "@id": "https://pombagiras.com/#author"
+          },
+          "publisher": {
+            "@id": "https://pombagiras.com/#organization"
+          },
+          "mainEntityOfPage": "https://pombagiras.com/guardias/${fileName}",
+          "inLanguage": "pt-BR"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://pombagiras.com/guardias/${fileName}#faq",
+          "isPartOf": {
+            "@id": "https://pombagiras.com/guardias/${fileName}#webpage"
+          },
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Qual a oferenda recomendada para Pombagira ${data.nome}?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A oferenda recomendada para ${data.nome} é: ${data.oferenda}."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quais as cores e velas de Pombagira ${data.nome}?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "As cores de ${data.nome} são: ${data.cores}. E as velas indicadas são: ${data.velas}."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Qual o local de força de Pombagira ${data.nome}?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "O local de força de ${data.nome} é: ${data.local}."
+              }
+            }
+          ]
         }
-      },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://pombagiras.com/guardias/${fileName}"
-      }
+      ]
     }
     </script>
 </head>
