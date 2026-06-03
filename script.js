@@ -478,10 +478,12 @@ if (track) {
 
         // CONTROLES DE MOUSE (Desktop)
         container.addEventListener('mouseenter', () => {
+            if (window.matchMedia("(pointer: coarse)").matches) return;
             isInteracting = true;
         });
 
         container.addEventListener('mousemove', (e) => {
+            if (window.matchMedia("(pointer: coarse)").matches) return;
             if (!isInteracting || isTouchDragging) return;
             
             const rect = container.getBoundingClientRect();
