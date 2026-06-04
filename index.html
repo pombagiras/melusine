@@ -17,7 +17,7 @@
     <link rel="dns-prefetch" href="https://raw.githubusercontent.com">
 
     <!-- Preload critical LCP image immediately -->
-    <link rel="preload" href="https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/RAINHAS%20(2).jpeg" as="image" fetchpriority="high">
+    <link rel="preload" href="ViboraAlbina_poster.jpg" as="image" fetchpriority="high">
 
     <!-- Critical CSS & Fonts at the very top of head to prevent render blocking -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -590,9 +590,11 @@
     </div>
 
     <section class="hero" id="home">
-        <div class="hero-slideshow" id="heroSlideshow" aria-hidden="true">
-            <div class="slide active" style="background-image: url('https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/RAINHAS%20(2).jpeg');"></div>
-        </div>
+        <video class="hero-video" autoplay loop muted playsinline poster="ViboraAlbina_poster.jpg">
+            <source src="ViboraAlbina_720.mp4" type="video/mp4" media="(max-width: 768px)">
+            <source src="ViboraAlbina_1080.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos HTML5.
+        </video>
         <div class="hero-brand-stamp" aria-hidden="true">
             <img src="https://luauvcxdhhyzpafvcqwu.supabase.co/storage/v1/object/public/fotos-site/LogoVip%20(1).png" alt="Selo de Qualidade Pombagiras.com" decoding="async">
         </div>
