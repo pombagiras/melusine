@@ -57,12 +57,12 @@
     "@graph": [
       {
         "@type": "Person",
-        "@id": "https://pombagiras.com/#person",
+        "@id": "https://pombagiras.com/#author",
         "name": "Alexia Melusine",
         "alternateName": ["Alexia Rosa de Fogo", "Alexia Luz de Ferro"],
         "description": "Web Developer, AI Video Director, Engenheira de Prompt e criadora do maior ecossistema digital sobre Pombagiras. Autora de 129 portais digitais de conhecimento ancestral e cultura afro-brasileira.",
         "image": "https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/vC%20(8).png",
-        "url": "https://pombagiras.com",
+        "url": "https://pombagiras.com/alexiamelusine/",
         "jobTitle": ["Desenvolvedora Web", "Diretora de Vídeo IA", "Engenheira de Prompt", "Criadora de Conteúdo Digital"],
         "knowsAbout": ["Pombagiras", "Arquétipos Femininos", "Cultura Afro-Brasileira", "Umbanda", "Quimbanda", "Arte Visceral", "Inteligência Artificial", "Desenvolvimento Front-End"],
         "sameAs": [
@@ -75,23 +75,43 @@
         ]
       },
       {
+        "@type": "Organization",
+        "@id": "https://pombagiras.com/#organization",
+        "name": "Pombagiras.com",
+        "url": "https://pombagiras.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Favicon%20%20Miniatura%20do%20Google.png"
+        },
+        "sameAs": [
+          "https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G",
+          "https://t.me/pomba_giras",
+          "https://discord.gg/gWZP8R7Dqu",
+          "https://open.spotify.com/show/0oeCL1QScD3v7dHeUvJjgJ",
+          "https://www.youtube.com/@almasdepombagira",
+          "https://www.instagram.com/almasdepombagira/",
+          "https://www.tiktok.com/@almasdepombagira",
+          "https://alexiamelusine.substack.com/"
+        ]
+      },
+      {
         "@type": "WebSite",
         "@id": "https://pombagiras.com/#website",
         "url": "https://pombagiras.com",
         "name": "POMBAGIRAS.COM | Ecossistema Digital",
         "alternateName": "Almas de Pombagira",
         "description": "Ecossistema digital completo de Alexia Melusine. Acesso unificado a 129 portais, grimório, oráculos e música sobre Pombagiras e arquétipos femininos afro-brasileiros.",
-        "publisher": { "@id": "https://pombagiras.com/#person" },
+        "publisher": { "@id": "https://pombagiras.com/#organization" },
         "inLanguage": "pt-BR",
         "about": { "@type": "Thing", "name": "Pombagiras", "description": "Entidades femininas de poder da Umbanda e Quimbanda afro-brasileira" }
       },
       {
         "@type": "ProfilePage",
-        "@id": "https://pombagiras.com/#profile",
-        "url": "https://pombagiras.com",
+        "@id": "https://pombagiras.com/github/#profile",
+        "url": "https://pombagiras.com/github/",
         "name": "POMBAGIRAS.COM | Ecossistema Digital — Alexia Melusine",
         "inLanguage": "pt-BR",
-        "mainEntity": { "@id": "https://pombagiras.com/#person" },
+        "mainEntity": { "@id": "https://pombagiras.com/#author" },
         "isPartOf": { "@id": "https://pombagiras.com/#website" },
         "primaryImageOfPage": {
           "@type": "ImageObject",
@@ -101,15 +121,18 @@
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://pombagiras.com/#breadcrumb",
-        "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Ecossistema Digital", "item": "https://pombagiras.com/" }]
+        "@id": "https://pombagiras.com/github/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pombagiras.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Ecossistema Digital", "item": "https://pombagiras.com/github/" }
+        ]
       }
     ]
   }
   </script>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,500;14..32,700;14..32,800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <style>
@@ -122,7 +145,7 @@
     body {
       background: #0b030f;
       background-image: radial-gradient(ellipse at 20% 30%, rgba(255,40,100,0.2) 0%, #050108 90%);
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-family: 'Geist', system-ui, -apple-system, sans-serif;
       color: #f0eef7;
       line-height: 1.5;
       scroll-behavior: smooth;
@@ -192,7 +215,7 @@
     }
 
     .title-badge h1 {
-      font-family: 'Space Grotesk', monospace;
+      font-family: 'Fraunces', serif;
       font-weight: 700;
       font-size: clamp(1.8rem, 5vw, 2.8rem);
       background: linear-gradient(130deg, #ffe6f0, #ff4d6d, #c77dff);
@@ -272,7 +295,7 @@
     .search-box input {
       background: transparent; border: none; width: 100%;
       color: white; font-size: 1rem; outline: none;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Geist', sans-serif;
     }
     .search-box input::placeholder { color: rgba(255,255,255,0.45); }
 
@@ -290,7 +313,7 @@
       cursor: pointer;
       display: inline-flex; align-items: center; gap: 8px;
       color: #f0eef7;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Geist', sans-serif;
       transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1);
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
       background-origin: border-box;
@@ -380,7 +403,7 @@
     .card-title {
       padding: 0 1.4rem;
       font-size: 1.3rem; font-weight: 700;
-      font-family: 'Space Grotesk', monospace;
+      font-family: 'Fraunces', serif;
       display: flex; justify-content: space-between; align-items: center;
       position: relative; z-index: 2;
     }
