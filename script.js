@@ -413,20 +413,32 @@ if (track) {
     let isDragging = false;
     let wasJustDragging = false;
 
-    [...carouselImages, ...carouselImages].forEach(img => {
-        const div = document.createElement('div');
-        div.className = 'carousel-item';
-        const displayName = getNormalizedName(img.name);
-        const altText = displayName.startsWith("Pombagira") ? `Representação artística conceitual da ${displayName}` : `Representação artística conceitual da Pombagira ${displayName}`;
-        div.innerHTML = `<img src="${img.url}" alt="${altText}" loading="lazy" width="200" height="200"><span>${img.name}</span>`;
-        
-        // No clique, checamos se o usuário não estava apenas arrastando o carrossel
-        div.addEventListener('click', () => {
-            if (isDragging || wasJustDragging) return;
-            openModal(img.name);
+    // Diferir a criação e injeção dos itens no DOM para quando a CPU estiver idle (melhora o TBT/FID/INP)
+    const renderCarouselItems = () => {
+        [...carouselImages, ...carouselImages].forEach(img => {
+            const div = document.createElement('div');
+            div.className = 'carousel-item';
+            const displayName = getNormalizedName(img.name);
+            const altText = displayName.startsWith("Pombagira") ? `Representação artística conceitual da ${displayName}` : `Representação artística conceitual da Pombagira ${displayName}`;
+            div.innerHTML = `<img src="${img.url}" alt="${altText}" loading="lazy" decoding="async" width="200" height="200"><span>${img.name}</span>`;
+            
+            // No clique, checamos se o usuário não estava apenas arrastando o carrossel
+            div.addEventListener('click', () => {
+                if (isDragging || wasJustDragging) return;
+                openModal(img.name);
+            });
+            track.appendChild(div);
         });
-        track.appendChild(div);
-    });
+        
+        // Recalcular dimensões logo após renderizar os itens
+        setTimeout(updateDimensions, 100);
+    };
+
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(renderCarouselItems);
+    } else {
+        setTimeout(renderCarouselItems, 50);
+    }
 
     if (container) {
         // Removemos a animação CSS e controlamos tudo via JS para evitar pulos
@@ -454,7 +466,13 @@ if (track) {
             maxTranslate = trackWidth / 2;
         };
 
-        window.addEventListener('resize', updateDimensions);
+        // Debounce do event listener de resize para evitar layout thrashing (Forced Synchronous Layout)
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(updateDimensions, 100);
+        }, { passive: true });
+        
         setTimeout(updateDimensions, 1000);
 
         // Loop de animação contínua (0.5px por frame)
@@ -663,7 +681,7 @@ if (backToTopButton) {
         } else {
             backToTopButton.classList.remove('show');
         }
-    });
+    }, { passive: true });
 
     backToTopButton.addEventListener('click', () => {
         window.scrollTo({
