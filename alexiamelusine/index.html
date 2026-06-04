@@ -888,48 +888,7 @@
             line-height: 1.7;
         }
 
-        /* ESTILO DO CONTADOR DISCRETO */
-        .access-counter {
-            position: fixed;
-            bottom: 12px;
-            right: 12px;
-            background: rgba(15, 15, 20, 0.4);
-            color: rgba(224, 224, 224, 0.4);
-            padding: 6px 14px;
-            border-radius: 16px;
-            font-size: 11px;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 0.5px solid rgba(139, 0, 0, 0.15);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-            font-family: var(--font-sans);
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-            max-width: 165px;
-            opacity: 0.5;
-        }
 
-        .access-counter:hover {
-            background: rgba(15, 15, 20, 0.75);
-            color: rgba(255, 255, 255, 0.8);
-            opacity: 1;
-            border: 0.5px solid rgba(139, 0, 0, 0.4);
-            box-shadow: 0 0 10px rgba(139, 0, 0, 0.2);
-        }
-
-        .access-counter::before {
-            content: '👁️ ';
-            font-size: 10px;
-            opacity: 0.8;
-        }
-
-        .access-counter.loading {
-            opacity: 0.3;
-        }
 
         /* RESPONSIVIDADE - CELULAR DESIGN */
         @media (max-width: 768px) {
@@ -998,13 +957,7 @@
                 gap: 20px;
             }
             
-            .access-counter {
-                bottom: 10px;
-                right: 10px;
-                font-size: 10px;
-                padding: 4px 10px;
-                max-width: 130px;
-            }
+
             
             .about-content {
                 gap: 35px;
@@ -1253,95 +1206,10 @@
         </div>
     </footer>
 
-    <div class="access-counter loading" id="accessCounter">Acessos...</div>
+
 
     <script>
-        // ========== CONFIGURAÇÃO DO CONTADOR VIA SUPABASE ==========
-        const SUPABASE_URL = 'https://rbygxkbewzknvjjhxdvw.supabase.co';
-        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJieWd4a2Jld3prbnZqamh4ZHZ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjYwMDcxNjQsImV4cCI6MjA4MTU4MzE2NH0.YrHF9HEGo6yv9MyNsPzFgBhaAB1DRh2SLU8f7L6s1nY';
-        const PAGE_ID = 'site-pessoal-alexia-melusine';
 
-        async function updateViewCounter() {
-            try {
-                const counterElement = document.getElementById('accessCounter');
-                
-                const currentResponse = await fetch(
-                    `${SUPABASE_URL}/rest/v1/page_views?page=eq.${encodeURIComponent(PAGE_ID)}&select=view_count`,
-                    {
-                        headers: {
-                            'apikey': SUPABASE_ANON_KEY,
-                            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-                            'Content-Type': 'application/json'
-                        }
-                    }
-                );
-                
-                if (!currentResponse.ok) throw new Error('Falha ao buscar dados');
-                const currentData = await currentResponse.json();
-                
-                if (!currentData || currentData.length === 0) {
-                    const createResponse = await fetch(
-                        `${SUPABASE_URL}/rest/v1/page_views`,
-                        {
-                            method: 'POST',
-                            headers: {
-                                'apikey': SUPABASE_ANON_KEY,
-                                'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-                                'Content-Type': 'application/json',
-                                'Prefer': 'return=representation'
-                            },
-                            body: JSON.stringify({
-                                page: PAGE_ID,
-                                view_count: 1,
-                                updated_at: new Date().toISOString()
-                            })
-                        }
-                    );
-                    
-                    if (createResponse.ok) {
-                        const createdData = await createResponse.json();
-                        const newCount = createdData[0]?.view_count || 1;
-                        counterElement.textContent = `${newCount} visitas`;
-                        counterElement.classList.remove('loading');
-                    }
-                } else {
-                    const currentCount = currentData[0]?.view_count || 0;
-                    const newCount = currentCount + 1;
-                    
-                    const updateResponse = await fetch(
-                        `${SUPABASE_URL}/rest/v1/page_views?page=eq.${encodeURIComponent(PAGE_ID)}`,
-                        {
-                            method: 'PATCH',
-                            headers: {
-                                'apikey': SUPABASE_ANON_KEY,
-                                'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-                                'Content-Type': 'application/json',
-                                'Prefer': 'return=representation'
-                            },
-                            body: JSON.stringify({
-                                view_count: newCount,
-                                updated_at: new Date().toISOString()
-                            })
-                        }
-                    );
-                    
-                    if (updateResponse.ok) {
-                        const updatedData = await updateResponse.json();
-                        const finalCount = updatedData[0]?.view_count || newCount;
-                        counterElement.textContent = `${finalCount} visitas`;
-                        counterElement.classList.remove('loading');
-                    }
-                }
-            } catch (error) {
-                console.log('Erro no contador:', error);
-                const counterElement = document.getElementById('accessCounter');
-                let localCount = localStorage.getItem(`views_${PAGE_ID}`) || '1';
-                localCount = (parseInt(localCount) + 1).toString();
-                localStorage.setItem(`views_${PAGE_ID}`, localCount);
-                counterElement.textContent = `${localCount} visitas`;
-                counterElement.classList.remove('loading');
-            }
-        }
 
         // ========== RENDERIZAÇÃO DA GALERIA E CONTROLE DE MODAL CACHED ==========
         const photoUrls = [
@@ -1454,10 +1322,7 @@
             }
         });
 
-        // Inicialização
-        document.addEventListener('DOMContentLoaded', () => {
-            updateViewCounter();
-        });
+
     </script>
 </body>
 </html>
