@@ -1,8 +1,22 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Preconnects to speed up connection establishment -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://rbygxkbewzknvjjhxdvw.supabase.co">
+    <link rel="preconnect" href="https://raw.githubusercontent.com">
+    <link rel="dns-prefetch" href="https://raw.githubusercontent.com">
+
+    <!-- Preload critical LCP image immediately -->
+    <link rel="preload" href="https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Xcom%20(2).png" as="image" fetchpriority="high">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
     
     <title>ALEXIA MELUSINE | POMBAGIRAS.COM</title>
     
@@ -13,13 +27,18 @@
     
     <link rel="canonical" href="https://pombagiras.com/alexiamelusine/">
 
-    <meta name="robots" content="noodp, noydir, max-snippet:-1, notranslate">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <meta name="language" content="pt-BR">
+    <meta name="theme-color" content="#08080c">
 
     <link rel="icon" type="image/png" href="https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Favicon%20%20Miniatura%20do%20Google.png">
     <link rel="apple-touch-icon" href="https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Favicon%20%20Miniatura%20do%20Google.png">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pombagiras.com/alexiamelusine/">
+    <meta property="og:locale" content="pt_BR">
     <meta property="og:title" content="POMBAGIRAS.COM | Conhecimento Sagrado e Verdade">
     <meta property="og:description" content="Explore a clareza sobre o papel das guardiãs de caminho. Desmistificando o feminino e a ancestralidade através da arte e do conhecimento consciente.">
     <meta property="og:image" content="https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Ogimage%20e%20Twitter%20Card.png">
@@ -32,37 +51,197 @@
     <meta name="twitter:description" content="Desmistificando o feminino sagrado com tecnologia e ancestralidade. Conhecimento guiado por Alexia Melusine.">
     <meta name="twitter:image" content="https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Ogimage%20e%20Twitter%20Card.png">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Asynchronous non-blocking load of FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Alexia Melusine",
-      "alternateName": ["Alexia Rosa de Fogo", "Alexia Luz de Ferro"],
-      "url": "https://pombagiras.com/alexiamelusine/",
-      "image": "https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Xcard%20(6).png",
-      "jobTitle": ["AI Video Director", "Web Developer", "Digital Content Creator"],
-      "knowsAbout": [
-        "Artificial Intelligence",
-        "AI Video Production",
-        "Front-End Development",
-        "Digital Aesthetics",
-        "Cultural Archetypes",
-        "Pombagiras Study",
-        "Transgender Diversity"
-      ],
-      "sameAs": [
-        "https://github.com/pombagiras",
-        "https://bio.site/AlmasdePombagira",
-        "https://linktr.ee/alexiarosadefogo",
-        "https://alexialuzdeferro.github.io/vampire-waves/",
-        "https://alexialuzdeferro.github.io/grimorio-das-pombagiras/",
-        "https://alexialuzdeferro.github.io/PONTOS-CANTADOS/",
-        "https://alexialuzdeferro.github.io/medita-o/",
-        "https://alexialuzdeferro.github.io/Fale-Comigo/",
-        "https://pombagiras.github.io/ancestrais/"
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://pombagiras.com/alexiamelusine/#author",
+          "name": "Alexia Melusine",
+          "alternateName": [
+            "Alexia Rosa de Fogo",
+            "Alexia Luz de Ferro"
+          ],
+          "url": "https://pombagiras.com/alexiamelusine/",
+          "image": "https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Xcard%20(6).png",
+          "jobTitle": [
+            "AI Video Director",
+            "Web Developer",
+            "Digital Content Creator"
+          ],
+          "knowsAbout": [
+            "Artificial Intelligence",
+            "AI Video Production",
+            "Front-End Development",
+            "Digital Aesthetics",
+            "Cultural Archetypes",
+            "Pombagiras Study",
+            "Transgender Diversity"
+          ],
+          "sameAs": [
+            "https://github.com/pombagiras",
+            "https://bio.site/AlmasdePombagira",
+            "https://linktr.ee/alexiarosadefogo",
+            "https://alexialuzdeferro.github.io/vampire-waves/",
+            "https://alexialuzdeferro.github.io/grimorio-das-pombagiras/",
+            "https://alexialuzdeferro.github.io/PONTOS-CANTADOS/",
+            "https://alexialuzdeferro.github.io/medita-o/",
+            "https://alexialuzdeferro.github.io/Fale-Comigo/",
+            "https://pombagiras.github.io/ancestrais/",
+            "https://github.com/alexialuzdeferro",
+            "https://alexiamelusine.substack.com/"
+          ]
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": "https://pombagiras.com/alexiamelusine/#webpage",
+          "url": "https://pombagiras.com/alexiamelusine/",
+          "name": "ALEXIA MELUSINE | POMBAGIRAS.COM",
+          "description": "Plataforma de desmistificação das Pombagiras por Alexia Melusine. Um mergulho profundo no conhecimento sagrado, história, arte visceral e diversidade.",
+          "isPartOf": {
+            "@type": "WebSite",
+            "@id": "https://pombagiras.com/#website",
+            "url": "https://pombagiras.com/",
+            "name": "Pombagiras.com"
+          },
+          "mainEntity": {
+            "@id": "https://pombagiras.com/alexiamelusine/#author"
+          },
+          "inLanguage": "pt-BR"
+        },
+        {
+          "@type": "ImageGallery",
+          "@id": "https://pombagiras.com/alexiamelusine/#gallery",
+          "name": "Galeria de Sombras",
+          "description": "Coleção fotográfica conceitual e pessoal de Alexia Melusine em ambiente de luz e sombra.",
+          "isPartOf": {
+            "@id": "https://pombagiras.com/alexiamelusine/#webpage"
+          },
+          "associatedMedia": [
+            {
+              "@type": "ImageObject",
+              "contentUrl": "https://raw.githubusercontent.com/alexialuzdeferro/card-photos/refs/heads/main/Al%C3%AA%20(2).png",
+              "name": "Foto 1 de Alexia Melusine"
+            },
+            {
+              "@type": "ImageObject",
+              "contentUrl": "https://raw.githubusercontent.com/alexialuzdeferro/card-photos/refs/heads/main/Al%C3%AA%20(3).png",
+              "name": "Foto 2 de Alexia Melusine"
+            },
+            {
+              "@type": "ImageObject",
+              "contentUrl": "https://raw.githubusercontent.com/alexialuzdeferro/card-photos/refs/heads/main/ChatGPT%20Image%2023%20de%20dez.%20de%202025%2C%2013_50_31.png",
+              "name": "Foto 3 de Alexia Melusine"
+            },
+            {
+              "@type": "ImageObject",
+              "contentUrl": "https://raw.githubusercontent.com/alexialuzdeferro/card-photos/refs/heads/main/ChatGPT%20Image%2023%20de%20dez.%20de%202025%2C%2013_54_19.png",
+              "name": "Foto 4 de Alexia Melusine"
+            },
+            {
+              "@type": "ImageObject",
+              "contentUrl": "https://raw.githubusercontent.com/alexialuzdeferro/card-photos/refs/heads/main/ChatGPT%20Image%2023%20de%20dez.%20de%202025%2C%2013_56_22.png",
+              "name": "Foto 5 de Alexia Melusine"
+            },
+            {
+              "@type": "ImageObject",
+              "contentUrl": "https://raw.githubusercontent.com/alexialuzdeferro/card-photos/refs/heads/main/ChatGPT%20Image%2023%20de%20dez.%20de%202025%2C%2013_57_28.png",
+              "name": "Foto 6 de Alexia Melusine"
+            },
+            {
+              "@type": "ImageObject",
+              "contentUrl": "https://raw.githubusercontent.com/alexialuzdeferro/card-photos/refs/heads/main/ChatGPT%20Image%2025%20de%20dez.%20de%202025%2C%2015_41_02.png",
+              "name": "Foto 7 de Alexia Melusine"
+            },
+            {
+              "@type": "ImageObject",
+              "contentUrl": "https://raw.githubusercontent.com/alexialuzdeferro/card-photos/refs/heads/main/ChatGPT%20Image%2025%20de%20dez.%20de%202025%2C%2017_49_49.png",
+              "name": "Foto 8 de Alexia Melusine"
+            },
+            {
+              "@type": "ImageObject",
+              "contentUrl": "https://raw.githubusercontent.com/alexialuzdeferro/card-photos/refs/heads/main/ChatGPT%20Image%2025_12_2025%2C%2017_32_47.png",
+              "name": "Foto 9 de Alexia Melusine"
+            },
+            {
+              "@type": "ImageObject",
+              "contentUrl": "https://raw.githubusercontent.com/alexialuzdeferro/card-photos/refs/heads/main/ChatGPT%20Image%2025_12_2025%2C%2017_34_32.png",
+              "name": "Foto 10 de Alexia Melusine"
+            },
+            {
+              "@type": "ImageObject",
+              "contentUrl": "https://raw.githubusercontent.com/alexialuzdeferro/card-photos/refs/heads/main/ChatGPT%20Image%2025_12_2025%2C%2017_36_45.png",
+              "name": "Foto 11 de Alexia Melusine"
+            },
+            {
+              "@type": "ImageObject",
+              "contentUrl": "https://raw.githubusercontent.com/alexialuzdeferro/card-photos/refs/heads/main/ChatGPT%20Image%2025%20de%20dez.%20de%202025%2C%2017_46_21.png",
+              "name": "Foto 12 de Alexia Melusine"
+            }
+          ]
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://pombagiras.com/alexiamelusine/#portals",
+          "name": "Portais & Conexões",
+          "description": "Lista de portais externos e sites de estudos associados a Alexia Melusine.",
+          "numberOfItems": 8,
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Almas de Pombagira",
+              "url": "https://bio.site/AlmasdePombagira"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Alexia Rosa de Fogo",
+              "url": "https://linktr.ee/alexiarosadefogo"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Vampire Waves",
+              "url": "https://alexialuzdeferro.github.io/vampire-waves/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Grimório das Pombagiras",
+              "url": "https://alexialuzdeferro.github.io/grimorio-das-pombagiras/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "name": "Pontos Cantados",
+              "url": "https://alexialuzdeferro.github.io/PONTOS-CANTADOS/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "name": "Meditação Guiada",
+              "url": "https://alexialuzdeferro.github.io/medita-o/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 7,
+              "name": "Fale Comigo",
+              "url": "https://alexialuzdeferro.github.io/Fale-Comigo/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 8,
+              "name": "Ancestrais",
+              "url": "https://pombagiras.github.io/ancestrais/"
+            }
+          ]
+        }
       ]
     }
     </script>
@@ -82,9 +261,9 @@
             --text-color: #e0e0e0;
             --highlight-color: #2a2a35;
             --shadow-color: rgba(139, 0, 0, 0.4);
-            --font-title: 'Cinzel', serif;
-            --font-serif: 'Playfair Display', serif;
-            --font-sans: 'Montserrat', sans-serif;
+            --font-title: 'Fraunces', serif;
+            --font-serif: 'Fraunces', serif;
+            --font-sans: 'Geist', sans-serif;
         }
 
         body {
@@ -558,6 +737,11 @@
             position: absolute;
             top: -45px;
             right: 0;
+            background: none;
+            border: none;
+            padding: 0;
+            outline: none;
+            line-height: 1;
             color: rgba(255,255,255,0.7);
             font-size: 2.2rem;
             cursor: pointer;
@@ -962,9 +1146,9 @@
             </div>
         </section>
 
-        <div class="modal" id="imageModal" role="dialog" aria-hidden="true">
+        <div class="modal" id="imageModal" role="dialog" aria-modal="true" aria-hidden="true">
             <div class="modal-content">
-                <span class="modal-close" id="modalClose" aria-label="Fechar visualização">&times;</span>
+                <button class="modal-close" id="modalClose" aria-label="Fechar visualização">&times;</button>
                 <img class="modal-img" id="modalImage" src="" alt="Imagem expandida em alta resolução">
             </div>
         </div>
@@ -1180,9 +1364,24 @@
         const modalImage = document.getElementById('modalImage');
         const modalClose = document.getElementById('modalClose');
 
+        let lastActiveElement = null;
+
+        function closeModal() {
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = 'auto';
+            if (lastActiveElement) {
+                lastActiveElement.focus();
+            }
+        }
+
         photoUrls.forEach((url, index) => {
             const photoItem = document.createElement('div');
             photoItem.className = 'photo-item';
+            photoItem.tabIndex = 0;
+            photoItem.setAttribute('role', 'button');
+            photoItem.setAttribute('aria-label', `Visualizar Foto ${index + 1} de Alexia Melusine`);
+            
             photoItem.innerHTML = `
                 <img src="${url}" alt="Foto ${index + 1} de Alexia Melusine" class="photo-img">
                 <div class="photo-overlay">
@@ -1192,32 +1391,37 @@
             `;
             
             photoItem.addEventListener('click', () => {
+                lastActiveElement = photoItem;
                 modalImage.src = url;
                 modalImage.alt = `Foto ${index + 1} de Alexia Melusine`;
                 modal.classList.add('active');
+                modal.setAttribute('aria-hidden', 'false');
                 document.body.style.overflow = 'hidden';
+                modalClose.focus();
+            });
+
+            photoItem.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    photoItem.click();
+                }
             });
             
             gallery.appendChild(photoItem);
         });
 
         // Fechamentos do Modal (Respeitando a transição CSS do Espectro)
-        modalClose.addEventListener('click', () => {
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        });
+        modalClose.addEventListener('click', closeModal);
 
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
-                modal.classList.remove('active');
-                document.body.style.overflow = 'auto';
+                closeModal();
             }
         });
 
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && modal.classList.contains('active')) {
-                modal.classList.remove('active');
-                document.body.style.overflow = 'auto';
+                closeModal();
             }
         });
 
