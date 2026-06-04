@@ -4,6 +4,7 @@ html {
 }
 
 :root {
+    color-scheme: only dark;
     --primary: #4A0E17;
     --secondary: #800020;
     --accent: #C5A059;

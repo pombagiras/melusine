@@ -452,13 +452,17 @@ if (track) {
         let currentTranslate = 0;
         let isInteracting = false; // flag para mouse-hover
         
-        // Variáveis de Touch
+        // Variáveis de Touch e Inércia (Momentum)
         let startX = 0;
         let touchStartTranslate = 0;
         let isTouchDragging = false;
         let dragDistance = 0;
         let temporaryPause = false;
         let tempPauseTimeout = null;
+        let lastX = 0;
+        let lastTime = 0;
+        let velocity = 0;
+        let momentumId = null;
 
         const updateDimensions = () => {
             containerWidth = container.offsetWidth;
@@ -516,14 +520,23 @@ if (track) {
             isInteracting = false;
         });
 
-        // CONTROLES DE TOQUE (Mobile - Drag Livre)
+        // CONTROLES DE TOQUE (Mobile - Drag Livre & Momentum/Inércia Fluidos)
         container.addEventListener('touchstart', (e) => {
             isDragging = true;
             isTouchDragging = true;
             wasJustDragging = false;
             dragDistance = 0;
             
+            // Cancelar qualquer movimento de inércia em andamento ao tocar novamente
+            if (momentumId) {
+                cancelAnimationFrame(momentumId);
+                momentumId = null;
+            }
+            
             startX = e.touches[0].clientX;
+            lastX = startX;
+            lastTime = performance.now();
+            velocity = 0;
             touchStartTranslate = currentTranslate;
         }, { passive: true });
 
@@ -533,6 +546,16 @@ if (track) {
             const currentX = e.touches[0].clientX;
             const deltaX = currentX - startX;
             dragDistance = Math.abs(deltaX);
+            
+            // Calcular velocidade de arraste para a inércia posterior
+            const now = performance.now();
+            const dt = now - lastTime;
+            if (dt > 0) {
+                const dx = currentX - lastX;
+                velocity = (dx / dt) * 16.67; // Converte pixels/ms para pixels/frame (aprox 60fps)
+                lastX = currentX;
+                lastTime = now;
+            }
             
             let targetTranslate = touchStartTranslate + deltaX;
             
@@ -559,7 +582,10 @@ if (track) {
             temporaryPause = true;
             if (tempPauseTimeout) clearTimeout(tempPauseTimeout);
             tempPauseTimeout = setTimeout(() => {
-                temporaryPause = false;
+                // Só retoma o autoscroll regular se a inércia não estiver rodando
+                if (!momentumId) {
+                    temporaryPause = false;
+                }
             }, 500);
             
             if (dragDistance > 25) {
@@ -568,11 +594,45 @@ if (track) {
                     isDragging = false;
                     wasJustDragging = false;
                 }, 500);
+                
+                // Dispara a inércia se a velocidade de arraste for relevante
+                if (Math.abs(velocity) > 0.5) {
+                    runMomentum();
+                } else {
+                    temporaryPause = false;
+                }
             } else {
                 isDragging = false;
                 wasJustDragging = false;
+                temporaryPause = false;
             }
         });
+
+        function runMomentum() {
+            if (isTouchDragging || isInteracting) {
+                temporaryPause = false;
+                return;
+            }
+            
+            velocity *= 0.95; // Desaceleração gradual por atrito (damping)
+            currentTranslate += velocity;
+            
+            // Loop infinito durante inércia
+            if (currentTranslate > 0) {
+                currentTranslate = -maxTranslate + currentTranslate;
+            } else if (Math.abs(currentTranslate) >= maxTranslate) {
+                currentTranslate = currentTranslate + maxTranslate;
+            }
+            
+            track.style.transform = `translateX(${currentTranslate}px)`;
+            
+            if (Math.abs(velocity) > 0.1) {
+                momentumId = requestAnimationFrame(runMomentum);
+            } else {
+                momentumId = null;
+                temporaryPause = false;
+            }
+        }
     }
 }
 
