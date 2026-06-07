@@ -861,9 +861,13 @@ Object.keys(pombagirasData).forEach(key => {
         <p class="footer-copyright">
             ALL RIGHTS RESERVED © 2026 | @ALMASDEPOMBAGIRA
         </p>
-        <p class="footer-copyright" style="margin-top: 5px; font-size: 0.8rem;">
-            Contato: <a href="mailto:contato@pombagiras.com" style="color: var(--secondary); text-decoration: none;">contato@pombagiras.com</a>
-        </p>
+        <div style="margin-top: 10px; margin-bottom: 5px; text-align: center; display: flex; justify-content: center;">
+            <span class="email-copy-trigger" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; cursor: pointer; color: var(--text-light); opacity: 0.75; transition: opacity 0.2s, color 0.2s; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); padding: 6px 12px; border-radius: 20px;" onclick="const e='contato'+'@'+'pombagiras.com'; navigator.clipboard.writeText(e); const t=this.querySelector('.copy-status'); t.textContent='Copiado!'; t.style.color='#00ff88'; setTimeout(()=>{t.textContent='(Copiar)'; t.style.color='';}, 2000);" onmouseenter="this.style.opacity='1'; this.style.borderColor='var(--secondary)';" onmouseleave="this.style.opacity='0.75'; this.style.borderColor='rgba(255, 255, 255, 0.1)';" role="button" aria-label="Copiar e-mail contato@pombagiras.com">
+                <i class="fa-solid fa-envelope" style="color: var(--secondary);"></i>
+                <span style="font-weight: 400; letter-spacing: 0.5px;">contato@pombagiras.com</span>
+                <span class="copy-status" style="font-size: 0.7rem; opacity: 0.6; transition: color 0.2s;">(Copiar)</span>
+            </span>
+        </div>
     </footer>
 </body>
 </html>`;

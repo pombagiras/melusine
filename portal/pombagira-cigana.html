@@ -404,6 +404,9 @@
       ]
     }
     </script>
+    <!-- FontAwesome for envelope icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 </head>
 <body>
     <main>
@@ -495,7 +498,13 @@
         <footer>
             <p>© 2026 <a href="index.html">POMBAGIRAS.COM</a> • Portal de Desmistificação, Arte & Filosofia Ancestral.</p>
             <p>Idealizado com rigor teológico por <strong>Alexia Melusine</strong>. Todos os direitos reservados.</p>
-            <p style="margin-top: 5px;">Contato: <a href="mailto:contato@pombagiras.com">contato@pombagiras.com</a></p>
+                    <div style="margin-top: 10px; margin-bottom: 5px; text-align: center; display: flex; justify-content: center;">
+            <span class="email-copy-trigger" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; cursor: pointer; color: #FAF6EE; opacity: 0.75; transition: opacity 0.2s, color 0.2s; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.15); padding: 6px 12px; border-radius: 20px;" onclick="const e='contato'+'@'+'pombagiras.com'; navigator.clipboard.writeText(e); const t=this.querySelector('.copy-status'); t.textContent='Copiado!'; t.style.color='#00ff88'; setTimeout(()=>{t.textContent='(Copiar)'; t.style.color='';}, 2000);" onmouseenter="this.style.opacity='1'; this.style.borderColor='#800020';" onmouseleave="this.style.opacity='0.75'; this.style.borderColor='rgba(255, 255, 255, 0.15)';" role="button" aria-label="Copiar e-mail contato@pombagiras.com">
+                <i class="fa-solid fa-envelope" style="color: #800020;"></i>
+                <span style="font-weight: 400; letter-spacing: 0.5px;">contato@pombagiras.com</span>
+                <span class="copy-status" style="font-size: 0.7rem; opacity: 0.6; transition: color 0.2s;">(Copiar)</span>
+            </span>
+        </div>
         </footer>
     </main>
 </body>
