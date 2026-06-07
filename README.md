@@ -45,7 +45,7 @@ Este não é apenas um repositório, é um **Portal Visceral**. Sob a regência 
 ## 🕯️ CONTATO DIRETO
 Para colaborações artísticas, projetos de IA vídeo ou diálogos sobre o sagrado:
 
-📧 **Email:** [alexiamelusine7@gmail.com](mailto:alexiamelusine7@gmail.com)
+📧 **Email:** [contato@alexiamelusine.com](mailto:contato@alexiamelusine.com)
 🌍 **Portal Oficial:** [pombagiras.com](https://pombagiras.com)
 
 ---
