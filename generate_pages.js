@@ -861,6 +861,9 @@ Object.keys(pombagirasData).forEach(key => {
         <p class="footer-copyright">
             ALL RIGHTS RESERVED © 2026 | @ALMASDEPOMBAGIRA
         </p>
+        <p class="footer-copyright" style="margin-top: 5px; font-size: 0.8rem;">
+            Contato: <a href="mailto:contato@pombagiras.com" style="color: var(--secondary); text-decoration: none;">contato@pombagiras.com</a>
+        </p>
     </footer>
 </body>
 </html>`;
