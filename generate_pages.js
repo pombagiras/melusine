@@ -402,6 +402,8 @@ Object.keys(pombagirasData).forEach(key => {
     <meta name="description" content="Estudo aprofundado sobre ${data.nome}: história, mistérios, guia de oferendas, oração sagrada e regência espiritual.">
     <meta name="keywords" content="${data.nome}, Pombagira, Umbanda, Quimbanda, Esquerda, Alexia Melusine, Cosmovisão, Guardiã">
     <meta name="author" content="Alexia Melusine">
+    <link rel="icon" type="image/png" href="https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Favicon%20%20Miniatura%20do%20Google.png">
+    <link rel="apple-touch-icon" href="https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Favicon%20%20Miniatura%20do%20Google.png">
     
     <!-- Open Graph e Twitter Cards (SEO Premium) -->
     <meta property="og:type" content="article">
