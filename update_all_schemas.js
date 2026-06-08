@@ -148,7 +148,8 @@ const portalEntities = [
   { name: "Da Neblina", file: "da-neblina.html" },
   { name: "Das Correntes", file: "das-correntes.html" },
   { name: "São Cipriano", file: "sao-cipriano.html" },
-  { name: "Quem Tem Pombagira", file: "caracteristicas.html" }
+  { name: "Quem Tem Pombagira", file: "caracteristicas.html" },
+  { name: "Como Saber", file: "como-saber.html" }
 ];
 
 const guardiasNames = [
