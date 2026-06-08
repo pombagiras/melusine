@@ -146,7 +146,8 @@ const portalEntities = [
   { name: "Da Fenda", file: "da-fenda.html" },
   { name: "Da Calunga Profunda", file: "da-calunga-profunda.html" },
   { name: "Da Neblina", file: "da-neblina.html" },
-  { name: "Das Correntes", file: "das-correntes.html" }
+  { name: "Das Correntes", file: "das-correntes.html" },
+  { name: "São Cipriano", file: "sao-cipriano.html" }
 ];
 
 const guardiasNames = [
