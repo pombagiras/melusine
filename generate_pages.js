@@ -402,8 +402,8 @@ Object.keys(pombagirasData).forEach(key => {
     <meta name="description" content="Estudo aprofundado sobre ${data.nome}: história, mistérios, guia de oferendas, oração sagrada e regência espiritual.">
     <meta name="keywords" content="${data.nome}, Pombagira, Umbanda, Quimbanda, Esquerda, Alexia Melusine, Cosmovisão, Guardiã">
     <meta name="author" content="Alexia Melusine">
-    <link rel="icon" type="image/png" href="https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Favicon%20%20Miniatura%20do%20Google.png">
-    <link rel="apple-touch-icon" href="https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Favicon%20%20Miniatura%20do%20Google.png">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Favicon%20%20Miniatura%20do%20Google.png">
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Favicon%20%20Miniatura%20do%20Google.png">
     
     <!-- Open Graph e Twitter Cards (SEO Premium) -->
     <meta property="og:type" content="article">
@@ -617,7 +617,7 @@ Object.keys(pombagirasData).forEach(key => {
           "url": "https://pombagiras.com/",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Favicon%20%20Miniatura%20do%20Google.png"
+            "url": "https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Favicon%20%20Miniatura%20do%20Google.png"
           },
           "sameAs": [
             "https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G",

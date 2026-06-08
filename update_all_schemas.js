@@ -24,7 +24,7 @@ const organizationObj = {
   "url": "https://pombagiras.com/",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Favicon%20%20Miniatura%20do%20Google.png"
+    "url": "https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Favicon%20%20Miniatura%20do%20Google.png"
   },
   "sameAs": [
     "https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G",
@@ -217,7 +217,7 @@ function main() {
               "primaryImageOfPage": {
                 "@type": "ImageObject",
                 "@id": "https://pombagiras.com/portal/#primaryimage",
-                "url": "https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Ogimage%20e%20Twitter%20Card.png",
+                "url": "https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Ogimage%20e%20Twitter%20Card.png",
                 "width": 1200,
                 "height": 630
               }
@@ -297,7 +297,7 @@ function main() {
               "primaryImageOfPage": {
                 "@type": "ImageObject",
                 "@id": "https://pombagiras.com/guardias/#primaryimage",
-                "url": "https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Ogimage%20e%20Twitter%20Card.png",
+                "url": "https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Ogimage%20e%20Twitter%20Card.png",
                 "width": 1200,
                 "height": 630
               }
@@ -328,7 +328,7 @@ function main() {
               },
               "headline": "A Origem Histórica das Pombagiras",
               "description": "Exploração histórica, teológica e cultural sobre as origens e a evolução do culto às Pombagiras nas religiões afro-brasileiras.",
-              "image": "https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Ogimage%20e%20Twitter%20Card.png",
+              "image": "https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Ogimage%20e%20Twitter%20Card.png",
               "author": {
                 "@id": "https://pombagiras.com/#author"
               },

@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const portalDir = __dirname;
-const faviconUrl = 'https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Favicon%20%20Miniatura%20do%20Google.png';
+const faviconUrl = 'https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Favicon%20%20Miniatura%20do%20Google.png';
 
 const faviconTags = `
     <link rel="icon" type="image/png" href="${faviconUrl}">
