@@ -147,7 +147,8 @@ const portalEntities = [
   { name: "Da Calunga Profunda", file: "da-calunga-profunda.html" },
   { name: "Da Neblina", file: "da-neblina.html" },
   { name: "Das Correntes", file: "das-correntes.html" },
-  { name: "São Cipriano", file: "sao-cipriano.html" }
+  { name: "São Cipriano", file: "sao-cipriano.html" },
+  { name: "Quem Tem Pombagira", file: "caracteristicas.html" }
 ];
 
 const guardiasNames = [
@@ -244,8 +245,8 @@ function main() {
               "@type": "ItemList",
               "@id": "https://pombagiras.com/portal/#itemlist",
               "name": "Guardiãs - Portal Visceral",
-              "description": "Artigos e correspondências sagradas de 24 Pombagiras no Portal Visceral.",
-              "numberOfItems": 24,
+              "description": `Artigos e correspondências sagradas de ${portalEntities.length} Pombagiras no Portal Visceral.`,
+              "numberOfItems": portalEntities.length,
               "itemListElement": portalItems
             },
             {
