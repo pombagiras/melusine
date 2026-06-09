@@ -151,7 +151,8 @@ const portalEntities = [
   { name: "Quem Tem Pombagira", file: "caracteristicas.html" },
   { name: "Como Saber", file: "como-saber.html" },
   { name: "Sinais de Pombagira", file: "sinais-pombagira.html" },
-  { name: "Sombra Feminina", file: "sombra-feminina.html" }
+  { name: "Sombra Feminina", file: "sombra-feminina.html" },
+  { name: "Medo de Pombagira", file: "medo-pombagira.html" }
 ];
 
 const guardiasNames = [
