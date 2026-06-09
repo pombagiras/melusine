@@ -149,7 +149,8 @@ const portalEntities = [
   { name: "Das Correntes", file: "das-correntes.html" },
   { name: "São Cipriano", file: "sao-cipriano.html" },
   { name: "Quem Tem Pombagira", file: "caracteristicas.html" },
-  { name: "Como Saber", file: "como-saber.html" }
+  { name: "Como Saber", file: "como-saber.html" },
+  { name: "Sinais de Pombagira", file: "sinais-pombagira.html" }
 ];
 
 const guardiasNames = [
