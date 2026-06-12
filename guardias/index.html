@@ -909,6 +909,22 @@
             outline: none;
         }
 
+        /* Cores sociais ajustadas para a estética da página (Vermelho e Ouro) */
+        .social-icon, .social-icon i {
+            color: var(--primary-color) !important;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .social-card:hover .social-icon, .social-card:hover .social-icon i {
+            color: var(--secondary-color) !important;
+        }
+        .social-icon svg {
+            fill: var(--primary-color) !important;
+            transition: fill 0.3s ease;
+        }
+        .social-card:hover .social-icon svg {
+            fill: var(--secondary-color) !important;
+        }
+
         .social-icon {
             font-size: 1.85em;
             min-width: 42px;
@@ -936,17 +952,7 @@
         }
 
         /* Cores sociais */
-        .instagram .social-icon { color: #E4405F; }
-        .youtube .social-icon { color: #FF0000; }
-        .tiktok .social-icon { color: #010101; }
-        [data-theme="night"] .tiktok .social-icon { color: #ffffffdd; }
-        .kwai .social-icon { color: #ff8c00; }
-        .threads .social-icon { color: #010101; }
-        [data-theme="night"] .threads .social-icon { color: #ffffffdd; }
-        .whatsapp .social-icon { color: #25D366; }
-        .telegram .social-icon { color: #0088cc; }
-        .discord .social-icon { color: #5865F2; }
-        .pinterest .social-icon { color: #bd081c; }
+        /* Brand colors disabled */
 
         /* ═══════════ ARTICLE / QUOTE ═══════════ */
         .article-card {
