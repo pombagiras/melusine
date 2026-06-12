@@ -12,7 +12,8 @@ const enrichAuthor = {
   "sameAs": [
     "https://github.com/pombagiras",
     "https://github.com/alexialuzdeferro",
-    "https://alexiamelusine.substack.com/"
+    "https://alexiamelusine.substack.com/",
+    "https://www.wikidata.org/wiki/Q139714039"
   ],
   "knowsAbout": ["Pombagira", "Umbanda", "Quimbanda", "Candomblé", "Orixás", "Exu", "AI", "SEO Técnico"]
 };

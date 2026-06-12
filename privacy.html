@@ -15,6 +15,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Geist:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=1.0.1">
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -27,7 +30,10 @@
         "@type": "Person",
         "@id": "https://pombagiras.com/#author",
         "name": "Alexia Melusine",
-        "url": "https://pombagiras.com"
+        "url": "https://pombagiras.com/alexiamelusine/",
+        "sameAs": [
+          "https://www.wikidata.org/wiki/Q139714039"
+        ]
       }
     }
     </script>
@@ -37,6 +43,7 @@
         <header style="text-align: center; margin-bottom: 40px;">
             <h1 class="serif" style="font-size: 3rem; color: var(--accent); margin-bottom: 15px;">Política de Privacidade</h1>
             <p style="font-style: italic; opacity: 0.8;">"O respeito à sua navegação e autonomia é parte indissociável da nossa ética técnica."</p>
+            <p style="font-size: 0.85rem; opacity: 0.6; margin-top: 12px; letter-spacing: 0.5px;">Última atualização: Junho de 2026</p>
         </header>
 
         <section class="card" style="margin-bottom: 25px; background: rgba(0, 0, 0, 0.45); border-radius: 20px;">
@@ -52,11 +59,24 @@
         <section class="card" style="margin-bottom: 25px; background: rgba(0, 0, 0, 0.45); border-radius: 20px;">
             <h2 class="serif" style="color: var(--accent); font-size: 1.8rem; margin-bottom: 15px;">3. Links e Serviços de Terceiros</h2>
             <p>Nossas páginas contêm links para plataformas externas (como GitHub, Spotify, Instagram, Telegram, WhatsApp e canais de streaming). Esta política de privacidade não se aplica a sites de terceiros. Recomendamos que você leia as diretrizes de privacidade das respectivas plataformas ao acessá-las.</p>
+            <p style="margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.05);">Este portal poderá utilizar ferramentas de análise de tráfego (como Cloudflare Analytics, Google Analytics ou similares) para compreender estatísticas agregadas de navegação, sem comercialização ou rastreamento invasivo de dados pessoais.</p>
         </section>
 
         <section class="card" style="margin-bottom: 25px; background: rgba(0, 0, 0, 0.45); border-radius: 20px;">
             <h2 class="serif" style="color: var(--accent); font-size: 1.8rem; margin-bottom: 15px;">4. Direitos sob a LGPD</h2>
-            <p>Em conformidade com a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018), garantimos o pleno exercício de seus direitos quanto aos seus dados de navegação. Caso você deseje esclarecer dúvidas sobre os processos técnicos do nosso laboratório ou requerer a exclusão de comunicações por e-mail, entre em contato diretamente.</p>
+            <p>Em conformidade com a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018), garantimos o pleno exercício de seus direitos quanto aos seus dados de navegação. Caso você deseje esclarecer dúvidas sobre os processos técnicos do nosso laboratório ou requerer a exclusão de dados de comunicação, entre em contato através do e-mail formal de privacidade e proteção de dados:</p>
+            <div style="margin-top: 15px;">
+                <span class="email-copy-trigger" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; cursor: pointer; color: #FAF6EE; opacity: 0.75; transition: opacity 0.2s, color 0.2s; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(139, 0, 0, 0.2); padding: 8px 16px; border-radius: 20px;" onclick="const e='contato'+'@'+'alexiamelusine.com'; navigator.clipboard.writeText(e); const t=this.querySelector('.copy-status'); t.textContent='Copiado!'; t.style.color='#00ff88'; setTimeout(()=>{t.textContent='(Copiar)'; t.style.color='';}, 2000);" onmouseenter="this.style.opacity='1'; this.style.borderColor='var(--accent)';" onmouseleave="this.style.opacity='0.75'; this.style.borderColor='rgba(139, 0, 0, 0.2)';" role="button" aria-label="Copiar e-mail contato@alexiamelusine.com">
+                    <i class="fa-solid fa-envelope" style="color: var(--accent);"></i>
+                    <span style="font-weight: 400; letter-spacing: 0.5px;">contato@alexiamelusine.com</span>
+                    <span class="copy-status" style="font-size: 0.7rem; opacity: 0.6; transition: color 0.2s;">(Copiar)</span>
+                </span>
+            </div>
+        </section>
+
+        <section class="card" style="margin-bottom: 25px; background: rgba(0, 0, 0, 0.45); border-radius: 20px;">
+            <h2 class="serif" style="color: var(--accent); font-size: 1.8rem; margin-bottom: 15px;">5. Uso de Sistemas de Inteligência Artificial</h2>
+            <p>Parte dos conteúdos, pesquisas, ilustrações ou ferramentas deste ecossistema podem utilizar sistemas de inteligência artificial como apoio técnico e criativo. A curadoria editorial, revisão teológica e responsabilidade final de publicação permanecem inteiramente sob responsabilidade do projeto e de seus autores.</p>
         </section>
 
         <div style="text-align: center; margin-top: 40px;">
@@ -65,6 +85,10 @@
     </main>
 
     <footer style="text-align: center; padding: 40px 20px; border-top: 1px solid rgba(255, 255, 255, 0.05); margin-top: 60px;">
+        <p style="margin-bottom: 15px; font-size: 0.9rem; line-height: 1.6; color: #b2b2b2;">
+            Projeto mantido por <a href="alexiamelusine/index.html" style="color: var(--accent); text-decoration: none; font-weight: 600;">Alexia Melusine</a>.<br>
+            Pesquisadora independente, desenvolvedora e produtora de conteúdo digital.
+        </p>
         <p>© 2026 Alexia Melusine. Todos os direitos reservados.</p>
         <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 10px;">Codificação, Trânsito e Visceralidade.</p>
     </footer>
