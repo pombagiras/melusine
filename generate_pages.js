@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
+const currentIsoDate = new Date().toISOString();
+
 const pombagirasData = {
     "Maria Padilha": {
         nome: "Maria Padilha",
@@ -708,7 +710,7 @@ Object.keys(pombagirasData).forEach(key => {
           },
           "inLanguage": "pt-BR",
           "datePublished": "2026-06-03T14:00:00-03:00",
-          "dateModified": "2026-06-03T14:00:00-03:00"
+          "dateModified": "${currentIsoDate}"
         },
         {
           "@type": "FAQPage",

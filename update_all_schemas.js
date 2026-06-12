@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
+const currentIsoDate = new Date().toISOString();
+
 // 1. Core Schema Objects to standardize across the graph
 const enrichAuthor = {
   "@type": "Person",
@@ -355,7 +357,7 @@ function main() {
               },
               "inLanguage": "pt-BR",
               "datePublished": "2026-06-03T14:00:00-03:00",
-              "dateModified": "2026-06-03T14:00:00-03:00"
+              "dateModified": currentIsoDate
             },
             {
               "@type": "ItemList",
@@ -518,7 +520,7 @@ function processPortalSubpage(fileName, html) {
           },
           "inLanguage": "pt-BR",
           "datePublished": "2026-06-03T14:00:00-03:00",
-          "dateModified": "2026-06-03T14:00:00-03:00"
+          "dateModified": currentIsoDate
         }
       ]
     };
