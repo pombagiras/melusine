@@ -112,6 +112,10 @@
           "mainEntity": {
             "@id": "https://pombagiras.com/alexiamelusine/#author"
           },
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [".speakable-title", ".speakable-description"]
+          },
           "inLanguage": "pt-BR"
         },
         {
@@ -1043,10 +1047,10 @@
 
     <section class="hero">
         <div class="container">
-            <h1>ALEXIA MELUSINE</h1>
+            <h1 class="speakable-title">ALEXIA MELUSINE</h1>
             <h2>CRIADORA DE CONTEÚDO & ESTUDIOSA DAS POMBAGIRAS</h2>
             <div class="divider"></div>
-            <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: #d0d0d8;">
+            <p class="speakable-description" style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: #d0d0d8;">
                 Entre sombras e luz, construo pontes entre mundos. Através da arte, do estudo e do respeito, honro a diversidade trans e as entidades das encruzilhadas.
             </p>
         </div>
@@ -1197,6 +1201,11 @@
                 Este site foi criado com respeito às tradições e entidades nele representadas.<br>
                 Todo conteúdo é compartilhado com intenção educativa e reverente.
             </p>
+            <div style="margin-top: 15px; margin-bottom: 15px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; font-size: 0.85rem;">
+                <a href="../privacy.html" style="color: var(--accent-color); text-decoration: none; opacity: 0.75; transition: opacity 0.2s;" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.75'">Política de Privacidade</a>
+                <span style="color: var(--accent-color); opacity: 0.3;">|</span>
+                <a href="../terms.html" style="color: var(--accent-color); text-decoration: none; opacity: 0.75; transition: opacity 0.2s;" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.75'">Termos de Uso</a>
+            </div>
             <p class="footer-text" style="margin-top: 25px; font-size: 0.85rem; color: #666;">
                 © 2026 Alexia Melusine. Todos os direitos reservados.
             </p>

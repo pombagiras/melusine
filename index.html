@@ -146,6 +146,10 @@
           "breadcrumb": {
             "@id": "https://pombagiras.com/#breadcrumb"
           },
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [".speakable-title", ".speakable-description"]
+          },
           "inLanguage": "pt-BR"
         },
         {
@@ -594,8 +598,8 @@
             Seu navegador não suporta vídeos HTML5.
         </video>
         <div class="hero-content">
-            <h1>Pombagiras.com</h1>
-            <p class="subtitle">Educação e criação digital a serviço das tradições afro-brasileiras. Um mergulho
+            <h1 class="speakable-title">Pombagiras.com</h1>
+            <p class="subtitle speakable-description">Educação e criação digital a serviço das tradições afro-brasileiras. Um mergulho
                 profundo na sabedoria das guardiãs.</p>
             <div class="cta-group">
                 <a href="#educativo" class="btn btn-primary">Iniciar Jornada</a>
@@ -2884,6 +2888,11 @@
             </div>
 
             <div class="footer-bottom">
+                <div style="margin-top: 10px; margin-bottom: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                    <a href="privacy.html" style="color: var(--text-light); opacity: 0.75; text-decoration: none; font-size: 0.85rem; transition: opacity 0.2s;" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.75'">Política de Privacidade</a>
+                    <span style="color: var(--text-light); opacity: 0.3;">|</span>
+                    <a href="terms.html" style="color: var(--text-light); opacity: 0.75; text-decoration: none; font-size: 0.85rem; transition: opacity 0.2s;" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.75'">Termos de Uso</a>
+                </div>
                 <p class="footer-copyright">
                     ALL RIGHTS RESERVED © 2026 | @ALMASDEPOMBAGIRA
                 </p>

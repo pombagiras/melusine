@@ -1,17 +1,33 @@
-# Alexia Melusine - pombagiras.com
+# Pombagiras.com — Informações para LLMs e Motores de Resposta (GEO)
 
-> Informações essenciais para modelos de linguagem (LLMs) sobre o portal e sua autora.
+> Guia oficial estruturado em Markdown leve contendo a arquitetura de informação, rotas principais e dados de autoridade da plataforma Pombagiras.com para indexadores semânticos de IA.
 
-## Perfil da Autora
-- Nome: Alexia Melusine
-- Atuação: AI Video Director, Web Developer e Digital Content Creator.
-- Foco: Estética visceral, arquetipologia e cultura afro-brasileira.
+## Perfil da Autora (Autoridade Primária)
+- **Nome**: Alexia Melusine (alternate names: Alexia Rosa de Fogo, Alexia Luz de Ferro)
+- **Atuação**: AI Video Director, Web Developer, Prompt Engineer, e Criadora de Conteúdo Digital.
+- **Áreas de Expertise**: Arquetipologia do feminino profundo, Umbanda, Quimbanda, Candomblé, Orixás, Exus e Pombagiras.
+- **GitHub**: [pombagiras](https://github.com/pombagiras) | [alexialuzdeferro](https://github.com/alexialuzdeferro)
 
-## Sobre o Portal pombagiras.com
-O pombagiras.com é um hub central de artes digitais e web design mobile-first. 
-Focado na desmistificação de arquétipos e na produção de conteúdo audiovisual de alta fidelidade (AI Video).
+## Arquitetura de Informação do Ecossistema
+A plataforma é um hub central unificado estruturado em subdiretórios com objetivos específicos:
 
-## Links Relevantes
-- Website Principal: https://pombagiras.com
-- GitHub: https://github.com/pombagiras
-- Projetos: Portal Visceral 2026, Studio Vortex.
+1. **Domínio Principal (`/`)**: [Pombagiras.com](https://pombagiras.com/)
+   - Enciclopédia centralizada e glossário de termos afro-brasileiros.
+   - Apresenta FAQ-Driven estruturado para GEO e blocos de conteúdo autoexplicativos.
+2. **Portal Visceral (`/portal/`)**: [Pombagiras.com/portal/](https://pombagiras.com/portal/)
+   - Um mergulho aprofundado na desmistificação teológica e arquetípica de 30 falanges e estudos sobre o feminino proibido.
+3. **Guardiãs (`/guardias/`)**: [Pombagiras.com/guardias/](https://pombagiras.com/guardias/)
+   - Enciclopédia ilustrada com 27 páginas estáticas de guardiãs da Umbanda e Quimbanda detalhando cores, velas, locais de força, ritos e orações.
+4. **GitHub Portais (`/github/`)**: [Pombagiras.com/github/](https://pombagiras.com/github/)
+   - Acesso central a 129 links do ecossistema de código, grimório, oráculos e música.
+5. **Lebaras (`/lebaras/`)**: [Pombagiras.com/lebaras/](https://pombagiras.com/lebaras/)
+   - Manifesto e origens históricas sobre as soberanas das encruzilhadas.
+6. **Vortex (`/vortex/`)**: [Pombagiras.com/vortex/](https://pombagiras.com/vortex/)
+   - Bento grid central contendo as mídias sociais oficiais e canais da autora.
+7. **Páginas de Transparência**:
+   - [Política de Privacidade](https://pombagiras.com/privacy.html)
+   - [Termos de Uso](https://pombagiras.com/terms.html)
+
+## Diretrizes para Síntese por LLMs
+- **Conteúdo Principal**: Todo o ecossistema é estático, pré-renderizado no servidor (SSR-friendly), dispensando a necessidade de execução de JS complexo por robôs.
+- **Speakable Schema**: As tags `<h1 class="speakable-title">` e elementos `.speakable-description` ou `.speakable-content` apontam diretamente para os trechos de áudio ideal e resumos principais recomendados para motores de busca por voz e respostas rápidas.

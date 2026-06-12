@@ -219,6 +219,10 @@ function main() {
               "about": {
                 "@id": "https://pombagiras.com/#organization"
               },
+              "speakable": {
+                "@type": "SpeakableSpecification",
+                "cssSelector": [".speakable-title", ".speakable-description"]
+              },
               "primaryImageOfPage": {
                 "@type": "ImageObject",
                 "@id": "https://pombagiras.com/portal/#primaryimage",
@@ -298,6 +302,10 @@ function main() {
               },
               "about": {
                 "@id": "https://pombagiras.com/#organization"
+              },
+              "speakable": {
+                "@type": "SpeakableSpecification",
+                "cssSelector": [".speakable-title", ".speakable-description"]
               },
               "primaryImageOfPage": {
                 "@type": "ImageObject",
@@ -458,6 +466,10 @@ function processPortalSubpage(fileName, html) {
           "breadcrumb": {
             "@id": `https://pombagiras.com/portal/${fileName}#breadcrumb`
           },
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [".speakable-title", ".speakable-description"]
+          },
           "inLanguage": "pt-BR"
         },
         {
@@ -526,6 +538,35 @@ function processPortalSubpage(fileName, html) {
     // Inject LCP image preload right after <head> if not already present
     if (imageUrl && !resultHtml.includes('rel="preload"')) {
         resultHtml = resultHtml.replace('<head>', `<head>\n    <!-- Preload critical LCP image immediately -->\n    <link rel="preload" href="${imageUrl}" as="image" fetchpriority="high">`);
+    }
+
+    // Inject canonical link if not already present
+    if (!resultHtml.includes('rel="canonical"')) {
+        resultHtml = resultHtml.replace('<head>', `<head>\n    <link rel="canonical" href="https://pombagiras.com/portal/${fileName}">`);
+    }
+
+    // Inject speakable classes
+    if (resultHtml.includes('<h1') && !resultHtml.includes('speakable-title')) {
+        if (resultHtml.match(/<h1[^>]*?class="[^"]*?"/i)) {
+            resultHtml = resultHtml.replace(/(<h1[^>]*?class=")([^"]*?)(")/i, '$1$2 speakable-title$3');
+        } else {
+            resultHtml = resultHtml.replace(/<h1([^>]*?)>/i, '<h1$1 class="speakable-title">');
+        }
+    }
+
+    if (resultHtml.includes('class="subtitle"') && !resultHtml.includes('speakable-description')) {
+        resultHtml = resultHtml.replace(/(class="subtitle)(")/i, '$1 speakable-description$2');
+    }
+
+    // Inject privacy and terms links to footer
+    const footerLinks = `
+            <div style="margin-top: 10px; margin-bottom: 10px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                <a href="../privacy.html" style="color: var(--muted-text); text-decoration: none;">Política de Privacidade</a>
+                <span style="color: var(--muted-text); opacity: 0.3;">|</span>
+                <a href="../terms.html" style="color: var(--muted-text); text-decoration: none;">Termos de Uso</a>
+            </div>`;
+    if (!resultHtml.includes('href="../privacy.html"')) {
+        resultHtml = resultHtml.replace('</footer>', `${footerLinks}\n        </footer>`);
     }
     
     return resultHtml;

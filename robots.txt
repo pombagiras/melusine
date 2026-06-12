@@ -1,5 +1,10 @@
 User-agent: *
 Allow: /
+Disallow: /*?*
+Disallow: /search/
+Disallow: /login/
 Disallow: /private/
+Disallow: /admin/
+Disallow: /*?s=*
 
 Sitemap: https://pombagiras.com/sitemap.xml

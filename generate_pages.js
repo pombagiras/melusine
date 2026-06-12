@@ -404,6 +404,7 @@ Object.keys(pombagirasData).forEach(key => {
     <meta name="author" content="Alexia Melusine">
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Favicon%20%20Miniatura%20do%20Google.png">
     <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Favicon%20%20Miniatura%20do%20Google.png">
+    <link rel="canonical" href="https://pombagiras.com/guardias/${fileName}">
     
     <!-- Open Graph e Twitter Cards (SEO Premium) -->
     <meta property="og:type" content="article">
@@ -655,6 +656,10 @@ Object.keys(pombagirasData).forEach(key => {
           "breadcrumb": {
             "@id": "https://pombagiras.com/guardias/${fileName}#breadcrumb"
           },
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [".speakable-title", ".speakable-description"]
+          },
           "inLanguage": "pt-BR"
         },
         {
@@ -763,7 +768,7 @@ Object.keys(pombagirasData).forEach(key => {
 
         <article class="article-section">
             <header class="article-header">
-                <h1 class="article-title serif">${data.nome}</h1>
+                <h1 class="article-title serif speakable-title">${data.nome}</h1>
                 <p class="article-phrase">“${data.frase}”</p>
             </header>
 
@@ -771,7 +776,7 @@ Object.keys(pombagirasData).forEach(key => {
                 <img src="${getPombagiraImageUrl(key)}" alt="Representação conceitual da Guardiã ${data.nome}" style="max-width: 100%; width: 400px; height: 400px; object-fit: cover; border-radius: 24px; border: 1px solid rgba(217, 4, 41, 0.3); box-shadow: 0 15px 35px rgba(217, 4, 41, 0.15); display: inline-block;">
             </div>
 
-            <section class="article-intro">
+            <section class="article-intro speakable-description">
                 ${data.descricao}
             </section>
 
@@ -863,6 +868,11 @@ Object.keys(pombagirasData).forEach(key => {
         <p class="footer-copyright">
             ALL RIGHTS RESERVED © 2026 | @ALMASDEPOMBAGIRA
         </p>
+        <div style="margin-top: 10px; margin-bottom: 10px; text-align: center; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+            <a href="../privacy.html" style="color: var(--text-light); text-decoration: none; font-size: 0.82rem; opacity: 0.75; transition: opacity 0.2s;" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.75'">Política de Privacidade</a>
+            <span style="color: var(--text-light); opacity: 0.3;">|</span>
+            <a href="../terms.html" style="color: var(--text-light); text-decoration: none; font-size: 0.82rem; opacity: 0.75; transition: opacity 0.2s;" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.75'">Termos de Uso</a>
+        </div>
         <div style="margin-top: 10px; margin-bottom: 5px; text-align: center; display: flex; justify-content: center;">
             <span class="email-copy-trigger" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; cursor: pointer; color: var(--text-light); opacity: 0.75; transition: opacity 0.2s, color 0.2s; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); padding: 6px 12px; border-radius: 20px;" onclick="const e='contato'+'@'+'pombagiras.com'; navigator.clipboard.writeText(e); const t=this.querySelector('.copy-status'); t.textContent='Copiado!'; t.style.color='#00ff88'; setTimeout(()=>{t.textContent='(Copiar)'; t.style.color='';}, 2000);" onmouseenter="this.style.opacity='1'; this.style.borderColor='var(--secondary)';" onmouseleave="this.style.opacity='0.75'; this.style.borderColor='rgba(255, 255, 255, 0.1)';" role="button" aria-label="Copiar e-mail contato@pombagiras.com">
                 <i class="fa-solid fa-envelope" style="color: var(--secondary);"></i>

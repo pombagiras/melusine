@@ -60,14 +60,18 @@
     },
     {
       "@type": "WebPage",
-      "@id": "https://pombagiras.com/#webpage",
-      "url": "https://pombagiras.com/",
+      "@id": "https://pombagiras.com/lebaras/#webpage",
+      "url": "https://pombagiras.com/lebaras/",
       "name": "POMBAGIRAS.COM | Cultura, Arquétipos & Conhecimento",
       "isPartOf": { "@id": "https://pombagiras.com/#website" },
       "about": { "@id": "https://pombagiras.com/#website" },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".speakable-title", ".speakable-description"]
+      },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "@id": "https://pombagiras.com/#primaryimage",
+        "@id": "https://pombagiras.com/lebaras/#primaryimage",
         "url": "https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Ogimage%20e%20Twitter%20Card.png",
         "width": 1200,
         "height": 630
@@ -741,7 +745,7 @@ footer {
 
   <p class="hero-eyebrow" aria-hidden="true">Portal das Guardiãs · Umbanda & Quimbanda</p>
 
-  <h1 id="hero-title" class="hero-title">POMBAGIRAS</h1>
+  <h1 id="hero-title" class="hero-title speakable-title">POMBAGIRAS</h1>
 
   <p class="hero-subtitle" aria-label="Rainhas da Noite Eterna — Senhoras dos Caminhos e das Encruzilhadas">
     Rainhas da Noite Eterna — Senhoras dos Caminhos e das Encruzilhadas
@@ -751,7 +755,7 @@ footer {
     <span>✦</span>
   </div>
 
-  <p class="hero-desc">
+  <p class="hero-desc speakable-description">
     Nas encruzilhadas do mundo e do além, elas aguardam.<br>
     Soberanas da madrugada, detentoras dos segredos que o dia não ousaria revelar.
   </p>
@@ -1106,6 +1110,8 @@ footer {
       <li><a href="#giras">A Gira</a></li>
       <li><a href="#poder">O Poder</a></li>
       <li><a href="#manifesto">O Manifesto</a></li>
+      <li><a href="../privacy.html">Política de Privacidade</a></li>
+      <li><a href="../terms.html">Termos de Uso</a></li>
     </ul>
   </nav>
 

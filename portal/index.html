@@ -122,6 +122,13 @@
           "about": {
             "@id": "https://pombagiras.com/#organization"
           },
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [
+              ".speakable-title",
+              ".speakable-description"
+            ]
+          },
           "primaryImageOfPage": {
             "@type": "ImageObject",
             "@id": "https://pombagiras.com/portal/#primaryimage",
@@ -539,8 +546,8 @@
             
             <div class="hero-banner-content container">
                 <span class="accent-kicker">Filosofia Ancestral & Tecnologia</span>
-                <h1 class="main-page-title">Guardiãs dos Limiares</h1>
-                <p class="hero-description">A maior plataforma dedicada à desmistificação das Pombagiras. Um estudo profundo sobre arquétipos femininos sagrados, desconstruindo dogmas sociais e preconceitos através da arte visceral, história e ciência sob a ótica de Alexia Melusine.</p>
+                <h1 class="main-page-title speakable-title">Guardiãs dos Limiares</h1>
+                <p class="hero-description speakable-description">A maior plataforma dedicada à desmistificação das Pombagiras. Um estudo profundo sobre arquétipos femininos sagrados, desconstruindo dogmas sociais e preconceitos através da arte visceral, história e ciência sob a ótica de Alexia Melusine.</p>
                 <div class="hero-btn-row">
                     <a href="#portal" class="btn btn-crimson">Explorar Portal</a>
                     <a href="#about-author" class="btn btn-outline">Conhecer a Autora</a>
@@ -1522,6 +1529,11 @@
             <div class="footer-divider-pombagiras"></div>
 
             <div class="footer-bottom-row">
+                <div style="margin-top: 10px; margin-bottom: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                    <a href="../privacy.html" style="color: #FAF6EE; opacity: 0.75; text-decoration: none; font-size: 0.85rem; transition: opacity 0.2s;" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.75'">Política de Privacidade</a>
+                    <span style="color: #FAF6EE; opacity: 0.3;">|</span>
+                    <a href="../terms.html" style="color: #FAF6EE; opacity: 0.75; text-decoration: none; font-size: 0.85rem; transition: opacity 0.2s;" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.75'">Termos de Uso</a>
+                </div>
                 <p class="copyright-pombagiras">&copy; <span id="copyrightYear">2026</span> POMBAGIRAS.COM. Direitos Autorais Reservados para Alexia Melusine.</p>
                 <div style="margin-top: 10px; margin-bottom: 5px;">
                     <span class="email-copy-trigger" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; cursor: pointer; color: #FAF6EE; opacity: 0.75; transition: opacity 0.2s, color 0.2s; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 77, 109, 0.2); padding: 6px 12px; border-radius: 20px;" onclick="const e='contato'+'@'+'pombagiras.com'; navigator.clipboard.writeText(e); const t=this.querySelector('.copy-status'); t.textContent='Copiado!'; t.style.color='#00ff88'; setTimeout(()=>{t.textContent='(Copiar)'; t.style.color='';}, 2000);" onmouseenter="this.style.opacity='1'; this.style.borderColor='#ff4d6d';" onmouseleave="this.style.opacity='0.75'; this.style.borderColor='rgba(255, 77, 109, 0.2)';" role="button" aria-label="Copiar e-mail contato@pombagiras.com">

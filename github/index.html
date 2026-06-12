@@ -113,6 +113,10 @@
         "inLanguage": "pt-BR",
         "mainEntity": { "@id": "https://pombagiras.com/#author" },
         "isPartOf": { "@id": "https://pombagiras.com/#website" },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".speakable-title", ".speakable-description"]
+        },
         "primaryImageOfPage": {
           "@type": "ImageObject",
           "url": "https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Ogimage%20e%20Twitter%20Card.png",
@@ -518,9 +522,9 @@
         src="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/vC%20(8).png"
         alt="Foto de perfil de Alexia Melusine em estilo renderizado com luz neon" />
       <div class="title-badge">
-        <h1>✦ ALEXIA MELUSINE ✦</h1>
+        <h1 class="speakable-title">✦ ALEXIA MELUSINE ✦</h1>
         <div class="substack">LUZ DE FERRO • ROSA DE FOGO</div>
-        <div style="margin-top:8px;">Ecossistema Digital completo — 129 portais do conhecimento</div>
+        <div class="speakable-description" style="margin-top:8px;">Ecossistema Digital completo — 129 portais do conhecimento</div>
       </div>
     </div>
     <a href="https://pombagiras.com/" target="_blank" rel="noopener" class="pombagira-badge"
@@ -591,6 +595,11 @@
         <i class="fa-brands fa-github" aria-hidden="true"></i>
       </a>
     </address>
+    <div style="margin-top: 10px; margin-bottom: 10px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; font-size: 0.82rem;">
+      <a href="../privacy.html" style="color: #ff90aa; text-decoration: none; opacity: 0.75; transition: opacity 0.2s;" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.75'">Política de Privacidade</a>
+      <span style="color: #ff90aa; opacity: 0.3;">|</span>
+      <a href="../terms.html" style="color: #ff90aa; text-decoration: none; opacity: 0.75; transition: opacity 0.2s;" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.75'">Termos de Uso</a>
+    </div>
     <div>© 2026 Alexia Melusine — Todas as Guardiãs ecoam em silício e alma.</div>
     <div style="margin-top: 10px; margin-bottom: 5px;">
         <span class="email-copy-trigger" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; cursor: pointer; color: #FAF6EE; opacity: 0.75; transition: opacity 0.2s, color 0.2s; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 77, 109, 0.2); padding: 6px 12px; border-radius: 20px;" onclick="const e='contato'+'@'+'pombagiras.com'; navigator.clipboard.writeText(e); const t=this.querySelector('.copy-status'); t.textContent='Copiado!'; t.style.color='#00ff88'; setTimeout(()=>{t.textContent='(Copiar)'; t.style.color='';}, 2000);" onmouseenter="this.style.opacity='1'; this.style.borderColor='#ff4d6d';" onmouseleave="this.style.opacity='0.75'; this.style.borderColor='rgba(255, 77, 109, 0.2)';" role="button" aria-label="Copiar e-mail contato@pombagiras.com">
