@@ -1107,7 +1107,7 @@
         <div class="modal" id="imageModal" role="dialog" aria-modal="true" aria-hidden="true">
             <div class="modal-content">
                 <button class="modal-close" id="modalClose" aria-label="Fechar visualização">&times;</button>
-                <img class="modal-img" id="modalImage" src="" alt="Imagem expandida em alta resolução">
+                <img class="modal-img" id="modalImage" src="" alt="Imagem expandida em alta resolução" decoding="async" loading="lazy">
             </div>
         </div>
 
@@ -1268,7 +1268,7 @@
             photoItem.setAttribute('aria-label', `Visualizar Foto ${index + 1} de Alexia Melusine`);
             
             photoItem.innerHTML = `
-                <img src="${url}" alt="Foto ${index + 1} de Alexia Melusine" class="photo-img">
+                <img src="${url}" alt="Foto ${index + 1} de Alexia Melusine" class="photo-img" decoding="async" loading="lazy">
                 <div class="photo-overlay">
                     <p>Foto ${index + 1} - Coleção Pessoal</p>
                 </div>

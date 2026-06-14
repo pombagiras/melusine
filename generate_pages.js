@@ -752,10 +752,10 @@ Object.keys(pombagirasData).forEach(key => {
 <body>
     <div class="floating-social">
         <a href="https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G" class="social-icon" target="_blank" rel="noopener" title="WhatsApp">
-            <img src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="WhatsApp">
+            <img src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="WhatsApp" decoding="async" loading="lazy">
         </a>
         <a href="https://t.me/pomba_giras" class="social-icon" target="_blank" rel="noopener" title="Telegram">
-            <img src="https://cdn.simpleicons.org/telegram/ffffff" alt="Telegram">
+            <img src="https://cdn.simpleicons.org/telegram/ffffff" alt="Telegram" decoding="async" loading="lazy">
         </a>
         <a href="../index.html" class="social-icon" title="Voltar ao Portal">
             <i class="fas fa-home" aria-hidden="true" style="font-size:1.3rem;"></i>
@@ -776,7 +776,7 @@ Object.keys(pombagirasData).forEach(key => {
             </header>
 
             <div class="article-image-container" style="text-align: center; margin-bottom: 40px;">
-                <img src="${getPombagiraImageUrl(key)}" alt="Representação conceitual da Guardiã ${data.nome}" style="max-width: 100%; width: 400px; height: 400px; object-fit: cover; border-radius: 24px; border: 1px solid rgba(217, 4, 41, 0.3); box-shadow: 0 15px 35px rgba(217, 4, 41, 0.15); display: inline-block;">
+                <img src="${getPombagiraImageUrl(key)}" alt="Representação conceitual da Guardiã ${data.nome}" decoding="async" style="max-width: 100%; width: 400px; height: 400px; object-fit: cover; border-radius: 24px; border: 1px solid rgba(217, 4, 41, 0.3); box-shadow: 0 15px 35px rgba(217, 4, 41, 0.15); display: inline-block;">
             </div>
 
             <section class="article-intro speakable-description">
