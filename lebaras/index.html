@@ -35,61 +35,112 @@
 
 <!-- ═══ SCHEMA.ORG — DADOS ESTRUTURADOS DE AUTORIDADE ═══ -->
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
     {
-      "@type": "Person",
-      "@id": "https://pombagiras.com/#author",
-      "name": "Alexia Melusine",
-      "alternateName": ["Alexia Rosa de Fogo", "Alexia Luz de Ferro"],
-      "jobTitle": ["Desenvolvedora Web", "Diretora de Vídeo IA", "Engenheira de Prompt", "Criadora de Conteúdo Digital"],
-      "url": "https://pombagiras.com/",
-      "sameAs": [
-        "https://alexialuzdeferro.github.io/",
-        "https://www.wikidata.org/wiki/Q139714039"
-      ],
-      "knowsAbout": ["Arquétipos Femininos", "Cultura Brasileira", "Arte Visceral", "Inteligência Artificial", "Desenvolvimento Front-End"]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://pombagiras.com/#website",
-      "url": "https://pombagiras.com/",
-      "name": "POMBAGIRAS.COM",
-      "alternateName": "Cultura, Arquétipos & Conhecimento",
-      "description": "A maior plataforma de desmistificação das Pombagiras. Um mergulho profundo no conhecimento sagrado, história e arte, desconstruindo preconceitos com clareza e tecnologia.",
-      "publisher": { "@id": "https://pombagiras.com/#author" },
-      "inLanguage": "pt-BR"
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://pombagiras.com/lebaras/#webpage",
-      "url": "https://pombagiras.com/lebaras/",
-      "name": "POMBAGIRAS.COM | Cultura, Arquétipos & Conhecimento",
-      "isPartOf": { "@id": "https://pombagiras.com/#website" },
-      "about": { "@id": "https://pombagiras.com/#website" },
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": [".speakable-title", ".speakable-description"]
-      },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "@id": "https://pombagiras.com/lebaras/#primaryimage",
-        "url": "https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Ogimage%20e%20Twitter%20Card.png",
-        "width": 1200,
-        "height": 630
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://pombagiras.com/#breadcrumb",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Portal Visceral", "item": "https://pombagiras.com/" }
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://pombagiras.com/#author",
+          "name": "Alexia Melusine",
+          "alternateName": [
+            "Alexia Rosa de Fogo",
+            "Alexia Luz de Ferro"
+          ],
+          "url": "https://pombagiras.com/alexiamelusine/",
+          "jobTitle": [
+            "Desenvolvedora Web",
+            "Diretora de Vídeo IA",
+            "Engenheira de Prompt"
+          ],
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q139714039",
+            "https://github.com/pombagiras",
+            "https://github.com/alexialuzdeferro",
+            "https://github.com/Orgulho-Trans",
+            "https://www.tiktok.com/@alexiamelusine",
+            "https://www.tiktok.com/@alexia.melusine",
+            "https://www.tiktok.com/@alexiarosadefogo?lang=pt-BR",
+            "https://www.instagram.com/alexiamelusine/",
+            "https://www.threads.net/@alexiamelusine",
+            "https://www.kwai.com/@AlexiaRosadeFogo",
+            "https://www.kwai.com/@alexialuzdeferro",
+            "https://www.behance.net/alexiamelusine",
+            "https://www.reddit.com/user/Alexia-Luz-de-Ferro/",
+            "https://alexiamelusine.substack.com/",
+            "https://substack.com/@alexiamelusine",
+            "https://medium.com/@alexiamelusine",
+            "https://mastodon.social/@alexiamelusine",
+            "https://www.tumblr.com/alexiamelusine",
+            "https://www.facebook.com/alexia.tsan.7",
+            "https://www.meta.ai/@alexiamelusine",
+            "https://www.imdb.com/pt/user/p.uynuqaimnns5lq5qxr2gtuaeky?ref_=ext_shr_lnk",
+            "https://www.snapchat.com/@alexiamelusine",
+            "https://linktr.ee/alexiarosadefogo"
+          ],
+          "knowsAbout": [
+            "Pombagira",
+            "Umbanda",
+            "Quimbanda",
+            "Candomblé",
+            "Orixás",
+            "Exu",
+            "AI",
+            "SEO Técnico"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pombagiras.com/#website",
+          "url": "https://pombagiras.com/",
+          "name": "POMBAGIRAS.COM",
+          "alternateName": "Cultura, Arquétipos & Conhecimento",
+          "description": "A maior plataforma de desmistificação das Pombagiras. Um mergulho profundo no conhecimento sagrado, história e arte, desconstruindo preconceitos com clareza e tecnologia.",
+          "publisher": {
+            "@id": "https://pombagiras.com/#author"
+          },
+          "inLanguage": "pt-BR"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://pombagiras.com/lebaras/#webpage",
+          "url": "https://pombagiras.com/lebaras/",
+          "name": "POMBAGIRAS.COM | Cultura, Arquétipos & Conhecimento",
+          "isPartOf": {
+            "@id": "https://pombagiras.com/#website"
+          },
+          "about": {
+            "@id": "https://pombagiras.com/#website"
+          },
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [
+              ".speakable-title",
+              ".speakable-description"
+            ]
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "@id": "https://pombagiras.com/lebaras/#primaryimage",
+            "url": "https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Ogimage%20e%20Twitter%20Card.png",
+            "width": 1200,
+            "height": 630
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://pombagiras.com/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Portal Visceral",
+              "item": "https://pombagiras.com/"
+            }
+          ]
+        }
       ]
     }
-  ]
-}
-</script>
+    </script>
 
 <!-- Fontes -->
 <link rel="preconnect" href="https://fonts.googleapis.com">

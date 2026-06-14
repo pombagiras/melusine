@@ -12,10 +12,29 @@ const enrichAuthor = {
   "url": "https://pombagiras.com/alexiamelusine/",
   "jobTitle": ["Desenvolvedora Web", "Diretora de Vídeo IA", "Engenheira de Prompt"],
   "sameAs": [
+    "https://www.wikidata.org/wiki/Q139714039",
     "https://github.com/pombagiras",
     "https://github.com/alexialuzdeferro",
+    "https://github.com/Orgulho-Trans",
+    "https://www.tiktok.com/@alexiamelusine",
+    "https://www.tiktok.com/@alexia.melusine",
+    "https://www.tiktok.com/@alexiarosadefogo?lang=pt-BR",
+    "https://www.instagram.com/alexiamelusine/",
+    "https://www.threads.net/@alexiamelusine",
+    "https://www.kwai.com/@AlexiaRosadeFogo",
+    "https://www.kwai.com/@alexialuzdeferro",
+    "https://www.behance.net/alexiamelusine",
+    "https://www.reddit.com/user/Alexia-Luz-de-Ferro/",
     "https://alexiamelusine.substack.com/",
-    "https://www.wikidata.org/wiki/Q139714039"
+    "https://substack.com/@alexiamelusine",
+    "https://medium.com/@alexiamelusine",
+    "https://mastodon.social/@alexiamelusine",
+    "https://www.tumblr.com/alexiamelusine",
+    "https://www.facebook.com/alexia.tsan.7",
+    "https://www.meta.ai/@alexiamelusine",
+    "https://www.imdb.com/pt/user/p.uynuqaimnns5lq5qxr2gtuaeky?ref_=ext_shr_lnk",
+    "https://www.snapchat.com/@alexiamelusine",
+    "https://linktr.ee/alexiarosadefogo"
   ],
   "knowsAbout": ["Pombagira", "Umbanda", "Quimbanda", "Candomblé", "Orixás", "Exu", "AI", "SEO Técnico"]
 };
@@ -34,10 +53,24 @@ const organizationObj = {
     "https://t.me/pomba_giras",
     "https://discord.gg/gWZP8R7Dqu",
     "https://open.spotify.com/show/0oeCL1QScD3v7dHeUvJjgJ",
+    "https://open.spotify.com/show/6ahRd7QT2wcq7ldt5CJHZW",
     "https://www.youtube.com/@almasdepombagira",
+    "https://music.youtube.com/playlist?list=PLQt8e8mSPiZiri0foMoc4dHwINiDbQjB2",
     "https://www.instagram.com/almasdepombagira/",
-    "https://www.tiktok.com/@almasdepombagira",
-    "https://alexiamelusine.substack.com/"
+    "https://www.tiktok.com/@almasdepombagira?lang=pt-BR",
+    "https://www.tiktok.com/@espelhosdepombagira?lang=pt-BR",
+    "https://www.tiktok.com/@pambunjila",
+    "https://www.threads.net/@almasdepombagira",
+    "https://www.kwai.com/@AlmasdePombagira",
+    "https://www.kwai.com/@espelhosdepombagira",
+    "https://www.kwai.com/@PambuNjila",
+    "https://x.com/PambuNjila",
+    "https://br.pinterest.com/almasdepombagira/",
+    "https://br.pinterest.com/almasdepombagira/alexia-melusine-criatura-%C3%A9-criador/",
+    "https://www.facebook.com/almasdepombagira/",
+    "https://bsky.app/profile/almasdepombagira.bsky.social",
+    "https://bio.site/AlmasdePombagira",
+    "https://pombagiras.my.canva.site/"
   ]
 };
 
@@ -403,6 +436,21 @@ function main() {
     } else {
         console.warn("⚠ Diretório portal/ não foi encontrado.");
     }
+
+    // === D. ATUALIZAR ENTIDADES EM OUTRAS PÁGINAS ESTÁTICAS E HUBS ===
+    console.log("Atualizando dados estruturados nos hubs estáticos...");
+    const staticFiles = [
+        path.join(__dirname, 'index.html'),
+        path.join(__dirname, 'privacy.html'),
+        path.join(__dirname, 'terms.html'),
+        path.join(__dirname, 'alexiamelusine', 'index.html'),
+        path.join(__dirname, 'github', 'index.html'),
+        path.join(__dirname, 'lebaras', 'index.html'),
+        path.join(__dirname, 'vortex', 'index.html')
+    ];
+    staticFiles.forEach(filePath => {
+        updateGraphEntities(filePath);
+    });
 }
 
 function processPortalSubpage(fileName, html) {
@@ -576,6 +624,37 @@ function processPortalSubpage(fileName, html) {
     }
     
     return resultHtml;
+}
+
+function updateGraphEntities(filePath) {
+    if (!fs.existsSync(filePath)) {
+        console.warn(`⚠ Arquivo não encontrado para atualizar entidades: ${filePath}`);
+        return;
+    }
+    let htmlContent = fs.readFileSync(filePath, 'utf8');
+    const jsonLdRegex = /<script type="application\/ld\+json">([\s\S]*?)<\/script>/;
+    const match = htmlContent.match(jsonLdRegex);
+    if (!match) return;
+    
+    try {
+        const parsed = JSON.parse(match[1]);
+        if (parsed["@graph"]) {
+            parsed["@graph"] = parsed["@graph"].map(item => {
+                if (item["@type"] === "Person" && item["@id"] === "https://pombagiras.com/#author") {
+                    return enrichAuthor;
+                }
+                if (item["@type"] === "Organization" && item["@id"] === "https://pombagiras.com/#organization") {
+                    return organizationObj;
+                }
+                return item;
+            });
+            const updatedHtml = replaceJsonLd(htmlContent, parsed);
+            fs.writeFileSync(filePath, updatedHtml, 'utf8');
+            console.log(`✔ Arquivo ${path.relative(__dirname, filePath)} atualizado com novas entidades!`);
+        }
+    } catch (e) {
+        console.error(`❌ Erro ao analisar JSON-LD em ${filePath}:`, e.message);
+    }
 }
 
 main();
