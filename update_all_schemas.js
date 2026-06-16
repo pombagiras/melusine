@@ -191,7 +191,8 @@ const portalEntities = [
   { name: "Medo de Pombagira", file: "medo-pombagira.html" },
   { name: "As Quatro Faces", file: "quatro-faces.html" },
   { name: "Pombagiras na História", file: "pombagiras-na-historia.html" },
-  { name: "Por Que Nunca Desaparecem", file: "por-que-nunca-desaparecem.html" }
+  { name: "Por Que Nunca Desaparecem", file: "por-que-nunca-desaparecem.html" },
+  { name: "Natureza Humana", file: "natureza-humana.html" }
 ];
 
 const guardiasNames = [
