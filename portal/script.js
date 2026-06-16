@@ -764,13 +764,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const trigger = item.querySelector('.faq-trigger');
         const content = item.querySelector('.faq-content');
 
+        // Skip banner cards (e.g. Bahuchara Mata, Natureza Humana) that use .faq-item but lack accordion elements
+        if (!trigger || !content) return;
+
         trigger.addEventListener('click', () => {
             const isActive = item.classList.contains('active');
 
             faqItems.forEach(otherItem => {
+                const otherTrigger = otherItem.querySelector('.faq-trigger');
+                const otherContent = otherItem.querySelector('.faq-content');
+                if (!otherTrigger || !otherContent) return;
                 otherItem.classList.remove('active');
-                otherItem.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
-                otherItem.querySelector('.faq-content').style.maxHeight = '0';
+                otherTrigger.setAttribute('aria-expanded', 'false');
+                otherContent.style.maxHeight = '0';
             });
 
             if (!isActive) {
