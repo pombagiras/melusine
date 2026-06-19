@@ -190,6 +190,45 @@
                 padding: 25px;
             }
         }
+    
+    /* ══════════ LANG SWITCHER ══════════ */
+    .lang-switcher {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+        background: rgba(8, 4, 4, 0.88);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(197, 160, 89, 0.25);
+        border-radius: 40px;
+        padding: 6px 14px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+        font-family: 'Geist', 'Segoe UI', sans-serif;
+    }
+    .lang-btn {
+        background: none;
+        border: none;
+        color: rgba(250, 246, 238, 0.55);
+        font-family: inherit;
+        font-size: 0.73rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        cursor: pointer;
+        padding: 3px 8px;
+        border-radius: 20px;
+        transition: all 0.22s ease;
+        text-transform: uppercase;
+    }
+    .lang-btn:hover, .lang-btn.active {
+        color: #C5A059;
+        background: rgba(197, 160, 89, 0.13);
+    }
+    .lang-sep { color: rgba(197, 160, 89, 0.28); font-size: 0.7rem; user-select: none; }
+
     </style>
     
     <!-- Unified Knowledge Graph Schema (Premium SEO/AI) -->
@@ -384,6 +423,11 @@
       ]
     }
     </script>
+    <!-- Hreflangs para SEO Multilíngue -->
+    <link rel="alternate" hreflang="pt" href="https://pombagiras.com/guardias/rosa-caveira.html" />
+    <link rel="alternate" hreflang="en" href="https://pombagiras.com/en/guardias/rosa-caveira.html" />
+    <link rel="alternate" hreflang="es" href="https://pombagiras.com/es/guardias/rosa-caveira.html" />
+    <link rel="alternate" hreflang="x-default" href="https://pombagiras.com/guardias/rosa-caveira.html" />
 </head>
 <body>
     <div class="floating-social">
@@ -520,5 +564,28 @@
             </span>
         </div>
     </footer>
+
+    <!-- ══ SELETOR DE IDIOMA / LANGUAGE SWITCHER ══ -->
+    <div class="lang-switcher" role="navigation" aria-label="Seletor de Idioma / Language">
+        <button class="lang-btn" id="ls-pt" onclick="pombLang('pt','https://pombagiras.com/guardias/rosa-caveira.html')" title="Português" aria-label="Mudar para Português">PT</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button class="lang-btn" id="ls-en" onclick="pombLang('en','https://pombagiras.com/en/guardias/rosa-caveira.html')" title="English" aria-label="Switch to English">EN</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button class="lang-btn" id="ls-es" onclick="pombLang('es','https://pombagiras.com/es/guardias/rosa-caveira.html')" title="Español" aria-label="Cambiar a Español">ES</button>
+    </div>
+    <script>
+    (function(){
+        var sl = localStorage.getItem('user-language') || 'pt';
+        var btn = document.getElementById('ls-' + sl);
+        if(btn) btn.classList.add('active');
+    })();
+    function pombLang(lang, url){
+        localStorage.setItem('user-language', lang);
+        document.querySelectorAll('.lang-btn').forEach(function(b){ b.classList.remove('active'); });
+        var b = document.getElementById('ls-' + lang);
+        if(b) b.classList.add('active');
+        if(url && url !== 'javascript:void(0)') { setTimeout(function(){ window.location.href = url; }, 120); }
+    }
+    </script>
 </body>
 </html>

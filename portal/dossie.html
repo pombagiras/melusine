@@ -107,7 +107,7 @@
         .portal-header a:hover {
             color: var(--accent-red-bright);
         }
-        .portal-header class-brand, .portal-header .brand {
+        .portal-header .brand, .portal-header .brand {
             font-family: 'Fraunces', serif;
             font-weight: 800;
             font-size: 1.2rem;
@@ -334,6 +334,45 @@
         footer a:hover {
             text-decoration: underline;
         }
+    
+    /* ══════════ LANG SWITCHER ══════════ */
+    .lang-switcher {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+        background: rgba(8, 4, 4, 0.88);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(197, 160, 89, 0.25);
+        border-radius: 40px;
+        padding: 6px 14px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+        font-family: 'Geist', 'Segoe UI', sans-serif;
+    }
+    .lang-btn {
+        background: none;
+        border: none;
+        color: rgba(250, 246, 238, 0.55);
+        font-family: inherit;
+        font-size: 0.73rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        cursor: pointer;
+        padding: 3px 8px;
+        border-radius: 20px;
+        transition: all 0.22s ease;
+        text-transform: uppercase;
+    }
+    .lang-btn:hover, .lang-btn.active {
+        color: #C5A059;
+        background: rgba(197, 160, 89, 0.13);
+    }
+    .lang-sep { color: rgba(197, 160, 89, 0.28); font-size: 0.7rem; user-select: none; }
+
     </style>
     
     <!-- Schema.org e SEO de Autoridade (Unified Graph) -->
