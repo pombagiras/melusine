@@ -511,7 +511,7 @@ function changeLanguage(e, lang) {
     }
     
     // Clean double slashes
-    targetPath = targetPath.replace(//+/g, '/');
+    targetPath = targetPath.replace(/\/+/g, '/');
     if (!targetPath.endsWith('.html') && targetPath !== '/' && targetPath !== '/en/' && targetPath !== '/es/') {
         if (targetPath.endsWith('/')) {
             targetPath += 'index.html';
