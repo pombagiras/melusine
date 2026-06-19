@@ -13,10 +13,10 @@
     if (path === '/' || path === '/index.html') {
         let targetLang = savedLang;
         if (!targetLang) {
-            const browserLang = (navigator.language || navigator.userLanguage || 'pt').toLowerCase();
+            const browserLang = (navigator.language || navigator.userLanguage || 'es').toLowerCase();
             if (browserLang.startsWith('en')) targetLang = 'en';
             else if (browserLang.startsWith('es')) targetLang = 'es';
-            else targetLang = 'pt';
+            else targetLang = 'es';
         }
         
         if (targetLang === 'en' && !path.includes('/en/')) {
