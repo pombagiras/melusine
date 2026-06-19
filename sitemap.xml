@@ -425,6 +425,53 @@
   <lastmod>2026-06-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.70</priority>
+</url><url>
+  <loc>https://pombagiras.com/en/</loc>
+  <lastmod>2026-06-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://pombagiras.com/es/</loc>
+  <lastmod>2026-06-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://pombagiras.com/en/portal/</loc>
+  <lastmod>2026-06-19</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pombagiras.com/es/portal/</loc>
+  <lastmod>2026-06-19</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pombagiras.com/en/portal/dossie.html</loc>
+  <lastmod>2026-06-19</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://pombagiras.com/es/portal/dossie.html</loc>
+  <lastmod>2026-06-19</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://pombagiras.com/en/portal/bahuchara-mata.html</loc>
+  <lastmod>2026-06-19</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://pombagiras.com/es/portal/bahuchara-mata.html</loc>
+  <lastmod>2026-06-19</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
 </url>
 
 </urlset>

@@ -415,30 +415,37 @@ function main() {
         console.warn("⚠ guardias/index.html não foi encontrado.");
     }
 
-    // === C. ATUALIZAR AS 24 PÁGINAS ESTÁTICAS DE portal/*.html ===
-    const portalDir = path.join(__dirname, 'portal');
-    if (fs.existsSync(portalDir)) {
-        const files = fs.readdirSync(portalDir);
-        let count = 0;
-        
-        files.forEach(file => {
-            if (path.extname(file).toLowerCase() === '.html' && file !== 'index.html' && file !== 'whatsapp.html') {
-                const filePath = path.join(portalDir, file);
-                const html = fs.readFileSync(filePath, 'utf8');
-                
-                // Process the subpage and replace ProfilePage with Article, enriching Person etc.
-                const updatedHtml = processPortalSubpage(file, html);
-                if (updatedHtml) {
-                    fs.writeFileSync(filePath, updatedHtml, 'utf8');
-                    console.log(`  ✔ Subpágina atualizada: portal/${file}`);
-                    count++;
+    // === C. ATUALIZAR AS PÁGINAS ESTÁTICAS DE portal/ (PT, EN, ES) ===
+    const dirsToProcess = [
+        { dir: path.join(__dirname, 'portal'), lang: 'pt' },
+        { dir: path.join(__dirname, 'en', 'portal'), lang: 'en' },
+        { dir: path.join(__dirname, 'es', 'portal'), lang: 'es' }
+    ];
+
+    dirsToProcess.forEach(({ dir, lang }) => {
+        if (fs.existsSync(dir)) {
+            const files = fs.readdirSync(dir);
+            let count = 0;
+            
+            files.forEach(file => {
+                if (path.extname(file).toLowerCase() === '.html' && file !== 'index.html' && file !== 'whatsapp.html') {
+                    const filePath = path.join(dir, file);
+                    const html = fs.readFileSync(filePath, 'utf8');
+                    
+                    // Process the subpage and replace ProfilePage with Article, enriching Person etc.
+                    const updatedHtml = processPortalSubpage(file, html, lang);
+                    if (updatedHtml) {
+                        fs.writeFileSync(filePath, updatedHtml, 'utf8');
+                        console.log(`  ✔ Subpágina atualizada: ${path.relative(__dirname, filePath)}`);
+                        count++;
+                    }
                 }
-            }
-        });
-        console.log(`✔ Processadas ${count} subpáginas sob portal/ com sucesso!`);
-    } else {
-        console.warn("⚠ Diretório portal/ não foi encontrado.");
-    }
+            });
+            console.log(`✔ Processadas ${count} subpáginas sob ${path.relative(__dirname, dir)}/ com sucesso!`);
+        } else {
+            console.warn(`⚠ Diretório ${path.relative(__dirname, dir)}/ não foi encontrado.`);
+        }
+    });
 
     // === D. ATUALIZAR ENTIDADES EM OUTRAS PÁGINAS ESTÁTICAS E HUBS ===
     console.log("Atualizando dados estruturados nos hubs estáticos...");
@@ -449,18 +456,25 @@ function main() {
         path.join(__dirname, 'alexiamelusine', 'index.html'),
         path.join(__dirname, 'github', 'index.html'),
         path.join(__dirname, 'lebaras', 'index.html'),
-        path.join(__dirname, 'vortex', 'index.html')
+        path.join(__dirname, 'vortex', 'index.html'),
+        path.join(__dirname, 'en', 'index.html'),
+        path.join(__dirname, 'es', 'index.html'),
+        path.join(__dirname, 'en', 'portal', 'index.html'),
+        path.join(__dirname, 'es', 'portal', 'index.html')
     ];
     staticFiles.forEach(filePath => {
         updateGraphEntities(filePath);
     });
 }
 
-function processPortalSubpage(fileName, html) {
+function processPortalSubpage(fileName, html, lang = "pt") {
+    const langPrefix = lang === "pt" ? "" : `${lang}/`;
+    const inLanguage = lang === "pt" ? "pt-BR" : lang;
+
     const jsonLdRegex = /<script type="application\/ld\+json">([\s\S]*?)<\/script>/;
     const match = html.match(jsonLdRegex);
     if (!match) {
-        console.warn(`    ⚠ Nenhum script JSON-LD encontrado em ${fileName}`);
+        console.warn(`    ⚠ Nenhum script JSON-LD encontrado em ${fileName} (${lang})`);
         return null;
     }
     
@@ -469,7 +483,7 @@ function processPortalSubpage(fileName, html) {
         const parsed = JSON.parse(match[1]);
         oldGraph = parsed["@graph"] || [];
     } catch (e) {
-        console.error(`    ❌ Erro ao analisar JSON-LD em ${fileName}:`, e.message);
+        console.error(`    ❌ Erro ao analisar JSON-LD em ${fileName} (${lang}):`, e.message);
         return null;
     }
     
@@ -505,6 +519,21 @@ function processPortalSubpage(fileName, html) {
         imageUrl = ogImageMatch[1].trim();
     }
     
+    let headline = `Estudo e Fundamentos sobre a Guardiã ${entityName}`;
+    let description = entityDesc || `Estudo aprofundado sobre os mistérios, regência e correspondências da Guardiã ${entityName}.`;
+    
+    if (lang === "en") {
+        headline = `Study and Foundations of the Guardian ${entityName}`;
+        if (!entityDesc) {
+            description = `Deep study of the mysteries, regency, and correspondences of the Guardian ${entityName}.`;
+        }
+    } else if (lang === "es") {
+        headline = `Estudio y Fundamentos sobre la Guardiana ${entityName}`;
+        if (!entityDesc) {
+            description = `Estudio profundo sobre los misterios, regencia y correspondencias de la Guardiana ${entityName}.`;
+        }
+    }
+
     // Reconstrói o JSON-LD como um Unified Knowledge Graph Schema
     const newGraph = {
       "@context": "https://schema.org",
@@ -514,53 +543,53 @@ function processPortalSubpage(fileName, html) {
         organizationObj,
         {
           "@type": "WebPage",
-          "@id": `https://pombagiras.com/portal/${fileName}#webpage`,
-          "url": `https://pombagiras.com/portal/${fileName}`,
+          "@id": `https://pombagiras.com/${langPrefix}portal/${fileName}#webpage`,
+          "url": `https://pombagiras.com/${langPrefix}portal/${fileName}`,
           "name": `${entityName} | POMBAGIRAS.COM`,
           "isPartOf": {
             "@id": "https://pombagiras.com/#website"
           },
           "breadcrumb": {
-            "@id": `https://pombagiras.com/portal/${fileName}#breadcrumb`
+            "@id": `https://pombagiras.com/${langPrefix}portal/${fileName}#breadcrumb`
           },
           "speakable": {
             "@type": "SpeakableSpecification",
             "cssSelector": [".speakable-title", ".speakable-description"]
           },
-          "inLanguage": "pt-BR"
+          "inLanguage": inLanguage
         },
         {
           "@type": "BreadcrumbList",
-          "@id": `https://pombagiras.com/portal/${fileName}#breadcrumb`,
+          "@id": `https://pombagiras.com/${langPrefix}portal/${fileName}#breadcrumb`,
           "itemListElement": [
             {
               "@type": "ListItem",
               "position": 1,
-              "name": "Home",
-              "item": "https://pombagiras.com/"
+              "name": lang === "es" ? "Inicio" : "Home",
+              "item": `https://pombagiras.com/${langPrefix}`
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Portal",
-              "item": "https://pombagiras.com/portal/"
+              "item": `https://pombagiras.com/${langPrefix}portal/`
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": entityName,
-              "item": `https://pombagiras.com/portal/${fileName}`
+              "item": `https://pombagiras.com/${langPrefix}portal/${fileName}`
             }
           ]
         },
         {
           "@type": "Article",
-          "@id": `https://pombagiras.com/portal/${fileName}#article`,
+          "@id": `https://pombagiras.com/${langPrefix}portal/${fileName}#article`,
           "isPartOf": {
-            "@id": `https://pombagiras.com/portal/${fileName}#webpage`
+            "@id": `https://pombagiras.com/${langPrefix}portal/${fileName}#webpage`
           },
-          "headline": `Estudo e Fundamentos sobre a Guardiã ${entityName}`,
-          "description": entityDesc || `Estudo aprofundado sobre os mistérios, regência e correspondências da Guardiã ${entityName}.`,
+          "headline": headline,
+          "description": description,
           "image": imageUrl,
           "author": {
             "@id": "https://pombagiras.com/#author"
@@ -570,9 +599,9 @@ function processPortalSubpage(fileName, html) {
           },
           "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": `https://pombagiras.com/portal/${fileName}#webpage`
+            "@id": `https://pombagiras.com/${langPrefix}portal/${fileName}#webpage`
           },
-          "inLanguage": "pt-BR",
+          "inLanguage": inLanguage,
           "datePublished": "2026-06-03T14:00:00-03:00",
           "dateModified": currentIsoDate
         }
@@ -582,9 +611,9 @@ function processPortalSubpage(fileName, html) {
     if (faqMainEntity.length > 0) {
         newGraph["@graph"].push({
           "@type": "FAQPage",
-          "@id": `https://pombagiras.com/portal/${fileName}#faq`,
+          "@id": `https://pombagiras.com/${langPrefix}portal/${fileName}#faq`,
           "isPartOf": {
-            "@id": `https://pombagiras.com/portal/${fileName}#webpage`
+            "@id": `https://pombagiras.com/${langPrefix}portal/${fileName}#webpage`
           },
           "mainEntity": faqMainEntity
         });
@@ -599,7 +628,7 @@ function processPortalSubpage(fileName, html) {
 
     // Inject canonical link if not already present
     if (!resultHtml.includes('rel="canonical"')) {
-        resultHtml = resultHtml.replace('<head>', `<head>\n    <link rel="canonical" href="https://pombagiras.com/portal/${fileName}">`);
+        resultHtml = resultHtml.replace('<head>', `<head>\n    <link rel="canonical" href="https://pombagiras.com/${langPrefix}portal/${fileName}">`);
     }
 
     // Inject speakable classes
@@ -616,12 +645,22 @@ function processPortalSubpage(fileName, html) {
     }
 
     // Inject privacy and terms links to footer
-    const footerLinks = `
+    const footerLinks = lang === "pt" ? `
             <div style="margin-top: 10px; margin-bottom: 10px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
                 <a href="../privacy.html" style="color: var(--muted-text); text-decoration: none;">Política de Privacidade</a>
                 <span style="color: var(--muted-text); opacity: 0.3;">|</span>
                 <a href="../terms.html" style="color: var(--muted-text); text-decoration: none;">Termos de Uso</a>
-            </div>`;
+            </div>` : (lang === "en" ? `
+            <div style="margin-top: 10px; margin-bottom: 10px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                <a href="../privacy.html" style="color: var(--muted-text); text-decoration: none;">Privacy Policy</a>
+                <span style="color: var(--muted-text); opacity: 0.3;">|</span>
+                <a href="../terms.html" style="color: var(--muted-text); text-decoration: none;">Terms of Use</a>
+            </div>` : `
+            <div style="margin-top: 10px; margin-bottom: 10px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                <a href="../privacy.html" style="color: var(--muted-text); text-decoration: none;">Política de Privacidad</a>
+                <span style="color: var(--muted-text); opacity: 0.3;">|</span>
+                <a href="../terms.html" style="color: var(--muted-text); text-decoration: none;">Términos de Uso</a>
+            </div>`);
     if (!resultHtml.includes('href="../privacy.html"')) {
         resultHtml = resultHtml.replace('</footer>', `${footerLinks}\n        </footer>`);
     }
