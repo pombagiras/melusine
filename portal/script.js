@@ -720,7 +720,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Handle link to dedicated page (all 24 entities now have gorgeous dedicated pages!)
             const modalArticleLink = document.getElementById('modalArticleLink');
             if (modalArticleLink) {
-                const pageName = normalizedKey.replace(/\s+/g, '-');
+                const pageName = normalizedKey.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-');
                 modalArticleLink.href = `${pageName}.html`;
                 modalArticleLink.style.display = 'block';
             }
