@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Metatags Básicas -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dossiê Histórico-Antropológico: As Doze Pombagiras | pombagiras.com</title>
+    <meta name="description" content="Um mapa crítico e científico detalhando a história, relatos de terreiro e a pesquisa antropológica sobre as doze principais entidades Pombagiras. Por Alexia Melusine.">
+    <meta name="author" content="Alexia Melusine">
+    <meta name="author-curation" content="Alexia Melusine - Human Expert Verified">
+    <meta name="robots" content="index, follow, max-snippet:-1, notranslate">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Favicon%20%20Miniatura%20do%20Google.png">
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Favicon%20%20Miniatura%20do%20Google.png">
+    
+    <!-- Preload critical LCP image immediately -->
+    <link rel="preload" href="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/fotos/DOSSIE.png" as="image" fetchpriority="high">
+    <link rel="canonical" href="https://pombagiras.com/portal/dossie.html">
+    
+    <!-- Open Graph (WhatsApp, Discord, Telegram) -->
+    <meta property="og:title" content="Dossiê Histórico-Antropológico: As Doze Pombagiras | pombagiras.com">
+    <meta property="og:description" content="Um mapa crítico e científico detalhando a história, relatos de terreiro e a pesquisa antropológica sobre as doze principais entidades Pombagiras. Por Alexia Melusine.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://pombagiras.com/portal/dossie.html">
+    <meta property="og:site_name" content="pombagiras.com">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:image" content="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/fotos/DOSSIE.png">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dossiê Histórico-Antropológico: As Doze Pombagiras | pombagiras.com">
+    <meta name="twitter:description" content="Um mapa crítico e científico detalhando a história, relatos de terreiro e a pesquisa antropológica sobre as doze principais entidades Pombagiras. Por Alexia Melusine.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/fotos/DOSSIE.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Critical CSS (Gothic-Abyssal Red Theme) -->
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root { 
+            --bg-color: #050002; 
+            --text-color: #FAF6EE; /* Creme Quente */ 
+            --accent-red: #4A0E17; /* Oxblood */ 
+            --accent-red-bright: #800020; /* Vibrant Oxblood */
+            --glass-bg: rgba(10, 12, 14, 0.9);
+            --glass-border: rgba(197, 160, 89, 0.2);
+            --shadow-glow: rgba(128, 0, 32, 0.12);
+            --muted-text: #78868c; /* Slate */
+        }
+        body { 
+            background: linear-gradient(135deg, #050505 0%, #121719 100%);
+            min-height: 100vh;
+            color: var(--text-color); 
+            font-family: 'Geist', sans-serif; 
+            line-height: 1.6; 
+            overflow-x: hidden;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.022;
+            z-index: -1;
+            pointer-events: none;
+        }
+        main { 
+            max-width: 850px; 
+            margin: 0 auto; 
+            padding: 2rem; 
+            position: relative;
+            z-index: 1;
+        }
+        
+        .portal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            margin-bottom: 2rem;
+        }
+        .portal-header a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        .portal-header a:hover {
+            color: var(--accent-red-bright);
+        }
+        .portal-header class-brand, .portal-header .brand {
+            font-family: 'Fraunces', serif;
+            font-weight: 800;
+            font-size: 1.2rem;
+            letter-spacing: 0.05em;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+        .portal-header .brand span {
+            color: var(--accent-red-bright);
+        }
+
+        h1, h2, h3, h4 { 
+            font-family: 'Fraunces', serif;
+            color: var(--accent-red-bright); 
+            margin-bottom: 1.2rem; 
+            letter-spacing: -0.02em;
+        }
+        h1 { 
+            font-size: 2.3rem; 
+            font-weight: 800; 
+            line-height: 1.25;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-red); 
+            padding-bottom: 0.5rem; 
+            text-align: center;
+        }
+        h2 {
+            font-size: 1.8rem;
+            border-left: 3px solid var(--accent-red-bright);
+            padding-left: 10px;
+            margin-top: 2.5rem;
+        }
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            color: var(--text-color);
+        }
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--muted-text);
+            margin-bottom: 2rem;
+            font-style: italic;
+            text-align: center;
+        }
+        .featured-image { 
+            max-width: 100%; 
+            height: auto; 
+            display: block; 
+            aspect-ratio: 16 / 10; 
+            background-color: #1a1a1a; 
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 8px 32px var(--shadow-glow);
+            object-fit: cover;
+            margin: 0 auto 2.5rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            text-align: justify;
+            opacity: 0.9;
+        }
+
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 600px) {
+            .glass-card {
+                padding: 1.5rem;
+            }
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-red), transparent);
+            margin: 2.5rem 0;
+            border: none;
+        }
+
+        /* Dynamic Dossier Custom Classes */
+        .toc-container {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        .toc-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.25rem;
+            color: #FAF6EE;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 0.5rem;
+        }
+        .toc-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .toc-list li {
+            margin-bottom: 0.5rem;
+        }
+        .toc-list a {
+            color: #FAF6EE;
+            opacity: 0.85;
+            text-decoration: none;
+            transition: opacity 0.2s, color 0.2s;
+        }
+        .toc-list a:hover {
+            opacity: 1;
+            color: #C59B27;
+        }
+        .toc-sublist {
+            list-style: none;
+            padding-left: 1.5rem;
+            margin-top: 0.5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.25rem 1rem;
+        }
+        @media (max-width: 768px) {
+            .toc-sublist {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+        .comparison-card {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 8px;
+            padding: 1.2rem;
+            border: 1px dashed rgba(255, 255, 255, 0.1);
+        }
+        .comparison-card.common {
+            border-left: 3px solid #78868c; /* Slate for common/desaturated */
+        }
+        .comparison-card.omitted {
+            border-left: 3px solid #C59B27; /* Brass for gold/omitted truths */
+            background: rgba(197, 160, 89, 0.03);
+        }
+        .comparison-card strong {
+            display: block;
+            font-family: 'Fraunces', serif;
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+        .comparison-card.omitted strong {
+            color: #C59B27;
+        }
+
+        .frase-terreiro {
+            background: rgba(74, 14, 21, 0.2);
+            border-left: 4px solid var(--accent-red-bright);
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            font-family: 'Fraunces', serif;
+            color: #FAF6EE;
+            opacity: 0.95;
+            border-radius: 0 8px 8px 0;
+        }
+        .frase-terreiro p {
+            margin-bottom: 0.5rem;
+            text-align: left;
+        }
+        .frase-terreiro p:last-child {
+            margin-bottom: 0;
+        }
+
+        .arquetipo-badge {
+            display: inline-block;
+            background: rgba(74, 14, 21, 0.4);
+            border: 1px solid var(--accent-red-bright);
+            color: #FAF6EE;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .pombagira-section {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 2rem;
+            margin-top: 2rem;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--muted-text);
+        }
+        footer a {
+            color: var(--accent-red-bright);
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    
+    <!-- Schema.org e SEO de Autoridade (Unified Graph) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://pombagiras.com/#author",
+          "name": "Alexia Melusine",
+          "alternateName": [
+            "Alexia Rosa de Fogo",
+            "Alexia Luz de Ferro"
+          ],
+          "url": "https://pombagiras.com/alexiamelusine/",
+          "jobTitle": [
+            "Desenvolvedora Web",
+            "Diretora de Vídeo IA",
+            "Engenheira de Prompt"
+          ],
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q139714039",
+            "https://github.com/pombagiras",
+            "https://github.com/alexialuzdeferro",
+            "https://github.com/Orgulho-Trans",
+            "https://www.tiktok.com/@alexiamelusine",
+            "https://www.tiktok.com/@alexia.melusine",
+            "https://www.tiktok.com/@alexiarosadefogo?lang=pt-BR",
+            "https://www.instagram.com/alexiamelusine/",
+            "https://www.threads.net/@alexiamelusine",
+            "https://www.kwai.com/@AlexiaRosadeFogo",
+            "https://www.kwai.com/@alexialuzdeferro",
+            "https://www.behance.net/alexiamelusine",
+            "https://www.reddit.com/user/Alexia-Luz-de-Ferro/",
+            "https://alexiamelusine.substack.com/",
+            "https://substack.com/@alexiamelusine",
+            "https://medium.com/@alexiamelusine",
+            "https://mastodon.social/@alexiamelusine",
+            "https://www.tumblr.com/alexiamelusine",
+            "https://www.facebook.com/alexia.tsan.7",
+            "https://www.meta.ai/@alexiamelusine",
+            "https://www.imdb.com/pt/user/p.uynuqaimnns5lq5qxr2gtuaeky?ref_=ext_shr_lnk",
+            "https://www.snapchat.com/@alexiamelusine",
+            "https://linktr.ee/alexiarosadefogo"
+          ],
+          "knowsAbout": [
+            "Pombagira",
+            "Umbanda",
+            "Quimbanda",
+            "Candomblé",
+            "Orixás",
+            "Exu",
+            "AI",
+            "SEO Técnico"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pombagiras.com/#website",
+          "url": "https://pombagiras.com/",
+          "name": "Pombagiras.com",
+          "description": "A maior enciclopédia online sobre Pombagiras, Exus e tradições afro-brasileiras. +200 páginas de conteúdo sagrado.",
+          "publisher": {
+            "@id": "https://pombagiras.com/#organization"
+          },
+          "inLanguage": "pt-BR",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://pombagiras.com/?s={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://pombagiras.com/#organization",
+          "name": "Pombagiras.com",
+          "url": "https://pombagiras.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Favicon%20%20Miniatura%20do%20Google.png"
+          },
+          "sameAs": [
+            "https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G",
+            "https://t.me/pomba_giras",
+            "https://discord.gg/gWZP8R7Dqu",
+            "https://open.spotify.com/show/0oeCL1QScD3v7dHeUvJjgJ",
+            "https://open.spotify.com/show/6ahRd7QT2wcq7ldt5CJHZW",
+            "https://www.youtube.com/@almasdepombagira",
+            "https://music.youtube.com/playlist?list=PLQt8e8mSPiZiri0foMoc4dHwINiDbQjB2",
+            "https://www.instagram.com/almasdepombagira/",
+            "https://www.tiktok.com/@almasdepombagira?lang=pt-BR",
+            "https://www.tiktok.com/@espelhosdepombagira?lang=pt-BR",
+            "https://www.tiktok.com/@pambunjila",
+            "https://www.threads.net/@almasdepombagira",
+            "https://www.kwai.com/@AlmasdePombagira",
+            "https://www.kwai.com/@espelhosdepombagira",
+            "https://www.kwai.com/@PambuNjila",
+            "https://x.com/PambuNjila",
+            "https://br.pinterest.com/almasdepombagira/",
+            "https://br.pinterest.com/almasdepombagira/alexia-melusine-criatura-%C3%A9-criador/",
+            "https://www.facebook.com/almasdepombagira/",
+            "https://bsky.app/profile/almasdepombagira.bsky.social",
+            "https://bio.site/AlmasdePombagira",
+            "https://pombagiras.my.canva.site/"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://pombagiras.com/portal/dossie.html#webpage",
+          "url": "https://pombagiras.com/portal/dossie.html",
+          "name": "Dossiê Histórico-Antropológico: As Doze Pombagiras | POMBAGIRAS.COM",
+          "isPartOf": {
+            "@id": "https://pombagiras.com/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://pombagiras.com/portal/dossie.html#breadcrumb"
+          },
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [
+              ".speakable-title",
+              ".speakable-description"
+            ]
+          },
+          "inLanguage": "pt-BR"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://pombagiras.com/portal/dossie.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://pombagiras.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Portal",
+              "item": "https://pombagiras.com/portal/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Dossiê Histórico-Antropológico: As Doze Pombagiras",
+              "item": "https://pombagiras.com/portal/dossie.html"
+            }
+          ]
+        },
+        {
+          "@type": "Article",
+          "@id": "https://pombagiras.com/portal/dossie.html#article",
+          "isPartOf": {
+            "@id": "https://pombagiras.com/portal/dossie.html#webpage"
+          },
+          "headline": "Estudo e Fundamentos sobre a Guardiã Dossiê Histórico-Antropológico: As Doze Pombagiras",
+          "description": "Um mapa crítico e científico detalhando a história, relatos de terreiro e a pesquisa antropológica sobre as doze principais entidades Pombagiras.",
+          "image": "https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/fotos/DOSSIE.png",
+          "author": {
+            "@id": "https://pombagiras.com/#author"
+          },
+          "publisher": {
+            "@id": "https://pombagiras.com/#organization"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://pombagiras.com/portal/dossie.html#webpage"
+          },
+          "inLanguage": "pt-BR",
+          "datePublished": "2026-06-03T14:00:00-03:00",
+          "dateModified": "2026-06-19T13:29:06.648Z"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://pombagiras.com/portal/dossie.html#faq",
+          "isPartOf": {
+            "@id": "https://pombagiras.com/portal/dossie.html#webpage"
+          },
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "As Pombagiras nascem do mal?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não. A leitura antropológica mostra que as Pombagiras não nascem de uma transgressão estética ou maldade, mas do enquadramento colonial e patriarcal que criminalizava e demonizava qualquer mulher autônoma e fora dos padrões morais impostos."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Maria Padilha é uma única pessoa histórica?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não. Pesquisas mostram que a figura de Maria Padilha no Brasil é uma colagem de três camadas: a nobre de corte castelhana do século XIV, fórmulas mágicas de conjuro ibéricas dos séculos XVI a XVIII, e elementos da ópera/romance Carmen do século XIX."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "A separação entre Umbanda e Quimbanda é rígida?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não. Essa separação foi em parte herdada de intelectuais do século XX que tentavam legitimar a Umbanda perante a classe média branca cristã da época, empurrando as práticas consideradas mais densas (Exu e Pombagira) para a Quimbanda."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Qual a relevância do protagonismo negro na origem de Exu feminino?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "O protagonismo de mulheres negras escravizadas e libertas na manutenção de cultos a Exu foi historicamente obscurecido. Pombagira representa também a resistência dessas mulheres contra o estigma colonial e pós-abolição."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+</head>
+<body>
+    <main>
+        <!-- Navegação Rápida -->
+        <header class="portal-header">
+            <a href="https://pombagiras.com/" class="brand">POMBAGIRAS<span>.COM</span></a>
+            <a href="https://pombagiras.com/portal/">← Voltar ao Portal</a>
+        </header>
+
+        <!-- Artigo Principal -->
+        <article class="glass-card">
+            <h1 class="speakable-title">Dossiê Histórico-Antropológico: As Doze Pombagiras</h1>
+            <p class="subtitle speakable-description">Arquétipos, Memória Oral e Disputas de Sentido nas Religiões de Matriz Africana</p>
+            
+            <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/fotos/DOSSIE.png" alt="Dossiê Histórico-Antropológico: As Doze Pombagiras" class="featured-image" decoding="async" loading="lazy">
+            
+            <section id="introducao">
+                <p>Este material foi preparado a partir de relatos de terreiro, literatura de Umbanda e Quimbanda voltada ao público praticante, e bibliografia acadêmica de antropologia e história das religiões afro-brasileiras. Ele busca apresentar tanto o que circula nos terreiros e na tradição oral quanto o que a pesquisa histórica e antropológica revela — incluindo tensões, lacunas documentais e leituras pouco repetidas sobre o tema.</p>
+                <p>As Pombagiras não constituem um corpo doutrinário único: variam de nação para nação, de terreiro para terreiro, e até de médium para médium dentro do mesmo terreiro. O que se segue é um mapa de tendências e narrativas recorrentes — não um catecismo.</p>
+            </section>
+
+            <!-- Sumário Interativo -->
+            <div class="toc-container">
+                <h4 class="toc-title">Sumário</h4>
+                <ul class="toc-list">
+                    <li><a href="#quem-sao">Introdução: quem são as Pombagiras</a></li>
+                    <li><a href="#analise">Análise contra-intuitiva: o que a narrativa popular costuma inverter</a></li>
+                    <li><a href="#doze-pombagiras">As Doze Pombagiras</a>
+                        <ul class="toc-sublist">
+                            <li><a href="#maria-padilha">1. Maria Padilha</a></li>
+                            <li><a href="#maria-mulambo">2. Maria Mulambo</a></li>
+                            <li><a href="#maria-quiteria">3. Maria Quitéria</a></li>
+                            <li><a href="#rosa-caveira">4. Rosa Caveira</a></li>
+                            <li><a href="#dama-da-noite">5. Dama da Noite</a></li>
+                            <li><a href="#sete-saias">6. Sete Saias</a></li>
+                            <li><a href="#pombagira-cigana">7. Pombagira Cigana</a></li>
+                            <li><a href="#maria-navalha">8. Maria Navalha</a></li>
+                            <li><a href="#pombagira-da-praia">9. Pombagira da Praia</a></li>
+                            <li><a href="#maria-farrapo">10. Maria Farrapo</a></li>
+                            <li><a href="#pombagira-menina">11. Pombagira Menina</a></li>
+                            <li><a href="#pombagira-da-figueira">12. Pombagira da Figueira</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#referencias">Conceitos teóricos e referências históricas</a></li>
+                    <li><a href="#consideracoes-finais">Considerações finais</a></li>
+                </ul>
+            </div>
+
+            <hr class="section-divider">
+
+            <section id="quem-sao">
+                <h2>Introdução: quem são as Pombagiras</h2>
+                <p>Pombagira é o nome dado, na Umbanda e sobretudo na Quimbanda, a uma classe de entidades espirituais femininas associadas à linha de Exu. Cultuadas em encruzilhadas, cemitérios e nas chamadas "linhas da esquerda", elas são invocadas para questões de amor, dinheiro, justiça, proteção e desenrolar de caminhos fechados. Cada Pombagira nomeada — Maria Padilha, Maria Mulambo, Rosa Caveira, e tantas outras — funciona, ao mesmo tempo, como entidade espiritual individual e como arquétipo: um conjunto reconhecível de traços, função ritual e repertório de frases que se repete, com variações regionais, em terreiros de todo o Brasil.</p>
+                <p>É importante demarcar, de início, uma distinção que a literatura popular sobre o tema frequentemente borra: há uma diferença entre a Pombagira como figura histórica reivindicada (uma mulher que teria existido, como no caso de Maria Padilha) e a Pombagira como categoria espiritual e social — um arquétipo que absorve, refunde e relê experiências de mulheres marginalizadas, sejam elas nobres castelhanas do século XIV ou prostitutas, escravizadas e libertas do Rio de Janeiro do início do século XX.</p>
+                <p>Esse dossiê trata as doze entidades a seguir dentro dessa dupla camada: o relato de terreiro, tal como é repassado oralmente e em literatura espírita, e a leitura histórico-crítica, que situa essas figuras dentro de processos sociais concretos — a demonização do orixá Exu pelo catolicismo colonial, a perseguição às religiões afro-brasileiras, e o estigma lançado sobre mulheres pobres, negras, prostitutas ou "desclassificadas" que romperam com papéis sociais esperados.</p>
+            </section>
+
+            <hr class="section-divider">
+
+            <section id="analise">
+                <h2>Análise contra-intuitiva: o que a narrativa popular costuma inverter</h2>
+                
+                <h3>1. A Pombagira não nasce do mal — nasce da punição ao desvio</h3>
+                <p>A leitura mais difundida em conteúdo popular apresenta a Pombagira como uma figura "transgressora" quase por escolha estética — sedutora, rebelde, perigosa por natureza. A leitura antropológica inverte essa ênfase: pesquisadores como Reginaldo Prandi descrevem um processo histórico de demonização do orixá Exu, mensageiro e guardião das encruzilhadas no panteão iorubá, que foi progressivamente associado ao Diabo cristão durante a catequese colonial e a perseguição policial às macumbas no início do século XX.</p>
+                <p>A Pombagira, como contraparte feminina de Exu, herda essa mesma operação de sentido — mas com uma camada adicional: ela carrega o estigma específico atribuído a mulheres que escapavam do lugar de esposa, mãe ou recatada. Em outras palavras, a "transgressão" da Pombagira não é uma escolha narrativa neutra: é o resíduo de como a sociedade colonial e pós-colonial enquadrava qualquer mulher autônoma como ameaça moral.</p>
+
+                <h3>2. Maria Padilha provavelmente não é uma única pessoa histórica</h3>
+                <p>O senso comum de terreiro frequentemente apresenta uma biografia fechada e factual: Maria Padilha teria nascido na Espanha em 1334, amante e depois reconhecida postumamente como rainha consorte de Pedro I de Castela. Essa narrativa de fato circula amplamente — mas pesquisa filológica e histórica mostra uma trajetória bem mais tortuosa e menos linear do que a biografia única sugere.</p>
+                <p>Estudos sobre a formação da religiosidade mediúnica carioca apontam que o nome "Maria Padilha" chega ao imaginário ibérico já como fórmula de conjuro popular entre os séculos XVI e XVIII — usada por mulheres em situações de conflito conjugal, muito antes de existir qualquer entidade mediúnica chamada assim no Brasil. Some-se a isso a hipótese, também documentada, de que parte da imagem de "rainha cigana" sedutora associada a Maria Padilha vem não da crônica medieval, mas da personagem Carmen, criada pelo escritor francês do século XIX Prosper Mérimée — uma cigana de ficção que nada tem a ver com a nobre castelhana histórica, mas cuja estética acabou se fundindo ao mito. </p>
+                <p>Ou seja: o que se apresenta como "a verdadeira história de Maria Padilha" é, na prática, uma colagem de pelo menos três camadas distintas — a crônica de corte castelhana do século XIV, a fórmula mágica ibérica de séculos depois, e a reinvenção literária romântica do século XIX — todas reorganizadas no Brasil urbano do início do século XX dentro de um sistema religioso que tem lógica própria e não depende da veracidade histórica de nenhuma das três.</p>
+
+                <h3>3. A Quimbanda como "magia negra" é uma classificação, não um fato neutro</h3>
+                <p>Outro ponto pouco explicado: a separação entre Umbanda (associada a caridade e "linha branca") e Quimbanda (associada a trabalhos considerados mais duros, às vezes rotulada de "magia negra" em literatura antiga sobre o tema) não é uma fronteira doutrinária estável nem unânime entre praticantes. Trata-se, em boa parte, de uma classificação herdada de etnógrafos e folcloristas do século XX que, ao tentar organizar e legitimar a Umbanda perante a sociedade branca e cristã da época, empurraram para a Quimbanda — e para Exu e Pombagira — o papel de "lado sombrio" a ser mantido à distância. Muitos terreiros de Quimbanda contemporâneos rejeitam ativamente esse enquadramento, entendendo seu trabalho como justiça, cura e ordem — não como maldade.</p>
+
+                <h3>4. O apagamento das mulheres negras na origem de Exu feminino</h3>
+                <p>Uma lacuna sistematicamente menos discutida em conteúdo popular: pesquisa recente em antropologia das religiões afro-brasileiras — como o trabalho da jornalista e pesquisadora Claudia Alexandre sobre Exu-Mulher e o matriarcado nagô — argumenta que o protagonismo de mulheres negras, escravizadas e libertas, na manutenção de cultos a Exu foi historicamente obscurecido por uma dupla masculinização: primeiro a do próprio Exu dentro do candomblé, depois a leitura de que a vertente feminina da entidade (a Pombagira) seria uma criação tardia e secundária da Umbanda carioca, e não uma continuidade de práticas femininas mais antigas de resistência espiritual.</p>
+                <p>Essa hipótese desloca o centro de gravidade da história: em vez de a Pombagira ser apenas uma "importação" de lendas ibéricas reinterpretadas no Rio de Janeiro, ela também pode ser lida como parte de uma linhagem mais ampla de mulheres negras que usaram a religiosidade afro-brasileira como espaço de poder e resistência num contexto de violência escravista e, depois, de marginalização pós-abolição — um ângulo que tende a desaparecer quando o foco recai só sobre a "rainha de Castela".</p>
+            </section>
+
+            <hr class="section-divider">
+
+            <section id="doze-pombagiras">
+                <h2>As Doze Pombagiras</h2>
+                <p>As seções a seguir analisam as doze entidades sob uma estrutura fixa: o arquétipo central, o relato tradicional de terreiro, e o contraste crítico entre a narrativa comum e o que costuma ficar de fora.</p>
+
+                <!-- 1. Maria Padilha -->
+                <div class="pombagira-section" id="maria-padilha">
+                    <h3>1. Maria Padilha</h3>
+                    <div class="arquetipo-badge">Arquétipo: Comando e Realeza</div>
+                    <p>Maria Padilha é, de longe, a Pombagira mais conhecida e cultuada no Brasil — tão popular que seu nome virou quase sinônimo da própria categoria "Pombagira", dando origem a inúmeras variações regionais (Maria Padilha da Sete Encruzilhadas, Maria Padilha do Cemitério, entre outras). O relato tradicional a associa à figura histórica de María de Padilla, nobre castelhana do século XIV, amante e posteriormente reconhecida postumamente como esposa do rei Pedro I de Castela, conhecido como "o Cruel".</p>
+                    <p>No terreiro, ela é descrita como uma entidade de presença imponente, vaidosa, exigente quanto a respeito e protocolo, e extremamente eficaz em questões de amor, dinheiro e justiça. Seu arquétipo de comando reflete autonomia: a Pombagira que não pede licença, que toma decisões e que protege com a mesma intensidade com que cobra lealdade.</p>
+                    
+                    <div class="comparison-grid">
+                        <div class="comparison-card common">
+                            <strong>Narrativa comum:</strong>
+                            <p>Maria Padilha foi uma rainha real da Espanha medieval, e sua história é factual e bem documentada.</p>
+                        </div>
+                        <div class="comparison-card omitted">
+                            <strong>O que costuma ser omitido:</strong>
+                            <p>María de Padilla existiu, mas a estética de "rainha cigana" sedutora vem da personagem Carmen (Prosper Mérimée, século XIX) e não da crônica castelhana do século XIV. A nobre histórica não tinha origem cigana. Além disso, o nome circulava como fórmula de conjuro ibérico muito antes de surgir como entidade mediúnica no Brasil urbano do século XX.</p>
+                        </div>
+                    </div>
+                    <div class="frase-terreiro">
+                        <p>"Quem me protege não dorme, e quem me deve não esquece."</p>
+                        <p>"Rainha não pede, rainha ordena."</p>
+                    </div>
+                </div>
+
+                <!-- 2. Maria Mulambo -->
+                <div class="pombagira-section" id="maria-mulambo">
+                    <h3>2. Maria Mulambo</h3>
+                    <div class="arquetipo-badge">Arquétipo: Cura e Humildade</div>
+                    <p>Maria Mulambo representa o contraponto direto ao luxo de Maria Padilha: seu arquétipo é o da transmutação através da humildade extrema, simbolizada pelos trapos ("mulambos") com que costuma ser representada. A tradição oral conta que ela teria abandonado riqueza ou status por amor, caridade ou desilusão, optando por viver entre os descartados.</p>
+                    <p>Médiuns que relatam sua incorporação descrevem uma energia ao mesmo tempo acolhedora e rigorosa: Mulambo acolhe quem ninguém mais quer, mas impõe limites morais firmes a quem busca ajuda. Sua atuação é fortemente ligada à cura de feridas emocionais profundas e à transformação simbólica do que a sociedade descarta em algo de valor espiritual.</p>
+                    
+                    <div class="comparison-grid">
+                        <div class="comparison-card common">
+                            <strong>Narrativa comum:</strong>
+                            <p>Mulambo é uma Pombagira "menor", de função estritamente caritativa, sem a complexidade ou luxo de outras entidades.</p>
+                        </div>
+                        <div class="comparison-card omitted">
+                            <strong>O que costuma ser omitido:</strong>
+                            <p>A literatura popular hierarquiza as entidades pelo glamour, o que deixa Mulambo menos explorada. No entanto, ela é peça central na Quimbanda para cura e desfeitiço. Sua simplicidade ritual não é fraqueza, mas sim uma forma deliberada e forte de contestação do poder material.</p>
+                        </div>
+                    </div>
+                    <div class="frase-terreiro">
+                        <p>"Onde você vê lixo, eu vejo luxo."</p>
+                        <p>"Eu não ando no lixo, eu transformo o lixo em caminho."</p>
+                    </div>
+                </div>
+
+                <!-- 3. Maria Quitéria -->
+                <div class="pombagira-section" id="maria-quiteria">
+                    <h3>3. Maria Quitéria</h3>
+                    <div class="arquetipo-badge">Arquétipo: Guerra e Proteção</div>
+                    <p>Maria Quitéria carrega um arquétipo guerreiro, frequentemente associado em terreiro à figura histórica brasileira de mesmo nome — a soldada baiana que se disfarçou de homem para lutar na Guerra de Independência do Brasil no início do século XIX. No campo espiritual, ela atua na linha das Almas, ligada à defesa, ao corte de energias negativas e à proteção vigorosa de quem a invoca.</p>
+                    <p>Médiuns descrevem sua manifestação como séria, direta e pouco tolerante a falsidade — uma energia de sentinela, não de festa. Sua atuação é buscada sobretudo em situações de injustiça, ameaça ou necessidade de coragem para enfrentar conflitos.</p>
+                    
+                    <div class="comparison-grid">
+                        <div class="comparison-card common">
+                            <strong>Narrativa comum:</strong>
+                            <p>Maria Quitéria, a Pombagira, é a mesma pessoa que a heroína histórica baiana da Independência.</p>
+                        </div>
+                        <div class="comparison-card omitted">
+                            <strong>O que costuma ser omitido:</strong>
+                            <p>A associação entre a entidade espiritual e a heroína de Jesus Medeiros é uma interpretação simbólica posterior (a mulher que rompeu as barreiras de gênero para ir à guerra), funcionando como ressonância arquetípica, e não como uma correspondência biográfica ou factual comprovada.</p>
+                        </div>
+                    </div>
+                    <div class="frase-terreiro">
+                        <p>"Minha navalha corta o mal antes dele chegar."</p>
+                        <p>"Não sou de briga, mas não fujo da guerra."</p>
+                    </div>
+                </div>
+
+                <!-- 4. Rosa Caveira -->
+                <div class="pombagira-section" id="rosa-caveira">
+                    <h3>4. Rosa Caveira</h3>
+                    <div class="arquetipo-badge">Arquétipo: Justiça e Morte</div>
+                    <p>Rosa Caveira atua na linha de Caveira, associada a Omulu e Obaluaê, orixás ligados às doenças, à cura e ao território dos mortos. Seu arquétipo é o da justiça implacável e da disciplina: ela é descrita como séria, de poucas palavras, e fortemente ligada ao tema da impermanência — a ideia de que a morte iguala todos, independentemente de status social.</p>
+                    <p>Relatos de terreiro a associam a uma mulher que teria recorrido à magia para se proteger de adversidades extremas em vida. Sua atuação ritual é buscada em casos que exigem corte definitivo, encerramento de ciclos ou justiça que a vida material não ofereceu.</p>
+                    
+                    <div class="comparison-grid">
+                        <div class="comparison-card common">
+                            <strong>Narrativa comum:</strong>
+                            <p>Rosa Caveira é uma entidade puramente "sombria", ligada a forças malignas por sua representação da morte.</p>
+                        </div>
+                        <div class="comparison-card omitted">
+                            <strong>O que costuma ser omitido:</strong>
+                            <p>Na cosmologia da Umbanda e Quimbanda, a linha de Caveira não representa o mal, mas sim a transmutação e o rigor cármico. A morte é igualadora de orgulhos. A demonização dessa figura é consequência direta do filtro judaico-cristão externo que condena a iconografia da morte no sagrado.</p>
+                        </div>
+                    </div>
+                    <div class="frase-terreiro">
+                        <p>"A morte é apenas o começo da minha justiça."</p>
+                        <p>"Debaixo da pele, somos todos caveira."</p>
+                    </div>
+                </div>
+
+                <!-- 5. Dama da Noite -->
+                <div class="pombagira-section" id="dama-da-noite">
+                    <h3>5. Dama da Noite</h3>
+                    <div class="arquetipo-badge">Arquétipo: Mistério e Oculto</div>
+                    <p>A Dama da Noite personifica o arquétipo da intuição, do segredo guardado e da sedução discreta — em contraste com a exuberância mais ostensiva de outras Pombagiras. Médiuns relatam uma energia silenciosa, observadora e seletiva, que se revela por insinuação mais do que por discurso direto.</p>
+                    <p>Sua atuação ritual está ligada ao desvendar de situações ocultas, à proteção contra traições veladas e ao acesso a camadas mais intuitivas e subconscientes da consulta espiritual.</p>
+                    
+                    <div class="comparison-grid">
+                        <div class="comparison-card common">
+                            <strong>Narrativa comum:</strong>
+                            <p>Dama da Noite é uma entidade genérica, sem mistérios complexos ou linhagem ritual expressiva nos terreiros.</p>
+                        </div>
+                        <div class="comparison-card omitted">
+                            <strong>O que costuma ser omitido:</strong>
+                            <p>Ao contrário de Padilha, que possui narrativas de origem consolidadas em livros, a Dama da Noite resiste à fixação biográfica. Sua natureza reside no próprio mistério do ocultamento, representando o que a luz esconde e a mente subconsciente processa à noite.</p>
+                        </div>
+                    </div>
+                    <div class="frase-terreiro">
+                        <p>"O que a luz esconde, a noite revela."</p>
+                        <p>"Meus passos não fazem barulho, mas deixam rastro."</p>
+                    </div>
+                </div>
+
+                <!-- 6. Sete Saias -->
+                <div class="pombagira-section" id="sete-saias">
+                    <h3>6. Sete Saias</h3>
+                    <div class="arquetipo-badge">Arquétipo: Alegria e Intensidade</div>
+                    <p>Sete Saias representa o arquétipo do movimento, da multiplicidade de caminhos e da alegria como força espiritual ativa. O número sete remete simbolicamente aos sete caminhos ou sete encruzilhadas, indicando sua capacidade de transitar por diferentes situações e abrir possibilidades onde havia bloqueio.</p>
+                    <p>Médiuns que a incorporam costumam ser descritos como festivos, dançantes e expansivos — uma energia que contrasta deliberadamente com a seriedade de entidades como Rosa Caveira, reforçando a ideia de que o panteão não é monolítico.</p>
+                    
+                    <div class="comparison-grid">
+                        <div class="comparison-card common">
+                            <strong>Narrativa comum:</strong>
+                            <p>A alegria de Sete Saias é superficial ou menos séria se comparada às Pombagiras mais severas.</p>
+                        </div>
+                        <div class="comparison-card omitted">
+                            <strong>O que costuma ser omitido:</strong>
+                            <p>Nas linhas de Quimbanda e Umbanda, a alegria festiva e os giros de Sete Saias são ferramentas ativas de desbloqueio energético. A marginalização de sua expressão dançante reflete preconceito externo contra a felicidade ritual de matriz africana.</p>
+                        </div>
+                    </div>
+                    <div class="frase-terreiro">
+                        <p>"Cada saia que eu rodo é um caminho que eu abro."</p>
+                        <p>"A alegria é o meu maior feitiço."</p>
+                    </div>
+                </div>
+
+                <!-- 7. Pombagira Cigana -->
+                <div class="pombagira-section" id="pombagira-cigana">
+                    <h3>7. Pombagira Cigana</h3>
+                    <div class="arquetipo-badge">Arquétipo: Liberdade e Prosperidade</div>
+                    <p>A Pombagira Cigana incorpora o arquétipo do nomadismo, da leitura de destino e da prosperidade conquistada por desapego. As histórias de terreiro remetem a clãs ciganos, sofrimentos amorosos e busca por liberdade — uma narrativa que dialoga diretamente com representações literárias europeias sobre povos ciganos.</p>
+                    <p>Médiuns que a incorporam são descritos como vaidosos e magnéticos, e sua atuação ritual concentra-se em prosperidade material, abertura de caminhos financeiros e fortalecimento da autonomia de quem a consulta.</p>
+                    
+                    <div class="comparison-grid">
+                        <div class="comparison-card common">
+                            <strong>Narrativa comum:</strong>
+                            <p>A imagem cigana das Pombagiras reflete uma tradição espiritual preservada intacta desde a Europa.</p>
+                        </div>
+                        <div class="comparison-card omitted">
+                            <strong>O que costuma ser omitido:</strong>
+                            <p>Muito da estética cigana na umbanda carioca vem do romantismo literário europeu do século XIX (novamente, Carmen de Mérimée), que romantizava e exotizava as populações ciganas reais. Embora a entidade tenha força e mistério próprios, sua roupagem visual reproduz estereótipos sobre um povo historicamente perseguido na Europa e no Brasil.</p>
+                        </div>
+                    </div>
+                    <div class="frase-terreiro">
+                        <p>"Meu destino está escrito nas estrelas, mas quem segura a caneta sou eu."</p>
+                        <p>"Ouro brilha, mas a liberdade ilumina."</p>
+                    </div>
+                </div>
+
+                <!-- 8. Maria Navalha -->
+                <div class="pombagira-section" id="maria-navalha">
+                    <h3>8. Maria Navalha</h3>
+                    <div class="arquetipo-badge">Arquétipo: Malandragem e Rua</div>
+                    <p>Maria Navalha é uma das Pombagiras mais associadas ao universo urbano carioca, ligada especialmente ao bairro da Lapa, no Rio de Janeiro — território historicamente marcado por prostituição, boemia e marginalização social no início do século XX. Seu arquétipo é o da sobrevivência, da esperteza de rua e da proteção de mulheres em situação de vulnerabilidade.</p>
+                    <p>Médiuns relatam uma personalidade forte e combativa, que protege quem está à margem e não tolera abuso contra mulheres. Sua atuação ritual é buscada em situações de risco, violência ou necessidade de cortar laços abusivos.</p>
+                    
+                    <div class="comparison-grid">
+                        <div class="comparison-card common">
+                            <strong>Narrativa comum:</strong>
+                            <p>Maria Navalha é uma figura puramente "marginal", associada à criminalidade ou à Lapa violenta.</p>
+                        </div>
+                        <div class="comparison-card omitted">
+                            <strong>O que costuma ser omitido:</strong>
+                            <p>A pesquisa histórica sobre a disciplinarização urbana do Rio de Janeiro (1890-1930) mostra que mulheres como as que inspiram Maria Navalha eram criminalizadas pela polícia pela simples condição de existirem de forma autônoma fora do casamento. A entidade representa a reabilitação espiritual de mulheres marginalizadas pela moral patriarcal republicana.</p>
+                        </div>
+                    </div>
+                    <div class="frase-terreiro">
+                        <p>"Minha navalha não fere, ela liberta."</p>
+                        <p>"Na rua eu sou lei, no morro eu sou rainha."</p>
+                    </div>
+                </div>
+
+                <!-- 9. Pombagira da Praia -->
+                <div class="pombagira-section" id="pombagira-da-praia">
+                    <h3>9. Pombagira da Praia</h3>
+                    <div class="arquetipo-badge">Arquétipo: Emoção e Limpeza (Água)</div>
+                    <p>A Pombagira da Praia simboliza fluidez emocional, purificação e renovação, com forte ligação simbólica a Iemanjá, orixá do mar na cosmologia afro-brasileira. Sua energia é descrita como leve, mas profunda, atuando especialmente na limpeza de mágoas, traumas e bloqueios emocionais antigos.</p>
+                    <p>Sua atuação ritual costuma envolver banhos de descarrego, oferendas ligadas à água e trabalhos voltados ao equilíbrio emocional — uma vertente menos combativa e mais terapêutica dentro do espectro das Pombagiras.</p>
+                    
+                    <div class="comparison-grid">
+                        <div class="comparison-card common">
+                            <strong>Narrativa comum:</strong>
+                            <p>A Pombagira da Praia é "menos potente" do que as de cemitério por ter um perfil mais suave.</p>
+                        </div>
+                        <div class="comparison-card omitted">
+                            <strong>O que costuma ser omitido:</strong>
+                            <p>Essa visão desvaloriza o trabalho emocional e de cuidado (geralmente associado ao gênero feminino). Na realidade ritual, a fluidez e a transmutação das marés controladas pela Praia são ferramentas de alta potência terapêutica e descarrego mental.</p>
+                        </div>
+                    </div>
+                    <div class="frase-terreiro">
+                        <p>"O mar leva o que não serve e traz o que é novo."</p>
+                        <p>"Minha força vem das ondas."</p>
+                    </div>
+                </div>
+
+                <!-- 10. Maria Farrapo -->
+                <div class="pombagira-section" id="maria-farrapo">
+                    <h3>10. Maria Farrapo</h3>
+                    <div class="arquetipo-badge">Arquétipo: Sanidade e Caos (Mental)</div>
+                    <p>Maria Farrapo representa o arquétipo da reorganização do caos e da realidade sem filtros. As narrativas de terreiro frequentemente envolvem perda de status social ou episódios de sofrimento mental profundo, encontrando na simplicidade — ou mesmo no que a sociedade chamaria de "loucura" — uma forma alternativa de verdade e ordem interna.</p>
+                    <p>Médiuns descrevem uma manifestação leal, mas direta ao ponto, sem rodeios discursivos. Sua atuação ritual é associada à estabilidade mental, ao enfrentamento de realidades difíceis e à coragem de encarar o que outras entidades poderiam suavizar.</p>
+                    
+                    <div class="comparison-grid">
+                        <div class="comparison-card common">
+                            <strong>Narrativa comum:</strong>
+                            <p>Farrapo representa a "loucura" como um tema puramente exótico ou folclórico.</p>
+                        </div>
+                        <div class="comparison-card omitted">
+                            <strong>O que costuma ser omitido:</strong>
+                            <p>A loucura na história de Farrapo carrega memórias reais de mulheres internadas em hospícios ou abandonadas por distúrbios mentais em uma era sem assistência adequada. Tratar essa figura exige cautela ética, compreendendo-a como uma acolhedora das dores psíquicas profundas.</p>
+                        </div>
+                    </div>
+                    <div class="frase-terreiro">
+                        <p>"No meio do meu caos, eu sou a única ordem."</p>
+                        <p>"Rasgo o pano pra mostrar a alma."</p>
+                    </div>
+                </div>
+
+                <!-- 11. Pombagira Menina -->
+                <div class="pombagira-section" id="pombagira-menina">
+                    <h3>11. Pombagira Menina</h3>
+                    <div class="arquetipo-badge">Arquétipo: Renovação e Inocência</div>
+                    <p>A Pombagira Menina representa juventude espiritual, curiosidade e ruptura de padrões rígidos dentro do próprio panteão das Pombagiras. Os relatos de terreiro a associam a espíritos que desencarnaram jovens ou que preservam energia jovial mesmo após a passagem.</p>
+                    <p>Médiuns descrevem uma manifestação sincera e cativante, com atuação voltada à renovação de esperanças e à apresentação de soluções inesperadas — muitas vezes lúdicas — para problemas que pareciam travados.</p>
+                    
+                    <div class="comparison-grid">
+                        <div class="comparison-card common">
+                            <strong>Narrativa comum:</strong>
+                            <p>A Pombagira Menina é uma figura frágil ou sem peso ritual relevante para trabalhos sérios.</p>
+                        </div>
+                        <div class="comparison-card omitted">
+                            <strong>O que costuma ser omitido:</strong>
+                            <p>Na Quimbanda, as energias juvenis e infantis (como erês) desempenham papel crucial na desestruturação de feitiços complexos justamente por não responderem à lógica racional adulta. Sua aparente leveza é uma arma de quebra de paradigmas rituais.</p>
+                        </div>
+                    </div>
+                    <div class="frase-terreiro">
+                        <p>"Sou pequena no tamanho, mas gigante no axé."</p>
+                        <p>"Brincando eu desato o nó que você apertou."</p>
+                    </div>
+                </div>
+
+                <!-- 12. Pombagira da Figueira -->
+                <div class="pombagira-section" id="pombagira-da-figueira">
+                    <h3>12. Pombagira da Figueira</h3>
+                    <div class="arquetipo-badge">Arquétipo: Raiz e Ancestralidade (Terra)</div>
+                    <p>A Pombagira da Figueira encarna o arquétipo da sacerdotisa antiga e da conexão profunda com a terra e os ancestrais. A figueira, árvore historicamente associada em diversas culturas a espíritos e práticas mágicas, reforça simbolicamente sua ligação com saberes antigos das ervas e com cultos pré-coloniais.</p>
+                    <p>Médiuns relatam forte conexão com a natureza e com conhecimento ancestral em sua manifestação. Sua atuação ritual é buscada para sustentação espiritual, enraizamento e resgate de conexão com as origens — sejam elas familiares, culturais ou espirituais.</p>
+                    
+                    <div class="comparison-grid">
+                        <div class="comparison-card common">
+                            <strong>Narrativa comum:</strong>
+                            <p>A Figueira representa uma tradição mística "pura" isolada de influências coloniais.</p>
+                        </div>
+                        <div class="comparison-card omitted">
+                            <strong>O que costuma ser omitido:</strong>
+                            <p>Mesmo as entidades de forte ligação com a terra trazem marcas do sincretismo com o catolicismo popular português e pajelança indígena. A busca de uma origem "pura" ou intocada é um anacronismo acadêmico; a riqueza da Pombagira está justamente no cruzamento híbrido dessas culturas sob a opressão escravista.</p>
+                        </div>
+                    </div>
+                    <div class="frase-terreiro">
+                        <p>"Minhas raízes são profundas, nenhum vento me derruba."</p>
+                        <p>"O que eu planto na sombra, colho na luz."</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <!-- Referências Históricas -->
+            <section id="referencias">
+                <h2>Conceitos teóricos e referências históricas</h2>
+                <p>Para fundamentar as discussões críticas e desmistificar os arquétipos das Pombagiras, a pesquisa acadêmica recorre a referências clássicas da antropologia e história social:</p>
+                <ul>
+                    <li style="margin-bottom: 0.8rem;"><strong>Reginaldo Prandi</strong> — <em>"Exu, de Mensageiro a Diabo: Sincretismo Católico e Demonização do Orixá Exu"</em> (Revista USP, 2001) e <em>"Mitologia dos Orixás"</em> — Explica o processo histórico de demonização das entidades de esquerda pelas forças policiais e imprensa colonial no Rio de Janeiro.</li>
+                    <li style="margin-bottom: 0.8rem;"><strong>Vagner Gonçalves da Silva</strong> — <em>"Exu do Brasil: tropos de uma identidade afro-brasileira nos trópicos"</em> (Revista de Antropologia, USP, 2012) — Analisa a incorporação do diabo cristão na figura do Exu brasileiro e a emergência de Pombagira.</li>
+                    <li style="margin-bottom: 0.8rem;"><strong>Claudia Alexandre</strong> — <em>"Exu-Mulher e o Matriarcado Nagô: sobre masculinização, demonização e tensões de gênero na formação dos candomblés"</em> — Tese central que recupera a importância das sacerdotisas negras nos cultos a Exu, ofuscadas por análises androcêntricas.</li>
+                    <li style="margin-bottom: 0.8rem;"><strong>Marlyse Meyer</strong> — Pesquisa folclórica sobre Maria Padilha, analisando a fusão de elementos cabalísticos, ciganos e ibéricos na formação da entidade, definida como a "geleia geral da magia brasileira".</li>
+                    <li style="margin-bottom: 0.8rem;"><strong>Margareth Rago</strong> — <em>"Do Cabaré ao Lar: a Utopia da Cidade Disciplinar, Brasil 1890–1930"</em> — Obra referencial para compreender a regulação moral de prostitutas e mulheres da boemia no Rio de Janeiro, fornecendo o plano de fundo histórico para figuras como Maria Navalha.</li>
+                </ul>
+            </section>
+
+            <hr class="section-divider">
+
+            <section id="consideracoes-finais">
+                <h2>Considerações finais</h2>
+                <p>As doze Pombagiras reunidas neste dossiê não esgotam a vastidão de entidades cultuadas sob esse nome nos terreiros brasileiros — apenas representam um recorte das mais difundidas em literatura de Umbanda e Quimbanda voltada ao público praticante. O que une todas elas, para além dos arquétipos individuais, é o fato de carregarem, em sua origem simbólica, memórias de mulheres que romperam — por escolha, por circunstância ou por sobrevivência — com os papéis sociais que lhes eram impostos.</p>
+                <p>A leitura puramente folclórica dessas entidades, focada em biografia espetacular e estética de sedução, tende a apagar essa camada social mais densa. A leitura histórico-antropológica, por outro lado, situa as Pombagiras dentro de processos concretos: a demonização colonial e republicana das religiões afro-brasileiras, a perseguição policial às macumbas no início do século XX, e o estigma sistemático lançado sobre mulheres pobres, negras e socialmente marginalizadas. Compreender as duas camadas — a fé vivida em terreiro e o processo histórico que a moldou — é o que permite um material informativo verdadeiramente completo sobre o tema.</p>
+            </section>
+        </article>
+
+        <!-- Rodapé Semântico -->
+        <footer>
+            <p>© 2026 <a href="https://pombagiras.com/">POMBAGIRAS.COM</a> • Portal de Desmistificação, Arte & Filosofia Ancestral.</p>
+            <p>Idealizado com rigor teológico por <strong>Alexia Melusine</strong>. Todos os direitos reservados.</p>
+            <div style="margin-top: 10px; margin-bottom: 5px; text-align: center; display: flex; justify-content: center;">
+                <span class="email-copy-trigger" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; cursor: pointer; color: #FAF6EE; opacity: 0.75; transition: opacity 0.2s, color 0.2s; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.15); padding: 6px 12px; border-radius: 20px;" onclick="const e='contato'+'@'+'pombagiras.com'; navigator.clipboard.writeText(e); const t=this.querySelector('.copy-status'); t.textContent='Copiado!'; t.style.color='#00ff88'; setTimeout(()=>{t.textContent='(Copiar)'; t.style.color='';}, 2000);" onmouseenter="this.style.opacity='1'; this.style.borderColor='#800020';" onmouseleave="this.style.opacity='0.75'; this.style.borderColor='rgba(255, 255, 255, 0.15)';" role="button" aria-label="Copiar e-mail contato@pombagiras.com">
+                    <i class="fa-solid fa-envelope" style="color: #800020;"></i>
+                    <span style="font-weight: 400; letter-spacing: 0.5px;">contato@pombagiras.com</span>
+                    <span class="copy-status" style="font-size: 0.7rem; opacity: 0.6; transition: color 0.2s;">(Copiar)</span>
+                </span>
+            </div>
+            <div style="margin-top: 10px; margin-bottom: 10px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                <a href="../privacy.html" style="color: var(--muted-text); text-decoration: none;">Política de Privacidade</a>
+                <span style="color: var(--muted-text); opacity: 0.3;">|</span>
+                <a href="../terms.html" style="color: var(--muted-text); text-decoration: none;">Termos de Uso</a>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
