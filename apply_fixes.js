@@ -18,17 +18,17 @@ const replacements = [
   { from: /Learn/g, to: 'Aprenda' },
   { from: /Visit/g, to: 'Visite' },
   // UTF‑8 encoding fixes
-  { from: /Ã©/g, to: 'é' },
-  { from: /Ã¡/g, to: 'á' },
-  { from: /Ã§/g, to: 'ç' },
-  { from: /Ã£/g, to: 'ã' },
-  { from: /Ã¶/g, to: 'ö' },
-  { from: /Ã¼/g, to: 'ü' },
-  { from: /Ã­/g, to: 'í' },
-  { from: /Ã³/g, to: 'ó' },
-  { from: /Ãº/g, to: 'ú' },
-  { from: /Ãª/g, to: 'ê' },
-  { from: /Ã´/g, to: 'ô' },
+  { from: /é/g, to: 'é' },
+  { from: /á/g, to: 'á' },
+  { from: /ç/g, to: 'ç' },
+  { from: /ã/g, to: 'ã' },
+  { from: /ö/g, to: 'ö' },
+  { from: /ü/g, to: 'ü' },
+  { from: /í/g, to: 'í' },
+  { from: /ó/g, to: 'ó' },
+  { from: /ú/g, to: 'ú' },
+  { from: /ê/g, to: 'ê' },
+  { from: /ô/g, to: 'ô' },
 ];
 
 function processFile(filePath) {

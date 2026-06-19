@@ -1175,7 +1175,7 @@ document.addEventListener('DOMContentLoaded', () => {
         animate();
     }
     // ==========================================================================
-    // TRANSIÇÃO DE ABAS INTELIGENTE A PARTIR DE ÂNCORAS DO RODAPÉ
+    // TRANSIÇÁO DE ABAS INTELIGENTE A PARTIR DE ÂNCORAS DO RODAPÉ
     // ==========================================================================
     function activateTabFromAnchor(targetId) {
         const tabBtn = document.querySelector(`.nav-tab[data-target="${targetId}"]`);

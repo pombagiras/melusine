@@ -353,7 +353,7 @@ h4,
     height: 100%;
     display: block;
     object-fit: cover;
-    /* ESSA LINHA TRAVA O ASPECT-RATIO DA FOTO SEM RETER DISTORÇÃO */
+    /* ESSA LINHA TRAVA O ASPECT-RATIO DA FOTO SEM RETER DISTORÇÁO */
     filter: grayscale(0.4);
     transition: var(--transition);
 }
@@ -1617,7 +1617,7 @@ body.scrolling-up {
 }
 
 /* ==========================================================================
-   ESTILOS DE PAGINAÇÃO: BOTAO "CARREGAR MAIS"
+   ESTILOS DE PAGINAÇÁO: BOTAO "CARREGAR MAIS"
    ========================================================================== */
 .load-more-container {
     text-align: center;
