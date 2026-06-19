@@ -48,7 +48,7 @@ const allowedTargets = new Set([
   'Á', 'É', 'Í', 'Ó', 'Ú', 'Â', 'Ê', 'Ô', 'Ã', 'Õ', 'À', 'Ç',
   'ñ', 'Ñ', 'º', 'ª', '§', '°',
   // Símbolos e pontuações
-  '—', '–', '•', '…', '’', '‘', '“', '”', '™', '×',
+  '—', '–', '•', '…', '’', '‘', '“', '”', '™', '×', '←',
   // Emojis e símbolos espirituais/astrológicos
   '🥀', '🔱', '💄', '🎴', '🏆', '🎯', '📡', '🔴', '📜', '🗝️', '🗝', '✍️', '✍', '✉️', '✉',
   '🌹', '🌸', '🌕', '🌙', '🌊', '🌋', '🌟', '🌿', '🍂', '🍃',
@@ -59,6 +59,8 @@ const allowedTargets = new Set([
   '☽', '☾', '★', '☆', '☯', '♾', '⭐', '♎',
   // Emojis recém-descobertos
   '🌐', '🌺', '🥃', '🎨', '📅', '🕰', '🕰️',
+  // Símbolos decorativos recém-identificados
+  '✦', '☀',
   // Caracteres especiais de controle/variação
   '\uFE0F', '\u200D'
 ]);
@@ -136,6 +138,9 @@ function processFile(filePath) {
 
   // Corrigir dinamicamente as sequências corrompidas no conteúdo
   content = repairString(content);
+
+  // Remover quaisquer caracteres de controle C1 remanescentes que causam caixas vazias no navegador
+  content = content.replace(/[\u0081\u008D\u008F\u0090\u009D]/g, '');
 
   if (content !== original) {
     fs.writeFileSync(filePath, content, 'utf8');

@@ -396,7 +396,7 @@
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
 
     <style>
-        /* â•â•â•â•â•â•â•â•â•â•â• RESET & BASE â•â•â•â•â•â•â•â•â•â•â• */
+        /* â•â•â•â•â•â•â•â•â•â•â• RESET & BASE â•â•â•â•â•â•â•â•â•â•â• */
         *, *::before, *::after {
             margin: 0;
             padding: 0;
@@ -404,7 +404,7 @@
             -webkit-tap-highlight-color: transparent;
         }
 
-        /* â•â•â•â•â•â•â•â•â•â•â• VARIÁVEIS DE TRANSIÇÁO â•â•â•â•â•â•â•â•â•â•â• */
+        /* â•â•â•â•â•â•â•â•â•â•â• VARIÁVEIS DE TRANSIÇÁO â•â•â•â•â•â•â•â•â•â•â• */
         :root {
             --transition-speed: 0.5s;
             --glass-blur: 18px;
@@ -414,7 +414,7 @@
             --font-body: 'Geist', sans-serif;
         }
 
-        /* â•â•â•â•â•â•â•â•â•â•â• TEMA VIBRANTE â•â•â•â•â•â•â•â•â•â•â• */
+        /* â•â•â•â•â•â•â•â•â•â•â• TEMA VIBRANTE â•â•â•â•â•â•â•â•â•â•â• */
         [data-theme="vibrant"] {
             --primary-color: #8B0000;
             --secondary-color: #FFD700;
@@ -431,7 +431,7 @@
             --glass-card: rgba(255,248,220,0.62);
         }
 
-        /* â•â•â•â•â•â•â•â•â•â•â• TEMA DIA â•â•â•â•â•â•â•â•â•â•â• */
+        /* â•â•â•â•â•â•â•â•â•â•â• TEMA DIA â•â•â•â•â•â•â•â•â•â•â• */
         [data-theme="day"] {
             --primary-color: #b30000;
             --secondary-color: #d4af37;
@@ -448,7 +448,7 @@
             --glass-card: rgba(255,255,255,0.78);
         }
 
-        /* â•â•â•â•â•â•â•â•â•â•â• TEMA NOITE â•â•â•â•â•â•â•â•â•â•â• */
+        /* â•â•â•â•â•â•â•â•â•â•â• TEMA NOITE â•â•â•â•â•â•â•â•â•â•â• */
         [data-theme="night"] {
             --primary-color: #ff6666;
             --secondary-color: #FFD700;
@@ -465,7 +465,7 @@
             --glass-card: rgba(25,15,15,0.78);
         }
 
-        /* â•â•â•â•â•â•â•â•â•â•â• BODY — FONTE GLOBAL â•â•â•â•â•â•â•â•â•â•â• */
+        /* â•â•â•â•â•â•â•â•â•â•â• BODY — FONTE GLOBAL â•â•â•â•â•â•â•â•â•â•â• */
         body {
             font-family: var(--font-body);
             font-size: 16px;
@@ -485,7 +485,7 @@
             letter-spacing: -0.01em;
         }
 
-        /* â•â•â•â•â•â•â•â•â•â•â• HERO TEMA DIA â•â•â•â•â•â•â•â•â•â•â• */
+        /* â•â•â•â•â•â•â•â•â•â•â• HERO TEMA DIA â•â•â•â•â•â•â•â•â•â•â• */
         [data-theme="day"] .hero h1,
         [data-theme="day"] .hero p {
             color: #2a1a1a;
@@ -496,7 +496,7 @@
             color: var(--secondary-color);
         }
 
-        /* â•â•â•â•â•â•â•â•â•â•â• CONTAINER â•â•â•â•â•â•â•â•â•â•â• */
+        /* â•â•â•â•â•â•â•â•â•â•â• CONTAINER â•â•â•â•â•â•â•â•â•â•â• */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -504,9 +504,9 @@
             width: 100%;
         }
 
-        /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+        /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
            HEADER — EFEITO VIDRO APPLE
-        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
         header {
             background: var(--glass-bg);
             backdrop-filter: blur(var(--glass-blur)) saturate(180%);
@@ -579,9 +579,9 @@
         }
         .menu-toggle:focus-visible { outline: 2px solid var(--secondary-color); }
 
-        /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+        /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
            HERO — FOTO COM EFEITOS DE VIDRO
-        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
         .hero {
             position: relative;
             background-image: var(--hero-overlay),
@@ -707,7 +707,7 @@
             outline: none;
         }
 
-        /* â•â•â•â•â•â•â•â•â•â•â• SEÇÕES â•â•â•â•â•â•â•â•â•â•â• */
+        /* â•â•â•â•â•â•â•â•â•â•â• SEÇÕES â•â•â•â•â•â•â•â•â•â•â• */
         main { padding: 20px 0; }
         .section { margin-bottom: 65px; padding: 20px 0; }
         .section-header { text-align: center; margin-bottom: 45px; }
@@ -747,9 +747,9 @@
             line-height: 1.7;
         }
 
-        /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+        /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
            CARDS — EFEITO VIDRO APPLE
-        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
         .cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -814,9 +814,9 @@
             font-weight: 300;
         }
 
-        /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+        /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
            ENTITY CARDS — VIDRO EXPANSIVO
-        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
         .entity-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
@@ -892,9 +892,9 @@
         .entity-details strong { color: var(--accent-color); min-width: 65px; font-weight: 600; }
         [data-theme="night"] .entity-details strong { color: var(--secondary-color); }
 
-        /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+        /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
            SOCIAL CARDS — EFEITO VIDRO EXPANSIVO
-        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
         .social-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -988,7 +988,7 @@
         /* Cores sociais */
         /* Brand colors disabled */
 
-        /* â•â•â•â•â•â•â•â•â•â•â• ARTICLE / QUOTE â•â•â•â•â•â•â•â•â•â•â• */
+        /* â•â•â•â•â•â•â•â•â•â•â• ARTICLE / QUOTE â•â•â•â•â•â•â•â•â•â•â• */
         .article-card {
             background: var(--glass-card);
             backdrop-filter: blur(14px) saturate(150%);
@@ -1049,9 +1049,9 @@
             font-family: var(--font-body);
         }
 
-        /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+        /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
            FOOTER
-        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
         footer {
             background: var(--dark-bg);
             color: white;
@@ -1110,9 +1110,9 @@
             letter-spacing: 0.02em;
         }
 
-        /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+        /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
            THEME SWITCHER — VIDRO APPLE
-        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
         .theme-switcher {
             position: fixed;
             bottom: 25px;
@@ -1150,7 +1150,7 @@
 
         [data-theme="night"] .theme-btn.active { background: rgba(255,255,255,0.1); }
 
-        /* â•â•â•â•â•â•â•â•â•â•â• ANIMAÇÕES â•â•â•â•â•â•â•â•â•â•â• */
+        /* â•â•â•â•â•â•â•â•â•â•â• ANIMAÇÕES â•â•â•â•â•â•â•â•â•â•â• */
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(28px); }
             to { opacity: 1; transform: translateY(0); }
@@ -1163,7 +1163,7 @@
 
         .fade-in { animation: fadeInUp 0.9s ease; }
 
-        /* â•â•â•â•â•â•â•â•â•â•â• MEDIA QUERIES â•â•â•â•â•â•â•â•â•â•â• */
+        /* â•â•â•â•â•â•â•â•â•â•â• MEDIA QUERIES â•â•â•â•â•â•â•â•â•â•â• */
         @media (max-width: 900px) {
             .hero h1 { font-size: 2.7em; }
         }
@@ -1216,7 +1216,7 @@
             .hero { background-attachment: scroll; }
         }
     
-    /* â•â•â•â•â•â•â•â•â•â• LANG SWITCHER â•â•â•â•â•â•â•â•â•â• */
+    /* â•â•â•â•â•â•â•â•â•â• LANG SWITCHER â•â•â•â•â•â•â•â•â•â• */
     .lang-switcher {
         display: flex;
         gap: 5px;
@@ -1269,7 +1269,7 @@
 
     <!-- THEME SWITCHER FLUTUANTE -->
     <nav class="theme-switcher" aria-label="Controle de tema visual">
-        <button class="theme-btn" onclick="setTheme('day')" aria-pressed="false" aria-label="Ativar Modo Dia">â˜€️</button>
+        <button class="theme-btn" onclick="setTheme('day')" aria-pressed="false" aria-label="Ativar Modo Dia">☀️</button>
         <button class="theme-btn" onclick="setTheme('night')" aria-pressed="false" aria-label="Ativar Modo Noite">🌙</button>
         <button class="theme-btn active" onclick="setTheme('vibrant')" aria-pressed="true" aria-label="Ativar Modo Pombagira Vibrante">🌹</button>
     </nav>
@@ -1713,7 +1713,7 @@
     </footer>
 
     <script>
-        // â•â•â• LÓGICA DO TEMA COM ACESSIBILIDADE BLINDADA â•â•â•
+        // â•â•â• LÓGICA DO TEMA COM ACESSIBILIDADE BLINDADA â•â•â•
         function setTheme(themeName) {
             document.documentElement.setAttribute('data-theme', themeName);
             localStorage.setItem('theme', themeName);
@@ -1747,7 +1747,7 @@
             }
         })();
 
-        // â•â•â• MENU MOBILE ACESSÍVEL E RESILIENTE â•â•â•
+        // â•â•â• MENU MOBILE ACESSÍVEL E RESILIENTE â•â•â•
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
 
@@ -1780,7 +1780,7 @@
             });
         }
 
-        // â•â•â• ANIMAÇÕES DE ENTRADA — INTERSECTION OBSERVER â•â•â•
+        // â•â•â• ANIMAÇÕES DE ENTRADA — INTERSECTION OBSERVER â•â•â•
         const observerOptions = {
             root: null,
             rootMargin: '0px',
@@ -1801,7 +1801,7 @@
         });
     </script>
 
-    <!-- â•â• SELETOR DE IDIOMA / LANGUAGE SWITCHER â•â• -->
+    <!-- â•â• SELETOR DE IDIOMA / LANGUAGE SWITCHER â•â• -->
     
     <script>
     (function(){
