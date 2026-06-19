@@ -305,124 +305,39 @@ const translations = {
 
 // 2. Navigation Switcher HTML & JS logic to inject
 const switcherHTML = `
-<!-- Language Selector Dropdown -->
-<div class="lang-switcher" style="position: relative; display: inline-block; margin-left: 20px;">
-    <button class="lang-btn" onclick="toggleLangDropdown(event)" aria-label="Alterar idioma / Change language" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(197, 160, 89, 0.3); color: #FAF6EE; padding: 6px 14px; border-radius: 20px; font-family: 'Fraunces', serif; font-size: 0.85rem; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: border-color 0.3s ease, background 0.3s ease;">
-        <i class="fa-solid fa-globe" style="color: #C59B27; font-size: 0.8rem;"></i>
-        <span class="current-lang-label">Português</span>
-        <i class="fa-solid fa-chevron-down" style="font-size: 0.65rem; opacity: 0.7;"></i>
+<!-- Premium Global Language Switcher -->
+<div class="global-lang-switcher" style="position: fixed; top: 20px; right: 20px; z-index: 99999;">
+    <button onclick="toggleLangDropdown(event)" style="background: rgba(10, 12, 14, 0.8); border: 1px solid rgba(197, 160, 89, 0.4); color: #FAF6EE; padding: 8px 16px; border-radius: 25px; font-family: 'Fraunces', serif; cursor: pointer; backdrop-filter: blur(10px); display: flex; align-items: center; gap: 8px;">
+        <i class="fa-solid fa-globe"></i> <span class="current-lang-label">PT</span>
     </button>
-    <div class="lang-dropdown" style="display: none; position: absolute; top: calc(100% + 8px); right: 0; background: rgba(10, 12, 14, 0.95); backdrop-filter: blur(12px); border: 1px solid rgba(197, 160, 89, 0.2); border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.8); z-index: 9999; min-width: 130px; overflow: hidden; padding: 4px 0;">
-        <a href="#" onclick="changeLanguage(event, 'pt')" style="display: block; padding: 10px 16px; color: #FAF6EE; text-decoration: none; font-size: 0.85rem; font-family: 'Geist', sans-serif; transition: background 0.2s; text-align: left;">Português</a>
-        <a href="#" onclick="changeLanguage(event, 'en')" style="display: block; padding: 10px 16px; color: #FAF6EE; text-decoration: none; font-size: 0.85rem; font-family: 'Geist', sans-serif; transition: background 0.2s; text-align: left;">English</a>
-        <a href="#" onclick="changeLanguage(event, 'es')" style="display: block; padding: 10px 16px; color: #FAF6EE; text-decoration: none; font-size: 0.85rem; font-family: 'Geist', sans-serif; transition: background 0.2s; text-align: left;">Español</a>
+    <div class="lang-dropdown" style="display: none; position: absolute; top: 100%; right: 0; margin-top: 10px; background: #0a0c0e; border: 1px solid #C59B27; border-radius: 12px; overflow: hidden;">
+        <a href="#" onclick="changeLanguage(event, 'pt')" style="display: block; padding: 10px 20px; color: #FAF6EE; text-decoration: none;">Português</a>
+        <a href="#" onclick="changeLanguage(event, 'en')" style="display: block; padding: 10px 20px; color: #FAF6EE; text-decoration: none;">English</a>
+        <a href="#" onclick="changeLanguage(event, 'es')" style="display: block; padding: 10px 20px; color: #FAF6EE; text-decoration: none;">Español</a>
     </div>
 </div>
 <script>
 function toggleLangDropdown(e) {
-    if (e) {
-        e.preventDefault();
-        e.stopPropagation();
-    }
-    const btn = (e && e.currentTarget) || document.querySelector('.lang-btn');
-    if (!btn) return;
-    const dropdown = btn.nextElementSibling;
-    if (!dropdown) return;
-    const isVisible = dropdown.style.display === 'block';
-    document.querySelectorAll('.lang-dropdown').forEach(d => d.style.display = 'none');
-    dropdown.style.display = isVisible ? 'none' : 'block';
+    e.stopPropagation();
+    const dropdown = document.querySelector('.lang-dropdown');
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
 }
-
 function changeLanguage(e, lang) {
-    if (e) {
-        e.preventDefault();
-        e.stopPropagation();
-    }
+    e.preventDefault();
     localStorage.setItem('user-language', lang);
-    
-    // Determine target path
-    const currentPath = window.location.pathname;
-    let targetPath = '/';
-    
-    // Determine clean filename and folders
-    const parts = currentPath.split('/').filter(p => p);
-    let langPrefix = '';
-    
-    if (parts[0] === 'en' || parts[0] === 'es') {
-        langPrefix = parts.shift();
-    }
-    
-    const pagePath = parts.join('/');
-    
-    if (lang === 'pt') {
-        targetPath = '/' + pagePath;
-    } else {
-        targetPath = '/' + lang + '/' + pagePath;
-    }
-    
-    // Clean double slashes
-    targetPath = targetPath.replace(/\/+/g, '/');
-    if (!targetPath.endsWith('.html') && targetPath !== '/' && targetPath !== '/en/' && targetPath !== '/es/') {
-        if (targetPath.endsWith('/')) {
-            targetPath += 'index.html';
-        } else {
-            targetPath += '/index.html';
-        }
-    }
-    
-    window.location.href = targetPath;
-}
-
-// Global click event to close all dropdowns when clicking outside
-if (!window.langDropdownGlobalBound) {
-    window.langDropdownGlobalBound = true;
-    document.addEventListener('click', () => {
-        document.querySelectorAll('.lang-dropdown').forEach(d => d.style.display = 'none');
-    });
-}
-
-// Bind event listeners using JS to avoid issues with inline onclick scope
-function initLangSwitcher() {
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        if (btn.dataset.langSwitcherBound) return;
-        btn.dataset.langSwitcherBound = 'true';
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            const dropdown = btn.nextElementSibling;
-            if (dropdown) {
-                const isVisible = dropdown.style.display === 'block';
-                document.querySelectorAll('.lang-dropdown').forEach(d => d.style.display = 'none');
-                dropdown.style.display = isVisible ? 'none' : 'block';
-            }
-        });
-    });
-}
-
-// Set current language button label based on path
-document.addEventListener('DOMContentLoaded', () => {
-    initLangSwitcher();
     const path = window.location.pathname;
-    document.querySelectorAll('.current-lang-label').forEach(label => {
-        if (path.includes('/en/')) {
-            label.textContent = 'English';
-        } else if (path.includes('/es/')) {
-            label.textContent = 'Español';
-        } else {
-            label.textContent = 'Português';
-        }
-    });
-});
-
-// Run immediate fallback binding in case DOMContentLoaded has already fired or to be fast
-initLangSwitcher();
+    const parts = path.split('/').filter(p => p !== 'en' && p !== 'es');
+    let newPath = (lang === 'pt' ? '/' : '/' + lang + '/') + parts.join('/');
+    window.location.href = newPath.replace(/\/+/g, '/');
+}
+window.addEventListener('click', () => document.querySelector('.lang-dropdown').style.display = 'none');
 </script>
 `;
 
 // Helper: Injects hreflang tags into <head>
 function injectHrefLangs(html, urlPath) {
   const canonicalUrl = `https://pombagiras.com/${urlPath}`;
-  const enUrl = `https://pombagiras.com/en/${urlPath}`.replace('/en/index.html', '/en/').replace('portal/dossie.html', 'portal/dossie.html'); // Let's keep URLs clean
+  const enUrl = `https://pombagiras.com/en/${urlPath}`;
   const esUrl = `https://pombagiras.com/es/${urlPath}`;
   
   const hreflangs = `
@@ -442,23 +357,10 @@ function injectHrefLangs(html, urlPath) {
 
 // Helper: Injects Language Switcher to footer-links or header
 function injectLanguageSwitcher(html) {
-  if (html.includes('class="lang-switcher"')) {
-      return html; // Already injected
+  if (html.includes('class="global-lang-switcher"')) {
+    return html; // Already injected
   }
-
-  // Inject in portal-header or brand if present, otherwise header
-  if (html.includes('class="portal-header"')) {
-      return html.replace('</header>', `${switcherHTML}\n        </header>`);
-  }
-  if (html.includes('class="cta-group"')) {
-      // Specifically target cta-group area to insert switcher inside the hero content wrapper
-      return html.replace(/(class="cta-group"[\s\S]*?<\/div>\s*<\/div>\s*<\/section>)/, (match) => {
-          return match.replace(/(<\/div>\s*<\/div>\s*<\/section>)/, `\n        ${switcherHTML}\n    $1`);
-      });
-  }
-  if (html.includes('</header>')) {
-      return html.replace('</header>', `${switcherHTML}\n    </header>`);
-  }
+  // Insert the switcher directly after the opening <body> tag for a true global fixed element
   return html.replace('<body>', `<body>\n${switcherHTML}`);
 }
 
