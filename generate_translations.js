@@ -357,8 +357,11 @@ function injectHrefLangs(html, urlPath) {
 
 // Helper: Injects Language Switcher to footer-links or header
 function injectLanguageSwitcher(html) {
-  // No-op: language switcher removed per user request
-  return html;
+  if (html.includes('class="global-lang-switcher"')) {
+    return html; // Already injected
+  }
+  // Insert the switcher directly after the opening <body> tag for a true global fixed element
+  return html.replace('<body>', `<body>\n${switcherHTML}`);
 }
 
 // Helper: Injects auto-redirection on the root page
@@ -409,7 +412,7 @@ function translatePage(fileName, enDict, esDict, isRoot = false) {
   
   // Inject language switcher and hreflangs in PT version
   html = injectHrefLangs(html, urlPath);
-  // injectLanguageSwitcher removed
+  html = injectLanguageSwitcher(html);
   if (isRoot) {
       html = injectAutoRedirect(html);
   }
