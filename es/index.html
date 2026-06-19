@@ -53,7 +53,7 @@
     <!-- Critical CSS & Fonts at the very top of head to prevent render blocking -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap"></noscript>
-    <link rel="stylesheet" href="../style.css?v=1.0.1">
+    <link rel="stylesheet" href="style.css?v=1.0.1">
     
     <!-- Asynchronous non-blocking load of FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
@@ -758,6 +758,45 @@
       ]
     }
     </script>
+<style>
+    /* ══════════ LANG SWITCHER ══════════ */
+    .lang-switcher {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+        background: rgba(8, 4, 4, 0.88);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(197, 160, 89, 0.25);
+        border-radius: 40px;
+        padding: 6px 14px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+        font-family: 'Geist', 'Segoe UI', sans-serif;
+    }
+    .lang-btn {
+        background: none;
+        border: none;
+        color: rgba(250, 246, 238, 0.55);
+        font-family: inherit;
+        font-size: 0.73rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        cursor: pointer;
+        padding: 3px 8px;
+        border-radius: 20px;
+        transition: all 0.22s ease;
+        text-transform: uppercase;
+    }
+    .lang-btn:hover, .lang-btn.active {
+        color: #C5A059;
+        background: rgba(197, 160, 89, 0.13);
+    }
+    .lang-sep { color: rgba(197, 160, 89, 0.28); font-size: 0.7rem; user-select: none; }
+</style>
 </head>
 
 <body>
@@ -786,11 +825,11 @@
     </div>
 
     <section class="hero" id="home">
-        <video class="hero-video" autoplay loop muted playsinline poster="../ViboraAlbina_poster.jpg" preload="metadata" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
-            <source src="../ViboraAlbina_720.webm" type="video/webm" media="(max-width: 768px)">
-            <source src="../ViboraAlbina_1080.webm" type="video/webm">
-            <source src="../ViboraAlbina_720.mp4" type="video/mp4" media="(max-width: 768px)">
-            <source src="../ViboraAlbina_1080.mp4" type="video/mp4">
+        <video class="hero-video" autoplay loop muted playsinline poster="ViboraAlbina_poster.jpg" preload="metadata" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+            <source src="ViboraAlbina_720.webm" type="video/webm" media="(max-width: 768px)">
+            <source src="ViboraAlbina_1080.webm" type="video/webm">
+            <source src="ViboraAlbina_720.mp4" type="video/mp4" media="(max-width: 768px)">
+            <source src="ViboraAlbina_1080.mp4" type="video/mp4">
             Seu navegador não suporta vídeos HTML5.
         </video>
         <div class="hero-content">
@@ -803,7 +842,7 @@
             
         
 <!-- Language Selector Dropdown -->
-<div class="lang-switcher" style="position: relative; display: inline-block; margin-left: 20px;">
+
     <button class="lang-btn" onclick="toggleLangDropdown(event)" aria-label="Alterar idioma / Change language" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(197, 160, 89, 0.3); color: #FAF6EE; padding: 6px 14px; border-radius: 20px; font-family: 'Fraunces', serif; font-size: 0.85rem; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: border-color 0.3s ease, background 0.3s ease;">
         <i class="fa-solid fa-globe" style="color: #C59B27; font-size: 0.8rem;"></i>
         <span class="current-lang-label">Português</span>
@@ -1558,7 +1597,7 @@ initLangSwitcher();
             <div id="faq" class="tab-content">
                 <div class="faq-list">
                     <!-- Banner Dossiê Histórico-Antropológico no Topo -->
-                    <a href="portal/dossie.html" target="_blank" class="faq-item dossie-item" style="display: block; text-decoration: none; border: 1px solid rgba(197, 160, 89, 0.3); background: rgba(74, 14, 23, 0.25); overflow: hidden; margin-bottom: 24px; border-radius: 24px; transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='rgba(197, 160, 89, 0.8)'; this.style.boxShadow='0 12px 30px rgba(197, 160, 89, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(197, 160, 89, 0.3)'; this.style.boxShadow='none';">
+                    <a href="es/portal/dossie.html" target="_blank" class="faq-item dossie-item" style="display: block; text-decoration: none; border: 1px solid rgba(197, 160, 89, 0.3); background: rgba(74, 14, 23, 0.25); overflow: hidden; margin-bottom: 24px; border-radius: 24px; transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='rgba(197, 160, 89, 0.8)'; this.style.boxShadow='0 12px 30px rgba(197, 160, 89, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(197, 160, 89, 0.3)'; this.style.boxShadow='none';">
                         <div class="dossie-card-content" style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center; padding: 25px 35px;">
                             <div class="dossie-img-wrapper" style="flex: 1 1 200px; max-width: 280px; height: 160px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(197, 160, 89, 0.2); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);">
                                 <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/fotos/DOSSIE.png" alt="Dossier Histórico-Antropológico: Las Doce Pombagiras" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(10%) contrast(1.15);">
@@ -1572,7 +1611,7 @@ initLangSwitcher();
                     </a>
 
                     <!-- Banner Bahuchara Mata no Topo -->
-                    <a href="portal/bahuchara-mata.html" target="_blank" class="faq-item bahuchara-item" style="display: block; text-decoration: none; border: 1px solid rgba(197, 160, 89, 0.3); background: rgba(74, 14, 23, 0.25); overflow: hidden; margin-bottom: 24px; border-radius: 24px; transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='rgba(197, 160, 89, 0.8)'; this.style.boxShadow='0 12px 30px rgba(197, 160, 89, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(197, 160, 89, 0.3)'; this.style.boxShadow='none';">
+                    <a href="es/portal/bahuchara-mata.html" target="_blank" class="faq-item bahuchara-item" style="display: block; text-decoration: none; border: 1px solid rgba(197, 160, 89, 0.3); background: rgba(74, 14, 23, 0.25); overflow: hidden; margin-bottom: 24px; border-radius: 24px; transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='rgba(197, 160, 89, 0.8)'; this.style.boxShadow='0 12px 30px rgba(197, 160, 89, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(197, 160, 89, 0.3)'; this.style.boxShadow='none';">
                         <div class="bahuchara-card-content" style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center; padding: 25px 35px;">
                             <div class="bahuchara-img-wrapper" style="flex: 1 1 200px; max-width: 280px; height: 160px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(197, 160, 89, 0.2); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);">
                                 <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/fotos/Bahuchara%20Mata.png" alt="Bahuchara Mata: La Diosa que Vive Entre los Mundos" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(10%) contrast(1.15);">
@@ -3297,7 +3336,30 @@ initLangSwitcher();
     </section>
 
 
-    <script src="../script.js" defer></script>
+    <script src="script.js" defer></script>
+
+    <!-- ══ SELETOR DE IDIOMA / LANGUAGE SWITCHER ══ -->
+    <div class="lang-switcher" role="navigation" aria-label="Seletor de Idioma / Language">
+        <button class="lang-btn" id="ls-pt" onclick="pombLang('pt','https://pombagiras.com/')" title="Português" aria-label="Mudar para Português">PT</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button class="lang-btn" id="ls-en" onclick="pombLang('en','https://pombagiras.com/en/index.html')" title="English" aria-label="Switch to English">EN</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button class="lang-btn" id="ls-es" onclick="pombLang('es','https://pombagiras.com/es/index.html')" title="Español" aria-label="Cambiar a Español">ES</button>
+    </div>
+    <script>
+    (function(){
+        var sl = localStorage.getItem('user-language') || 'pt';
+        var btn = document.getElementById('ls-' + sl);
+        if(btn) btn.classList.add('active');
+    })();
+    function pombLang(lang, url){
+        localStorage.setItem('user-language', lang);
+        document.querySelectorAll('.lang-btn').forEach(function(b){ b.classList.remove('active'); });
+        var b = document.getElementById('ls-' + lang);
+        if(b) b.classList.add('active');
+        if(url && url !== 'javascript:void(0)') { setTimeout(function(){ window.location.href = url; }, 120); }
+    }
+    </script>
 </body>
 
 </html>

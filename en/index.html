@@ -53,7 +53,7 @@
     <!-- Critical CSS & Fonts at the very top of head to prevent render blocking -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap"></noscript>
-    <link rel="stylesheet" href="../style.css?v=1.0.1">
+    <link rel="stylesheet" href="style.css?v=1.0.1">
     
     <!-- Asynchronous non-blocking load of FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
@@ -64,7 +64,7 @@
     <meta name="description"
         content="Enciclopédia completa sobre Pombagiras e Exus. Explore artigos sobre 26 entidades, glossário de termos e respostas com foco na desmistificação e respeito.">
     <meta name="keywords"
-        content="Pombagira, Exu, Umbanda, Quimbanda, Candomblé, Maria Padilha, Rosa Caveira, Maria Mulambo, Encruzilhada, Calunga, Orixás, Kimbanda, Afro-Brasileira, Desmistificação, Alexia Melusine">
+        content="Pombagira, Exu, Umbanda, Quimbanda, Candomblé, Maria Padilha, Rosa Caveira, Maria Mulambo, Encruzilhada, Calunga, Orishas, Kimbanda, Afro-Brasileira, Desmistificação, Alexia Melusine">
     <meta name="author" content="Alexia Melusine">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -206,7 +206,7 @@
             "Umbanda",
             "Quimbanda",
             "Candomblé",
-            "Orixás",
+            "Orishas",
             "Exu",
             "AI",
             "SEO Técnico"
@@ -758,6 +758,45 @@
       ]
     }
     </script>
+<style>
+    /* ══════════ LANG SWITCHER ══════════ */
+    .lang-switcher {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+        background: rgba(8, 4, 4, 0.88);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(197, 160, 89, 0.25);
+        border-radius: 40px;
+        padding: 6px 14px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+        font-family: 'Geist', 'Segoe UI', sans-serif;
+    }
+    .lang-btn {
+        background: none;
+        border: none;
+        color: rgba(250, 246, 238, 0.55);
+        font-family: inherit;
+        font-size: 0.73rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        cursor: pointer;
+        padding: 3px 8px;
+        border-radius: 20px;
+        transition: all 0.22s ease;
+        text-transform: uppercase;
+    }
+    .lang-btn:hover, .lang-btn.active {
+        color: #C5A059;
+        background: rgba(197, 160, 89, 0.13);
+    }
+    .lang-sep { color: rgba(197, 160, 89, 0.28); font-size: 0.7rem; user-select: none; }
+</style>
 </head>
 
 <body>
@@ -786,11 +825,11 @@
     </div>
 
     <section class="hero" id="home">
-        <video class="hero-video" autoplay loop muted playsinline poster="../ViboraAlbina_poster.jpg" preload="metadata" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
-            <source src="../ViboraAlbina_720.webm" type="video/webm" media="(max-width: 768px)">
-            <source src="../ViboraAlbina_1080.webm" type="video/webm">
-            <source src="../ViboraAlbina_720.mp4" type="video/mp4" media="(max-width: 768px)">
-            <source src="../ViboraAlbina_1080.mp4" type="video/mp4">
+        <video class="hero-video" autoplay loop muted playsinline poster="ViboraAlbina_poster.jpg" preload="metadata" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+            <source src="ViboraAlbina_720.webm" type="video/webm" media="(max-width: 768px)">
+            <source src="ViboraAlbina_1080.webm" type="video/webm">
+            <source src="ViboraAlbina_720.mp4" type="video/mp4" media="(max-width: 768px)">
+            <source src="ViboraAlbina_1080.mp4" type="video/mp4">
             Seu navegador não suporta vídeos HTML5.
         </video>
         <div class="hero-content">
@@ -803,7 +842,7 @@
             
         
 <!-- Language Selector Dropdown -->
-<div class="lang-switcher" style="position: relative; display: inline-block; margin-left: 20px;">
+
     <button class="lang-btn" onclick="toggleLangDropdown(event)" aria-label="Alterar idioma / Change language" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(197, 160, 89, 0.3); color: #FAF6EE; padding: 6px 14px; border-radius: 20px; font-family: 'Fraunces', serif; font-size: 0.85rem; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: border-color 0.3s ease, background 0.3s ease;">
         <i class="fa-solid fa-globe" style="color: #C59B27; font-size: 0.8rem;"></i>
         <span class="current-lang-label">Português</span>
@@ -987,8 +1026,8 @@ initLangSwitcher();
                     </div>
 
                     <div class="card">
-                        <h4><i class="fa-solid fa-cloud-sun" aria-hidden="true"></i> Orixá</h4>
-                        <p><strong>Divindades que representam forças da natureza e aspectos humanos.</strong> Cada Orixá
+                        <h4><i class="fa-solid fa-cloud-sun" aria-hidden="true"></i> Orisha</h4>
+                        <p><strong>Divindades que representam forças da natureza e aspectos humanos.</strong> Cada Orisha
                             rege um elemento e uma gama de características: <strong>Ogum</strong> (guerra, tecnologia,
                             justiça), <strong>Iemanjá</strong> (mares, maternidade, proteção), <strong>Oxalá</strong>
                             (criação, paz, sabedoria), <strong>Xangô</strong> (justiça, raios, fogo),
@@ -999,7 +1038,7 @@ initLangSwitcher();
                     </div>
 
                     <div class="card">
-                        <h4><i class="fa-solid fa-hand-sparkles" aria-hidden="true"></i> Médium</h4>
+                        <h4><i class="fa-solid fa-hand-sparkles" aria-hidden="true"></i> Medium</h4>
                         <p><strong>Indivíduo que serve de ponte entre o plano físico e espiritual.</strong> O médium é
                             como uma ponte viva — um canal que se abre para que entidades como Pombagiras, Exus,
                             Caboclos, Pretos-Velhos e Crianças possam transitar e atuar em auxílio da humanidade.</p>
@@ -1012,9 +1051,9 @@ initLangSwitcher();
                     </div>
 
                     <div class="card">
-                        <h4><i class="fa-solid fa-pen-fancy" aria-hidden="true"></i> Ponto Riscado</h4>
+                        <h4><i class="fa-solid fa-pen-fancy" aria-hidden="true"></i> Ritual Point</h4>
                         <p><strong>Desenho sagrado feito com pemba (giz de carvão ou calcário) para invocar, identificar
-                                ou firmar entidades.</strong> Cada Pombagira, Exu, Caboclo ou Preto-Velho tem seu ponto
+                                ou firmar entidades.</strong> Cada Pombagira, Exu, Caboclo ou Old Black tem seu ponto
                             riscado específico, que funciona como sua "assinatura energética". O conhecimento dos pontos
                             é tradicionalmente passado de geração em geração dentro dos terreiros.</p>
                         <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Pemba • Assinatura Sagrada •
@@ -1052,7 +1091,7 @@ initLangSwitcher();
                     </div>
 
                     <div class="card">
-                        <h4><i class="fa-solid fa-users" aria-hidden="true"></i> Egrégora</h4>
+                        <h4><i class="fa-solid fa-users" aria-hidden="true"></i> Egregore</h4>
                         <p><strong>Campo energético coletivo formado por pensamentos e crenças de um grupo, que
                                 identifica seus membros.</strong> No terreiro, a egrégora é alimentada pelos rituais,
                             pela fé e pela união da comunidade. Uma egrégora forte protege o ambiente e potencializa os
@@ -1093,7 +1132,7 @@ initLangSwitcher();
                     </div>
 
                     <div class="card">
-                        <h4><i class="fa-solid fa-cane" aria-hidden="true"></i> Preto-Velho</h4>
+                        <h4><i class="fa-solid fa-cane" aria-hidden="true"></i> Old Black</h4>
                         <p><strong>Entidade que representa os espíritos de antigos escravizados africanos no
                                 Brasil.</strong> São figuras de profunda sabedoria, humildade e paciência. Trabalham com
                             rezas, café, cachimbo e bengalas. Os Pretos-Velhos atuam na linha da caridade, do
@@ -1103,7 +1142,7 @@ initLangSwitcher();
                     </div>
 
                     <div class="card">
-                        <h4><i class="fa-solid fa-child" aria-hidden="true"></i> Criança (Erê)</h4>
+                        <h4><i class="fa-solid fa-child" aria-hidden="true"></i> Child (Ere)</h4>
                         <p><strong>Entidade que representa a energia lúdica, alegre e descompromissada da
                                 infância.</strong> São espíritos de crianças desencarnadas ou a própria energia de
                             pureza e renovação. Trabalham com brinquedos, doces, balões e cores vibrantes. Os Erês
@@ -1113,7 +1152,7 @@ initLangSwitcher();
                     </div>
 
                     <div class="card">
-                        <h4><i class="fa-solid fa-baby-carriage" aria-hidden="true"></i> Cigano</h4>
+                        <h4><i class="fa-solid fa-baby-carriage" aria-hidden="true"></i> Gypsy</h4>
                         <p><strong>Entidade que trabalha com a energia da liberdade, prosperidade e magia
                                 cigana.</strong> Podem ser homens ou mulheres (ciganos e ciganas). Utilizam baralhos,
                             lenços, moedas, vinho tinto e rosas. Regem sorte, viagens, negócios, relacionamentos e a
@@ -1143,7 +1182,7 @@ initLangSwitcher();
                     </div>
 
                     <div class="card">
-                        <h4><i class="fa-solid fa-hand-fist" aria-hidden="true"></i> Despacho</h4>
+                        <h4><i class="fa-solid fa-hand-fist" aria-hidden="true"></i> Dispatch</h4>
                         <p><strong>Oferenda ou trabalho espiritual deixada em local de força (encruzilhada, mata,
                                 cachoeira, cemitério).</strong> O despacho pode ser uma simples oferenda de gratidão ou
                             um trabalho complexo com diversos elementos. Deve ser feito com conhecimento e respeito, sob
@@ -1156,7 +1195,7 @@ initLangSwitcher();
                         <h4><i class="fa-solid fa-hand-sparkles" aria-hidden="true"></i> Amaci</h4>
                         <p><strong>Banho de ervas sagradas utilizado para limpeza espiritual, fortalecimento e iniciação
                                 de novos médiuns.</strong> Cada amaci é preparado com ervas específicas conforme o
-                            Orixá, a entidade ou a finalidade (abertura de caminhos, proteção, cura). É um ritual de
+                            Orisha, a entidade ou a finalidade (abertura de caminhos, proteção, cura). É um ritual de
                             "nascimento" espiritual no candomblé e na umbanda.</p>
                         <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Banho • Ervas • Limpeza •
                             Iniciação</strong>
@@ -1185,10 +1224,10 @@ initLangSwitcher();
                     <div class="card">
                         <h4><i class="fa-solid fa-dice-d6" aria-hidden="true"></i> Búzios (Jogo de)</h4>
                         <p><strong>Oráculo africano utilizado no Candomblé e, em algumas casas de Umbanda, para
-                                consultar os Orixás.</strong> O jogo de búzios (Ifá ou Dilogum) é feito por um Babalaô
-                            ou Ialorixá, que interpreta os padrões formados pelos búzios lançados. Revela o Orixá
+                                consultar os Orishas.</strong> O jogo de búzios (Ifá ou Dilogum) é feito por um Babalaô
+                            ou Ialorixá, que interpreta os padrões formados pelos búzios lançados. Revela o Orisha
                             regente da pessoa, problemas espirituais, orientações de caminho e possíveis demandas.</p>
-                        <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Oráculo • Consulta • Orixás •
+                        <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Oráculo • Consulta • Orishas •
                             Destino</strong>
                     </div>
 
@@ -1226,7 +1265,7 @@ initLangSwitcher();
                         <h4><i class="fa-solid fa-church" aria-hidden="true"></i> Terreiro</h4>
                         <p><strong>Casa ou espaço físico onde são realizados os rituais de Umbanda, Quimbanda e
                                 Candomblé.</strong> Também chamado de "ilê" ou "roça". O terreiro é um local sagrado,
-                            onde estão assentadas as forças dos Orixás, Exus e Guias. Cada terreiro tem sua hierarquia,
+                            onde estão assentadas as forças dos Orishas, Exus e Guias. Cada terreiro tem sua hierarquia,
                             tradição e fundamentos específicos, transmitidos pelo pai ou mãe de santo.</p>
                         <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Casa • Templo • Comunidade •
                             Hierarquia</strong>
@@ -1235,7 +1274,7 @@ initLangSwitcher();
                     <div class="card">
                         <h4><i class="fa-solid fa-crown" aria-hidden="true"></i> Babalorixá</h4>
                         <p><strong>Sacerdote responsável por um terreiro de Candomblé de nação iorubá.</strong> Também
-                            chamado de "Pai de Santo". O termo significa "Pai do Orixá". O Babalorixá comanda os
+                            chamado de "Pai de Santo". O termo significa "Pai do Orisha". O Babalorixá comanda os
                             rituais, inicia novos filhos de santo, interpreta o jogo de búzios e zela pela tradição e
                             fundamentos da casa. Sua contraparte feminina é a Ialorixá.</p>
                         <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Pai de Santo • Sacerdote • Candomblé
@@ -1264,7 +1303,7 @@ initLangSwitcher();
 
                     <div class="card">
                         <h4><i class="fa-solid fa-meteor" aria-hidden="true"></i> Bambador</h4>
-                        <p><strong>Médium ou pessoa que incorpora Exu ou Pombagira.</strong> O termo vem do kimbundo
+                        <p><strong>Medium ou pessoa que incorpora Exu ou Pombagira.</strong> O termo vem do kimbundo
                             "mbamba" (força, magia). O bambador desenvolve sua mediunidade especificamente na linha da
                             esquerda, trabalhando com demandas, magia e justiça espiritual sob a orientação de um Tata
                             ou de uma Mãe de Quimbanda.</p>
@@ -1275,7 +1314,7 @@ initLangSwitcher();
                     <div class="card">
                         <h4><i class="fa-solid fa-water" aria-hidden="true"></i> Ebó</h4>
                         <p><strong>Sacrifício ou oferenda realizada no Candomblé para restabelecer o equilíbrio do
-                                consulente com seu Orixá.</strong> O ebó pode ser de alimentos, ou objetos, conforme
+                                consulente com seu Orisha.</strong> O ebó pode ser de alimentos, ou objetos, conforme
                             orientação do jogo de búzios. Destina-se a "descarregar" energias negativas, abrir caminhos
                             e fortalecer o axé da pessoa. Não tem conotação de "maldição" como no imaginário popular.
                         </p>
@@ -1288,7 +1327,7 @@ initLangSwitcher();
                         <p><strong>Música ritualística entoada durante as giras para chamar as entidades.</strong> Os
                             pontos podem ser curtos ou longos, em português ou em idiomas africanos. Contam histórias,
                             exaltam virtudes ou descrevem as funções das entidades. Cada Pombagira, Exu, Caboclo ou
-                            Preto-Velho tem seus pontos específicos, que atuam como chaves vibratórias de conexão.</p>
+                            Old Black tem seus pontos específicos, que atuam como chaves vibratórias de conexão.</p>
                         <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Música • Invocação • Vibração •
                             Ponto</strong>
                     </div>
@@ -1395,13 +1434,13 @@ initLangSwitcher();
                     </div>
 
                     <div class="card">
-                        <h4><i class="fa-solid fa-cloud-moon" aria-hidden="true"></i> Correspondência com Orixás</h4>
-                        <p>Assim como os Exus, cada Pombagira tem uma conexão vibratória com determinados Orixás:
+                        <h4><i class="fa-solid fa-cloud-moon" aria-hidden="true"></i> Correspondência com Orishas</h4>
+                        <p>Assim como os Exus, cada Pombagira tem uma conexão vibratória com determinados Orishas:
                             <strong>Maria Padilha</strong> ↔ Oxum (amor, vaidade), <strong>Rosa Caveira</strong> ↔ Iansã
                             (justiça, vento), <strong>Maria Mulambo</strong> ↔ Omulu/Obaluaiê (cura, transmutação),
                             <strong>Cigana</strong> ↔ Oxóssi (liberdade, fartura), <strong>Dama da Noite</strong> ↔ Nanã
                             (mistério, ancestralidade).</p>
-                        <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Orixás • Vibração • Conexão
+                        <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Orishas • Vibração • Conexão
                             Espiritual</strong>
                     </div>
 
@@ -1418,7 +1457,7 @@ initLangSwitcher();
 
                     <div class="card">
                         <h4><i class="fa-solid fa-microphone" aria-hidden="true"></i> Cultura Popular e Música</h4>
-                        <p><strong>Clara Nunes</strong> imortalizou "Conto de Areia" e "A Deusa dos Orixás".
+                        <p><strong>Clara Nunes</strong> imortalizou "Conto de Areia" e "A Deusa dos Orishas".
                             <strong>Jorge Amado</strong> retratou Pombagiras in "Tenda dos Milagres". <strong>Elza
                                 Soares, Gal Costa, Maria Bethânia</strong> também exaltaram essas entidades. Mais
                             recentemente, <strong>Liniker, Jaloo e Duda Beat</strong> trazem a estética das Pombagiras
@@ -1558,7 +1597,7 @@ initLangSwitcher();
             <div id="faq" class="tab-content">
                 <div class="faq-list">
                     <!-- Banner Dossiê Histórico-Antropológico no Topo -->
-                    <a href="portal/dossie.html" target="_blank" class="faq-item dossie-item" style="display: block; text-decoration: none; border: 1px solid rgba(197, 160, 89, 0.3); background: rgba(74, 14, 23, 0.25); overflow: hidden; margin-bottom: 24px; border-radius: 24px; transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='rgba(197, 160, 89, 0.8)'; this.style.boxShadow='0 12px 30px rgba(197, 160, 89, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(197, 160, 89, 0.3)'; this.style.boxShadow='none';">
+                    <a href="en/portal/dossie.html" target="_blank" class="faq-item dossie-item" style="display: block; text-decoration: none; border: 1px solid rgba(197, 160, 89, 0.3); background: rgba(74, 14, 23, 0.25); overflow: hidden; margin-bottom: 24px; border-radius: 24px; transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='rgba(197, 160, 89, 0.8)'; this.style.boxShadow='0 12px 30px rgba(197, 160, 89, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(197, 160, 89, 0.3)'; this.style.boxShadow='none';">
                         <div class="dossie-card-content" style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center; padding: 25px 35px;">
                             <div class="dossie-img-wrapper" style="flex: 1 1 200px; max-width: 280px; height: 160px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(197, 160, 89, 0.2); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);">
                                 <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/fotos/DOSSIE.png" alt="Historical-Anthropological Dossier: The Twelve Pombagiras" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(10%) contrast(1.15);">
@@ -1572,7 +1611,7 @@ initLangSwitcher();
                     </a>
 
                     <!-- Banner Bahuchara Mata no Topo -->
-                    <a href="portal/bahuchara-mata.html" target="_blank" class="faq-item bahuchara-item" style="display: block; text-decoration: none; border: 1px solid rgba(197, 160, 89, 0.3); background: rgba(74, 14, 23, 0.25); overflow: hidden; margin-bottom: 24px; border-radius: 24px; transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='rgba(197, 160, 89, 0.8)'; this.style.boxShadow='0 12px 30px rgba(197, 160, 89, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(197, 160, 89, 0.3)'; this.style.boxShadow='none';">
+                    <a href="en/portal/bahuchara-mata.html" target="_blank" class="faq-item bahuchara-item" style="display: block; text-decoration: none; border: 1px solid rgba(197, 160, 89, 0.3); background: rgba(74, 14, 23, 0.25); overflow: hidden; margin-bottom: 24px; border-radius: 24px; transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='rgba(197, 160, 89, 0.8)'; this.style.boxShadow='0 12px 30px rgba(197, 160, 89, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(197, 160, 89, 0.3)'; this.style.boxShadow='none';">
                         <div class="bahuchara-card-content" style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center; padding: 25px 35px;">
                             <div class="bahuchara-img-wrapper" style="flex: 1 1 200px; max-width: 280px; height: 160px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(197, 160, 89, 0.2); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);">
                                 <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/fotos/Bahuchara%20Mata.png" alt="Bahuchara Mata: The Goddess Who Lives Between Worlds" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(10%) contrast(1.15);">
@@ -2097,11 +2136,11 @@ initLangSwitcher();
                 <div class="search-filter-container">
                     <div class="search-box">
                         <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
-                        <input type="text" id="pombagiraSearchInput" placeholder="Buscar guardiã por nome, cores, velas, Orixá ou elementos..." aria-label="Buscar guardiã">
+                        <input type="text" id="pombagiraSearchInput" placeholder="Buscar guardiã por nome, cores, velas, Orisha ou elementos..." aria-label="Buscar guardiã">
                     </div>
                     
                     <div class="filter-group">
-                        <span class="filter-label"><i class="fa-solid fa-cloud-sun" aria-hidden="true"></i> Regência / Orixá:</span>
+                        <span class="filter-label"><i class="fa-solid fa-cloud-sun" aria-hidden="true"></i> Regência / Orisha:</span>
                         <div class="filter-buttons" id="orixaFilters">
                             <button class="filter-btn active" data-filter="all">Todos</button>
                             <button class="filter-btn" data-filter="Oxum">Oxum</button>
@@ -2811,7 +2850,7 @@ initLangSwitcher();
 
                     <div class="card">
                         <h4><i class="fa-regular fa-star" aria-hidden="true"></i> Legado e Reconhecimento</h4>
-                        <p>Em 2010, a Câmara dos Deputados concedeu a Chico Xavier o título de <strong>Médium do Século
+                        <p>Em 2010, a Câmara dos Deputados concedeu a Chico Xavier o título de <strong>Medium do Século
                                 XX</strong>. Sua influência transcende religiões: católicos, espíritas, umbandistas e
                             até mesmo ateus reconhecem sua bondade e contribuição à cultura brasileira. As Pombagiras,
                             guardiãs dos caminhos, certamente o acolheram com flores quando ele partiu em 2002.</p>
@@ -2903,7 +2942,7 @@ initLangSwitcher();
                     <div class="card">
                         <h4><i class="fa-solid fa-church" aria-hidden="true"></i> Umbanda: A Proto-Síntese Cósmica</h4>
                         <p><strong>Rubens Saraceni</strong>. Uma das obras mais completas sobre a teologia e os
-                            fundamentos da Umbanda Sagrada. Aborda Orixás, Guias, rituais e a hierarquia espiritual da
+                            fundamentos da Umbanda Sagrada. Aborda Orishas, Guias, rituais e a hierarquia espiritual da
                             religião.</p>
                         <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Umbanda • Teologia •
                             Fundamentos</strong>
@@ -2929,11 +2968,11 @@ initLangSwitcher();
                     </div>
 
                     <div class="card">
-                        <h4><i class="fa-solid fa-tree" aria-hidden="true"></i> Mitologia dos Orixás</h4>
+                        <h4><i class="fa-solid fa-tree" aria-hidden="true"></i> Mitologia dos Orishas</h4>
                         <p><strong>Reginaldo Prandi</strong>. Reúne mais de 300 histórias tradicionais do panteão iorubá
-                            e afro-brasileiro. Uma obra monumental para quem deseja compreender os Orixás por meio de
+                            e afro-brasileiro. Uma obra monumental para quem deseja compreender os Orishas por meio de
                             suas lendas e mitos.</p>
-                        <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Orixás • Mitologia • Iorubá</strong>
+                        <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Orishas • Mitologia • Iorubá</strong>
                     </div>
 
                     <div class="card">
@@ -2945,10 +2984,10 @@ initLangSwitcher();
                     </div>
 
                     <div class="card">
-                        <h4><i class="fa-solid fa-feather" aria-hidden="true"></i> Orixás: Os Deuses Vivos da África
+                        <h4><i class="fa-solid fa-feather" aria-hidden="true"></i> Orishas: Os Deuses Vivos da África
                         </h4>
                         <p><strong>Pierre Verger</strong>. Fotografias e pesquisas antropológicas de altíssimo valor.
-                            Verger documenta como os Orixás são cultuados tanto na África quanto no Brasil, com riqueza
+                            Verger documenta como os Orishas são cultuados tanto na África quanto no Brasil, com riqueza
                             de detalhes.</p>
                         <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Antropologia • Raízes Africanas •
                             Pesquisa</strong>
@@ -3037,7 +3076,7 @@ initLangSwitcher();
                     <div class="card">
                         <h4><i class="fa-solid fa-church" aria-hidden="true"></i> Umbanda</h4>
                         <p><strong>União de elementos africanos, indígenas e cristãos.</strong> Religião brasileira que
-                            sintetiza Orixás, Guias e Entidades como Pretos-Velhos, Caboclos, Crianças, Exus e
+                            sintetiza Orishas, Guias e Entidades como Pretos-Velhos, Caboclos, Crianças, Exus e
                             Pombagiras. Seu foco está na <strong>caridade, cura e equilíbrio espiritual</strong>. As
                             giras acontecem em terreiros com curimbas, pontos cantados e incorporação. A Umbanda
                             trabalha predominantemente com a energia da luz, do amor e da evolução moral dos médiuns e
@@ -3060,19 +3099,19 @@ initLangSwitcher();
 
                     <div class="card">
                         <h4><i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i> Candomblé</h4>
-                        <p><strong>Religião iniciática de matriz africana.</strong> Cultua os Orixás (iorubás), Voduns
+                        <p><strong>Religião iniciática de matriz africana.</strong> Cultua os Orishas (iorubás), Voduns
                             (jeje) e Inquices (bantu) com forte estrutura ritual, hierarquia sacerdotal e sacrifícios
                             tradicionais. Cada nação tem suas particularidades: <strong>Ketu, Angola, Jeje</strong>. Não
-                            há incorporação de Exus e Pombagiras da mesma forma que na Umbanda/Quimbanda — os Orixás
+                            há incorporação de Exus e Pombagiras da mesma forma que na Umbanda/Quimbanda — os Orishas
                             "montam" em seus filhos após longo processo iniciático. A música, a dança e os assentamentos
                             sagrados são centrais.</p>
-                        <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Orixás • Iniciação • Sacrifício •
+                        <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Orishas • Iniciação • Sacrifício •
                             Nações Africanas</strong>
                     </div>
 
                     <div class="card">
                         <h4><i class="fa-solid fa-fire" aria-hidden="true"></i> Exu: O Guardião das Encruzilhadas</h4>
-                        <p><strong>Não é demônio, é mensageiro divino.</strong> No Candomblé, Exu é o Orixá da
+                        <p><strong>Não é demônio, é mensageiro divino.</strong> No Candomblé, Exu é o Orisha da
                             comunicação, dos caminhos, das portas e das transformações. É o primeiro a ser saudado em
                             qualquer ritual. Na Umbanda e Quimbanda, os Exus são entidades que já foram humanas e
                             trabalham na linha da justiça, proteção e quebra de demandas. São guardiães da lei
@@ -3094,7 +3133,7 @@ initLangSwitcher();
 
                     <div class="card">
                         <h4><i class="fa-solid fa-rainbow" aria-hidden="true"></i> Logun Edé: O Príncipe do Encanto</h4>
-                        <p><strong>Orixá da dualidade fluida.</strong> Filho de Oxum (doçura e riqueza) e Oxóssi (caça e
+                        <p><strong>Orisha da dualidade fluida.</strong> Filho de Oxum (doçura e riqueza) e Oxóssi (caça e
                             fartura). Logun Edé é representado como um jovem que transita entre aspectos marcantes de
                             realeza e caça com elegância. É o símbolo sagrado do equilíbrio das forças complementares
                             dentro de cada ser. Suas cores são o amarelo, o dourado e o azul-esverdeado. Adora festas,
@@ -3105,7 +3144,7 @@ initLangSwitcher();
 
                     <div class="card">
                         <h4><i class="fa-solid fa-bolt" aria-hidden="true"></i> Oxumaré: A Serpente e o Arco-Íris</h4>
-                        <p><strong>Orixá da continuidade e renovação.</strong> Representado pela serpente que morde o
+                        <p><strong>Orisha da continuidade e renovação.</strong> Representado pela serpente que morde o
                             próprio rabo (símbolo do infinito) e pelo arco-íris que conecta o céu e a terra. Oxumaré
                             rege os ciclos da natureza, a respiração do universo, a chuva e a seca, o movimento
                             constante de transformação e renascimento. Suas cores reúnem todas as matizes cromáticas.
@@ -3128,7 +3167,7 @@ initLangSwitcher();
 
                     <div class="card">
                         <h4><i class="fa-solid fa-leaf" aria-hidden="true"></i> Voduns: Os Deuses da Tradição Jeje</h4>
-                        <p><strong>Divindades do povo fon (da região do atual Benim).</strong> Assim como os Orixás na
+                        <p><strong>Divindades do povo fon (da região do atual Benim).</strong> Assim como os Orishas na
                             tradição iorubá, os Voduns regem forças da natureza e aspectos da vida humana. Exemplos:
                             <strong>Mawu (Lua, criação), Lisa (Sol, calor), Dan (serpente cósmica), Sakpata (terra,
                                 doenças e cura).</strong> O culto aos Voduns no Brasil é preservado principalmente na
@@ -3297,7 +3336,30 @@ initLangSwitcher();
     </section>
 
 
-    <script src="../script.js" defer></script>
+    <script src="script.js" defer></script>
+
+    <!-- ══ SELETOR DE IDIOMA / LANGUAGE SWITCHER ══ -->
+    <div class="lang-switcher" role="navigation" aria-label="Seletor de Idioma / Language">
+        <button class="lang-btn" id="ls-pt" onclick="pombLang('pt','https://pombagiras.com/')" title="Português" aria-label="Mudar para Português">PT</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button class="lang-btn" id="ls-en" onclick="pombLang('en','https://pombagiras.com/en/index.html')" title="English" aria-label="Switch to English">EN</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button class="lang-btn" id="ls-es" onclick="pombLang('es','https://pombagiras.com/es/index.html')" title="Español" aria-label="Cambiar a Español">ES</button>
+    </div>
+    <script>
+    (function(){
+        var sl = localStorage.getItem('user-language') || 'pt';
+        var btn = document.getElementById('ls-' + sl);
+        if(btn) btn.classList.add('active');
+    })();
+    function pombLang(lang, url){
+        localStorage.setItem('user-language', lang);
+        document.querySelectorAll('.lang-btn').forEach(function(b){ b.classList.remove('active'); });
+        var b = document.getElementById('ls-' + lang);
+        if(b) b.classList.add('active');
+        if(url && url !== 'javascript:void(0)') { setTimeout(function(){ window.location.href = url; }, 120); }
+    }
+    </script>
 </body>
 
 </html>

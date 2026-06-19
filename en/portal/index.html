@@ -17,7 +17,7 @@
 
     <!-- Critical CSS & Fonts at the very top of head to prevent render blocking -->
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../portal/style.css">
+    <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
@@ -545,6 +545,7 @@
       ]
     }
     </script>
+    <link rel="canonical" href="https://pombagiras.com/portal/" />
 </head>
 <body class="visceral-theme">
     <!-- Dynamic Canvas for Fluid Mesh Gradient Background -->
@@ -642,7 +643,7 @@ function changeLanguage(e, lang) {
     }
     
     // Clean double slashes
-    targetPath = targetPath.replace(//+/g, '/');
+    targetPath = targetPath.replace(/\/+/g, '/');
     if (!targetPath.endsWith('.html') && targetPath !== '/' && targetPath !== '/en/' && targetPath !== '/es/') {
         if (targetPath.endsWith('/')) {
             targetPath += 'index.html';
@@ -1790,6 +1791,6 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
 
     <!-- Script File -->
-    <script src="../../portal/script.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

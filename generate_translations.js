@@ -83,7 +83,25 @@ const translations = {
       ["Copiar e-mail", "Copy email"],
       ["Copiado!", "Copied!"],
       ["(Copiar)", "(Copy)"],
-      ["Pombagiras.com", "Pombagiras.com"]
+      ["Pombagiras.com", "Pombagiras.com"],
+      // Added translations for Portal Educativo cards
+      ["Axé", "Axé"],
+      ["Orixá", "Orisha"],
+      ["Médium", "Medium"],
+      ["Ponto Riscado", "Ritual Point"],
+      ["Tronqueira", "Tronqueira"],
+      ["Atabaque", "Atabaque"],
+      ["Aruanda", "Aruanda"],
+      ["Egrégora", "Egregore"],
+      ["Mandinga", "Mandinga"],
+      ["Gira", "Gira"],
+      ["Caboclo", "Caboclo"],
+      ["Preto-Velho", "Old Black"],
+      ["Criança (Erê)", "Child (Ere)"],
+      ["Cigano", "Gypsy"],
+      ["Curimba", "Curimba"],
+      ["Pemba", "Pemba"],
+      ["Despacho", "Dispatch"]
     ],
     es: [
       ["Educação e criação digital a serviço das tradições", "Educación y creación digital al servicio de las tradiciones"],
