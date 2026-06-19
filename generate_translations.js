@@ -320,17 +320,24 @@ const switcherHTML = `
 </div>
 <script>
 function toggleLangDropdown(e) {
-    e.stopPropagation();
-    const dropdown = e.currentTarget.nextElementSibling;
+    if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+    const btn = (e && e.currentTarget) || document.querySelector('.lang-btn');
+    if (!btn) return;
+    const dropdown = btn.nextElementSibling;
+    if (!dropdown) return;
     const isVisible = dropdown.style.display === 'block';
     document.querySelectorAll('.lang-dropdown').forEach(d => d.style.display = 'none');
     dropdown.style.display = isVisible ? 'none' : 'block';
 }
-document.addEventListener('click', () => {
-    document.querySelectorAll('.lang-dropdown').forEach(d => d.style.display = 'none');
-});
+
 function changeLanguage(e, lang) {
-    e.preventDefault();
+    if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
     localStorage.setItem('user-language', lang);
     
     // Determine target path
@@ -365,11 +372,38 @@ function changeLanguage(e, lang) {
     
     window.location.href = targetPath;
 }
+
+// Global click event to close all dropdowns when clicking outside
+if (!window.langDropdownGlobalBound) {
+    window.langDropdownGlobalBound = true;
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.lang-dropdown').forEach(d => d.style.display = 'none');
+    });
+}
+
+// Bind event listeners using JS to avoid issues with inline onclick scope
+function initLangSwitcher() {
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        if (btn.dataset.langSwitcherBound) return;
+        btn.dataset.langSwitcherBound = 'true';
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const dropdown = btn.nextElementSibling;
+            if (dropdown) {
+                const isVisible = dropdown.style.display === 'block';
+                document.querySelectorAll('.lang-dropdown').forEach(d => d.style.display = 'none');
+                dropdown.style.display = isVisible ? 'none' : 'block';
+            }
+        });
+    });
+}
+
 // Set current language button label based on path
 document.addEventListener('DOMContentLoaded', () => {
+    initLangSwitcher();
     const path = window.location.pathname;
-    const label = document.querySelector('.current-lang-label');
-    if (label) {
+    document.querySelectorAll('.current-lang-label').forEach(label => {
         if (path.includes('/en/')) {
             label.textContent = 'English';
         } else if (path.includes('/es/')) {
@@ -377,15 +411,18 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             label.textContent = 'Português';
         }
-    }
+    });
 });
+
+// Run immediate fallback binding in case DOMContentLoaded has already fired or to be fast
+initLangSwitcher();
 </script>
 `;
 
 // Helper: Injects hreflang tags into <head>
 function injectHrefLangs(html, urlPath) {
   const canonicalUrl = `https://pombagiras.com/${urlPath}`;
-  const enUrl = `https://pombagiras.com/en/${urlPath}`;
+  const enUrl = `https://pombagiras.com/en/${urlPath}`.replace('/en/index.html', '/en/').replace('portal/dossie.html', 'portal/dossie.html'); // Let's keep URLs clean
   const esUrl = `https://pombagiras.com/es/${urlPath}`;
   
   const hreflangs = `
@@ -414,7 +451,10 @@ function injectLanguageSwitcher(html) {
       return html.replace('</header>', `${switcherHTML}\n        </header>`);
   }
   if (html.includes('class="cta-group"')) {
-      return html.replace('</div>\n    </section>', `</div>\n        ${switcherHTML}\n    </section>`);
+      // Specifically target cta-group area to insert switcher inside the hero content wrapper
+      return html.replace(/(class="cta-group"[\s\S]*?<\/div>\s*<\/div>\s*<\/section>)/, (match) => {
+          return match.replace(/(<\/div>\s*<\/div>\s*<\/section>)/, `\n        ${switcherHTML}\n    $1`);
+      });
   }
   if (html.includes('</header>')) {
       return html.replace('</header>', `${switcherHTML}\n    </header>`);

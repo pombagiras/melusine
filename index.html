@@ -798,7 +798,120 @@
             <div class="cta-group">
                 <a href="#educativo" class="btn btn-primary">Iniciar Jornada</a>
                 <a href="https://alexiamelusine.com/" class="btn btn-outline" target="_blank" rel="noopener">Melusine</a>
-            </div>
+            
+        
+<!-- Language Selector Dropdown -->
+<div class="lang-switcher" style="position: relative; display: inline-block; margin-left: 20px;">
+    <button class="lang-btn" onclick="toggleLangDropdown(event)" aria-label="Alterar idioma / Change language" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(197, 160, 89, 0.3); color: #FAF6EE; padding: 6px 14px; border-radius: 20px; font-family: 'Fraunces', serif; font-size: 0.85rem; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: border-color 0.3s ease, background 0.3s ease;">
+        <i class="fa-solid fa-globe" style="color: #C59B27; font-size: 0.8rem;"></i>
+        <span class="current-lang-label">Português</span>
+        <i class="fa-solid fa-chevron-down" style="font-size: 0.65rem; opacity: 0.7;"></i>
+    </button>
+    <div class="lang-dropdown" style="display: none; position: absolute; top: calc(100% + 8px); right: 0; background: rgba(10, 12, 14, 0.95); backdrop-filter: blur(12px); border: 1px solid rgba(197, 160, 89, 0.2); border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.8); z-index: 9999; min-width: 130px; overflow: hidden; padding: 4px 0;">
+        <a href="#" onclick="changeLanguage(event, 'pt')" style="display: block; padding: 10px 16px; color: #FAF6EE; text-decoration: none; font-size: 0.85rem; font-family: 'Geist', sans-serif; transition: background 0.2s; text-align: left;">Português</a>
+        <a href="#" onclick="changeLanguage(event, 'en')" style="display: block; padding: 10px 16px; color: #FAF6EE; text-decoration: none; font-size: 0.85rem; font-family: 'Geist', sans-serif; transition: background 0.2s; text-align: left;">English</a>
+        <a href="#" onclick="changeLanguage(event, 'es')" style="display: block; padding: 10px 16px; color: #FAF6EE; text-decoration: none; font-size: 0.85rem; font-family: 'Geist', sans-serif; transition: background 0.2s; text-align: left;">Español</a>
+    </div>
+</div>
+<script>
+function toggleLangDropdown(e) {
+    if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+    const btn = (e && e.currentTarget) || document.querySelector('.lang-btn');
+    if (!btn) return;
+    const dropdown = btn.nextElementSibling;
+    if (!dropdown) return;
+    const isVisible = dropdown.style.display === 'block';
+    document.querySelectorAll('.lang-dropdown').forEach(d => d.style.display = 'none');
+    dropdown.style.display = isVisible ? 'none' : 'block';
+}
+
+function changeLanguage(e, lang) {
+    if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+    localStorage.setItem('user-language', lang);
+    
+    // Determine target path
+    const currentPath = window.location.pathname;
+    let targetPath = currentPath.replace(/\/+/g, '/');
+    const parts = targetPath.split('/').filter(p => p);
+    let langPrefix = '';
+    
+    if (parts[0] === 'en' || parts[0] === 'es') {
+        langPrefix = parts.shift();
+    }
+    
+    const pagePath = parts.join('/');
+    
+    if (lang === 'pt') {
+        targetPath = '/' + pagePath;
+    } else {
+        targetPath = '/' + lang + '/' + pagePath;
+    }
+    
+    // Clean double slashes
+    targetPath = targetPath.replace(/\/+/g, '/');
+    if (!targetPath.endsWith('.html') && targetPath !== '/' && targetPath !== '/en/' && targetPath !== '/es/') {
+        if (targetPath.endsWith('/')) {
+            targetPath += 'index.html';
+        } else {
+            targetPath += '/index.html';
+        }
+    }
+    
+    window.location.href = targetPath;
+}
+
+// Global click event to close all dropdowns when clicking outside
+if (!window.langDropdownGlobalBound) {
+    window.langDropdownGlobalBound = true;
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.lang-dropdown').forEach(d => d.style.display = 'none');
+    });
+}
+
+// Bind event listeners using JS to avoid issues with inline onclick scope
+function initLangSwitcher() {
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        if (btn.dataset.langSwitcherBound) return;
+        btn.dataset.langSwitcherBound = 'true';
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const dropdown = btn.nextElementSibling;
+            if (dropdown) {
+                const isVisible = dropdown.style.display === 'block';
+                document.querySelectorAll('.lang-dropdown').forEach(d => d.style.display = 'none');
+                dropdown.style.display = isVisible ? 'none' : 'block';
+            }
+        });
+    });
+}
+
+// Set current language button label based on path
+document.addEventListener('DOMContentLoaded', () => {
+    initLangSwitcher();
+    const path = window.location.pathname;
+    document.querySelectorAll('.current-lang-label').forEach(label => {
+        if (path.includes('/en/')) {
+            label.textContent = 'English';
+        } else if (path.includes('/es/')) {
+            label.textContent = 'Español';
+        } else {
+            label.textContent = 'Português';
+        }
+    });
+});
+
+// Run immediate fallback binding in case DOMContentLoaded has already fired or to be fast
+initLangSwitcher();
+</script>
+
+    </div>
         </div>
     </section>
 
