@@ -303,37 +303,6 @@ const translations = {
   }
 };
 
-// 2. Navigation Switcher HTML & JS logic to inject
-const switcherHTML = `
-<!-- Premium Global Language Switcher -->
-<div class="global-lang-switcher" style="position: fixed; top: 20px; right: 20px; z-index: 99999;">
-    <button onclick="toggleLangDropdown(event)" style="background: rgba(10, 12, 14, 0.8); border: 1px solid rgba(197, 160, 89, 0.4); color: #FAF6EE; padding: 8px 16px; border-radius: 25px; font-family: 'Fraunces', serif; cursor: pointer; backdrop-filter: blur(10px); display: flex; align-items: center; gap: 8px;">
-        <i class="fa-solid fa-globe"></i> <span class="current-lang-label">PT</span>
-    </button>
-    <div class="lang-dropdown" style="display: none; position: absolute; top: 100%; right: 0; margin-top: 10px; background: #0a0c0e; border: 1px solid #C59B27; border-radius: 12px; overflow: hidden;">
-        <a href="#" onclick="changeLanguage(event, 'pt')" style="display: block; padding: 10px 20px; color: #FAF6EE; text-decoration: none;">Português</a>
-        <a href="#" onclick="changeLanguage(event, 'en')" style="display: block; padding: 10px 20px; color: #FAF6EE; text-decoration: none;">English</a>
-        <a href="#" onclick="changeLanguage(event, 'es')" style="display: block; padding: 10px 20px; color: #FAF6EE; text-decoration: none;">Español</a>
-    </div>
-</div>
-<script>
-function toggleLangDropdown(e) {
-    e.stopPropagation();
-    const dropdown = document.querySelector('.lang-dropdown');
-    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-}
-function changeLanguage(e, lang) {
-    e.preventDefault();
-    localStorage.setItem('user-language', lang);
-    const path = window.location.pathname;
-    const parts = path.split('/').filter(p => p !== 'en' && p !== 'es');
-    let newPath = (lang === 'pt' ? '/' : '/' + lang + '/') + parts.join('/');
-    window.location.href = newPath.replace(/\/+/g, '/');
-}
-window.addEventListener('click', () => document.querySelector('.lang-dropdown').style.display = 'none');
-</script>
-`;
-
 // Helper: Injects hreflang tags into <head>
 function injectHrefLangs(html, urlPath) {
   const canonicalUrl = `https://pombagiras.com/${urlPath}`;
@@ -357,11 +326,8 @@ function injectHrefLangs(html, urlPath) {
 
 // Helper: Injects Language Switcher to footer-links or header
 function injectLanguageSwitcher(html) {
-  if (html.includes('class="global-lang-switcher"')) {
-    return html; // Already injected
-  }
-  // Insert the switcher directly after the opening <body> tag for a true global fixed element
-  return html.replace('<body>', `<body>\n${switcherHTML}`);
+  // Global language switcher removed; no injection performed
+  return html;
 }
 
 // Helper: Injects auto-redirection on the root page
@@ -412,7 +378,7 @@ function translatePage(fileName, enDict, esDict, isRoot = false) {
   
   // Inject language switcher and hreflangs in PT version
   html = injectHrefLangs(html, urlPath);
-  html = injectLanguageSwitcher(html);
+  // injectLanguageSwitcher removed
   if (isRoot) {
       html = injectAutoRedirect(html);
   }
@@ -492,7 +458,7 @@ function translateDossie() {
   if (fs.existsSync(ptDossiePath)) {
     let ptHtml = fs.readFileSync(ptDossiePath, 'utf8');
     ptHtml = injectHrefLangs(ptHtml, 'portal/dossie.html');
-    ptHtml = injectLanguageSwitcher(ptHtml);
+
     fs.writeFileSync(ptDossiePath, ptHtml, 'utf8');
     console.log("✔ Injetado switcher/hreflangs no dossie.html original (PT)");
   }
@@ -501,7 +467,7 @@ function translateDossie() {
   if (fs.existsSync(enDossiePath)) {
     let enHtml = fs.readFileSync(enDossiePath, 'utf8');
     enHtml = injectHrefLangs(enHtml, 'portal/dossie.html');
-    enHtml = injectLanguageSwitcher(enHtml);
+
     fs.writeFileSync(enDossiePath, enHtml, 'utf8');
     console.log("✔ Injetado switcher/hreflangs no dossie.html inglês (EN)");
   }
@@ -510,7 +476,7 @@ function translateDossie() {
   if (fs.existsSync(esDossiePath)) {
     let esHtml = fs.readFileSync(esDossiePath, 'utf8');
     esHtml = injectHrefLangs(esHtml, 'portal/dossie.html');
-    esHtml = injectLanguageSwitcher(esHtml);
+
     fs.writeFileSync(esDossiePath, esHtml, 'utf8');
     console.log("✔ Injetado switcher/hreflangs no dossie.html espanhol (ES)");
   }
@@ -522,7 +488,7 @@ function translateBahuchara() {
   if (fs.existsSync(ptBahucharaPath)) {
     let ptHtml = fs.readFileSync(ptBahucharaPath, 'utf8');
     ptHtml = injectHrefLangs(ptHtml, 'portal/bahuchara-mata.html');
-    ptHtml = injectLanguageSwitcher(ptHtml);
+
     fs.writeFileSync(ptBahucharaPath, ptHtml, 'utf8');
     console.log("✔ Injetado switcher/hreflangs no bahuchara-mata.html original (PT)");
   }
@@ -531,7 +497,7 @@ function translateBahuchara() {
   if (fs.existsSync(enBahucharaPath)) {
     let enHtml = fs.readFileSync(enBahucharaPath, 'utf8');
     enHtml = injectHrefLangs(enHtml, 'portal/bahuchara-mata.html');
-    enHtml = injectLanguageSwitcher(enHtml);
+
     fs.writeFileSync(enBahucharaPath, enHtml, 'utf8');
     console.log("✔ Injetado switcher/hreflangs no bahuchara-mata.html inglês (EN)");
   }
@@ -540,7 +506,7 @@ function translateBahuchara() {
   if (fs.existsSync(esBahucharaPath)) {
     let esHtml = fs.readFileSync(esBahucharaPath, 'utf8');
     esHtml = injectHrefLangs(esHtml, 'portal/bahuchara-mata.html');
-    esHtml = injectLanguageSwitcher(esHtml);
+
     fs.writeFileSync(esBahucharaPath, esHtml, 'utf8');
     console.log("✔ Injetado switcher/hreflangs no bahuchara-mata.html espanhol (ES)");
   }
