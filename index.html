@@ -4,35 +4,16 @@
 <head>
 
 <script>
-// Automatic Browser Language Router
-(function() {
-    const savedLang = localStorage.getItem('user-language');
-    const path = window.location.pathname;
-    
-    // Only auto-redirect if at root domain level
-    if (path === '/' || path === '/index.html') {
-        let targetLang = savedLang;
-        if (!targetLang) {
-            const browserLang = (navigator.language || navigator.userLanguage || 'es').toLowerCase();
-            if (browserLang.startsWith('en')) targetLang = 'en';
-            else if (browserLang.startsWith('es')) targetLang = 'es';
-            else targetLang = 'es';
-        }
-        
-        if (targetLang === 'en' && !path.includes('/en/')) {
-            window.location.href = '/en/index.html';
-        } else if (targetLang === 'es' && !path.includes('/es/')) {
-            window.location.href = '/es/index.html';
-        }
-    }
-})();
+// Automatic Browser Language Router (disabled - site now Portuguese-only)
+// Previously redirected to /en/ or /es/ which have been removed.
+// The site will stay in Portuguese regardless of browser language.
+// Optionally, you can store the user's language preference.
+// localStorage.setItem('user-language', 'pt');
 </script>
 
 
     <!-- Multi-Language Canonical Linkage (SEO hreflangs) -->
     <link rel="alternate" hreflang="pt" href="https://pombagiras.com/index.html" />
-    <link rel="alternate" hreflang="en" href="https://pombagiras.com/en/index.html" />
-    <link rel="alternate" hreflang="es" href="https://pombagiras.com/es/index.html" />
     <link rel="alternate" hreflang="x-default" href="https://pombagiras.com/index.html" />
   
     <meta charset="UTF-8">
