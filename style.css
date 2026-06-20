@@ -1017,6 +1017,46 @@ footer.main-footer .footer-links-container a[href*="whatsapp"]:hover {
     color: #25D366 !important;
 }
 
+/* Wikipedia Footer Buttons */
+.footer-wiki-container {
+    margin-top: 18px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.wiki-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.73rem;
+    font-family: 'Geist', sans-serif;
+    color: var(--warm-cream);
+    opacity: 0.75;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(197, 160, 89, 0.2);
+    padding: 5px 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.wiki-btn i {
+    font-size: 0.75rem;
+    color: var(--accent);
+}
+
+.wiki-btn:hover {
+    color: var(--accent);
+    opacity: 1;
+    border-color: var(--accent);
+    background: rgba(197, 160, 89, 0.08);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(197, 160, 89, 0.15);
+}
+
 /* Footer Bottom Layout */
 .footer-divider-container {
     margin: 50px 0 35px;
