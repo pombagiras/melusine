@@ -480,7 +480,8 @@ p {
 .btn-crimson:hover {
     background-color: var(--color-crimson-hover);
     border-color: var(--color-crimson-hover);
-    box-shadow: 0 0 20px rgba(184, 15, 43, 0.4);
+    box-shadow: 0 10px 25px rgba(184, 15, 43, 0.45), 0 0 15px rgba(184, 15, 43, 0.25);
+    transform: translateY(-3px) scale(1.02);
 }
 
 .btn-outline {
@@ -492,6 +493,8 @@ p {
 .btn-outline:hover {
     background-color: var(--color-text-main);
     color: var(--color-bg-pure);
+    box-shadow: 0 10px 25px rgba(250, 246, 238, 0.15);
+    transform: translateY(-3px) scale(1.02);
 }
 
 /* --- Tabbed View Interface Layout --- */

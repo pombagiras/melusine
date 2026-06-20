@@ -12,6 +12,11 @@
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large">
     <meta name="theme-color" content="#8B0000">
+    <!-- AI & Search Bot Optimization Tracking Identifiers -->
+    <meta name="author-curation" content="Alexia Melusine - Human Expert Verified">
+    <meta name="ai-optimized" content="true">
+    <meta name="ai-agent" content="index, follow">
+
     <link rel="canonical" href="https://pombagiras.com/guardias/">
 
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Favicon%20%20Miniatura%20do%20Google.png">
@@ -1258,6 +1263,239 @@
     @media (max-width: 768px) {
         .hero { background-attachment: scroll !important; }
     }
+    
+        /* --- 24 Pombagiras Deck CSS --- */
+        .filter-controls {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            width: 100%;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+        .filter-controls::-webkit-scrollbar {
+            display: none;
+        }
+        .filter-btn {
+            background-color: rgba(0, 0, 0, 0.25);
+            border: 1px solid var(--border-highlight);
+            color: var(--text-color);
+            opacity: 0.8;
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            white-space: nowrap;
+        }
+        .filter-btn:hover {
+            border-color: var(--secondary-color);
+            color: var(--secondary-color);
+            opacity: 1;
+        }
+        .filter-btn.active {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: #fff;
+            opacity: 1;
+            box-shadow: 0 4px 15px var(--shadow-color);
+        }
+        .pombagira-card {
+            background: rgba(15, 15, 15, 0.45);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            position: relative;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+            height: 100%;
+        }
+        .card-image-box {
+            width: 100%;
+            height: 340px;
+            overflow: hidden;
+            position: relative;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+        .card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            filter: grayscale(100%) brightness(0.7) contrast(1.05);
+            transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1), filter 1s ease;
+        }
+        .card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(4, 4, 4, 0) 50%, rgba(4, 4, 4, 0.85) 100%);
+            z-index: 2;
+        }
+        .pombagira-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            background: rgba(22, 22, 22, 0.65);
+            border-color: var(--secondary-color);
+            box-shadow: 0 20px 40px rgba(139, 0, 0, 0.35), 0 0 25px rgba(255, 215, 0, 0.15);
+        }
+        .pombagira-card:hover .card-img {
+            transform: scale(1.05);
+            filter: grayscale(0%) brightness(1.0) saturate(1.15) contrast(1.1);
+        }
+        .card-info {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            text-align: left;
+        }
+        .card-title {
+            font-size: 1.35rem !important;
+            font-weight: 600 !important;
+            margin-bottom: 0.5rem !important;
+            color: #fff !important;
+            text-align: left !important;
+        }
+        .card-badge {
+            align-self: flex-start;
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--secondary-color);
+            border: 1px solid rgba(255, 215, 0, 0.35);
+            padding: 0.15rem 0.6rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+        .card-text {
+            font-size: 0.88rem !important;
+            line-height: 1.55 !important;
+            color: rgba(255, 255, 255, 0.7) !important;
+            text-align: left !important;
+        }
+
+        /* --- FAQ Accordion CSS --- */
+        .faq-item {
+            background: rgba(25, 15, 15, 0.55);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-highlight);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .faq-item.active {
+            border-color: var(--secondary-color);
+            background: rgba(35, 15, 15, 0.75);
+            box-shadow: 0 5px 20px rgba(139, 0, 0, 0.2);
+        }
+        .faq-trigger {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 1.25rem 1.75rem;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-question {
+            font-family: var(--font-display);
+            font-size: 1.18rem;
+            font-weight: 500;
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+        .faq-trigger:hover .faq-question {
+            color: var(--secondary-color);
+        }
+        .faq-item.active .faq-question {
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+        .faq-icon-arrow {
+            width: 14px;
+            height: 8px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 8' fill='none'%3E%3Cpath d='M1 1L7 7L13 1' stroke='%23ffd700' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .faq-item.active .faq-icon-arrow {
+            transform: rotate(180deg);
+        }
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            padding: 0 1.75rem;
+        }
+        .faq-content p {
+            font-size: 0.96rem;
+            line-height: 1.6;
+            padding-bottom: 1.5rem;
+            color: rgba(255, 255, 255, 0.82) !important;
+            text-align: left;
+        }
+        .faq-content p strong {
+            color: var(--secondary-color);
+        }
+
+        /* --- 24 Cards Deck Mobile Responsive CSS --- */
+        @media (max-width: 767px) {
+            #cardsGrid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 0.75rem !important;
+            }
+            .card-image-box {
+                height: 170px !important;
+            }
+            .card-info {
+                padding: 0.8rem !important;
+            }
+            .card-badge {
+                font-size: 0.62rem !important;
+                padding: 0.1rem 0.4rem !important;
+                margin-bottom: 0.5rem !important;
+            }
+            .card-title {
+                font-size: 1.05rem !important;
+                margin-bottom: 0.25rem !important;
+            }
+            .card-text {
+                font-size: 0.78rem !important;
+                line-height: 1.35 !important;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            .filter-controls {
+                justify-content: flex-start !important;
+                padding: 0.2rem 1rem !important;
+                overflow-x: auto !important;
+                flex-wrap: nowrap !important;
+                -webkit-overflow-scrolling: touch !important;
+                width: 100% !important;
+                gap: 0.6rem !important;
+            }
+            .filter-btn {
+                padding: 0.4rem 0.9rem !important;
+                font-size: 0.78rem !important;
+            }
+        }
+
     </style>
     <!-- Hreflangs para SEO Multilíngue -->
     <link rel="alternate" hreflang="pt" href="https://pombagiras.com/guardias/" />
@@ -1287,6 +1525,7 @@
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#artigos">Artigos</a></li>
                 <li><a href="#linha">Linha</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#respeito">Respeito</a></li>
                 <li><a href="#redes">Redes Sociais</a></li>
                 <li><a href="#contato">Contato</a></li>
@@ -1297,8 +1536,8 @@
     <section class="hero" id="inicio" aria-labelledby="hero-title">
         <div class="container">
             <div class="hero-glass-badge">✝¦ Portal Sagrado · Alexia Melusine ✝¦</div>
-            <h1 id="hero-title">Pombagiras: Guardiãs de Caminhos</h1>
-            <p>Um espaço dedicado ao conhecimento respeitoso e responsável sobre essas poderosas entidades da Umbanda e Quimbanda</p>
+            <h1 id="hero-title" class="speakable-title">Pombagiras: Guardiãs de Caminhos</h1>
+            <p class="speakable-description">Um espaço dedicado ao conhecimento respeitoso e responsável sobre essas poderosas entidades da Umbanda e Quimbanda</p>
             <a href="#sobre" class="cta-button">Conheça Mais</a>
             <a href="https://pombagiras.com/" target="_blank" rel="noopener noreferrer" class="cta-button">Pombagiras.com</a>
         </div>
@@ -1444,14 +1683,341 @@
                 <h2 id="artigos-title">Artigos e Conhecimento</h2>
             </header>
 
+            
             <article class="article-card">
                 <header class="article-header">
                     <h3>A Origem Histórica das Pombagiras</h3>
                 </header>
                 <div class="article-content">
-                    <p>As Pombagiras têm suas raízes profundas na tradição afro-brasileira. Sua origem está intimamente ligada aos Exus, sendo consideradas a manifestação feminina desta linha de trabalho espiritual.</p>
+                    <p style="margin-bottom: 30px;">As Pombagiras têm suas raízes profundas na tradição afro-brasileira. Sua origem está intimamente ligada aos Exus, sendo consideradas a manifestação feminina desta linha de trabalho espiritual.</p>
+
+                    <!-- Filter Controls -->
+                    <div class="filter-controls" style="margin-bottom: 30px;">
+                        <button class="filter-btn active" data-filter="all">Todos</button>
+                        <button class="filter-btn" data-filter="tradicao">Tradições e Marias</button>
+                        <button class="filter-btn" data-filter="almas">Almas e Calunga</button>
+                        <button class="filter-btn" data-filter="encruzilhada">Encruzilhadas e Caminhos</button>
+                        <button class="filter-btn" data-filter="elementos">Elementos da Natureza</button>
+                    </div>
+
+                    <!-- Cards Grid -->
+                    <div class="cards-grid" id="cardsGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 2rem;">
+                        
+                        <!-- 1. Padilha -->
+                        <a href="maria-padilha.html" target="_blank" rel="noopener" class="pombagira-card scroll-reveal" data-category="tradicao" style="text-decoration: none; color: inherit;">
+                            <div class="card-image-box">
+                                <div class="card-overlay"></div>
+                                <img src="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_maria_padilha.png" alt="Maria Padilha" class="card-img" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="card-title">Maria Padilha</h3>
+                                <span class="card-badge">Tradição & Feitiço</span>
+                                <p class="card-text">Arquétipo do poder absoluto, magnetismo irresistível, sensualidade ativa e transmutação mágica de alta linhagem.</p>
+                            </div>
+                        </a>
+
+                        <!-- 2. Mulambo -->
+                        <a href="maria-mulambo.html" target="_blank" rel="noopener" class="pombagira-card scroll-reveal" data-category="tradicao" style="text-decoration: none; color: inherit;">
+                            <div class="card-image-box">
+                                <div class="card-overlay"></div>
+                                <img src="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_maria_mulambo.png" alt="Maria Mulambo" class="card-img" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="card-title">Maria Mulambo</h3>
+                                <span class="card-badge">Transmutação</span>
+                                <p class="card-text">Força que resgata a pureza e a riqueza espiritual na adversidade, quebrando orgulhos e restaurando a dignidade essencial.</p>
+                            </div>
+                        </a>
+
+                        <!-- 3. Navalha -->
+                        <a href="maria-navalha.html" target="_blank" rel="noopener" class="pombagira-card scroll-reveal" data-category="tradicao" style="text-decoration: none; color: inherit;">
+                            <div class="card-image-box">
+                                <div class="card-overlay"></div>
+                                <img src="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_maria_navalha.png" alt="Maria Navalha" class="card-img" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="card-title">Maria Navalha</h3>
+                                <span class="card-badge">Proteção Urbana</span>
+                                <p class="card-text">Simboliza o arquétipo da perspicácia, da malandragem ágil e da defesa afiada contra as injustiças das ruas e caminhos.</p>
+                            </div>
+                        </a>
+
+                        <!-- 4. Quitéria -->
+                        <a href="maria-quiteria.html" target="_blank" rel="noopener" class="pombagira-card scroll-reveal" data-category="tradicao" style="text-decoration: none; color: inherit;">
+                            <div class="card-image-box">
+                                <div class="card-overlay"></div>
+                                <img src="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_maria_quiteria.png" alt="Maria Quitéria" class="card-img" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="card-title">Maria Quitéria</h3>
+                                <span class="card-badge">Justiça e Ordem</span>
+                                <p class="card-text">Guerreira destemida das legiões espirituais, empunha a força da justiça imutável e da severidade protetora.</p>
+                            </div>
+                        </a>
+
+                        <!-- 5. Farrapo -->
+                        <a href="maria-farrapo.html" target="_blank" rel="noopener" class="pombagira-card scroll-reveal" data-category="tradicao" style="text-decoration: none; color: inherit;">
+                            <div class="card-image-box">
+                                <div class="card-overlay"></div>
+                                <img src="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_maria_farrapo.png" alt="Maria Farrapo" class="card-img" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="card-title">Maria Farrapo</h3>
+                                <span class="card-badge">Desapego & Cura</span>
+                                <p class="card-text">Recolhe detritos e dores da alma, transmutando-os em sabedoria e limpando caminhos obscurecidos pelo vício.</p>
+                            </div>
+                        </a>
+
+                        <!-- 6. Cigana -->
+                        <a href="pombagira-cigana.html" target="_blank" rel="noopener" class="pombagira-card scroll-reveal" data-category="tradicao" style="text-decoration: none; color: inherit;">
+                            <div class="card-image-box">
+                                <div class="card-overlay"></div>
+                                <img src="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_cigana.png" alt="Pombagira Cigana" class="card-img" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="card-title">Pombagira Cigana</h3>
+                                <span class="card-badge">Liberdade & Clarividência</span>
+                                <p class="card-text">O arquétipo da intuição livre, leitura de destinos, atração de prosperidade e o domínio do mistério das cartas.</p>
+                            </div>
+                        </a>
+
+                        <!-- 7. Menina -->
+                        <a href="pombagira-menina.html" target="_blank" rel="noopener" class="pombagira-card scroll-reveal" data-category="tradicao" style="text-decoration: none; color: inherit;">
+                            <div class="card-image-box">
+                                <div class="card-overlay"></div>
+                                <img src="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_menina.png" alt="Pombagira Menina" class="card-img" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="card-title">Pombagira Menina</h3>
+                                <span class="card-badge">Juventude & Foco</span>
+                                <p class="card-text">Vitalidade juvenil aliada a uma perspicácia cortante; atua limpando magias nocivas com rapidez e alegria astuta.</p>
+                            </div>
+                        </a>
+
+                        <!-- 8. Rosa Caveira -->
+                        <a href="rosa-caveira.html" target="_blank" rel="noopener" class="pombagira-card scroll-reveal" data-category="almas" style="text-decoration: none; color: inherit;">
+                            <div class="card-image-box">
+                                <div class="card-overlay"></div>
+                                <img src="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_rosa_caveira.png" alt="Rosa Caveira" class="card-img" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="card-title">Rosa Caveira</h3>
+                                <span class="card-badge">Lei & Rigor</span>
+                                <p class="card-text">Guardiã das profundezas ligada à Linha das Almas. Exige lealdade inflexível, equilibra karmas e corta falsidades.</p>
+                            </div>
+                        </a>
+
+                        <!-- 9. Sete Saias -->
+                        <a href="sete-saias.html" target="_blank" rel="noopener" class="pombagira-card scroll-reveal" data-category="encruzilhada" style="text-decoration: none; color: inherit;">
+                            <div class="card-image-box">
+                                <div class="card-overlay"></div>
+                                <img src="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_sete_saias.png" alt="Pombagira Sete Saias" class="card-img" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="card-title">Sete Saias</h3>
+                                <span class="card-badge">Dinâmica dos Caminhos</span>
+                                <p class="card-text">Rege os sete giros da evolução, estimulando a abundância, a abertura de mercados e o brilho pessoal.</p>
+                            </div>
+                        </a>
+
+                        <!-- 10. Dama da Noite -->
+                        <a href="dama-da-noite.html" target="_blank" rel="noopener" class="pombagira-card scroll-reveal" data-category="encruzilhada" style="text-decoration: none; color: inherit;">
+                            <div class="card-image-box">
+                                <div class="card-overlay"></div>
+                                <img src="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_dama_da_noite.png" alt="Dama da Noite" class="card-img" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="card-title">Dama da Noite</h3>
+                                <span class="card-badge">Mistério Noturno</span>
+                                <p class="card-text">Senhora do mistério noturno, refina a atração pessoal, atua na harmonização de casais e desfaz traumas ocultos.</p>
+                            </div>
+                        </a>
+
+                        <!-- 11. Da Figueira -->
+                        <a href="da-figueira.html" target="_blank" rel="noopener" class="pombagira-card scroll-reveal" data-category="elementos" style="text-decoration: none; color: inherit;">
+                            <div class="card-image-box">
+                                <div class="card-overlay"></div>
+                                <img src="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_da_figueira.png" alt="Pombagira da Figueira" class="card-img" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="card-title">Da Figueira</h3>
+                                <span class="card-badge">Ancestralidade Terrena</span>
+                                <p class="card-text">Guardiã enraizada no mistério das matas e das figueiras velhas, com forte poder curativo e revelação do oculto.</p>
+                            </div>
+                        </a>
+
+                        <!-- 12. Da Praia -->
+                        <a href="da-praia.html" target="_blank" rel="noopener" class="pombagira-card scroll-reveal" data-category="elementos" style="text-decoration: none; color: inherit;">
+                            <div class="card-image-box">
+                                <div class="card-overlay"></div>
+                                <img src="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_da_praia.png" alt="Pombagira da Praia" class="card-img" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="card-title">Da Praia</h3>
+                                <span class="card-badge">Fluidez & Limpeza</span>
+                                <p class="card-text">Atua no limite da água e da terra, regendo a transmutação das marés e a limpeza das impurezas emocionais.</p>
+                            </div>
+                        </a>
+
+                        <!-- 13. Da Lua -->
+                        <a href="da-lua.html" target="_blank" rel="noopener" class="pombagira-card scroll-reveal" data-category="encruzilhada" style="text-decoration: none; color: inherit;">
+                            <div class="card-image-box">
+                                <div class="card-overlay"></div>
+                                <img src="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_da_lua.png" alt="Pombagira da Lua" class="card-img" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="card-title">Da Lua</h3>
+                                <span class="card-badge">Magnetismo Celeste</span>
+                                <p class="card-text">Rege as oscilações psíquicas, o subconsciente, e o poder intuitivo da mente conectada às fases lunares.</p>
+                            </div>
+                        </a>
+
+                        <!-- 14. Da Serra -->
+                        <a href="da-serra.html" target="_blank" rel="noopener" class="pombagira-card scroll-reveal" data-category="elementos" style="text-decoration: none; color: inherit;">
+                            <div class="card-image-box">
+                                <div class="card-overlay"></div>
+                                <img src="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_da_serra.png" alt="Pombagira da Serra" class="card-img" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="card-title">Da Serra</h3>
+                                <span class="card-badge">Elevação & Foco</span>
+                                <p class="card-text">Guardiã das passagens montanhosas e das alturas espirituais, oferecendo firmeza para ultrapassar obstáculos difíceis.</p>
+                            </div>
+                        </a>
+
+                        <!-- 15. Da Sombra -->
+                        <a href="da-sombra.html" target="_blank" rel="noopener" class="pombagira-card scroll-reveal" data-category="encruzilhada" style="text-decoration: none; color: inherit;">
+                            <div class="card-image-box">
+                                <div class="card-overlay"></div>
+                                <img src="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_da_sombra.png" alt="Pombagira da Sombra" class="card-img" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="card-title">Da Sombra</h3>
+                                <span class="card-badge">Autoconhecimento</span>
+                                <p class="card-text">Atua no acolhimento e na transmutação das nossas fraquezas e medos profundos, trazendo luz ao que está reprimido.</p>
+                            </div>
+                        </a>
+
+                        <!-- 16. Das Águas Profundas -->
+                        <a href="das-aguas-profundas.html" target="_blank" rel="noopener" class="pombagira-card scroll-reveal" data-category="elementos" style="text-decoration: none; color: inherit;">
+                            <div class="card-image-box">
+                                <div class="card-overlay"></div>
+                                <img src="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_das_aguas_profundas.png" alt="Das Águas Profundas" class="card-img" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="card-title">Das Águas Profundas</h3>
+                                <span class="card-badge">Subconsciente</span>
+                                <p class="card-text">Senhora das profundezas das águas emotivas, ajudando no resgate e na dissolução de sentimentos ocultados.</p>
+                            </div>
+                        </a>
+
+                        <!-- 17. Das Almas -->
+                        <a href="das-almas.html" target="_blank" rel="noopener" class="pombagira-card scroll-reveal" data-category="almas" style="text-decoration: none; color: inherit;">
+                            <div class="card-image-box">
+                                <div class="card-overlay"></div>
+                                <img src="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_das_almas.png" alt="Pombagira das Almas" class="card-img" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="card-title">Das Almas</h3>
+                                <span class="card-badge">Consolo & Passagem</span>
+                                <p class="card-text">Guia caridosa que atua no amparo aos espíritos recém-desencarnados, confortando-os no limiar astral.</p>
+                            </div>
+                        </a>
+
+                        <!-- 18. Das Trevas -->
+                        <a href="das-trevas.html" target="_blank" rel="noopener" class="pombagira-card scroll-reveal" data-category="almas" style="text-decoration: none; color: inherit;">
+                            <div class="card-image-box">
+                                <div class="card-overlay"></div>
+                                <img src="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_das_trevas.png" alt="Pombagira das Trevas" class="card-img" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="card-title">Das Trevas</h3>
+                                <span class="card-badge">Quebra de Amarras</span>
+                                <p class="card-text">Trabalha na neutralização de obsessores severos e na quebra de prisões astrais densas nas zonas mais escuras.</p>
+                            </div>
+                        </a>
+
+                        <!-- 19. Do Fogo -->
+                        <a href="do-fogo.html" target="_blank" rel="noopener" class="pombagira-card scroll-reveal" data-category="elementos" style="text-decoration: none; color: inherit;">
+                            <div class="card-image-box">
+                                <div class="card-overlay"></div>
+                                <img src="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_do_fogo.png" alt="Pombagira do Fogo" class="card-img" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="card-title">Do Fogo</h3>
+                                <span class="card-badge">Energia Primordial</span>
+                                <p class="card-text">Arquétipo do impulso vital de alta frequência. Destrói miasmas espirituais através da chama purificadora do fogo sagrado.</p>
+                            </div>
+                        </a>
+
+                        <!-- 20. Sete Encruzilhadas -->
+                        <a href="sete-encruzilhadas.html" target="_blank" rel="noopener" class="pombagira-card scroll-reveal" data-category="encruzilhada" style="text-decoration: none; color: inherit;">
+                            <div class="card-image-box">
+                                <div class="card-overlay"></div>
+                                <img src="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_sete_encruzilhadas.png" alt="Pombagira Sete Encruzilhadas" class="card-img" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="card-title">Sete Encruzilhadas</h3>
+                                <span class="card-badge">Senhora da Escolha</span>
+                                <p class="card-text">Guardiã das decisões cruciais, coordenadora das encruzilhadas físicas e espirituais de nossa existência.</p>
+                            </div>
+                        </a>
+
+                        <!-- 21. Da Fenda -->
+                        <a href="da-fenda.html" target="_blank" rel="noopener" class="pombagira-card scroll-reveal" data-category="elementos" style="text-decoration: none; color: inherit;">
+                            <div class="card-image-box">
+                                <div class="card-overlay"></div>
+                                <img src="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_da_fenda.png" alt="Pombagira da Fenda" class="card-img" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="card-title">Da Fenda</h3>
+                                <span class="card-badge">Portais Minerais</span>
+                                <p class="card-text">Opera nos portais rochosos e fendas de vulcões, ligada à estabilização e firmeza das energias fundamentais terrestres.</p>
+                            </div>
+                        </a>
+
+                        <!-- 22. Da Calunga Profunda -->
+                        <a href="da-calunga-profunda.html" target="_blank" rel="noopener" class="pombagira-card scroll-reveal" data-category="almas" style="text-decoration: none; color: inherit;">
+                            <div class="card-image-box">
+                                <div class="card-overlay"></div>
+                                <img src="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_da_calunga_profunda.png" alt="Calunga Profunda" class="card-img" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="card-title">Da Calunga Profunda</h3>
+                                <span class="card-badge">Eternidade & Silêncio</span>
+                                <p class="card-text">Rege os limites sagrados do esquecimento e o descanso cósmico das energias físicas que retornam à terra.</p>
+                            </div>
+                        </a>
+
+                        <!-- 23. Da Neblina -->
+                        <a href="da-neblina.html" target="_blank" rel="noopener" class="pombagira-card scroll-reveal" data-category="almas" style="text-decoration: none; color: inherit;">
+                            <div class="card-image-box">
+                                <div class="card-overlay"></div>
+                                <img src="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_da_neblina.png" alt="Pombagira da Neblina" class="card-img" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="card-title">Da Neblina</h3>
+                                <span class="card-badge">Ocultamento</span>
+                                <p class="card-text">Rege o véu das brumas sagradas. Atua ocultando caminhos dos inimigos e gerando camuflagem protetora.</p>
+                            </div>
+                        </a>
+
+                        <!-- 24. Das Correntes -->
+                        <a href="das-correntes.html" target="_blank" rel="noopener" class="pombagira-card scroll-reveal" data-category="encruzilhada" style="text-decoration: none; color: inherit;">
+                            <div class="card-image-box">
+                                <div class="card-overlay"></div>
+                                <img src="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_das_correntes.png" alt="Pombagira das Correntes" class="card-img" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="card-title">Das Correntes</h3>
+                                <span class="card-badge">Libertação</span>
+                                <p class="card-text">Guardiã sagrada que destrói correntes mentais e espirituais nocivas, rompendo pactos de subjugação e medo.</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </article>
+
 
             <h3 style="text-align:center; color:var(--primary-color); margin-top:50px; font-family:var(--font-display); font-size:1.85em; font-weight:400; margin-bottom:10px; letter-spacing:-0.01em;">As 12 Guardiãs Principais</h3>
             <p style="text-align:center; margin-bottom:32px; opacity:0.72; font-family:var(--font-body); font-weight:300;">Resumo de arquétipos, simbologias e atribuições</p>
@@ -1661,6 +2227,184 @@
             </aside>
         </section>
 
+        
+        <!-- FAQ Accordion Section -->
+        <section class="section" id="faq" aria-labelledby="faq-title">
+            <header class="section-header">
+                <h2 id="faq-title">Dúvidas Frequentes (FAQ)</h2>
+                <p>Respostas diretas e esclarecimentos teológicos sobre as Guardiãs</p>
+            </header>
+            
+            <div class="faq-accordion-wrapper" style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem;">
+                
+                <!-- FAQ Item 1 -->
+                <div class="faq-item active">
+                    <button class="faq-trigger" aria-expanded="true">
+                        <span class="faq-question">1. O que é verdadeiramente uma Pombagira?</span>
+                        <span class="faq-icon-arrow"></span>
+                    </button>
+                    <div class="faq-content" style="max-height: 500px;">
+                        <p>Na cosmologia das religiões de matriz afro-brasileira, como a Umbanda e o Candomblé, as Pombagiras são entidades espirituais em evolução que atuam como <strong>Guardiãs dos Limiares</strong>. Elas trabalham na esquerda espiritual, o que significa que são agentes executoras da lei cármica, focadas na proteção das encruzilhadas da vida, das decisões humanas e da ordem energética próxima ao plano material.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question">2. Pombagiras são entidades malignas ou "demônios"?</span>
+                        <span class="faq-icon-arrow"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p><strong>Absolutamente não.</strong> O conceito de "demônio" ou dualidade simplista de bem contra o mal absoluto é uma importação teológica de matrizes judaico-cristãs ocidentais. Pombagiras não promovem o mal nem operam para prejudicar a evolução de ninguém. Essa associação pejorativa é fruto de preconceito histórico, racismo religioso e repressão social contra a expressão livre e empoderada da energia feminina visceral.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question">3. Qual a relação delas com o arquétipo do feminino e sua autonomia?</span>
+                        <span class="faq-icon-arrow"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Elas representam a faceta indômita, soberana e visceral do feminino. Diferente da imagem de submissão ou passividade imposta às mulheres historicamente, a Pombagira surge altiva, senhora dos seus desejos, de sua sexualidade consciente, de sua fala direta e de sua independência financeira. Elas são a força psicoterapêutica e arquetípica que resgata a autoestima e a autossuficiência de quem as procura.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question">4. Posso pedir para uma Pombagira separar ou acabar com o relacionamento de outra pessoa?</span>
+                        <span class="faq-icon-arrow"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p><strong>Ela não vai fazer isso por vingança.</strong> As Pombagiras trabalham com a Lei do Retorno. Se o outro relacionamento é verdadeiro e justo, nada acontece. Mas se há engano, mentira ou abuso, a verdade virá à tona. O pedido sincero deve ser por <strong>justiça</strong> e equilíbrio cármico, e nunca por pura destruição maldosa.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question">5. Qual a diferença essencial entre a Umbanda e a Quimbanda?</span>
+                        <span class="faq-icon-arrow"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>A principal diferença está na abordagem energética e ritualística. Na Umbanda, a atuação é amplamente focada na harmonização de direita (Caboclos, Pretos-Velhos) e esquerda (Exus, Pombagiras) sob rituais mais brandos. Na Quimbanda, o sistema é focado puramente na força de esquerda (Exus e Pombagiras) lidando de forma direta com magias práticas, limpezas pesadas, encruzilhadas e a justiça astral imediata.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question">6. O que fazer caso uma promessa feita a uma Pombagira não possa ser cumprida?</span>
+                        <span class="faq-icon-arrow"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p><strong>Jamais invente desculpas ou ignore o compromisso.</strong> O melhor caminho é o diálogo sincero. Vá a um local consagrado ou converse mentalmente com a entidade, explique sua real situação com total humildade e ofereça uma alternativa simples, como uma vela branca ou uma rosa vermelha com mel. Elas valorizam a honestidade e o respeito muito acima de valores materiais.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question">7. Posso cultuar ou acender velas para uma Pombagira mesmo pertencendo a outra religião?</span>
+                        <span class="faq-icon-arrow"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p><strong>Sim, perfeitamente.</strong> As guardiãs não se importam com rótulos religiosos, dogmas humanos ou exclusivismo espiritual. Se a energia delas ressoa com você e seu pedido é pautado no respeito e na caridade, você pode perfeitamente acender uma vela e mentalizar a conexão. A intenção vibratória e o respeito mútuo são as únicas exigências.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 8 -->
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question">8. Como descobrir qual Pombagira é a minha guia ou "dona de cabeça"?</span>
+                        <span class="faq-icon-arrow"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Esse mistério é tradicionalmente desvelado dentro de um terreiro de confiança, através da consulta com o **jogo de búzios** (oráculo) ou durante o processo de incorporação mediúnica supervisionado por sacerdotes. No entanto, é comum que a pessoa sinta afinidades intuitivas inexplicáveis por nomes, cores ou pontos de força específicos antes mesmo da revelação.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 9 -->
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question">9. Homens podem cultuar e incorporar entidades femininas como as Pombagiras?</span>
+                        <span class="faq-icon-arrow"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p><strong>Com certeza.</strong> A essência espiritual dos guias de luz e das entidades transcende as limitações de gênero do plano físico do médium. Inúmeros médiuns masculinos incorporam Pombagiras com imensa sabedoria, elegância e firmeza, trazendo a potência do feminino profundo para equilibrar carmas, curar relacionamentos e desfazer negatividades.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 10 -->
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question">10. Por que elas utilizam elementos como bebidas alcoólicas e fumo (cigarros)?</span>
+                        <span class="faq-icon-arrow"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Esses itens não representam vícios materiais no plano espiritual, mas atuam como **condensadores etéricos**. O fumo queima miasmas, larvas mentais e desfaz projeções astrais nocivas. O álcool (como espumante ou cachaça) serve como um elemento volátil energético indispensável para potencializar trabalhos de descarrego rápido na vibração densa próxima ao plano físico.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 11 -->
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question">11. Posso solicitar abertura de caminhos financeiros e prosperidade para uma Pombagira?</span>
+                        <span class="faq-icon-arrow"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p><strong>Sim.</strong> Linhas como *Pombagira Cigana* e *Maria Mulambo* são extremamente eficientes para desbloquear energias estagnadas de prosperidade material. No entanto, elas exigem reciprocidade e ação no mundo real: a entidade limpa e abre a porta dos caminhos, mas você precisa ter coragem e empenho prático para atravessá-la.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 12 -->
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question">12. Pombagiras "castigam" ou "punem" seres humanos por capricho?</span>
+                        <span class="faq-icon-arrow"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p><strong>Não.</strong> Sendo agentes ativas da lei divina da esquerda, elas operam em conformidade com as leis do karma e da causa e efeito. Elas não punem por capricho ou vaidade; o que ocorre é a aplicação da justiça cósmica de retorno quando há desequilíbrios provocados pelas próprias ações humanas.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 13 -->
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question">13. Existe algum dia da semana ou horário ideal para me sintonizar com elas?</span>
+                        <span class="faq-icon-arrow"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Sexta-feira à noite é o período clássico da sintonia com as guardiãs, por ressoar com o amor e a transmutação. No entanto, a conexão espiritual genuína pode ser realizada em qualquer dia com foco e intenção pura. Para rituais de prosperidade e abertura de caminhos, a lua crescente é ideal, enquanto a cheia favorece a proteção e a egrégora.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 14 -->
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question">14. Quais são as Pombagiras consideradas mais raras de se manifestarem?</span>
+                        <span class="faq-icon-arrow"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Entidades ligadas a linhas muito antigas ou de forte isolamento vibratório são consideradas raras de se incorporarem em giras abertas. Exemplos clássicos incluem *Pombagira Menina*, *Rainha da Figueira*, *Sete Catacumbas*, *Pombagira do Lodo*, *Pombagira do Breu* e *Maria Farrapo*.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 15 -->
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question">15. Quais são os sinais de que uma pessoa possui proteção ou influência de uma Pombagira?</span>
+                        <span class="faq-icon-arrow"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Os sinais tradicionais costumam envolver um magnetismo pessoal marcante, intuição extremamente afiada e rápida percepção de mentiras, livramentos protetores misteriosos em momentos de perigo, sonhos recorrentes com encruzilhadas, espelhos e mulheres altivas, além de uma forte sensibilidade emocional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
         <section class="section" id="respeito" aria-labelledby="respeito-title">
             <header class="section-header">
                 <h2 id="respeito-title">Respeito e Responsabilidade</h2>
@@ -1690,6 +2434,7 @@
                         <ul>
                             <li><a href="#artigos">Artigos &amp; Arquétipos</a></li>
                             <li><a href="#linha">Linha de Trabalho</a></li>
+                            <li><a href="#faq">Perguntas Frequentes (FAQ)</a></li>
                             <li><a href="#respeito">Ética e Responsabilidade</a></li>
                         </ul>
                     </nav>
@@ -1798,6 +2543,70 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('.card, .article-card, .entity-card').forEach(el => observer.observe(el));
+
+            
+        // --- 24 Pombagiras Deck Card Filters Script ---
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const pombagiraCards = document.querySelectorAll('.pombagira-card');
+        
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                
+                filterButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filterValue = btn.getAttribute('data-filter');
+                
+                pombagiraCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    
+                    if (filterValue === 'all' || category === filterValue) {
+                        card.style.display = 'flex';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'scale(0.92)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // --- FAQ Accordion Script ---
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const trigger = item.querySelector('.faq-trigger');
+            const content = item.querySelector('.faq-content');
+
+            if (!trigger || !content) return;
+
+            trigger.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+
+                faqItems.forEach(otherItem => {
+                    const otherTrigger = otherItem.querySelector('.faq-trigger');
+                    const otherContent = otherItem.querySelector('.faq-content');
+                    if (!otherTrigger || !otherContent) return;
+                    otherItem.classList.remove('active');
+                    otherTrigger.setAttribute('aria-expanded', 'false');
+                    otherContent.style.maxHeight = '0';
+                });
+
+                if (!isActive) {
+                    item.classList.add('active');
+                    trigger.setAttribute('aria-expanded', 'true');
+                    content.style.maxHeight = `${content.scrollHeight}px`;
+                }
+            });
+        });
+
         });
     </script>
 
