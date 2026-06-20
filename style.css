@@ -1057,6 +1057,61 @@ footer.main-footer .footer-links-container a[href*="whatsapp"]:hover {
     box-shadow: 0 4px 12px rgba(197, 160, 89, 0.15);
 }
 
+/* Academic Anchorage Footer links */
+.ancoragem-academica {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(197, 160, 89, 0.15);
+}
+
+.ancoragem-titulo {
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.ancoragem-academica .links-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Geist', sans-serif;
+}
+
+.ancoragem-academica a {
+    color: var(--warm-cream);
+    opacity: 0.7;
+    font-size: 0.75rem;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    line-height: 1.4;
+}
+
+.ancoragem-academica a:hover {
+    color: var(--accent);
+    opacity: 1;
+}
+
+.ancoragem-academica .divisor {
+    color: rgba(197, 160, 89, 0.25);
+    user-select: none;
+    font-size: 0.75rem;
+}
+
+@media (max-width: 480px) {
+    .ancoragem-academica .links-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+    .ancoragem-academica .divisor {
+        display: none;
+    }
+}
+
 /* Footer Bottom Layout */
 .footer-divider-container {
     margin: 50px 0 35px;
