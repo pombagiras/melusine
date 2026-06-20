@@ -15,7 +15,7 @@
 
     <!-- Critical CSS & Fonts at the very top of head to prevent render blocking -->
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1.0.1">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
@@ -1709,21 +1709,28 @@ function changeLanguage(e, lang) {
             <div class="footer-divider-pombagiras"></div>
 
             <div class="footer-bottom-row">
-                <div style="margin-top: 10px; margin-bottom: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-                    <a href="../privacy.html" style="color: #FAF6EE; opacity: 0.75; text-decoration: none; font-size: 0.85rem; transition: opacity 0.2s;" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.75'">Política de Privacidade</a>
-                    <span style="color: #FAF6EE; opacity: 0.3;">|</span>
-                    <a href="../terms.html" style="color: #FAF6EE; opacity: 0.75; text-decoration: none; font-size: 0.85rem; transition: opacity 0.2s;" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.75'">Termos de Uso</a>
+                <!-- Line 1: Privacy Policy / Terms of Use and Copyright -->
+                <div class="footer-bottom-line">
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <a href="../privacy.html" style="color: #FAF6EE; opacity: 0.75; text-decoration: none; font-size: 0.85rem; transition: opacity 0.2s;" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.75'">Política de Privacidade</a>
+                        <span style="color: #FAF6EE; opacity: 0.3;">|</span>
+                        <a href="../terms.html" style="color: #FAF6EE; opacity: 0.75; text-decoration: none; font-size: 0.85rem; transition: opacity 0.2s;" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.75'">Termos de Uso</a>
+                    </div>
+                    <p class="copyright-pombagiras" style="margin: 0;">&copy; <span id="copyrightYear">2026</span> POMBAGIRAS.COM. Direitos Autorais Reservados para Alexia Melusine.</p>
                 </div>
-                <p class="copyright-pombagiras">&copy; <span id="copyrightYear">2026</span> POMBAGIRAS.COM. Direitos Autorais Reservados para Alexia Melusine.</p>
-                <div style="margin-top: 10px; margin-bottom: 5px;">
-                    <span class="email-copy-trigger" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; cursor: pointer; color: #FAF6EE; opacity: 0.75; transition: opacity 0.2s, color 0.2s; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 77, 109, 0.2); padding: 6px 12px; border-radius: 20px;" onclick="const e='contato'+'@'+'pombagiras.com'; navigator.clipboard.writeText(e); const t=this.querySelector('.copy-status'); t.textContent='Copiado!'; t.style.color='#00ff88'; setTimeout(()=>{t.textContent='(Copiar)'; t.style.color='';}, 2000);" onmouseenter="this.style.opacity='1'; this.style.borderColor='#ff4d6d';" onmouseleave="this.style.opacity='0.75'; this.style.borderColor='rgba(255, 77, 109, 0.2)';" role="button" aria-label="Copiar e-mail contato@pombagiras.com">
-                        <i class="fa-solid fa-envelope" style="color: #ff4d6d;"></i>
-                        <span style="font-weight: 400; letter-spacing: 0.5px;">contato@pombagiras.com</span>
-                        <span class="copy-status" style="font-size: 0.7rem; opacity: 0.6; transition: color 0.2s;">(Copiar)</span>
-                    </span>
-                </div>
-                <div class="footer-closing-vibe">
-                    Laroyê Exu Mulher! Proteção nos Caminhos. 🥀🔥
+                
+                <!-- Line 2: Email and Vibe Phrase -->
+                <div class="footer-bottom-line" style="margin-top: 5px; padding-top: 15px; border-top: 1px solid rgba(255, 255, 255, 0.05);">
+                    <div>
+                        <span class="email-copy-trigger" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; cursor: pointer; color: #FAF6EE; opacity: 0.75; transition: opacity 0.2s, color 0.2s; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 77, 109, 0.2); padding: 6px 12px; border-radius: 20px;" onclick="const e='contato'+'@'+'pombagiras.com'; navigator.clipboard.writeText(e); const t=this.querySelector('.copy-status'); t.textContent='Copiado!'; t.style.color='#00ff88'; setTimeout(()=>{t.textContent='(Copiar)'; t.style.color='';}, 2000);" onmouseenter="this.style.opacity='1'; this.style.borderColor='#ff4d6d';" onmouseleave="this.style.opacity='0.75'; this.style.borderColor='rgba(255, 77, 109, 0.2)';" role="button" aria-label="Copiar e-mail contato@pombagiras.com">
+                            <i class="fa-solid fa-envelope" style="color: #ff4d6d;"></i>
+                            <span style="font-weight: 400; letter-spacing: 0.5px;">contato@pombagiras.com</span>
+                            <span class="copy-status" style="font-size: 0.7rem; opacity: 0.6; transition: color 0.2s;">(Copiar)</span>
+                        </span>
+                    </div>
+                    <div class="footer-closing-vibe">
+                        Laroyê Exu Mulher! Proteção nos Caminhos. 🥀🔥
+                    </div>
                 </div>
             </div>
         </div>

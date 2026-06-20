@@ -1084,10 +1084,18 @@ p {
 
 .footer-bottom-row {
     display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.footer-bottom-line {
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .copyright-pombagiras {
@@ -1149,6 +1157,12 @@ p {
 @media (max-width: 767px) {
     .header-meta {
         display: none;
+    }
+    
+    .footer-bottom-line {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 1rem !important;
     }
     
     .hero-banner-wrapper {
