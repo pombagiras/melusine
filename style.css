@@ -1071,6 +1071,7 @@ footer.main-footer .footer-links-container a[href*="whatsapp"]:hover {
     text-transform: uppercase;
     margin-bottom: 12px;
     font-weight: 700;
+    white-space: nowrap;
 }
 
 .ancoragem-academica .links-container {
@@ -1103,6 +1104,9 @@ footer.main-footer .footer-links-container a[href*="whatsapp"]:hover {
 }
 
 @media (max-width: 480px) {
+    .ancoragem-titulo {
+        white-space: normal;
+    }
     .ancoragem-academica .links-container {
         flex-direction: column;
         align-items: flex-start;
