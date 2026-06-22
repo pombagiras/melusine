@@ -10,12 +10,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://pombagiras.com/">
+  <meta property="og:url" content="https://pombagiras.com/crossroads/">
   <meta property="og:title" content="POMBAGIRAS.COM | Sacred Knowledge & Visceral Art">
   <meta property="og:description" content="The all-seeing eye at the world's crossroads. Laroyê.">
   <meta property="og:image" content="https://raw.githubusercontent.com/pombagiras/melusine-oficial/refs/heads/main/Ale%20Ultra%20(1).png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#050505">
+
+  <!-- Multi-Language Canonical Linkage (SEO hreflangs) -->
+  <link rel="alternate" hreflang="en" href="https://pombagiras.com/en/crossroads/" />
+  <link rel="alternate" hreflang="es" href="https://pombagiras.com/es/crossroads/" />
+  <link rel="alternate" hreflang="x-default" href="https://pombagiras.com/crossroads/" />
+  <link rel="canonical" href="https://pombagiras.com/crossroads/" />
+
+  <!-- Structured Data / JSON-LD (Knowledge Graph) -->
+  <script type="application/ld+json" id="schema-graph"></script>
 
   <style>
     /* ============================================================
@@ -940,6 +949,8 @@
     // ============================================================
     const TRANSLATIONS = {
       en: {
+        'meta-title': 'POMBAGIRAS.COM | Sacred Knowledge & Visceral Art',
+        'meta-desc': 'The all-seeing eye at the world\'s crossroads. Demystifying the forbidden feminine through technology and ancestry. Alexia Melusine reveals what the shadows hide. Laroyê.',
         'nav-about': 'About', 'nav-glossary': 'Glossary', 'nav-entities': 'Entities',
         'nav-truths': 'Truths', 'nav-contact': 'Contact',
         'hero-sub': 'Strategic Spiritual Knowledge & Visceral Art',
@@ -991,6 +1002,8 @@
         'footer-eyebrow': 'Get in Touch',
       },
       es: {
+        'meta-title': 'POMBAGIRAS.COM | Conocimiento Sagrado & Arte Visceral',
+        'meta-desc': 'El ojo que todo lo ve en las encrucijadas del mundo. Desmitificando el feminino prohibido a través de la tecnología y la ancestralidad. Alexia Melusine revela lo que ocultan las sombras. Laroyê.',
         'nav-about': 'Sobre', 'nav-glossary': 'Glosario', 'nav-entities': 'Entidades',
         'nav-truths': 'Verdades', 'nav-contact': 'Contacto',
         'hero-sub': 'Conocimiento Espiritual Estratégico & Arte Visceral',
@@ -1062,9 +1075,193 @@
         btn.textContent = lang === 'en' ? 'ES' : 'EN';
         btn.setAttribute('data-lang', lang);
       }
+
+      // Update dynamic page headers for SEO
+      document.title = t('meta-title');
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', t('meta-desc'));
+      
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) ogTitle.setAttribute('content', t('meta-title'));
+      
+      const ogDesc = document.querySelector('meta[property="og:description"]');
+      if (ogDesc) ogDesc.setAttribute('content', t('meta-desc'));
+
       if (typeof updateCardRoles === 'function') updateCardRoles();
       if (window._openModalId && typeof renderModal === 'function') {
         renderModal(window._openModalId);
+      }
+
+      // Update Knowledge Graph Schema
+      if (typeof updateSchema === 'function') updateSchema(lang);
+    }
+
+    function updateSchema(lang) {
+      const graph = {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://pombagiras.com/#author",
+            "name": "Alexia Melusine",
+            "alternateName": ["Alexia Rosa de Fogo", "Alexia Luz de Ferro"],
+            "url": "https://pombagiras.com/alexiamelusine/",
+            "jobTitle": ["Desenvolvedora Web", "Diretora de Vídeo IA", "Engenheira de Prompt"],
+            "sameAs": [
+              "https://www.wikidata.org/wiki/Q139714039",
+              "https://github.com/pombagiras",
+              "https://github.com/alexialuzdeferro",
+              "https://github.com/Orgulho-Trans",
+              "https://www.tiktok.com/@alexiamelusine",
+              "https://www.tiktok.com/@alexia.melusine",
+              "https://www.tiktok.com/@alexiarosadefogo?lang=pt-BR",
+              "https://www.instagram.com/alexiamelusine/",
+              "https://www.threads.net/@alexiamelusine",
+              "https://www.kwai.com/@AlexiaRosadeFogo",
+              "https://www.kwai.com/@alexialuzdeferro",
+              "https://www.behance.net/alexiamelusine",
+              "https://www.reddit.com/user/Alexia-Luz-de-Ferro/",
+              "https://alexiamelusine.substack.com/",
+              "https://substack.com/@alexiamelusine",
+              "https://medium.com/@alexiamelusine",
+              "https://mastodon.social/@alexiamelusine",
+              "https://www.tumblr.com/alexiamelusine",
+              "https://www.facebook.com/alexia.tsan.7",
+              "https://www.meta.ai/@alexiamelusine",
+              "https://www.snapchat.com/@alexiamelusine",
+              "https://linktr.ee/alexiarosadefogo"
+            ],
+            "knowsAbout": ["Pombagira", "Umbanda", "Quimbanda", "Candomblé", "Orixás", "Exu", "AI", "SEO Técnico"]
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://pombagiras.com/#organization",
+            "name": "Pombagiras.com",
+            "url": "https://pombagiras.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Favicon%20%20Miniatura%20do%20Google.png"
+            },
+            "sameAs": [
+              "https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G",
+              "https://t.me/pomba_giras",
+              "https://discord.gg/gWZP8R7Dqu",
+              "https://open.spotify.com/show/0oeCL1QScD3v7dHeUvJjgJ",
+              "https://open.spotify.com/show/6ahRd7QT2wcq7ldt5CJHZW",
+              "https://www.youtube.com/@almasdepombagira",
+              "https://music.youtube.com/playlist?list=PLQt8e8mSPiZiri0foMoc4dHwINiDbQjB2",
+              "https://www.instagram.com/almasdepombagira/",
+              "https://www.tiktok.com/@almasdepombagira?lang=pt-BR",
+              "https://www.threads.net/@almasdepombagira",
+              "https://www.kwai.com/@AlmasdePombagira",
+              "https://x.com/PambuNjila",
+              "https://br.pinterest.com/almasdepombagira/",
+              "https://www.facebook.com/almasdepombagira/",
+              "https://bsky.app/profile/almasdepombagira.bsky.social"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://pombagiras.com/#website",
+            "url": "https://pombagiras.com/",
+            "name": "Pombagiras.com",
+            "description": lang === 'en' 
+              ? "The largest online encyclopedia about Pombagiras, Exus and Afro-Brazilian traditions."
+              : "La mayor enciclopedia en línea sobre Pombagiras, Exus y tradiciones afrobrasileñas.",
+            "publisher": { "@id": "https://pombagiras.com/#organization" }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://pombagiras.com/crossroads/#webpage",
+            "url": "https://pombagiras.com/crossroads/",
+            "name": t('meta-title'),
+            "description": t('meta-desc'),
+            "isPartOf": { "@id": "https://pombagiras.com/#website" },
+            "author": { "@id": "https://pombagiras.com/#author" },
+            "about": { "@id": "https://pombagiras.com/#organization" }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://pombagiras.com/crossroads/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://pombagiras.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Crossroads",
+                "item": "https://pombagiras.com/crossroads/"
+              }
+            ]
+          },
+          {
+            "@type": "Article",
+            "@id": "https://pombagiras.com/crossroads/#article",
+            "isPartOf": { "@id": "https://pombagiras.com/crossroads/#webpage" },
+            "headline": "SOULS ON FIRE, IRON, LIGHT",
+            "description": t('hero-sub'),
+            "inLanguage": lang,
+            "author": { "@id": "https://pombagiras.com/#author" },
+            "publisher": { "@id": "https://pombagiras.com/#organization" },
+            "image": "https://raw.githubusercontent.com/pombagiras/melusine-oficial/refs/heads/main/Ale%20Ultra%20(1).png",
+            "mainEntityOfPage": "https://pombagiras.com/crossroads/#webpage"
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://pombagiras.com/crossroads/#faq",
+            "isPartOf": { "@id": "https://pombagiras.com/crossroads/#webpage" },
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": t('faq-q1'),
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": t('faq-a1')
+                }
+              },
+              {
+                "@type": "Question",
+                "name": t('faq-q2'),
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": t('faq-a2')
+                }
+              },
+              {
+                "@type": "Question",
+                "name": t('faq-q3'),
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": t('faq-a3')
+                }
+              },
+              {
+                "@type": "Question",
+                "name": t('faq-q4'),
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": t('faq-a4')
+                }
+              },
+              {
+                "@type": "Question",
+                "name": t('faq-q5'),
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": t('faq-a5')
+                }
+              }
+            ]
+          }
+        ]
+      };
+      const scriptEl = document.getElementById('schema-graph');
+      if (scriptEl) {
+        scriptEl.textContent = JSON.stringify(graph, null, 2);
       }
     }
 
