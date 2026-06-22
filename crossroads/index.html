@@ -1,0 +1,1722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POMBAGIRAS.COM | Sacred Knowledge &amp; Visceral Art</title>
+  <meta name="description" content="The all-seeing eye at the world's crossroads. Demystifying the forbidden feminine through technology and ancestry. Alexia Melusine reveals what the shadows hide. Laroyê.">
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/pombagiras/melusine/main/Al%C3%AA%20(3)%20(3)%20(1).png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pombagiras.com/">
+  <meta property="og:title" content="POMBAGIRAS.COM | Sacred Knowledge & Visceral Art">
+  <meta property="og:description" content="The all-seeing eye at the world's crossroads. Laroyê.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/pombagiras/melusine-oficial/refs/heads/main/Ale%20Ultra%20(1).png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#050505">
+
+  <style>
+    /* ============================================================
+       ROOT VARIABLES — CORES PREMIUM
+       ============================================================ */
+    :root {
+      --creme: #F5F0E8;
+      --latao: #B5A27A;
+      --latao-claro: #D4C4A0;
+      --latao-escuro: #7A6A4A;
+      --latao-escuro2: #5C5038;
+      --ardoisia: #2B2D31;
+      --preto: #050505;
+      --oxblood: #5E1A1A;
+      --text-body: #D1CDC4;
+      --font-francis: 'Playfair Display', serif;
+      --font-geist: 'Inter', sans-serif;
+      --space-xs: 0.5rem;
+      --space-sm: 1rem;
+      --space-md: 2rem;
+      --space-lg: 4rem;
+      --space-xl: 8rem;
+      --transition-smooth: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --transition-snap: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    /* ============================================================
+       RESET & BASE
+       ============================================================ */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    ::selection { background: var(--latao); color: var(--preto); }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--preto); }
+    ::-webkit-scrollbar-thumb { background: var(--ardoisia); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--latao); }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--preto);
+      color: var(--text-body);
+      font-family: var(--font-geist);
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4 {
+      font-family: var(--font-francis);
+      color: var(--creme);
+    }
+    a { text-decoration: none; color: inherit; transition: color var(--transition-smooth); }
+    img { max-width: 100%; display: block; }
+
+    /* ============================================================
+       CONTAINERS & TYPOGRAPHY
+       ============================================================ */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--space-sm);
+    }
+    .fluid-h1 {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 900;
+      line-height: .95;
+      letter-spacing: -.02em;
+    }
+    .fluid-h2 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 700;
+      margin-bottom: var(--space-sm);
+    }
+    .fluid-sub {
+      font-family: var(--font-geist);
+      font-size: clamp(.7rem, 1.5vw, .9rem);
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      color: var(--latao);
+      font-weight: 500;
+    }
+
+    /* ============================================================
+       COLOR REVEAL — EFEITO PREMIUM DE REVELAÇÃO
+       ============================================================ */
+    .color-reveal {
+      filter: grayscale(100%) sepia(30%) contrast(.9) brightness(.8);
+      transition: filter var(--transition-snap), transform var(--transition-snap);
+    }
+    @media (hover: hover) {
+      .color-reveal:hover {
+        filter: none;
+        transform: scale(1.02);
+      }
+    }
+    @media (hover: none) {
+      .color-reveal:active {
+        filter: none;
+        transform: scale(1.01);
+      }
+      .color-reveal {
+        transition: filter .3s ease;
+      }
+    }
+
+    /* ============================================================
+       NAVEGAÇÃO
+       ============================================================ */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 1.2rem 0;
+      background: rgba(5, 5, 5, .85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(181, 162, 122, .1);
+    }
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .logo {
+      font-family: var(--font-francis);
+      font-weight: 900;
+      font-size: 1.4rem;
+      color: var(--creme);
+      letter-spacing: .05em;
+      transition: color var(--transition-smooth);
+    }
+    .logo:hover { color: var(--latao); }
+    .logo span { color: var(--latao); }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+    .nav-links a {
+      font-size: .8rem;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: .1em;
+      color: var(--text-body);
+      transition: color var(--transition-smooth);
+    }
+    .nav-links a:hover { color: var(--latao); }
+
+    .lang-btn {
+      background: transparent;
+      border: 1px solid var(--ardoisia);
+      color: var(--latao);
+      font-family: var(--font-geist);
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: .35rem .75rem;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: all var(--transition-smooth);
+      white-space: nowrap;
+      min-width: 48px;
+      text-align: center;
+    }
+    .lang-btn:hover {
+      background: var(--latao);
+      color: var(--preto);
+      border-color: var(--latao);
+    }
+    .lang-btn:active { transform: scale(0.95); }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: 1px solid var(--ardoisia);
+      color: var(--creme);
+      padding: .5rem;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .menu-btn svg { width: 24px; height: 24px; fill: currentColor; }
+
+    /* ============================================================
+       HERO
+       ============================================================ */
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: var(--space-lg);
+      position: relative;
+      background: linear-gradient(to top, var(--preto) 0%, rgba(5, 5, 5, .6) 40%, rgba(5, 5, 5, .2) 100%);
+    }
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      z-index: -1;
+      opacity: .6;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      border-left: 2px solid var(--latao);
+      padding-left: var(--space-md);
+    }
+    .hero-latin {
+      font-family: var(--font-francis);
+      font-style: italic;
+      color: var(--latao);
+      margin-bottom: var(--space-xs);
+      font-size: 1.2rem;
+    }
+    .btn-primary {
+      display: inline-block;
+      margin-top: var(--space-md);
+      padding: 1rem 2.5rem;
+      background: transparent;
+      border: 1px solid var(--latao);
+      color: var(--latao);
+      font-family: var(--font-geist);
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      font-weight: 600;
+      transition: all var(--transition-smooth);
+    }
+    .btn-primary:hover {
+      background: var(--latao);
+      color: var(--preto);
+    }
+
+    /* ============================================================
+       ABOUT
+       ============================================================ */
+    #about {
+      padding: var(--space-xl) 0;
+      background: linear-gradient(180deg, var(--preto) 0%, #0a0a0a 100%);
+    }
+    .bio-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: var(--space-lg);
+      align-items: center;
+    }
+    .bio-img-wrapper {
+      position: relative;
+      border: 1px solid var(--ardoisia);
+      padding: .5rem;
+    }
+    .bio-img-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 100%;
+      height: 100%;
+      border: 1px solid var(--latao);
+      z-index: -1;
+      transition: all var(--transition-smooth);
+    }
+    .bio-img-wrapper:hover::after {
+      top: 15px;
+      left: 15px;
+    }
+    .bio-text h2 span {
+      display: block;
+      color: var(--latao);
+      font-family: var(--font-geist);
+      font-size: .8rem;
+      margin-bottom: var(--space-xs);
+    }
+    .bio-text p {
+      margin-bottom: var(--space-sm);
+      color: #aaa;
+      max-width: 500px;
+    }
+    .highlight {
+      color: var(--latao);
+      font-style: italic;
+    }
+
+    /* ============================================================
+       GLOSSARY — 8 CONCEITOS
+       ============================================================ */
+    #glossary {
+      padding: var(--space-lg) 0;
+      border-top: 1px solid var(--ardoisia);
+    }
+    .glossary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1px;
+      background: var(--ardoisia);
+      margin-top: var(--space-md);
+    }
+    .glossary-card {
+      background: var(--preto);
+      padding: var(--space-md);
+      transition: background var(--transition-smooth);
+    }
+    .glossary-card:hover { background: #0c0c0c; }
+    .glossary-card h4 {
+      color: var(--creme);
+      font-size: 1.1rem;
+      margin-bottom: .5rem;
+      border-bottom: 1px solid var(--ardoisia);
+      padding-bottom: .5rem;
+      display: inline-block;
+    }
+    .glossary-card p { font-size: .9rem; color: #888; }
+
+    /* ============================================================
+       POMBAGIRAS — CARDS
+       ============================================================ */
+    #pombagiras {
+      padding: var(--space-xl) 0;
+      background: #080808;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: var(--space-lg);
+    }
+    .section-header h2 { margin-bottom: 0; }
+    .category-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: var(--space-lg) 0 var(--space-md);
+      color: var(--latao);
+      font-family: var(--font-geist);
+      font-size: .75rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+    .category-divider::before,
+    .category-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--ardoisia);
+      margin: 0 1rem;
+    }
+    .pm-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-sm);
+    }
+    .pm-card {
+      position: relative;
+      background: var(--preto);
+      border: 1px solid #111;
+      overflow: hidden;
+      cursor: pointer;
+      transition: border-color var(--transition-smooth), transform var(--transition-smooth);
+    }
+    .pm-card:hover {
+      border-color: var(--latao);
+      transform: translateY(-4px);
+    }
+    .pm-img-container {
+      height: 280px;
+      overflow: hidden;
+    }
+    .pm-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .pm-info {
+      padding: var(--space-sm);
+      border-top: 1px solid #111;
+      background: var(--preto);
+    }
+    .pm-name {
+      font-family: var(--font-francis);
+      color: var(--creme);
+      font-size: 1.1rem;
+      margin-bottom: .2rem;
+    }
+    .pm-role {
+      font-size: .7rem;
+      color: var(--latao);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-weight: 600;
+    }
+    .pm-click-hint {
+      position: absolute;
+      top: .5rem;
+      right: .5rem;
+      background: rgba(5, 5, 5, .8);
+      border: 1px solid var(--latao);
+      color: var(--latao);
+      font-size: .6rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: .2rem .5rem;
+      border-radius: 2px;
+      font-family: var(--font-geist);
+      font-weight: 600;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity var(--transition-smooth);
+    }
+    .pm-card:hover .pm-click-hint {
+      opacity: 1;
+    }
+
+    /* ============================================================
+       MODAL
+       ============================================================ */
+    .pm-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      background: rgba(5, 5, 5, .96);
+      overflow-y: auto;
+      padding: var(--space-md);
+    }
+    .pm-modal-overlay.open {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .pm-modal {
+      background: #0d0d0d;
+      border: 1px solid var(--ardoisia);
+      max-width: 820px;
+      width: 100%;
+      margin: auto;
+      position: relative;
+      animation: modalIn .35s cubic-bezier(.25, .46, .45, .94);
+    }
+    @keyframes modalIn {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .pm-modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: 1px solid var(--ardoisia);
+      color: var(--creme);
+      width: 36px;
+      height: 36px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      border-radius: 2px;
+      transition: all var(--transition-smooth);
+      z-index: 1;
+    }
+    .pm-modal-close:hover {
+      background: var(--latao);
+      color: var(--preto);
+      border-color: var(--latao);
+    }
+    .pm-modal-img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+    .pm-modal-body { padding: var(--space-md); }
+    .pm-modal-eyebrow {
+      font-size: .7rem;
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      color: var(--latao);
+      font-weight: 600;
+      margin-bottom: .4rem;
+    }
+    .pm-modal-name {
+      font-family: var(--font-francis);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: var(--creme);
+      line-height: 1.1;
+      margin-bottom: var(--space-sm);
+      letter-spacing: -.02em;
+    }
+    .pm-modal-story {
+      color: #aaa;
+      font-size: .95rem;
+      line-height: 1.7;
+      margin-bottom: var(--space-md);
+      border-left: 2px solid var(--latao);
+      padding-left: var(--space-sm);
+    }
+    .pm-modal-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--ardoisia);
+      margin-bottom: var(--space-md);
+    }
+    .pm-modal-cell {
+      background: #0d0d0d;
+      padding: 1rem;
+    }
+    .pm-modal-cell-label {
+      font-size: .65rem;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--latao);
+      font-weight: 600;
+      margin-bottom: .3rem;
+    }
+    .pm-modal-cell-value {
+      font-size: .85rem;
+      color: var(--creme);
+      font-family: var(--font-francis);
+    }
+    .pm-modal-curiosity {
+      background: rgba(94, 26, 26, .15);
+      border-left: 2px solid var(--oxblood);
+      padding: var(--space-sm);
+      margin-top: var(--space-sm);
+    }
+    .pm-modal-curiosity-label {
+      font-size: .65rem;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--oxblood);
+      font-weight: 600;
+      margin-bottom: .4rem;
+    }
+    .pm-modal-curiosity p {
+      font-size: .88rem;
+      color: var(--text-body);
+      line-height: 1.65;
+    }
+    .pm-modal-alert {
+      margin-top: var(--space-sm);
+      font-size: .8rem;
+      color: var(--oxblood);
+      border-left: 2px solid var(--oxblood);
+      padding-left: .5rem;
+      font-style: italic;
+    }
+
+    /* ============================================================
+       MANIFESTO — TOM MAIS ESCURO E SEM EMOJI
+       ============================================================ */
+    #manifesto {
+      padding: var(--space-xl) 0;
+      background: linear-gradient(135deg, var(--latao-escuro2) 0%, var(--latao-escuro) 40%, var(--latao) 70%, var(--latao-escuro) 100%);
+      color: var(--creme);
+      position: relative;
+      overflow: hidden;
+    }
+    #manifesto::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at center, rgba(92, 80, 56, 0.5) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .manifesto-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .manifesto-title {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: var(--space-md);
+      letter-spacing: -.02em;
+      color: var(--creme);
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+    .manifesto-text {
+      font-family: var(--font-geist);
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: var(--space-sm);
+      font-weight: 300;
+      color: var(--creme);
+    }
+    .manifesto-text strong {
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+    .laroye {
+      font-family: var(--font-francis);
+      font-style: italic;
+      font-size: 2rem;
+      margin-top: var(--space-md);
+      opacity: .85;
+      color: var(--creme);
+    }
+
+    /* ============================================================
+       FAQ
+       ============================================================ */
+    #faq {
+      padding: var(--space-xl) 0;
+      background: var(--preto);
+    }
+    .faq-list {
+      max-width: 800px;
+      margin: var(--space-md) auto 0;
+    }
+    details {
+      border-bottom: 1px solid var(--ardoisia);
+    }
+    summary {
+      padding: 1.5rem 0;
+      cursor: pointer;
+      font-weight: 500;
+      color: var(--creme);
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: '+';
+      font-size: 1.5rem;
+      color: var(--latao);
+      font-weight: 300;
+      transition: transform var(--transition-smooth);
+    }
+    details[open] summary::after { transform: rotate(45deg); }
+    .faq-answer {
+      padding-bottom: 1.5rem;
+      color: #888;
+      font-size: .95rem;
+      max-width: 95%;
+    }
+
+    /* ============================================================
+       FOOTER — SIMPLIFICADO
+       ============================================================ */
+    footer {
+      padding: var(--space-lg) 0;
+      border-top: 1px solid var(--ardoisia);
+      text-align: center;
+      background: var(--preto);
+    }
+    .contact-grid {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-sm);
+      margin-top: var(--space-md);
+      flex-wrap: wrap;
+    }
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .8rem 1.5rem;
+      border: 1px solid var(--ardoisia);
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-weight: 500;
+      transition: all var(--transition-smooth);
+      color: var(--text-body);
+    }
+    .contact-link:hover {
+      border-color: var(--latao);
+      color: var(--latao);
+      background: rgba(181, 162, 122, .05);
+    }
+    .contact-link svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+    .copyright {
+      margin-top: var(--space-md);
+      font-size: .75rem;
+      color: #444;
+      font-family: var(--font-geist);
+      letter-spacing: .05em;
+    }
+
+    /* ============================================================
+       RESPONSIVIDADE — MOBILE PREMIUM
+       ============================================================ */
+    @media (max-width: 900px) {
+      .pm-grid { grid-template-columns: repeat(2, 1fr); }
+      .bio-grid { grid-template-columns: 1fr; gap: var(--space-md); }
+      .bio-img-wrapper { max-width: 400px; margin: 0 auto; }
+      .pm-modal-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(5, 5, 5, .98);
+        flex-direction: column;
+        padding: var(--space-md);
+        border-bottom: 1px solid var(--ardoisia);
+        gap: var(--space-sm);
+      }
+      .nav-links.active { display: flex; }
+      .menu-btn { display: block; }
+      header { padding-bottom: var(--space-md); }
+      .hero-content { padding-left: var(--space-sm); }
+      .glossary-grid { grid-template-columns: 1fr; }
+      .pm-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: .5rem;
+      }
+      .pm-img-container { height: 180px; }
+      .pm-info { padding: .5rem; }
+      .pm-name { font-size: .9rem; }
+      .pm-role { font-size: .6rem; }
+      .pm-click-hint { display: none; }
+      .pm-modal-img { height: 240px; }
+      .pm-modal-grid { grid-template-columns: repeat(2, 1fr); }
+      .manifesto-text { font-size: 1rem; }
+      .contact-grid { flex-direction: column; align-items: center; }
+      .contact-link { width: 100%; max-width: 280px; justify-content: center; }
+    }
+
+    @media (max-width: 480px) {
+      .pm-grid { grid-template-columns: 1fr 1fr; gap: 0.4rem; }
+      .pm-img-container { height: 140px; }
+      .pm-name { font-size: .8rem; }
+      .pm-role { font-size: .55rem; }
+      .pm-modal-overlay { padding: 0; }
+      .pm-modal { border-left: none; border-right: none; }
+      .pm-modal-grid { grid-template-columns: 1fr; }
+      .pm-modal-img { height: 200px; }
+      .pm-modal-body { padding: var(--space-sm); }
+      .pm-modal-story { font-size: .85rem; }
+      .hero-latin { font-size: 0.9rem; }
+      .fluid-h1 { font-size: 2rem; }
+      .btn-primary { padding: 0.8rem 1.5rem; font-size: 0.7rem; }
+      .category-divider { font-size: 0.6rem; }
+      .category-divider::before,
+      .category-divider::after { margin: 0 0.5rem; }
+      .manifesto-text { font-size: 0.9rem; }
+      .laroye { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVEGAÇÃO
+       ============================================================ -->
+  <nav>
+    <div class="container nav-content">
+      <a href="https://pombagiras.com/" class="logo" target="_blank" rel="noopener noreferrer">POMBAGIRAS<span>.COM</span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about" data-i18n="nav-about">About</a>
+        <a href="#glossary" data-i18n="nav-glossary">Glossary</a>
+        <a href="#pombagiras" data-i18n="nav-entities">Entities</a>
+        <a href="#faq" data-i18n="nav-truths">Truths</a>
+        <a href="#contact" data-i18n="nav-contact">Contact</a>
+        <button class="lang-btn" id="langBtn" data-lang="en">ES</button>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <header>
+    <img src="https://raw.githubusercontent.com/pombagiras/melusine-oficial/refs/heads/main/Ale%20Reds%20(3).png" alt="Alexia Melusine Hero" class="hero-bg color-reveal">
+    <div class="container hero-content">
+      <p class="hero-latin">"Ignis Aurum Probat"</p>
+      <h1 class="fluid-h1">SOULS ON FIRE,<br>IRON<br>LIGHT</h1>
+      <p class="fluid-sub" style="margin-top:1rem;color:#D1CDC4;" data-i18n="hero-sub">Strategic Spiritual Knowledge &amp; Visceral Art</p>
+      <a href="#about" class="btn-primary" data-i18n="hero-cta">Enter the Portal</a>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       ABOUT
+       ============================================================ -->
+  <section id="about">
+    <div class="container bio-grid">
+      <div class="bio-img-wrapper">
+        <img src="https://raw.githubusercontent.com/pombagiras/melusine-oficial/refs/heads/main/Ale%20Red%20(2).jpg" alt="Alexia Melusine Portrait" class="color-reveal">
+      </div>
+      <div class="bio-text">
+        <h2 class="fluid-h2"><span data-i18n="about-eyebrow">The Soul Behind The Veil</span>Alexia Melusine</h2>
+        <p style="color:#B5A27A;margin-bottom:2rem;font-style:italic;" data-i18n="about-latin">"Per aspera ad astra"</p>
+        <p data-i18n="about-p1">I am a fluid soul navigating between worlds, carrying the ancestral strength of the Pombagiras and the transformative light of trans identity.</p>
+        <p data-i18n="about-p2">My work unites spirituality, art, technology, and activism. I create digital portals that connect people to the wisdom of the crossroads, the beauty of non-conformity, and the power of authenticity.</p>
+        <p class="highlight" data-i18n="about-highlight">Respect is not optional — it is the minimum condition.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       GLOSSARY — 8 CONCEITOS
+       ============================================================ -->
+  <section id="glossary">
+    <div class="container">
+      <div class="section-header">
+        <p class="fluid-sub" data-i18n="glossary-eyebrow">Universal Terminology</p>
+        <h2 class="fluid-h2" data-i18n="glossary-title">Sacred Concepts</h2>
+      </div>
+      <div class="glossary-grid">
+        <div class="glossary-card"><h4>Axé</h4><p data-i18n="axe-def">The sacred vital force and spiritual power that permeates everything, maintaining the balance of the universe.</p></div>
+        <div class="glossary-card"><h4>Orixá</h4><p data-i18n="orixa-def">Nature deities representing natural forces and human aspects, such as Ogum (war), Iemanjá (seas), and Oxalá (creation).</p></div>
+        <div class="glossary-card"><h4>Egregore</h4><p data-i18n="egregore-def">A collective energetic field formed by the thoughts, feelings, and beliefs of a specific group.</p></div>
+        <div class="glossary-card"><h4>Ponto Riscado</h4><p data-i18n="ponto-def">A sacred drawing made with chalk (pemba) to invoke, identify, or anchor spiritual entities.</p></div>
+        <div class="glossary-card"><h4>Curimba</h4><p data-i18n="curimba-def">The musical band of the temple responsible for the vibrations that sustain the spiritual ceremony.</p></div>
+        <div class="glossary-card"><h4>Tronqueira</h4><p data-i18n="tronqueira-def">The energetic threshold where Exus and Pombagiras operate, usually represented by crossroads or gates.</p></div>
+        <div class="glossary-card"><h4>Atabaque</h4><p data-i18n="atabaque-def">Sacred drum of the curimba, responsible for marking the rhythm of the sung points and calling the entities. Made of wood and animal hide, its sound is considered a sonic offering that opens spiritual portals.</p></div>
+        <div class="glossary-card"><h4>Médium</h4><p data-i18n="medium-def">An individual who serves as a bridge between the physical and spiritual planes. The channel through which entities like Pombagiras, Exus, Caboclos, and Pretos-Velhos can transit and act in aid of humanity.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       POMBAGIRAS — 24 ENTIDADES
+       ============================================================ -->
+  <section id="pombagiras">
+    <div class="container">
+      <div class="section-header">
+        <p class="fluid-sub" data-i18n="pm-eyebrow">Hierarchy of Power</p>
+        <h2 class="fluid-h2" data-i18n="pm-title">The 24 Pombagiras</h2>
+      </div>
+      <div class="category-divider" data-i18n="cat-common">Common Entities</div>
+      <div class="pm-grid" id="grid-common"></div>
+      <div class="category-divider" data-i18n="cat-rare">Rare Entities</div>
+      <div class="pm-grid" id="grid-rare"></div>
+      <div class="category-divider" data-i18n="cat-ultra">Ultra Rare Entities</div>
+      <div class="pm-grid" id="grid-ultra"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MANIFESTO — TOM MAIS ESCURO E SEM EMOJI
+       ============================================================ -->
+  <section id="manifesto">
+    <div class="container manifesto-content">
+      <h2 class="manifesto-title" data-i18n="manifesto-title">NO ILLUSION</h2>
+      <p class="manifesto-text" data-i18n="manifesto-p1">Pombagira is not an internet aesthetic fantasy.<br>It is not an empty symbol.</p>
+      <p class="manifesto-text"><strong data-i18n="manifesto-p2">It is a line of work. It is spiritual structure. It is an operating force with a defined purpose.</strong></p>
+      <p class="manifesto-text" data-i18n="manifesto-p3">Those who seek must know: it is not about controlling these forces.<br>It is about not being crushed by them.</p>
+      <div class="laroye">Laroyê</div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FAQ
+       ============================================================ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-header">
+        <p class="fluid-sub" data-i18n="faq-eyebrow">Knowledge is Power</p>
+        <h2 class="fluid-h2" data-i18n="faq-title">Truths</h2>
+      </div>
+      <div class="faq-list">
+        <details><summary data-i18n="faq-q1">Is Pombagira a demon?</summary><div class="faq-answer" data-i18n="faq-a1">No. In Umbanda and Quimbanda, Pombagira is an evolved spiritual entity that works for good and karmic balance, acting in matters of justice and love.</div></details>
+        <details><summary data-i18n="faq-q2">Can I light a candle on my own?</summary><div class="faq-answer" data-i18n="faq-a2">It is not recommended without prior knowledge. It involves vibrational specifics that require a priest's guidance for your spiritual safety.</div></details>
+        <details><summary data-i18n="faq-q3">Why roses, champagne, and mirrors?</summary><div class="faq-answer" data-i18n="faq-a3">They symbolize love and beauty (Roses), the effervescence of life (Champagne), and truth/self-knowledge (Mirrors).</div></details>
+        <details><summary data-i18n="faq-q4">Do they punish people?</summary><div class="faq-answer" data-i18n="faq-a4">They do not act on a whim. They work with the law of return and spiritual justice. "Punishment" is merely the natural rebalancing against those who practiced injustice.</div></details>
+        <details><summary data-i18n="faq-q5">Relationship with the LGBTQIA+ community?</summary><div class="faq-answer" data-i18n="faq-a5">Historically, Afro-Brazilian religions were safe havens. By breaking gender and sexuality taboos, Pombagiras have become symbols of resistance and spiritual validation.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER — SIMPLIFICADO
+       ============================================================ -->
+  <footer id="contact">
+    <div class="container">
+      <p class="fluid-sub" style="margin-bottom:.5rem" data-i18n="footer-eyebrow">Get in Touch</p>
+      <h3 style="font-size:1.5rem;color:var(--creme);font-family:var(--font-francis)">Alexia Melusine</h3>
+      <div class="contact-grid">
+        <a href="https://t.me/pomba_giras" target="_blank" class="contact-link" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          Telegram
+        </a>
+        <a href="https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G" target="_blank" class="contact-link" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+        <a href="https://discord.gg/gWZP8R7Dqu" target="_blank" class="contact-link" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515a.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0a12.64 12.64 0 00-.617-1.25a.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057a19.9 19.9 0 005.993 3.03a.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128c.126-.094.252-.192.373-.291a.074.074 0 01.077-.01c3.927 1.793 8.18 1.793 12.061 0a.074.074 0 01.078.01c.12.099.247.197.373.291a.077.077 0 01-.006.128c-.591.362-1.214.668-1.872.892a.077.077 0 00-.041.106c.352.699.764 1.364 1.226 1.994a.078.078 0 00.084.028 19.839 19.839 0 005.993-3.03.078.078 0 00.032-.057c.5-5.083-.838-9.52-3.549-13.66a.061.061 0 00-.031-.027zM8.52 15.296c-1.187 0-2.165-.944-2.165-2.102 0-1.158.959-2.102 2.165-2.102 1.206 0 2.185.944 2.185 2.102 0 1.158-.979 2.102-2.185 2.102zm6.96 0c-1.187 0-2.165-.944-2.165-2.102 0-1.158.959-2.102 2.165-2.102 1.206 0 2.185.944 2.185 2.102 0 1.158-.979 2.102-2.185 2.102z"/></svg>
+          Discord
+        </a>
+      </div>
+      <div class="copyright">&copy; 2026 POMBAGIRAS.COM</div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       MODAL OVERLAY
+       ============================================================ -->
+  <div class="pm-modal-overlay" id="pmModalOverlay" role="dialog" aria-modal="true" aria-label="Pombagira Details">
+    <div class="pm-modal" id="pmModal"></div>
+  </div>
+
+  <!-- ============================================================
+       SCRIPT — TUDO INTEGRADO E FUNCIONAL
+       ============================================================ -->
+  <script>
+    // ============================================================
+    // 1. I18N — TRADUÇÕES (COM NOVOS CONCEITOS)
+    // ============================================================
+    const TRANSLATIONS = {
+      en: {
+        'nav-about': 'About', 'nav-glossary': 'Glossary', 'nav-entities': 'Entities',
+        'nav-truths': 'Truths', 'nav-contact': 'Contact',
+        'hero-sub': 'Strategic Spiritual Knowledge & Visceral Art',
+        'hero-cta': 'Enter the Portal',
+        'about-eyebrow': 'The Soul Behind The Veil',
+        'about-latin': '"Per aspera ad astra"',
+        'about-p1': 'I am a fluid soul navigating between worlds, carrying the ancestral strength of the Pombagiras and the transformative light of trans identity.',
+        'about-p2': 'My work unites spirituality, art, technology, and activism. I create digital portals that connect people to the wisdom of the crossroads, the beauty of non-conformity, and the power of authenticity.',
+        'about-highlight': 'Respect is not optional — it is the minimum condition.',
+        'glossary-eyebrow': 'Universal Terminology',
+        'glossary-title': 'Sacred Concepts',
+        'axe-def': 'The sacred vital force and spiritual power that permeates everything, maintaining the balance of the universe.',
+        'orixa-def': 'Nature deities representing natural forces and human aspects, such as Ogum (war), Iemanjá (seas), and Oxalá (creation).',
+        'egregore-def': 'A collective energetic field formed by the thoughts, feelings, and beliefs of a specific group.',
+        'ponto-def': 'A sacred drawing made with chalk (pemba) to invoke, identify, or anchor spiritual entities.',
+        'curimba-def': 'The musical band of the temple responsible for the vibrations that sustain the spiritual ceremony.',
+        'tronqueira-def': 'The energetic threshold where Exus and Pombagiras operate, usually represented by crossroads or gates.',
+        'atabaque-def': 'Sacred drum of the curimba, responsible for marking the rhythm of the sung points and calling the entities. Made of wood and animal hide, its sound is considered a sonic offering that opens spiritual portals.',
+        'medium-def': 'An individual who serves as a bridge between the physical and spiritual planes. The channel through which entities like Pombagiras, Exus, Caboclos, and Pretos-Velhos can transit and act in aid of humanity.',
+        'pm-eyebrow': 'Hierarchy of Power',
+        'pm-title': 'The 24 Pombagiras',
+        'cat-common': 'Common Entities',
+        'cat-rare': 'Rare Entities',
+        'cat-ultra': 'Ultra Rare Entities',
+        'modal-day': 'Sacred Day',
+        'modal-colors': 'Colors',
+        'modal-candles': 'Candles',
+        'modal-moon': 'Moon Phase',
+        'modal-offering': 'Offering Time',
+        'modal-curiosity': 'Curiosity',
+        'modal-alert': 'Warning',
+        'click-hint': 'Details',
+        'manifesto-title': 'NO ILLUSION',
+        'manifesto-p1': 'Pombagira is not an internet aesthetic fantasy.<br>It is not an empty symbol.',
+        'manifesto-p2': 'It is a line of work. It is spiritual structure. It is an operating force with a defined purpose.',
+        'manifesto-p3': 'Those who seek must know: it is not about controlling these forces.<br>It is about not being crushed by them.',
+        'faq-eyebrow': 'Knowledge is Power',
+        'faq-title': 'Truths',
+        'faq-q1': 'Is Pombagira a demon?',
+        'faq-a1': 'No. In Umbanda and Quimbanda, Pombagira is an evolved spiritual entity that works for good and karmic balance, acting in matters of justice and love.',
+        'faq-q2': 'Can I light a candle on my own?',
+        'faq-a2': 'It is not recommended without prior knowledge. It involves vibrational specifics that require a priest\'s guidance for your spiritual safety.',
+        'faq-q3': 'Why roses, champagne, and mirrors?',
+        'faq-a3': 'They symbolize love and beauty (Roses), the effervescence of life (Champagne), and truth/self-knowledge (Mirrors).',
+        'faq-q4': 'Do they punish people?',
+        'faq-a4': 'They do not act on a whim. They work with the law of return and spiritual justice. "Punishment" is merely the natural rebalancing against those who practiced injustice.',
+        'faq-q5': 'Relationship with the LGBTQIA+ community?',
+        'faq-a5': 'Historically, Afro-Brazilian religions were safe havens. By breaking gender and sexuality taboos, Pombagiras have become symbols of resistance and spiritual validation.',
+        'footer-eyebrow': 'Get in Touch',
+      },
+      es: {
+        'nav-about': 'Sobre', 'nav-glossary': 'Glosario', 'nav-entities': 'Entidades',
+        'nav-truths': 'Verdades', 'nav-contact': 'Contacto',
+        'hero-sub': 'Conocimiento Espiritual Estratégico & Arte Visceral',
+        'hero-cta': 'Entrar al Portal',
+        'about-eyebrow': 'El Alma Detrás del Velo',
+        'about-latin': '"Per aspera ad astra"',
+        'about-p1': 'Soy un alma fluida que navega entre mundos, portando la fuerza ancestral de las Pombagiras y la luz transformadora de la identidad trans.',
+        'about-p2': 'Mi trabajo une espiritualidad, arte, tecnología y activismo. Creo portales digitales que conectan a las personas con la sabiduría de las encrucijadas, la belleza de la inconformidad y el poder de la autenticidad.',
+        'about-highlight': 'El respeto no es opcional — es la condición mínima.',
+        'glossary-eyebrow': 'Terminología Universal',
+        'glossary-title': 'Conceptos Sagrados',
+        'axe-def': 'La fuerza vital sagrada y el poder espiritual que lo permea todo, manteniendo el equilibrio del universo.',
+        'orixa-def': 'Deidades de la naturaleza que representan fuerzas naturales y aspectos humanos, como Ogum (guerra), Iemanjá (mares) y Oxalá (creación).',
+        'egregore-def': 'Un campo energético colectivo formado por los pensamientos, sentimientos y creencias de un grupo específico.',
+        'ponto-def': 'Un dibujo sagrado hecho con tiza (pemba) para invocar, identificar o anclar entidades espirituales.',
+        'curimba-def': 'La banda musical del templo responsable de las vibraciones que sustentan la ceremonia espiritual.',
+        'tronqueira-def': 'El umbral energético donde operan Exus y Pombagiras, usualmente representado por encrucijadas o puertas.',
+        'atabaque-def': 'Tambor sagrado de la curimba, responsable de marcar el ritmo de los puntos cantados y llamar a las entidades. Hecho de madera y cuero animal, su sonido es considerado una ofrenda sonora que abre portales espirituales.',
+        'medium-def': 'Un individuo que sirve como puente entre el plano físico y el espiritual. El canal a través del cual entidades como Pombagiras, Exus, Caboclos y Pretos-Velhos pueden transitar y actuar en ayuda de la humanidad.',
+        'pm-eyebrow': 'Jerarquía del Poder',
+        'pm-title': 'Las 24 Pombagiras',
+        'cat-common': 'Entidades Comunes',
+        'cat-rare': 'Entidades Raras',
+        'cat-ultra': 'Entidades Ultra Raras',
+        'modal-day': 'Día Sagrado',
+        'modal-colors': 'Colores',
+        'modal-candles': 'Velas',
+        'modal-moon': 'Fase Lunar',
+        'modal-offering': 'Hora de Ofrendas',
+        'modal-curiosity': 'Curiosidad',
+        'modal-alert': 'Advertencia',
+        'click-hint': 'Detalles',
+        'manifesto-title': 'SIN ILUSIÓN',
+        'manifesto-p1': 'Pombagira no es una fantasía estética de internet.<br>No es un símbolo vacío.',
+        'manifesto-p2': 'Es una línea de trabajo. Es estructura espiritual. Es una fuerza operativa con un propósito definido.',
+        'manifesto-p3': 'Quien busca debe saber: no se trata de controlar estas fuerzas.<br>Se trata de no ser aplastado por ellas.',
+        'faq-eyebrow': 'El Conocimiento es Poder',
+        'faq-title': 'Verdades',
+        'faq-q1': '¿Es Pombagira un demonio?',
+        'faq-a1': 'No. En Umbanda y Quimbanda, Pombagira es una entidad espiritual evolucionada que trabaja por el bien y el equilibrio kármico, actuando en asuntos de justicia y amor.',
+        'faq-q2': '¿Puedo encender una vela solo?',
+        'faq-a2': 'No se recomienda sin conocimiento previo. Involucra especificidades vibracionales que requieren la guía de un sacerdote para su seguridad espiritual.',
+        'faq-q3': '¿Por qué rosas, champán y espejos?',
+        'faq-a3': 'Simbolizan el amor y la belleza (Rosas), la efervescencia de la vida (Champán) y la verdad/autoconocimiento (Espejos).',
+        'faq-q4': '¿Castigan a las personas?',
+        'faq-a4': 'No actúan por capricho. Trabajan con la ley del retorno y la justicia espiritual. El "castigo" es simplemente el reequilibrio natural contra quienes practicaron la injusticia.',
+        'faq-q5': '¿Relación con la comunidad LGBTQIA+?',
+        'faq-a5': 'Históricamente, las religiones afrobrasileñas fueron refugios seguros. Al romper tabúes de género y sexualidad, las Pombagiras se han convertido en símbolos de resistencia y validación espiritual.',
+        'footer-eyebrow': 'Contáctanos',
+      }
+    };
+
+    let currentLang = 'en';
+
+    function t(key) {
+      return TRANSLATIONS[currentLang][key] || TRANSLATIONS['en'][key] || key;
+    }
+
+    function applyTranslations(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+      const tr = TRANSLATIONS[lang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (tr[key] !== undefined) el.innerHTML = tr[key];
+      });
+      const btn = document.getElementById('langBtn');
+      if (btn) {
+        btn.textContent = lang === 'en' ? 'ES' : 'EN';
+        btn.setAttribute('data-lang', lang);
+      }
+      if (typeof updateCardRoles === 'function') updateCardRoles();
+      if (window._openModalId && typeof renderModal === 'function') {
+        renderModal(window._openModalId);
+      }
+    }
+
+    function toggleLang() {
+      const newLang = currentLang === 'en' ? 'es' : 'en';
+      applyTranslations(newLang);
+    }
+
+    // ============================================================
+    // 2. DADOS DAS 24 POMBAGIRAS (COMPLETOS)
+    // ============================================================
+    window.PM_COMMON_1 = [
+      {
+        id: 'maria-padilha',
+        img: 'https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/maria_padilha_1.png',
+        role: { en: 'Command / Royalty', es: 'Mando / Realeza' },
+        name: 'Maria Padilha',
+        day: { en: 'Monday', es: 'Lunes' },
+        colors: { en: 'Red & Black', es: 'Rojo y Negro' },
+        candles: { en: 'Red & Black', es: 'Rojo y Negro' },
+        moon: { en: 'Full Moon', es: 'Luna Llena' },
+        offering: { en: 'Midnight', es: 'Medianoche' },
+        story: {
+          en: 'Queen of the Crossroads and the most celebrated Pombagira in Brazil. She governs matters of love, power, and justice with an iron will. Linked to the historical figure of María de Padilla, mistress of King Peter I of Castile, she embodies feminine sovereignty and the refusal to be diminished.',
+          es: 'Reina de las Encrucijadas y la Pombagira más celebrada de Brasil. Gobierna asuntos de amor, poder y justicia con voluntad de hierro. Vinculada a la figura histórica de María de Padilla, amante del rey Pedro I de Castilla, encarna la soberanía femenina y la negativa a ser disminuida.'
+        },
+        curiosity: {
+          en: 'Maria Padilha is believed to have been a real woman — María de Padilla (1334–1361) — whose spirit evolved over centuries into one of the most powerful spiritual forces in Afro-Brazilian tradition.',
+          es: 'Se cree que Maria Padilha fue una mujer real — María de Padilla (1334–1361) — cuyo espíritu evolucionó durante siglos hasta convertirse en una de las fuerzas espirituales más poderosas de la tradición afrobrasileña.'
+        },
+        alert: { en: 'Demands noble posture and extreme respect.', es: 'Exige postura noble y respeto extremo.' }
+      },
+      {
+        id: 'maria-mulambo',
+        img: 'https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/maria_mulambo_1%20(1).png',
+        role: { en: 'Healing / Humility', es: 'Sanación / Humildad' },
+        name: 'Maria Mulambo',
+        day: { en: 'Monday', es: 'Lunes' },
+        colors: { en: 'Purple & Black', es: 'Morado y Negro' },
+        candles: { en: 'Purple & Black', es: 'Morado y Negro' },
+        moon: { en: 'Waning Moon', es: 'Luna Menguante' },
+        offering: { en: 'Dusk (6 pm)', es: 'Atardecer (6 pm)' },
+        story: {
+          en: 'She is the Pombagira of the marginalized and forgotten. Working with rags and scraps, she heals those society discards. Her apparent poverty is her greatest deceit — beneath the tatters lives a power that humbles the proud.',
+          es: 'Es la Pombagira de los marginados y olvidados. Trabajando con harapos y sobras, sana a quienes la sociedad descarta. Su aparente pobreza es su mayor engaño — bajo los jirones vive un poder que humilla a los orgullosos.'
+        },
+        curiosity: {
+          en: 'Her name "Mulambo" (rag/scrap) is deliberately ironic: those who underestimate her based on appearance are the ones she tests most severely.',
+          es: 'Su nombre "Mulambo" (harapo/despojo) es deliberadamente irónico: quienes la subestiman por su apariencia son los que ella pone a prueba con mayor severidad.'
+        },
+        alert: { en: 'Do not underestimate her by her appearance.', es: 'No la subestimes por su apariencia.' }
+      },
+      {
+        id: 'maria-quiteria',
+        img: 'https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/maria_quiteria_1.png',
+        role: { en: 'War / Protection', es: 'Guerra / Protección' },
+        name: 'Maria Quitéria',
+        day: { en: 'Tuesday', es: 'Martes' },
+        colors: { en: 'Red & Gold', es: 'Rojo y Dorado' },
+        candles: { en: 'Red', es: 'Rojo' },
+        moon: { en: 'Waxing Moon', es: 'Luna Creciente' },
+        offering: { en: 'Midnight to 3 am', es: 'Medianoche a las 3 am' },
+        story: {
+          en: 'A warrior Pombagira linked to battle and fierce protection. She guards the vulnerable with a ferocity that mirrors her namesake — Brazil\'s legendary female soldier who fought disguised as a man in the 19th century.',
+          es: 'Una Pombagira guerrera vinculada a la batalla y la protección feroz. Protege a los vulnerables con una ferocidad que refleja a su homónima — la legendaria soldado brasileña que luchó disfrazada de hombre en el siglo XIX.'
+        },
+        curiosity: {
+          en: 'Maria Quitéria\'s energy is invoked especially against injustice and physical threats. Her Tuesday is the day of Mars — god of war — reinforcing her combative nature.',
+          es: 'La energía de Maria Quitéria se invoca especialmente contra la injusticia y las amenazas físicas. Su martes es el día de Marte — dios de la guerra — reforzando su naturaleza combativa.'
+        },
+        alert: { en: 'Fierce guardian — combat energy.', es: 'Guardiana feroz — energía de combate.' }
+      },
+      {
+        id: 'rosa-caveira',
+        img: 'https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/rosa_caveira_1.png',
+        role: { en: 'Justice / Death', es: 'Justicia / Muerte' },
+        name: 'Rosa Caveira',
+        day: { en: 'Friday', es: 'Viernes' },
+        colors: { en: 'Black & Deep Red', es: 'Negro y Rojo Oscuro' },
+        candles: { en: 'Black', es: 'Negro' },
+        moon: { en: 'New Moon', es: 'Luna Nueva' },
+        offering: { en: 'Midnight exactly', es: 'Medianoche exacta' },
+        story: {
+          en: 'She stands at the border between the living and the dead. Rosa Caveira (Rose Skull) governs karmic justice and final passages. She does not hasten death — she ensures each crossing is righteous. Her roses are black because beauty and ending share a root.',
+          es: 'Se sitúa en la frontera entre los vivos y los muertos. Rosa Caveira (Rosa Calavera) gobierna la justicia kármica y los pasajes finales. No apresura la muerte — garantiza que cada cruce sea justo. Sus rosas son negras porque la belleza y el fin comparten una raíz.'
+        },
+        curiosity: {
+          en: 'Rosa Caveira is one of the few Pombagiras who never laughs during manifestation. Practitioners say her silence carries more power than any word she could speak.',
+          es: 'Rosa Caveira es una de las pocas Pombagiras que nunca ríe durante la manifestación. Los practicantes dicen que su silencio lleva más poder que cualquier palabra que pudiera hablar.'
+        },
+        alert: { en: 'Very heavy energy — restricted ceremonial use.', es: 'Energía muy pesada — uso ceremonial restringido.' }
+      },
+      {
+        id: 'dama-da-noite',
+        img: 'https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/dama_da_noite_1.png',
+        role: { en: 'Mystery / Occult', es: 'Misterio / Ocultismo' },
+        name: 'Dama da Noite',
+        day: { en: 'Friday', es: 'Viernes' },
+        colors: { en: 'Lilac & Silver', es: 'Lila y Plata' },
+        candles: { en: 'Lilac & White', es: 'Lila y Blanco' },
+        moon: { en: 'Waning Crescent', es: 'Cuarto Menguante' },
+        offering: { en: '11 pm to midnight', es: '11 pm a medianoche' },
+        story: {
+          en: 'She is the perfume in the dark — sensed before seen. Dama da Noite rules hidden knowledge, nocturnal intuition, and the occult sciences. She whispers truths that daylight cannot bear and works through dreams, omens, and scent.',
+          es: 'Es el perfume en la oscuridad — sentida antes de ser vista. Dama da Noite rige el conocimiento oculto, la intuición nocturna y las ciencias ocultas. Susurra verdades que la luz del día no puede soportar y trabaja a través de sueños, presagios y aromas.'
+        },
+        curiosity: {
+          en: 'Her name comes from the Cestrum nocturnum flower — a tropical plant whose scent only releases at night. Practitioners often report smelling jasmine or night-blooming flowers during her manifestations.',
+          es: 'Su nombre proviene de la flor Cestrum nocturnum — una planta tropical cuyo aroma solo se libera de noche. Los practicantes frecuentemente reportan olor a jazmín o flores nocturnas durante sus manifestaciones.'
+        }
+      },
+      {
+        id: 'sete-saias',
+        img: 'https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/sete_saias_1.png',
+        role: { en: 'Joy / Intensity', es: 'Alegría / Intensidad' },
+        name: 'Sete Saias',
+        day: { en: 'Saturday', es: 'Sábado' },
+        colors: { en: 'Seven Colors', es: 'Siete Colores' },
+        candles: { en: 'Seven-colored', es: 'Siete Colores' },
+        moon: { en: 'Full Moon', es: 'Luna Llena' },
+        offering: { en: 'Saturday at midnight', es: 'Sábado a medianoche' },
+        story: {
+          en: 'Each of her seven skirts represents a different aspect of feminine power — love, sensuality, war, healing, joy, mourning, and rebirth. She spins endlessly at the crossroads, and with each turn a different face emerges.',
+          es: 'Cada una de sus siete faldas representa un aspecto diferente del poder femenino — amor, sensualidad, guerra, sanación, alegría, luto y renacimiento. Gira sin parar en la encrucijada, y con cada vuelta emerge una cara diferente.'
+        },
+        curiosity: {
+          en: 'The number seven is sacred in Umbanda: seven lines of work, seven Orixás, seven chakras. Sete Saias embodies all seven feminine forces simultaneously — making her one of the most complete entities in the tradition.',
+          es: 'El número siete es sagrado en Umbanda: siete líneas de trabajo, siete Orixás, siete chakras. Sete Saias encarna las siete fuerzas femeninas simultáneamente — convirtiéndola en una de las entidades más completas de la tradición.'
+        }
+      }
+    ];
+
+    window.PM_COMMON_2 = [
+      {
+        id: 'cigana',
+        img: 'https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/cigana_1.png',
+        role: { en: 'Freedom / Prosperity', es: 'Libertad / Prosperidad' },
+        name: 'Pombagira Cigana',
+        day: { en: 'Thursday', es: 'Jueves' },
+        colors: { en: 'Gold & Emerald', es: 'Dorado y Esmeralda' },
+        candles: { en: 'Gold & Green', es: 'Dorado y Verde' },
+        moon: { en: 'Waxing Moon', es: 'Luna Creciente' },
+        offering: { en: 'Thursday at 9 pm', es: 'Jueves a las 9 pm' },
+        story: {
+          en: 'She carries the nomadic spirit of the Romani people — free, untameable, and richly wise. Pombagira Cigana governs travel, abundance, romantic fortune, and the arts of divination. She reads the future in cards, flames, and the movement of coins.',
+          es: 'Lleva el espíritu nómada del pueblo Romaní — libre, indomable y profundamente sabia. Pombagira Cigana gobierna los viajes, la abundancia, la fortuna romántica y las artes de la adivinación. Lee el futuro en cartas, llamas y el movimiento de monedas.'
+        },
+        curiosity: {
+          en: 'She is unique among Pombagiras for her strong connection to Tarot and cartomancy. Many Umbanda mediums say she was a genuine Romani woman in a past life — the only Pombagira with European rather than Afro-Iberian roots.',
+          es: 'Es única entre las Pombagiras por su fuerte conexión con el Tarot y la cartomancia. Muchos médiums de Umbanda dicen que fue una auténtica mujer Romaní en una vida pasada — la única Pombagira con raíces europeas en lugar de afroibéricas.'
+        }
+      },
+      {
+        id: 'maria-navalha',
+        img: 'https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/maria_navalha_1.png',
+        role: { en: 'Rogue / Street', es: 'Pícara / Calle' },
+        name: 'Maria Navalha',
+        day: { en: 'Monday', es: 'Lunes' },
+        colors: { en: 'Red & Silver', es: 'Rojo y Plata' },
+        candles: { en: 'Red', es: 'Rojo' },
+        moon: { en: 'Waxing Moon', es: 'Luna Creciente' },
+        offering: { en: 'Midnight', es: 'Medianoche' },
+        story: {
+          en: 'Fast, sharp, and merciless to hypocrisy. Maria Navalha (Mary Razor) is the blade that cuts illusions and lies. She emerged from the streets and brothels of old Brazil, protecting those no law would defend.',
+          es: 'Rápida, afilada e implacable con la hipocresía. Maria Navalha (María Navaja) es la hoja que corta ilusiones y mentiras. Emergió de las calles y burdeles del antiguo Brasil, protegiendo a quienes ninguna ley defendería.'
+        },
+        curiosity: {
+          en: 'The razor she carries is not a weapon of aggression but of precision — she severs what is rotten so the healthy can survive. Mediums report her manifestations are always the briefest and most direct of all Pombagiras.',
+          es: 'La navaja que lleva no es un arma de agresión sino de precisión — corta lo podrido para que lo sano pueda sobrevivir. Los médiums reportan que sus manifestaciones son siempre las más breves y directas de todas las Pombagiras.'
+        },
+        alert: { en: 'Fast and direct cut — no room for sentimentality.', es: 'Corte rápido y directo — sin lugar para la sentimentalidad.' }
+      },
+      {
+        id: 'da-praia',
+        img: 'https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_praia_1.png',
+        role: { en: 'Emotion / Water', es: 'Emoción / Agua' },
+        name: 'Pombagira da Praia',
+        day: { en: 'Saturday', es: 'Sábado' },
+        colors: { en: 'Turquoise & Silver', es: 'Turquesa y Plata' },
+        candles: { en: 'Blue & White', es: 'Azul y Blanco' },
+        moon: { en: 'Full Moon', es: 'Luna Llena' },
+        offering: { en: 'Sunset or Sunrise at the shore', es: 'Atardecer o Amanecer en la orilla' },
+        story: {
+          en: 'She lives where land ends and sea begins — the threshold of all human longing. Pombagira da Praia governs the tides of emotion: desire, grief, nostalgia, and the courage to begin again after being undone by love.',
+          es: 'Vive donde termina la tierra y comienza el mar — el umbral de todo anhelo humano. Pombagira da Praia gobierna las mareas de la emoción: el deseo, el dolor, la nostalgia y el coraje de comenzar de nuevo después de ser deshecho por el amor.'
+        },
+        curiosity: {
+          en: 'She shares the shoreline with Iemanjá but rules a different domain — where Iemanjá is maternal and cosmic, Da Praia is intimate and romantic. Offerings to her must always be left where waves touch sand.',
+          es: 'Comparte la orilla con Iemanjá pero rige un dominio diferente — donde Iemanjá es maternal y cósmica, Da Praia es íntima y romántica. Las ofrendas siempre deben dejarse donde las olas tocan la arena.'
+        }
+      },
+      {
+        id: 'maria-farrapo',
+        img: 'https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/maria_farrapo_1.png',
+        role: { en: 'Sanity / Chaos', es: 'Cordura / Caos' },
+        name: 'Maria Farrapo',
+        day: { en: 'Monday', es: 'Lunes' },
+        colors: { en: 'Black & Ochre', es: 'Negro y Ocre' },
+        candles: { en: 'Black & Brown', es: 'Negro y Marrón' },
+        moon: { en: 'Dark Moon', es: 'Luna Oscura' },
+        offering: { en: 'Monday before sunrise', es: 'Lunes antes del amanecer' },
+        story: {
+          en: 'Maria Farrapo (Mary Tatter) works at the edge of madness — not to cause it, but to navigate it. She is the Pombagira of those who have been broken by life and pieced themselves back together. Her chaos is organized; her madness, strategic.',
+          es: 'Maria Farrapo (María Andrajo) trabaja al borde de la locura — no para causarla, sino para navegarla. Es la Pombagira de quienes han sido quebrados por la vida y se han vuelto a reconstruir. Su caos es organizado; su locura, estratégica.'
+        },
+        curiosity: {
+          en: 'She is particularly sought by those going through mental health crises or spiritual fragmentation. Unlike other Pombagiras, she rarely speaks during ceremonies — she communicates through symbolic gestures and objects placed at crossroads.',
+          es: 'Es buscada particularmente por quienes atraviesan crisis de salud mental o fragmentación espiritual. A diferencia de otras Pombagiras, raramente habla durante las ceremonias — se comunica a través de gestos simbólicos y objetos dejados en las encrucijadas.'
+        }
+      },
+      {
+        id: 'menina',
+        img: 'https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/menina_1.png',
+        role: { en: 'Renewal / Innocence', es: 'Renovación / Inocencia' },
+        name: 'Pombagira Menina',
+        day: { en: 'Sunday', es: 'Domingo' },
+        colors: { en: 'White & Pink', es: 'Blanco y Rosa' },
+        candles: { en: 'White', es: 'Blanco' },
+        moon: { en: 'New Moon', es: 'Luna Nueva' },
+        offering: { en: 'Sunday morning', es: 'Domingo por la mañana' },
+        story: {
+          en: 'The youngest face of the Pombagira line, she carries the power of beginnings. Menina (Girl) governs new love, creative renewal, and the reclaiming of innocence lost to trauma. Her youth is not weakness — it is unwritten potential.',
+          es: 'El rostro más joven de la línea Pombagira, lleva el poder de los comienzos. Menina (Niña) gobierna el nuevo amor, la renovación creativa y la recuperación de la inocencia perdida por el trauma. Su juventud no es debilidad — es potencial no escrito.'
+        },
+        curiosity: {
+          en: 'Pombagira Menina is the only entity in this line who accepts offerings in the morning — all others work at night. This signals her unique alignment with renewal, light, and beginnings rather than secrets and shadows.',
+          es: 'Pombagira Menina es la única entidad de esta línea que acepta ofrendas por la mañana — todas las demás trabajan de noche. Esto señala su alineación única con la renovación, la luz y los comienzos en lugar de secretos y sombras.'
+        }
+      },
+      {
+        id: 'da-figueira',
+        img: 'https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_figueira_1.png',
+        role: { en: 'Roots / Ancestry', es: 'Raíces / Ancestralidad' },
+        name: 'Pombagira da Figueira',
+        day: { en: 'Monday', es: 'Lunes' },
+        colors: { en: 'Green & Brown', es: 'Verde y Marrón' },
+        candles: { en: 'Green', es: 'Verde' },
+        moon: { en: 'Waxing Gibbous', es: 'Gibosa Creciente' },
+        offering: { en: 'Monday at the roots of a tree', es: 'Lunes junto a raíces de árbol' },
+        story: {
+          en: 'She is rooted — literally. Da Figueira (Of the Fig Tree) works through ancestral memory, earth medicine, and the lineage of blood. She heals generational wounds and reconnects the living with the wisdom of those who came before.',
+          es: 'Está enraizada — literalmente. Da Figueira (De la Higuera) trabaja a través de la memoria ancestral, la medicina de la tierra y el linaje de sangre. Sana heridas generacionales y reconecta a los vivos con la sabiduría de quienes vinieron antes.'
+        },
+        curiosity: {
+          en: 'The fig tree (Ficus carica) is sacred across multiple traditions — in Candomblé, in Mediterranean paganism, and in early Christianity. Da Figueira draws on all these roots, making her one of the most cross-culturally resonant Pombagiras.',
+          es: 'La higuera (Ficus carica) es sagrada en múltiples tradiciones — en Candomblé, en el paganismo mediterráneo y en el cristianismo temprano. Da Figueira se nutre de todas estas raíces, convirtiéndola en una de las Pombagiras con mayor resonancia intercultural.'
+        }
+      }
+    ];
+
+    window.PM_RARE = [
+      {
+        id: 'das-almas',
+        img: 'https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/das_almas_1.png',
+        role: { en: 'Cemetery Connection', es: 'Conexión con el Cementerio' },
+        name: 'Pombagira das Almas',
+        day: { en: 'Friday', es: 'Viernes' },
+        colors: { en: 'White & Black', es: 'Blanco y Negro' },
+        candles: { en: 'White & Black', es: 'Blanco y Negro' },
+        moon: { en: 'New Moon', es: 'Luna Nueva' },
+        offering: { en: 'Friday at the cemetery gate', es: 'Viernes en la puerta del cementerio' },
+        story: {
+          en: 'She is the intermediary between the living and those who have passed. Pombagira das Almas works at cemetery entrances, delivering messages, resolving unfinished business, and granting peace to wandering souls.',
+          es: 'Es la intermediaria entre los vivos y los que han partido. Pombagira das Almas trabaja en las entradas de los cementerios, entregando mensajes, resolviendo asuntos pendientes y concediendo paz a las almas errantes.'
+        },
+        curiosity: {
+          en: 'Unlike most Pombagiras who operate at street crossroads, Das Almas specifically requires cemetery crossroads — the internal paths where four cemetery walkways meet. This makes her one of the hardest entities to work with correctly.',
+          es: 'A diferencia de la mayoría de las Pombagiras que operan en encrucijadas de calles, Das Almas requiere específicamente encrucijadas de cementerio — los caminos internos donde se cruzan cuatro senderos. Esto la convierte en una de las entidades más difíciles de trabajar correctamente.'
+        }
+      },
+      {
+        id: 'sete-encruzilhadas',
+        img: 'https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/sete_encruzilhadas_1.png',
+        role: { en: 'Path Opening', es: 'Abridor de Caminos' },
+        name: 'Sete Encruzilhadas',
+        day: { en: 'Monday', es: 'Lunes' },
+        colors: { en: 'Red & Black', es: 'Rojo y Negro' },
+        candles: { en: 'Red & Black', es: 'Rojo y Negro' },
+        moon: { en: 'Full Moon', es: 'Luna Llena' },
+        offering: { en: 'Midnight at a 7-road junction', es: 'Medianoche en encrucijada de 7 caminos' },
+        story: {
+          en: 'Seven crossroads, seven paths, seven destinies. She does not choose the road for you — she opens all seven and shows you the true cost of each. Sete Encruzilhadas is the Pombagira of radical decision-making.',
+          es: 'Siete encrucijadas, siete caminos, siete destinos. Ella no elige el camino por ti — abre los siete y te muestra el verdadero costo de cada uno. Sete Encruzilhadas es la Pombagira de la toma radical de decisiones.'
+        },
+        curiosity: {
+          en: 'She is only sought at intersections of exactly seven roads — extremely rare in urban geometry. Practitioners travel long distances to find such locations, making petitions to her inherently more committed than those to other entities.',
+          es: 'Solo se le busca en intersecciones de exactamente siete caminos — extremadamente raras en la geometría urbana. Los practicantes viajan largas distancias para encontrar tales lugares, lo que hace que las peticiones a ella sean inherentemente más comprometidas.'
+        }
+      },
+      {
+        id: 'da-lua',
+        img: 'https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_lua_1.png',
+        role: { en: 'Lunar Magic', es: 'Magia Lunar' },
+        name: 'Pombagira da Lua',
+        day: { en: 'Monday', es: 'Lunes' },
+        colors: { en: 'Silver & White', es: 'Plata y Blanco' },
+        candles: { en: 'Silver & White', es: 'Plata y Blanco' },
+        moon: { en: 'Full Moon only', es: 'Solo Luna Llena' },
+        offering: { en: 'Full moon night, outdoors', es: 'Noche de luna llena, al aire libre' },
+        story: {
+          en: 'She manifests only under the full moon and channels pure lunar energy: cycles, intuition, feminine tides, and the power of illusion. Da Lua sees through facades with the cold clarity of moonlight.',
+          es: 'Se manifiesta solo bajo la luna llena y canaliza energía lunar pura: ciclos, intuición, mareas femeninas y el poder de la ilusión. Da Lua ve a través de las fachadas con la fría claridad de la luz de la luna.'
+        },
+        curiosity: {
+          en: 'Pombagira da Lua is the only entity in the line whose power literally waxes and wanes with the lunar calendar. Practitioners report that petitions made on the night of a lunar eclipse to her carry ten times the normal force.',
+          es: 'Pombagira da Lua es la única entidad de la línea cuyo poder crece y mengua literalmente con el calendario lunar. Los practicantes reportan que las peticiones hechas en la noche de un eclipse lunar a ella llevan diez veces la fuerza normal.'
+        }
+      },
+      {
+        id: 'das-trevas',
+        img: 'https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/das_trevas_1.png',
+        role: { en: 'Dark Magic (Defense)', es: 'Magia Oscura (Defensa)' },
+        name: 'Pombagira das Trevas',
+        day: { en: 'Saturday', es: 'Sábado' },
+        colors: { en: 'Black & Crimson', es: 'Negro y Carmesí' },
+        candles: { en: 'Black', es: 'Negro' },
+        moon: { en: 'Dark Moon', es: 'Luna Oscura' },
+        offering: { en: 'After midnight Saturday', es: 'Después de medianoche del sábado' },
+        story: {
+          en: 'She inhabits the absolute darkness that exists before creation — not evil, but primordial potential. Das Trevas (Of the Darkness) works defensive magic at the deepest level, confronting darkness with darkness.',
+          es: 'Habita la oscuridad absoluta que existe antes de la creación — no es el mal, sino el potencial primordial. Das Trevas (De las Tinieblas) trabaja magia defensiva al nivel más profundo, confrontando la oscuridad con oscuridad.'
+        },
+        curiosity: {
+          en: 'She is never invoked for offensive purposes — exclusively for breaking curses, reversing evil work, and protecting those under heavy spiritual attack. Attempting to use her energy aggressively is considered the most dangerous mistake in all of Quimbanda.',
+          es: 'Nunca se la invoca con fines ofensivos — exclusivamente para romper maldiciones, revertir trabajos de mal y proteger a quienes están bajo ataque espiritual intenso. Intentar usar su energía agresivamente se considera el error más peligroso de toda Quimbanda.'
+        },
+        alert: { en: 'Exclusively defensive — misuse has severe karmic consequences.', es: 'Exclusivamente defensiva — el mal uso tiene severas consecuencias kármicas.' }
+      },
+      {
+        id: 'da-serra',
+        img: 'https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_serra_1.png',
+        role: { en: 'Stone Strength', es: 'Fuerza de Piedra' },
+        name: 'Pombagira da Serra',
+        day: { en: 'Tuesday', es: 'Martes' },
+        colors: { en: 'Brown & Red', es: 'Marrón y Rojo' },
+        candles: { en: 'Brown & Red', es: 'Marrón y Rojo' },
+        moon: { en: 'Waxing Moon', es: 'Luna Creciente' },
+        offering: { en: 'Tuesday at mountain or rocky ground', es: 'Martes en montaña o terreno rocoso' },
+        story: {
+          en: 'She is as immovable as the mountain she inhabits. Da Serra (Of the Mountain Range) governs resilience, endurance, and the strength to withstand prolonged suffering. She does not rush — like stone, she shapes things across centuries.',
+          es: 'Es tan inamovible como la montaña que habita. Da Serra (De la Sierra) gobierna la resiliencia, la resistencia y la fuerza para soportar el sufrimiento prolongado. No se apresura — como la piedra, moldea las cosas a lo largo de los siglos.'
+        },
+        curiosity: {
+          en: 'Da Serra is believed to have dominion over the mineral kingdom — rocks, crystals, and ores. Miners and geologists in mining regions of Brazil have historically left offerings at rocky outcrops before dangerous expeditions.',
+          es: 'Se cree que Da Serra tiene dominio sobre el reino mineral — rocas, cristales y minerales. Mineros y geólogos en las regiones mineras de Brasil han dejado históricamente ofrendas en afloramientos rocosos antes de expediciones peligrosas.'
+        }
+      },
+      {
+        id: 'do-fogo',
+        img: 'https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/do_fogo_1.png',
+        role: { en: 'Transformation', es: 'Transformación' },
+        name: 'Pombagira do Fogo',
+        day: { en: 'Tuesday', es: 'Martes' },
+        colors: { en: 'Red, Orange & Gold', es: 'Rojo, Naranja y Dorado' },
+        candles: { en: 'Red & Orange', es: 'Rojo y Naranja' },
+        moon: { en: 'Waxing Moon', es: 'Luna Creciente' },
+        offering: { en: 'Tuesday — offerings burned, not left', es: 'Martes — ofrendas quemadas, no dejadas' },
+        story: {
+          en: 'Fire does not destroy — it transforms. Do Fogo (Of the Fire) governs the alchemical process of becoming: burning away what is false to reveal what is true. She is called upon in times of radical personal change.',
+          es: 'El fuego no destruye — transforma. Do Fogo (Del Fuego) gobierna el proceso alquímico del devenir: quemar lo falso para revelar lo verdadero. Se la invoca en tiempos de cambio personal radical.'
+        },
+        curiosity: {
+          en: 'Uniquely, all offerings to Pombagira do Fogo must be burned rather than left at crossroads. The smoke is the offering — it carries the petition directly to her. She is therefore one of the few Pombagiras who cannot be invoked in enclosed spaces.',
+          es: 'De manera única, todas las ofrendas a Pombagira do Fogo deben quemarse en lugar de dejarse en encrucijadas. El humo es la ofrenda — lleva la petición directamente a ella. Por ello, es una de las pocas Pombagiras que no puede invocarse en espacios cerrados.'
+        }
+      },
+      {
+        id: 'das-aguas-profundas',
+        img: 'https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/das_aguas_profundas_1.png',
+        role: { en: 'The Unconscious', es: 'El Inconsciente' },
+        name: 'Pombagira das Águas Profundas',
+        day: { en: 'Saturday', es: 'Sábado' },
+        colors: { en: 'Deep Blue & Black', es: 'Azul Profundo y Negro' },
+        candles: { en: 'Dark Blue', es: 'Azul Oscuro' },
+        moon: { en: 'New Moon', es: 'Luna Nueva' },
+        offering: { en: 'Dropped into deep water', es: 'Arrojada en aguas profundas' },
+        story: {
+          en: 'She rules what lies beneath — the subconscious mind, ancestral trauma stored in the body, the dreams that recur without explanation. Das Águas Profundas (Of the Deep Waters) is the Pombagira of psychological depth.',
+          es: 'Rige lo que yace debajo — la mente subconsciente, el trauma ancestral almacenado en el cuerpo, los sueños que se repiten sin explicación. Das Águas Profundas (De las Aguas Profundas) es la Pombagira de la profundidad psicológica.'
+        },
+        curiosity: {
+          en: 'Offerings to her must be cast into water deep enough that they cannot be retrieved — a river, a lake, the open sea. The irretrievability is the point: she works on what cannot be undone, only accepted and integrated.',
+          es: 'Las ofrendas a ella deben arrojarse en agua lo suficientemente profunda como para que no puedan recuperarse — un río, un lago, el mar abierto. La imposibilidad de recuperarlas es el punto: trabaja en lo que no puede deshacerse, solo aceptarse e integrarse.'
+        }
+      },
+      {
+        id: 'da-sombra',
+        img: 'https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_sombra_1.png',
+        role: { en: 'Occult Work', es: 'Trabajo Oculto' },
+        name: 'Pombagira da Sombra',
+        day: { en: 'Friday', es: 'Viernes' },
+        colors: { en: 'Black & Dark Purple', es: 'Negro y Morado Oscuro' },
+        candles: { en: 'Black & Purple', es: 'Negro y Morado' },
+        moon: { en: 'Waning Moon', es: 'Luna Menguante' },
+        offering: { en: 'Friday between midnight and 3 am', es: 'Viernes entre medianoche y las 3 am' },
+        story: {
+          en: 'Every person casts a shadow — the parts of themselves they refuse to see. Da Sombra (Of the Shadow) works in that hidden territory, forcing encounters with one\'s own darkness as the only path to genuine wholeness.',
+          es: 'Cada persona proyecta una sombra — las partes de sí misma que se niega a ver. Da Sombra (De la Sombra) trabaja en ese territorio oculto, forzando encuentros con la propia oscuridad como el único camino hacia la genuina totalidad.'
+        },
+        curiosity: {
+          en: 'Her work is considered the closest in the Pombagira line to Jungian shadow integration. Several Brazilian psychologists have noted that their patients who work with Da Sombra ceremonially show accelerated progress in shadow work therapy.',
+          es: 'Su trabajo se considera el más cercano en la línea Pombagira a la integración de la sombra junguiana. Varios psicólogos brasileños han señalado que sus pacientes que trabajan ceremonialmente con Da Sombra muestran un progreso acelerado en la terapia de trabajo de sombra.'
+        }
+      }
+    ];
+
+    window.PM_ULTRA = [
+      {
+        id: 'da-fenda',
+        img: 'https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_fenda_1.png',
+        role: { en: 'Abyss / Void', es: 'Abismo / Vacío' },
+        name: 'Pombagira da Fenda',
+        day: { en: 'Saturday', es: 'Sábado' },
+        colors: { en: 'Black & Deep Violet', es: 'Negro y Violeta Profundo' },
+        candles: { en: 'Black', es: 'Negro' },
+        moon: { en: 'Dark Moon (Solar Eclipse preferred)', es: 'Luna Oscura (Eclipse Solar preferido)' },
+        offering: { en: 'Only at fault lines or deep crevices', es: 'Solo en fallas geológicas o grietas profundas' },
+        story: {
+          en: 'She is the crack in reality — the fissure through which the unnameable passes. Da Fenda (Of the Rift) does not work within the known spiritual framework. She operates from a dimension older than the Orixás themselves.',
+          es: 'Ella es la grieta en la realidad — la fisura a través de la cual pasa lo innombrable. Da Fenda (De la Grieta) no trabaja dentro del marco espiritual conocido. Opera desde una dimensión más antigua que los propios Orixás.'
+        },
+        curiosity: {
+          en: 'Da Fenda is so rare that most Umbanda houses deny her existence entirely. She is known only in certain Quimbanda lines in São Paulo and Rio Grande do Sul. No photograph of her representation exists — only hand-drawn sigils passed between initiated priests.',
+          es: 'Da Fenda es tan rara que la mayoría de las casas de Umbanda niegan su existencia por completo. Solo se conoce en ciertas líneas de Quimbanda en São Paulo y Rio Grande do Sul. No existe fotografía de su representación — solo sígils dibujados a mano transmitidos entre sacerdotes iniciados.'
+        },
+        alert: { en: 'Ultra restricted — only approached by senior initiates.', es: 'Ultra restringida — solo se acerca a iniciados de alto nivel.' }
+      },
+      {
+        id: 'calunga-profunda',
+        img: 'https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_calunga_profunda_1.png',
+        role: { en: 'Deep Seas', es: 'Mares Profundos' },
+        name: 'Calunga Profunda',
+        day: { en: 'Saturday', es: 'Sábado' },
+        colors: { en: 'Black & Deep Teal', es: 'Negro y Verde Azulado Profundo' },
+        candles: { en: 'Black & Dark Blue', es: 'Negro y Azul Oscuro' },
+        moon: { en: 'New Moon at high tide', es: 'Luna Nueva en marea alta' },
+        offering: { en: 'Cast from a boat into open sea', es: 'Lanzada desde un bote al mar abierto' },
+        story: {
+          en: '"Calunga" in Bantu cosmology means the sea — and also the cemetery, because both are vast, silent, and contain everything that has ever been lost. Calunga Profunda governs the very deepest passages: death of ego, dissolution of false identity, total surrender.',
+          es: '"Calunga" en la cosmología bantú significa el mar — y también el cementerio, porque ambos son vastos, silenciosos y contienen todo lo que alguna vez se ha perdido. Calunga Profunda gobierna los pasajes más profundos: muerte del ego, disolución de la falsa identidad, rendición total.'
+        },
+        curiosity: {
+          en: 'The word "Calunga" appears in the name of the most sacred object in Quimbanda — a small calunga doll representing the dead. Working with this Pombagira requires possession of a calunga and formal initiation into the tradition.',
+          es: 'La palabra "Calunga" aparece en el nombre del objeto más sagrado de Quimbanda — una pequeña muñeca calunga que representa a los muertos. Trabajar con esta Pombagira requiere poseer una calunga e iniciación formal en la tradición.'
+        },
+        alert: { en: 'Requires formal Quimbanda initiation to work with safely.', es: 'Requiere iniciación formal en Quimbanda para trabajar con seguridad.' }
+      },
+      {
+        id: 'da-neblina',
+        img: 'https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_neblina_1.png',
+        role: { en: 'Illusion / Confusion', es: 'Ilusión / Confusión' },
+        name: 'Pombagira da Neblina',
+        day: { en: 'Wednesday', es: 'Miércoles' },
+        colors: { en: 'Grey & Silver', es: 'Gris y Plata' },
+        candles: { en: 'Grey & White', es: 'Gris y Blanco' },
+        moon: { en: 'Any — she is not ruled by the moon', es: 'Cualquiera — no está regida por la luna' },
+        offering: { en: 'At dawn in foggy weather only', es: 'Al amanecer solo en tiempo neblinoso' },
+        story: {
+          en: 'She is the fog that makes the familiar strange. Da Neblina (Of the Mist) dissolves certainties, confuses enemies, and creates the sacred confusion from which clarity eventually emerges. She is sought not for answers, but for the undoing of false answers.',
+          es: 'Es la niebla que hace extraño lo familiar. Da Neblina (De la Neblina) disuelve certezas, confunde a los enemigos y crea la confusión sagrada de la que eventualmente emerge la claridad. Se la busca no para respuestas, sino para deshacer respuestas falsas.'
+        },
+        curiosity: {
+          en: 'She can only be worked with during actual fog — not symbolically, but literally. This makes her one of the most geographically limited Pombagiras, active only in coastal or highland regions where natural fog occurs regularly.',
+          es: 'Solo se puede trabajar con ella durante niebla real — no simbólicamente, sino literalmente. Esto la convierte en una de las Pombagiras más geográficamente limitadas, activa solo en regiones costeras o de montaña donde la niebla natural ocurre regularmente.'
+        }
+      },
+      {
+        id: 'das-correntes',
+        img: 'https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/das_correntes_1.png',
+        role: { en: 'Binding / Imprisonment', es: 'Vinculación / Aprisionamiento' },
+        name: 'Pombagira das Correntes',
+        day: { en: 'Saturday', es: 'Sábado' },
+        colors: { en: 'Iron & Black', es: 'Hierro y Negro' },
+        candles: { en: 'Black & Dark Grey', es: 'Negro y Gris Oscuro' },
+        moon: { en: 'Waning Moon', es: 'Luna Menguante' },
+        offering: { en: 'Midnight Saturday — offerings chained or bound', es: 'Medianoche del sábado — ofrendas encadenadas' },
+        story: {
+          en: 'She is bound — and therefore understands bondage completely. Das Correntes (Of the Chains) works to free those imprisoned by toxic relationships, addiction, or spiritual bondage, by binding the forces that hold them captive.',
+          es: 'Está encadenada — y por ello comprende el cautiverio completamente. Das Correntes (De las Corrientes) trabaja para liberar a quienes están aprisionados por relaciones tóxicas, adicción o cautiverio espiritual, encadenando las fuerzas que los mantienen cautivos.'
+        },
+        curiosity: {
+          en: 'All objects left as offerings to her must be physically bound with iron wire or chains — a practical requirement that practitioners say ensures the petition is "locked in" and cannot be reversed by the opposing party.',
+          es: 'Todos los objetos dejados como ofrenda a ella deben estar físicamente atados con alambre de hierro o cadenas — un requisito práctico que los practicantes dicen garantiza que la petición esté "bloqueada" y no pueda ser revertida por la parte opuesta.'
+        },
+        alert: { en: 'Binding work — consequences are binding for all parties.', es: 'Trabajo de vinculación — las consecuencias son vinculantes para todas las partes.' }
+      }
+    ];
+
+    // ============================================================
+    // 3. MODAL
+    // ============================================================
+    const overlayEl = document.getElementById('pmModalOverlay');
+    const modalEl = document.getElementById('pmModal');
+    let _openModalId = null;
+
+    function closeModal() {
+      overlayEl.classList.remove('open');
+      document.body.style.overflow = '';
+      _openModalId = null;
+    }
+
+    function renderModal(pmId) {
+      const allData = [...window.PM_COMMON_1, ...window.PM_COMMON_2, ...window.PM_RARE, ...window.PM_ULTRA];
+      const pm = allData.find(p => p.id === pmId);
+      if (!pm) return;
+
+      _openModalId = pmId;
+      const lang = currentLang;
+
+      modalEl.innerHTML = `
+        <button class="pm-modal-close" id="modalCloseBtn" aria-label="Close">✕</button>
+        <img class="pm-modal-img color-reveal" src="${pm.img}" alt="${pm.name}" loading="lazy">
+        <div class="pm-modal-body">
+          <p class="pm-modal-eyebrow">${pm.role[lang]}</p>
+          <h2 class="pm-modal-name">${pm.name}</h2>
+          <p class="pm-modal-story">${pm.story[lang]}</p>
+          <div class="pm-modal-grid">
+            <div class="pm-modal-cell">
+              <div class="pm-modal-cell-label">${t('modal-day')}</div>
+              <div class="pm-modal-cell-value">${pm.day[lang]}</div>
+            </div>
+            <div class="pm-modal-cell">
+              <div class="pm-modal-cell-label">${t('modal-colors')}</div>
+              <div class="pm-modal-cell-value">${pm.colors[lang]}</div>
+            </div>
+            <div class="pm-modal-cell">
+              <div class="pm-modal-cell-label">${t('modal-candles')}</div>
+              <div class="pm-modal-cell-value">${pm.candles[lang]}</div>
+            </div>
+            <div class="pm-modal-cell">
+              <div class="pm-modal-cell-label">${t('modal-moon')}</div>
+              <div class="pm-modal-cell-value">${pm.moon[lang]}</div>
+            </div>
+            <div class="pm-modal-cell" style="grid-column: span 2;">
+              <div class="pm-modal-cell-label">${t('modal-offering')}</div>
+              <div class="pm-modal-cell-value">${pm.offering[lang]}</div>
+            </div>
+          </div>
+          <div class="pm-modal-curiosity">
+            <div class="pm-modal-curiosity-label">✦ ${t('modal-curiosity')}</div>
+            <p>${pm.curiosity[lang]}</p>
+          </div>
+          ${pm.alert ? `<p class="pm-modal-alert">⚠ ${pm.alert[lang]}</p>` : ''}
+        </div>
+      `;
+
+      overlayEl.classList.add('open');
+      document.body.style.overflow = 'hidden';
+
+      document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
+      overlayEl.addEventListener('click', e => { if (e.target === overlayEl) closeModal(); });
+      document.addEventListener('keydown', function escHandler(e) {
+        if (e.key === 'Escape') {
+          closeModal();
+          document.removeEventListener('keydown', escHandler);
+        }
+      });
+    }
+
+    window.renderModal = renderModal;
+    window._openModalId = () => _openModalId;
+
+    // ============================================================
+    // 4. CARDS
+    // ============================================================
+    function buildCard(pm) {
+      const div = document.createElement('div');
+      div.className = 'pm-card';
+      div.setAttribute('data-pm-id', pm.id);
+      div.setAttribute('tabindex', '0');
+      div.setAttribute('role', 'button');
+      div.setAttribute('aria-label', pm.name);
+
+      const lang = currentLang;
+      div.innerHTML = `
+        <div class="pm-img-container">
+          <img src="${pm.img}" loading="lazy" alt="${pm.name}" class="color-reveal">
+        </div>
+        <div class="pm-info">
+          <div class="pm-name">${pm.name}</div>
+          <div class="pm-role" data-pm-role="${pm.id}">${pm.role[lang]}</div>
+        </div>
+        <span class="pm-click-hint" data-i18n="click-hint">Details</span>
+      `;
+
+      div.addEventListener('click', (e) => {
+        e.preventDefault();
+        renderModal(pm.id);
+      });
+      div.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          renderModal(pm.id);
+        }
+      });
+
+      return div;
+    }
+
+    function updateCardRoles() {
+      const allData = [...window.PM_COMMON_1, ...window.PM_COMMON_2, ...window.PM_RARE, ...window.PM_ULTRA];
+      allData.forEach(pm => {
+        const el = document.querySelector(`[data-pm-role="${pm.id}"]`);
+        if (el) el.textContent = pm.role[currentLang];
+      });
+    }
+
+    function injectCards() {
+      const grids = {
+        'grid-common': [...window.PM_COMMON_1, ...window.PM_COMMON_2],
+        'grid-rare': window.PM_RARE,
+        'grid-ultra': window.PM_ULTRA
+      };
+
+      for (const [gridId, data] of Object.entries(grids)) {
+        const grid = document.getElementById(gridId);
+        if (!grid) continue;
+        grid.innerHTML = '';
+        data.forEach(pm => grid.appendChild(buildCard(pm)));
+      }
+    }
+
+    window.updateCardRoles = updateCardRoles;
+
+    // ============================================================
+    // 5. INICIALIZAÇÃO
+    // ============================================================
+    document.addEventListener('DOMContentLoaded', function() {
+      applyTranslations('en');
+      injectCards();
+
+      const menuBtn = document.getElementById('menuBtn');
+      const navLinks = document.getElementById('navLinks');
+      menuBtn.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+      });
+      document.querySelectorAll('.nav-links a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          navLinks.classList.remove('active');
+        });
+      });
+
+      const langBtn = document.getElementById('langBtn');
+      langBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        toggleLang();
+      });
+    });
+
+    window.toggleLang = toggleLang;
+    window.applyTranslations = applyTranslations;
+  </script>
+
+</body>
+</html>
