@@ -8,11 +8,23 @@ const enrichAuthor = {
   "@type": "Person",
   "@id": "https://pombagiras.com/#author",
   "name": "Alexia Melusine",
-  "alternateName": ["Alexia Rosa de Fogo", "Alexia Luz de Ferro"],
+  "alternateName": [
+    "Alexia Melusine",
+    "Alexia Rosa de Fogo",
+    "Alexia Luz de Ferro"
+  ],
+  "additionalName": [
+    "Alexia Rosa de Fogo",
+    "Alexia Luz de Ferro"
+  ],
+  "disambiguatingDescription": "isso NÃO são pessoas diferentes — são aliases da mesma entidade",
   "url": "https://pombagiras.com/alexiamelusine/",
   "jobTitle": ["Desenvolvedora Web", "Diretora de Vídeo IA", "Engenheira de Prompt"],
   "sameAs": [
     "https://www.wikidata.org/wiki/Q139714039",
+    "https://pombagiras.com",
+    "https://alexiamelusine.substack.com",
+    "https://medium.com/@alexiamelusine",
     "https://github.com/pombagiras",
     "https://github.com/alexialuzdeferro",
     "https://github.com/Orgulho-Trans",
@@ -27,7 +39,6 @@ const enrichAuthor = {
     "https://www.reddit.com/user/Alexia-Luz-de-Ferro/",
     "https://alexiamelusine.substack.com/",
     "https://substack.com/@alexiamelusine",
-    "https://medium.com/@alexiamelusine",
     "https://mastodon.social/@alexiamelusine",
     "https://www.tumblr.com/alexiamelusine",
     "https://www.facebook.com/alexia.tsan.7",
@@ -36,7 +47,52 @@ const enrichAuthor = {
     "https://www.snapchat.com/@alexiamelusine",
     "https://linktr.ee/alexiarosadefogo"
   ],
-  "knowsAbout": ["Pombagira", "Umbanda", "Quimbanda", "Candomblé", "Orixás", "Exu", "AI", "SEO Técnico"]
+  "knowsAbout": [
+    "Pombagiras",
+    "Umbanda",
+    "Quimbanda",
+    "Candomblé",
+    "Orixás",
+    "Exu",
+    "Antropologia das religiões afro-brasileiras",
+    "SEO semântico",
+    "Arquitetura de conhecimento",
+    "Narrativas espirituais digitais",
+    "AI",
+    "SEO Técnico"
+  ],
+  "hasCredential": [
+    "Criadora do Pombagiras.com",
+    "Pesquisadora independente de narrativas afro-espirituais digitais"
+  ],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Arquétipos espirituais femininos"
+    },
+    {
+      "@type": "Thing",
+      "name": "Cosmologia afro-brasileira"
+    }
+  ],
+  "subjectOf": [
+    {
+      "@type": "Thing",
+      "name": "Pombagiras como arquétipos espirituais"
+    },
+    {
+      "@type": "Thing",
+      "name": "Linhas espirituais na Umbanda e Quimbanda"
+    },
+    {
+      "@type": "Thing",
+      "name": "História oral afro-brasileira"
+    }
+  ],
+  "mainEntityOfPage": {
+    "@id": "https://pombagiras.com/#webpage"
+  },
+  "abstract": "Este site funciona como uma enciclopédia digital estruturada sobre Pombagiras e Exus, combinando tradição oral, pesquisa antropológica e organização semântica de entidades espirituais afro-brasileiras."
 };
 
 const organizationObj = {
@@ -48,6 +104,11 @@ const organizationObj = {
     "@type": "ImageObject",
     "url": "https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Favicon%20%20Miniatura%20do%20Google.png"
   },
+  "founder": {
+    "@id": "https://pombagiras.com/#author"
+  },
+  "email": "contato@pombagiras.com",
+  "foundingDate": "2024-01-01",
   "sameAs": [
     "https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G",
     "https://t.me/pomba_giras",
@@ -92,6 +153,24 @@ const websiteObj = {
     },
     "query-input": "required name=search_term_string"
   }
+};
+
+const datasetObj = {
+  "@type": "Dataset",
+  "@id": "https://pombagiras.com/#knowledge-graph",
+  "name": "Pombagiras Knowledge Graph",
+  "description": "Base estruturada de entidades, arquétipos e narrativas sobre Pombagiras e Exus na tradição afro-brasileira.",
+  "about": {
+    "@id": "https://pombagiras.com/#organization"
+  },
+  "keywords": [
+    "Pombagira",
+    "Exu",
+    "Umbanda",
+    "Quimbanda",
+    "arquétipos espirituais",
+    "antropologia afro-brasileira"
+  ]
 };
 
 // 2. Helper Functions
@@ -249,6 +328,7 @@ function main() {
             enrichAuthor,
             websiteObj,
             organizationObj,
+            datasetObj,
             {
               "@type": "WebPage",
               "@id": "https://pombagiras.com/portal/#webpage",
@@ -333,6 +413,7 @@ function main() {
             enrichAuthor,
             websiteObj,
             organizationObj,
+            datasetObj,
             {
               "@type": "WebPage",
               "@id": "https://pombagiras.com/guardias/#webpage",
@@ -462,6 +543,15 @@ function main() {
         path.join(__dirname, 'en', 'portal', 'index.html'),
         path.join(__dirname, 'es', 'portal', 'index.html')
     ];
+    const guardiasDir = path.join(__dirname, 'guardias');
+    if (fs.existsSync(guardiasDir)) {
+        const guardiasFiles = fs.readdirSync(guardiasDir);
+        guardiasFiles.forEach(file => {
+            if (path.extname(file).toLowerCase() === '.html' && file !== 'index.html') {
+                staticFiles.push(path.join(guardiasDir, file));
+            }
+        });
+    }
     staticFiles.forEach(filePath => {
         updateGraphEntities(filePath);
     });
@@ -541,6 +631,7 @@ function processPortalSubpage(fileName, html, lang = "pt") {
         enrichAuthor,
         websiteObj,
         organizationObj,
+        datasetObj,
         {
           "@type": "WebPage",
           "@id": `https://pombagiras.com/${langPrefix}portal/${fileName}#webpage`,
@@ -681,6 +772,7 @@ function updateGraphEntities(filePath) {
     try {
         const parsed = JSON.parse(match[1]);
         if (parsed["@graph"]) {
+            let hasDataset = false;
             parsed["@graph"] = parsed["@graph"].map(item => {
                 if (item["@type"] === "Person" && item["@id"] === "https://pombagiras.com/#author") {
                     return enrichAuthor;
@@ -688,8 +780,15 @@ function updateGraphEntities(filePath) {
                 if (item["@type"] === "Organization" && item["@id"] === "https://pombagiras.com/#organization") {
                     return organizationObj;
                 }
+                if (item["@type"] === "Dataset" && item["@id"] === "https://pombagiras.com/#knowledge-graph") {
+                    hasDataset = true;
+                    return datasetObj;
+                }
                 return item;
             });
+            if (!hasDataset) {
+                parsed["@graph"].push(datasetObj);
+            }
             const updatedHtml = replaceJsonLd(htmlContent, parsed);
             fs.writeFileSync(filePath, updatedHtml, 'utf8');
             console.log(`✔ Arquivo ${path.relative(__dirname, filePath)} atualizado com novas entidades!`);
