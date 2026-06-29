@@ -145,8 +145,6 @@ h4,
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    opacity: 0.35;
-    filter: brightness(0.4) contrast(1.1);
 }
 
 /* Selo de marca premium cobrindo a marca d'água do Gemini */
