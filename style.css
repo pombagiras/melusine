@@ -135,6 +135,20 @@ h4,
     filter: brightness(0.9) contrast(1.2) blur(0px);
 }
 
+/* Imagem mobile da hero – escondida no desktop, visível no celular */
+.hero-mobile-img {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.35;
+    filter: brightness(0.4) contrast(1.1);
+}
+
 /* Selo de marca premium cobrindo a marca d'água do Gemini */
 .hero-brand-stamp {
     position: absolute;
@@ -1216,6 +1230,15 @@ footer.main-footer .footer-signature i {
     .hero p.subtitle {
         font-size: 1.1rem;
         margin-bottom: 30px;
+    }
+
+    /* Mobile: esconde o vídeo e mostra a imagem */
+    .hero-video {
+        display: none !important;
+    }
+
+    .hero-mobile-img {
+        display: block;
     }
 
     .floating-social {
