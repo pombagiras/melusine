@@ -1262,17 +1262,16 @@ footer.main-footer .footer-signature i {
     }
 
     .edu-nav {
-        overflow-x: auto;
-        justify-content: flex-start;
-        padding: 6px;
-        gap: 6px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding: 10px 16px;
         background: rgba(10, 1, 8, 0.4);
-        border-radius: 30px;
+        border-radius: 20px;
         border: 1px solid rgba(255, 255, 255, 0.03);
-        scrollbar-width: none;
         max-width: 100%;
         margin: 0 auto 35px;
-        display: inline-flex;
+        overflow: visible;
     }
 
     .edu-nav::-webkit-scrollbar {
@@ -1281,7 +1280,7 @@ footer.main-footer .footer-signature i {
 
     .nav-tab {
         white-space: nowrap;
-        padding: 8px 16px;
+        padding: 10px 12px;
         font-size: 0.68rem;
         font-family: 'Geist', sans-serif;
         font-weight: 500;
@@ -1292,7 +1291,17 @@ footer.main-footer .footer-signature i {
         border: 1px solid rgba(255, 255, 255, 0.04);
         color: rgba(255, 255, 255, 0.65);
         transition: all 0.3s ease;
+        text-align: center;
+        justify-content: center;
     }
+
+    /* Último item (ímpar) centralizado ocupando as 2 colunas */
+    .edu-nav .nav-tab:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        max-width: 60%;
+        margin: 0 auto;
+    }
+
 
     .section-header h2 {
         font-size: 2.8rem;
