@@ -262,6 +262,50 @@
     return String(n).padStart(2, '0');
   }
 
+  // ================= POPUP =================
+
+  const elPopup    = document.getElementById('pomba-popup');
+  const elPopupImg  = document.getElementById('popupImg');
+  const elPopupName = document.getElementById('popup-name');
+  const elPopupClose = document.getElementById('popupClose');
+  const elPopupOverlay = document.getElementById('popupOverlay');
+  const elPopupStart = document.getElementById('popupStart');
+
+  function openPopup(p) {
+    elPopupImg.src = p.img;
+    elPopupImg.alt = p.nome;
+    elPopupImg.onerror = function () {
+      this.onerror = null;
+      this.src = placeholderSVG(p.nome);
+    };
+    elPopupName.textContent = p.nome;
+    elPopup.hidden = false;
+    document.body.style.overflow = 'hidden';
+    // focus for a11y
+    elPopupClose.focus();
+  }
+
+  function closePopup() {
+    elPopup.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  elPopupClose.addEventListener('click', closePopup);
+  elPopupOverlay.addEventListener('click', closePopup);
+
+  elPopupStart.addEventListener('click', function () {
+    closePopup();
+    // small delay so the popup closes first, then start
+    setTimeout(function () {
+      startQuiz();
+    }, 220);
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !elPopup.hidden) closePopup();
+  });
+
   // ================= INTRO =================
 
   function initIntroGrid() {
@@ -271,6 +315,9 @@
     POMBAGIRAS.forEach(p => {
       const div = document.createElement('div');
       div.className = 'pomba-thumb';
+      div.setAttribute('tabindex', '0');
+      div.setAttribute('role', 'button');
+      div.setAttribute('aria-label', `Ver ${p.nome} e começar o quiz`);
 
       const img = document.createElement('img');
       img.src = p.img;
@@ -286,6 +333,16 @@
 
       div.appendChild(img);
       div.appendChild(span);
+
+      // Click → open popup
+      div.addEventListener('click', () => openPopup(p));
+      div.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openPopup(p);
+        }
+      });
+
       grid.appendChild(div);
     });
   }
