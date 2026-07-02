@@ -761,12 +761,18 @@ h4,
 }
 
 .newsletter-badge.quiz-badge {
-    text-decoration: none;
+    text-decoration: none !important;
+    border-bottom: none !important;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     cursor: pointer;
     box-shadow: 0 0 10px rgba(197, 160, 89, 0.15);
     background: rgba(197, 160, 89, 0.15);
     border: 1px solid rgba(197, 160, 89, 0.4);
+}
+
+.newsletter-badge.quiz-badge * {
+    text-decoration: none !important;
+    border-bottom: none !important;
 }
 
 .newsletter-badge.quiz-badge:hover {
@@ -776,15 +782,22 @@ h4,
     transform: translateY(-2px) scale(1.03);
 }
 
-.quiz-emoji {
-    font-size: 0.9rem;
+.quiz-rose-icon {
+    width: 16px;
+    height: 16px;
+    stroke: var(--accent);
     display: inline-block;
-    animation: pulseEmoji 1.5s ease-in-out infinite alternate;
+    transition: stroke 0.3s ease, transform 0.3s ease;
+    animation: pulseRose 2s ease-in-out infinite alternate;
 }
 
-@keyframes pulseEmoji {
-    0% { transform: scale(1) rotate(-5deg); }
-    100% { transform: scale(1.25) rotate(5deg); }
+.newsletter-badge.quiz-badge:hover .quiz-rose-icon {
+    stroke: var(--primary);
+}
+
+@keyframes pulseRose {
+    0% { transform: scale(1) rotate(-8deg); }
+    100% { transform: scale(1.2) rotate(8deg); }
 }
 
 
