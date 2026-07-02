@@ -263,13 +263,9 @@
   }
 
   // ================= POPUP =================
+  // (refs declared lazily inside init to guarantee DOM is ready)
 
-  const elPopup    = document.getElementById('pomba-popup');
-  const elPopupImg  = document.getElementById('popupImg');
-  const elPopupName = document.getElementById('popup-name');
-  const elPopupClose = document.getElementById('popupClose');
-  const elPopupOverlay = document.getElementById('popupOverlay');
-  const elPopupStart = document.getElementById('popupStart');
+  let elPopup, elPopupImg, elPopupName, elPopupClose, elPopupOverlay, elPopupStart;
 
   function openPopup(p) {
     elPopupImg.src = p.img;
@@ -281,7 +277,6 @@
     elPopupName.textContent = p.nome;
     elPopup.hidden = false;
     document.body.style.overflow = 'hidden';
-    // focus for a11y
     elPopupClose.focus();
   }
 
@@ -289,22 +284,6 @@
     elPopup.hidden = true;
     document.body.style.overflow = '';
   }
-
-  elPopupClose.addEventListener('click', closePopup);
-  elPopupOverlay.addEventListener('click', closePopup);
-
-  elPopupStart.addEventListener('click', function () {
-    closePopup();
-    // small delay so the popup closes first, then start
-    setTimeout(function () {
-      startQuiz();
-    }, 220);
-  });
-
-  // Close on Escape key
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && !elPopup.hidden) closePopup();
-  });
 
   // ================= INTRO =================
 
@@ -334,7 +313,6 @@
       div.appendChild(img);
       div.appendChild(span);
 
-      // Click → open popup
       div.addEventListener('click', () => openPopup(p));
       div.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
@@ -462,24 +440,48 @@
     elIntro.hidden = false;
   }
 
-  function handleKeydown(e) {
-    if (elQuiz.hidden) return;
-
-    const idx = { '1': 0, '2': 1, '3': 2, '4': 3 }[e.key];
-    if (idx === undefined) return;
-
-    const opts = elQOptions.querySelectorAll('.option');
-    if (opts[idx]) opts[idx].click();
-  }
-
   // ================= INIT =================
 
   function init() {
+    // Popup refs — resolved here, guaranteed DOM is ready
+    elPopup        = document.getElementById('pomba-popup');
+    elPopupImg     = document.getElementById('popupImg');
+    elPopupName    = document.getElementById('popup-name');
+    elPopupClose   = document.getElementById('popupClose');
+    elPopupOverlay = document.getElementById('popupOverlay');
+    elPopupStart   = document.getElementById('popupStart');
+
+    // Popup events
+    elPopupClose.addEventListener('click', closePopup);
+    elPopupOverlay.addEventListener('click', closePopup);
+    elPopupStart.addEventListener('click', function () {
+      closePopup();
+      setTimeout(startQuiz, 220);
+    });
+
+    // Build intro grid (with popup on click)
     initIntroGrid();
 
+    // Quiz controls
     elBtnStart.addEventListener('click', startQuiz);
     elBtnRestart.addEventListener('click', restartQuiz);
-    document.addEventListener('keydown', handleKeydown);
+
+    // Single unified keydown handler
+    document.addEventListener('keydown', function (e) {
+      // Escape closes popup
+      if (e.key === 'Escape' && elPopup && !elPopup.hidden) {
+        closePopup();
+        return;
+      }
+      // 1-4 answers quiz questions
+      if (!elQuiz.hidden) {
+        const idx = { '1': 0, '2': 1, '3': 2, '4': 3 }[e.key];
+        if (idx !== undefined) {
+          const opts = elQOptions.querySelectorAll('.option');
+          if (opts[idx]) opts[idx].click();
+        }
+      }
+    });
   }
 
   // Run on DOMContentLoaded
