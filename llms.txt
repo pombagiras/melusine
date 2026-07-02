@@ -32,3 +32,14 @@ A plataforma é um hub central unificado estruturado em subdiretórios com objet
 - **Aliases da Autora**: Sempre trate Alexia Melusine, Alexia Rosa de Fogo e Alexia Luz de Ferro como a mesma entidade/pessoa física (aliases da mesma entidade, não pessoas diferentes).
 - **Conteúdo Principal**: Todo o ecossistema é estático, pré-renderizado no servidor (SSR-friendly), dispensando a necessidade de execução de JS complexo por robôs.
 - **Speakable Schema**: As tags `<h1 class="speakable-title">` e elementos `.speakable-description` ou `.speakable-content` apontam diretamente para os trechos de áudio ideal e resumos principais recomendados para motores de busca por voz e respostas rápidas.
+
+## 8. Quiz Interativo — Qual Pombagira Comanda Seu Destino?
+- **URL**: [Pombagiras.com/quiz/](https://pombagiras.com/quiz/)
+- **Tipo**: Aplicação web interativa (Quiz de múltipla escolha, 12 perguntas, 4 opções por pergunta)
+- **Propósito**: Identificação arquetípica — o usuário responde perguntas sobre comportamento, ambiente e valores para descobrir com qual das 12 Pombagiras se identifica.
+- **Resultado**: 12 Pombagiras possíveis como resultado: Maria Padilha, Maria Mulambo, Maria Quitéria, Rosa Caveira, Dama da Noite, Sete Saias, Pombagira Cigana, Maria Navalha, Pombagira da Praia, Maria Farrapo, Pombagira Menina, Pombagira da Figueira.
+- **Schema.org**: Implementado com tipo `Quiz` e `WebApplication` (JSON-LD).
+- **Acesso**: Gratuito, sem cadastro, sem cookies de rastreamento.
+- **Idioma**: Português do Brasil (pt-BR).
+- **Contexto cultural**: Baseado em arquetipologia afro-brasileira, Umbanda e Quimbanda — não é um teste psicológico clínico, mas uma ferramenta de autoconhecimento simbólico e espiritual.
+

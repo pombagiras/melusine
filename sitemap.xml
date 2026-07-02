@@ -4,13 +4,19 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- Gerado dinamicamente via generate_pages.js | Atualizado em: 2026-06-23 -->
+<!-- Gerado dinamicamente via generate_pages.js | Atualizado em: 2026-07-02 -->
 
 <url>
   <loc>https://pombagiras.com/</loc>
-  <lastmod>2026-06-23</lastmod>
+  <lastmod>2026-07-02</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://pombagiras.com/quiz/</loc>
+  <lastmod>2026-07-02</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
 </url>
 <url>
   <loc>https://pombagiras.com/guardias/</loc>

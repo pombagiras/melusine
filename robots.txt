@@ -1,10 +1,27 @@
 User-agent: *
 Allow: /
+Allow: /quiz/
 Disallow: /*?*
 Disallow: /search/
 Disallow: /login/
 Disallow: /private/
 Disallow: /admin/
 Disallow: /*?s=*
+
+# LLM Crawlers — permitir acesso total ao quiz e conteúdo público
+User-agent: GPTBot
+Allow: /quiz/
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /quiz/
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /quiz/
+Allow: /
+
+User-agent: Googlebot
+Allow: /quiz/
 
 Sitemap: https://pombagiras.com/sitemap.xml
