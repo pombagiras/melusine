@@ -760,6 +760,34 @@ h4,
     100% { transform: translateY(-4px) rotate(8deg); }
 }
 
+.newsletter-badge.quiz-badge {
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(197, 160, 89, 0.15);
+    background: rgba(197, 160, 89, 0.15);
+    border: 1px solid rgba(197, 160, 89, 0.4);
+}
+
+.newsletter-badge.quiz-badge:hover {
+    background: rgba(197, 160, 89, 0.3);
+    border-color: var(--accent);
+    box-shadow: 0 0 20px rgba(197, 160, 89, 0.5), inset 0 0 10px rgba(197, 160, 89, 0.2);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.quiz-emoji {
+    font-size: 0.9rem;
+    display: inline-block;
+    animation: pulseEmoji 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulseEmoji {
+    0% { transform: scale(1) rotate(-5deg); }
+    100% { transform: scale(1.25) rotate(5deg); }
+}
+
+
 .newsletter-title {
     font-size: clamp(2rem, 6vw, 3.5rem);
     margin-bottom: 20px;
