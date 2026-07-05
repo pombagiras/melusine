@@ -404,8 +404,8 @@ Object.keys(pombagirasData).forEach(key => {
     <meta name="description" content="Estudo aprofundado sobre ${data.nome}: história, mistérios, guia de oferendas, oração sagrada e regência espiritual.">
     <meta name="keywords" content="${data.nome}, Pombagira, Umbanda, Quimbanda, Esquerda, Alexia Melusine, Cosmovisão, Guardiã">
     <meta name="author" content="Alexia Melusine">
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Favicon%20%20Miniatura%20do%20Google.png">
-    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Favicon%20%20Miniatura%20do%20Google.png">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/logo-192.png">
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/logo-192.png">
     <link rel="canonical" href="https://pombagiras.com/guardias/${fileName}">
     
     <!-- Open Graph e Twitter Cards (SEO Premium) -->
@@ -620,7 +620,7 @@ Object.keys(pombagirasData).forEach(key => {
           "url": "https://pombagiras.com/",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Favicon%20%20Miniatura%20do%20Google.png"
+            "url": "https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/logo-192.png"
           },
           "founder": {
             "@id": "https://pombagiras.com/#author"
@@ -1011,6 +1011,7 @@ function updateSitemap() {
     
     let urls = [
         { loc: 'https://pombagiras.com/', priority: '1.00', changefreq: 'weekly' },
+        { loc: 'https://pombagiras.com/quiz/', priority: '0.90', changefreq: 'weekly' },
         { loc: 'https://pombagiras.com/guardias/', priority: '0.80', changefreq: 'monthly' },
         { loc: 'https://pombagiras.com/lebaras/', priority: '0.80', changefreq: 'monthly' },
         { loc: 'https://pombagiras.com/vortex/', priority: '0.80', changefreq: 'monthly' },

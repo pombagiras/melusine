@@ -102,7 +102,7 @@ const organizationObj = {
   "url": "https://pombagiras.com/",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Favicon%20%20Miniatura%20do%20Google.png"
+    "url": "https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/logo-192.png"
   },
   "founder": {
     "@id": "https://pombagiras.com/#author"
@@ -314,6 +314,8 @@ function main() {
     const portalIndexPath = path.join(__dirname, 'portal', 'index.html');
     if (fs.existsSync(portalIndexPath)) {
         let portalHtml = fs.readFileSync(portalIndexPath, 'utf8');
+        portalHtml = portalHtml.replace(/Favicon(%20|\s)+Miniatura(%20|\s)+do(%20|\s)+Google\.png/gi, 'logo-192.png');
+        portalHtml = portalHtml.replace(/Ogimage(%20|\s)+e(%20|\s)+Twitter(%20|\s)+Card\.png/gi, 'Ecossistema%20(5).png');
         const portalFaqs = parsePortalFAQs(portalHtml);
         const portalItems = portalEntities.map((ent, idx) => ({
           "@type": "ListItem",
@@ -348,7 +350,7 @@ function main() {
               "primaryImageOfPage": {
                 "@type": "ImageObject",
                 "@id": "https://pombagiras.com/portal/#primaryimage",
-                "url": "https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Ogimage%20e%20Twitter%20Card.png",
+                "url": "https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Ecossistema%20(5).png",
                 "width": 1200,
                 "height": 630
               }
@@ -400,6 +402,8 @@ function main() {
     const guardiasIndexPath = path.join(__dirname, 'guardias', 'index.html');
     if (fs.existsSync(guardiasIndexPath)) {
         let guardiasHtml = fs.readFileSync(guardiasIndexPath, 'utf8');
+        guardiasHtml = guardiasHtml.replace(/Favicon(%20|\s)+Miniatura(%20|\s)+do(%20|\s)+Google\.png/gi, 'logo-192.png');
+        guardiasHtml = guardiasHtml.replace(/Ogimage(%20|\s)+e(%20|\s)+Twitter(%20|\s)+Card\.png/gi, 'Ecossistema%20(5).png');
         const guardiasItems = guardiasNames.map((name, idx) => ({
           "@type": "ListItem",
           "position": idx + 1,
@@ -433,7 +437,7 @@ function main() {
               "primaryImageOfPage": {
                 "@type": "ImageObject",
                 "@id": "https://pombagiras.com/guardias/#primaryimage",
-                "url": "https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Ogimage%20e%20Twitter%20Card.png",
+                "url": "https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Ecossistema%20(5).png",
                 "width": 1200,
                 "height": 630
               }
@@ -464,7 +468,7 @@ function main() {
               },
               "headline": "A Origem Histórica das Pombagiras",
               "description": "Exploração histórica, teológica e cultural sobre as origens e a evolução do culto às Pombagiras nas religiões afro-brasileiras.",
-              "image": "https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Ogimage%20e%20Twitter%20Card.png",
+              "image": "https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Ecossistema%20(5).png",
               "author": {
                 "@id": "https://pombagiras.com/#author"
               },
@@ -541,7 +545,10 @@ function main() {
         path.join(__dirname, 'en', 'index.html'),
         path.join(__dirname, 'es', 'index.html'),
         path.join(__dirname, 'en', 'portal', 'index.html'),
-        path.join(__dirname, 'es', 'portal', 'index.html')
+        path.join(__dirname, 'es', 'portal', 'index.html'),
+        path.join(__dirname, 'crossroads', 'index.html'),
+        path.join(__dirname, 'quiz', 'index.html'),
+        path.join(__dirname, 'mobile', 'index.html')
     ];
     const guardiasDir = path.join(__dirname, 'guardias');
     if (fs.existsSync(guardiasDir)) {
@@ -558,6 +565,11 @@ function main() {
 }
 
 function processPortalSubpage(fileName, html, lang = "pt") {
+    // Replace favicons
+    html = html.replace(/Favicon(%20|\s)+Miniatura(%20|\s)+do(%20|\s)+Google\.png/gi, 'logo-192.png');
+    // Replace og:images
+    html = html.replace(/Ogimage(%20|\s)+e(%20|\s)+Twitter(%20|\s)+Card\.png/gi, 'Ecossistema%20(5).png');
+
     const langPrefix = lang === "pt" ? "" : `${lang}/`;
     const inLanguage = lang === "pt" ? "pt-BR" : lang;
 
@@ -765,36 +777,50 @@ function updateGraphEntities(filePath) {
         return;
     }
     let htmlContent = fs.readFileSync(filePath, 'utf8');
+    let originalHtml = htmlContent;
+
+    // Replace favicons
+    htmlContent = htmlContent.replace(/Favicon(%20|\s)+Miniatura(%20|\s)+do(%20|\s)+Google\.png/gi, 'logo-192.png');
+    // Replace og:images
+    htmlContent = htmlContent.replace(/Ogimage(%20|\s)+e(%20|\s)+Twitter(%20|\s)+Card\.png/gi, 'Ecossistema%20(5).png');
+    
+    // Specifically update Ale%20Ultra / melusine-oficial refs or old og-image in quiz
+    htmlContent = htmlContent.replace(/pombagiras\/melusine-oficial\/refs\/heads\/main\/Ale%20Ultra%20\(1\)\.png/gi, 'pombagiras/melusine/main/fotos/Ecossistema%20(5).png');
+    htmlContent = htmlContent.replace(/quiz\/og-image\.png/gi, 'fotos/Ecossistema%20(5).png');
+
     const jsonLdRegex = /<script type="application\/ld\+json">([\s\S]*?)<\/script>/;
     const match = htmlContent.match(jsonLdRegex);
-    if (!match) return;
-    
-    try {
-        const parsed = JSON.parse(match[1]);
-        if (parsed["@graph"]) {
-            let hasDataset = false;
-            parsed["@graph"] = parsed["@graph"].map(item => {
-                if (item["@type"] === "Person" && item["@id"] === "https://pombagiras.com/#author") {
-                    return enrichAuthor;
+    if (match) {
+        try {
+            const parsed = JSON.parse(match[1]);
+            if (parsed["@graph"]) {
+                let hasDataset = false;
+                parsed["@graph"] = parsed["@graph"].map(item => {
+                    if (item["@type"] === "Person" && item["@id"] === "https://pombagiras.com/#author") {
+                        return enrichAuthor;
+                    }
+                    if (item["@type"] === "Organization" && item["@id"] === "https://pombagiras.com/#organization") {
+                        return organizationObj;
+                    }
+                    if (item["@type"] === "Dataset" && item["@id"] === "https://pombagiras.com/#knowledge-graph") {
+                        hasDataset = true;
+                        return datasetObj;
+                    }
+                    return item;
+                });
+                if (!hasDataset) {
+                    parsed["@graph"].push(datasetObj);
                 }
-                if (item["@type"] === "Organization" && item["@id"] === "https://pombagiras.com/#organization") {
-                    return organizationObj;
-                }
-                if (item["@type"] === "Dataset" && item["@id"] === "https://pombagiras.com/#knowledge-graph") {
-                    hasDataset = true;
-                    return datasetObj;
-                }
-                return item;
-            });
-            if (!hasDataset) {
-                parsed["@graph"].push(datasetObj);
+                htmlContent = replaceJsonLd(htmlContent, parsed);
             }
-            const updatedHtml = replaceJsonLd(htmlContent, parsed);
-            fs.writeFileSync(filePath, updatedHtml, 'utf8');
-            console.log(`✔ Arquivo ${path.relative(__dirname, filePath)} atualizado com novas entidades!`);
+        } catch (e) {
+            console.error(`❌ Erro ao analisar JSON-LD em ${filePath}:`, e.message);
         }
-    } catch (e) {
-        console.error(`❌ Erro ao analisar JSON-LD em ${filePath}:`, e.message);
+    }
+
+    if (htmlContent !== originalHtml) {
+        fs.writeFileSync(filePath, htmlContent, 'utf8');
+        console.log(`✔ Arquivo ${path.relative(__dirname, filePath)} atualizado com sucesso (imagens / entidades)!`);
     }
 }
 

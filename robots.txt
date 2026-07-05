@@ -7,6 +7,8 @@ Disallow: /login/
 Disallow: /private/
 Disallow: /admin/
 Disallow: /*?s=*
+Disallow: /gallery/
+Disallow: /tech/
 
 # LLM Crawlers — permitir acesso total ao quiz e conteúdo público
 User-agent: GPTBot
