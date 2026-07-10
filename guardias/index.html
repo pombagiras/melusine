@@ -1564,6 +1564,365 @@
             }
         }
 
+        /* --- Card de Destaque Maria Padilha --- */
+        .featured-card-wrapper {
+            margin: 2rem auto;
+            max-width: 900px;
+            padding: 0 10px;
+            width: 100%;
+        }
+        .featured-card {
+            display: flex;
+            flex-direction: row;
+            background: var(--glass-card);
+            backdrop-filter: blur(16px) saturate(160%);
+            -webkit-backdrop-filter: blur(16px) saturate(160%);
+            border-radius: 22px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 8px 32px var(--shadow-color), inset 0 1px 0 rgba(255,255,255,0.4);
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: pointer;
+            text-decoration: none;
+            color: var(--text-color);
+        }
+        .featured-card:hover {
+            transform: translateY(-6px) scale(1.01);
+            box-shadow: 0 20px 48px var(--shadow-color), inset 0 1px 0 rgba(255,255,255,0.5);
+            border-color: rgba(255, 215, 0, 0.35);
+        }
+        .featured-card-image-box {
+            width: 40%;
+            min-width: 280px;
+            height: auto;
+            min-height: 250px;
+            position: relative;
+            overflow: hidden;
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .featured-card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%) brightness(0.7) contrast(1.05);
+            transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1), filter 1s ease;
+        }
+        .featured-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(4, 4, 4, 0) 60%, rgba(4, 4, 4, 0.4) 100%);
+            z-index: 2;
+        }
+        .featured-card:hover .featured-card-img {
+            transform: scale(1.05);
+            filter: grayscale(0%) brightness(1.0) saturate(1.15) contrast(1.1);
+        }
+        .featured-card-info {
+            padding: 2.2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 60%;
+            text-align: left;
+        }
+        .featured-card-badge {
+            align-self: flex-start;
+            font-family: var(--font-body);
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--secondary-color);
+            border: 1px solid rgba(255, 215, 0, 0.35);
+            padding: 0.25rem 0.8rem;
+            border-radius: 4px;
+            margin-bottom: 1.2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .featured-card h3 {
+            font-size: 1.7rem !important;
+            font-weight: 600 !important;
+            margin-bottom: 0.8rem !important;
+            color: var(--primary-color) !important;
+            text-align: left !important;
+            line-height: 1.25 !important;
+        }
+        [data-theme="night"] .featured-card h3 {
+            color: #fff !important;
+        }
+        .featured-card p {
+            font-size: 0.94rem !important;
+            line-height: 1.65 !important;
+            color: var(--text-color) !important;
+            opacity: 0.85;
+            text-align: left !important;
+            margin-bottom: 1.5rem;
+        }
+        [data-theme="night"] .featured-card p {
+            color: rgba(255, 255, 255, 0.8) !important;
+        }
+        .featured-card-btn {
+            align-self: flex-start;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.88rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px var(--shadow-color);
+        }
+        .featured-card:hover .featured-card-btn {
+            background: var(--secondary-color);
+            color: #2C1810;
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        /* --- Estilos do Modal de Prévia --- */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+            padding: 20px;
+        }
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .modal-container {
+            background: var(--dark-bg);
+            border: 1px solid var(--border-highlight);
+            border-radius: 24px;
+            width: 100%;
+            max-width: 850px;
+            max-height: 90vh;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.8), 0 0 40px rgba(139,0,0,0.25);
+            transform: scale(0.92) translateY(20px);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            color: #fff;
+        }
+        [data-theme="day"] .modal-container {
+            background: #fff;
+            color: #1a1a1a;
+        }
+        .modal-overlay.active .modal-container {
+            transform: scale(1) translateY(0);
+        }
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.15);
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+        .modal-close:hover {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            transform: rotate(90deg);
+        }
+        .modal-content {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            max-height: 80vh;
+        }
+        .modal-image-box {
+            width: 40%;
+            position: relative;
+        }
+        .modal-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .modal-image-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(0,0,0,0) 50%, var(--dark-bg) 100%);
+        }
+        [data-theme="day"] .modal-image-overlay {
+            background: linear-gradient(to right, rgba(255,255,255,0) 50%, #fff 100%);
+        }
+        .modal-body-content {
+            width: 60%;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            text-align: left;
+        }
+        .modal-badge {
+            align-self: flex-start;
+            font-family: var(--font-body);
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--secondary-color);
+            margin-bottom: 0.8rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .modal-body-content h2 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+        }
+        [data-theme="day"] .modal-body-content h2 {
+            color: var(--primary-color);
+        }
+        .modal-subtitle {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 400;
+            opacity: 0.8;
+            margin-bottom: 1.2rem;
+        }
+        .modal-divider {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(90deg, var(--secondary-color), transparent);
+            margin-bottom: 1.5rem;
+        }
+        .modal-scroll-text {
+            font-family: var(--font-body);
+            font-size: 0.92rem;
+            line-height: 1.65;
+            opacity: 0.88;
+            margin-bottom: 2rem;
+            overflow-y: auto;
+            max-height: 35vh;
+        }
+        .modal-scroll-text p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        .modal-actions {
+            margin-top: auto;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .modal-action-btn {
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .modal-action-btn.primary {
+            background: var(--primary-color);
+            color: #fff;
+            border: 1px solid var(--primary-color);
+        }
+        .modal-action-btn.primary:hover {
+            background: var(--secondary-color);
+            color: #2C1810;
+            border-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        .modal-action-btn.secondary {
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        [data-theme="day"] .modal-action-btn.secondary {
+            background: rgba(0, 0, 0, 0.05);
+            color: #1a1a1a;
+            border-color: rgba(0, 0, 0, 0.15);
+        }
+        .modal-action-btn.secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+        [data-theme="day"] .modal-action-btn.secondary:hover {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        /* --- Responsividade do Modal e Card de Destaque --- */
+        @media (max-width: 768px) {
+            .featured-card {
+                flex-direction: column;
+            }
+            .featured-card-image-box {
+                width: 100%;
+                height: 220px;
+                min-height: auto;
+            }
+            .featured-card-overlay {
+                background: linear-gradient(to bottom, rgba(4, 4, 4, 0) 50%, rgba(4, 4, 4, 0.7) 100%);
+            }
+            .featured-card-info {
+                width: 100%;
+                padding: 1.5rem;
+            }
+            .featured-card h3 {
+                font-size: 1.35rem !important;
+            }
+            .modal-content {
+                flex-direction: column;
+                max-height: 85vh;
+            }
+            .modal-image-box {
+                width: 100%;
+                height: 180px;
+            }
+            .modal-image-overlay {
+                background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, var(--dark-bg) 100%);
+            }
+            [data-theme="day"] .modal-image-overlay {
+                background: linear-gradient(to bottom, rgba(255,255,255,0) 50%, #fff 100%);
+            }
+            .modal-body-content {
+                width: 100%;
+                padding: 1.5rem;
+            }
+            .modal-body-content h2 {
+                font-size: 1.4rem;
+            }
+            .modal-scroll-text {
+                max-height: 25vh;
+            }
+        }
+
     </style>
     <!-- Hreflangs para SEO Multilíngue -->
     <link rel="alternate" hreflang="pt" href="https://pombagiras.com/guardias/" />
@@ -1618,6 +1977,57 @@
                 <h2 id="sobre-title">Sobre as Pombagiras</h2>
                 <p>Entidades femininas de grande força e sabedoria, guardiãs dos caminhos e protetoras dos necessitados</p>
             </header>
+
+            <!-- CARD DE DESTAQUE: MARIA PADILHA -->
+            <div class="featured-card-wrapper">
+                <div class="featured-card" onclick="openPreviewModal()" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="preview-modal" aria-label="Maria Padilha Não É um Serviço de Entrega - Ler prévia do artigo">
+                    <div class="featured-card-image-box">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/fotos/pESQ%20(2).png" alt="Representação artística de Maria Padilha" class="featured-card-img" loading="lazy" decoding="async">
+                        <div class="featured-card-overlay"></div>
+                    </div>
+                    <div class="featured-card-info">
+                        <span class="featured-card-badge"><i class="fas fa-star" aria-hidden="true"></i> Destaque</span>
+                        <h3>Maria Padilha Não É um Serviço de Entrega</h3>
+                        <p>Como a entidade mais conhecida do Brasil se tornou também a mais mal compreendida. Uma reflexão antropológica profunda sobre a mercantilização e a verdadeira soberania e complexidade do arquétipo de Maria Padilha.</p>
+                        <button class="featured-card-btn" type="button" aria-hidden="true" tabindex="-1">Ler Prévia <i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL DE PRÉVIA INTERATIVA -->
+            <div id="preview-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="modal-title" onclick="closePreviewModal()">
+                <div class="modal-container" onclick="event.stopPropagation()">
+                    <button class="modal-close" onclick="closePreviewModal()" aria-label="Fechar prévia">
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </button>
+                    <div class="modal-content">
+                        <div class="modal-image-box">
+                            <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/fotos/pESQ%20(2).png" alt="Maria Padilha" class="modal-img">
+                            <div class="modal-image-overlay"></div>
+                        </div>
+                        <div class="modal-body-content">
+                            <span class="modal-badge"><i class="fas fa-book-open" aria-hidden="true"></i> Prévia do Artigo</span>
+                            <h2 id="modal-title">Maria Padilha Não É um Serviço de Entrega</h2>
+                            <p class="modal-subtitle">Como a entidade mais conhecida do Brasil se tornou também a mais mal compreendida</p>
+                            <hr class="modal-divider">
+                            <div class="modal-scroll-text">
+                                <p>Existe uma pergunta que poucos pesquisadores fazem.</p>
+                                <p>Se Maria Padilha é talvez o nome mais conhecido entre todas as Pombagiras, por que a maioria das pessoas sabe tão pouco sobre ela?</p>
+                                <p>Basta abrir qualquer rede social. Os títulos se repetem quase mecanicamente: <em>"Maria Padilha traz seu amor em sete dias."</em>, <em>"Faça ele voltar arrependido."</em>, <em>"Amarração definitiva."</em>...</p>
+                                <p>A impressão que fica é curiosa. Maria Padilha parece ter sido reduzida a uma espécie de "departamento espiritual especializado em relacionamentos". Mas isso jamais correspondeu à complexidade que sua figura possui dentro das tradições afro-brasileiras. O que aconteceu? Como uma entidade que representa autonomia, inteligência, poder feminino e domínio dos próprios caminhos acabou transformada em um produto de marketing?</p>
+                            </div>
+                            <div class="modal-actions">
+                                <a href="./maria-padilha-nao-e-servico-de-entrega.html" class="modal-action-btn primary" id="btn-full-article">
+                                    Ver Conteúdo Completo <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </a>
+                                <button onclick="closePreviewModal()" class="modal-action-btn secondary" type="button">
+                                    Voltar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="cards-grid">
                 <article class="card">
                     <div class="card-icon"><i class="fas fa-route" aria-hidden="true"></i></div>
@@ -2504,6 +2914,7 @@
                             <li><a href="#linha">Linha de Trabalho</a></li>
                             <li><a href="#faq">Perguntas Frequentes (FAQ)</a></li>
                             <li><a href="#respeito">Ética e Responsabilidade</a></li>
+                            <li><a href="./termos.html">Termos de Uso &amp; Políticas</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -2676,6 +3087,69 @@
         });
 
         });
+
+        // --- Controle do Modal de Prévia ---
+        let previousActiveElement;
+
+        function openPreviewModal() {
+            const modal = document.getElementById('preview-modal');
+            if (!modal) return;
+            
+            previousActiveElement = document.activeElement;
+            modal.classList.add('active');
+            modal.setAttribute('aria-hidden', 'false');
+            
+            const fullArticleBtn = document.getElementById('btn-full-article');
+            if (fullArticleBtn) {
+                setTimeout(() => {
+                    fullArticleBtn.focus();
+                }, 100);
+            }
+            
+            document.body.style.overflow = 'hidden';
+            document.addEventListener('keydown', handleModalKeyDown);
+        }
+
+        function closePreviewModal() {
+            const modal = document.getElementById('preview-modal');
+            if (!modal) return;
+            
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            document.removeEventListener('keydown', handleModalKeyDown);
+            
+            if (previousActiveElement) {
+                previousActiveElement.focus();
+            }
+        }
+
+        function handleModalKeyDown(e) {
+            if (e.key === 'Escape') {
+                closePreviewModal();
+            }
+            
+            if (e.key === 'Tab') {
+                const modal = document.getElementById('preview-modal');
+                if (!modal) return;
+                
+                const focusableElements = modal.querySelectorAll('button, a, [tabindex="0"]');
+                const firstElement = focusableElements[0];
+                const lastElement = focusableElements[focusableElements.length - 1];
+                
+                if (e.shiftKey) {
+                    if (document.activeElement === firstElement) {
+                        e.preventDefault();
+                        lastElement.focus();
+                    }
+                } else {
+                    if (document.activeElement === lastElement) {
+                        e.preventDefault();
+                        firstElement.focus();
+                    }
+                }
+            }
+        }
     </script>
 
     <!-- â•â• SELETOR DE IDIOMA / LANGUAGE SWITCHER â•â• -->
