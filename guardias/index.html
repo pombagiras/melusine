@@ -1595,11 +1595,12 @@
             border-color: rgba(255, 215, 0, 0.35);
         }
         .featured-card-image-box {
-            width: 100%;
-            height: 220px;
+            width: 120px;
+            min-width: 120px;
+            height: auto;
             position: relative;
             overflow: hidden;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
         }
         .featured-card-img {
             width: 100%;
@@ -1619,34 +1620,34 @@
             filter: grayscale(0%) brightness(1.0) saturate(1.15) contrast(1.1);
         }
         .featured-card-info {
-            padding: 1.8rem;
+            padding: 1.1rem 1.3rem;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
-            width: 100%;
+            justify-content: space-between;
+            width: calc(100% - 120px);
             text-align: left;
             flex-grow: 1;
         }
         .featured-card-badge {
             align-self: flex-start;
             font-family: var(--font-body);
-            font-size: 0.78rem;
+            font-size: 0.65rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.06em;
             color: var(--secondary-color);
             border: 1px solid rgba(255, 215, 0, 0.35);
-            padding: 0.25rem 0.8rem;
+            padding: 0.15rem 0.5rem;
             border-radius: 4px;
-            margin-bottom: 1.2rem;
+            margin-bottom: 0.5rem;
             display: inline-flex;
             align-items: center;
-            gap: 6px;
+            gap: 4px;
         }
         .featured-card h3 {
-            font-size: 1.55rem !important;
+            font-size: 1.12rem !important;
             font-weight: 600 !important;
-            margin-bottom: 0.8rem !important;
+            margin-bottom: 0.35rem !important;
             color: var(--primary-color) !important;
             text-align: left !important;
             line-height: 1.25 !important;
@@ -1655,12 +1656,16 @@
             color: #fff !important;
         }
         .featured-card p {
-            font-size: 0.92rem !important;
-            line-height: 1.6 !important;
+            font-size: 0.82rem !important;
+            line-height: 1.45 !important;
             color: var(--text-color) !important;
             opacity: 0.85;
             text-align: left !important;
-            margin-bottom: 1.5rem;
+            margin-bottom: 0.8rem !important;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
         [data-theme="night"] .featured-card p {
             color: rgba(255, 255, 255, 0.8) !important;
@@ -1670,17 +1675,18 @@
             background: var(--primary-color);
             color: white;
             border: none;
-            padding: 10px 22px;
+            padding: 6px 14px;
             border-radius: 30px;
             font-family: var(--font-body);
             font-weight: 600;
-            font-size: 0.88rem;
+            font-size: 0.78rem;
             cursor: pointer;
             transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            box-shadow: 0 4px 15px var(--shadow-color);
+            gap: 6px;
+            box-shadow: 0 3px 10px var(--shadow-color);
+            margin-top: auto;
         }
         .featured-card:hover .featured-card-btn {
             background: var(--secondary-color);
@@ -1894,13 +1900,15 @@
                 margin: 2rem auto;
             }
             .featured-card-image-box {
-                height: 200px;
+                width: 100px;
+                min-width: 100px;
             }
             .featured-card-info {
-                padding: 1.5rem;
+                width: calc(100% - 100px);
+                padding: 0.9rem 1.1rem;
             }
             .featured-card h3 {
-                font-size: 1.35rem !important;
+                font-size: 1.1rem !important;
             }
             .modal-content {
                 flex-direction: column;
