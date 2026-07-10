@@ -1564,10 +1564,13 @@
             }
         }
 
-        /* --- Card de Destaque Maria Padilha --- */
-        .featured-card-wrapper {
+        /* --- Container para Cards de Destaque --- */
+        .featured-cards-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
             margin: 2rem auto;
-            max-width: 900px;
+            max-width: 1200px;
             padding: 0 10px;
             width: 100%;
         }
@@ -1592,8 +1595,8 @@
             border-color: rgba(255, 215, 0, 0.35);
         }
         .featured-card-image-box {
-            width: 40%;
-            min-width: 280px;
+            width: 35%;
+            min-width: 160px;
             height: auto;
             min-height: 250px;
             position: relative;
@@ -1618,11 +1621,11 @@
             filter: grayscale(0%) brightness(1.0) saturate(1.15) contrast(1.1);
         }
         .featured-card-info {
-            padding: 2.2rem;
+            padding: 1.8rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            width: 60%;
+            width: 65%;
             text-align: left;
         }
         .featured-card-badge {
@@ -1642,7 +1645,7 @@
             gap: 6px;
         }
         .featured-card h3 {
-            font-size: 1.7rem !important;
+            font-size: 1.55rem !important;
             font-weight: 600 !important;
             margin-bottom: 0.8rem !important;
             color: var(--primary-color) !important;
@@ -1653,8 +1656,8 @@
             color: #fff !important;
         }
         .featured-card p {
-            font-size: 0.94rem !important;
-            line-height: 1.65 !important;
+            font-size: 0.92rem !important;
+            line-height: 1.6 !important;
             color: var(--text-color) !important;
             opacity: 0.85;
             text-align: left !important;
@@ -1878,6 +1881,13 @@
         }
 
         /* --- Responsividade do Modal e Card de Destaque --- */
+        @media (max-width: 1024px) {
+            .featured-cards-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                max-width: 900px;
+            }
+        }
         @media (max-width: 768px) {
             .featured-card {
                 flex-direction: column;
@@ -1978,8 +1988,9 @@
                 <p>Entidades femininas de grande força e sabedoria, guardiãs dos caminhos e protetoras dos necessitados</p>
             </header>
 
-            <!-- CARD DE DESTAQUE: MARIA PADILHA -->
-            <div class="featured-card-wrapper">
+            <!-- CARDS DE DESTAQUE LADO A LADO -->
+            <div class="featured-cards-container">
+                <!-- 1. Maria Padilha -->
                 <div class="featured-card" onclick="openPreviewModal()" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="preview-modal" aria-label="Maria Padilha Não É um Serviço de Entrega - Ler prévia do artigo">
                     <div class="featured-card-image-box">
                         <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/fotos/pESQ%20(2).png" alt="Representação artística de Maria Padilha" class="featured-card-img" loading="lazy" decoding="async">
@@ -1992,9 +2003,23 @@
                         <button class="featured-card-btn" type="button" aria-hidden="true" tabindex="-1">Ler Prévia <i class="fas fa-chevron-right" aria-hidden="true"></i></button>
                     </div>
                 </div>
+
+                <!-- 2. Fronteiras do Mundo -->
+                <div class="featured-card" onclick="openFronteirasModal()" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="fronteiras-modal" aria-label="A Pombagira e as Fronteiras do Mundo - Ler prévia do artigo">
+                    <div class="featured-card-image-box">
+                        <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/fotos/pESQ%20(1).png" alt="Representação artística da Pombagira nas encruzilhadas" class="featured-card-img" loading="lazy" decoding="async">
+                        <div class="featured-card-overlay"></div>
+                    </div>
+                    <div class="featured-card-info">
+                        <span class="featured-card-badge"><i class="fas fa-route" aria-hidden="true"></i> Limiar</span>
+                        <h3>A Pombagira e as Fronteiras do Mundo</h3>
+                        <p>Por que ela sempre aparece nas encruzilhadas, nos cemitérios, nos portos e nas estradas? Uma análise antropológica sobre a liminaridade e os espaços de passagem no imaginário social.</p>
+                        <button class="featured-card-btn" type="button" aria-hidden="true" tabindex="-1">Ler Prévia <i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+                    </div>
+                </div>
             </div>
 
-            <!-- MODAL DE PRÉVIA INTERATIVA -->
+            <!-- MODAL DE PRÉVIA INTERATIVA 1: MARIA PADILHA -->
             <div id="preview-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="modal-title" onclick="closePreviewModal()">
                 <div class="modal-container" onclick="event.stopPropagation()">
                     <button class="modal-close" onclick="closePreviewModal()" aria-label="Fechar prévia">
@@ -2021,6 +2046,40 @@
                                     Ver Conteúdo Completo <i class="fas fa-arrow-right" aria-hidden="true"></i>
                                 </a>
                                 <button onclick="closePreviewModal()" class="modal-action-btn secondary" type="button">
+                                    Voltar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL DE PRÉVIA INTERATIVA 2: FRONTEIRAS -->
+            <div id="fronteiras-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="modal-fronteiras-title" onclick="closeFronteirasModal()">
+                <div class="modal-container" onclick="event.stopPropagation()">
+                    <button class="modal-close" onclick="closeFronteirasModal()" aria-label="Fechar prévia">
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </button>
+                    <div class="modal-content">
+                        <div class="modal-image-box">
+                            <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/fotos/pESQ%20(1).png" alt="Pombagira e as Fronteiras" class="modal-img">
+                            <div class="modal-image-overlay"></div>
+                        </div>
+                        <div class="modal-body-content">
+                            <span class="modal-badge"><i class="fas fa-book-open" aria-hidden="true"></i> Prévia do Artigo</span>
+                            <h2 id="modal-fronteiras-title">A Pombagira e as Fronteiras do Mundo</h2>
+                            <p class="modal-subtitle">Por que ela sempre aparece nas encruzilhadas, nos cemitérios, nos portos e nas estradas?</p>
+                            <hr class="modal-divider">
+                            <div class="modal-scroll-text">
+                                <p><em>"Talvez o maior equívoco sobre a Pombagira seja imaginar que ela pertence às encruzilhadas. A antropologia sugere algo muito mais interessante: ela pertence aos lugares onde as certezas deixam de existir."</em></p>
+                                <p>Existe uma pergunta que atravessa silenciosamente quase todas as tradições afro-brasileiras, mas que raramente recebe a atenção que merece: <strong>Por que as Pombagiras aparecem sempre nas fronteiras?</strong></p>
+                                <p>As narrativas falam das encruzilhadas. Os pontos cantados evocam estradas, cemitérios, portos, esquinas, mercados, porteiras e caminhos de terra. Mesmo quando a entidade se apresenta em um terreiro, sua identidade simbólica permanece ligada a lugares de passagem. Quando observamos esse fenômeno pela lente da antropologia, da história das religiões, da sociologia e da psicologia simbólica, algo surpreendente emerge: a Pombagira parece ocupar exatamente os espaços onde as categorias sociais deixam de funcionar com nitidez. Ela não pertence ao centro. Também não pertence à margem. Ela pertence ao intervalo entre ambos.</p>
+                            </div>
+                            <div class="modal-actions">
+                                <a href="./pombagira-e-as-fronteiras-do-mundo.html" class="modal-action-btn primary" id="btn-fronteiras-full">
+                                    Ver Conteúdo Completo <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </a>
+                                <button onclick="closeFronteirasModal()" class="modal-action-btn secondary" type="button">
                                     Voltar
                                 </button>
                             </div>
@@ -3131,6 +3190,66 @@
             
             if (e.key === 'Tab') {
                 const modal = document.getElementById('preview-modal');
+                if (!modal) return;
+                
+                const focusableElements = modal.querySelectorAll('button, a, [tabindex="0"]');
+                const firstElement = focusableElements[0];
+                const lastElement = focusableElements[focusableElements.length - 1];
+                
+                if (e.shiftKey) {
+                    if (document.activeElement === firstElement) {
+                        e.preventDefault();
+                        lastElement.focus();
+                    }
+                } else {
+                    if (document.activeElement === lastElement) {
+                        e.preventDefault();
+                        firstElement.focus();
+                    }
+                }
+            }
+        }
+
+        function openFronteirasModal() {
+            const modal = document.getElementById('fronteiras-modal');
+            if (!modal) return;
+            
+            previousActiveElement = document.activeElement;
+            modal.classList.add('active');
+            modal.setAttribute('aria-hidden', 'false');
+            
+            const fullArticleBtn = document.getElementById('btn-fronteiras-full');
+            if (fullArticleBtn) {
+                setTimeout(() => {
+                    fullArticleBtn.focus();
+                }, 100);
+            }
+            
+            document.body.style.overflow = 'hidden';
+            document.addEventListener('keydown', handleFronteirasModalKeyDown);
+        }
+
+        function closeFronteirasModal() {
+            const modal = document.getElementById('fronteiras-modal');
+            if (!modal) return;
+            
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            document.removeEventListener('keydown', handleFronteirasModalKeyDown);
+            
+            if (previousActiveElement) {
+                previousActiveElement.focus();
+            }
+        }
+
+        function handleFronteirasModalKeyDown(e) {
+            if (e.key === 'Escape') {
+                closeFronteirasModal();
+            }
+            
+            if (e.key === 'Tab') {
+                const modal = document.getElementById('fronteiras-modal');
                 if (!modal) return;
                 
                 const focusableElements = modal.querySelectorAll('button, a, [tabindex="0"]');
