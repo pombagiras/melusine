@@ -18,3 +18,17 @@ Desktop.ini
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.*
+
+# Migração R2 — scripts locais, logs e backups
+migrate_r2/
+
+# Node.js
+node_modules/
+package-lock.json
+package.json
+generate_favicons.mjs
