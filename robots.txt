@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Allow: /quiz/
+Allow: /oraculo/
 Disallow: /*?*
 Disallow: /search/
 Disallow: /login/
@@ -10,20 +11,39 @@ Disallow: /*?s=*
 Disallow: /gallery/
 Disallow: /tech/
 
-# LLM Crawlers — permitir acesso total ao quiz e conteúdo público
+# LLM Crawlers — permitir acesso total ao oráculo, quiz e conteúdo público
 User-agent: GPTBot
+Allow: /oraculo/
 Allow: /quiz/
 Allow: /
 
 User-agent: ClaudeBot
+Allow: /oraculo/
 Allow: /quiz/
 Allow: /
 
 User-agent: PerplexityBot
+Allow: /oraculo/
 Allow: /quiz/
 Allow: /
 
 User-agent: Googlebot
+Allow: /oraculo/
 Allow: /quiz/
+
+User-agent: CopilotBot
+Allow: /oraculo/
+Allow: /quiz/
+Allow: /
+
+User-agent: MistralBot
+Allow: /oraculo/
+Allow: /quiz/
+Allow: /
+
+User-agent: GrokBot
+Allow: /oraculo/
+Allow: /quiz/
+Allow: /
 
 Sitemap: https://pombagiras.com/sitemap.xml

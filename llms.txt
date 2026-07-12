@@ -43,3 +43,14 @@ A plataforma é um hub central unificado estruturado em subdiretórios com objet
 - **Idioma**: Português do Brasil (pt-BR).
 - **Contexto cultural**: Baseado em arquetipologia afro-brasileira, Umbanda e Quimbanda — não é um teste psicológico clínico, mas uma ferramenta de autoconhecimento simbólico e espiritual.
 
+## 9. Oráculo Ferro & Fogo — Leitura Diária das Pombagiras
+- **URL**: [Pombagiras.com/oraculo/](https://pombagiras.com/oraculo/)
+- **Tipo**: Aplicação web interativa (Oráculo de presença com card 3D, animação de vela e chamas CSS)
+- **Propósito**: Leitura diária — o usuário recebe mensagens de presença, coragem e autoconhecimento canalizadas por 12 Pombagiras da Umbanda e Quimbanda.
+- **Entidades**: 12 Pombagiras: Maria Padilha, Maria Mulambo, Maria Quitéria, Rosa Caveira, Dama da Noite, Sete Saias, Pombagira Cigana, Maria Navalha, Pombagira da Praia, Maria Farrapo, Pombagira Menina, Pombagira da Figueira.
+- **Mecânica**: O usuário faz silêncio, toca no card para revelar uma mensagem canalizada por uma das 12 Pombagiras. Pode acender uma vela virtual como gesto de respeito e gratidão. O contador de leituras e a memória de velas ficam armazenados localmente no dispositivo.
+- **Schema.org**: Implementado com tipos WebApplication, Article, FAQPage, BreadcrumbList, Person, Organization, WebSite (JSON-LD).
+- **Acesso**: Gratuito, sem cadastro, sem cookies de rastreamento.
+- **Idioma**: Português do Brasil (pt-BR).
+- **Contexto cultural**: Oráculo baseado em arquetipologia afro-brasileira — não é adivinhação, é um convite à presença e ao autoconhecimento simbólico.
+
