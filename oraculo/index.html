@@ -519,18 +519,42 @@
     .candle-button[aria-pressed="true"] .candle-icon::before { opacity: 1; box-shadow: 0 -1px 8px 3px #ff542d, 0 -3px 16px 6px rgba(255,87,32,.48); animation: flameTiny .6s ease-in-out infinite alternate; }
     @keyframes flameTiny { to { transform: rotate(34deg) translate(1px, -1px) scale(1.15,.88); } }
 
-    .fire { position: absolute; z-index: 2; inset: 0; overflow: hidden; pointer-events: none; opacity: 0; transition: opacity .65s ease; mix-blend-mode: screen; }
+    .fire { position: absolute; z-index: 2; inset: 0; overflow: hidden; pointer-events: none; opacity: 0; transition: opacity .65s ease; mix-blend-mode: screen; will-change: opacity; transform: translateZ(0); }
     .oracle-card.is-lit .fire { opacity: 1; }
-    .fire-glow { position: absolute; inset: 8% -20% -5%; background: radial-gradient(ellipse at 50% 100%, rgba(255,79,23,.78), rgba(224,29,13,.3) 25%, rgba(109,17,27,.1) 46%, transparent 70%); filter: blur(8px); animation: glow 1.5s ease-in-out infinite alternate; }
-    @keyframes glow { to { transform: scale(1.1, 1.05); opacity: .74; } }
-    .flame { position: absolute; bottom: -12%; width: 31%; height: 58%; border-radius: 50% 50% 38% 38%; transform-origin: 50% 100%; background: radial-gradient(ellipse at 50% 74%, #fff7bd 0 8%, #ffc141 18%, #ff6425 45%, rgba(192,21,14,.16) 68%, transparent 72%); filter: blur(.2px); animation: flame 1.1s ease-in-out infinite alternate; }
+    .fire-glow { position: absolute; inset: 8% -20% -5%; background: radial-gradient(ellipse at 50% 100%, rgba(255,79,23,.78), rgba(224,29,13,.3) 25%, rgba(109,17,27,.1) 46%, transparent 70%); filter: blur(8px); animation: glow 1.5s ease-in-out infinite alternate; will-change: transform, opacity; transform: translateZ(0); }
+    @keyframes glow { to { transform: scale(1.1, 1.05) translateZ(0); opacity: .74; } }
+    .flame {
+      position: absolute;
+      bottom: -12%;
+      width: 31%;
+      height: 58%;
+      border-radius: 50% 50% 38% 38%;
+      transform-origin: 50% 100%;
+      background: radial-gradient(ellipse at 50% 74%, #fff7bd 0 8%, #ffc141 18%, #ff6425 45%, rgba(192,21,14,.16) 68%, transparent 72%);
+      filter: blur(.2px);
+      animation: flame 1.1s ease-in-out infinite alternate;
+      will-change: transform, border-radius;
+      --rot: 0deg;
+      --scX: 1;
+      --scY: 1;
+      transform: rotate(var(--rot)) scale(var(--scX), var(--scY)) translateZ(0);
+    }
     .flame::after { content: ''; position: absolute; width: 38%; height: 48%; left: 30%; top: 24%; border-radius: 50% 50% 45% 45%; background: #fff1a3; filter: blur(3px); }
-    .flame.one { left: -6%; animation-delay: -.3s; transform: rotate(-7deg) scale(.9,1.2); }
-    .flame.two { left: 24%; height: 76%; animation-delay: -.75s; transform: rotate(4deg); }
-    .flame.three { left: 54%; height: 67%; animation-delay: -.2s; transform: rotate(-4deg) scale(1.05,.92); }
-    .flame.four { left: 81%; height: 52%; animation-delay: -.54s; transform: rotate(8deg); }
-    @keyframes flame { 0% { border-radius: 52% 48% 38% 42%; transform: rotate(-4deg) scale(.94,1.06); } 100% { border-radius: 43% 57% 48% 34%; transform: rotate(6deg) scale(1.08,.91); } }
-    .embers { position: absolute; inset: 0; background-image: radial-gradient(circle, #ffd27b 0 1px, transparent 1.5px), radial-gradient(circle, #ff6c30 0 1.5px, transparent 2px), radial-gradient(circle, #fff0a3 0 1px, transparent 1.5px); background-size: 57px 84px, 91px 112px, 133px 101px; background-position: 13px 110%, 41px 115%, 80px 120%; opacity: .72; animation: embers 5.5s linear infinite; }
+    .flame.one { left: -6%; animation-delay: -.3s; --rot: -7deg; --scX: .9; --scY: 1.2; }
+    .flame.two { left: 24%; height: 76%; animation-delay: -.75s; --rot: 4deg; --scX: 1; --scY: 1; }
+    .flame.three { left: 54%; height: 67%; animation-delay: -.2s; --rot: -4deg; --scX: 1.05; --scY: .92; }
+    .flame.four { left: 81%; height: 52%; animation-delay: -.54s; --rot: 8deg; --scX: 1; --scY: 1; }
+    @keyframes flame {
+      0% {
+        border-radius: 52% 48% 38% 42%;
+        transform: rotate(calc(var(--rot) - 4deg)) scale(calc(var(--scX) * 0.94), calc(var(--scY) * 1.06)) translateZ(0);
+      }
+      100% {
+        border-radius: 43% 57% 48% 34%;
+        transform: rotate(calc(var(--rot) + 6deg)) scale(calc(var(--scX) * 1.08), calc(var(--scY) * 0.91)) translateZ(0);
+      }
+    }
+    .embers { position: absolute; inset: 0; background-image: radial-gradient(circle, #ffd27b 0 1px, transparent 1.5px), radial-gradient(circle, #ff6c30 0 1.5px, transparent 2px), radial-gradient(circle, #fff0a3 0 1px, transparent 1.5px); background-size: 57px 84px, 91px 112px, 133px 101px; background-position: 13px 110%, 41px 115%, 80px 120%; opacity: .72; animation: embers 5.5s linear infinite; will-change: background-position; transform: translateZ(0); }
     @keyframes embers { to { background-position: 13px -20%, 41px -35%, 80px -25%; } }
 
     .new-reading { width: max-content; margin: 18px auto 0; padding: 10px 8px; border: 0; color: var(--cream-dim); background: transparent; cursor: pointer; font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
@@ -539,7 +563,16 @@
     .footnote { margin: auto 5px 0; padding-top: 28px; color: rgba(205,187,154,.62); font-size: 10px; line-height: 1.5; text-align: center; }
 
     @media (min-width: 530px) { .page { padding-top: 34px; } .oracle-scene { min-height: 620px; } }
-    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+      .flame, .fire-glow, .embers, .candle-button[aria-pressed="true"] .candle-icon::before {
+        animation-duration: inherit !important;
+        animation-iteration-count: infinite !important;
+      }
+      .fire-glow { animation-duration: 1.5s !important; }
+      .embers { animation-duration: 5.5s !important; }
+      .candle-button[aria-pressed="true"] .candle-icon::before { animation-duration: .6s !important; }
+    }
   </style>
 </head>
 <body>
