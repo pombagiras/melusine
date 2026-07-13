@@ -142,51 +142,20 @@
           "@type": "WebSite",
           "@id": "https://pombagiras.com/#website",
           "url": "https://pombagiras.com/",
-          "name": "POMBAGIRAS.COM",
-          "alternateName": "Cultura, Arquétipos & Conhecimento",
-          "description": "A maior plataforma de desmistificação das Pombagiras. Um mergulho profundo no conhecimento sagrado, história e arte, desconstruindo preconceitos com clareza e tecnologia.",
+          "name": "Pombagiras.com",
+          "description": "A maior enciclopédia online sobre Pombagiras, Exus e tradições afro-brasileiras. +200 páginas de conteúdo sagrado.",
           "publisher": {
-            "@id": "https://pombagiras.com/#author"
+            "@id": "https://pombagiras.com/#organization"
           },
-          "inLanguage": "pt‑BR"
-        },
-        {
-          "@type": "WebPage",
-          "@id": "https://pombagiras.com/lebaras/#webpage",
-          "url": "https://pombagiras.com/lebaras/",
-          "name": "POMBAGIRAS.COM | Cultura, Arquétipos & Conhecimento",
-          "isPartOf": {
-            "@id": "https://pombagiras.com/#website"
-          },
-          "about": {
-            "@id": "https://pombagiras.com/#website"
-          },
-          "speakable": {
-            "@type": "SpeakableSpecification",
-            "cssSelector": [
-              ".speakable-title",
-              ".speakable-description"
-            ]
-          },
-          "primaryImageOfPage": {
-            "@type": "ImageObject",
-            "@id": "https://pombagiras.com/lebaras/#primaryimage",
-            "url": "https://cdn.pombagiras.com/fotos/Ecossistema%20(5).png",
-            "width": 1200,
-            "height": 630
+          "inLanguage": "pt-BR",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://pombagiras.com/?s={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
           }
-        },
-        {
-          "@type": "BreadcrumbList",
-          "@id": "https://pombagiras.com/#breadcrumb",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Portal Visceral",
-              "item": "https://pombagiras.com/"
-            }
-          ]
         },
         {
           "@type": "Organization",
@@ -228,10 +197,65 @@
           ]
         },
         {
+          "@type": "Dataset",
+          "@id": "https://pombagiras.com/#knowledge-graph",
+          "name": "Pombagiras Knowledge Graph",
+          "description": "Base estruturada de entidades, arquétipos e narrativas sobre Pombagiras e Exus na tradição afro-brasileira.",
+          "about": {
+            "@id": "https://pombagiras.com/#organization"
+          },
+          "keywords": [
+            "Pombagira",
+            "Exu",
+            "Umbanda",
+            "Quimbanda",
+            "arquétipos espirituais",
+            "antropologia afro-brasileira"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://pombagiras.com/lebaras/#webpage",
+          "url": "https://pombagiras.com/lebaras/",
+          "name": "POMBAGIRAS.COM | Cultura, Arquétipos & Conhecimento",
+          "isPartOf": {
+            "@id": "https://pombagiras.com/#website"
+          },
+          "about": {
+            "@id": "https://pombagiras.com/#website"
+          },
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [
+              ".speakable-title",
+              ".speakable-description"
+            ]
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "@id": "https://pombagiras.com/lebaras/#primaryimage",
+            "url": "https://cdn.pombagiras.com/fotos/Ecossistema%20(5).png",
+            "width": 1200,
+            "height": 630
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://pombagiras.com/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Portal Visceral",
+              "item": "https://pombagiras.com/"
+            }
+          ]
+        },
+        {
           "@type": "Article",
           "@id": "https://pombagiras.com/lebaras/#article",
           "isPartOf": {
-            "@id": "https://pombagiras.com/lebaras/#webpage"
+            "@id": "https://pombagiras.com/#website"
           },
           "headline": "POMBAGIRAS.COM | Cultura, Arquétipos & Conhecimento",
           "description": "A maior plataforma de desmistificação das Pombagiras. Um mergulho profundo no conhecimento sagrado, história e arte, desconstruindo preconceitos com clareza e tecnologia por Alexia Melusine.",
@@ -249,23 +273,6 @@
           "inLanguage": "pt‑BR",
           "datePublished": "2026-06-03T14:00:00-03:00",
           "dateModified": "2026-06-19T14:50:29.311Z"
-        },
-        {
-          "@type": "Dataset",
-          "@id": "https://pombagiras.com/#knowledge-graph",
-          "name": "Pombagiras Knowledge Graph",
-          "description": "Base estruturada de entidades, arquétipos e narrativas sobre Pombagiras e Exus na tradição afro-brasileira.",
-          "about": {
-            "@id": "https://pombagiras.com/#organization"
-          },
-          "keywords": [
-            "Pombagira",
-            "Exu",
-            "Umbanda",
-            "Quimbanda",
-            "arquétipos espirituais",
-            "antropologia afro-brasileira"
-          ]
         }
       ]
     }

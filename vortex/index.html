@@ -183,6 +183,25 @@
           "abstract": "Este site funciona como uma enciclopédia digital estruturada sobre Pombagiras e Exus, combinando tradição oral, pesquisa antropológica e organização semântica de entidades espirituais afro-brasileiras."
         },
         {
+          "@type": "WebSite",
+          "@id": "https://pombagiras.com/#website",
+          "url": "https://pombagiras.com/",
+          "name": "Pombagiras.com",
+          "description": "A maior enciclopédia online sobre Pombagiras, Exus e tradições afro-brasileiras. +200 páginas de conteúdo sagrado.",
+          "publisher": {
+            "@id": "https://pombagiras.com/#organization"
+          },
+          "inLanguage": "pt-BR",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://pombagiras.com/?s={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
           "@type": "Organization",
           "@id": "https://pombagiras.com/#organization",
           "name": "Pombagiras.com",
@@ -222,15 +241,21 @@
           ]
         },
         {
-          "@type": "WebSite",
-          "@id": "https://pombagiras.com/#website",
-          "url": "https://pombagiras.com",
-          "name": "POMBAGIRAS.COM | Cultura, Arquétipos & Conhecimento",
-          "description": "A maior plataforma de desmistificação das Pombagiras. Mergulho no conhecimento sagrado e arte, desconstruindo preconceitos com Alexia Melusine.",
-          "publisher": {
+          "@type": "Dataset",
+          "@id": "https://pombagiras.com/#knowledge-graph",
+          "name": "Pombagiras Knowledge Graph",
+          "description": "Base estruturada de entidades, arquétipos e narrativas sobre Pombagiras e Exus na tradição afro-brasileira.",
+          "about": {
             "@id": "https://pombagiras.com/#organization"
           },
-          "inLanguage": "pt‑BR"
+          "keywords": [
+            "Pombagira",
+            "Exu",
+            "Umbanda",
+            "Quimbanda",
+            "arquétipos espirituais",
+            "antropologia afro-brasileira"
+          ]
         },
         {
           "@type": "ProfilePage",
@@ -262,23 +287,6 @@
               "name": "Vortex",
               "item": "https://pombagiras.com/vortex/"
             }
-          ]
-        },
-        {
-          "@type": "Dataset",
-          "@id": "https://pombagiras.com/#knowledge-graph",
-          "name": "Pombagiras Knowledge Graph",
-          "description": "Base estruturada de entidades, arquétipos e narrativas sobre Pombagiras e Exus na tradição afro-brasileira.",
-          "about": {
-            "@id": "https://pombagiras.com/#organization"
-          },
-          "keywords": [
-            "Pombagira",
-            "Exu",
-            "Umbanda",
-            "Quimbanda",
-            "arquétipos espirituais",
-            "antropologia afro-brasileira"
           ]
         }
       ]

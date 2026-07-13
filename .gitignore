@@ -26,6 +26,7 @@ yarn-error.log*
 
 # Migração R2 — scripts locais, logs e backups
 migrate_r2/
+migrate_schema/
 
 # Node.js
 node_modules/
