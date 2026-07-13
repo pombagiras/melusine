@@ -1012,6 +1012,8 @@ function updateSitemap() {
     let urls = [
         { loc: 'https://pombagiras.com/', priority: '1.00', changefreq: 'weekly' },
         { loc: 'https://pombagiras.com/quiz/', priority: '0.90', changefreq: 'weekly' },
+        { loc: 'https://pombagiras.com/oraculo/', priority: '0.90', changefreq: 'weekly' },
+        { loc: 'https://pombagiras.com/crossroads/', priority: '0.90', changefreq: 'weekly' },
         { loc: 'https://pombagiras.com/guardias/', priority: '0.80', changefreq: 'monthly' },
         { loc: 'https://pombagiras.com/lebaras/', priority: '0.80', changefreq: 'monthly' },
         { loc: 'https://pombagiras.com/vortex/', priority: '0.80', changefreq: 'monthly' },

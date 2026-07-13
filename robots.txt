@@ -1,7 +1,68 @@
+# ============================================================
+# POMBAGIRAS.COM - Robots Configuration (High Performance)
+# ============================================================
+
+# LLM Crawlers & AI Search Bots (Explicitly Allowed for Graph Discoverability)
+User-agent: GPTBot
+Allow: /
+Disallow: /*?*
+Disallow: /search/
+Disallow: /login/
+Disallow: /private/
+Disallow: /admin/
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /*?*
+Disallow: /search/
+Disallow: /login/
+Disallow: /private/
+Disallow: /admin/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /*?*
+Disallow: /search/
+Disallow: /login/
+Disallow: /private/
+Disallow: /admin/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /*?*
+Disallow: /search/
+Disallow: /login/
+Disallow: /private/
+Disallow: /admin/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /*?*
+Disallow: /search/
+Disallow: /login/
+Disallow: /private/
+Disallow: /admin/
+
+# Search Engine Crawlers
+User-agent: Googlebot
+Allow: /
+Disallow: /*?*
+Disallow: /search/
+Disallow: /login/
+Disallow: /private/
+Disallow: /admin/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /*?*
+Disallow: /search/
+Disallow: /login/
+Disallow: /private/
+Disallow: /admin/
+
+# Standard Public Access
 User-agent: *
 Allow: /
-Allow: /quiz/
-Allow: /oraculo/
 Disallow: /*?*
 Disallow: /search/
 Disallow: /login/
@@ -11,39 +72,45 @@ Disallow: /*?s=*
 Disallow: /gallery/
 Disallow: /tech/
 
-# LLM Crawlers — permitir acesso total ao oráculo, quiz e conteúdo público
-User-agent: GPTBot
-Allow: /oraculo/
-Allow: /quiz/
-Allow: /
+# Block Aggressive Scrapers, Spambots and Resource-Heavy Crawlers
+User-agent: AhrefsBot
+Disallow: /
 
-User-agent: ClaudeBot
-Allow: /oraculo/
-Allow: /quiz/
-Allow: /
+User-agent: SemrushBot
+Disallow: /
 
-User-agent: PerplexityBot
-Allow: /oraculo/
-Allow: /quiz/
-Allow: /
+User-agent: DotBot
+Disallow: /
 
-User-agent: Googlebot
-Allow: /oraculo/
-Allow: /quiz/
+User-agent: MJ12bot
+Disallow: /
 
-User-agent: CopilotBot
-Allow: /oraculo/
-Allow: /quiz/
-Allow: /
+User-agent: Rogerbot
+Disallow: /
 
-User-agent: MistralBot
-Allow: /oraculo/
-Allow: /quiz/
-Allow: /
+User-agent: MegaIndex.ru
+Disallow: /
 
-User-agent: GrokBot
-Allow: /oraculo/
-Allow: /quiz/
-Allow: /
+User-agent: PetalBot
+Disallow: /
 
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: SMTBot
+Disallow: /
+
+User-agent: ZoominfoBot
+Disallow: /
+
+User-agent: Yandex
+Disallow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: CensysInspect
+Disallow: /
+
+# Sitemap Declarations
 Sitemap: https://pombagiras.com/sitemap.xml
