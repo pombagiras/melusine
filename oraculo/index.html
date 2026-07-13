@@ -402,6 +402,7 @@
 
     .masthead { display: flex; align-items: center; justify-content: space-between; margin: 3px 5px 22px; }
     .brand { display: flex; gap: 10px; align-items: center; color: var(--cream); text-decoration: none; }
+    .brand-logo { width: 30px; height: 30px; object-fit: contain; }
     .brand-mark { width: 30px; height: 30px; position: relative; display: grid; place-items: center; color: var(--brass-light); }
     .brand-mark::before { content: ''; position: absolute; inset: 1px; border: 1px solid var(--brass); transform: rotate(45deg); border-radius: 7px; }
     .brand-mark span { font-family: Fraunces, serif; font-size: 17px; position: relative; }
@@ -579,7 +580,7 @@
   <main class="page">
     <header class="masthead">
       <a class="brand" href="https://pombagiras.com/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Pombagiras.com">
-        <span class="brand-mark"><span>O</span></span>
+        <img class="brand-logo" src="https://cdn.pombagiras.com/fotos/FINAL-FAVICON-VIP%20.png" alt="Logo Oráculo" width="30" height="30">
         <span class="brand-title">Oráculo<small>Ferro &amp; Fogo</small></span>
       </a>
       <span class="reading-number" id="readingNumber">sua leitura 01</span>
