@@ -658,8 +658,7 @@
         â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
         .hero {
             position: relative;
-            background-image: var(--hero-overlay),
-                url('https://cdn.pombagiras.com/fotos/Ecossistema%20(5).png');
+            background-image: var(--hero-overlay);
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -738,25 +737,6 @@
             line-height: 1.7;
         }
 
-        /* Badge de vidro sobre a hero image */
-        .hero-glass-badge {
-            display: inline-block;
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(12px) saturate(150%);
-            -webkit-backdrop-filter: blur(12px) saturate(150%);
-            border: 1px solid rgba(255,255,255,0.22);
-            border-radius: 50px;
-            padding: 6px 20px;
-            font-size: 0.78em;
-            font-family: var(--font-body);
-            font-weight: 500;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.9);
-            margin-bottom: 20px;
-            animation: fadeInUp 1s ease 0.1s both;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.2);
-        }
 
         .cta-button {
             background: var(--secondary-color);
@@ -1976,7 +1956,6 @@
 
     <section class="hero" id="inicio" aria-labelledby="hero-title">
         <div class="container">
-            <div class="hero-glass-badge">✝¦ Portal Sagrado · Alexia Melusine ✝¦</div>
             <h1 id="hero-title" class="speakable-title">Pombagiras: Guardiãs de Caminhos</h1>
             <p class="speakable-description">Um espaço dedicado ao conhecimento respeitoso e responsável sobre essas poderosas entidades da Umbanda e Quimbanda</p>
             <a href="#sobre" class="cta-button">Conheça Mais</a>
