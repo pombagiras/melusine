@@ -2,7 +2,7 @@
 ### Rosa de Fogo ∞ Luz de Ferro
 **@almasdepombagira**
 
-![Alexia Melusine](https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/Ecossistema%20(5).png)
+![Alexia Melusine](https://cdn.pombagiras.com/fotos/A.MELUSINE.png)
 
 ---
 
