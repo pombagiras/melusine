@@ -1917,42 +1917,6 @@
             }
         }
 
-        /* --- Background paths animation --- */
-        .hero-bg-paths {
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-            z-index: 1;
-            overflow: hidden;
-            opacity: 0.85;
-        }
-        .hero-bg-paths svg {
-            width: 100%;
-            height: 100%;
-            display: block;
-        }
-        .hero-bg-paths path {
-            fill: none;
-            stroke-linecap: round;
-            stroke-dasharray: 0.3 0.7;
-            animation: floatPath var(--duration, 25s) linear infinite;
-            animation-delay: var(--delay, 0s);
-            transition: stroke var(--transition-speed);
-        }
-        @keyframes floatPath {
-            0% {
-                stroke-dashoffset: 0;
-                opacity: 0.15;
-            }
-            50% {
-                opacity: 0.6;
-            }
-            100% {
-                stroke-dashoffset: -1;
-                opacity: 0.15;
-            }
-        }
-
     </style>
     <!-- Hreflangs para SEO Multilíngue -->
     <link rel="alternate" hreflang="pt" href="https://pombagiras.com/guardias/" />
@@ -1991,7 +1955,6 @@
     </header>
 
     <section class="hero" id="inicio" aria-labelledby="hero-title">
-        <div class="hero-bg-paths" id="hero-bg-paths"></div>
         <div class="container">
             <h1 id="hero-title" class="speakable-title">Pombagiras: Guardiãs de Caminhos</h1>
             <p class="speakable-description">Um espaço dedicado ao conhecimento respeitoso e responsável sobre essas poderosas entidades da Umbanda e Quimbanda</p>
@@ -3170,65 +3133,6 @@
         }, observerOptions);
 
         document.addEventListener('DOMContentLoaded', () => {
-            // Gerador de caminhos fluidos animados no background da Hero
-            (function initHeroPaths() {
-                const container = document.getElementById('hero-bg-paths');
-                if (!container) return;
-
-                const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-                svg.setAttribute('viewBox', '0 0 696 316');
-                svg.setAttribute('fill', 'none');
-                svg.setAttribute('aria-hidden', 'true');
-
-                const title = document.createElementNS('http://www.w3.org/2000/svg', 'title');
-                title.textContent = 'Caminhos Fluídos';
-                svg.appendChild(title);
-
-                function createPaths(position) {
-                    for (let i = 0; i < 36; i++) {
-                        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-                        
-                        const d = `M-${380 - i * 5 * position} -${189 + i * 6}C-${
-                            380 - i * 5 * position
-                        } -${189 + i * 6} -${312 - i * 5 * position} ${216 - i * 6} ${
-                            152 - i * 5 * position
-                        } ${343 - i * 6}C${616 - i * 5 * position} ${470 - i * 6} ${
-                            684 - i * 5 * position
-                        } ${875 - i * 6} ${684 - i * 5 * position} ${875 - i * 6}`;
-                        
-                        path.setAttribute('d', d);
-                        path.setAttribute('pathLength', '1');
-                        
-                        const strokeWidth = 0.5 + i * 0.03;
-                        const opacity = 0.1 + i * 0.03;
-                        
-                        path.style.strokeWidth = `${strokeWidth}px`;
-                        path.style.setProperty('--opacity', opacity);
-                        
-                        const duration = 20 + Math.random() * 10;
-                        const delay = -Math.random() * duration;
-                        
-                        path.style.setProperty('--duration', `${duration}s`);
-                        path.style.setProperty('--delay', `${delay}s`);
-                        
-                        // Mistura das cores da paleta do site baseadas nas variáveis CSS do tema
-                        let strokeColor = 'var(--secondary-color)';
-                        if (i % 3 === 1) {
-                            strokeColor = 'var(--primary-color)';
-                        } else if (i % 3 === 2) {
-                            strokeColor = 'var(--accent-color)';
-                        }
-                        path.style.stroke = strokeColor;
-                        
-                        svg.appendChild(path);
-                    }
-                }
-
-                createPaths(1);
-                createPaths(-1);
-                container.appendChild(svg);
-            })();
-
             document.querySelectorAll('.card, .article-card, .entity-card').forEach(el => observer.observe(el));
 
             
