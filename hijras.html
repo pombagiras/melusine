@@ -919,8 +919,36 @@
        RESPONSIVE
     ═══════════════════════════════════════ */
     @media (max-width: 768px) {
-      .nav-links { gap: 8px; }
-      .nav-btn { padding: 7px 14px; font-size: 0.72rem; }
+      .top-nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 14px;
+        gap: 12px;
+      }
+      .nav-brand {
+        flex: 0 0 auto;
+        font-size: 0.85rem;
+      }
+      .nav-links {
+        flex: 1 1 auto;
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 6px;
+        padding: 4px 0;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+      }
+      .nav-links::-webkit-scrollbar {
+        display: none;
+      }
+      .nav-btn {
+        flex: 0 0 auto;
+        padding: 6px 11px;
+        font-size: 0.68rem;
+        gap: 4px;
+      }
       .books-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
       .related-card { padding: 28px 20px; }
     }
