@@ -24,7 +24,9 @@ A plataforma é um hub central unificado estruturado em subdiretórios com objet
    - Manifesto e origens históricas sobre as soberanas das encruzilhadas.
 6. **Vortex (`/vortex/`)**: [Pombagiras.com/vortex/](https://pombagiras.com/vortex/)
    - Bento grid central contendo as mídias sociais oficiais e canais da autora.
-7. **Páginas de Transparência**:
+7. **Hijras (`/hijras.html`)**: [Pombagiras.com/hijras.html](https://pombagiras.com/hijras.html)
+   - Ensaio aprofundado sobre o terceiro gênero na tradição hindu, a deusa Bahuchara Mata e os impactos do colonialismo de gênero.
+8. **Páginas de Transparência**:
    - [Política de Privacidade](https://pombagiras.com/privacy.html)
    - [Termos de Uso](https://pombagiras.com/terms.html)
 
