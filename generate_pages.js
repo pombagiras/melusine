@@ -1020,7 +1020,10 @@ function updateSitemap() {
         { loc: 'https://pombagiras.com/vortex/', priority: '0.80', changefreq: 'monthly' },
         { loc: 'https://pombagiras.com/alexiamelusine/', priority: '0.80', changefreq: 'monthly' },
         { loc: 'https://pombagiras.com/mobile/', priority: '0.80', changefreq: 'monthly' },
-        { loc: 'https://pombagiras.com/portal/', priority: '0.80', changefreq: 'monthly' }
+        { loc: 'https://pombagiras.com/portal/', priority: '0.80', changefreq: 'monthly' },
+        { loc: 'https://pombagiras.com/guardias/maria-padilha-nao-e-servico-de-entrega.html', priority: '0.75', changefreq: 'monthly' },
+        { loc: 'https://pombagiras.com/guardias/pombagira-e-as-fronteiras-do-mundo.html', priority: '0.75', changefreq: 'monthly' },
+        { loc: 'https://pombagiras.com/guardias/pombagira-entidade-que-o-brasil-tentou-transformar-em-pecado.html', priority: '0.75', changefreq: 'monthly' }
     ];
 
     // Adiciona as páginas geradas sob /guardias/
