@@ -456,11 +456,12 @@ h4,
 
 /* Desktop: show full label, hide short */
 .podcast-label-short {
-    display: none;
+    display: none !important;
 }
 
 .podcast-label-full {
-    display: inline;
+    display: inline !important;
+    white-space: normal;
 }
 
 /* About Buttons Grid - Desktop: 3 columns for 6 buttons */
