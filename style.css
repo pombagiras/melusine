@@ -2116,8 +2116,10 @@ body.scrolling-up {
     transform: translateY(0);
 }
 
-/* Oculta botão de carregar mais do celular no Desktop */
-.mobile-only-load-more {
-    display: none !important;
+/* Oculta botão de carregar mais do celular no Desktop (>768px) */
+@media (min-width: 769px) {
+    .mobile-only-load-more {
+        display: none !important;
+    }
 }
 
