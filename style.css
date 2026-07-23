@@ -456,11 +456,11 @@ h4,
 
 /* Desktop: show full label, hide short */
 .podcast-label-short {
-    display: none !important;
+    display: none;
 }
 
 .podcast-label-full {
-    display: inline !important;
+    display: inline;
     white-space: normal;
 }
 
@@ -1382,6 +1382,31 @@ footer.main-footer .footer-signature i {
         display: none !important;
     }
 
+    /* Podcast button em telas mobile (<768px): ocultar texto longo e exibir SOMENTE "Podcast" */
+    .podcast-label-full {
+        display: none !important;
+    }
+
+    .podcast-label-short {
+        display: inline !important;
+    }
+
+    .btn-podcast {
+        width: auto !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        padding: 10px 24px !important;
+        font-size: 0.78rem !important;
+        letter-spacing: 1.5px !important;
+        margin: 0 auto 16px !important;
+        border-radius: 50px !important;
+        background: rgba(120, 40, 200, 0.15) !important;
+        border: 1.5px solid #9b30ff !important;
+        box-shadow: 0 0 14px rgba(155, 48, 255, 0.4) !important;
+    }
+
     .hero h1 {
         font-size: clamp(2rem, 8vw, 2.8rem) !important;
         word-break: keep-all;
@@ -1620,23 +1645,6 @@ footer.main-footer .footer-signature i {
         height: auto !important;
         aspect-ratio: 16 / 9 !important;
         border-radius: 16px !important;
-    }
-
-    /* Podcast button on mobile: hide full label, show short */
-    .podcast-label-full {
-        display: none;
-    }
-
-    .podcast-label-short {
-        display: inline;
-    }
-
-    .btn-podcast {
-        width: auto;
-        padding: 12px 28px;
-        font-size: 0.82rem;
-        letter-spacing: 1.5px;
-        margin-bottom: 18px;
     }
 
     /* About buttons: 2 columns on mobile (7 buttons = 3+3+1 last centered) */
