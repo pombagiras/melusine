@@ -1334,10 +1334,45 @@ footer.main-footer .footer-signature i {
 }
 
 @media (max-width: 768px) {
+    /* ===================================================
+       MOBILE SPACING OVERHAUL — reduz todos os paddings
+       que causam espaços excessivos entre as seções
+    =================================================== */
+
+    /* Seções principais */
+    .about-section {
+        padding: 30px 15px !important;
+    }
+
+    .edu-section {
+        padding: 30px 15px !important;
+    }
+
+    .carousel-section {
+        padding: 10px 0 !important;
+    }
+
+    .carousel-track-container {
+        padding: 10px 0 !important;
+    }
+
+    .newsletter-section {
+        padding: 35px 15px !important;
+    }
+
+    .section-header {
+        margin-bottom: 30px !important;
+    }
+
+    .section-header h2 {
+        font-size: 2.2rem !important;
+        margin-bottom: 10px !important;
+    }
+
     .about-grid {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 40px;
+        gap: 20px;
     }
 
     .about-image {
@@ -1351,15 +1386,30 @@ footer.main-footer .footer-signature i {
         margin: 0 auto;
     }
 
+    /* picture element fills the about-image container */
+    .about-image picture {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .about-image picture img,
     .about-image img {
         width: 100%;
         height: 100%;
-        object-position: center top;
+        object-fit: cover;
+        object-position: center center;
+        display: block;
     }
 
     .about-content h2 {
-        font-size: 2.8rem;
-        margin-bottom: 15px;
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+        margin-bottom: 14px;
     }
 
     .hero h1 {
@@ -1525,9 +1575,13 @@ footer.main-footer .footer-signature i {
         padding-bottom: 60px;
     }
 
-    /* Footer adjustments on mobile */
+    /* Footer adjustments on mobile — padding reduzido */
     footer.main-footer {
-        padding-bottom: 80px;
+        padding: 35px 15px 70px !important;
+    }
+
+    .footer-grid {
+        gap: 25px !important;
     }
 
     /* Make all footer content visible on mobile */
