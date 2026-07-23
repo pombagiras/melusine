@@ -389,7 +389,99 @@ h4,
     font-weight: 300;
 }
 
-/* Educational Section */
+/* Podcast Button - Desktop: full text horizontal, Mobile: "Podcast" only */
+.btn-podcast {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 15px 30px;
+    margin-bottom: 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.88rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #e0b0ff;
+    background: rgba(120, 40, 200, 0.12);
+    border: 2px solid #9b30ff;
+    box-shadow:
+        0 0 18px rgba(155, 48, 255, 0.45),
+        inset 0 0 12px rgba(155, 48, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+    animation: podcastPulse 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes podcastPulse {
+    0% {
+        box-shadow: 0 0 12px rgba(155, 48, 255, 0.35), inset 0 0 8px rgba(155, 48, 255, 0.08);
+        border-color: #9b30ff;
+    }
+    100% {
+        box-shadow: 0 0 28px rgba(155, 48, 255, 0.75), inset 0 0 18px rgba(155, 48, 255, 0.22);
+        border-color: #c070ff;
+    }
+}
+
+.btn-podcast::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 30%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(200, 140, 255, 0.22), transparent);
+    transform: skewX(-20deg);
+    transition: 0.9s;
+}
+
+.btn-podcast:hover::before {
+    left: 160%;
+    transition: 0.9s ease-in-out;
+}
+
+.btn-podcast:hover {
+    background: rgba(120, 40, 200, 0.25);
+    border-color: #c070ff;
+    color: #f0d0ff;
+    box-shadow:
+        0 0 35px rgba(155, 48, 255, 0.9),
+        inset 0 0 20px rgba(155, 48, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+/* Desktop: show full label, hide short */
+.podcast-label-short {
+    display: none;
+}
+
+.podcast-label-full {
+    display: inline;
+}
+
+/* About Buttons Grid - Desktop: 3 columns for 6 buttons */
+.about-buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.about-buttons-grid .btn {
+    text-align: center;
+    justify-content: center;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 12px;
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+}
+
+
 .edu-section {
     padding: 100px 20px;
     background: rgba(139, 30, 92, 0.03);
@@ -1249,9 +1341,19 @@ footer.main-footer .footer-signature i {
 
     .about-image {
         order: -1;
-        max-width: 340px;
+        /* 16:9 ratio on mobile */
+        width: 100%;
+        max-width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 16 / 9;
+        border-radius: 20px;
         margin: 0 auto;
-        height: 340px;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: 100%;
+        object-position: center top;
     }
 
     .about-content h2 {
@@ -1281,25 +1383,45 @@ footer.main-footer .footer-signature i {
     }
 
     .floating-social {
-        bottom: 20px;
+        bottom: 0;
         top: auto;
-        left: 50%;
-        right: auto;
-        transform: translateX(-50%);
+        left: 0;
+        right: 0;
+        transform: none;
         flex-direction: row;
-        gap: 10px;
-        background: rgba(10, 1, 8, 0.9);
-        padding: 10px 20px;
-        border-radius: 40px;
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+        gap: 6px;
+        background: rgba(10, 1, 8, 0.95);
+        padding: 8px 12px;
+        border-radius: 0;
+        border: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.8);
+        width: 100%;
+        justify-content: center;
+        z-index: 2000;
+    }
+
+    /* Show all floating social icons on mobile */
+    .floating-social .social-icon,
+    .floating-social .back-to-top {
+        display: flex !important;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
 
     .social-icon,
     .back-to-top {
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+    }
+
+    .social-icon img {
+        width: 18px;
+    }
+
+    .back-to-top i {
+        font-size: 1.3rem;
     }
 
     .edu-nav {
@@ -1396,6 +1518,39 @@ footer.main-footer .footer-signature i {
         text-align: center;
         gap: 15px;
     }
+
+    /* Body bottom padding so footer bar doesn't cover content */
+    body {
+        padding-bottom: 60px;
+    }
+
+    /* Footer adjustments on mobile */
+    footer.main-footer {
+        padding-bottom: 80px;
+    }
+
+    /* Make all footer content visible on mobile */
+    .footer-grid,
+    .footer-col-identity,
+    .footer-col-nav,
+    .footer-col-social,
+    .footer-logo-title,
+    .footer-bio,
+    .footer-col-title,
+    .footer-nav-links,
+    .footer-links-container,
+    .footer-bottom,
+    .footer-copyright,
+    .footer-signature {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        color: inherit !important;
+    }
+
+    .footer-links-container {
+        display: flex !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1409,21 +1564,85 @@ footer.main-footer .footer-signature i {
         border-radius: 20px;
     }
 
+    /* Newsletter mobile: reduce title size significantly */
     .newsletter-section h2.newsletter-title {
-        font-size: 2.8rem;
+        font-size: 1.8rem !important;
+    }
+
+    .newsletter-section {
+        padding: 50px 15px !important;
+    }
+
+    .newsletter-quote {
+        font-size: 0.95rem !important;
+    }
+
+    .newsletter-desc {
+        font-size: 0.82rem !important;
     }
 
     .hero-brand-stamp {
         display: none !important;
     }
 
+    /* About image: 16:9 ratio on mobile (override 480px) */
     .about-image {
-        max-width: 260px !important;
-        height: 260px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 16 / 9 !important;
+        border-radius: 16px !important;
+    }
+
+    /* Podcast button on mobile: hide full label, show short */
+    .podcast-label-full {
+        display: none;
+    }
+
+    .podcast-label-short {
+        display: inline;
+    }
+
+    .btn-podcast {
+        width: auto;
+        padding: 12px 28px;
+        font-size: 0.82rem;
+        letter-spacing: 1.5px;
+        margin-bottom: 18px;
+    }
+
+    /* About buttons: 2 columns on mobile (7 buttons = 3+3+1 last centered) */
+    .about-buttons-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .about-buttons-grid .btn {
+        padding: 10px 8px;
+        font-size: 0.72rem;
+        letter-spacing: 0.8px;
+    }
+
+    /* Last button alone: span full width centered */
+    .about-buttons-grid .btn:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        max-width: 60%;
+        margin: 0 auto;
     }
 
     .newsletter-glass-card {
         padding: 30px 15px !important;
+    }
+
+    /* Center podcast btn on mobile */
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-podcast {
+        align-self: center;
     }
 }
 
