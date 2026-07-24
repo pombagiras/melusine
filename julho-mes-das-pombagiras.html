@@ -262,18 +262,30 @@
     .article-nav .nav-actions {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
     }
 
-    .article-nav .nav-link-privacy {
-      color: rgba(255, 255, 255, 0.7);
+    .article-nav .social-icon-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
       text-decoration: none;
-      font-size: 0.85rem;
-      transition: color 0.3s;
+      font-size: 1rem;
+      transition: all 0.3s ease;
     }
 
-    .article-nav .nav-link-privacy:hover {
+    .article-nav .social-icon-btn:hover {
+      background: var(--secondary);
+      border-color: var(--accent);
       color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 0 12px rgba(168, 12, 30, 0.5);
     }
 
     /* Banner Container Hero Ajustado */
@@ -452,13 +464,21 @@
 
 <body>
 
-  <!-- Navegação Superior com Botão de Voltar e Link para Políticas -->
+  <!-- Navegação Superior com Botão de Voltar e Redes Sociais -->
   <nav class="article-nav" aria-label="Navegação do Artigo">
     <a href="index.html#educativo" class="back-btn">
       <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Voltar ao Site
     </a>
     <div class="nav-actions">
-      <a href="privacy.html" class="nav-link-privacy">Políticas de Privacidade</a>
+      <a href="https://t.me/pomba_giras" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Telegram">
+        <i class="fa-brands fa-telegram" aria-hidden="true"></i>
+      </a>
+      <a href="https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="WhatsApp Canal">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+      </a>
+      <a href="https://discord.gg/gWZP8R7Dqu" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Discord">
+        <i class="fa-brands fa-discord" aria-hidden="true"></i>
+      </a>
     </div>
   </nav>
 
