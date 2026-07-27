@@ -360,8 +360,8 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 80% 60% at 50% 30%, rgba(94,26,26,0.45) 0%, transparent 70%),
-                  radial-gradient(ellipse 50% 40% at 80% 80%, rgba(181,162,122,0.08) 0%, transparent 60%);
+      pointer-events: none;
+      background: radial-gradient(ellipse 70% 50% at 50% 20%, rgba(94,26,26,0.2) 0%, transparent 70%);
     }
 
     .hero-image-wrapper {
@@ -373,19 +373,19 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center center;
-      opacity: 0.22;
-      filter: grayscale(20%) contrast(1.1);
+      object-position: center 15%;
+      opacity: 0.75;
+      filter: none;
     }
     .hero-image-wrapper::after {
       content: '';
       position: absolute;
       inset: 0;
       background: linear-gradient(to bottom,
-        rgba(5,4,6,0.3) 0%,
+        rgba(5,4,6,0.15) 0%,
         rgba(5,4,6,0.1) 30%,
-        rgba(5,4,6,0.7) 75%,
-        rgba(5,4,6,1) 100%
+        rgba(5,4,6,0.65) 75%,
+        rgba(5,4,6,0.95) 100%
       );
     }
 
@@ -923,6 +923,7 @@
        RESPONSIVE
     ═══════════════════════════════════════ */
     @media (max-width: 768px) {
+      .hero-image-wrapper img { object-position: center 10%; }
       .top-nav {
         flex-direction: row;
         justify-content: space-between;
