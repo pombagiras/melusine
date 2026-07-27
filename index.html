@@ -856,6 +856,466 @@
 
 <body>
 
+<!-- ═══════════════════════════════════════════════════
+     MENU HAMBURGUER — EXCLUSIVO MOBILE (≤768px)
+     Não aparece em desktop/web
+════════════════════════════════════════════════════ -->
+<style>
+/* === HAMBURGUER: só visível em mobile === */
+.mob-hamburger-btn {
+    display: none; /* padrão: oculto */
+}
+@media (max-width: 768px) {
+    .mob-hamburger-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        position: fixed;
+        top: 14px;
+        left: 14px;
+        z-index: 99999;
+        width: 44px;
+        height: 44px;
+        background: rgba(10, 3, 8, 0.82);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(181, 162, 122, 0.35);
+        border-radius: 10px;
+        cursor: pointer;
+        padding: 0;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.55), 0 0 0 0 rgba(94,26,26,0);
+        transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    }
+    .mob-hamburger-btn:hover,
+    .mob-hamburger-btn.is-open {
+        border-color: rgba(181, 162, 122, 0.7);
+        box-shadow: 0 4px 28px rgba(94,26,26,0.45), 0 0 0 2px rgba(181,162,122,0.12);
+        background: rgba(74, 7, 16, 0.92);
+    }
+    .mob-hamburger-btn .hb-line {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: #B5A27A;
+        border-radius: 2px;
+        transition: transform 0.35s cubic-bezier(0.4,0,0.2,1),
+                    opacity 0.25s ease,
+                    width 0.3s ease;
+        transform-origin: center;
+    }
+    .mob-hamburger-btn.is-open .hb-line:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    .mob-hamburger-btn.is-open .hb-line:nth-child(2) {
+        opacity: 0;
+        width: 0;
+    }
+    .mob-hamburger-btn.is-open .hb-line:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* === OVERLAY DE FUNDO === */
+    .mob-menu-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.55);
+        z-index: 99990;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.35s ease;
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
+    }
+    .mob-menu-overlay.is-visible {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    /* === DRAWER PRINCIPAL === */
+    .mob-menu-drawer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: min(84vw, 320px);
+        height: 100dvh;
+        z-index: 99995;
+        background: linear-gradient(160deg, rgba(8,3,6,0.98) 0%, rgba(30,8,20,0.99) 60%, rgba(74,7,16,0.98) 100%);
+        border-right: 1px solid rgba(181,162,122,0.18);
+        box-shadow: 6px 0 40px rgba(0,0,0,0.7);
+        transform: translateX(-102%);
+        transition: transform 0.38s cubic-bezier(0.4,0,0.2,1);
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+    .mob-menu-drawer.is-open {
+        transform: translateX(0);
+    }
+
+    /* === CABEÇALHO DO DRAWER === */
+    .mob-menu-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 20px 14px 20px;
+        border-bottom: 1px solid rgba(181,162,122,0.13);
+        flex-shrink: 0;
+    }
+    .mob-menu-logo {
+        font-family: 'Fraunces', Georgia, serif;
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #FAF6EE;
+        letter-spacing: -0.01em;
+        line-height: 1.1;
+        text-decoration: none;
+    }
+    .mob-menu-logo span {
+        color: #B5A27A;
+    }
+    .mob-menu-close-btn {
+        background: none;
+        border: 1px solid rgba(181,162,122,0.2);
+        color: rgba(250,246,238,0.6);
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 1.1rem;
+        transition: all 0.2s ease;
+        flex-shrink: 0;
+    }
+    .mob-menu-close-btn:hover {
+        border-color: #B5A27A;
+        color: #B5A27A;
+        background: rgba(181,162,122,0.08);
+    }
+
+    /* === CORPO DO MENU === */
+    .mob-menu-body {
+        flex: 1;
+        padding: 8px 0 16px 0;
+        overflow-y: auto;
+    }
+
+    /* Separador de seção */
+    .mob-menu-section-label {
+        font-family: 'Geist', 'Segoe UI', sans-serif;
+        font-size: 0.62rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: rgba(181,162,122,0.55);
+        padding: 14px 22px 6px 22px;
+    }
+
+    /* Item de menu */
+    .mob-menu-item {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        padding: 12px 22px;
+        text-decoration: none;
+        color: rgba(250,246,238,0.88);
+        font-family: 'Geist', 'Segoe UI', sans-serif;
+        font-size: 0.95rem;
+        font-weight: 500;
+        letter-spacing: 0.01em;
+        border-radius: 0;
+        transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
+        position: relative;
+    }
+    .mob-menu-item::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: transparent;
+        border-radius: 0 2px 2px 0;
+        transition: background 0.2s ease;
+    }
+    .mob-menu-item:hover, .mob-menu-item:active {
+        background: rgba(181,162,122,0.08);
+        color: #FAF6EE;
+        padding-left: 28px;
+    }
+    .mob-menu-item:hover::before,
+    .mob-menu-item:active::before {
+        background: #B5A27A;
+    }
+    .mob-menu-item .mob-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 8px;
+        background: rgba(94,26,26,0.45);
+        border: 1px solid rgba(181,162,122,0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 0.9rem;
+        color: #B5A27A;
+        transition: background 0.2s ease, border-color 0.2s ease;
+    }
+    .mob-menu-item:hover .mob-icon {
+        background: rgba(94,26,26,0.7);
+        border-color: rgba(181,162,122,0.4);
+    }
+    .mob-menu-item .mob-item-label {
+        flex: 1;
+    }
+    .mob-menu-item .mob-item-badge {
+        font-size: 0.6rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        background: rgba(168,12,30,0.35);
+        color: #d4af37;
+        border: 1px solid rgba(212,175,55,0.3);
+        padding: 2px 7px;
+        border-radius: 20px;
+        flex-shrink: 0;
+    }
+
+    /* Divisor fino */
+    .mob-menu-divider {
+        height: 1px;
+        background: rgba(181,162,122,0.1);
+        margin: 8px 22px;
+    }
+
+    /* === REDES SOCIAIS NO RODAPÉ DO DRAWER === */
+    .mob-menu-social {
+        padding: 14px 20px 20px 20px;
+        border-top: 1px solid rgba(181,162,122,0.13);
+        flex-shrink: 0;
+    }
+    .mob-menu-social-label {
+        font-family: 'Geist', sans-serif;
+        font-size: 0.6rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: rgba(181,162,122,0.5);
+        margin-bottom: 10px;
+    }
+    .mob-menu-social-row {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .mob-social-pill {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 12px;
+        border: 1px solid rgba(181,162,122,0.18);
+        border-radius: 20px;
+        background: rgba(181,162,122,0.06);
+        color: rgba(250,246,238,0.75);
+        font-family: 'Geist', sans-serif;
+        font-size: 0.72rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+    .mob-social-pill:hover {
+        border-color: rgba(181,162,122,0.5);
+        color: #FAF6EE;
+        background: rgba(181,162,122,0.12);
+    }
+    .mob-social-pill img {
+        width: 14px;
+        height: 14px;
+        object-fit: contain;
+        filter: brightness(0.85);
+    }
+    .mob-social-pill i {
+        font-size: 0.8rem;
+        color: #B5A27A;
+    }
+}
+</style>
+
+<!-- Botão hamburguer (3 traços) -->
+<button class="mob-hamburger-btn" id="mobHamburgerBtn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobMenuDrawer">
+    <span class="hb-line"></span>
+    <span class="hb-line"></span>
+    <span class="hb-line"></span>
+</button>
+
+<!-- Overlay escurecido -->
+<div class="mob-menu-overlay" id="mobMenuOverlay" aria-hidden="true"></div>
+
+<!-- Drawer lateral -->
+<nav class="mob-menu-drawer" id="mobMenuDrawer" aria-label="Menu de navegação mobile" aria-hidden="true">
+
+    <div class="mob-menu-header">
+        <a href="#home" class="mob-menu-logo" onclick="closeMobMenu()">Pombagiras<span>.com</span></a>
+        <button class="mob-menu-close-btn" id="mobMenuCloseBtn" aria-label="Fechar menu">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+    </div>
+
+    <div class="mob-menu-body">
+
+        <!-- PORTAL EDUCATIVO -->
+        <div class="mob-menu-section-label">Portal Educativo</div>
+
+        <a href="#educativo" class="mob-menu-item" onclick="closeMobMenuAndActivateTab('glossario')">
+            <span class="mob-icon"><i class="fa-solid fa-book-open" aria-hidden="true"></i></span>
+            <span class="mob-item-label">Glossário</span>
+        </a>
+        <a href="#educativo" class="mob-menu-item" onclick="closeMobMenuAndActivateTab('curiosidades')">
+            <span class="mob-icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span>
+            <span class="mob-item-label">Curiosidades</span>
+        </a>
+        <a href="#educativo" class="mob-menu-item" onclick="closeMobMenuAndActivateTab('faq')">
+            <span class="mob-icon"><i class="fa-solid fa-circle-question" aria-hidden="true"></i></span>
+            <span class="mob-item-label">Perguntas</span>
+        </a>
+        <a href="#educativo" class="mob-menu-item" onclick="closeMobMenuAndActivateTab('pombagiras')">
+            <span class="mob-icon"><i class="fa-solid fa-address-book" aria-hidden="true"></i></span>
+            <span class="mob-item-label">Guardiãs</span>
+        </a>
+        <a href="#educativo" class="mob-menu-item" onclick="closeMobMenuAndActivateTab('bibliografia')">
+            <span class="mob-icon"><i class="fa-solid fa-scroll" aria-hidden="true"></i></span>
+            <span class="mob-item-label">Livros</span>
+        </a>
+        <a href="#educativo" class="mob-menu-item" onclick="closeMobMenuAndActivateTab('cosmovisoes')">
+            <span class="mob-icon"><i class="fa-solid fa-moon" aria-hidden="true"></i></span>
+            <span class="mob-item-label">Cosmovisões</span>
+        </a>
+
+        <div class="mob-menu-divider"></div>
+
+        <!-- FERRAMENTAS -->
+        <div class="mob-menu-section-label">Ferramentas</div>
+
+        <a href="https://pombagiras.com/quiz/" class="mob-menu-item" onclick="closeMobMenu()">
+            <span class="mob-icon"><i class="fa-solid fa-star-of-life" aria-hidden="true"></i></span>
+            <span class="mob-item-label">Quiz</span>
+            <span class="mob-item-badge">Novo</span>
+        </a>
+        <a href="https://pombagiras.com/oraculo/" class="mob-menu-item" onclick="closeMobMenu()">
+            <span class="mob-icon"><i class="fa-solid fa-fire" aria-hidden="true"></i></span>
+            <span class="mob-item-label">Oráculo</span>
+        </a>
+        <a href="https://open.spotify.com/show/0oeCL1QScD3v7dHeUvJjgJ" class="mob-menu-item" target="_blank" rel="noopener" onclick="closeMobMenu()">
+            <span class="mob-icon"><i class="fa-brands fa-spotify" aria-hidden="true"></i></span>
+            <span class="mob-item-label">Podcast</span>
+        </a>
+
+        <div class="mob-menu-divider"></div>
+
+        <!-- PÁGINAS -->
+        <div class="mob-menu-section-label">Páginas</div>
+
+        <a href="https://pombagiras.com/guardias/" class="mob-menu-item" target="_blank" rel="noopener" onclick="closeMobMenu()">
+            <span class="mob-icon"><i class="fa-solid fa-crown" aria-hidden="true"></i></span>
+            <span class="mob-item-label">Enciclopédia Guardiãs</span>
+        </a>
+        <a href="https://pombagiras.com/portal/" class="mob-menu-item" target="_blank" rel="noopener" onclick="closeMobMenu()">
+            <span class="mob-icon"><i class="fa-solid fa-house" aria-hidden="true"></i></span>
+            <span class="mob-item-label">Portal de Ensaios</span>
+        </a>
+        <a href="https://alexiamelusine.com/" class="mob-menu-item" target="_blank" rel="noopener" onclick="closeMobMenu()">
+            <span class="mob-icon"><i class="fa-solid fa-eye" aria-hidden="true"></i></span>
+            <span class="mob-item-label">Sobre a Autora</span>
+        </a>
+
+    </div><!-- /.mob-menu-body -->
+
+    <!-- Redes Sociais no rodapé do drawer -->
+    <div class="mob-menu-social">
+        <div class="mob-menu-social-label">Redes Sociais</div>
+        <div class="mob-menu-social-row">
+            <a href="https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G" class="mob-social-pill" target="_blank" rel="noopener" aria-label="WhatsApp">
+                <img src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="WhatsApp" loading="lazy" decoding="async">
+                WA
+            </a>
+            <a href="https://t.me/pomba_giras" class="mob-social-pill" target="_blank" rel="noopener" aria-label="Telegram">
+                <img src="https://cdn.simpleicons.org/telegram/ffffff" alt="Telegram" loading="lazy" decoding="async">
+                Telegram
+            </a>
+            <a href="https://discord.gg/gWZP8R7Dqu" class="mob-social-pill" target="_blank" rel="noopener" aria-label="Discord">
+                <img src="https://cdn.simpleicons.org/discord/ffffff" alt="Discord" loading="lazy" decoding="async">
+                Discord
+            </a>
+            <a href="https://alexiamelusine.substack.com/" class="mob-social-pill" target="_blank" rel="noopener" aria-label="Substack">
+                <i class="fa-brands fa-substack"></i>
+                Substack
+            </a>
+        </div>
+    </div>
+
+</nav>
+
+<script>
+(function() {
+    var btn    = document.getElementById('mobHamburgerBtn');
+    var drawer = document.getElementById('mobMenuDrawer');
+    var overlay= document.getElementById('mobMenuOverlay');
+    var closeB = document.getElementById('mobMenuCloseBtn');
+    var _open  = false;
+
+    function openMobMenu() {
+        _open = true;
+        btn.classList.add('is-open');
+        btn.setAttribute('aria-expanded', 'true');
+        drawer.classList.add('is-open');
+        drawer.setAttribute('aria-hidden', 'false');
+        overlay.classList.add('is-visible');
+        overlay.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    window.closeMobMenu = function() {
+        _open = false;
+        btn.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+        drawer.classList.remove('is-open');
+        drawer.setAttribute('aria-hidden', 'true');
+        overlay.classList.remove('is-visible');
+        overlay.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    };
+
+    // Clicar em aba do portal educativo e navegar
+    window.closeMobMenuAndActivateTab = function(tabTarget) {
+        closeMobMenu();
+        setTimeout(function() {
+            // Tenta ativar a aba correspondente no portal educativo
+            var tabEl = document.querySelector('[data-target="' + tabTarget + '"]');
+            if (tabEl) { tabEl.click(); }
+            // Scroll suave para a seção
+            var section = document.getElementById('educativo') || document.getElementById(tabTarget);
+            if (section) { section.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        }, 380);
+    };
+
+    if (btn) btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        _open ? closeMobMenu() : openMobMenu();
+    });
+    if (closeB) closeB.addEventListener('click', closeMobMenu);
+    if (overlay) overlay.addEventListener('click', closeMobMenu);
+
+    // Fechar com ESC
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && _open) closeMobMenu();
+    });
+})();
+</script>
+
     <div class="floating-social">
         <a href="https://pombagiras.com/crossroads" class="social-icon" title="Site Bilingue (ES/EN)">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" style="width: 24px; height: 24px; display: block;">
