@@ -964,10 +964,11 @@
     .mob-menu-header {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        padding: 18px 20px 14px 20px;
+        justify-content: flex-start;
+        padding: 16px 16px 14px 64px; /* 64px limpa o botão fixo da esquerda */
         border-bottom: 1px solid rgba(181,162,122,0.13);
         flex-shrink: 0;
+        min-height: 56px;
     }
     .mob-menu-logo {
         font-family: 'Fraunces', Georgia, serif;
@@ -980,26 +981,6 @@
     }
     .mob-menu-logo span {
         color: #B5A27A;
-    }
-    .mob-menu-close-btn {
-        background: none;
-        border: 1px solid rgba(181,162,122,0.2);
-        color: rgba(250,246,238,0.6);
-        width: 32px;
-        height: 32px;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        font-size: 1.1rem;
-        transition: all 0.2s ease;
-        flex-shrink: 0;
-    }
-    .mob-menu-close-btn:hover {
-        border-color: #B5A27A;
-        color: #B5A27A;
-        background: rgba(181,162,122,0.08);
     }
 
     /* === CORPO DO MENU === */
@@ -1165,9 +1146,6 @@
 
     <div class="mob-menu-header">
         <a href="#home" class="mob-menu-logo" onclick="closeMobMenu()">Pombagiras<span>.com</span></a>
-        <button class="mob-menu-close-btn" id="mobMenuCloseBtn" aria-label="Fechar menu">
-            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-        </button>
     </div>
 
     <div class="mob-menu-body">
@@ -1245,7 +1223,7 @@
         <div class="mob-menu-social-row">
             <a href="https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G" class="mob-social-pill" target="_blank" rel="noopener" aria-label="WhatsApp">
                 <img src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="WhatsApp" loading="lazy" decoding="async">
-                WA
+                WhatsApp
             </a>
             <a href="https://t.me/pomba_giras" class="mob-social-pill" target="_blank" rel="noopener" aria-label="Telegram">
                 <img src="https://cdn.simpleicons.org/telegram/ffffff" alt="Telegram" loading="lazy" decoding="async">
@@ -1256,7 +1234,7 @@
                 Discord
             </a>
             <a href="https://alexiamelusine.substack.com/" class="mob-social-pill" target="_blank" rel="noopener" aria-label="Substack">
-                <i class="fa-brands fa-substack"></i>
+                <img src="https://cdn.simpleicons.org/substack/ffffff" alt="Substack" loading="lazy" decoding="async">
                 Substack
             </a>
         </div>
