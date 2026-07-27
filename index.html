@@ -1201,6 +1201,22 @@
 
         <!-- PÁGINAS -->
         <div class="mob-menu-section-label">Páginas</div>
+        <style>
+        .mob-item-badge {
+            display: inline-block;
+            background: rgba(197,160,89,0.18);
+            border: 1px solid rgba(197,160,89,0.4);
+            color: #C5A059;
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 2px 8px;
+            border-radius: 50px;
+            margin-left: auto;
+            white-space: nowrap;
+        }
+        </style>
 
         <a href="https://pombagiras.com/guardias/" class="mob-menu-item" target="_blank" rel="noopener" onclick="closeMobMenu()">
             <span class="mob-icon"><i class="fa-solid fa-crown" aria-hidden="true"></i></span>
@@ -1209,6 +1225,11 @@
         <a href="https://pombagiras.com/portal/" class="mob-menu-item" target="_blank" rel="noopener" onclick="closeMobMenu()">
             <span class="mob-icon"><i class="fa-solid fa-house" aria-hidden="true"></i></span>
             <span class="mob-item-label">Portal de Ensaios</span>
+        </a>
+        <a href="pombagira-lgbt.html" class="mob-menu-item" id="mob-menu-lgbt" onclick="closeMobMenu()">
+            <span class="mob-icon"><i class="fa-solid fa-rainbow" aria-hidden="true"></i></span>
+            <span class="mob-item-label">Pombagira &amp; LGBT+</span>
+            <span class="mob-item-badge">Novo</span>
         </a>
         <a href="https://alexiamelusine.com/" class="mob-menu-item" target="_blank" rel="noopener" onclick="closeMobMenu()">
             <span class="mob-icon"><i class="fa-solid fa-eye" aria-hidden="true"></i></span>
@@ -3756,6 +3777,37 @@ initLangSwitcher();
                     <i class="fa-solid fa-quote-right" aria-hidden="true"></i>
                 </p>
                 
+                <style>
+                /* Newsletter buttons — mobile 2x2 grid */
+                @media (max-width: 768px) {
+                    .newsletter-meta {
+                        display: grid !important;
+                        grid-template-columns: 1fr 1fr !important;
+                        gap: 12px !important;
+                        justify-items: center;
+                        max-width: 340px;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                    .newsletter-meta > a {
+                        width: 100%;
+                        justify-content: center;
+                    }
+                    .newsletter-meta > a .btn-circle {
+                        width: 100%;
+                        text-align: center;
+                        padding: 10px 12px !important;
+                        font-size: 0.78rem !important;
+                        letter-spacing: 1px !important;
+                    }
+                    /* LGBT+ button — special accent on mobile */
+                    .btn-lgbt .btn-circle {
+                        background: rgba(197,160,89,0.13) !important;
+                        border-color: rgba(197,160,89,0.45) !important;
+                        box-shadow: 0 4px 18px rgba(197,160,89,0.14) !important;
+                    }
+                }
+                </style>
                 <div class="newsletter-meta" style="margin-bottom: 25px; display: flex; justify-content: center; gap: 20px; align-items: center; flex-wrap: wrap;">
                     <a href="https://pombagiras.com/oraculo/" class="btn-oraculo" style="
                         display: inline-flex;
@@ -3779,7 +3831,7 @@ initLangSwitcher();
                             transition: all 0.3s ease;
                             box-shadow: 0 4px 15px rgba(197, 160, 89, 0.08);
                             display: inline-block;
-                        ">Oráculo</span>
+                        ">Or&#225;culo</span>
                     </a>
                     
                     <a href="https://alexiamelusine.com/gente-que-ama-a-pombagira/" class="btn-ensaio" target="_blank" rel="noopener" style="
@@ -3830,6 +3882,31 @@ initLangSwitcher();
                             box-shadow: 0 4px 15px rgba(197, 160, 89, 0.08);
                             display: inline-block;
                         ">Hijras</span>
+                    </a>
+
+                    <a href="pombagira-lgbt.html" class="btn-lgbt" id="btn-lgbt-newsletter" style="
+                        display: inline-flex;
+                        align-items: center;
+                        text-decoration: none;
+                        transition: all 0.3s ease;
+                        font-family: 'Geist', sans-serif;
+                    " onmouseover="this.querySelector('.btn-circle').style.background='rgba(197, 160, 89, 0.22)'; this.querySelector('.btn-circle').style.borderColor='#C5A059'; this.querySelector('.btn-circle').style.boxShadow='0 8px 25px rgba(197, 160, 89, 0.3)'; this.style.transform='translateY(-2px)';" onmouseout="this.querySelector('.btn-circle').style.background='rgba(197, 160, 89, 0.1)'; this.querySelector('.btn-circle').style.borderColor='rgba(197, 160, 89, 0.4)'; this.querySelector('.btn-circle').style.boxShadow='0 4px 18px rgba(197, 160, 89, 0.12)'; this.style.transform='none';">
+                        <i class="fa-solid fa-rainbow" style="color: var(--accent); font-size: 0.95rem; margin-right: 8px;"></i>
+                        <span class="btn-circle" style="
+                            border: 1px solid rgba(197, 160, 89, 0.4);
+                            background: rgba(197, 160, 89, 0.1);
+                            color: var(--text-light);
+                            padding: 10px 24px;
+                            border-radius: 50px;
+                            font-size: 0.85rem;
+                            font-weight: 600;
+                            letter-spacing: 1.5px;
+                            text-transform: uppercase;
+                            text-decoration: none;
+                            transition: all 0.3s ease;
+                            box-shadow: 0 4px 18px rgba(197, 160, 89, 0.12);
+                            display: inline-block;
+                        ">LGBT+</span>
                     </a>
                 </div>
                 
