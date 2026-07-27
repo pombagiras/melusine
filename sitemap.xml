@@ -4,7 +4,26 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- Gerado dinamicamente via generate_pages.js | Atualizado em: 2026-07-19 -->
+<!-- Gerado dinamicamente via generate_pages.js | Atualizado em: 2026-07-27 -->
+
+<url>
+  <loc>https://pombagiras.com/metodologia.html</loc>
+  <lastmod>2026-07-27</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.75</priority>
+</url>
+<url>
+  <loc>https://pombagiras.com/privacy.html</loc>
+  <lastmod>2026-07-27</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://pombagiras.com/terms.html</loc>
+  <lastmod>2026-07-27</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.50</priority>
+</url>
 
 <url>
   <loc>https://pombagiras.com/</loc>
