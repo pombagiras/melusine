@@ -861,13 +861,17 @@
      Não aparece em desktop/web
 ════════════════════════════════════════════════════ -->
 <style>
-/* === HAMBURGUER: só visível em mobile === */
-.mob-hamburger-btn {
-    display: none; /* padrão: oculto */
+/* === OCULTO POR PADRÃO EM QUALQUER TELA / DESKTOP (>768px) === */
+.mob-hamburger-btn,
+.mob-menu-overlay,
+.mob-menu-drawer {
+    display: none !important;
 }
+
+/* === EXCLUSIVO PARA MOBILE (≤768px) === */
 @media (max-width: 768px) {
     .mob-hamburger-btn {
-        display: flex;
+        display: flex !important;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -918,6 +922,7 @@
 
     /* === OVERLAY DE FUNDO === */
     .mob-menu-overlay {
+        display: block !important;
         position: fixed;
         inset: 0;
         background: rgba(0,0,0,0.55);
@@ -935,6 +940,7 @@
 
     /* === DRAWER PRINCIPAL === */
     .mob-menu-drawer {
+        display: flex !important;
         position: fixed;
         top: 0;
         left: 0;
@@ -946,7 +952,6 @@
         box-shadow: 6px 0 40px rgba(0,0,0,0.7);
         transform: translateX(-102%);
         transition: transform 0.38s cubic-bezier(0.4,0,0.2,1);
-        display: flex;
         flex-direction: column;
         overflow-y: auto;
         overscroll-behavior: contain;
