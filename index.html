@@ -34,7 +34,7 @@
     <!-- Critical CSS & Fonts at the very top of head to prevent render blocking -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap"></noscript>
-    <link rel="stylesheet" href="style.css?v=1.1.1">
+    <link rel="stylesheet" href="style.css?v=1.2.5">
     
     <!-- Asynchronous non-blocking load of FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
@@ -1458,13 +1458,13 @@
 
                 html += '<a href="' + r.url + '"' + targetAttr + ' class="' + prefix + 'result-item" role="option">' +
                     '<span class="' + prefix + 'result-icon"><i class="' + r.icon + '" aria-hidden="true"></i></span>' +
-                    '<span style="flex-grow:1;min-width:0">' +
-                      '<div style="display:flex;align-items:center;justify-content:space-between;gap:8px">' +
+                    '<div class="' + prefix + 'result-content">' +
+                      '<div class="' + prefix + 'result-header">' +
                         '<div class="' + prefix + 'result-title">' + r.title + '</div>' +
                         '<span class="' + badgeClass + '">' + r.badgeText + '</span>' +
                       '</div>' +
-                      '<div style="font-style:normal;text-align:left;color:rgba(250,246,238,0.45);font-size:0.75rem;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + r.desc + '</div>' +
-                    '</span>' +
+                      '<div class="' + prefix + 'result-desc">' + r.desc + '</div>' +
+                    '</div>' +
                     '</a>';
             }
             resultsEl.innerHTML = html;

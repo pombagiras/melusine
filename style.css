@@ -2160,61 +2160,68 @@ body.scrolling-up {
    Posicionada entre subtítulo e CTAs.
    ========================================== */
 .hero-search-bar {
-    position: relative;
-    width: 100%;
-    max-width: 560px;
-    margin: 0 auto 32px;
+    position: relative !important;
+    width: 100% !important;
+    max-width: 560px !important;
+    margin: 0 auto 32px !important;
     animation: fadeInDown 1.4s ease-out both;
     animation-delay: 0.3s;
-    z-index: 50; /* acima dos botões .cta-group que têm backdrop-filter */
+    z-index: 500 !important;
     isolation: isolate;
 }
 
-.hero-search-bar input[type="search"] {
-    width: 100%;
-    padding: 14px 52px 14px 48px;
-    background: rgba(8, 2, 6, 0.78);
-    border: 1px solid rgba(94, 26, 26, 0.7);
-    border-radius: 50px;
-    color: #FAF6EE;
-    font-family: 'Geist', sans-serif;
-    font-size: clamp(0.85rem, 2.2vw, 0.95rem);
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    outline: none;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255,255,255,0.04);
-    transition: border-color 0.35s ease, box-shadow 0.35s ease;
-    -webkit-appearance: none;
-    appearance: none;
+.hero-search-bar input[type="search"],
+#heroSearchInput {
+    width: 100% !important;
+    height: 50px !important;
+    padding: 0 48px 0 48px !important;
+    background: rgba(8, 2, 6, 0.92) !important;
+    border: 1px solid rgba(181, 162, 122, 0.45) !important;
+    border-radius: 50px !important;
+    color: #FAF6EE !important;
+    font-family: 'Geist', sans-serif !important;
+    font-size: 0.92rem !important;
+    font-weight: 300 !important;
+    letter-spacing: 0.02em !important;
+    outline: none !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255,255,255,0.06) !important;
+    transition: border-color 0.35s ease, box-shadow 0.35s ease !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    box-sizing: border-box !important;
 }
 
-.hero-search-bar input[type="search"]::placeholder {
-    color: rgba(250, 246, 238, 0.42);
-    font-style: italic;
+.hero-search-bar input[type="search"]::placeholder,
+#heroSearchInput::placeholder {
+    color: rgba(250, 246, 238, 0.45) !important;
+    font-style: italic !important;
 }
 
-.hero-search-bar input[type="search"]:focus {
-    border-color: rgba(128, 0, 32, 0.9);
-    box-shadow: 0 0 22px rgba(128, 0, 32, 0.3), inset 0 1px 0 rgba(255,255,255,0.04);
+.hero-search-bar input[type="search"]:focus,
+#heroSearchInput:focus {
+    border-color: rgba(181, 162, 122, 0.85) !important;
+    box-shadow: 0 0 28px rgba(128, 0, 32, 0.5), inset 0 1px 0 rgba(255,255,255,0.08) !important;
 }
 
 /* Ícone de lupa à esquerda */
 .hero-search-icon {
-    position: absolute;
-    left: 17px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: rgba(181, 162, 122, 0.65);
-    font-size: 0.9rem;
-    pointer-events: none;
-    transition: color 0.3s ease;
+    position: absolute !important;
+    left: 18px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    color: rgba(181, 162, 122, 0.75) !important;
+    font-size: 0.95rem !important;
+    z-index: 10 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    transition: color 0.3s ease !important;
 }
 
 .hero-search-bar input:focus ~ .hero-search-icon,
 .hero-search-bar:focus-within .hero-search-icon {
-    color: #B5A27A;
+    color: #B5A27A !important;
 }
 
 /* Botão X limpar (nativo do search) */
@@ -2228,124 +2235,159 @@ body.scrolling-up {
 }
 
 /* Dropdown de resultados */
-.hero-search-results {
-    position: absolute;
-    top: calc(100% + 8px);
-    left: 0;
-    right: 0;
-    background: linear-gradient(160deg, rgba(10, 3, 8, 0.97) 0%, rgba(30, 8, 20, 0.98) 100%);
-    border: 1px solid rgba(94, 26, 26, 0.55);
-    border-radius: 16px;
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(181,162,122,0.06);
-    overflow: hidden;
-    max-height: 320px;
-    overflow-y: auto;
-    z-index: 9999;
+.hero-search-results,
+#heroSearchResults {
+    position: absolute !important;
+    top: calc(100% + 10px) !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: #0e040b !important;
+    background: linear-gradient(165deg, rgba(14, 4, 11, 0.98) 0%, rgba(26, 6, 18, 0.99) 100%) !important;
+    border: 1px solid rgba(181, 162, 122, 0.35) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(181,162,122,0.1) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    overflow: hidden !important;
+    max-height: 380px !important;
+    overflow-y: auto !important;
+    z-index: 99999 !important;
     display: none;
     scrollbar-width: thin;
     scrollbar-color: rgba(94,26,26,0.4) transparent;
 }
 
-.hero-search-results.is-open {
-    display: block;
+.hero-search-results.is-open,
+#heroSearchResults.is-open {
+    display: block !important;
 }
 
-.hero-search-result-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 18px;
-    text-decoration: none;
-    color: #FAF6EE;
-    font-family: 'Geist', sans-serif;
-    font-size: 0.88rem;
-    transition: background 0.2s ease;
-    border-bottom: 1px solid rgba(255,255,255,0.04);
+a.hero-search-result-item,
+a.hero-search-result-item:link,
+a.hero-search-result-item:visited,
+a.hero-search-result-item:hover,
+a.hero-search-result-item:active {
+    display: flex !important;
+    align-items: center !important;
+    gap: 14px !important;
+    padding: 12px 18px !important;
+    text-decoration: none !important;
+    color: #FAF6EE !important;
+    background: transparent !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    transition: background 0.2s ease !important;
+    box-sizing: border-box !important;
 }
 
-.hero-search-result-item:last-child {
-    border-bottom: none;
+a.hero-search-result-item *,
+a.hero-search-result-item *:visited,
+a.hero-search-result-item *:link {
+    text-decoration: none !important;
 }
 
-.hero-search-result-item:hover,
-.hero-search-result-item.is-focused {
-    background: rgba(94, 26, 26, 0.35);
+a.hero-search-result-item:last-child {
+    border-bottom: none !important;
+}
+
+a.hero-search-result-item:hover,
+a.hero-search-result-item.is-focused {
+    background: rgba(94, 26, 26, 0.45) !important;
 }
 
 .hero-search-result-icon {
-    width: 28px;
-    height: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(128, 0, 32, 0.2);
-    border-radius: 6px;
-    flex-shrink: 0;
-    color: #B5A27A;
-    font-size: 0.75rem;
+    width: 32px !important;
+    height: 32px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: rgba(128, 0, 32, 0.3) !important;
+    border: 1px solid rgba(181, 162, 122, 0.2) !important;
+    border-radius: 8px !important;
+    flex-shrink: 0 !important;
+    color: #B5A27A !important;
+    font-size: 0.85rem !important;
+}
+
+.hero-search-result-content {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    text-align: left !important;
+}
+
+.hero-search-result-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    width: 100% !important;
 }
 
 .hero-search-result-title {
-    font-weight: 500;
-    color: #FAF6EE;
-    line-height: 1.3;
+    font-weight: 600 !important;
+    color: #FAF6EE !important;
+    font-size: 0.88rem !important;
+    line-height: 1.3 !important;
 }
 
 .hero-search-result-desc {
-    font-size: 0.75rem;
-    color: rgba(250, 246, 238, 0.45);
-    margin-top: 2px;
-    line-height: 1.3;
+    font-size: 0.76rem !important;
+    color: rgba(250, 246, 238, 0.55) !important;
+    margin-top: 2px !important;
+    line-height: 1.3 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
 }
 
 .hero-search-no-results {
-    padding: 20px 18px;
-    color: rgba(250, 246, 238, 0.45);
-    font-size: 0.85rem;
-    font-style: italic;
-    text-align: center;
+    padding: 20px 18px !important;
+    color: rgba(250, 246, 238, 0.55) !important;
+    font-size: 0.85rem !important;
+    font-style: italic !important;
+    text-align: center !important;
 }
 
 /* Badges de Categoria na Busca */
 .search-badge {
-    display: inline-block;
-    padding: 2px 7px;
-    font-size: 0.62rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    border-radius: 4px;
-    margin-left: auto;
-    flex-shrink: 0;
-    background: rgba(181, 162, 122, 0.12);
-    color: #B5A27A;
-    border: 1px solid rgba(181, 162, 122, 0.25);
-    white-space: nowrap;
+    display: inline-block !important;
+    padding: 2px 8px !important;
+    font-size: 0.62rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    border-radius: 4px !important;
+    margin-left: auto !important;
+    flex-shrink: 0 !important;
+    background: rgba(181, 162, 122, 0.15) !important;
+    color: #B5A27A !important;
+    border: 1px solid rgba(181, 162, 122, 0.3) !important;
+    white-space: nowrap !important;
 }
 
 .search-badge.badge-autoridade {
-    background: rgba(128, 0, 32, 0.25);
-    color: #E26D6D;
-    border-color: rgba(226, 109, 109, 0.35);
+    background: rgba(128, 0, 32, 0.35) !important;
+    color: #F87171 !important;
+    border-color: rgba(248, 113, 113, 0.4) !important;
 }
 
 .search-badge.badge-midia {
-    background: rgba(16, 185, 129, 0.15);
-    color: #6EE7B7;
-    border-color: rgba(110, 231, 183, 0.3);
+    background: rgba(16, 185, 129, 0.2) !important;
+    color: #6EE7B7 !important;
+    border-color: rgba(110, 231, 183, 0.35) !important;
 }
 
 .search-badge.badge-podcast {
-    background: rgba(138, 43, 226, 0.2);
-    color: #C084FC;
-    border-color: rgba(192, 132, 252, 0.3);
+    background: rgba(138, 43, 226, 0.25) !important;
+    color: #C084FC !important;
+    border-color: rgba(192, 132, 252, 0.35) !important;
 }
 
 .search-badge.badge-ecossistema {
-    background: rgba(59, 130, 246, 0.18);
-    color: #93C5FD;
-    border-color: rgba(147, 197, 253, 0.3);
+    background: rgba(59, 130, 246, 0.2) !important;
+    color: #93C5FD !important;
+    border-color: rgba(147, 197, 253, 0.35) !important;
 }
+
 
 /* Desktop-only: oculta no mobile */
 @media (max-width: 768px) {
