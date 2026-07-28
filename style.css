@@ -1407,26 +1407,89 @@ footer.main-footer .footer-signature i {
         box-shadow: 0 0 14px rgba(155, 48, 255, 0.4) !important;
     }
 
-    .hero h1 {
-        font-size: clamp(2rem, 8vw, 2.8rem) !important;
-        word-break: keep-all;
-        overflow-wrap: break-word;
-        line-height: 1.2;
-    }
-
-    .hero p.subtitle {
-        font-size: 1.1rem;
-        margin-bottom: 30px;
-    }
-
-    /* Mobile: esconde o vídeo e mostra a imagem */
+    /* ===================================================
+       HERO EXCLUSIVO MOBILE: Noir + Overlay + Tipografia Off-White
+       =================================================== */
     .hero-video {
         display: none !important;
     }
 
     .hero-mobile-img {
-        display: block;
+        display: block !important;
+        filter: grayscale(100%) contrast(135%) brightness(40%) !important;
+        object-fit: cover !important;
     }
+
+    .hero-content {
+        position: relative !important;
+        z-index: 2 !important;
+        padding: 28px 20px !important;
+        background: rgba(8, 3, 6, 0.55) !important;
+        backdrop-filter: blur(10px) !important;
+        -webkit-backdrop-filter: blur(10px) !important;
+        border-radius: 20px !important;
+        border: 1px solid rgba(181, 162, 122, 0.2) !important;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.75) !important;
+        max-width: 92% !important;
+        margin: 0 auto !important;
+    }
+
+    .hero-text-overlay {
+        display: block !important;
+        position: absolute !important;
+        inset: -20px !important;
+        z-index: -1 !important;
+        background: radial-gradient(
+            ellipse 95% 85% at 50% 50%,
+            rgba(5, 5, 5, 0.85) 0%,
+            rgba(5, 5, 5, 0.65) 60%,
+            rgba(5, 5, 5, 0.35) 100%
+        ) !important;
+        border-radius: 20px !important;
+        pointer-events: none !important;
+    }
+
+    .hero h1,
+    .hero .speakable-title {
+        background: none !important;
+        -webkit-background-clip: initial !important;
+        -webkit-text-fill-color: #F5EADD !important;
+        color: #F5EADD !important;
+        text-shadow: 0 2px 16px rgba(0, 0, 0, 0.95), 0 0 35px rgba(0, 0, 0, 0.8) !important;
+        font-size: clamp(2rem, 8.5vw, 2.7rem) !important;
+        font-weight: 700 !important;
+        line-height: 1.15 !important;
+        margin-bottom: 16px !important;
+        word-break: keep-all !important;
+        overflow-wrap: break-word !important;
+    }
+
+    .hero p.subtitle,
+    .hero .speakable-description {
+        color: rgba(250, 246, 238, 0.92) !important;
+        font-size: clamp(0.92rem, 3.8vw, 1.05rem) !important;
+        font-weight: 300 !important;
+        line-height: 1.6 !important;
+        margin: 0 auto 26px !important;
+        max-width: 95% !important;
+        text-shadow: 0 1px 8px rgba(0, 0, 0, 0.85) !important;
+    }
+
+    .hero .cta-group {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        width: 100% !important;
+        max-width: 280px !important;
+        margin: 0 auto !important;
+    }
+
+    .hero .cta-group .btn {
+        width: 100% !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+    }
+
 
     .floating-social {
         bottom: 0;
@@ -2389,15 +2452,13 @@ a.hero-search-result-item.is-focused {
 }
 
 
-/* Desktop-only: oculta no mobile */
+/* Desktop-only: oculta a barra de busca do hero no mobile (que vai pro drawer) */
 @media (max-width: 768px) {
     .hero-search-bar {
         display: none !important;
     }
-    .hero-text-overlay {
-        display: none;
-    }
 }
+
 
 /* ==========================================
    DRAWER MOBILE: Barra de busca no topo
