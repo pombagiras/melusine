@@ -1408,7 +1408,7 @@ footer.main-footer .footer-signature i {
     }
 
     /* ===================================================
-       HERO EXCLUSIVO MOBILE: Noir + Overlay + Tipografia Off-White
+       HERO EXCLUSIVO MOBILE: Protection Radial + Off-White & Grey Text
        =================================================== */
     .hero-video {
         display: none !important;
@@ -1424,11 +1424,11 @@ footer.main-footer .footer-signature i {
         position: relative !important;
         z-index: 2 !important;
         padding: 28px 20px !important;
-        background: rgba(8, 3, 6, 0.55) !important;
-        backdrop-filter: blur(10px) !important;
-        -webkit-backdrop-filter: blur(10px) !important;
-        border-radius: 20px !important;
-        border: 1px solid rgba(181, 162, 122, 0.2) !important;
+        background: radial-gradient(circle at center, rgba(10, 10, 10, 0.85) 0%, rgba(10, 10, 10, 0.65) 70%, rgba(10, 10, 10, 0) 100%) !important;
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
+        border-radius: 24px !important;
+        border: 1px solid rgba(181, 162, 122, 0.25) !important;
         box-shadow: 0 12px 40px rgba(0, 0, 0, 0.75) !important;
         max-width: 92% !important;
         margin: 0 auto !important;
@@ -1439,13 +1439,8 @@ footer.main-footer .footer-signature i {
         position: absolute !important;
         inset: -20px !important;
         z-index: -1 !important;
-        background: radial-gradient(
-            ellipse 95% 85% at 50% 50%,
-            rgba(5, 5, 5, 0.85) 0%,
-            rgba(5, 5, 5, 0.65) 60%,
-            rgba(5, 5, 5, 0.35) 100%
-        ) !important;
-        border-radius: 20px !important;
+        background: radial-gradient(circle at center, rgba(10, 10, 10, 0.85) 0%, rgba(10, 10, 10, 0.65) 70%, rgba(10, 10, 10, 0) 100%) !important;
+        border-radius: 24px !important;
         pointer-events: none !important;
     }
 
@@ -1456,9 +1451,9 @@ footer.main-footer .footer-signature i {
         -webkit-text-fill-color: #F5EADD !important;
         color: #F5EADD !important;
         text-shadow: 0 2px 16px rgba(0, 0, 0, 0.95), 0 0 35px rgba(0, 0, 0, 0.8) !important;
-        font-size: clamp(2rem, 8.5vw, 2.7rem) !important;
+        font-size: clamp(1.85rem, 7.8vw, 2.5rem) !important;
         font-weight: 700 !important;
-        line-height: 1.15 !important;
+        line-height: 1.2 !important;
         margin-bottom: 16px !important;
         word-break: keep-all !important;
         overflow-wrap: break-word !important;
@@ -1466,8 +1461,8 @@ footer.main-footer .footer-signature i {
 
     .hero p.subtitle,
     .hero .speakable-description {
-        color: rgba(250, 246, 238, 0.92) !important;
-        font-size: clamp(0.92rem, 3.8vw, 1.05rem) !important;
+        color: #B8B8B8 !important;
+        font-size: clamp(0.9rem, 3.6vw, 1.02rem) !important;
         font-weight: 300 !important;
         line-height: 1.6 !important;
         margin: 0 auto 26px !important;
@@ -1490,6 +1485,35 @@ footer.main-footer .footer-signature i {
         box-sizing: border-box !important;
     }
 
+    /* Refit de Títulos de Seção no Mobile */
+    .section-header h2 {
+        font-size: clamp(1.6rem, 5.5vw, 2.1rem) !important;
+        line-height: 1.25 !important;
+        margin-bottom: 10px !important;
+        word-break: keep-all !important;
+        overflow-wrap: break-word !important;
+    }
+
+    .about-content h2 {
+        font-size: clamp(1.65rem, 5.8vw, 2.2rem) !important;
+        line-height: 1.25 !important;
+        margin-bottom: 8px !important;
+    }
+
+    footer.main-footer .footer-logo-title {
+        font-size: clamp(1.6rem, 5.5vw, 2.1rem) !important;
+        line-height: 1.25 !important;
+    }
+
+    .footer-col-title {
+        font-size: clamp(1.35rem, 4.8vw, 1.75rem) !important;
+        line-height: 1.25 !important;
+    }
+
+    .footer-subtitle {
+        font-size: 0.68rem !important;
+        letter-spacing: 1.5px !important;
+    }
 
     .floating-social {
         bottom: 0;
@@ -1533,19 +1557,19 @@ footer.main-footer .footer-signature i {
         font-size: 1.3rem;
     }
 
-    /* Botões do Portal Educativo organizados e fluidos no celular */
+    /* Botões do Portal Educativo — Grid Simétrico 2 Colunas no Celular */
     .edu-nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px 6px;
-        padding: 12px 10px;
-        background: rgba(10, 1, 8, 0.4);
-        border-radius: 24px;
-        border: 1px solid rgba(255, 255, 255, 0.04);
-        max-width: 100%;
-        margin: 0 auto 30px;
-        overflow: visible;
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        padding: 14px 12px !important;
+        background: rgba(10, 1, 8, 0.6) !important;
+        border-radius: 20px !important;
+        border: 1px solid rgba(255, 255, 255, 0.08) !important;
+        max-width: 360px !important;
+        margin: 0 auto 30px !important;
+        box-sizing: border-box !important;
+        overflow: visible !important;
     }
 
     .edu-nav::-webkit-scrollbar {
@@ -1553,28 +1577,34 @@ footer.main-footer .footer-signature i {
     }
 
     .nav-tab {
-        white-space: nowrap;
-        padding: 8px 14px;
-        font-size: 0.7rem;
-        font-family: 'Geist', sans-serif;
-        font-weight: 600;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        border-radius: 20px;
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.06);
-        color: rgba(255, 255, 255, 0.75);
-        transition: all 0.3s ease;
-        text-align: center;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
+        white-space: nowrap !important;
+        padding: 11px 8px !important;
+        font-size: 0.74rem !important;
+        font-family: 'Geist', sans-serif !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.8px !important;
+        text-transform: uppercase !important;
+        border-radius: 20px !important;
+        background: rgba(255, 255, 255, 0.04) !important;
+        border: 1px solid rgba(255, 255, 255, 0.08) !important;
+        color: rgba(255, 255, 255, 0.85) !important;
+        transition: all 0.3s ease !important;
+        text-align: center !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        margin: 0 !important;
     }
 
     .edu-nav .nav-tab:last-child:nth-child(odd) {
-        grid-column: auto;
-        max-width: none;
-        margin: 0;
+        grid-column: 1 / -1 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-top: 2px !important;
+        background: rgba(128, 0, 32, 0.45) !important;
+        border-color: rgba(212, 175, 55, 0.5) !important;
     }
 
     /* Cosmovisões tab: exibe apenas os 3 primeiros artigos no celular com botão "Carregar Mais" */
@@ -1583,7 +1613,7 @@ footer.main-footer .footer-signature i {
     }
 
     #cosmovisoes.show-all-mobile .grid-cards .card:nth-child(n+4) {
-        display: block !important;
+        display: flex !important;
     }
 
     .mobile-only-load-more {
@@ -1616,10 +1646,6 @@ footer.main-footer .footer-signature i {
         transform: translateY(-2px);
     }
 
-
-    .section-header h2 {
-        font-size: 2.8rem;
-    }
 
     /* Otimizações do Carrossel para telas Touch */
     .carousel-item img {
