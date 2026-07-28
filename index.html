@@ -1335,75 +1335,74 @@
 
 <script>
 /* ============================================================
-   OTIMIZAÇÃO MOBILE: Evita download do vídeo em telas ≤768px
-   ============================================================ */
-(function() {
-    if (window.innerWidth <= 768) {
-        var vid = document.querySelector('.hero-video');
-        if (vid) {
-            vid.pause();
-            vid.removeAttribute('autoplay');
-            vid.setAttribute('preload', 'none');
-            var sources = vid.querySelectorAll('source');
-            sources.forEach(function(s) { s.removeAttribute('src'); });
-            vid.load();
-        }
-    }
-})();
-
-/* ============================================================
-   BUSCA INTELIGENTE LOCAL — índice estático de entidades,
-   artigos e seções do portal Pombagiras.com
+   BUSCA INTELIGENTE ECOSSISTEMA — Pombagiras.com & Alexia Melusine
+   Rastreamento por entidades, mídias, redes, pesquisas e projetos
    ============================================================ */
 (function() {
     'use strict';
 
-    /* --- ÍNDICE DE BUSCA --- */
+    /* --- ÍNDICE COMPLETO DO ECOSSISTEMA --- */
     var SEARCH_INDEX = [
-        { title: 'Maria Padilha', desc: 'A mais famosa das Pombagiras', url: 'guardias/maria-padilha.html', icon: 'fa-solid fa-crown' },
-        { title: 'Maria Mulambo', desc: 'Pombagira das encruzilhadas e becos', url: 'guardias/maria-mulambo.html', icon: 'fa-solid fa-road' },
-        { title: 'Maria Navalha', desc: 'Pombagira das lâminas e da justiça', url: 'guardias/maria-navalha.html', icon: 'fa-solid fa-bolt' },
-        { title: 'Maria Quitéria', desc: 'Guerreira e protetora das mulheres', url: 'guardias/maria-quiteria.html', icon: 'fa-solid fa-shield' },
-        { title: 'Maria Farrapo', desc: 'Pombagira dos becos e periferias', url: 'guardias/maria-farrapo.html', icon: 'fa-solid fa-fire' },
-        { title: 'Rosa Caveira', desc: 'Pombagira da morte e da calunga', url: 'guardias/rosa-caveira.html', icon: 'fa-solid fa-skull' },
-        { title: 'Dama da Noite', desc: 'Pombagira das trevas e mistérios', url: 'guardias/dama-da-noite.html', icon: 'fa-solid fa-moon' },
-        { title: 'Sete Saias', desc: 'Pombagira das sete linhas', url: 'guardias/sete-saias.html', icon: 'fa-solid fa-star' },
-        { title: 'Pombagira Cigana', desc: 'Linha das Ciganas, amor e sorte', url: 'guardias/pombagira-cigana.html', icon: 'fa-solid fa-eye' },
-        { title: 'Pombagira da Praia', desc: 'Linha das águas e Iemanjá', url: 'guardias/pombagira-da-praia.html', icon: 'fa-solid fa-water' },
-        { title: 'Pombagira Menina', desc: 'A face jovem e inocente da linha', url: 'guardias/pombagira-menina.html', icon: 'fa-solid fa-feather' },
-        { title: 'Pombagira da Figueira', desc: 'Linha das matas e natureza', url: 'guardias/pombagira-da-figueira.html', icon: 'fa-solid fa-leaf' },
-        { title: 'Pombagira das Almas', desc: 'Linha da calunga e dos mortos', url: 'guardias/pombagira-das-almas.html', icon: 'fa-solid fa-ghost' },
-        { title: 'Pombagira Sete Encruzilhadas', desc: 'Rainha das encruzilhadas', url: 'guardias/pombagira-sete-encruzilhadas.html', icon: 'fa-solid fa-road' },
-        { title: 'Pombagira da Lua', desc: 'Linha lunar e dos ciclos', url: 'guardias/pombagira-da-lua.html', icon: 'fa-solid fa-circle' },
-        { title: 'Pombagira das Trevas', desc: 'Linha da escuridão profunda', url: 'guardias/pombagira-das-trevas.html', icon: 'fa-solid fa-cloud-moon' },
-        { title: 'Pombagira da Serra', desc: 'Linha das montanhas e pedreiras', url: 'guardias/pombagira-da-serra.html', icon: 'fa-solid fa-mountain' },
-        { title: 'Pombagira do Fogo', desc: 'Linha do fogo e da paixão', url: 'guardias/pombagira-do-fogo.html', icon: 'fa-solid fa-fire-flame-curved' },
-        { title: 'Pombagira das Águas Profundas', desc: 'Linha das profundezas do mar', url: 'guardias/pombagira-das-aguas-profundas.html', icon: 'fa-solid fa-droplet' },
-        { title: 'Pombagira da Sombra', desc: 'Linha da sombra e do limbo', url: 'guardias/pombagira-da-sombra.html', icon: 'fa-regular fa-moon' },
-        { title: 'Pombagira da Fenda', desc: 'Linha das fendas e portais', url: 'guardias/pombagira-da-fenda.html', icon: 'fa-solid fa-door-open' },
-        { title: 'Pombagira da Calunga Profunda', desc: 'Linha da morte e renovação', url: 'guardias/pombagira-da-calunga-profunda.html', icon: 'fa-solid fa-infinity' },
-        { title: 'Pombagira das Correntes', desc: 'Linha das almas aprisionadas', url: 'guardias/pombagira-das-correntes.html', icon: 'fa-solid fa-link' },
-        { title: 'Pombagira da Neblina', desc: 'Linha do mistério e do véu', url: 'guardias/pombagira-da-neblina.html', icon: 'fa-solid fa-smog' },
-        { title: 'Pombagira da Estrada', desc: 'Linha dos caminhos e viagens', url: 'guardias/pombagira-da-estrada.html', icon: 'fa-solid fa-route' },
-        { title: 'Pombagira do Vento', desc: 'Linha do vento e do ar', url: 'guardias/pombagira-do-vento.html', icon: 'fa-solid fa-wind' },
-        { title: 'Pombagira Cacurucaia', desc: 'Senhora do Cruzeiro, linha da morte', url: 'guardias/pombagira-cacurucaia-senhora-do-cruzeiro.html', icon: 'fa-solid fa-cross' },
-        { title: 'Pombagira & LGBT+', desc: 'Relação com a diversidade de gênero', url: 'pombagira-lgbt.html', icon: 'fa-solid fa-rainbow' },
-        { title: 'Glossário de Umbanda', desc: 'Termos e conceitos da Umbanda', url: 'guardias/termos.html', icon: 'fa-solid fa-book-open' },
-        { title: 'Quimbanda — O que é?', desc: 'Tradição e fundamentos', url: '#educativo', icon: 'fa-solid fa-book' },
-        { title: 'FAQ — Perguntas Frequentes', desc: 'Dúvidas sobre Pombagiras', url: '#educativo', icon: 'fa-solid fa-circle-question' },
-        { title: 'Guardiãs — Enciclopédia', desc: '27 entidades com estudos completos', url: 'guardias/', icon: 'fa-solid fa-crown' },
-        { title: 'Medo de Pombagira', desc: 'Por que as pessoas temem?', url: 'guardias/', icon: 'fa-solid fa-triangle-exclamation' },
-        { title: 'Quiz — Qual é a sua Pombagira?', desc: 'Descubra sua guardiã', url: 'https://pombagiras.com/quiz/', icon: 'fa-solid fa-star-of-life' },
-        { title: 'Oráculo das Pombagiras', desc: 'Mensagens das Guardiãs', url: 'https://pombagiras.com/oraculo/', icon: 'fa-solid fa-fire' },
-        { title: 'Portal de Ensaios', desc: 'Artigos e reflexões profundas', url: 'https://pombagiras.com/portal/', icon: 'fa-solid fa-scroll' },
-        { title: 'Alexia Melusine', desc: 'Autora e pesquisadora do portal', url: 'https://alexiamelusine.com/', icon: 'fa-solid fa-eye' },
-        { title: 'Exu — Fundamentos', desc: 'Estudo sobre os Exus na tradição', url: '#educativo', icon: 'fa-solid fa-fire-flame-curved' },
-        { title: 'Cosmovisões Afro-Brasileiras', desc: 'Perspectivas espirituais e culturais', url: '#educativo', icon: 'fa-solid fa-moon' },
-        { title: 'Julho — Mês das Pombagiras', desc: 'Celebração especial de julho', url: 'julho-mes-das-pombagiras.html', icon: 'fa-solid fa-calendar' },
-        { title: 'Metodologia do Portal', desc: 'Como o portal é construído', url: 'metodologia.html', icon: 'fa-solid fa-flask' }
+        /* === AUTORIDADE MÁXIMA & SITES DA AUTORA === */
+        { title: 'Alexia Melusine — Portal Oficial', desc: 'Autora, pesquisadora e autoridade máx. do ecossistema', url: 'https://alexiamelusine.com/', icon: 'fa-solid fa-eye', badge: 'badge-autoridade', badgeText: 'Autoridade', tags: ['alexia', 'melusine', 'autora', 'pesquisadora', 'biografia', 'oficial', 'criadora'] },
+        { title: 'Melusine Pride — LGBT+ & Diversidade', desc: 'Estudos e artigos sobre diversidade de gênero e espiritualidade', url: 'https://alexiamelusine.com/pride/', icon: 'fa-solid fa-rainbow', badge: 'badge-autoridade', badgeText: 'Pride / LGBT', tags: ['pride', 'lgbt', 'lgbtqia', 'diversidade', 'genero', 'queer', 'trans', 'direitos', 'alexia'] },
+        { title: 'Alexia Melusine — Perfil & Links Oficiais', desc: 'Canais oficiais, matérias e redes da autora', url: 'https://alexiamelusine.com/oficial/', icon: 'fa-solid fa-user-check', badge: 'badge-autoridade', badgeText: 'Oficial', tags: ['oficial', 'perfil', 'redes', 'links', 'imprensa', 'midia'] },
+        { title: 'Melusine Card — Cartão Digital de Contato', desc: 'E-mail, agendamentos e contato direto', url: 'https://alexiamelusine.com/card/', icon: 'fa-solid fa-id-card', badge: 'badge-autoridade', badgeText: 'Contato', tags: ['card', 'cartao', 'email', 'contato', 'agendamento', 'falar', 'escrever'] },
+        { title: 'Limbo Sonoro — Podcast & Áudio Espiritual', desc: 'Episódios, ensaios narrados e produções de áudio', url: 'https://alexiamelusine.com/limbosonoro/', icon: 'fa-solid fa-podcast', badge: 'badge-podcast', badgeText: 'Podcast', tags: ['limbo', 'sonoro', 'podcast', 'audio', 'spotify', 'musica', 'episodio', 'ouvir', 'radioteatro'] },
+
+        /* === REDES SOCIAIS & CANAIS === */
+        { title: 'WhatsApp — Canal Oficial Pombagiras', desc: 'Transmissões exclusivas, novidades e artigos', url: 'https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G', icon: 'fa-brands fa-whatsapp', badge: 'badge-midia', badgeText: 'WhatsApp', tags: ['whatsapp', 'zap', 'grupo', 'canal', 'comunidade', 'redes', 'redes sociais', 'mensagens'] },
+        { title: 'Telegram — Comunidade Sagrada', desc: 'Canal no Telegram com conteúdos diários', url: 'https://t.me/pomba_giras', icon: 'fa-brands fa-telegram', badge: 'badge-midia', badgeText: 'Telegram', tags: ['telegram', 'tg', 'canal', 'grupo', 'redes', 'redes sociais'] },
+        { title: 'YouTube — Vídeos & Documentários', desc: 'Vídeos, palestras e ensaios visuais da autora', url: 'https://alexiamelusine.com/oficial/', icon: 'fa-brands fa-youtube', badge: 'badge-midia', badgeText: 'YouTube', tags: ['youtube', 'yt', 'video', 'videos', 'canal', 'documentario', 'aulas', 'palestras'] },
+        { title: 'Spotify — Trilha & Podcasts', desc: 'Playlist espiritual e episódios do Limbo Sonoro', url: 'https://open.spotify.com/search/pombagiras', icon: 'fa-brands fa-spotify', badge: 'badge-podcast', badgeText: 'Spotify', tags: ['spotify', 'musica', 'playlist', 'audio', 'podcast', 'ouvir'] },
+
+        /* === APLICAÇÕES DO ECOSSISTEMA === */
+        { title: 'Vortex — Imersão Multimídia', desc: 'Experiência imersiva e galeria de guardiãs', url: 'vortex/', icon: 'fa-solid fa-dharmachakra', badge: 'badge-ecossistema', badgeText: 'Vortex', tags: ['vortex', 'galeria', 'fotos', 'imagens', 'arte', 'imersao', 'multimidia'] },
+        { title: 'Lébaras — Espaço de Culto & Tradição', desc: 'Estudos e enciclopédia das Lébaras', url: 'lebaras/', icon: 'fa-solid fa-fire-flame-curved', badge: 'badge-ecossistema', badgeText: 'Lébaras', tags: ['lebaras', 'lebara', 'culto', 'tradicao', 'oferendas', 'quimbanda'] },
+        { title: 'Crossroads — Portal Bilíngue (ES/EN)', desc: 'Estudos traduzidos em Espanhol e Inglês', url: 'crossroads/', icon: 'fa-solid fa-language', badge: 'badge-ecossistema', badgeText: 'Crossroads', tags: ['crossroads', 'bilingue', 'english', 'espanol', 'traducao', 'global'] },
+        { title: 'Quiz — Qual é a sua Pombagira?', desc: 'Descubra qual guardiã rege seus caminhos', url: 'https://pombagiras.com/quiz/', icon: 'fa-solid fa-star-of-life', badge: 'badge-ecossistema', badgeText: 'Quiz Interativo', tags: ['quiz', 'teste', 'qual', 'descobrir', 'minha pombagira', 'rege', 'caminhos', 'jogo'] },
+        { title: 'Oráculo Digital das Pombagiras', desc: 'Tire uma carta e receba a orientação da Guardiã', url: 'https://pombagiras.com/oraculo/', icon: 'fa-solid fa-fire', badge: 'badge-ecossistema', badgeText: 'Oráculo', tags: ['oraculo', 'cartas', 'tiragem', 'mensagem', 'orientacao', 'conselho', 'sorte'] },
+        { title: 'GitHub — Código Open Source', desc: 'Repositório, códigos e ecossistema dev', url: 'github/', icon: 'fa-brands fa-github', badge: 'badge-ecossistema', badgeText: 'GitHub', tags: ['github', 'codigo', 'dev', 'open source', 'desenvolvimento', 'repositorio'] },
+        { title: 'Portal de Ensaios & Dossiês', desc: 'Biblioteca com artigos profundos e pesquisas', url: 'portal/', icon: 'fa-solid fa-scroll', badge: 'badge-ecossistema', badgeText: 'Portal Ensaios', tags: ['portal', 'ensaios', 'dossie', 'pesquisas', 'artigos', 'livros', 'obras', 'chico xavier', 'historia'] },
+
+        /* === PESQUISAS & SEÇÕES === */
+        { title: 'FAQ — Perguntas Frequentes', desc: 'Respostas rápidas sobre Pombagiras, Umbanda e Quimbanda', url: '#educativo', icon: 'fa-solid fa-circle-question', badge: '', badgeText: 'FAQ', tags: ['faq', 'perguntas', 'duvidas', 'respostas', 'como saber', 'sinais', 'medo', 'resumo'] },
+        { title: 'Pombagira & LGBT+ — Relação & Diversidade', desc: 'Estudo fundamental sobre identidade e ancestralidade', url: 'pombagira-lgbt.html', icon: 'fa-solid fa-rainbow', badge: '', badgeText: 'Pesquisa', tags: ['lgbt', 'lgbtqia', 'diversidade', 'genero', 'queer', 'trans', 'pombagira lgbt'] },
+        { title: 'Glossário de Umbanda & Quimbanda', desc: 'Dicionário de termos e conceitos da tradição', url: 'guardias/termos.html', icon: 'fa-solid fa-book-open', badge: '', badgeText: 'Glossário', tags: ['glossario', 'dicionario', 'termos', 'conceitos', 'quimbanda', 'umbanda', 'palavras', 'significado'] },
+        { title: 'Julho — Mês das Pombagiras', desc: 'Celebração especial, datas e ritos de Julho', url: 'julho-mes-das-pombagiras.html', icon: 'fa-solid fa-calendar', badge: '', badgeText: 'Especial', tags: ['julho', 'mes', 'festa', 'datas', 'ritos', 'celebracao'] },
+        { title: 'Metodologia do Portal', desc: 'Como nossas pesquisas e artigos são construídos', url: 'metodologia.html', icon: 'fa-solid fa-flask', badge: '', badgeText: 'Metodologia', tags: ['metodologia', 'pesquisa', 'metodo', 'fontes', 'academico'] },
+
+        /* === GUARDIÃS (27 ENTIDADES) === */
+        { title: 'Maria Padilha', desc: 'A mais famosa das Pombagiras', url: 'guardias/maria-padilha.html', icon: 'fa-solid fa-crown', badge: '', badgeText: 'Guardiã', tags: ['padilha', 'rainha', 'cruzeiro', 'encruzilhada', 'maria padilha'] },
+        { title: 'Maria Mulambo', desc: 'Pombagira das encruzilhadas e becos', url: 'guardias/maria-mulambo.html', icon: 'fa-solid fa-road', badge: '', badgeText: 'Guardiã', tags: ['mulambo', 'lixo', 'beco', 'encruzilhada', 'maria mulambo'] },
+        { title: 'Maria Navalha', desc: 'Pombagira das lâminas e da justiça', url: 'guardias/maria-navalha.html', icon: 'fa-solid fa-bolt', badge: '', badgeText: 'Guardiã', tags: ['navalha', 'malandragem', 'zepilintra', 'laminas', 'justica', 'maria navalha'] },
+        { title: 'Maria Quitéria', desc: 'Guerreira e protetora das mulheres', url: 'guardias/maria-quiteria.html', icon: 'fa-solid fa-shield', badge: '', badgeText: 'Guardiã', tags: ['quiteria', 'guerreira', 'soldado', 'espada', 'maria quiteria'] },
+        { title: 'Maria Farrapo', desc: 'Pombagira dos becos e periferias', url: 'guardias/maria-farrapo.html', icon: 'fa-solid fa-fire', badge: '', badgeText: 'Guardiã', tags: ['farrapo', 'becos', 'periferia', 'maria farrapo'] },
+        { title: 'Rosa Caveira', desc: 'Pombagira da morte e da calunga', url: 'guardias/rosa-caveira.html', icon: 'fa-solid fa-skull', badge: '', badgeText: 'Guardiã', tags: ['rosa', 'caveira', 'calunga', 'cemiterio', 'morte', 'rosa caveira'] },
+        { title: 'Dama da Noite', desc: 'Pombagira das trevas e mistérios', url: 'guardias/dama-da-noite.html', icon: 'fa-solid fa-moon', badge: '', badgeText: 'Guardiã', tags: ['dama', 'noite', 'trevas', 'misterio', 'dama da noite'] },
+        { title: 'Sete Saias', desc: 'Pombagira das sete linhas', url: 'guardias/sete-saias.html', icon: 'fa-solid fa-star', badge: '', badgeText: 'Guardiã', tags: ['sete saias', 'saias', 'sete linhas'] },
+        { title: 'Pombagira Cigana', desc: 'Linha das Ciganas, amor e sorte', url: 'guardias/pombagira-cigana.html', icon: 'fa-solid fa-eye', badge: '', badgeText: 'Guardiã', tags: ['cigana', 'ciganas', 'amor', 'sorte', 'baralho'] },
+        { title: 'Pombagira da Praia', desc: 'Linha das águas e Iemanjá', url: 'guardias/pombagira-da-praia.html', icon: 'fa-solid fa-water', badge: '', badgeText: 'Guardiã', tags: ['praia', 'mar', 'iemanja', 'aguas'] },
+        { title: 'Pombagira Menina', desc: 'A face jovem e inocente da linha', url: 'guardias/pombagira-menina.html', icon: 'fa-solid fa-feather', badge: '', badgeText: 'Guardiã', tags: ['menina', 'jovem', 'moca'] },
+        { title: 'Pombagira da Figueira', desc: 'Linha das matas e natureza', url: 'guardias/pombagira-da-figueira.html', icon: 'fa-solid fa-leaf', badge: '', badgeText: 'Guardiã', tags: ['figueira', 'matas', 'arvore'] },
+        { title: 'Pombagira das Almas', desc: 'Linha da calunga e dos mortos', url: 'guardias/pombagira-das-almas.html', icon: 'fa-solid fa-ghost', badge: '', badgeText: 'Guardiã', tags: ['almas', 'calunga', 'mortos', 'cruzeiro'] },
+        { title: 'Pombagira Sete Encruzilhadas', desc: 'Rainha das encruzilhadas', url: 'guardias/pombagira-sete-encruzilhadas.html', icon: 'fa-solid fa-road', badge: '', badgeText: 'Guardiã', tags: ['sete encruzilhadas', 'rainha', 'caminhos'] },
+        { title: 'Pombagira da Lua', desc: 'Linha lunar e dos ciclos', url: 'guardias/pombagira-da-lua.html', icon: 'fa-solid fa-circle', badge: '', badgeText: 'Guardiã', tags: ['lua', 'lunar', 'ciclos', 'noite'] },
+        { title: 'Pombagira das Trevas', desc: 'Linha da escuridão profunda', url: 'guardias/pombagira-das-trevas.html', icon: 'fa-solid fa-cloud-moon', badge: '', badgeText: 'Guardiã', tags: ['trevas', 'escuridao', 'profunda'] },
+        { title: 'Pombagira da Serra', desc: 'Linha das montanhas e pedreiras', url: 'guardias/pombagira-da-serra.html', icon: 'fa-solid fa-mountain', badge: '', badgeText: 'Guardiã', tags: ['serra', 'pedreira', 'montanha'] },
+        { title: 'Pombagira do Fogo', desc: 'Linha do fogo e da paixão', url: 'guardias/pombagira-do-fogo.html', icon: 'fa-solid fa-fire-flame-curved', badge: '', badgeText: 'Guardiã', tags: ['fogo', 'paixao', 'chama'] },
+        { title: 'Pombagira das Águas Profundas', desc: 'Linha das profundezas do mar', url: 'guardias/pombagira-das-aguas-profundas.html', icon: 'fa-solid fa-droplet', badge: '', badgeText: 'Guardiã', tags: ['aguas profundas', 'oceano', 'profundeza'] },
+        { title: 'Pombagira da Sombra', desc: 'Linha da sombra e do limbo', url: 'guardias/pombagira-da-sombra.html', icon: 'fa-regular fa-moon', badge: '', badgeText: 'Guardiã', tags: ['sombra', 'limbo', 'oculto'] },
+        { title: 'Pombagira da Fenda', desc: 'Linha das fendas e portais', url: 'guardias/pombagira-da-fenda.html', icon: 'fa-solid fa-door-open', badge: '', badgeText: 'Guardiã', tags: ['fenda', 'portal', 'dimensao'] },
+        { title: 'Pombagira da Calunga Profunda', desc: 'Linha da morte e renovação', url: 'guardias/pombagira-da-calunga-profunda.html', icon: 'fa-solid fa-infinity', badge: '', badgeText: 'Guardiã', tags: ['calunga profunda', 'morte', 'renovacao'] },
+        { title: 'Pombagira das Correntes', desc: 'Linha das almas aprisionadas', url: 'guardias/pombagira-das-correntes.html', icon: 'fa-solid fa-link', badge: '', badgeText: 'Guardiã', tags: ['correntes', 'elo', 'almas'] },
+        { title: 'Pombagira da Neblina', desc: 'Linha do mistério e do véu', url: 'guardias/pombagira-da-neblina.html', icon: 'fa-solid fa-smog', badge: '', badgeText: 'Guardiã', tags: ['neblina', 'veu', 'misterio'] },
+        { title: 'Pombagira da Estrada', desc: 'Linha dos caminhos e viagens', url: 'guardias/pombagira-da-estrada.html', icon: 'fa-solid fa-route', badge: '', badgeText: 'Guardiã', tags: ['estrada', 'caminhos', 'viagem'] },
+        { title: 'Pombagira do Vento', desc: 'Linha do vento e do ar', url: 'guardias/pombagira-do-vento.html', icon: 'fa-solid fa-wind', badge: '', badgeText: 'Guardiã', tags: ['vento', 'ar', 'tempestade'] },
+        { title: 'Pombagira Cacurucaia', desc: 'Senhora do Cruzeiro, linha da morte', url: 'guardias/pombagira-cacurucaia-senhora-do-cruzeiro.html', icon: 'fa-solid fa-cross', badge: '', badgeText: 'Guardiã', tags: ['cacurucaia', 'velha', 'cruzeiro', 'ancia'] }
     ];
 
-    /* --- MOTOR DE BUSCA --- */
+    /* --- MOTOR DE BUSCA MULTI-TAGS --- */
     function normalize(str) {
         return (str || '').toLowerCase()
             .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -1413,33 +1412,59 @@
         if (!query || query.length < 2) return [];
         var q = normalize(query);
         var results = [];
+
         for (var i = 0; i < SEARCH_INDEX.length; i++) {
             var item = SEARCH_INDEX[i];
             var score = 0;
             var nt = normalize(item.title);
             var nd = normalize(item.desc);
-            if (nt.indexOf(q) === 0) score = 3;
-            else if (nt.indexOf(q) > -1) score = 2;
-            else if (nd.indexOf(q) > -1) score = 1;
+
+            /* Pontuação por Título */
+            if (nt.indexOf(q) === 0) score += 12;
+            else if (nt.indexOf(q) > -1) score += 8;
+
+            /* Pontuação por Tags/Palavras-chave */
+            if (item.tags && item.tags.length) {
+                for (var t = 0; t < item.tags.length; t++) {
+                    var tag = normalize(item.tags[t]);
+                    if (tag === q) score += 10;
+                    else if (tag.indexOf(q) === 0) score += 6;
+                    else if (tag.indexOf(q) > -1) score += 4;
+                }
+            }
+
+            /* Pontuação por Descrição */
+            if (nd.indexOf(q) > -1) score += 3;
+
             if (score > 0) results.push({ item: item, score: score });
         }
+
         results.sort(function(a, b) { return b.score - a.score; });
-        return results.slice(0, 6).map(function(r) { return r.item; });
+        return results.slice(0, 7).map(function(r) { return r.item; });
     }
 
-    /* --- RENDERIZADOR DE RESULTADOS --- */
+    /* --- RENDERIZADOR COM BADGES DE CATEGORIA --- */
     function buildResultsHTML(results, resultsEl, prefix) {
         if (!resultsEl) return;
         if (results.length === 0) {
-            resultsEl.innerHTML = '<div class="' + prefix + 'no-results">Nenhum resultado encontrado.</div>';
+            resultsEl.innerHTML = '<div class="' + prefix + 'no-results">Nenhum resultado encontrado no ecossistema.</div>';
         } else {
             var html = '';
             for (var i = 0; i < results.length; i++) {
                 var r = results[i];
-                html += '<a href="' + r.url + '" class="' + prefix + 'result-item" role="option">' +
+                var badgeClass = r.badge ? ('search-badge ' + r.badge) : 'search-badge';
+                var isExternal = r.url.indexOf('http') === 0;
+                var targetAttr = isExternal ? ' target="_blank" rel="noopener"' : '';
+
+                html += '<a href="' + r.url + '"' + targetAttr + ' class="' + prefix + 'result-item" role="option">' +
                     '<span class="' + prefix + 'result-icon"><i class="' + r.icon + '" aria-hidden="true"></i></span>' +
-                    '<span><div class="' + prefix + 'result-title">' + r.title + '</div>' +
-                    '<div style="font-style:normal;text-align:left;color:rgba(250,246,238,0.45);font-size:0.75rem;margin-top:2px">' + r.desc + '</div></span>' +
+                    '<span style="flex-grow:1;min-width:0">' +
+                      '<div style="display:flex;align-items:center;justify-content:space-between;gap:8px">' +
+                        '<div class="' + prefix + 'result-title">' + r.title + '</div>' +
+                        '<span class="' + badgeClass + '">' + r.badgeText + '</span>' +
+                      '</div>' +
+                      '<div style="font-style:normal;text-align:left;color:rgba(250,246,238,0.45);font-size:0.75rem;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + r.desc + '</div>' +
+                    '</span>' +
                     '</a>';
             }
             resultsEl.innerHTML = html;

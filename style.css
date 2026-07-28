@@ -2306,6 +2306,47 @@ body.scrolling-up {
     text-align: center;
 }
 
+/* Badges de Categoria na Busca */
+.search-badge {
+    display: inline-block;
+    padding: 2px 7px;
+    font-size: 0.62rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 4px;
+    margin-left: auto;
+    flex-shrink: 0;
+    background: rgba(181, 162, 122, 0.12);
+    color: #B5A27A;
+    border: 1px solid rgba(181, 162, 122, 0.25);
+    white-space: nowrap;
+}
+
+.search-badge.badge-autoridade {
+    background: rgba(128, 0, 32, 0.25);
+    color: #E26D6D;
+    border-color: rgba(226, 109, 109, 0.35);
+}
+
+.search-badge.badge-midia {
+    background: rgba(16, 185, 129, 0.15);
+    color: #6EE7B7;
+    border-color: rgba(110, 231, 183, 0.3);
+}
+
+.search-badge.badge-podcast {
+    background: rgba(138, 43, 226, 0.2);
+    color: #C084FC;
+    border-color: rgba(192, 132, 252, 0.3);
+}
+
+.search-badge.badge-ecossistema {
+    background: rgba(59, 130, 246, 0.18);
+    color: #93C5FD;
+    border-color: rgba(147, 197, 253, 0.3);
+}
+
 /* Desktop-only: oculta no mobile */
 @media (max-width: 768px) {
     .hero-search-bar {
