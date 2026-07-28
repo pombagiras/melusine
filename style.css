@@ -112,8 +112,8 @@ h4,
     position: relative;
     padding: 20px;
     text-align: center;
-    overflow: hidden;
-    z-index: 1;
+    overflow: visible; /* dropdown de busca precisa vazar para fora da seção */
+    z-index: 20; /* maior que .carousel-section (z-index:10) para o dropdown ficar acima */
 }
 
 .hero-video {
@@ -2120,6 +2120,329 @@ body.scrolling-up {
 @media (min-width: 769px) {
     .mobile-only-load-more {
         display: none !important;
+    }
+}
+
+/* ==========================================
+   HERO: Posicionamento do conteúdo central
+   ========================================== */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* ==========================================
+   HERO: Overlay de contraste radial (WCAG)
+   Camada escura centrada exatamente atrás
+   do bloco tipográfico — só no desktop.
+   ========================================== */
+.hero-text-overlay {
+    position: absolute;
+    inset: -60px -80px;
+    z-index: -1;
+    background: radial-gradient(
+        ellipse 80% 70% at 50% 45%,
+        rgba(5, 5, 5, 0.75) 0%,
+        rgba(5, 5, 5, 0.50) 50%,
+        transparent 100%
+    );
+    pointer-events: none;
+    border-radius: 50%;
+}
+
+/* ==========================================
+   HERO: Barra de busca inteligente (Desktop)
+   Posicionada entre subtítulo e CTAs.
+   ========================================== */
+.hero-search-bar {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto 32px;
+    animation: fadeInDown 1.4s ease-out both;
+    animation-delay: 0.3s;
+    z-index: 50; /* acima dos botões .cta-group que têm backdrop-filter */
+    isolation: isolate;
+}
+
+.hero-search-bar input[type="search"] {
+    width: 100%;
+    padding: 14px 52px 14px 48px;
+    background: rgba(8, 2, 6, 0.78);
+    border: 1px solid rgba(94, 26, 26, 0.7);
+    border-radius: 50px;
+    color: #FAF6EE;
+    font-family: 'Geist', sans-serif;
+    font-size: clamp(0.85rem, 2.2vw, 0.95rem);
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    outline: none;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255,255,255,0.04);
+    transition: border-color 0.35s ease, box-shadow 0.35s ease;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.hero-search-bar input[type="search"]::placeholder {
+    color: rgba(250, 246, 238, 0.42);
+    font-style: italic;
+}
+
+.hero-search-bar input[type="search"]:focus {
+    border-color: rgba(128, 0, 32, 0.9);
+    box-shadow: 0 0 22px rgba(128, 0, 32, 0.3), inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+/* Ícone de lupa à esquerda */
+.hero-search-icon {
+    position: absolute;
+    left: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(181, 162, 122, 0.65);
+    font-size: 0.9rem;
+    pointer-events: none;
+    transition: color 0.3s ease;
+}
+
+.hero-search-bar input:focus ~ .hero-search-icon,
+.hero-search-bar:focus-within .hero-search-icon {
+    color: #B5A27A;
+}
+
+/* Botão X limpar (nativo do search) */
+.hero-search-bar input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='rgba(181,162,122,0.6)'%3E%3Cpath d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/%3E%3C/svg%3E") center/contain no-repeat;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Dropdown de resultados */
+.hero-search-results {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    background: linear-gradient(160deg, rgba(10, 3, 8, 0.97) 0%, rgba(30, 8, 20, 0.98) 100%);
+    border: 1px solid rgba(94, 26, 26, 0.55);
+    border-radius: 16px;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(181,162,122,0.06);
+    overflow: hidden;
+    max-height: 320px;
+    overflow-y: auto;
+    z-index: 9999;
+    display: none;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(94,26,26,0.4) transparent;
+}
+
+.hero-search-results.is-open {
+    display: block;
+}
+
+.hero-search-result-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    text-decoration: none;
+    color: #FAF6EE;
+    font-family: 'Geist', sans-serif;
+    font-size: 0.88rem;
+    transition: background 0.2s ease;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.hero-search-result-item:last-child {
+    border-bottom: none;
+}
+
+.hero-search-result-item:hover,
+.hero-search-result-item.is-focused {
+    background: rgba(94, 26, 26, 0.35);
+}
+
+.hero-search-result-icon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(128, 0, 32, 0.2);
+    border-radius: 6px;
+    flex-shrink: 0;
+    color: #B5A27A;
+    font-size: 0.75rem;
+}
+
+.hero-search-result-title {
+    font-weight: 500;
+    color: #FAF6EE;
+    line-height: 1.3;
+}
+
+.hero-search-result-desc {
+    font-size: 0.75rem;
+    color: rgba(250, 246, 238, 0.45);
+    margin-top: 2px;
+    line-height: 1.3;
+}
+
+.hero-search-no-results {
+    padding: 20px 18px;
+    color: rgba(250, 246, 238, 0.45);
+    font-size: 0.85rem;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Desktop-only: oculta no mobile */
+@media (max-width: 768px) {
+    .hero-search-bar {
+        display: none !important;
+    }
+    .hero-text-overlay {
+        display: none;
+    }
+}
+
+/* ==========================================
+   DRAWER MOBILE: Barra de busca no topo
+   Oculta no desktop, exclusiva do drawer.
+   ========================================== */
+.mob-search-wrap {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mob-search-wrap {
+        display: block;
+        padding: 12px 14px 10px;
+        border-bottom: 1px solid rgba(181,162,122,0.1);
+        flex-shrink: 0;
+    }
+
+    .mob-search-inner {
+        position: relative;
+    }
+
+    .mob-search-inner input[type="search"] {
+        width: 100%;
+        padding: 10px 38px 10px 36px;
+        background: rgba(5, 2, 4, 0.85);
+        border: 1px solid rgba(94, 26, 26, 0.55);
+        border-radius: 50px;
+        color: #FAF6EE;
+        font-family: 'Geist', sans-serif;
+        font-size: 0.82rem;
+        font-weight: 300;
+        outline: none;
+        -webkit-appearance: none;
+        appearance: none;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .mob-search-inner input[type="search"]::placeholder {
+        color: rgba(250, 246, 238, 0.38);
+        font-style: italic;
+    }
+
+    .mob-search-inner input[type="search"]:focus {
+        border-color: rgba(128, 0, 32, 0.85);
+        box-shadow: 0 0 14px rgba(128, 0, 32, 0.25);
+    }
+
+    .mob-search-inner input[type="search"]::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+        width: 12px;
+        height: 12px;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='rgba(181,162,122,0.55)'%3E%3Cpath d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/%3E%3C/svg%3E") center/contain no-repeat;
+        cursor: pointer;
+        margin-right: 6px;
+    }
+
+    .mob-search-lupa {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: rgba(181, 162, 122, 0.55);
+        font-size: 0.78rem;
+        pointer-events: none;
+    }
+
+    .mob-search-results {
+        margin-top: 6px;
+        background: rgba(10, 3, 8, 0.98);
+        border: 1px solid rgba(94, 26, 26, 0.45);
+        border-radius: 12px;
+        overflow: hidden;
+        max-height: 240px;
+        overflow-y: auto;
+        display: none;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(94,26,26,0.4) transparent;
+    }
+
+    .mob-search-results.is-open {
+        display: block;
+    }
+
+    .mob-search-result-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 14px;
+        text-decoration: none;
+        color: #FAF6EE;
+        font-family: 'Geist', sans-serif;
+        font-size: 0.82rem;
+        border-bottom: 1px solid rgba(255,255,255,0.04);
+        transition: background 0.15s ease;
+    }
+
+    .mob-search-result-item:last-child {
+        border-bottom: none;
+    }
+
+    .mob-search-result-item:active {
+        background: rgba(94, 26, 26, 0.35);
+    }
+
+    .mob-search-result-icon {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(128, 0, 32, 0.18);
+        border-radius: 5px;
+        flex-shrink: 0;
+        color: #B5A27A;
+        font-size: 0.7rem;
+    }
+
+    .mob-search-result-title {
+        font-weight: 500;
+        line-height: 1.3;
+    }
+
+    .mob-search-no-results {
+        padding: 14px;
+        color: rgba(250, 246, 238, 0.4);
+        font-size: 0.78rem;
+        font-style: italic;
+        text-align: center;
     }
 }
 

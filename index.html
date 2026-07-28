@@ -1148,6 +1148,19 @@
         <a href="#home" class="mob-menu-logo" onclick="closeMobMenu()">Pombagiras<span>.com</span></a>
     </div>
 
+    <!-- Busca inteligente no topo do drawer — mobile only -->
+    <div class="mob-search-wrap" role="search" aria-label="Busca no portal">
+        <div class="mob-search-inner">
+            <i class="fa-solid fa-magnifying-glass mob-search-lupa" aria-hidden="true"></i>
+            <input type="search" id="mobSearchInput"
+                   placeholder="Buscar entidade ou artigo…"
+                   autocomplete="off"
+                   aria-label="Busca no portal"
+                   spellcheck="false">
+        </div>
+        <div class="mob-search-results" id="mobSearchResults" role="listbox" aria-label="Resultados"></div>
+    </div>
+
     <div class="mob-menu-body">
 
         <!-- PORTAL EDUCATIVO -->
@@ -1320,6 +1333,221 @@
 })();
 </script>
 
+<script>
+/* ============================================================
+   OTIMIZAÇÃO MOBILE: Evita download do vídeo em telas ≤768px
+   ============================================================ */
+(function() {
+    if (window.innerWidth <= 768) {
+        var vid = document.querySelector('.hero-video');
+        if (vid) {
+            vid.pause();
+            vid.removeAttribute('autoplay');
+            vid.setAttribute('preload', 'none');
+            var sources = vid.querySelectorAll('source');
+            sources.forEach(function(s) { s.removeAttribute('src'); });
+            vid.load();
+        }
+    }
+})();
+
+/* ============================================================
+   BUSCA INTELIGENTE LOCAL — índice estático de entidades,
+   artigos e seções do portal Pombagiras.com
+   ============================================================ */
+(function() {
+    'use strict';
+
+    /* --- ÍNDICE DE BUSCA --- */
+    var SEARCH_INDEX = [
+        { title: 'Maria Padilha', desc: 'A mais famosa das Pombagiras', url: 'maria-padilha.html', icon: 'fa-solid fa-crown' },
+        { title: 'Maria Mulambo', desc: 'Pombagira das encruzilhadas e becos', url: 'maria-mulambo.html', icon: 'fa-solid fa-road' },
+        { title: 'Maria Navalha', desc: 'Pombagira das lâminas e da justiça', url: 'maria-navalha.html', icon: 'fa-solid fa-bolt' },
+        { title: 'Maria Quitéria', desc: 'Guerreira e protetora das mulheres', url: 'maria-quiteria.html', icon: 'fa-solid fa-shield' },
+        { title: 'Maria Farrapo', desc: 'Pombagira dos becos e periferias', url: 'maria-farrapo.html', icon: 'fa-solid fa-fire' },
+        { title: 'Rosa Caveira', desc: 'Pombagira da morte e da calunga', url: 'rosa-caveira.html', icon: 'fa-solid fa-skull' },
+        { title: 'Dama da Noite', desc: 'Pombagira das trevas e mistérios', url: 'dama-da-noite.html', icon: 'fa-solid fa-moon' },
+        { title: 'Sete Saias', desc: 'Pombagira das sete linhas', url: 'sete-saias.html', icon: 'fa-solid fa-star' },
+        { title: 'Pombagira Cigana', desc: 'Linha das Ciganas, amor e sorte', url: 'pombagira-cigana.html', icon: 'fa-solid fa-eye' },
+        { title: 'Pombagira da Praia', desc: 'Linha das águas e Iemanjá', url: 'pombagira-da-praia.html', icon: 'fa-solid fa-water' },
+        { title: 'Pombagira Menina', desc: 'A face jovem e inocente da linha', url: 'pombagira-menina.html', icon: 'fa-solid fa-feather' },
+        { title: 'Pombagira da Figueira', desc: 'Linha das matas e natureza', url: 'pombagira-da-figueira.html', icon: 'fa-solid fa-leaf' },
+        { title: 'Pombagira das Almas', desc: 'Linha da calunga e dos mortos', url: 'pombagira-das-almas.html', icon: 'fa-solid fa-ghost' },
+        { title: 'Pombagira Sete Encruzilhadas', desc: 'Rainha das encruzilhadas', url: 'pombagira-sete-encruzilhadas.html', icon: 'fa-solid fa-road' },
+        { title: 'Pombagira da Lua', desc: 'Linha lunar e dos ciclos', url: 'pombagira-da-lua.html', icon: 'fa-solid fa-circle' },
+        { title: 'Pombagira das Trevas', desc: 'Linha da escuridão profunda', url: 'pombagira-das-trevas.html', icon: 'fa-solid fa-cloud-moon' },
+        { title: 'Pombagira da Serra', desc: 'Linha das montanhas e pedreiras', url: 'pombagira-da-serra.html', icon: 'fa-solid fa-mountain' },
+        { title: 'Pombagira do Fogo', desc: 'Linha do fogo e da paixão', url: 'pombagira-do-fogo.html', icon: 'fa-solid fa-fire-flame-curved' },
+        { title: 'Pombagira das Águas Profundas', desc: 'Linha das profundezas do mar', url: 'pombagira-das-aguas-profundas.html', icon: 'fa-solid fa-droplet' },
+        { title: 'Pombagira da Sombra', desc: 'Linha da sombra e do limbo', url: 'pombagira-da-sombra.html', icon: 'fa-regular fa-moon' },
+        { title: 'Pombagira da Fenda', desc: 'Linha das fendas e portais', url: 'pombagira-da-fenda.html', icon: 'fa-solid fa-door-open' },
+        { title: 'Pombagira da Calunga Profunda', desc: 'Linha da morte e renovação', url: 'pombagira-da-calunga-profunda.html', icon: 'fa-solid fa-infinity' },
+        { title: 'Pombagira das Correntes', desc: 'Linha das almas aprisionadas', url: 'pombagira-das-correntes.html', icon: 'fa-solid fa-link' },
+        { title: 'Pombagira da Neblina', desc: 'Linha do mistério e do véu', url: 'pombagira-da-neblina.html', icon: 'fa-solid fa-smog' },
+        { title: 'Pombagira da Estrada', desc: 'Linha dos caminhos e viagens', url: 'pombagira-da-estrada.html', icon: 'fa-solid fa-route' },
+        { title: 'Pombagira do Vento', desc: 'Linha do vento e do ar', url: 'pombagira-do-vento.html', icon: 'fa-solid fa-wind' },
+        { title: 'Pombagira Cacurucaia', desc: 'Senhora do Cruzeiro, linha da morte', url: 'pombagira-cacurucaia-senhora-do-cruzeiro.html', icon: 'fa-solid fa-cross' },
+        { title: 'Pombagira & LGBT+', desc: 'Relação com a diversidade de gênero', url: 'pombagira-lgbt.html', icon: 'fa-solid fa-rainbow' },
+        { title: 'Glossário de Umbanda', desc: 'Termos e conceitos da Umbanda', url: '#educativo', icon: 'fa-solid fa-book-open' },
+        { title: 'Quimbanda — O que é?', desc: 'Tradição e fundamentos', url: '#educativo', icon: 'fa-solid fa-book' },
+        { title: 'FAQ — Perguntas Frequentes', desc: 'Dúvidas sobre Pombagiras', url: '#educativo', icon: 'fa-solid fa-circle-question' },
+        { title: 'Guardiãs — Enciclopédia', desc: '27 entidades com estudos completos', url: 'https://pombagiras.com/guardias/', icon: 'fa-solid fa-crown' },
+        { title: 'Medo de Pombagira', desc: 'Por que as pessoas temem?', url: 'medo-pombagira.html', icon: 'fa-solid fa-triangle-exclamation' },
+        { title: 'Quiz — Qual é a sua Pombagira?', desc: 'Descubra sua guardiã', url: 'https://pombagiras.com/quiz/', icon: 'fa-solid fa-star-of-life' },
+        { title: 'Oráculo das Pombagiras', desc: 'Mensagens das Guardiãs', url: 'https://pombagiras.com/oraculo/', icon: 'fa-solid fa-fire' },
+        { title: 'Portal de Ensaios', desc: 'Artigos e reflexões profundas', url: 'https://pombagiras.com/portal/', icon: 'fa-solid fa-scroll' },
+        { title: 'Alexia Melusine', desc: 'Autora e pesquisadora do portal', url: 'https://alexiamelusine.com/', icon: 'fa-solid fa-eye' },
+        { title: 'Exu — Fundamentos', desc: 'Estudo sobre os Exus na tradição', url: '#educativo', icon: 'fa-solid fa-fire-flame-curved' },
+        { title: 'Cosmovisões Afro-Brasileiras', desc: 'Perspectivas espirituais e culturais', url: '#educativo', icon: 'fa-solid fa-moon' },
+        { title: 'Julho — Mês das Pombagiras', desc: 'Celebração especial de julho', url: 'julho-mes-das-pombagiras.html', icon: 'fa-solid fa-calendar' },
+        { title: 'Metodologia do Portal', desc: 'Como o portal é construído', url: 'metodologia.html', icon: 'fa-solid fa-flask' }
+    ];
+
+    /* --- MOTOR DE BUSCA --- */
+    function normalize(str) {
+        return (str || '').toLowerCase()
+            .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    }
+
+    function runSearch(query) {
+        if (!query || query.length < 2) return [];
+        var q = normalize(query);
+        var results = [];
+        for (var i = 0; i < SEARCH_INDEX.length; i++) {
+            var item = SEARCH_INDEX[i];
+            var score = 0;
+            var nt = normalize(item.title);
+            var nd = normalize(item.desc);
+            if (nt.indexOf(q) === 0) score = 3;
+            else if (nt.indexOf(q) > -1) score = 2;
+            else if (nd.indexOf(q) > -1) score = 1;
+            if (score > 0) results.push({ item: item, score: score });
+        }
+        results.sort(function(a, b) { return b.score - a.score; });
+        return results.slice(0, 6).map(function(r) { return r.item; });
+    }
+
+    /* --- RENDERIZADOR DE RESULTADOS --- */
+    function buildResultsHTML(results, resultsEl, prefix) {
+        if (!resultsEl) return;
+        if (results.length === 0) {
+            resultsEl.innerHTML = '<div class="' + prefix + 'no-results">Nenhum resultado encontrado.</div>';
+        } else {
+            var html = '';
+            for (var i = 0; i < results.length; i++) {
+                var r = results[i];
+                html += '<a href="' + r.url + '" class="' + prefix + 'result-item" role="option">' +
+                    '<span class="' + prefix + 'result-icon"><i class="' + r.icon + '" aria-hidden="true"></i></span>' +
+                    '<span><div class="' + prefix + 'result-title">' + r.title + '</div>' +
+                    '<div style="font-style:normal;text-align:left;color:rgba(250,246,238,0.45);font-size:0.75rem;margin-top:2px">' + r.desc + '</div></span>' +
+                    '</a>';
+            }
+            resultsEl.innerHTML = html;
+        }
+        resultsEl.classList.add('is-open');
+    }
+
+    function closeResults(resultsEl) {
+        if (resultsEl) {
+            resultsEl.classList.remove('is-open');
+            resultsEl.innerHTML = '';
+        }
+    }
+
+    /* Navega para a primeira URL dos resultados */
+    function goToFirstResult(query) {
+        var results = runSearch(query);
+        if (results.length > 0) {
+            window.location.href = results[0].url;
+        }
+    }
+
+    /* ---- INICIALIZAÇÃO: aguarda DOM completo ---- */
+    document.addEventListener('DOMContentLoaded', function() {
+
+        /* --- HERO (DESKTOP) --- */
+        var heroInput   = document.getElementById('heroSearchInput');
+        var heroResults = document.getElementById('heroSearchResults');
+        var heroIcon    = document.querySelector('#heroSearchBar .hero-search-icon');
+
+        if (heroInput && heroResults) {
+            /* Digitar: mostra resultados em tempo real */
+            heroInput.addEventListener('input', function() {
+                var q = this.value.trim();
+                if (q.length < 2) { closeResults(heroResults); return; }
+                buildResultsHTML(runSearch(q), heroResults, 'hero-search-');
+            });
+
+            /* Enter: navega para o primeiro resultado */
+            heroInput.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    var q = this.value.trim();
+                    if (q.length >= 2) goToFirstResult(q);
+                }
+                if (e.key === 'Escape') { closeResults(heroResults); this.blur(); }
+            });
+
+            /* Clique na lupa: dispara busca / navega */
+            if (heroIcon) {
+                heroIcon.style.pointerEvents = 'auto';
+                heroIcon.style.cursor = 'pointer';
+                heroIcon.addEventListener('click', function() {
+                    var q = heroInput.value.trim();
+                    if (q.length >= 2) {
+                        var res = runSearch(q);
+                        if (res.length > 0) buildResultsHTML(res, heroResults, 'hero-search-');
+                        else goToFirstResult(q);
+                    } else {
+                        heroInput.focus();
+                    }
+                });
+            }
+
+            /* Fechar ao clicar fora */
+            document.addEventListener('click', function(e) {
+                var bar = document.getElementById('heroSearchBar');
+                if (bar && !bar.contains(e.target)) closeResults(heroResults);
+            });
+        }
+
+        /* --- DRAWER MOBILE --- */
+        var mobInput   = document.getElementById('mobSearchInput');
+        var mobResults = document.getElementById('mobSearchResults');
+        var mobIcon    = document.querySelector('.mob-search-wrap .mob-search-lupa');
+
+        if (mobInput && mobResults) {
+            mobInput.addEventListener('input', function() {
+                var q = this.value.trim();
+                if (q.length < 2) { closeResults(mobResults); return; }
+                buildResultsHTML(runSearch(q), mobResults, 'mob-search-');
+            });
+
+            mobInput.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    var q = this.value.trim();
+                    if (q.length >= 2) { closeMobMenu(); goToFirstResult(q); }
+                }
+                if (e.key === 'Escape') { closeResults(mobResults); this.blur(); }
+            });
+
+            if (mobIcon) {
+                mobIcon.style.pointerEvents = 'auto';
+                mobIcon.style.cursor = 'pointer';
+                mobIcon.addEventListener('click', function() {
+                    var q = mobInput.value.trim();
+                    if (q.length >= 2) { closeMobMenu(); goToFirstResult(q); }
+                    else { mobInput.focus(); }
+                });
+            }
+        }
+
+    }); /* fim DOMContentLoaded */
+
+})();
+</script>
+
     <div class="floating-social">
         <a href="https://pombagiras.com/crossroads" class="social-icon" title="Site Bilingue (ES/EN)">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" style="width: 24px; height: 24px; display: block;">
@@ -1358,8 +1586,21 @@
         </video>
         <img class="hero-mobile-img" src="https://cdn.pombagiras.com/BOM.png" alt="Pombagiras.com - Portal Sagrado" loading="eager" fetchpriority="high">
         <div class="hero-content">
+            <div class="hero-text-overlay" aria-hidden="true"></div>
             <h1 class="speakable-title">Pombagiras.com</h1>
             <p class="subtitle speakable-description">Conteúdo seletivo e focado na essência espiritual através do culto às Pombagiras, com estudos, ensaios e reflexões profundas sobre a Umbanda e a Quimbanda.</p>
+
+            <!-- Barra de busca inteligente — desktop only -->
+            <div class="hero-search-bar" id="heroSearchBar" role="search" aria-label="Busca no portal Pombagiras">
+                <i class="fa-solid fa-magnifying-glass hero-search-icon" aria-hidden="true"></i>
+                <input type="search" id="heroSearchInput"
+                       placeholder="Buscar entidade, artigo ou termo…"
+                       autocomplete="off"
+                       aria-label="Campo de busca no portal"
+                       spellcheck="false">
+                <div class="hero-search-results" id="heroSearchResults" role="listbox" aria-label="Resultados da busca"></div>
+            </div>
+
             <div class="cta-group">
                 <a href="#educativo" class="btn btn-primary">Iniciar Jornada</a>
                 <a href="https://alexiamelusine.com/" class="btn btn-outline" target="_blank" rel="noopener">Melusine</a>
