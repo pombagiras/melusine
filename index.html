@@ -34,7 +34,7 @@
     <!-- Critical CSS & Fonts at the very top of head to prevent render blocking -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap"></noscript>
-    <link rel="stylesheet" href="style.css?v=1.4.0">
+    <link rel="stylesheet" href="style.css?v=1.5.0">
     
     <!-- Asynchronous non-blocking load of FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
@@ -1719,49 +1719,14 @@ initLangSwitcher();
         </div>
     </section>
 
-    <section class="carousel-section">
+    <section class="carousel-section" id="carousel-guardias">
         <div class="carousel-track-container">
             <div class="carousel-track" id="carouselTrack"></div>
         </div>
     </section>
 
-    <section class="about-section">
-        <div class="about-grid">
-            <div class="about-image">
-                <picture>
-                    <source media="(max-width: 768px)" srcset="https://cdn.pombagiras.com/Vortex%20Fundo.png">
-                    <img src="https://alexiamelusine.com/assets/ale-perfil.png"
-                        alt="Retrato da Autora Alexia Melusine" loading="lazy" decoding="async" width="500" height="500">
-                </picture>
-            </div>
-            <div class="about-content">
-                <h2>Alexia Melusine</h2>
-                <p>Desenvolvedora web e diretora de mídia. Atua na intersecção entre tecnologia e espiritualidade, com
-                    foco em projetos que valorizam as tradições afro-brasileiras e a diversidade.</p>
-                <a href="https://alexiamelusine.com/limbosonoro/" class="btn btn-podcast" target="_blank" rel="noopener" id="btn-podcast-about">
-                    <i class="fa-solid fa-podcast"></i>
-                    <span class="podcast-label-full">Podcast – Limbo Sonoro – Anatomia do Abismo &nbsp;·&nbsp; Pombagira — Força Revelada</span>
-                    <span class="podcast-label-short">Podcast</span>
-                </a>
-                <div class="about-buttons-grid">
-                    <a href="https://pombagiras.com/github/" class="btn btn-outline" target="_blank" rel="noopener"><i
-                            class="fab fa-github"></i> Github</a>
-                    <a href="https://pombagiras.com/guardias/" class="btn btn-outline" target="_blank" rel="noopener"><i
-                            class="fa-solid fa-address-book"></i> Guardiãs</a>
-                    <a href="https://pombagiras.com/vortex/" class="btn btn-outline" target="_blank" rel="noopener"><i
-                            class="fa-solid fa-wand-magic-sparkles"></i> Vortex</a>
-                    <a href="https://pombagiras.com/lebaras/" class="btn btn-outline" target="_blank" rel="noopener"><i
-                            class="fa-brands fa-slack"></i> Lebarás</a>
-                    <a href="https://pombagiras.com/alexiamelusine/" class="btn btn-outline" target="_blank"
-                        rel="noopener"><i class="fa-solid fa-eye"></i> Alexia</a>
-                    <a href="https://pombagiras.com/portal/" class="btn btn-outline" target="_blank" rel="noopener"><i
-                            class="fa-solid fa-house"></i> Portal</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section class="edu-section" id="educativo">
+
         <div class="section-header">
             <h2>Portal Educativo</h2>
             <p>Conhecimento, respeito e desmistificação das tradições sagradas.</p>
@@ -4027,7 +3992,7 @@ initLangSwitcher();
         }
         </script>
 
-        <section class="newsletter-section">
+        <section class="newsletter-section" id="newsletter">
             <div class="newsletter-glow-1"></div>
             <div class="newsletter-glow-2"></div>
             <div class="newsletter-glass-card">
@@ -4185,6 +4150,43 @@ initLangSwitcher();
                 </a>
             </div>
         </section>
+
+        <section class="about-section" id="author-profile">
+            <div class="about-grid">
+                <div class="about-image">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="https://cdn.pombagiras.com/Vortex%20Fundo.png">
+                        <img src="https://alexiamelusine.com/assets/ale-perfil.png"
+                            alt="Retrato da Autora Alexia Melusine" loading="lazy" decoding="async" width="500" height="500">
+                    </picture>
+                </div>
+                <div class="about-content">
+                    <h2>Alexia Melusine</h2>
+                    <p>Desenvolvedora web e diretora de mídia. Atua na intersecção entre tecnologia e espiritualidade, com
+                        foco em projetos que valorizam as tradições afro-brasileiras e a diversidade.</p>
+                    <a href="https://alexiamelusine.com/limbosonoro/" class="btn btn-podcast" target="_blank" rel="noopener" id="btn-podcast-about">
+                        <i class="fa-solid fa-podcast"></i>
+                        <span class="podcast-label-full">Podcast – Limbo Sonoro – Anatomia do Abismo &nbsp;·&nbsp; Pombagira — Força Revelada</span>
+                        <span class="podcast-label-short">Podcast</span>
+                    </a>
+                    <div class="about-buttons-grid">
+                        <a href="https://pombagiras.com/github/" class="btn btn-outline" target="_blank" rel="noopener"><i
+                                class="fab fa-github"></i> Github</a>
+                        <a href="https://pombagiras.com/guardias/" class="btn btn-outline" target="_blank" rel="noopener"><i
+                                class="fa-solid fa-address-book"></i> Guardiãs</a>
+                        <a href="https://pombagiras.com/vortex/" class="btn btn-outline" target="_blank" rel="noopener"><i
+                                class="fa-solid fa-wand-magic-sparkles"></i> Vortex</a>
+                        <a href="https://pombagiras.com/lebaras/" class="btn btn-outline" target="_blank" rel="noopener"><i
+                                class="fa-brands fa-slack"></i> Lebarás</a>
+                        <a href="https://pombagiras.com/alexiamelusine/" class="btn btn-outline" target="_blank"
+                            rel="noopener"><i class="fa-solid fa-eye"></i> Alexia</a>
+                        <a href="https://pombagiras.com/portal/" class="btn btn-outline" target="_blank" rel="noopener"><i
+                                class="fa-solid fa-house"></i> Portal</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <footer class="main-footer" role="contentinfo">
             <div class="footer-grid">
