@@ -477,6 +477,42 @@ h4,
     transform: translateY(-3px);
 }
 
+/* Second Podcast Button — Crimson Red (Pombagira — Força Revelada) */
+.btn-podcast-red {
+    color: #ffd5dc !important;
+    background: rgba(128, 0, 32, 0.22) !important;
+    border: 1.5px solid var(--secondary) !important;
+    box-shadow:
+        0 0 18px rgba(128, 0, 32, 0.55),
+        inset 0 0 12px rgba(128, 0, 32, 0.2) !important;
+    animation: podcastPulseRed 2.5s ease-in-out infinite alternate !important;
+}
+
+.btn-podcast-red:hover {
+    background: rgba(128, 0, 32, 0.45) !important;
+    border-color: #d90429 !important;
+    color: #ffffff !important;
+    box-shadow:
+        0 0 35px rgba(217, 4, 41, 0.9),
+        inset 0 0 20px rgba(217, 4, 41, 0.4) !important;
+    transform: translateY(-3px) !important;
+}
+
+.btn-podcast-red i {
+    color: #ff4d6d !important;
+}
+
+@keyframes podcastPulseRed {
+    0% {
+        box-shadow: 0 0 12px rgba(128, 0, 32, 0.4), inset 0 0 8px rgba(128, 0, 32, 0.15);
+        border-color: #800020;
+    }
+    100% {
+        box-shadow: 0 0 28px rgba(217, 4, 41, 0.75), inset 0 0 18px rgba(217, 4, 41, 0.3);
+        border-color: #d90429;
+    }
+}
+
 .podcast-label-full {
     display: inline;
     white-space: normal;
