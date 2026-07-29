@@ -335,29 +335,32 @@ h4,
     }
 }
 
-/* About Section - CORRIGIDO O BUG DA FOTO ESTICADA */
+/* About Section — Single Centered Column Layout (Web & Mobile) */
 .about-section {
-    padding: 100px 20px;
-    max-width: 1100px;
+    padding: 80px 20px;
+    max-width: 780px;
     margin: 0 auto;
 }
 
 .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 80px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
+    gap: 24px;
+    width: 100%;
 }
 
 .about-image {
     position: relative;
-    border-radius: 40px;
+    border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    height: 500px;
-    /* Garante tamanho físico real e estável sem esticar */
-    width: 100%;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.65), 0 0 25px rgba(197, 160, 89, 0.2);
+    border: 2px solid rgba(197, 160, 89, 0.35);
+    height: 160px;
+    width: 160px;
+    margin: 0 auto;
+    flex-shrink: 0;
 }
 
 .about-image img {
@@ -365,8 +368,7 @@ h4,
     height: 100%;
     display: block;
     object-fit: cover;
-    /* ESSA LINHA TRAVA O ASPECT-RATIO DA FOTO SEM RETER DISTORÇÁO */
-    filter: grayscale(0.4);
+    filter: grayscale(0.2);
     transition: var(--transition);
 }
 
@@ -375,38 +377,59 @@ h4,
     transform: scale(1.05);
 }
 
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
 .about-content h2 {
-    font-size: 4rem;
-    margin-bottom: 25px;
+    font-size: clamp(2.2rem, 5vw, 3rem);
+    margin-bottom: 12px;
     color: var(--accent);
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
+    font-weight: 700;
 }
 
 .about-content p {
-    font-size: 1.15rem;
-    margin-bottom: 25px;
-    opacity: 0.85;
+    font-size: 1.02rem;
+    margin-bottom: 24px;
+    opacity: 0.82;
     font-weight: 300;
+    line-height: 1.65;
+    max-width: 580px;
+    color: var(--warm-cream);
 }
 
-/* Podcast Button - Desktop: full text horizontal, Mobile: "Podcast" only */
-.btn-podcast {
+/* Podcast Buttons — Audio Highlight Block */
+.podcast-buttons-container {
     display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 580px;
+    margin: 0 auto 28px;
+    align-items: center;
+}
+
+.btn-podcast {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     width: 100%;
-    padding: 15px 30px;
-    margin-bottom: 24px;
+    padding: 13px 24px;
     border-radius: 50px;
     text-decoration: none;
-    font-weight: 700;
-    font-size: 0.88rem;
+    font-weight: 600;
+    font-size: 0.82rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     color: #e0b0ff;
     background: rgba(120, 40, 200, 0.12);
-    border: 2px solid #9b30ff;
+    border: 1.5px solid #9b30ff;
     box-shadow:
         0 0 18px rgba(155, 48, 255, 0.45),
         inset 0 0 12px rgba(155, 48, 255, 0.1);
@@ -454,21 +477,19 @@ h4,
     transform: translateY(-3px);
 }
 
-/* Desktop: show full label, hide short */
-.podcast-label-short {
-    display: none;
-}
-
 .podcast-label-full {
     display: inline;
     white-space: normal;
 }
 
-/* About Buttons Grid - Desktop: 3 columns for 6 buttons */
+/* About Buttons Grid — 3 Columns x 2 Rows on Desktop, 2 Columns x 3 Rows on Mobile */
 .about-buttons-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 12px;
+    width: 100%;
+    max-width: 580px;
+    margin: 0 auto;
 }
 
 .about-buttons-grid .btn {
@@ -477,9 +498,11 @@ h4,
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 10px 12px;
-    font-size: 0.78rem;
+    padding: 12px 14px;
+    font-size: 0.8rem;
     letter-spacing: 1px;
+    min-height: 46px;
+    border-radius: 12px;
 }
 
 
@@ -895,34 +918,38 @@ h4,
 
 
 .newsletter-title {
-    font-size: clamp(2rem, 6vw, 3.5rem);
-    margin-bottom: 20px;
-    background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 50%, var(--secondary) 100%);
+    font-size: clamp(2.5rem, 6.5vw, 3.8rem);
+    font-weight: 800;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, var(--accent) 0%, #d4af37 40%, var(--secondary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
 .newsletter-quote {
-    max-width: 650px;
-    margin: 0 auto 25px;
-    opacity: 0.9;
+    max-width: 580px;
+    margin: 0 auto 24px;
+    opacity: 0.75;
     font-weight: 300;
-    font-size: 1.15rem;
+    font-size: clamp(0.88rem, 2.8vw, 0.98rem);
     font-style: italic;
-    line-height: 1.5;
+    line-height: 1.55;
+    color: var(--warm-cream);
 }
 
 .newsletter-quote i {
-    color: var(--secondary);
+    color: var(--accent);
+    font-size: 0.7rem;
+    opacity: 0.5;
 }
 
 .newsletter-quote i.fa-quote-left {
-    margin-right: 8px;
+    margin-right: 6px;
 }
 
 .newsletter-quote i.fa-quote-right {
-    margin-left: 8px;
+    margin-left: 6px;
 }
 
 .newsletter-meta {
@@ -1163,45 +1190,7 @@ footer.main-footer .footer-links-container a[href*="whatsapp"]:hover {
     color: #25D366 !important;
 }
 
-/* Wikipedia Footer Buttons */
-.footer-wiki-container {
-    margin-top: 18px;
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
 
-.wiki-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.73rem;
-    font-family: 'Geist', sans-serif;
-    color: var(--warm-cream);
-    opacity: 0.75;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(197, 160, 89, 0.2);
-    padding: 5px 12px;
-    border-radius: 20px;
-    text-decoration: none;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-}
-
-.wiki-btn i {
-    font-size: 0.75rem;
-    color: var(--accent);
-}
-
-.wiki-btn:hover {
-    color: var(--accent);
-    opacity: 1;
-    border-color: var(--accent);
-    background: rgba(197, 160, 89, 0.08);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(197, 160, 89, 0.15);
-}
 
 /* Academic Anchorage Footer links */
 .ancoragem-academica {
@@ -1370,41 +1359,29 @@ footer.main-footer .footer-signature i {
     }
 
     .about-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
         gap: 20px;
     }
 
-    /* Oculta foto, titulo "Alexia Melusine" e biografia SOMENTE no celular */
-    .about-image,
-    .about-content h2,
-    .about-content p {
-        display: none !important;
-    }
-
-    /* Podcast button em telas mobile (<768px): ocultar texto longo e exibir SOMENTE "Podcast" */
-    .podcast-label-full {
-        display: none !important;
-    }
-
-    .podcast-label-short {
-        display: inline !important;
-    }
-
     .btn-podcast {
-        width: auto !important;
+        width: 100% !important;
         display: inline-flex !important;
         align-items: center !important;
         justify-content: center !important;
         gap: 8px !important;
-        padding: 10px 24px !important;
+        padding: 12px 18px !important;
+        min-height: 48px !important;
         font-size: 0.78rem !important;
-        letter-spacing: 1.5px !important;
-        margin: 0 auto 16px !important;
+        letter-spacing: 0.8px !important;
+        margin: 0 !important;
         border-radius: 50px !important;
         background: rgba(120, 40, 200, 0.15) !important;
         border: 1.5px solid #9b30ff !important;
         box-shadow: 0 0 14px rgba(155, 48, 255, 0.4) !important;
+        text-align: center !important;
     }
 
     /* ===================================================
@@ -1745,57 +1722,102 @@ footer.main-footer .footer-signature i {
         border-radius: 20px;
     }
 
-    /* Newsletter mobile: reduce title size significantly */
+    /* Newsletter mobile: title focal point & Substack button calibration */
     .newsletter-section h2.newsletter-title {
-        font-size: 1.8rem !important;
+        font-size: clamp(2.1rem, 7vw, 2.7rem) !important;
+        font-weight: 800 !important;
+        margin-bottom: 14px !important;
     }
 
     .newsletter-section {
-        padding: 50px 15px !important;
+        padding: 45px 15px !important;
     }
 
     .newsletter-quote {
-        font-size: 0.95rem !important;
+        font-size: 0.88rem !important;
+        opacity: 0.78 !important;
+        margin-bottom: 20px !important;
     }
 
     .newsletter-desc {
         font-size: 0.82rem !important;
     }
 
+    .newsletter-btn-link {
+        padding: 12px 24px !important;
+        font-size: 0.82rem !important;
+        letter-spacing: 1.2px !important;
+        max-width: 290px !important;
+        width: 90% !important;
+        margin: 0 auto !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        white-space: nowrap !important;
+    }
+
     .hero-brand-stamp {
         display: none !important;
     }
 
-    /* About image: 16:9 ratio on mobile (override 480px) */
+    /* About image: circular portrait profile on mobile */
     .about-image {
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-        aspect-ratio: 16 / 9 !important;
-        border-radius: 16px !important;
+        width: 140px !important;
+        height: 140px !important;
+        max-width: 140px !important;
+        border-radius: 50% !important;
+        margin: 0 auto 16px !important;
+        border: 2px solid rgba(197, 160, 89, 0.35) !important;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.65) !important;
+        aspect-ratio: 1 / 1 !important;
+        flex-shrink: 0 !important;
     }
 
-    /* About buttons: 2 columns on mobile (7 buttons = 3+3+1 last centered) */
+    .about-content h2 {
+        font-size: 1.85rem !important;
+        margin-bottom: 8px !important;
+    }
+
+    .about-content p {
+        font-size: 0.88rem !important;
+        line-height: 1.55 !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* About buttons: 2x2 grid on mobile with touch ergonomics */
     .about-buttons-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px 10px !important;
+        width: 100% !important;
+        max-width: 340px !important;
+        margin: 0 auto !important;
     }
 
     .about-buttons-grid .btn {
-        padding: 10px 8px;
-        font-size: 0.72rem;
-        letter-spacing: 0.8px;
-    }
-
-    /* Last button alone: span full width centered */
-    .about-buttons-grid .btn:last-child:nth-child(odd) {
-        grid-column: 1 / -1;
-        max-width: 60%;
-        margin: 0 auto;
+        padding: 12px 10px !important;
+        min-height: 46px !important;
+        font-size: 0.76rem !important;
+        letter-spacing: 0.8px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
 
     .newsletter-glass-card {
         padding: 30px 15px !important;
+    }
+
+    /* Footer legibility & contrast on mobile */
+    footer.main-footer .footer-copyright {
+        font-size: 0.78rem !important;
+        opacity: 0.75 !important;
+        letter-spacing: 1.5px !important;
+    }
+
+    footer.main-footer .footer-signature {
+        font-size: 0.78rem !important;
+        opacity: 0.75 !important;
+        letter-spacing: 1px !important;
     }
 
     /* Center podcast btn on mobile */

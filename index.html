@@ -4047,7 +4047,6 @@ initLangSwitcher();
                         transition: all 0.3s ease;
                         font-family: 'Geist', sans-serif;
                     " onmouseover="this.querySelector('.btn-circle').style.background='rgba(197, 160, 89, 0.2)'; this.querySelector('.btn-circle').style.borderColor='#C5A059'; this.querySelector('.btn-circle').style.boxShadow='0 8px 25px rgba(197, 160, 89, 0.25)'; this.style.transform='translateY(-2px)';" onmouseout="this.querySelector('.btn-circle').style.background='rgba(197, 160, 89, 0.08)'; this.querySelector('.btn-circle').style.borderColor='rgba(197, 160, 89, 0.3)'; this.querySelector('.btn-circle').style.boxShadow='0 4px 15px rgba(197, 160, 89, 0.08)'; this.style.transform='none';">
-                        <i class="fa-solid fa-fire" style="color: var(--accent); font-size: 0.95rem; margin-right: 8px;"></i>
                         <span class="btn-circle" style="
                             border: 1px solid rgba(197, 160, 89, 0.3);
                             background: rgba(197, 160, 89, 0.08);
@@ -4072,7 +4071,6 @@ initLangSwitcher();
                         transition: all 0.3s ease;
                         font-family: 'Geist', sans-serif;
                     " onmouseover="this.querySelector('.btn-circle').style.background='rgba(197, 160, 89, 0.2)'; this.querySelector('.btn-circle').style.borderColor='#C5A059'; this.querySelector('.btn-circle').style.boxShadow='0 8px 25px rgba(197, 160, 89, 0.25)'; this.style.transform='translateY(-2px)';" onmouseout="this.querySelector('.btn-circle').style.background='rgba(197, 160, 89, 0.08)'; this.querySelector('.btn-circle').style.borderColor='rgba(197, 160, 89, 0.3)'; this.querySelector('.btn-circle').style.boxShadow='0 4px 15px rgba(197, 160, 89, 0.08)'; this.style.transform='none';">
-                        <i class="fa-solid fa-camera" style="color: var(--accent); font-size: 0.95rem; margin-right: 8px;"></i>
                         <span class="btn-circle" style="
                             border: 1px solid rgba(197, 160, 89, 0.3);
                             background: rgba(197, 160, 89, 0.08);
@@ -4097,7 +4095,6 @@ initLangSwitcher();
                         transition: all 0.3s ease;
                         font-family: 'Geist', sans-serif;
                     " onmouseover="this.querySelector('.btn-circle').style.background='rgba(197, 160, 89, 0.2)'; this.querySelector('.btn-circle').style.borderColor='#C5A059'; this.querySelector('.btn-circle').style.boxShadow='0 8px 25px rgba(197, 160, 89, 0.25)'; this.style.transform='translateY(-2px)';" onmouseout="this.querySelector('.btn-circle').style.background='rgba(197, 160, 89, 0.08)'; this.querySelector('.btn-circle').style.borderColor='rgba(197, 160, 89, 0.3)'; this.querySelector('.btn-circle').style.boxShadow='0 4px 15px rgba(197, 160, 89, 0.08)'; this.style.transform='none';">
-                        <i class="fa-solid fa-om" style="color: var(--accent); font-size: 0.95rem; margin-right: 8px;"></i>
                         <span class="btn-circle" style="
                             border: 1px solid rgba(197, 160, 89, 0.3);
                             background: rgba(197, 160, 89, 0.08);
@@ -4122,7 +4119,6 @@ initLangSwitcher();
                         transition: all 0.3s ease;
                         font-family: 'Geist', sans-serif;
                     " onmouseover="this.querySelector('.btn-circle').style.background='rgba(197, 160, 89, 0.22)'; this.querySelector('.btn-circle').style.borderColor='#C5A059'; this.querySelector('.btn-circle').style.boxShadow='0 8px 25px rgba(197, 160, 89, 0.3)'; this.style.transform='translateY(-2px)';" onmouseout="this.querySelector('.btn-circle').style.background='rgba(197, 160, 89, 0.1)'; this.querySelector('.btn-circle').style.borderColor='rgba(197, 160, 89, 0.4)'; this.querySelector('.btn-circle').style.boxShadow='0 4px 18px rgba(197, 160, 89, 0.12)'; this.style.transform='none';">
-                        <i class="fa-solid fa-rainbow" style="color: var(--accent); font-size: 0.95rem; margin-right: 8px;"></i>
                         <span class="btn-circle" style="
                             border: 1px solid rgba(197, 160, 89, 0.4);
                             background: rgba(197, 160, 89, 0.1);
@@ -4154,21 +4150,23 @@ initLangSwitcher();
         <section class="about-section" id="author-profile">
             <div class="about-grid">
                 <div class="about-image">
-                    <picture>
-                        <source media="(max-width: 768px)" srcset="https://cdn.pombagiras.com/Vortex%20Fundo.png">
-                        <img src="https://alexiamelusine.com/assets/ale-perfil.png"
-                            alt="Retrato da Autora Alexia Melusine" loading="lazy" decoding="async" width="500" height="500">
-                    </picture>
+                    <img src="https://alexiamelusine.com/assets/ale-perfil.png"
+                        alt="Retrato da Autora Alexia Melusine" loading="lazy" decoding="async" width="160" height="160">
                 </div>
                 <div class="about-content">
                     <h2>Alexia Melusine</h2>
                     <p>Desenvolvedora web e diretora de mídia. Atua na intersecção entre tecnologia e espiritualidade, com
                         foco em projetos que valorizam as tradições afro-brasileiras e a diversidade.</p>
-                    <a href="https://alexiamelusine.com/limbosonoro/" class="btn btn-podcast" target="_blank" rel="noopener" id="btn-podcast-about">
-                        <i class="fa-solid fa-podcast"></i>
-                        <span class="podcast-label-full">Podcast – Limbo Sonoro – Anatomia do Abismo &nbsp;·&nbsp; Pombagira — Força Revelada</span>
-                        <span class="podcast-label-short">Podcast</span>
-                    </a>
+                    <div class="podcast-buttons-container">
+                        <a href="https://alexiamelusine.com/limbosonoro/" class="btn btn-podcast" target="_blank" rel="noopener" id="btn-podcast-limbo">
+                            <i class="fa-solid fa-podcast"></i>
+                            <span>LIMBO SONORO – ANATOMIA DO ABISMO</span>
+                        </a>
+                        <a href="https://alexiamelusine.com/limbosonoro/#forca-revelada" class="btn btn-podcast" target="_blank" rel="noopener" id="btn-podcast-forca">
+                            <i class="fa-solid fa-podcast"></i>
+                            <span>POMBAGIRA — FORÇA REVELADA</span>
+                        </a>
+                    </div>
                     <div class="about-buttons-grid">
                         <a href="https://pombagiras.com/github/" class="btn btn-outline" target="_blank" rel="noopener"><i
                                 class="fab fa-github"></i> Github</a>
@@ -4178,8 +4176,8 @@ initLangSwitcher();
                                 class="fa-solid fa-wand-magic-sparkles"></i> Vortex</a>
                         <a href="https://pombagiras.com/lebaras/" class="btn btn-outline" target="_blank" rel="noopener"><i
                                 class="fa-brands fa-slack"></i> Lebarás</a>
-                        <a href="https://pombagiras.com/alexiamelusine/" class="btn btn-outline" target="_blank"
-                            rel="noopener"><i class="fa-solid fa-eye"></i> Alexia</a>
+                        <a href="https://pombagiras.com/alexiamelusine/" class="btn btn-outline" target="_blank" rel="noopener"><i
+                                class="fa-solid fa-eye"></i> Alexia</a>
                         <a href="https://pombagiras.com/portal/" class="btn btn-outline" target="_blank" rel="noopener"><i
                                 class="fa-solid fa-house"></i> Portal</a>
                     </div>
@@ -4200,10 +4198,10 @@ initLangSwitcher();
                         Na encruzilhada entre a tecnologia digital e o mistério tradicional. Escritora, pesquisadora e guardiã digital dedicada à desmistificação e honra às Pombagiras.
                     </p>
                     <div class="footer-contact-info" style="margin-top: 15px;">
-                        <span class="email-copy-trigger" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; cursor: pointer; color: var(--warm-cream); opacity: 0.75; transition: opacity 0.2s, color 0.2s; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(197, 160, 89, 0.2); padding: 6px 12px; border-radius: 20px;" onclick="const e='contato'+'@'+'pombagiras.com'; navigator.clipboard.writeText(e); const t=this.querySelector('.copy-status'); t.textContent='Copiado!'; t.style.color='#00ff88'; setTimeout(()=>{t.textContent='(Copiar)'; t.style.color='';}, 2000);" onmouseenter="this.style.opacity='1'; this.style.borderColor='var(--accent)';" onmouseleave="this.style.opacity='0.75'; this.style.borderColor='rgba(197, 160, 89, 0.2)';">
+                        <span class="email-copy-trigger" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; cursor: pointer; color: var(--warm-cream); opacity: 0.85; transition: opacity 0.2s, color 0.2s; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(197, 160, 89, 0.2); padding: 6px 12px; border-radius: 20px;" onclick="const e='contato'+'@'+'pombagiras.com'; navigator.clipboard.writeText(e); const t=this.querySelector('.copy-status'); t.textContent='Copiado!'; t.style.color='#00ff88'; setTimeout(()=>{t.textContent='(Copiar)'; t.style.color='';}, 2000);" onmouseenter="this.style.opacity='1'; this.style.borderColor='var(--accent)';" onmouseleave="this.style.opacity='0.85'; this.style.borderColor='rgba(197, 160, 89, 0.2)';">
                             <i class="fa-solid fa-envelope" style="color: var(--secondary);"></i>
                             <span style="font-weight: 400; letter-spacing: 0.5px;">contato<span style="display:none;">noreply</span>@pombagiras.com</span>
-                            <span class="copy-status" style="font-size: 0.7rem; opacity: 0.6; transition: color 0.2s;">(Copiar)</span>
+                            <span class="copy-status" style="font-size: 0.7rem; opacity: 0.7; transition: color 0.2s;">(Copiar)</span>
                         </span>
                     </div>
                 </div>
@@ -4245,17 +4243,6 @@ initLangSwitcher();
                             <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
-                    <div class="footer-wiki-container">
-                        <a href="https://pt.wikipedia.org/wiki/Pombajira" target="_blank" rel="noopener" class="wiki-btn">
-                            <i class="fab fa-wikipedia-w"></i> Pombajira
-                        </a>
-                        <a href="https://pt.wikipedia.org/wiki/Loguned%C3%A9" target="_blank" rel="noopener" class="wiki-btn">
-                            <i class="fab fa-wikipedia-w"></i> Logunedé
-                        </a>
-                        <a href="https://pt.wikipedia.org/wiki/Oxumar%C3%AA" target="_blank" rel="noopener" class="wiki-btn">
-                            <i class="fab fa-wikipedia-w"></i> Oxumaré
-                        </a>
-                    </div>
                 </div>
             </div>
 
@@ -4264,12 +4251,12 @@ initLangSwitcher();
             </div>
 
             <div class="footer-bottom">
-                <div style="margin-top: 10px; margin-bottom: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-                    <a href="privacy.html" style="color: var(--text-light); opacity: 0.75; text-decoration: none; font-size: 0.85rem; transition: opacity 0.2s;" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.75'">Política de Privacidade</a>
-                    <span style="color: var(--text-light); opacity: 0.3;">|</span>
-                    <a href="terms.html" style="color: var(--text-light); opacity: 0.75; text-decoration: none; font-size: 0.85rem; transition: opacity 0.2s;" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.75'">Termos de Uso</a>
-                    <span style="color: var(--text-light); opacity: 0.3;">|</span>
-                    <a href="metodologia.html" style="color: var(--text-light); opacity: 0.75; text-decoration: none; font-size: 0.85rem; transition: opacity 0.2s;" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.75'">Metodologia</a>
+                <div style="margin-top: 10px; margin-bottom: 16px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                    <a href="privacy.html" style="color: var(--warm-cream); opacity: 0.85; text-decoration: none; font-size: 0.82rem; transition: opacity 0.2s;" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.85'">Política de Privacidade</a>
+                    <span style="color: var(--accent); opacity: 0.4;">|</span>
+                    <a href="terms.html" style="color: var(--warm-cream); opacity: 0.85; text-decoration: none; font-size: 0.82rem; transition: opacity 0.2s;" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.85'">Termos de Uso</a>
+                    <span style="color: var(--accent); opacity: 0.4;">|</span>
+                    <a href="metodologia.html" style="color: var(--warm-cream); opacity: 0.85; text-decoration: none; font-size: 0.82rem; transition: opacity 0.2s;" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.85'">Metodologia</a>
                 </div>
                 <p class="footer-copyright">
                     ALL RIGHTS RESERVED © 2026 | @ALMASDEPOMBAGIRA
