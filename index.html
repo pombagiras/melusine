@@ -3998,8 +3998,23 @@ initLangSwitcher();
                         <strong><i class="fa-solid fa-tag" aria-hidden="true"></i> Transmutação • Justiça • Almas • Rosa
                             Caveira • Exu Caveira</strong>
                     </div>
+                <div class="load-more-container mobile-only-load-more">
+                    <button class="btn load-more-btn" onclick="toggleMobileCosmovisoes(this)">
+                        Carregar Mais <i class="fa-solid fa-chevron-down" style="margin-left: 6px;"></i>
+                    </button>
+                </div>
             </div>
         </main>
+        <script>
+        function toggleMobileCosmovisoes(btn) {
+            const container = document.getElementById('cosmovisoes');
+            if (!container) return;
+            container.classList.add('show-all-mobile');
+            if (btn && btn.parentElement) {
+                btn.parentElement.style.display = 'none';
+            }
+        }
+        </script>
 
         <section class="newsletter-section" id="newsletter">
             <div class="newsletter-glow-1"></div>
