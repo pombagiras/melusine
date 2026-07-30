@@ -75,49 +75,38 @@
             overflow-x: hidden; 
         }
 
-        .header-nav {
-            padding: 1.5rem 2rem;
+        .portal-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            margin-bottom: 2rem;
             max-width: 1200px;
-            margin: 0 auto;
+            margin-left: auto;
+            margin-right: auto;
         }
-
-        .brand-logo {
+        .portal-header a {
+            color: var(--text-color);
+            text-decoration: none;
             font-family: 'Fraunces', serif;
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: #FAF6EE;
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
-
-        .brand-logo span {
-            color: var(--accent-gold);
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--accent-gold);
-            text-decoration: none;
             font-weight: 600;
             font-size: 0.9rem;
-            border: 1px solid var(--border-color);
-            padding: 8px 18px;
-            border-radius: 30px;
-            background: rgba(74, 14, 23, 0.2);
-            transition: all 0.3s ease;
+            transition: color 0.3s ease;
         }
-
-        .back-link:hover {
-            background: var(--accent-red);
-            color: #FAF6EE;
-            border-color: var(--accent-gold);
-            transform: translateX(-3px);
+        .portal-header a:hover {
+            color: var(--accent-red-bright);
+        }
+        .portal-header .brand {
+            font-family: 'Fraunces', serif;
+            font-weight: 800;
+            font-size: 1.2rem;
+            letter-spacing: 0.05em;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+        .portal-header .brand span {
+            color: var(--accent-red);
         }
 
         main {
@@ -135,27 +124,26 @@
             backdrop-filter: blur(10px);
         }
 
-        
-
-        h1 {
+        h1, h2, h3 { 
             font-family: 'Fraunces', serif;
-            font-size: clamp(2rem, 5vw, 3.2rem);
-            color: #FAF6EE;
-            line-height: 1.25;
-            margin-bottom: 1rem;
-            text-align: center;
-            font-weight: 700;
+            color: var(--accent-red); 
+            margin-bottom: 1.2rem; 
+            letter-spacing: -0.02em;
         }
-
+        h1 { 
+            font-size: 2.5rem; 
+            font-weight: 800; 
+            line-height: 1.2;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-red); 
+            padding-bottom: 0.5rem; 
+        }
         .subtitle {
-            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            color: var(--muted-text);
+            margin-bottom: 2rem;
             font-style: italic;
-            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-            color: var(--accent-gold);
-            text-align: center;
-            margin-bottom: 2.5rem;
-            line-height: 1.4;
-            opacity: 0.95;
         }
 
         .author-meta {
@@ -499,27 +487,19 @@
     </script>
 </head>
 <body>
-    <header class="header-nav">
-        <a href="https://pombagiras.com/" class="brand-logo">POMBAGIRAS<span>.COM</span></a>
-        <a href="https://pombagiras.com/portal/" class="back-link">
-            <i class="fa-solid fa-arrow-left"></i> Voltar ao Portal
-        </a>
-    </header>
-
     <main>
-        <article>
-            <h1>COMO NASCE UMA POMBAGIRA?</h1>
-            <p class="subtitle">A Genealogia das Histórias, a Memória Oral e os Conhecimentos que Talvez Nunca Possamos Recuperar</p>
+        <!-- Navegação Rápida -->
+        <header class="portal-header">
+            <a href="https://pombagiras.com/" class="brand">POMBAGIRAS<span>.COM</span></a>
+            <a href="https://pombagiras.com/">← Voltar ao Portal</a>
+        </header>
 
-            <div class="author-meta">
-                <span><i class="fa-solid fa-pen-nib" style="color: var(--accent-gold);"></i> Por <strong>Alexia Melusine</strong></span>
-                <span>•</span>
-                <span><i class="fa-regular fa-calendar"></i> Julho de 2026</span>
-            </div>
+        <!-- Artigo Principal -->
+        <article class="glass-card">
+            <h1>Como Nasce Uma Pombagira?</h1>
+            <p class="subtitle">A Genealogia das Histórias, a Memória Oral e os Conhecimentos que Talvez Nunca Possamos Recuperar por Alexia Melusine.</p>
 
-            <div class="featured-img-container">
-                <img src="https://cdn.pombagiras.com/COMOnAsc.png" alt="Como nasce uma Pombagira - A Genealogia das Histórias" fetchpriority="high" decoding="async">
-            </div>
+            <img src="https://cdn.pombagiras.com/COMOnAsc.png" alt="Como nasce uma Pombagira - A Genealogia das Histórias" decoding="async" loading="lazy">
 
             <section>
                 <h2>Pergunta central</h2>
