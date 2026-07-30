@@ -1620,43 +1620,43 @@ footer.main-footer .footer-signature i {
         border-color: rgba(212, 175, 55, 0.5) !important;
     }
 
-    /* Cosmovisões tab: exibe apenas os 3 primeiros artigos no celular com botão "Carregar Mais" */
-    #cosmovisoes:not(.show-all-mobile) .grid-cards .card:nth-child(n+4) {
+    /* Padronização dos Cards de Cosmovisões no Celular */
+    .grid-cards {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .card {
+        display: block !important;
+        padding: 24px 20px !important;
+        border-radius: 16px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .card h4 {
+        font-size: 1.35rem !important;
+        margin-bottom: 12px !important;
+        word-wrap: break-word;
+    }
+
+    .card p {
+        font-size: 0.95rem !important;
+        line-height: 1.55 !important;
+        margin-bottom: 14px !important;
+        text-align: left !important;
+    }
+
+    .card strong {
+        display: block !important;
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+    }
+
+    .mobile-only-load-more,
+    .load-more-container {
         display: none !important;
-    }
-
-    #cosmovisoes.show-all-mobile .grid-cards .card:nth-child(n+4) {
-        display: flex !important;
-    }
-
-    .mobile-only-load-more {
-        display: flex !important;
-        justify-content: center !important;
-        margin-top: 25px !important;
-        margin-bottom: 10px !important;
-    }
-
-    .mobile-only-load-more .load-more-btn {
-        background: rgba(128, 0, 32, 0.15) !important;
-        border: 1px solid var(--secondary) !important;
-        color: var(--text-light) !important;
-        padding: 12px 28px !important;
-        border-radius: 50px !important;
-        font-size: 0.8rem !important;
-        letter-spacing: 1.5px !important;
-        text-transform: uppercase;
-        font-weight: 600 !important;
-        box-shadow: 0 4px 15px rgba(128, 0, 32, 0.3) !important;
-        transition: all 0.3s ease !important;
-        cursor: pointer;
-    }
-
-    .mobile-only-load-more .load-more-btn:hover,
-    .mobile-only-load-more .load-more-btn:active {
-        background: var(--secondary) !important;
-        color: #ffffff !important;
-        box-shadow: 0 6px 20px rgba(217, 4, 41, 0.5) !important;
-        transform: translateY(-2px);
     }
 
 
