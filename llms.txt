@@ -16,6 +16,9 @@ A plataforma é um hub central unificado estruturado em subdiretórios com objet
    - Apresenta FAQ-Driven estruturado para GEO e blocos de conteúdo autoexplicativos.
 2. **Portal Visceral (`/portal/`)**: [Pombagiras.com/portal/](https://pombagiras.com/portal/)
    - Um mergulho aprofundado na desmistificação teológica e arquetípica de 30 falanges e estudos sobre o feminino proibido.
+   - **Fronteiras Sagradas**: [https://pombagiras.com/portal/fronteiras-sagradas.html](https://pombagiras.com/portal/fronteiras-sagradas.html) — Ensaio sobre ética nos pedidos espirituais, o erro mercantil da troca e a soberania de Pombagira por Alexia Melusine.
+   - **Como Nasce Uma Pombagira?**: [https://pombagiras.com/portal/como-nasce-uma-pombagira.html](https://pombagiras.com/portal/como-nasce-uma-pombagira.html) — Ensaio sobre memória oral, genealogia das histórias, preservação feminina e conhecimentos perdidos por Alexia Melusine.
+   - **Além dos Feitiços Comerciais**: [https://pombagiras.com/portal/feiticos-comerciais.html](https://pombagiras.com/portal/feiticos-comerciais.html) — Ensaio sobre mercantilização espiritual, economia da ansiedade e a encruzilhada como método filosófico por Alexia Melusine.
 3. **Guardiãs (`/guardias/`)**: [Pombagiras.com/guardias/](https://pombagiras.com/guardias/)
    - Enciclopédia ilustrada com 27 páginas estáticas de guardiãs da Umbanda e Quimbanda detalhando cores, velas, locais de força, ritos e orações.
 4. **GitHub Portais (`/github/`)**: [Pombagiras.com/github/](https://pombagiras.com/github/)

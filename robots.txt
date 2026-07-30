@@ -112,5 +112,6 @@ Disallow: /
 User-agent: CensysInspect
 Disallow: /
 
-# Sitemap Declarations
+# Sitemap Declarations & Authority Endpoints
 Sitemap: https://pombagiras.com/sitemap.xml
+

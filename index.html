@@ -1343,12 +1343,12 @@
 
     /* --- ÍNDICE COMPLETO DO ECOSSISTEMA --- */
     var SEARCH_INDEX = [
-        /* === AUTORIDADE MÁXIMA & SITES DA AUTORA === */
-        { title: 'Alexia Melusine — Portal Oficial', desc: 'Autora, pesquisadora e autoridade máx. do ecossistema', url: 'https://alexiamelusine.com/', icon: 'fa-solid fa-eye', badge: 'badge-autoridade', badgeText: 'Autoridade', tags: ['alexia', 'melusine', 'autora', 'pesquisadora', 'biografia', 'oficial', 'criadora'] },
-        { title: 'Melusine Pride — LGBT+ & Diversidade', desc: 'Estudos e artigos sobre diversidade de gênero e espiritualidade', url: 'https://alexiamelusine.com/pride/', icon: 'fa-solid fa-rainbow', badge: 'badge-autoridade', badgeText: 'Pride / LGBT', tags: ['pride', 'lgbt', 'lgbtqia', 'diversidade', 'genero', 'queer', 'trans', 'direitos', 'alexia'] },
-        { title: 'Alexia Melusine — Perfil & Links Oficiais', desc: 'Canais oficiais, matérias e redes da autora', url: 'https://alexiamelusine.com/oficial/', icon: 'fa-solid fa-user-check', badge: 'badge-autoridade', badgeText: 'Oficial', tags: ['oficial', 'perfil', 'redes', 'links', 'imprensa', 'midia'] },
-        { title: 'Melusine Card — Cartão Digital de Contato', desc: 'E-mail, agendamentos e contato direto', url: 'https://alexiamelusine.com/card/', icon: 'fa-solid fa-id-card', badge: 'badge-autoridade', badgeText: 'Contato', tags: ['card', 'cartao', 'email', 'contato', 'agendamento', 'falar', 'escrever'] },
-        { title: 'Limbo Sonoro — Podcast & Áudio Espiritual', desc: 'Episódios, ensaios narrados e produções de áudio', url: 'https://alexiamelusine.com/limbosonoro/', icon: 'fa-solid fa-podcast', badge: 'badge-podcast', badgeText: 'Podcast', tags: ['limbo', 'sonoro', 'podcast', 'audio', 'spotify', 'musica', 'episodio', 'ouvir', 'radioteatro'] },
+        /* === AUTORIDADE MÁXIMA & SITES DA AUTORA (TENTÁCULOS) === */
+        { title: 'Alexia Melusine — Portal Oficial', desc: 'Autora, pesquisadora e autoridade máx. do ecossistema', url: 'https://alexiamelusine.com/', icon: 'fa-solid fa-eye', badge: 'badge-autoridade', badgeText: 'Autoridade', tags: ['alexia', 'melusine', 'autora', 'pesquisadora', 'biografia', 'oficial', 'criadora', 'site oficial', 'alexia melusine'] },
+        { title: 'Melusine Pride — LGBT+ & Diversidade', desc: 'Estudos e artigos sobre diversidade de gênero, trans e espiritualidade', url: 'https://alexiamelusine.com/pride/', icon: 'fa-solid fa-rainbow', badge: 'badge-autoridade', badgeText: 'Pride / LGBT', tags: ['pride', 'lgbt', 'lgbtqia', 'diversidade', 'genero', 'queer', 'trans', 'direitos', 'orgulho', 'alexia melusine', 'pride melusine'] },
+        { title: 'Alexia Melusine — Perfil & Links Oficiais', desc: 'Canais oficiais, matérias, imprensa e redes da autora', url: 'https://alexiamelusine.com/oficial/', icon: 'fa-solid fa-user-check', badge: 'badge-autoridade', badgeText: 'Oficial', tags: ['oficial', 'perfil', 'redes', 'links', 'imprensa', 'midia', 'bio', 'redes sociais', 'linktree', 'alexia oficial'] },
+        { title: 'Melusine Card — Cartão Digital de Contato', desc: 'E-mail, agendamentos, imprensa e contato direto', url: 'https://alexiamelusine.com/card/', icon: 'fa-solid fa-id-card', badge: 'badge-autoridade', badgeText: 'Contato', tags: ['card', 'cartao', 'email', 'contato', 'agendamento', 'falar', 'escrever', 'cartao de visitas', 'melusine card'] },
+        { title: 'Limbo Sonoro — Podcast & Áudio Espiritual', desc: 'Episódios, ensaios narrados e produções de áudio por Alexia Melusine', url: 'https://alexiamelusine.com/limbosonoro/', icon: 'fa-solid fa-podcast', badge: 'badge-podcast', badgeText: 'Podcast', tags: ['limbo', 'sonoro', 'limbo sonoro', 'podcast', 'audio', 'spotify', 'musica', 'episodio', 'ouvir', 'radioteatro', 'gravacoes', 'narrativa'] },
 
         /* === REDES SOCIAIS & CANAIS === */
         { title: 'WhatsApp — Canal Oficial Pombagiras', desc: 'Transmissões exclusivas, novidades e artigos', url: 'https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G', icon: 'fa-brands fa-whatsapp', badge: 'badge-midia', badgeText: 'WhatsApp', tags: ['whatsapp', 'zap', 'grupo', 'canal', 'comunidade', 'redes', 'redes sociais', 'mensagens'] },
@@ -1370,6 +1370,10 @@
         { title: 'Pombagira & LGBT+ — Relação & Diversidade', desc: 'Estudo fundamental sobre identidade e ancestralidade', url: 'pombagira-lgbt.html', icon: 'fa-solid fa-rainbow', badge: '', badgeText: 'Pesquisa', tags: ['lgbt', 'lgbtqia', 'diversidade', 'genero', 'queer', 'trans', 'pombagira lgbt'] },
         { title: 'Glossário de Umbanda & Quimbanda', desc: 'Dicionário de termos e conceitos da tradição', url: 'guardias/termos.html', icon: 'fa-solid fa-book-open', badge: '', badgeText: 'Glossário', tags: ['glossario', 'dicionario', 'termos', 'conceitos', 'quimbanda', 'umbanda', 'palavras', 'significado'] },
         { title: 'Julho — Mês das Pombagiras', desc: 'Celebração especial, datas e ritos de Julho', url: 'julho-mes-das-pombagiras.html', icon: 'fa-solid fa-calendar', badge: '', badgeText: 'Especial', tags: ['julho', 'mes', 'festa', 'datas', 'ritos', 'celebracao'] },
+        /* === ENSAIOS & ESTUDOS ESPECIAIS (NOVAS PÁGINAS) === */
+        { title: 'Fronteiras Sagradas — Pedidos & Ética à Pombagira', desc: 'Por que seu pedido pode ser espiritualmente ofensivo. Análise sobre amarração, comércio espiritual e devoção sincera por Alexia Melusine', url: 'portal/fronteiras-sagradas.html', icon: 'fa-solid fa-hand', badge: 'badge-ecossistema', badgeText: 'Ensaio Ético', tags: ['fronteiras sagradas', 'ofensivo', 'pedido', 'pedidos', 'amarracao', 'amarrar', 'dominar', 'prestador de servicos', 'comercio', 'troca', 'vender', 'compra', 'etica', 'devocao', 'conveniencia', 'soberania', 'pune', 'punicao', 'vinganca', 'livre arbitrio', 'alexia melusine'] },
+        { title: 'Como Nasce Uma Pombagira? — Memória Oral & Genealogia', desc: 'A genealogia das histórias, o papel invisível das mulheres, arquivos perdidos e a tradição oral por Alexia Melusine', url: 'portal/como-nasce-uma-pombagira.html', icon: 'fa-solid fa-seedling', badge: 'badge-ecossistema', badgeText: 'Ensaio Histórico', tags: ['como nasce uma pombagira', 'genealogia', 'memoria oral', 'tradicao oral', 'desaparecimento', 'historia', 'antropologia', 'mulheres', 'cozinheiras', 'cambonas', 'arquivos', 'terreiro', 'origem', 'primeira pombagira', 'livros', 'alexia melusine'] },
+        { title: 'Além dos Feitiços Comerciais — Soberania Espiritual', desc: 'Encontrando a verdadeira soberania espiritual. Crítica ao mercado da ansiedade, feitiços de 5 minutos e a encruzilhada como método', url: 'portal/feiticos-comerciais.html', icon: 'fa-solid fa-gem', badge: 'badge-ecossistema', badgeText: 'Ensaio Filosófico', tags: ['feitico', 'feiticos', 'feitico comercial', 'feiticos comerciais', 'alem dos feiticos', 'soberania espiritual', 'mercantilizacao', 'consumo', 'ansiedade', 'medo', 'vender vela', 'banho', 'resultado imediato', 'encruzilhada metodo', 'etica', 'disciplina', 'autonomia', 'alexia melusine'] },
         { title: 'Metodologia do Portal', desc: 'Como nossas pesquisas e artigos são construídos', url: 'metodologia.html', icon: 'fa-solid fa-flask', badge: '', badgeText: 'Metodologia', tags: ['metodologia', 'pesquisa', 'metodo', 'fontes', 'academico'] },
 
         /* === GUARDIÃS (27 ENTIDADES) === */
@@ -2120,6 +2124,27 @@ initLangSwitcher();
 
             <div id="curiosidades" class="tab-content">
                 <div class="grid-cards">
+                    <div class="card" onclick="window.open('portal/fronteiras-sagradas.html', '_blank')" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
+                        <img src="https://cdn.pombagiras.com/BOM.png" alt="Fronteiras Sagradas - Por Que Seu Pedido à Pombagira Pode Ser Espiritualmente Ofensivo" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(255, 255, 255, 0.1);" decoding="async" loading="lazy">
+                        <h4><i class="fa-solid fa-hand" aria-hidden="true"></i> Fronteiras Sagradas</h4>
+                        <p><strong>Por que seu pedido à Pombagira pode ser espiritualmente ofensivo.</strong> Uma reflexão ética e teológica sobre o erro mercantil de transformar Pombagira em prestadora de serviços, a autonomia espiritual e a verdadeira devoção ancestral por Alexia Melusine.</p>
+                        <strong><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Ler Artigo Completo 🌹</strong>
+                    </div>
+
+                    <div class="card" onclick="window.open('portal/como-nasce-uma-pombagira.html', '_blank')" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
+                        <img src="https://cdn.pombagiras.com/COMOnAsc.png" alt="Como Nasce Uma Pombagira? A Genealogia das Histórias e a Memória Oral" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(255, 255, 255, 0.1);" decoding="async" loading="lazy">
+                        <h4><i class="fa-solid fa-seedling" aria-hidden="true"></i> Como Nasce Uma Pombagira?</h4>
+                        <p><strong>A Genealogia das Histórias e a Memória Oral.</strong> Uma reflexão antropológica e histórica sobre a criação cultural das Pombagiras, a preservação oral das mulheres e os conhecimentos que o tempo pode ter apagado por Alexia Melusine.</p>
+                        <strong><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Ler Artigo Completo 🌹</strong>
+                    </div>
+
+                    <div class="card" onclick="window.open('portal/feiticos-comerciais.html', '_blank')" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
+                        <img src="https://cdn.pombagiras.com/DisP.png" alt="Além dos Feitiços Comerciais - Soberania Espiritual nos Rituais Diários" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(255, 255, 255, 0.1);" decoding="async" loading="lazy">
+                        <h4><i class="fa-solid fa-gem" aria-hidden="true"></i> Além dos Feitiços Comerciais</h4>
+                        <p><strong>Encontrando a Verdadeira Soberania Espiritual em Seus Rituais Diários.</strong> Uma análise profunda sobre a mercantilização da fé, a economia da ansiedade espiritual e a encruzilhada como método filosófico por Alexia Melusine.</p>
+                        <strong><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Ler Artigo Completo 🌹</strong>
+                    </div>
+
                     <div class="card" onclick="window.open('portal/sao-cipriano.html', '_blank')" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
                         <img src="fotos/SCipriano.png" alt="Livro de São Cipriano" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(255, 255, 255, 0.1);" decoding="async" loading="lazy">
                         <h4><i class="fa-solid fa-book-bible" aria-hidden="true"></i> Livro de São Cipriano</h4>
