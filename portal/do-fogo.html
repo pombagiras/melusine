@@ -285,43 +285,46 @@
     .lang-sep { color: rgba(197, 160, 89, 0.28); font-size: 0.7rem; user-select: none; }
 
     
+    
+
+    
     /* Ajustes Exclusivos para Celular (Mobile Only) - Padronizado */
     @media (max-width: 768px) {
         main {
-            padding: 1rem 0.8rem;
+            padding: 1rem 0.8rem !important;
         }
         .portal-header {
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 0.6rem;
-            text-align: center;
-            padding: 0.8rem 0;
-            margin-bottom: 1.5rem;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 0.6rem !important;
+            text-align: center !important;
+            padding: 0.8rem 0 !important;
+            margin-bottom: 1.5rem !important;
         }
         .portal-header .brand {
-            font-size: 1.3rem;
+            font-size: 1.3rem !important;
         }
         .portal-header a:not(.brand) {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.3rem;
-            background: rgba(197, 160, 89, 0.1);
-            border: 1px solid rgba(197, 160, 89, 0.25);
-            border-radius: 20px;
-            padding: 0.4rem 1rem;
-            font-size: 0.82rem;
-            color: var(--text-color);
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 0.3rem !important;
+            background: rgba(197, 160, 89, 0.1) !important;
+            border: 1px solid rgba(197, 160, 89, 0.25) !important;
+            border-radius: 20px !important;
+            padding: 0.4rem 1rem !important;
+            font-size: 0.82rem !important;
+            color: var(--text-color) !important;
         }
-        .glass-card {
+        .glass-card, article, .article-content {
             padding: 1.25rem 1rem !important;
             border-radius: 12px !important;
         }
-        h1 {
+        h1, h1.speakable-title, h1.article-title {
             font-size: 1.65rem !important;
             line-height: 1.25 !important;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
+            word-wrap: break-word !important;
+            overflow-wrap: break-word !important;
             text-align: left !important;
         }
         h2 {
