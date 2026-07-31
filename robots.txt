@@ -1,8 +1,8 @@
 # ============================================================
-# POMBAGIRAS.COM - Robots Configuration (High Performance)
+# POMBAGIRAS.COM - Robots Configuration (High Performance & AI GEO)
 # ============================================================
 
-# LLM Crawlers & AI Search Bots (Explicitly Allowed for Graph Discoverability)
+# LLM Crawlers & AI Search Bots (Explicitly Allowed for Knowledge Graph Discoverability)
 User-agent: GPTBot
 Allow: /
 Disallow: /*?*
@@ -10,6 +10,10 @@ Disallow: /search/
 Disallow: /login/
 Disallow: /private/
 Disallow: /admin/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /*?*
 
 User-agent: Claude-Web
 Allow: /
@@ -42,6 +46,22 @@ Disallow: /search/
 Disallow: /login/
 Disallow: /private/
 Disallow: /admin/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /*?*
+
+User-agent: Bytespider
+Allow: /
+Disallow: /*?*
+
+User-agent: Meta-ExternalAgent
+Allow: /
+Disallow: /*?*
+
+User-agent: Cohere-ai
+Allow: /
+Disallow: /*?*
 
 # Search Engine Crawlers
 User-agent: Googlebot
@@ -114,4 +134,3 @@ Disallow: /
 
 # Sitemap Declarations & Authority Endpoints
 Sitemap: https://pombagiras.com/sitemap.xml
-

@@ -38,6 +38,18 @@
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://pombagiras.com/manifesto/</loc>
+  <lastmod>2026-07-31</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.95</priority>
+</url>
+<url>
+  <loc>https://pombagiras.com/github/</loc>
+  <lastmod>2026-07-31</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
   <loc>https://pombagiras.com/quiz/</loc>
   <lastmod>2026-07-19</lastmod>
   <changefreq>weekly</changefreq>
