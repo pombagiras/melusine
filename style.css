@@ -502,14 +502,52 @@ h4,
     color: #ff4d6d !important;
 }
 
-@keyframes podcastPulseRed {
+.podcast-buttons-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+}
+
+@media (max-width: 580px) {
+    .podcast-buttons-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Third Podcast/Manifesto Button — Gold/Brass (Manifesto) */
+.btn-podcast-gold {
+    color: #fff4d5 !important;
+    background: rgba(197, 155, 39, 0.18) !important;
+    border: 1.5px solid var(--accent) !important;
+    box-shadow:
+        0 0 18px rgba(197, 155, 39, 0.45),
+        inset 0 0 12px rgba(197, 155, 39, 0.15) !important;
+    animation: podcastPulseGold 2.5s ease-in-out infinite alternate !important;
+}
+
+.btn-podcast-gold:hover {
+    background: rgba(197, 155, 39, 0.38) !important;
+    border-color: #ffd700 !important;
+    color: #ffffff !important;
+    box-shadow:
+        0 0 35px rgba(255, 215, 0, 0.85),
+        inset 0 0 20px rgba(255, 215, 0, 0.3) !important;
+    transform: translateY(-3px) !important;
+}
+
+.btn-podcast-gold i {
+    color: var(--accent) !important;
+}
+
+@keyframes podcastPulseGold {
     0% {
-        box-shadow: 0 0 12px rgba(128, 0, 32, 0.4), inset 0 0 8px rgba(128, 0, 32, 0.15);
-        border-color: #800020;
+        box-shadow: 0 0 12px rgba(197, 155, 39, 0.35), inset 0 0 8px rgba(197, 155, 39, 0.1);
+        border-color: var(--accent);
     }
     100% {
-        box-shadow: 0 0 28px rgba(217, 4, 41, 0.75), inset 0 0 18px rgba(217, 4, 41, 0.3);
-        border-color: #d90429;
+        box-shadow: 0 0 26px rgba(197, 155, 39, 0.7), inset 0 0 16px rgba(197, 155, 39, 0.22);
+        border-color: #ffd700;
     }
 }
 
