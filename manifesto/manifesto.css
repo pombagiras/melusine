@@ -188,6 +188,10 @@ h1, h2, h3, h4, .serif {
     z-index: 2;
 }
 
+.hero .lead .lead-line {
+    display: inline;
+}
+
 /* Luxury Grid Section */
 .manifesto-container {
     max-width: 1400px;
@@ -715,8 +719,26 @@ h1, h2, h3, h4, .serif {
     }
 
     .hero .lead {
-        font-size: 1.2rem;
-        line-height: 1.6;
+        font-size: clamp(1.15rem, 4.2vw, 1.35rem);
+        line-height: 1.55;
+        font-weight: 400;
+        color: #FFF6EE;
+        text-shadow: 0 0 20px rgba(255, 120, 0, 0.5), 0 2px 8px rgba(0, 0, 0, 0.8);
+        letter-spacing: 0.015em;
+        padding: 0 0.5rem;
+        max-width: 90vw;
+        margin: 0 auto;
+    }
+
+    .hero .lead .lead-line {
+        display: block;
+        text-wrap: balance;
+        max-width: 30ch;
+        margin: 0 auto 0.6rem auto;
+    }
+    
+    .hero .lead .lead-line:last-child {
+        margin-bottom: 0;
     }
 
     .manifesto-container {
