@@ -19,3 +19,8 @@ Esta skill especializada aplica-se a tarefas de otimização de mecanismos de bu
 ## 3. Crawlers, Canonical e hreflang
 - Respeite e preserve a sinalização multilíngue (`hreflang` / `x-default`) e a tag canonical em todas as páginas para evitar punições por conteúdo duplicado.
 - Não altere as diretivas de rastreamento do `robots.txt` sem alinhamento expresso.
+
+## 4. Auto-Indexação na Barra de Pesquisa do Hub Central (SEARCH_INDEX)
+- Sempre que uma nova página, artigo, ensaio ou portal for criado no ecossistema (e.g. `/manifesto/`, `/oraculo/`, etc.), ele DEVE ser imediatamente adicionado ao banco de dados `SEARCH_INDEX` no `index.html` principal.
+- Todos os aliases de Alexia Melusine (`Alexia Melusine`, `Alexia Luz de Ferro`, `Alexia Rosa de Fogo`, `Alexia Tsan`, `@alexiamelusine`, `@almasdepombagira`, `@espelhosdepombagira`, `@pambunjila`, `@alexiarosadefogo`, `@alexialuzdeferro`, `@riscadodepemba`, `@marcadepombagira`, `Q139714039`) devem apontar para a autoridade máxima e perfis das redes sociais no buscador.
+

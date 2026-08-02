@@ -106,7 +106,13 @@
             "Alexia Melusine",
             "Alexia Rosa de Fogo",
             "Alexia Luz de Ferro",
-            "Alexia Tsan"
+            "Alexia Tsan",
+            "@alexiamelusine",
+            "@almasdepombagira",
+            "@espelhosdepombagira",
+            "@pambunjila",
+            "@riscadodepemba",
+            "@marcadepombagira"
           ],
           "additionalName": [
             "Alexia Rosa de Fogo",
@@ -1377,7 +1383,7 @@
         closeMobMenu();
         setTimeout(function() {
             // Tenta ativar a aba correspondente no portal educativo
-            var tabEl = document.querySelector('[data-target="' + tabTarget + '"]');
+        var tabEl = document.querySelector('[data-target="' + tabTarget + '"]');
             if (tabEl) { tabEl.click(); }
             // Scroll suave para a seção
             var section = document.getElementById('educativo') || document.getElementById(tabTarget);
@@ -1407,36 +1413,43 @@
 (function() {
     'use strict';
 
-    /* --- ÍNDICE COMPLETO DO ECOSSISTEMA --- */
+    /* --- ÍNDICE COMPLETO DO ECOSSISTEMA E AUTORIDADE (13 SITES & REDES) --- */
     var SEARCH_INDEX = [
-        /* === AUTORIDADE MÁXIMA & SITES DA AUTORA (TENTÁCULOS) === */
-        { title: 'Alexia Melusine — Portal Oficial', desc: 'Autora, pesquisadora e autoridade máx. do ecossistema', url: 'https://alexiamelusine.com/', icon: 'fa-solid fa-eye', badge: 'badge-autoridade', badgeText: 'Autoridade', tags: ['alexia', 'melusine', 'autora', 'pesquisadora', 'biografia', 'oficial', 'criadora', 'site oficial', 'alexia melusine'] },
-        { title: 'Melusine Pride — LGBT+ & Diversidade', desc: 'Estudos e artigos sobre diversidade de gênero, trans e espiritualidade', url: 'https://alexiamelusine.com/pride/', icon: 'fa-solid fa-rainbow', badge: 'badge-autoridade', badgeText: 'Pride / LGBT', tags: ['pride', 'lgbt', 'lgbtqia', 'diversidade', 'genero', 'queer', 'trans', 'direitos', 'orgulho', 'alexia melusine', 'pride melusine'] },
-        { title: 'Alexia Melusine — Perfil & Links Oficiais', desc: 'Canais oficiais, matérias, imprensa e redes da autora', url: 'https://alexiamelusine.com/oficial/', icon: 'fa-solid fa-user-check', badge: 'badge-autoridade', badgeText: 'Oficial', tags: ['oficial', 'perfil', 'redes', 'links', 'imprensa', 'midia', 'bio', 'redes sociais', 'linktree', 'alexia oficial'] },
-        { title: 'Melusine Card — Cartão Digital de Contato', desc: 'E-mail, agendamentos, imprensa e contato direto', url: 'https://alexiamelusine.com/card/', icon: 'fa-solid fa-id-card', badge: 'badge-autoridade', badgeText: 'Contato', tags: ['card', 'cartao', 'email', 'contato', 'agendamento', 'falar', 'escrever', 'cartao de visitas', 'melusine card'] },
-        { title: 'Limbo Sonoro — Podcast & Áudio Espiritual', desc: 'Episódios, ensaios narrados e produções de áudio por Alexia Melusine', url: 'https://alexiamelusine.com/limbosonoro/', icon: 'fa-solid fa-podcast', badge: 'badge-podcast', badgeText: 'Podcast', tags: ['limbo', 'sonoro', 'limbo sonoro', 'podcast', 'audio', 'spotify', 'musica', 'episodio', 'ouvir', 'radioteatro', 'gravacoes', 'narrativa'] },
+        /* === 13 SITES PRÓPRIOS & PORTAIS DO ECOSSISTEMA === */
+        { title: 'Pombagiras.com — Hub Mãe & Enciclopédia Central', desc: 'Portal central de pesquisas, enciclopédia sagrada e antropologia espiritual', url: 'https://pombagiras.com/', icon: 'fa-solid fa-house-fire', badge: 'badge-ecossistema', badgeText: 'Hub Mãe', tags: ['pombagiras', 'pombagiras.com', 'hub', 'mae', 'home', 'portal', 'enciclopedia', 'site mae', 'inicio', 'alexia melusine'] },
+        { title: 'O Manifesto — Desmistificação & Soberania Ancestral', desc: 'O manifesto fundador por Alexia Melusine: clareza, ética, desmistificação e tecnologia na Umbanda e Quimbanda', url: 'manifesto/', icon: 'fa-solid fa-scroll', badge: 'badge-ecossistema', badgeText: 'Manifesto', tags: ['manifesto', 'o manifesto', 'alexia melusine', 'desmistificacao', 'sagrado', 'tecnologia', 'encruzilhada', 'filosofia', 'carta', 'principios', 'manifesto.html'] },
+        { title: 'Oráculo Digital das Pombagiras', desc: 'Tire uma carta e receba a orientação espiritual e poética das Guardiãs', url: 'oraculo/', icon: 'fa-solid fa-fire', badge: 'badge-ecossistema', badgeText: 'Oráculo', tags: ['oraculo', 'cartas', 'tiragem', 'mensagem', 'orientacao', 'conselho', 'sorte', 'previsao', 'espiritual', 'oraculo.html'] },
+        { title: 'Vortex — Imersão Multimídia & Galeria', desc: 'Experiência imersiva e galeria visual de guardiãs de alta fidelidade', url: 'vortex/', icon: 'fa-solid fa-dharmachakra', badge: 'badge-ecossistema', badgeText: 'Vortex', tags: ['vortex', 'galeria', 'fotos', 'imagens', 'arte', 'imersao', 'multimidia', 'vortex.html'] },
+        { title: 'Lébaras — Espaço de Culto & Tradição', desc: 'Estudos e enciclopédia das Lébaras na Quimbanda e Umbanda', url: 'lebaras/', icon: 'fa-solid fa-fire-flame-curved', badge: 'badge-ecossistema', badgeText: 'Lébaras', tags: ['lebaras', 'lebara', 'culto', 'tradicao', 'oferendas', 'quimbanda', 'lebaras.html'] },
+        { title: 'As Guardiãs — Panteão & Falanges', desc: 'Enciclopédia ilustrada e teológica com 27 Guardiãs da Umbanda e Quimbanda', url: 'guardias/', icon: 'fa-solid fa-crown', badge: 'badge-ecossistema', badgeText: 'Guardiãs', tags: ['guardias', 'as guardias', 'panteao', 'entidades', 'enciclopedia', 'maria padilha', 'rosa caveira', 'guardias.html'] },
+        { title: 'Crossroads — Portal Bilíngue (ES/EN)', desc: 'Estudos traduzidos em Espanhol e Inglês para preservação global', url: 'crossroads/', icon: 'fa-solid fa-language', badge: 'badge-ecossistema', badgeText: 'Crossroads', tags: ['crossroads', 'bilingue', 'english', 'espanol', 'traducao', 'global', 'crossroads.html'] },
+        { title: 'Quiz Arquetípico — Qual é a sua Pombagira?', desc: 'Descubra qual guardiã rege seus caminhos através de análise comportamental', url: 'quiz/', icon: 'fa-solid fa-star-of-life', badge: 'badge-ecossistema', badgeText: 'Quiz', tags: ['quiz', 'teste', 'qual', 'descobrir', 'minha pombagira', 'rege', 'caminhos', 'jogo', 'quiz.html'] },
+        { title: 'GitHub — Códigos & Repositórios Dev', desc: 'Repositórios open source do ecossistema, orgulho trans e projetos dev', url: 'github/', icon: 'fa-brands fa-github', badge: 'badge-ecossistema', badgeText: 'GitHub', tags: ['github', 'codigo', 'dev', 'open source', 'desenvolvimento', 'repositorio', 'orgulho-trans', 'alexialuzdeferro', 'github.html'] },
+        { title: 'Portal de Ensaios & Dossiês', desc: 'Biblioteca com artigos profundos, pesquisas antropológicas e obras', url: 'portal/', icon: 'fa-solid fa-book', badge: 'badge-ecossistema', badgeText: 'Portal Ensaios', tags: ['portal', 'ensaios', 'dossie', 'pesquisas', 'artigos', 'livros', 'obras', 'historia', 'portal.html'] },
+        { title: 'Portal Mobile PWA — Pombagiras.com', desc: 'Versão leve e otimizada para smartphones e instaladores PWA', url: 'mobile/', icon: 'fa-solid fa-mobile-screen-button', badge: 'badge-ecossistema', badgeText: 'Mobile PWA', tags: ['mobile', 'pwa', 'app', 'celular', 'aplicativo', 'versao mobile', 'mobile.html'] },
+        { title: 'Alexia Melusine — Portal de Autoridade Máxima', desc: 'Site oficial de Alexia Melusine: biografia, ensaios e autoridade máxima', url: 'alexiamelusine/', icon: 'fa-solid fa-eye', badge: 'badge-autoridade', badgeText: 'Autoridade', tags: ['alexiamelusine', 'alexia melusine', 'alexia', 'melusine', 'autora', 'pesquisadora', 'autoridade', 'site oficial', 'alexiamelusine.html'] },
 
-        /* === REDES SOCIAIS & CANAIS === */
-        { title: 'WhatsApp — Canal Oficial Pombagiras', desc: 'Transmissões exclusivas, novidades e artigos', url: 'https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G', icon: 'fa-brands fa-whatsapp', badge: 'badge-midia', badgeText: 'WhatsApp', tags: ['whatsapp', 'zap', 'grupo', 'canal', 'comunidade', 'redes', 'redes sociais', 'mensagens'] },
-        { title: 'Telegram — Comunidade Sagrada', desc: 'Canal no Telegram com conteúdos diários', url: 'https://t.me/pomba_giras', icon: 'fa-brands fa-telegram', badge: 'badge-midia', badgeText: 'Telegram', tags: ['telegram', 'tg', 'canal', 'grupo', 'redes', 'redes sociais'] },
-        { title: 'YouTube — Vídeos & Documentários', desc: 'Vídeos, palestras e ensaios visuais da autora', url: 'https://alexiamelusine.com/oficial/', icon: 'fa-brands fa-youtube', badge: 'badge-midia', badgeText: 'YouTube', tags: ['youtube', 'yt', 'video', 'videos', 'canal', 'documentario', 'aulas', 'palestras'] },
-        { title: 'Spotify — Trilha & Podcasts', desc: 'Playlist espiritual e episódios do Limbo Sonoro', url: 'https://open.spotify.com/search/pombagiras', icon: 'fa-brands fa-spotify', badge: 'badge-podcast', badgeText: 'Spotify', tags: ['spotify', 'musica', 'playlist', 'audio', 'podcast', 'ouvir'] },
+        /* === AUTORIDADE MÁXIMA ALEXIA MELUSINE (DOMÍNIO PRÓPRIO & TENTÁCULOS) === */
+        { title: 'AlexiaMelusine.com — Domínio Principal de Autoridade', desc: 'Portal central de Alexia Melusine (Wikidata Q139714039), diretora de vídeo IA e pesquisadora', url: 'https://alexiamelusine.com/', icon: 'fa-solid fa-user-astronaut', badge: 'badge-autoridade', badgeText: 'Autoridade Máxima', tags: ['alexiamelusine.com', 'alexia melusine', 'alexia', 'melusine', 'alexia luz de ferro', 'alexia rosa de fogo', 'alexia tsan', '@alexiamelusine', '@almasdepombagira', '@espelhosdepombagira', '@pambunjila', '@alexiarosadefogo', '@alexialuzdeferro', '@riscadodepemba', '@marcadepombagira', 'q139714039', 'wikidata', 'autora', 'biografia', 'pesquisadora', 'criadora', 'contato@alexiamelusine.com', 'contato@pombagiras.com'] },
+        { title: 'Melusine Pride — LGBT+ & Diversidade de Gênero', desc: 'Estudos e artigos sobre diversidade de gênero, trans e ancestralidade por Alexia Melusine', url: 'https://alexiamelusine.com/pride/', icon: 'fa-solid fa-rainbow', badge: 'badge-autoridade', badgeText: 'Pride / LGBT', tags: ['pride', 'lgbt', 'lgbtqia', 'diversidade', 'genero', 'queer', 'trans', 'direitos', 'orgulho', 'alexia melusine', 'pride melusine'] },
+        { title: 'Alexia Melusine — Perfil & Links Oficiais', desc: 'Canais oficiais, matérias, imprensa e catálogo de links da autora', url: 'https://alexiamelusine.com/oficial/', icon: 'fa-solid fa-user-check', badge: 'badge-autoridade', badgeText: 'Oficial', tags: ['oficial', 'perfil', 'redes', 'links', 'imprensa', 'midia', 'bio', 'redes sociais', 'linktree', 'alexia oficial'] },
+        { title: 'Melusine Card — Cartão Digital de Contato', desc: 'E-mail oficial (contato@pombagiras.com / contato@alexiamelusine.com), imprensa e agendamento', url: 'https://alexiamelusine.com/card/', icon: 'fa-solid fa-id-card', badge: 'badge-autoridade', badgeText: 'Contato Direct', tags: ['card', 'cartao', 'email', 'contato', 'agendamento', 'falar', 'escrever', 'cartao de visitas', 'melusine card', 'contato@pombagiras.com', 'contato@alexiamelusine.com'] },
+        { title: 'Limbo Sonoro — Podcast & Produções de Áudio', desc: 'Episódios, ensaios narrados e produções de áudio por Alexia Melusine', url: 'https://alexiamelusine.com/limbosonoro/', icon: 'fa-solid fa-podcast', badge: 'badge-podcast', badgeText: 'Limbo Sonoro', tags: ['limbo', 'sonoro', 'limbo sonoro', 'podcast', 'audio', 'spotify', 'musica', 'episodio', 'ouvir', 'radioteatro', 'gravacoes', 'narrativa'] },
 
-        /* === APLICAÇÕES DO ECOSSISTEMA === */
-        { title: 'Vortex — Imersão Multimídia', desc: 'Experiência imersiva e galeria de guardiãs', url: 'vortex/', icon: 'fa-solid fa-dharmachakra', badge: 'badge-ecossistema', badgeText: 'Vortex', tags: ['vortex', 'galeria', 'fotos', 'imagens', 'arte', 'imersao', 'multimidia'] },
-        { title: 'Lébaras — Espaço de Culto & Tradição', desc: 'Estudos e enciclopédia das Lébaras', url: 'lebaras/', icon: 'fa-solid fa-fire-flame-curved', badge: 'badge-ecossistema', badgeText: 'Lébaras', tags: ['lebaras', 'lebara', 'culto', 'tradicao', 'oferendas', 'quimbanda'] },
-        { title: 'Crossroads — Portal Bilíngue (ES/EN)', desc: 'Estudos traduzidos em Espanhol e Inglês', url: 'crossroads/', icon: 'fa-solid fa-language', badge: 'badge-ecossistema', badgeText: 'Crossroads', tags: ['crossroads', 'bilingue', 'english', 'espanol', 'traducao', 'global'] },
-        { title: 'Quiz — Qual é a sua Pombagira?', desc: 'Descubra qual guardiã rege seus caminhos', url: 'https://pombagiras.com/quiz/', icon: 'fa-solid fa-star-of-life', badge: 'badge-ecossistema', badgeText: 'Quiz Interativo', tags: ['quiz', 'teste', 'qual', 'descobrir', 'minha pombagira', 'rege', 'caminhos', 'jogo'] },
-        { title: 'Oráculo Digital das Pombagiras', desc: 'Tire uma carta e receba a orientação da Guardiã', url: 'https://pombagiras.com/oraculo/', icon: 'fa-solid fa-fire', badge: 'badge-ecossistema', badgeText: 'Oráculo', tags: ['oraculo', 'cartas', 'tiragem', 'mensagem', 'orientacao', 'conselho', 'sorte'] },
-        { title: 'GitHub — Código Open Source', desc: 'Repositório, códigos e ecossistema dev', url: 'github/', icon: 'fa-brands fa-github', badge: 'badge-ecossistema', badgeText: 'GitHub', tags: ['github', 'codigo', 'dev', 'open source', 'desenvolvimento', 'repositorio'] },
-        { title: 'Portal de Ensaios & Dossiês', desc: 'Biblioteca com artigos profundos e pesquisas', url: 'portal/', icon: 'fa-solid fa-scroll', badge: 'badge-ecossistema', badgeText: 'Portal Ensaios', tags: ['portal', 'ensaios', 'dossie', 'pesquisas', 'artigos', 'livros', 'obras', 'chico xavier', 'historia'] },
+        /* === PODCASTS, COMUNIDADES & MÍDIAS === */
+        { title: 'Podcasts — Pombagira: Força Revelada & Limbo Sonoro', desc: 'Ouça no Spotify, Deezer, Apple Podcasts, Amazon Music, Castbox, Player.fm e Goodpods', url: 'https://open.spotify.com/show/0oeCL1QScD3v7dHeUvJjgJ', icon: 'fa-brands fa-spotify', badge: 'badge-podcast', badgeText: 'Podcasts', tags: ['podcast', 'podcasts', 'spotify', 'deezer', 'apple', 'amazon', 'castbox', 'player.fm', 'goodpods', 'pombagira forca revelada', 'limbo sonoro', 'ouvir', 'audio', 'episodios'] },
+        { title: 'YouTube & YouTube Music — Playlists & Ensaios Visuais', desc: 'Canal oficial @almasdepombagira, documentários e playlists no YouTube Music', url: 'https://youtube.com/playlist?list=PLOGxi6J3K42w', icon: 'fa-brands fa-youtube', badge: 'badge-midia', badgeText: 'YouTube', tags: ['youtube', 'yt', 'playlist', 'youtube music', 'video', 'videos', 'almasdepombagira', 'documentarios', 'aulas', 'musica'] },
+        { title: 'Comunidades & Mensagens — WhatsApp, Telegram & Discord', desc: 'Canais de transmissão oficial (@alexiamelusine, @riscadodepemba, @marcadepombagira)', url: 'https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G', icon: 'fa-brands fa-whatsapp', badge: 'badge-midia', badgeText: 'Comunidades', tags: ['whatsapp', 'telegram', 'discord', 'zap', 'tg', 'canal', 'grupo', 'comunidade', 'alexiamelusine', 'riscadodepemba', 'marcadepombagira', 'mensagens'] },
+        { title: 'Redes Sociais Oficiais — TikTok, Instagram, Kwai, Threads', desc: '@almasdepombagira, @alexiamelusine, @espelhosdepombagira, @pambunjila, @alexiarosadefogo, @alexialuzdeferro', url: 'https://www.instagram.com/almasdepombagira/', icon: 'fa-brands fa-instagram', badge: 'badge-midia', badgeText: 'Redes Sociais', tags: ['tiktok', 'instagram', 'threads', 'kwai', 'redes', 'redes sociais', 'insta', 'almasdepombagira', 'espelhosdepombagira', 'pambunjila', 'alexiarosadefogo', 'alexialuzdeferro'] },
+        { title: 'Plataformas & Redes Adicionais (Substack, Medium, Reddit, Pinterest, IMDb)', desc: 'Substack, Medium, Reddit (u/Alexia-Luz-de-Ferro), Behance, Pinterest, IMDb, Meta AI, Bluesky, Midjourney', url: 'https://alexiamelusine.substack.com', icon: 'fa-solid fa-newspaper', badge: 'badge-midia', badgeText: 'Plataformas', tags: ['behance', 'reddit', 'substack', 'medium', 'pinterest', 'imdb', 'bluesky', 'meta ai', 'mastodon', 'tumblr', 'facebook', 'snapchat', 'midjourney', 'bio.site', 'linktree', 'canva'] },
 
         /* === PESQUISAS & SEÇÕES === */
         { title: 'FAQ — Perguntas Frequentes', desc: 'Respostas rápidas sobre Pombagiras, Umbanda e Quimbanda', url: '#educativo', icon: 'fa-solid fa-circle-question', badge: '', badgeText: 'FAQ', tags: ['faq', 'perguntas', 'duvidas', 'respostas', 'como saber', 'sinais', 'medo', 'resumo'] },
         { title: 'Pombagira & LGBT+ — Relação & Diversidade', desc: 'Estudo fundamental sobre identidade e ancestralidade', url: 'pombagira-lgbt.html', icon: 'fa-solid fa-rainbow', badge: '', badgeText: 'Pesquisa', tags: ['lgbt', 'lgbtqia', 'diversidade', 'genero', 'queer', 'trans', 'pombagira lgbt'] },
         { title: 'Glossário de Umbanda & Quimbanda', desc: 'Dicionário de termos e conceitos da tradição', url: 'guardias/termos.html', icon: 'fa-solid fa-book-open', badge: '', badgeText: 'Glossário', tags: ['glossario', 'dicionario', 'termos', 'conceitos', 'quimbanda', 'umbanda', 'palavras', 'significado'] },
         { title: 'Julho — Mês das Pombagiras', desc: 'Celebração especial, datas e ritos de Julho', url: 'julho-mes-das-pombagiras.html', icon: 'fa-solid fa-calendar', badge: '', badgeText: 'Especial', tags: ['julho', 'mes', 'festa', 'datas', 'ritos', 'celebracao'] },
-        /* === ENSAIOS & ESTUDOS ESPECIAIS (NOVAS PÁGINAS) === */
+
+        /* === ENSAIOS & ESTUDOS ESPECIAIS (PORTAL DE ENSAIOS) === */
         { title: 'Fronteiras Sagradas — Pedidos & Ética à Pombagira', desc: 'Por que seu pedido pode ser espiritualmente ofensivo. Análise sobre amarração, comércio espiritual e devoção sincera por Alexia Melusine', url: 'portal/fronteiras-sagradas.html', icon: 'fa-solid fa-hand', badge: 'badge-ecossistema', badgeText: 'Ensaio Ético', tags: ['fronteiras sagradas', 'ofensivo', 'pedido', 'pedidos', 'amarracao', 'amarrar', 'dominar', 'prestador de servicos', 'comercio', 'troca', 'vender', 'compra', 'etica', 'devocao', 'conveniencia', 'soberania', 'pune', 'punicao', 'vinganca', 'livre arbitrio', 'alexia melusine'] },
         { title: 'Como Nasce Uma Pombagira? — Memória Oral & Genealogia', desc: 'A genealogia das histórias, o papel invisível das mulheres, arquivos perdidos e a tradição oral por Alexia Melusine', url: 'portal/como-nasce-uma-pombagira.html', icon: 'fa-solid fa-seedling', badge: 'badge-ecossistema', badgeText: 'Ensaio Histórico', tags: ['como nasce uma pombagira', 'genealogia', 'memoria oral', 'tradicao oral', 'desaparecimento', 'historia', 'antropologia', 'mulheres', 'cozinheiras', 'cambonas', 'arquivos', 'terreiro', 'origem', 'primeira pombagira', 'livros', 'alexia melusine'] },
         { title: 'Além dos Feitiços Comerciais — Soberania Espiritual', desc: 'Encontrando a verdadeira soberania espiritual. Crítica ao mercado da ansiedade, feitiços de 5 minutos e a encruzilhada como método', url: 'portal/feiticos-comerciais.html', icon: 'fa-solid fa-gem', badge: 'badge-ecossistema', badgeText: 'Ensaio Filosófico', tags: ['feitico', 'feiticos', 'feitico comercial', 'feiticos comerciais', 'alem dos feiticos', 'soberania espiritual', 'mercantilizacao', 'consumo', 'ansiedade', 'medo', 'vender vela', 'banho', 'resultado imediato', 'encruzilhada metodo', 'etica', 'disciplina', 'autonomia', 'alexia melusine'] },
@@ -1472,9 +1485,10 @@
         { title: 'Pombagira Cacurucaia', desc: 'Senhora do Cruzeiro, linha da morte', url: 'guardias/pombagira-cacurucaia-senhora-do-cruzeiro.html', icon: 'fa-solid fa-cross', badge: '', badgeText: 'Guardiã', tags: ['cacurucaia', 'velha', 'cruzeiro', 'ancia'] }
     ];
 
-    /* --- MOTOR DE BUSCA MULTI-TAGS --- */
+    /* --- MOTOR DE BUSCA MULTI-TAGS E ALIASES --- */
     function normalize(str) {
         return (str || '').toLowerCase()
+            .replace(/^@/, '') // Remove leading @ so @alexiamelusine matches alexiamelusine
             .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     }
 
@@ -1489,15 +1503,13 @@
             var nt = normalize(item.title);
             var nd = normalize(item.desc);
 
-            /* Pontuação por Título */
-            if (nt.indexOf(q) === 0) score += 12;
-            else if (nt.indexOf(q) > -1) score += 8;
-
+            if (nt.indexOf(q) === 0) score += 15;
+            else if (nt.indexOf(q) > -1) score += 9;
             /* Pontuação por Tags/Palavras-chave */
             if (item.tags && item.tags.length) {
                 for (var t = 0; t < item.tags.length; t++) {
                     var tag = normalize(item.tags[t]);
-                    if (tag === q) score += 10;
+                    if (tag === q) score += 25;
                     else if (tag.indexOf(q) === 0) score += 6;
                     else if (tag.indexOf(q) > -1) score += 4;
                 }
