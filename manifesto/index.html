@@ -14,7 +14,7 @@
     <meta name="keywords" content="Manifesto, Pombagira, Exu, Alexia Melusine, Umbanda, Quimbanda, Feminino Sagrado, Ancestralidade, Desmistificação, Arte Visceral">
     <meta name="author" content="Alexia Melusine">
     
-    <meta name="theme-color" content="#1a0033">
+    <meta name="theme-color" content="#050201">
     
     <!-- Canonical Linkage -->
     <link rel="canonical" href="https://pombagiras.com/manifesto/">
@@ -400,14 +400,14 @@
 </head>
 <body>
 
-    <!-- Automatic Ambient Purple Lantern / Spotlight Background -->
+    <!-- Automatic Ambient Orange Lantern / Spotlight Background -->
     <div class="ambient-lantern"></div>
 
     <!-- Custom Cursor -->
     <div class="custom-cursor" id="custom-cursor"></div>
     <div class="custom-cursor-dot" id="custom-cursor-dot"></div>
 
-    <!-- Hero Section with Frosted Glass & Purple Tracking Orb -->
+    <!-- Hero Section with Frosted Glass & Orange Tracking Orb -->
     <header class="hero" id="hero-section">
         <div class="hero-glow-container">
             <div class="hero-glow-orb" id="hero-orb"></div>
@@ -444,7 +444,7 @@
 
             <!-- Pull Quote Break -->
             <aside class="col-full">
-                <blockquote class="pull-quote">
+                <blockquote class="pull-quote" id="pull-quote">
                     A tecnologia é a encruzilhada moderna. Assim como a energia da rua dinamiza a comunicação, a estrutura digital permite que o conhecimento flua sem barreiras, livre de dogmas.
                 </blockquote>
             </aside>
@@ -612,7 +612,7 @@
                     const x = e.clientX - rect.left;
                     const y = e.clientY - rect.top;
                     
-                    // Smooth follow effect for the purple glow behind frosted glass
+                    // Smooth follow effect for the orange glow behind frosted glass
                     heroOrb.style.left = x + "px";
                     heroOrb.style.top = y + "px";
                 });
@@ -626,6 +626,30 @@
                         cursor.classList.remove("hover");
                     });
                 });
+            }
+
+            // Word-by-Word Animated Reveal for Pull Quote (Web Only)
+            const pullQuote = document.getElementById("pull-quote");
+            if (pullQuote && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+                const text = pullQuote.innerText.trim();
+                const words = text.split(/\s+/);
+                pullQuote.innerHTML = words.map(word => `<span class="word">${word}</span>`).join(" ");
+                
+                const wordEls = pullQuote.querySelectorAll(".word");
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            wordEls.forEach((w, index) => {
+                                setTimeout(() => {
+                                    w.classList.add("revealed");
+                                }, index * 80); // Stagger 80ms per word
+                            });
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.25 });
+
+                observer.observe(pullQuote);
             }
         });
     </script>
