@@ -524,11 +524,10 @@
               "@type": "ListItem",
               "position": 27,
               "name": "Pombagira Cacurucaia – Senhora do Cruzeiro",
-              "url": "https://pombagiras.com/guardias/pombagira-cacurucaia-senhora-do-cruzeiro.html"
+              "url": "https://pombagiras.com/guardias/pombagira-cacurucaia.html"
             }
           ]
         }
-      ]
     }
     </script>
 
@@ -542,7 +541,7 @@
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
 
     <style>
-        /* â•â•â•â•â•â•â•â•â•â•â• RESET & BASE â•â•â•â•â•â•â•â•â•â•â• */
+        /* RESET & BASE */
         *, *::before, *::after {
             margin: 0;
             padding: 0;
@@ -550,7 +549,7 @@
             -webkit-tap-highlight-color: transparent;
         }
 
-        /* â•â•â•â•â•â•â•â•â•â•â• VARIÁVEIS DE TRANSIÇÁO â•â•â•â•â•â•â•â•â•â•â• */
+        /* VARIÁVEIS DE TRANSIÇÃO */
         :root {
             --transition-speed: 0.5s;
             --glass-blur: 18px;
@@ -560,7 +559,7 @@
             --font-body: 'Geist', sans-serif;
         }
 
-        /* â•â•â•â•â•â•â•â•â•â•â• TEMA VIBRANTE â•â•â•â•â•â•â•â•â•â•â• */
+        /* TEMA VIBRANTE */
         [data-theme="vibrant"] {
             --primary-color: #8B0000;
             --secondary-color: #FFD700;
@@ -577,7 +576,7 @@
             --glass-card: rgba(255,248,220,0.62);
         }
 
-        /* â•â•â•â•â•â•â•â•â•â•â• TEMA DIA â•â•â•â•â•â•â•â•â•â•â• */
+        /* TEMA DIA */
         [data-theme="day"] {
             --primary-color: #b30000;
             --secondary-color: #d4af37;
@@ -594,7 +593,7 @@
             --glass-card: rgba(255,255,255,0.78);
         }
 
-        /* â•â•â•â•â•â•â•â•â•â•â• TEMA NOITE â•â•â•â•â•â•â•â•â•â•â• */
+        /* TEMA NOITE */
         [data-theme="night"] {
             --primary-color: #ff6666;
             --secondary-color: #FFD700;
@@ -611,7 +610,7 @@
             --glass-card: rgba(25,15,15,0.78);
         }
 
-        /* â•â•â•â•â•â•â•â•â•â•â• BODY — FONTE GLOBAL â•â•â•â•â•â•â•â•â•â•â• */
+        /* BODY GLOBAL */
         body {
             font-family: var(--font-body);
             font-size: 16px;
@@ -624,25 +623,25 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        /* Títulos — fonte display elegante */
+        /* TITULOS */
         h1, h2, h3, h4, h5, h6,
         .logo, .article-header h3, .section-header h2 {
             font-family: var(--font-display);
             letter-spacing: -0.01em;
         }
 
-        /* â•â•â•â•â•â•â•â•â•â•â• HERO TEMA DIA â•â•â•â•â•â•â•â•â•â•â• */
+        /* HERO TEMA DIA & VIBRANTE */
         [data-theme="day"] .hero h1,
         [data-theme="day"] .hero p {
-            color: #2a1a1a;
-            text-shadow: none;
+            color: #ffffff;
+            text-shadow: 0 3px 15px rgba(0,0,0,0.8);
         }
 
         [data-theme="vibrant"] .hero h1 {
             color: var(--secondary-color);
         }
 
-        /* â•â•â•â•â•â•â•â•â•â•â• CONTAINER â•â•â•â•â•â•â•â•â•â•â• */
+        /* CONTAINER & HEADER */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -650,26 +649,15 @@
             width: 100%;
         }
 
-        /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-           HEADER — EFEITO VIDRO APPLE
-        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
         header {
-            background: var(--glass-bg);
-            backdrop-filter: blur(var(--glass-blur)) saturate(180%);
-            -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+            background: var(--gradient-header);
             border-bottom: 1px solid var(--glass-border);
             color: white;
             padding: 14px 0;
-            position: sticky;
-            top: 0;
+            position: relative;
             z-index: 1000;
-            box-shadow: 0 4px 30px rgba(0,0,0,0.2);
-            transition: background var(--transition-speed), backdrop-filter var(--transition-speed);
-        }
-
-        /* Header com fundo gradiente quando não há suporte a backdrop-filter */
-        @supports not (backdrop-filter: blur(1px)) {
-            header { background: var(--gradient-header); }
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            transition: background var(--transition-speed);
         }
 
         nav {
@@ -725,57 +713,62 @@
         }
         .menu-toggle:focus-visible { outline: 2px solid var(--secondary-color); }
 
-        /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-           HERO — FOTO COM EFEITOS DE VIDRO
-        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+        /* HERO - FOTO CDN COM EFEITOS DE VIDRO E HOVER PREMIUM */
         .hero {
             position: relative;
-            background-image: var(--hero-overlay);
+            background-image: var(--hero-overlay), url('https://cdn.pombagiras.com/LogG%20(2).png');
             background-size: cover;
-            background-position: center;
+            background-position: center center;
+            background-repeat: no-repeat;
             background-attachment: fixed;
             color: white;
             text-align: center;
-            padding: 100px 0 90px;
+            padding: 120px 0 110px;
             margin-bottom: 40px;
-            transition: background var(--transition-speed);
+            transition: background var(--transition-speed), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
             overflow: hidden;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.2);
         }
 
-        /* Partícula de brilho sobre a foto */
+        /* Particula de iluminacao e brilho sob a foto */
         .hero::before {
             content: '';
             position: absolute;
             inset: 0;
             background:
-                radial-gradient(ellipse 60% 40% at 30% 60%, rgba(255,215,0,0.09) 0%, transparent 70%),
-                radial-gradient(ellipse 40% 60% at 80% 30%, rgba(139,0,0,0.12) 0%, transparent 70%);
+                radial-gradient(ellipse 60% 50% at 50% 50%, rgba(255,215,0,0.14) 0%, transparent 80%),
+                radial-gradient(ellipse 50% 70% at 80% 20%, rgba(139,0,0,0.25) 0%, transparent 75%);
             pointer-events: none;
             z-index: 1;
-            transition: opacity 0.6s ease;
+            transition: opacity 0.6s ease, transform 0.6s ease;
         }
 
-        /* Efeito vidro sobre a imagem ao hover */
+        /* Efeito vidro e iluminacao suave ao passar o mouse */
         .hero::after {
             content: '';
             position: absolute;
             inset: 0;
             backdrop-filter: blur(0px) brightness(1);
             -webkit-backdrop-filter: blur(0px) brightness(1);
-            transition: backdrop-filter 0.6s ease, -webkit-backdrop-filter 0.6s ease, background 0.6s ease;
+            background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.65) 100%);
+            transition: backdrop-filter 0.6s ease, -webkit-backdrop-filter 0.6s ease, background 0.6s ease, opacity 0.6s ease;
             pointer-events: none;
             z-index: 0;
         }
 
-        .hero:hover::after {
-            backdrop-filter: blur(3px) brightness(0.92) saturate(130%);
-            -webkit-backdrop-filter: blur(3px) brightness(0.92) saturate(130%);
-            background: rgba(139,0,0,0.08);
+        .hero:hover {
+            box-shadow: inset 0 0 80px rgba(139, 0, 0, 0.45), 0 10px 40px rgba(0, 0, 0, 0.6);
         }
 
-        /* Faixa de vidro sobre o hero no hover */
+        .hero:hover::after {
+            backdrop-filter: blur(2px) brightness(1.15) saturate(125%);
+            -webkit-backdrop-filter: blur(2px) brightness(1.15) saturate(125%);
+            background: linear-gradient(180deg, rgba(139,0,0,0.15) 0%, rgba(0,0,0,0.35) 100%);
+        }
+
         .hero:hover::before {
-            opacity: 1.4;
+            opacity: 1.6;
+            transform: scale(1.05);
         }
 
         .hero .container {
@@ -805,35 +798,71 @@
             text-shadow: 0 2px 8px rgba(0,0,0,0.6);
             padding: 0 10px;
             animation: fadeInUp 1s ease 0.3s both;
-            letter-spacing: 0.01em;
             line-height: 1.7;
         }
 
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
 
         .cta-button {
-            background: var(--secondary-color);
-            color: #2C1810;
-            padding: 13px 36px;
-            text-decoration: none;
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 34px;
             border-radius: 50px;
             font-family: var(--font-body);
-            font-weight: 600;
-            font-size: 0.95em;
+            font-weight: 700;
+            font-size: 0.95rem;
             letter-spacing: 0.04em;
-            transition: all 0.3s ease;
-            display: inline-block;
+            text-decoration: none;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
             animation: fadeInUp 1s ease 0.6s both;
-            margin: 6px;
-            box-shadow: 0 4px 20px rgba(255,215,0,0.3);
+            cursor: pointer;
+            z-index: 5;
+            margin: 8px;
+            /* Pílula Padrão: Destaque Dourado Vibrante */
+            background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+            color: #1A0505 !important;
+            border: 1px solid rgba(255, 235, 150, 0.8);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.6);
         }
 
         .cta-button:hover, .cta-button:focus-visible {
-            transform: translateY(-3px) scale(1.03);
-            box-shadow: 0 12px 32px rgba(255,215,0,0.4);
+            transform: translateY(-3px) scale(1.05);
+            background: linear-gradient(135deg, #FFE55C 0%, #FFD700 50%, #D4AF37 100%);
+            color: #000000 !important;
+            box-shadow: 0 14px 35px rgba(255, 215, 0, 0.65), 0 0 22px rgba(255, 215, 0, 0.4);
             outline: none;
         }
 
-        /* â•â•â•â•â•â•â•â•â•â•â• SEÇÕES â•â•â•â•â•â•â•â•â•â•â• */
+        /* Pílula Secundária: Vidro Carmesim Escuro / Escuro Elegante */
+        .cta-button.cta-secondary, .cta-button:nth-of-type(2) {
+            background: rgba(30, 8, 12, 0.85);
+            color: #FFD700 !important;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 215, 0, 0.5);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+        }
+
+        .cta-button.cta-secondary:hover, .cta-button:nth-of-type(2):hover {
+            transform: translateY(-3px) scale(1.05);
+            background: rgba(139, 0, 0, 0.95);
+            border-color: #FFD700;
+            color: #FFFFFF !important;
+            box-shadow: 0 14px 35px rgba(139, 0, 0, 0.6), 0 0 20px rgba(255, 215, 0, 0.4);
+            outline: none;
+        }
+
+        /* SEÇÕES */
         main { padding: 20px 0; }
         .section { margin-bottom: 65px; padding: 20px 0; }
         .section-header { text-align: center; margin-bottom: 45px; }
