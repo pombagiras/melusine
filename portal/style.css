@@ -1593,17 +1593,49 @@ p {
         overflow: hidden;
     }
 
-    /* --- Swiper/Carousel for Curiosidades (Netflix Style) --- */
+    /* --- Mobile Navigation & Tab Tuning --- */
+    .tabs-nav-bar {
+        padding: 0.4rem 0 !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    .tabs-nav-inner {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        gap: 0.5rem !important;
+        padding: 0.4rem 0.2rem !important;
+        scrollbar-width: none !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+
+    .tabs-nav-inner::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    .tab-trigger {
+        flex: 0 0 auto !important;
+        font-size: 0.85rem !important;
+        padding: 0.5rem 0.9rem !important;
+        border-radius: 20px !important;
+        white-space: nowrap !important;
+        background: rgba(255, 255, 255, 0.04) !important;
+        border: 1px solid rgba(197, 160, 89, 0.2) !important;
+    }
+
+    .tab-trigger.active {
+        background: rgba(128, 0, 32, 0.4) !important;
+        border-color: var(--color-gold, #C59B27) !important;
+        color: #FAF6EE !important;
+    }
+
+    /* --- Vertical Cards Stack for Curiosidades (Mobile) --- */
     .curiosidades-grid {
         display: flex !important;
-        flex-direction: row !important;
-        overflow-x: auto !important;
-        scroll-snap-type: x mandatory !important;
+        flex-direction: column !important;
+        overflow-x: visible !important;
         gap: 1.2rem !important;
-        scrollbar-width: none !important;
-        -ms-overflow-style: none !important;
-        padding: 0.5rem 0.2rem 1.5rem !important;
-        -webkit-overflow-scrolling: touch !important;
+        padding: 0.5rem 0 1.5rem !important;
     }
     
     .curiosidades-grid::-webkit-scrollbar {
@@ -1611,41 +1643,85 @@ p {
     }
     
     .curio-card {
-        flex: 0 0 82vw !important;
-        scroll-snap-align: center !important;
-        padding: 1.5rem !important;
-        min-height: 220px;
+        flex: 1 1 auto !important;
+        width: 100% !important;
+        scroll-snap-align: none !important;
+        padding: 1.4rem 1.2rem !important;
+        min-height: auto !important;
     }
     
     .curio-title {
-        font-size: 1.25rem !important;
+        font-size: 1.2rem !important;
         margin-bottom: 0.6rem !important;
+        padding-right: 2.2rem !important;
     }
     
     .curio-text {
-        font-size: 0.88rem !important;
-        line-height: 1.5 !important;
+        font-size: 0.92rem !important;
+        line-height: 1.6 !important;
     }
     
     .curio-number {
-        font-size: 5.5rem !important;
-        top: -15px !important;
-        right: -5px !important;
+        font-size: 2.2rem !important;
+        top: 0.8rem !important;
+        right: 0.8rem !important;
+        line-height: 1 !important;
+        opacity: 0.85 !important;
     }
 
-    /* --- Compact Glossary Table --- */
-    .glossary-table th {
-        padding: 0.8rem 1rem !important;
-        font-size: 0.88rem !important;
+    /* --- Responsive Mobile Cards Layout for Glossário Table --- */
+    .table-responsive {
+        border: none !important;
+        background: transparent !important;
+        overflow-x: visible !important;
     }
-    
+
+    .glossary-table, 
+    .glossary-table tbody, 
+    .glossary-table tr, 
     .glossary-table td {
-        padding: 1rem !important;
-        font-size: 0.9rem !important;
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
-    
-    .term-highlight {
-        font-size: 1.05rem !important;
+
+    .glossary-table thead {
+        display: none !important;
+    }
+
+    .glossary-table tr {
+        background: var(--color-bg-card, rgba(18, 6, 10, 0.75)) !important;
+        border: 1px solid var(--color-border, rgba(197, 155, 39, 0.25)) !important;
+        border-radius: 14px !important;
+        margin-bottom: 1rem !important;
+        padding: 1.2rem 1.4rem !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
+    }
+
+    .glossary-table td {
+        padding: 0.4rem 0 !important;
+        border: none !important;
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+
+    .glossary-table td:first-child {
+        font-family: var(--font-heading) !important;
+        font-size: 1.25rem !important;
+        color: var(--color-gold, #C59B27) !important;
+        font-weight: 700 !important;
+        border-bottom: 1px solid rgba(197, 160, 89, 0.2) !important;
+        padding-bottom: 0.5rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .glossary-table td:last-child {
+        font-size: 0.85rem !important;
+        color: rgba(250, 246, 238, 0.65) !important;
+        font-style: italic !important;
+        margin-top: 0.4rem !important;
     }
 
     /* --- Global Paddings & Spacings Reduction --- */
