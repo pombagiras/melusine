@@ -63,6 +63,58 @@ User-agent: Cohere-ai
 Allow: /
 Disallow: /*?*
 
+User-agent: GeminiBot
+Allow: /
+Disallow: /*?*
+
+User-agent: Google-CloudVertexBot
+Allow: /
+Disallow: /*?*
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /*?*
+
+User-agent: Grok
+Allow: /
+Disallow: /*?*
+
+User-agent: xAI-Crawler
+Allow: /
+Disallow: /*?*
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+Disallow: /*?*
+
+User-agent: Mistral-AI
+Allow: /
+Disallow: /*?*
+
+User-agent: YouBot
+Allow: /
+Disallow: /*?*
+
+User-agent: Diffbot
+Allow: /
+Disallow: /*?*
+
+User-agent: Brightbot
+Allow: /
+Disallow: /*?*
+
+User-agent: PetalBot-AI
+Allow: /
+Disallow: /*?*
+
+User-agent: BraveBot
+Allow: /
+Disallow: /*?*
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /*?*
+
 # Search Engine Crawlers
 User-agent: Googlebot
 Allow: /
@@ -134,3 +186,6 @@ Disallow: /
 
 # Sitemap Declarations & Authority Endpoints
 Sitemap: https://pombagiras.com/sitemap.xml
+
+# LLMs.txt — Endpoint de conhecimento semântico para indexadores de IA
+LLMs: https://pombagiras.com/llms.txt

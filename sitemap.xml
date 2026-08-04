@@ -4,7 +4,7 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- Gerado dinamicamente via generate_pages.js | Atualizado em: 2026-07-27 -->
+<!-- Gerado dinamicamente via generate_pages.js | Atualizado em: 2026-08-04 -->
 
 <url>
   <loc>https://pombagiras.com/metodologia.html</loc>
@@ -33,7 +33,7 @@
 
 <url>
   <loc>https://pombagiras.com/</loc>
-  <lastmod>2026-07-19</lastmod>
+  <lastmod>2026-08-04</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.00</priority>
 </url>
@@ -111,9 +111,9 @@
 </url>
 <url>
   <loc>https://pombagiras.com/portal/</loc>
-  <lastmod>2026-07-19</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
+  <lastmod>2026-08-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
 </url>
 <url>
   <loc>https://pombagiras.com/guardias/maria-padilha-nao-e-servico-de-entrega.html</loc>
@@ -507,9 +507,27 @@
 </url>
 <url>
   <loc>https://pombagiras.com/portal/fronteiras-sagradas.html</loc>
-  <lastmod>2026-07-30</lastmod>
+  <lastmod>2026-08-04</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.85</priority>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://pombagiras.com/portal/silencio-rainha.html</loc>
+  <lastmod>2026-08-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://pombagiras.com/portal/olhar-pombagira.html</loc>
+  <lastmod>2026-08-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://pombagiras.com/portal/sorriso-pombagira.html</loc>
+  <lastmod>2026-08-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
 </url>
 <url>
   <loc>https://pombagiras.com/portal/como-nasce-uma-pombagira.html</loc>
