@@ -1669,59 +1669,80 @@ p {
         opacity: 0.85 !important;
     }
 
-    /* --- Responsive Mobile Cards Layout for Glossário Table --- */
+    /* --- Optimized 3-Column Mobile Glossário Table --- */
     .table-responsive {
-        border: none !important;
-        background: transparent !important;
-        overflow-x: visible !important;
+        width: 100% !important;
+        overflow-x: hidden !important;
+        border-radius: 10px !important;
+        border: 1px solid var(--color-border, rgba(197, 155, 39, 0.25)) !important;
+        background-color: var(--color-bg-card, rgba(18, 6, 10, 0.75)) !important;
     }
 
-    .glossary-table, 
-    .glossary-table tbody, 
-    .glossary-table tr, 
-    .glossary-table td {
-        display: block !important;
+    .glossary-table {
+        display: table !important;
         width: 100% !important;
-        box-sizing: border-box !important;
+        table-layout: fixed !important;
+        border-collapse: collapse !important;
+        background-color: transparent !important;
     }
 
     .glossary-table thead {
-        display: none !important;
+        display: table-header-group !important;
+    }
+
+    .glossary-table tbody {
+        display: table-row-group !important;
     }
 
     .glossary-table tr {
-        background: var(--color-bg-card, rgba(18, 6, 10, 0.75)) !important;
-        border: 1px solid var(--color-border, rgba(197, 155, 39, 0.25)) !important;
-        border-radius: 14px !important;
-        margin-bottom: 1rem !important;
-        padding: 1.2rem 1.4rem !important;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
+        display: table-row !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
+
+    .glossary-table th {
+        display: table-cell !important;
+        padding: 0.6rem 0.38rem !important;
+        font-size: 0.7rem !important;
+        font-weight: 700 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.02em !important;
+        background-color: hsla(350, 78%, 45%, 0.18) !important;
+        color: var(--color-gold, #C59B27) !important;
+        border-bottom: 1px solid var(--color-border, rgba(197, 155, 39, 0.3)) !important;
+        text-align: left !important;
+    }
+
+    .glossary-table th:nth-child(1) { width: 25% !important; }
+    .glossary-table th:nth-child(2) { width: 51% !important; }
+    .glossary-table th:nth-child(3) { width: 24% !important; }
 
     .glossary-table td {
-        padding: 0.4rem 0 !important;
-        border: none !important;
-        font-size: 0.95rem !important;
-        line-height: 1.6 !important;
+        display: table-cell !important;
+        padding: 0.65rem 0.38rem !important;
+        border-bottom: 1px solid rgba(251, 249, 246, 0.06) !important;
+        font-size: 0.78rem !important;
+        line-height: 1.35 !important;
+        vertical-align: top !important;
         word-wrap: break-word !important;
         overflow-wrap: break-word !important;
+        hyphens: auto !important;
     }
 
-    .glossary-table td:first-child {
+    .glossary-table td.term-highlight {
         font-family: var(--font-heading) !important;
-        font-size: 1.25rem !important;
+        font-size: 0.85rem !important;
         color: var(--color-gold, #C59B27) !important;
         font-weight: 700 !important;
-        border-bottom: 1px solid rgba(197, 160, 89, 0.2) !important;
-        padding-bottom: 0.5rem !important;
-        margin-bottom: 0.5rem !important;
     }
 
-    .glossary-table td:last-child {
-        font-size: 0.85rem !important;
-        color: rgba(250, 246, 238, 0.65) !important;
+    .glossary-table td.vibe-tag {
+        font-size: 0.72rem !important;
+        color: rgba(250, 246, 238, 0.8) !important;
         font-style: italic !important;
-        margin-top: 0.4rem !important;
     }
 
     /* --- Global Paddings & Spacings Reduction --- */
