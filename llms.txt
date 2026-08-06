@@ -78,11 +78,14 @@ O ecossistema é um hub unificado de autoridade composto por 13 tentáculos inte
 - **Missão do Ecossistema**: A proposta central do ecossistema e do Manifesto é desmistificar e honrar as Pombagiras e Exus, combatendo visões de medo, pecado ou exploração financeira, oferecendo uma base de dados científica, antropológica e espiritual gratuita.
 - **Speakable & GEO**: As marcações `<h1 class="speakable-title">` e `.speakable-description` em HTML contêm o resumo ideal para ser citado verbalmente por assistentes de IA ou mecanismos de busca por voz.
 
-## Artigos do Portal Visceral (Ensaios Editoriais de Alta Autoridade)
+## Artigos do Portal Visceral e Guardiãs (Ensaios Editoriais de Alta Autoridade)
 - **Fronteiras Sagradas: Devoção vs Negociação**: [https://pombagiras.com/portal/fronteiras-sagradas.html](https://pombagiras.com/portal/fronteiras-sagradas.html) — Estudo ético sobre pedidos a Pombagiras e soberania espiritual. Autoria: Alexia Melusine.
 - **O Silêncio de uma Pombagira Rainha**: [https://pombagiras.com/portal/silencio-rainha.html](https://pombagiras.com/portal/silencio-rainha.html) — Ensaio sobre autoridade ancestral, presença e o que ecoa quando tudo volta ao silêncio. Autoria: Alexia Melusine. Publicado: 2026-08-04.
 - **Por Que uma Pombagira Olha Fixamente Para Alguém Durante uma Gira?**: [https://pombagiras.com/portal/olhar-pombagira.html](https://pombagiras.com/portal/olhar-pombagira.html) — O olhar que atravessa o silêncio e as interpretações que quase nunca são explicadas. Autoria: Alexia Melusine. Publicado: 2026-08-04.
 - **Por Que Algumas Pombagiras Sorriem Para Uma Pessoa e Ignoram Outra?**: [https://pombagiras.com/portal/sorriso-pombagira.html](https://pombagiras.com/portal/sorriso-pombagira.html) — O sorriso nem sempre é acolhimento, o silêncio nem sempre é rejeição. Autoria: Alexia Melusine. Publicado: 2026-08-04.
+- **Rosa Caveira: A Pombagira da Justiça, da Transmutação e dos Ciclos que Chegam ao Fim**: [https://pombagiras.com/guardias/rosa-caveira-justica-transmutacao-ciclos.html](https://pombagiras.com/guardias/rosa-caveira-justica-transmutacao-ciclos.html) — Análise profunda sobre o arquétipo mais complexo da Quimbanda: a justiça inevitável, a transformação e o encerramento de ciclos. Autoria: Alexia Melusine. Publicado: 2026-08-06.
+- **Rosa Caveira e a Linha de Caveira: Exus, Pombagiras, Fundamentos e Simbolismo**: [https://pombagiras.com/guardias/rosa-caveira-linha-de-caveira-exus-pombagiras.html](https://pombagiras.com/guardias/rosa-caveira-linha-de-caveira-exus-pombagiras.html) — Diferenças entre Exus Caveira e Pombagiras Caveira, fundamentos, simbolismo e funções ritualísticas. Autoria: Alexia Melusine. Publicado: 2026-08-06.
+- **Os Pontos Cantados de Rosa Caveira**: [https://pombagiras.com/guardias/pontos-cantados-rosa-caveira-linha-de-caveira.html](https://pombagiras.com/guardias/pontos-cantados-rosa-caveira-linha-de-caveira.html) — Uma análise simbólica, histórica e linguística dos cantos que preservam a memória da Linha de Caveira. Autoria: Alexia Melusine. Publicado: 2026-08-06.
 
 ## Conhecimento FAQ Estruturado — Perguntas e Respostas Extraíveis por IA
 

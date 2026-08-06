@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt‑BR" data-theme="vibrant">
 <head>
     <meta charset="UTF-8">
@@ -2115,6 +2115,48 @@
                         <button class="featured-card-btn" type="button" aria-hidden="true" tabindex="-1">Ler Prévia <i class="fas fa-chevron-right" aria-hidden="true"></i></button>
                     </div>
                 </div>
+
+                <!-- 4. Rosa Caveira -->
+                <div class="featured-card" onclick="openRosaCaveiraModal()" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="rosa-caveira-modal" aria-label="Rosa Caveira: A Pombagira da Justiça, da Transmutação e dos Ciclos que Chegam ao Fim - Ler prévia do artigo">
+                    <div class="featured-card-image-box">
+                        <img src="https://cdn.pombagiras.com/fotos/RCaveira%20(2).png" alt="Representação artística de Rosa Caveira, Pombagira da Justiça e Transmutação" class="featured-card-img" loading="lazy" decoding="async">
+                        <div class="featured-card-overlay"></div>
+                    </div>
+                    <div class="featured-card-info">
+                        <span class="featured-card-badge"><i class="fas fa-skull" aria-hidden="true"></i> Transmutação</span>
+                        <h3>Rosa Caveira: Justiça, Transmutação e os Ciclos que Chegam ao Fim</h3>
+                        <p>Debaixo da pele, somos todos caveira. Uma análise profunda sobre o arquétipo mais complexo da Quimbanda — a justiça inevitável, a transformação e o encerramento de ciclos de Rosa Caveira.</p>
+                        <button class="featured-card-btn" type="button" aria-hidden="true" tabindex="-1">Ler Prévia <i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+
+                <!-- 5. Linha de Caveira -->
+                <div class="featured-card" onclick="openLinhaCaveiraModal()" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="linha-caveira-modal" aria-label="Rosa Caveira e a Linha de Caveira - Ler prévia do artigo">
+                    <div class="featured-card-image-box">
+                        <img src="https://cdn.pombagiras.com/fotos/RCaveira%20(1).png" alt="Representação artística da Linha de Caveira, Exus e Pombagiras" class="featured-card-img" loading="lazy" decoding="async">
+                        <div class="featured-card-overlay"></div>
+                    </div>
+                    <div class="featured-card-info">
+                        <span class="featured-card-badge"><i class="fas fa-cross" aria-hidden="true"></i> Fundamentos</span>
+                        <h3>Rosa Caveira e a Linha de Caveira</h3>
+                        <p>Diferenças entre Exus Caveira e Pombagiras Caveira, fundamentos, simbolismo e funções ritualísticas. Uma reflexão profunda sobre a ética da impermanência e o verdadeiro papel da Linha de Caveira.</p>
+                        <button class="featured-card-btn" type="button" aria-hidden="true" tabindex="-1">Ler Prévia <i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+
+                <!-- 6. Pontos Cantados de Rosa Caveira -->
+                <div class="featured-card" onclick="openPontosCantadosModal()" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="pontos-cantados-modal" aria-label="Os Pontos Cantados de Rosa Caveira - Ler prévia do artigo">
+                    <div class="featured-card-image-box">
+                        <img src="https://cdn.pombagiras.com/fotos/RCaveira%20(3).png" alt="Representação artística dos Pontos Cantados de Rosa Caveira" class="featured-card-img" loading="lazy" decoding="async">
+                        <div class="featured-card-overlay"></div>
+                    </div>
+                    <div class="featured-card-info">
+                        <span class="featured-card-badge"><i class="fas fa-music" aria-hidden="true"></i> Tradição Oral</span>
+                        <h3>Os Pontos Cantados de Rosa Caveira</h3>
+                        <p>Antes de existir um livro, existia uma voz. Uma análise simbólica, histórica e linguística dos cantos que preservam a memória da Linha de Caveira e do arquétipo de Rosa Caveira.</p>
+                        <button class="featured-card-btn" type="button" aria-hidden="true" tabindex="-1">Ler Prévia <i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+                    </div>
+                </div>
             </div>
 
             <!-- MODAL DE PRÉVIA INTERATIVA 1: MARIA PADILHA -->
@@ -2219,6 +2261,109 @@
                     </div>
                 </div>
             </div>
+
+            <!-- MODAL DE PRÉVIA INTERATIVA 4: ROSA CAVEIRA -->
+            <div id="rosa-caveira-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="modal-rosa-caveira-title" onclick="closeRosaCaveiraModal()">
+                <div class="modal-container" onclick="event.stopPropagation()">
+                    <button class="modal-close" onclick="closeRosaCaveiraModal()" aria-label="Fechar prévia">
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </button>
+                    <div class="modal-content">
+                        <div class="modal-image-box">
+                            <img src="https://cdn.pombagiras.com/fotos/RCaveira%20(2).png" alt="Rosa Caveira, Pombagira da Justiça e Transmutação" class="modal-img">
+                            <div class="modal-image-overlay"></div>
+                        </div>
+                        <div class="modal-body-content">
+                            <span class="modal-badge"><i class="fas fa-book-open" aria-hidden="true"></i> Prévia do Artigo</span>
+                            <h2 id="modal-rosa-caveira-title">Rosa Caveira: A Pombagira da Justiça, da Transmutação e dos Ciclos que Chegam ao Fim</h2>
+                            <p class="modal-subtitle">Debaixo da pele, somos todos caveira.</p>
+                            <hr class="modal-divider">
+                            <div class="modal-scroll-text">
+                                <p>Poucas entidades despertam tanta curiosidade — e tantos equívocos — quanto <strong>Pombagira Rosa Caveira</strong>.</p>
+                                <p>Seu próprio nome provoca interpretações imediatas: muitos associam a palavra <em>Caveira</em> exclusivamente ao cemitério, à morte ou ao medo. Entretanto, quando observamos sua construção dentro da tradição oral da Umbanda, da Quimbanda e das diversas escolas afro-brasileiras, percebemos algo muito mais profundo.</p>
+                                <p>Rosa Caveira não representa simplesmente a morte. Ela representa aquilo que <strong>sobrevive depois que tudo o resto termina.</strong> Ao lembrar constantemente que tudo termina, ela convida seus devotos a refletirem sobre como vivem, quais ciclos precisam encerrar e quais ilusões precisam abandonar. Sua justiça não nasce da vingança — nasce da consequência.</p>
+                            </div>
+                            <div class="modal-actions">
+                                <a href="./rosa-caveira-justica-transmutacao-ciclos.html" class="modal-action-btn primary" id="btn-rosa-caveira-full">
+                                    Ver Conteúdo Completo <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </a>
+                                <button onclick="closeRosaCaveiraModal()" class="modal-action-btn secondary" type="button">
+                                    Voltar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL DE PRÉVIA INTERATIVA 5: LINHA DE CAVEIRA -->
+            <div id="linha-caveira-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="modal-linha-caveira-title" onclick="closeLinhaCaveiraModal()">
+                <div class="modal-container" onclick="event.stopPropagation()">
+                    <button class="modal-close" onclick="closeLinhaCaveiraModal()" aria-label="Fechar prévia">
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </button>
+                    <div class="modal-content">
+                        <div class="modal-image-box">
+                            <img src="https://cdn.pombagiras.com/fotos/RCaveira%20(1).png" alt="Rosa Caveira e a Linha de Caveira" class="modal-img">
+                            <div class="modal-image-overlay"></div>
+                        </div>
+                        <div class="modal-body-content">
+                            <span class="modal-badge"><i class="fas fa-book-open" aria-hidden="true"></i> Prévia do Artigo</span>
+                            <h2 id="modal-linha-caveira-title">Rosa Caveira e a Linha de Caveira</h2>
+                            <p class="modal-subtitle">Diferenças entre Exus Caveira e Pombagiras Caveira, fundamentos e funções ritualísticas</p>
+                            <hr class="modal-divider">
+                            <div class="modal-scroll-text">
+                                <p><em>"Quem olha apenas para a caveira vê a morte. Quem compreende o símbolo enxerga aquilo que sobrevive ao tempo."</em></p>
+                                <p>Poucas linhas espirituais são tão cercadas de mistério quanto a <strong>Linha de Caveira</strong>. Ao longo das últimas décadas, ela passou a ser frequentemente associada ao medo ou a práticas consideradas "pesadas". Entretanto, quando analisamos sua construção histórica e simbólica, percebemos que essa interpretação é superficial.</p>
+                                <p>A Linha de Caveira fala, antes de tudo, sobre <strong>transformação</strong>. Ela representa o momento em que aquilo que perdeu sua função precisa terminar para que um novo ciclo possa nascer. Nesse sentido, a caveira não simboliza apenas a morte. Ela simboliza a continuidade.</p>
+                            </div>
+                            <div class="modal-actions">
+                                <a href="./rosa-caveira-linha-de-caveira-exus-pombagiras.html" class="modal-action-btn primary" id="btn-linha-caveira-full">
+                                    Ver Conteúdo Completo <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </a>
+                                <button onclick="closeLinhaCaveiraModal()" class="modal-action-btn secondary" type="button">
+                                    Voltar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL DE PRÉVIA INTERATIVA 6: PONTOS CANTADOS -->
+            <div id="pontos-cantados-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="modal-pontos-cantados-title" onclick="closePontosCantadosModal()">
+                <div class="modal-container" onclick="event.stopPropagation()">
+                    <button class="modal-close" onclick="closePontosCantadosModal()" aria-label="Fechar prévia">
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </button>
+                    <div class="modal-content">
+                        <div class="modal-image-box">
+                            <img src="https://cdn.pombagiras.com/fotos/RCaveira%20(3).png" alt="Os Pontos Cantados de Rosa Caveira" class="modal-img">
+                            <div class="modal-image-overlay"></div>
+                        </div>
+                        <div class="modal-body-content">
+                            <span class="modal-badge"><i class="fas fa-book-open" aria-hidden="true"></i> Prévia do Artigo</span>
+                            <h2 id="modal-pontos-cantados-title">Os Pontos Cantados de Rosa Caveira</h2>
+                            <p class="modal-subtitle">Uma análise simbólica, histórica e linguística da biblioteca oral da Linha de Caveira</p>
+                            <hr class="modal-divider">
+                            <div class="modal-scroll-text">
+                                <p><em>"Antes de existir um livro, existia uma voz. Antes de existir uma doutrina escrita, existia um ponto cantado."</em></p>
+                                <p>Entre todos os elementos que compõem a liturgia da Umbanda e da Quimbanda, poucos são tão importantes quanto os <strong>pontos cantados</strong>. Eles constituem uma verdadeira <strong>biblioteca oral</strong>, capaz de transmitir conhecimentos religiosos durante gerações sem depender de qualquer livro.</p>
+                                <p>No caso de <strong>Rosa Caveira</strong>, grande parte do que hoje sabemos sobre seu arquétipo foi preservado justamente pelos pontos cantados — pequenos textos rituais que revelam cartografia espiritual, impermanência e justiça.</p>
+                            </div>
+                            <div class="modal-actions">
+                                <a href="./pontos-cantados-rosa-caveira-linha-de-caveira.html" class="modal-action-btn primary" id="btn-pontos-cantados-full">
+                                    Ver Conteúdo Completo <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </a>
+                                <button onclick="closePontosCantadosModal()" class="modal-action-btn secondary" type="button">
+                                    Voltar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="cards-grid">
                 <article class="card">
                     <div class="card-icon"><i class="fas fa-route" aria-hidden="true"></i></div>
@@ -3151,41 +3296,7 @@
     </footer>
 
     <script>
-        // â•â•â• LÓGICA DO TEMA COM ACESSIBILIDADE BLINDADA â•â•â•
-        function setTheme(themeName) {
-            document.documentElement.setAttribute('data-theme', themeName);
-            localStorage.setItem('theme', themeName);
-
-            const buttons = document.querySelectorAll('.theme-btn');
-            buttons.forEach(btn => {
-                btn.classList.remove('active');
-                btn.setAttribute('aria-pressed', 'false');
-            });
-
-            const activeBtn = document.querySelector(`.theme-btn[onclick="setTheme('${themeName}')"]`);
-            if (activeBtn) {
-                activeBtn.classList.add('active');
-                activeBtn.setAttribute('aria-pressed', 'true');
-            }
-        }
-
-        (function() {
-            const savedTheme = localStorage.getItem('theme') || 'vibrant';
-            document.documentElement.setAttribute('data-theme', savedTheme);
-            const activeBtn = document.querySelector(`.theme-btn[onclick="setTheme('${savedTheme}')"]`);
-            if (activeBtn) {
-                activeBtn.classList.add('active');
-                activeBtn.setAttribute('aria-pressed', 'true');
-            } else {
-                const defaultBtn = document.querySelector('.theme-btn:last-child');
-                if (defaultBtn) {
-                    defaultBtn.classList.add('active');
-                    defaultBtn.setAttribute('aria-pressed', 'true');
-                }
-            }
-        })();
-
-        // â•â•â• MENU MOBILE ACESSÍVEL E RESILIENTE â•â•â•
+        // --- MENU MOBILE ACESSÍVEL E RESILIENTE ---
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
 
@@ -3218,7 +3329,7 @@
             });
         }
 
-        // â•â•â• ANIMAÇÕES DE ENTRADA — INTERSECTION OBSERVER â•â•â•
+        // --- ANIMAÇÕES DE ENTRADA — INTERSECTION OBSERVER ---
         const observerOptions = {
             root: null,
             rootMargin: '0px',
@@ -3236,8 +3347,8 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('.card, .article-card, .entity-card').forEach(el => observer.observe(el));
+        });
 
-            
         // --- 24 Pombagiras Deck Card Filters Script ---
         const filterButtons = document.querySelectorAll('.filter-btn');
         const pombagiraCards = document.querySelectorAll('.pombagira-card');
@@ -3273,16 +3384,12 @@
 
         // --- FAQ Accordion Script ---
         const faqItems = document.querySelectorAll('.faq-item');
-
         faqItems.forEach(item => {
             const trigger = item.querySelector('.faq-trigger');
             const content = item.querySelector('.faq-content');
-
             if (!trigger || !content) return;
-
             trigger.addEventListener('click', () => {
                 const isActive = item.classList.contains('active');
-
                 faqItems.forEach(otherItem => {
                     const otherTrigger = otherItem.querySelector('.faq-trigger');
                     const otherContent = otherItem.querySelector('.faq-content');
@@ -3291,7 +3398,6 @@
                     otherTrigger.setAttribute('aria-expanded', 'false');
                     otherContent.style.maxHeight = '0';
                 });
-
                 if (!isActive) {
                     item.classList.add('active');
                     trigger.setAttribute('aria-expanded', 'true');
@@ -3300,9 +3406,7 @@
             });
         });
 
-        });
-
-        // --- Controle do Modal de Prévia ---
+        // --- Controle dos Modais de Prévia ---
         let previousActiveElement;
 
         function openPreviewModal() {
@@ -3484,9 +3588,123 @@
                 }
             }
         }
+
+        function openRosaCaveiraModal() {
+            const modal = document.getElementById('rosa-caveira-modal');
+            if (!modal) return;
+            previousActiveElement = document.activeElement;
+            modal.classList.add('active');
+            modal.setAttribute('aria-hidden', 'false');
+            const fullArticleBtn = document.getElementById('btn-rosa-caveira-full');
+            if (fullArticleBtn) { setTimeout(() => { fullArticleBtn.focus(); }, 100); }
+            document.body.style.overflow = 'hidden';
+            document.addEventListener('keydown', handleRosaCaveiraModalKeyDown);
+        }
+
+        function closeRosaCaveiraModal() {
+            const modal = document.getElementById('rosa-caveira-modal');
+            if (!modal) return;
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            document.removeEventListener('keydown', handleRosaCaveiraModalKeyDown);
+            if (previousActiveElement) { previousActiveElement.focus(); }
+        }
+
+        function openPontosCantadosModal() {
+            const modal = document.getElementById("pontos-cantados-modal");
+            if (!modal) return;
+            previousActiveElement = document.activeElement;
+            modal.classList.add("active");
+            modal.setAttribute("aria-hidden", "false");
+            const fullArticleBtn = document.getElementById("btn-pontos-cantados-full");
+            if (fullArticleBtn) { setTimeout(() => { fullArticleBtn.focus(); }, 100); }
+            document.body.style.overflow = "hidden";
+            document.addEventListener("keydown", handlePontosCantadosModalKeyDown);
+        }
+
+        function closePontosCantadosModal() {
+            const modal = document.getElementById("pontos-cantados-modal");
+            if (!modal) return;
+            modal.classList.remove("active");
+            modal.setAttribute("aria-hidden", "true");
+            document.body.style.overflow = "";
+            document.removeEventListener("keydown", handlePontosCantadosModalKeyDown);
+            if (previousActiveElement) { previousActiveElement.focus(); }
+        }
+
+        function handlePontosCantadosModalKeyDown(e) {
+            if (e.key === "Escape") { closePontosCantadosModal(); }
+            if (e.key === "Tab") {
+                const modal = document.getElementById("pontos-cantados-modal");
+                if (!modal) return;
+                const focusableElements = modal.querySelectorAll("button, a, [tabindex=\"0\"]");
+                const firstElement = focusableElements[0];
+                const lastElement = focusableElements[focusableElements.length - 1];
+                if (e.shiftKey) {
+                    if (document.activeElement === firstElement) { e.preventDefault(); lastElement.focus(); }
+                } else {
+                    if (document.activeElement === lastElement) { e.preventDefault(); lastElement.focus(); }
+                }
+            }
+        }
+
+        function openLinhaCaveiraModal() {
+            const modal = document.getElementById("linha-caveira-modal");
+            if (!modal) return;
+            previousActiveElement = document.activeElement;
+            modal.classList.add("active");
+            modal.setAttribute("aria-hidden", "false");
+            const fullArticleBtn = document.getElementById("btn-linha-caveira-full");
+            if (fullArticleBtn) { setTimeout(() => { fullArticleBtn.focus(); }, 100); }
+            document.body.style.overflow = "hidden";
+            document.addEventListener("keydown", handleLinhaCaveiraModalKeyDown);
+        }
+
+        function closeLinhaCaveiraModal() {
+            const modal = document.getElementById("linha-caveira-modal");
+            if (!modal) return;
+            modal.classList.remove("active");
+            modal.setAttribute("aria-hidden", "true");
+            document.body.style.overflow = "";
+            document.removeEventListener("keydown", handleLinhaCaveiraModalKeyDown);
+            if (previousActiveElement) { previousActiveElement.focus(); }
+        }
+
+        function handleLinhaCaveiraModalKeyDown(e) {
+            if (e.key === "Escape") { closeLinhaCaveiraModal(); }
+            if (e.key === "Tab") {
+                const modal = document.getElementById("linha-caveira-modal");
+                if (!modal) return;
+                const focusableElements = modal.querySelectorAll("button, a, [tabindex=\"0\"]");
+                const firstElement = focusableElements[0];
+                const lastElement = focusableElements[focusableElements.length - 1];
+                if (e.shiftKey) {
+                    if (document.activeElement === firstElement) { e.preventDefault(); lastElement.focus(); }
+                } else {
+                    if (document.activeElement === lastElement) { e.preventDefault(); firstElement.focus(); }
+                }
+            }
+        }
+
+        function handleRosaCaveiraModalKeyDown(e) {
+            if (e.key === 'Escape') { closeRosaCaveiraModal(); }
+            if (e.key === 'Tab') {
+                const modal = document.getElementById('rosa-caveira-modal');
+                if (!modal) return;
+                const focusableElements = modal.querySelectorAll('button, a, [tabindex="0"]');
+                const firstElement = focusableElements[0];
+                const lastElement = focusableElements[focusableElements.length - 1];
+                if (e.shiftKey) {
+                    if (document.activeElement === firstElement) { e.preventDefault(); lastElement.focus(); }
+                } else {
+                    if (document.activeElement === lastElement) { e.preventDefault(); firstElement.focus(); }
+                }
+            }
+        }
     </script>
 
-    <!-- â•â• SELETOR DE IDIOMA / LANGUAGE SWITCHER â•â• -->
+    <!-- --- SELETOR DE IDIOMA / LANGUAGE SWITCHER --- -->
     
     <script>
     (function(){
