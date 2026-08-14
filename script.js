@@ -984,7 +984,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setupCursorHoverEffects();
 
         // Opcional: Re-executar setup de cursor em elementos dinâmicos após filtragem
-        const searchInput = document.getElementById('searchQuery');
+        const searchInput = document.getElementById('pombagiraSearchInput');
         if (searchInput) {
             searchInput.addEventListener('input', () => {
                 setTimeout(setupCursorHoverEffects, 100);
@@ -1087,10 +1087,11 @@ document.addEventListener('DOMContentLoaded', () => {
         let width = canvas.width = window.innerWidth;
         let height = canvas.height = window.innerHeight;
 
-        window.addEventListener('resize', () => {
+        const onResize = () => {
             width = canvas.width = window.innerWidth;
             height = canvas.height = window.innerHeight;
-        }, { passive: true });
+        };
+        window.addEventListener('resize', onResize, { passive: true });
 
         const particles = [];
         // Cores da paleta (Creme Quente, Latão/Gold, Oxblood, Rosa-Místico, Escarlate)
@@ -1125,6 +1126,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function animate() {
             if (particles.length === 0) {
+                window.removeEventListener('resize', onResize);
                 canvas.remove();
                 return;
             }
