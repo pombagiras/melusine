@@ -739,6 +739,51 @@ p {
     color: var(--color-text-muted);
 }
 
+.card-btn-wrapper {
+    margin-top: auto;
+    padding-top: 1.25rem;
+}
+
+.card-action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 18px;
+    background: rgba(94, 26, 26, 0.35);
+    border: 1px solid rgba(197, 155, 39, 0.45);
+    border-radius: 50px;
+    color: #F5F0E8;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card-action-btn .btn-arrow {
+    color: var(--color-gold);
+    transition: transform 0.3s ease;
+}
+
+.pombagira-card:hover .card-action-btn,
+.card-action-btn:hover {
+    background: var(--color-crimson, #8B0000);
+    border-color: var(--color-gold, #C59B27);
+    color: #FFFFFF;
+    box-shadow: 0 6px 20px rgba(139, 0, 0, 0.5), 0 0 12px rgba(197, 155, 39, 0.3);
+    text-decoration: none;
+}
+
+.pombagira-card:hover .card-action-btn .btn-arrow,
+.card-action-btn:hover .btn-arrow {
+    transform: translateX(4px);
+    color: #FFFFFF;
+}
+
 /* --- FAQ Accordion Layout --- */
 .faq-accordion-wrapper {
     max-width: 800px;

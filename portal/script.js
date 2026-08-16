@@ -479,198 +479,470 @@ document.addEventListener('DOMContentLoaded', () => {
        ========================================== */
     const pombagiraDetails = {
         "maria padilha": {
-            oferenda: "Rosas vermelhas abertas, champanhe brut, licor de anis, pêssego em calda, cigarros finos, perfume importado.",
-            cores: "Vermelho carmesim profundo e preto azeviche.",
-            dia: "Sexta-feira",
-            horario: "00:00 (Meia-noite)",
-            signo: "Escorpião (Magnetismo, sexualidade consciente e mistério profundo)",
-            badge: "Tradição & Feitiço"
+                "oferenda": "Rosas vermelhas abertas, champanhe brut, licor de anis, pêssego em calda, cigarros finos, perfume importado.",
+                "cores": "Rosa choque, Vermelho carmesim, Dourado e Branco.",
+                "dia": "Sexta-feira",
+                "horario": "20:00 ou 00:00 (Noite do amor e da magia)",
+                "signo": "Escorpião / Oxum (Magnetismo, autonomia soberana e realeza)",
+                "badge": "Tradição & Feitiço"
         },
         "maria mulambo": {
-            oferenda: "Licor de menta ou anis, espumante rosé, rosas vermelhas, figos, padê de mel, perfume suave.",
-            cores: "Preto, roxo e dourado.",
-            dia: "Sexta-feira",
-            horario: "18:00 (Hora da Ave-Maria, limiar astral)",
-            signo: "Peixes / Capricórnio (Empatia cósmica, transmutação e desapego material)",
-            badge: "Transmutação"
+                "oferenda": "Licor de menta ou anis, espumante rosé, rosas vermelhas, figos, padê de mel, perfume suave.",
+                "cores": "Preto, Cinza, Vinho, Marrom e Laranja queimado.",
+                "dia": "Segunda-feira",
+                "horario": "12:00 (Hora da misericórdia) ou 18:00",
+                "signo": "Peixes / Obaluaê (Empatia cósmica, transmutação e desapego material)",
+                "badge": "Transmutação"
         },
         "maria navalha": {
-            oferenda: "Cerveja clara ou cachaça fina, cigarros de palha, rosas vermelhas, padê de dendê, petiscos tradicionais.",
-            cores: "Vermelho, branco e preto.",
-            dia: "Segunda-feira",
-            horario: "12:00 ou 00:00 (Equilíbrio dos extremos)",
-            signo: "Gêmeos / Sagitário (Perspicácia de rua, oratória e defesa afiada)",
-            badge: "Proteção Urbana"
+                "oferenda": "Cerveja clara ou cachaça fina, cigarros de palha, rosas vermelhas, padê de dendê, petiscos tradicionais.",
+                "cores": "Vermelho sangue, Preto fosco, Metalizado e Laranja.",
+                "dia": "Sexta-feira",
+                "horario": "21:00 ou 02:00 (Hora da rua)",
+                "signo": "Gêmeos / Ogum (Perspicácia de rua, oratória e defesa afiada)",
+                "badge": "Proteção Urbana"
         },
         "maria quitéria": {
-            oferenda: "Champanhe seco, cigarros, rosas vermelhas com espinhos, padê de pimenta, punhal consagrado.",
-            cores: "Vermelho, preto e dourado.",
-            dia: "Terça-feira",
-            horario: "00:00",
-            signo: "Áries (Coragem guerreira, liderança e firmeza de ação)",
-            badge: "Justiça e Ordem"
+                "oferenda": "Champanhe seco, cigarros, rosas vermelhas com espinhos, padê de pimenta, punhal consagrado.",
+                "cores": "Amarelo ouro, Vermelho sangue, Laranja e Preto.",
+                "dia": "Quinta-feira",
+                "horario": "14:00 (Hora da justiça) ou 21:00 (Hora da guerra)",
+                "signo": "Áries / Ogum (Coragem guerreira, liderança e firmeza de ação)",
+                "badge": "Justiça e Ordem"
         },
         "maria farrapo": {
-            oferenda: "Cachaça de mel, cigarros rústicos, padê de carvão e mel, rosas vermelhas sem pétalas, frutas silvestres.",
-            cores: "Preto, vermelho e cinza.",
-            dia: "Segunda-feira",
-            horario: "21:00",
-            signo: "Virgem (Ordenação do caos mental, limpeza e cura prática)",
-            badge: "Desapego e Cura"
+                "oferenda": "Cachaça de mel, cigarros rústicos, padê de carvão e mel, rosas vermelhas sem pétalas, frutas silvestres.",
+                "cores": "Marrom terra, Laranja queimado, Preto fosco, Cinza e Bege.",
+                "dia": "Quarta-feira",
+                "horario": "15:00 (Hora da sanidade) ou 23:00 (Hora do caos)",
+                "signo": "Virgem / Obaluaê (Ordenação do caos mental, limpeza e cura prática)",
+                "badge": "Desapego e Cura"
         },
         "pombagira cigana": {
-            oferenda: "Frutas doces, uvas, pão de mel, vinho licoroso, cigarros finos, moedas douradas, cartas de baralho, lenços coloridos.",
-            cores: "Colorido (destaque para vermelho, amarelo, dourado e azul).",
-            dia: "Quinta-feira",
-            horario: "18:00",
-            signo: "Touro / Sagitário (Prosperidade, fartura, liberdade e oráculos)",
-            badge: "Liberdade & Clarividência"
+                "oferenda": "Frutas doces, uvas, pão de mel, vinho licoroso, cigarros finos, moedas douradas, cartas de baralho, lenços coloridos.",
+                "cores": "Vermelho paixão, Dourado, Roxo, Verde esmeralda e Azul turquesa.",
+                "dia": "Sexta-feira",
+                "horario": "18:00 (Hora do encontro) ou Domingo pela manhã",
+                "signo": "Touro / Sagitário (Prosperidade, fartura, liberdade e oráculos)",
+                "badge": "Liberdade & Clarividência"
+        },
+        "cigana": {
+                "oferenda": "Frutas doces, uvas, pão de mel, vinho licoroso, cigarros finos, moedas douradas, cartas de baralho, lenços coloridos.",
+                "cores": "Vermelho paixão, Dourado, Roxo, Verde esmeralda e Azul turquesa.",
+                "dia": "Sexta-feira",
+                "horario": "18:00 (Hora do encontro) ou Domingo pela manhã",
+                "signo": "Touro / Sagitário (Prosperidade, fartura, liberdade e oráculos)",
+                "badge": "Liberdade & Clarividência"
         },
         "pombagira menina": {
-            oferenda: "Licor doce, cidra de maçã, doces finos, rosas vermelhas pequenas, batom, fitas coloridas.",
-            cores: "Vermelho e rosa.",
-            dia: "Sexta-feira",
-            horario: "00:00",
-            signo: "Gêmeos / Câncer (Alegria espontânea, proteção afiada da juventude)",
-            badge: "Juventude & Foco"
+                "oferenda": "Licor doce, cidra de maçã, doces finos, rosas vermelhas pequenas, batom, fitas coloridas.",
+                "cores": "Rosa bebê, Branco puro, Lilás claro, Amarelo e Azul céu.",
+                "dia": "Domingo",
+                "horario": "10:00 (Manhã da renovação) ou 15:00",
+                "signo": "Gêmeos / Câncer / Oxum (Alegria espontânea, proteção afiada da juventude)",
+                "badge": "Juventude & Foco"
+        },
+        "menina": {
+                "oferenda": "Licor doce, cidra de maçã, doces finos, rosas vermelhas pequenas, batom, fitas coloridas.",
+                "cores": "Rosa bebê, Branco puro, Lilás claro, Amarelo e Azul céu.",
+                "dia": "Domingo",
+                "horario": "10:00 (Manhã da renovação) ou 15:00",
+                "signo": "Gêmeos / Câncer / Oxum (Alegria espontânea, proteção afiada da juventude)",
+                "badge": "Juventude & Foco"
         },
         "rosa caveira": {
-            oferenda: "Champanhe seco, cigarros finos, 7 rosas vermelhas, padê de dendê com mel, turmalina negra.",
-            cores: "Preto, amarelo e vermelho.",
-            dia: "Segunda-feira",
-            horario: "00:00 (Meia-noite na calunga)",
-            signo: "Escorpião / Capricórnio (Rigor cármico, lealdade e desintegração de ilusões)",
-            badge: "Lei & Rigor"
+                "oferenda": "Champanhe seco, cigarros finos, 7 rosas vermelhas, padê de dendê com mel, turmalina negra.",
+                "cores": "Roxo profundo, Preto, Cinza, Prata e Vermelho vinho.",
+                "dia": "Sábado",
+                "horario": "23:00 (Hora da calunga) ou 03:00 (Hora morta)",
+                "signo": "Escorpião / Capricórnio / Omolu (Rigor cármico, lealdade e encerramento de ciclos)",
+                "badge": "Lei & Rigor"
         },
         "sete saias": {
-            oferenda: "Champanhe, cigarros de menta, 7 rosas vermelhas abertas, frutas cítricas, fitas vermelhas e pretas.",
-            cores: "Sete cores ou vermelho e preto.",
-            dia: "Quarta-feira",
-            horario: "18:00",
-            signo: "Libra (Equilíbrio dos giros existenciais, atração e harmonia)",
-            badge: "Dinâmica dos Caminhos"
+                "oferenda": "Champanhe, cigarros de menta, 7 rosas vermelhas abertas, frutas cítricas, fitas coloridas de sete cores.",
+                "cores": "Sete cores do arco-íris, vermelho e preto.",
+                "dia": "Sexta-feira",
+                "horario": "19:00 (Noite de festa) ou Sábado à tarde",
+                "signo": "Libra / Oxum (Equilíbrio dos giros existenciais, atração e harmonia)",
+                "badge": "Dinâmica dos Caminhos"
         },
         "dama da noite": {
-            oferenda: "Licor de cacau ou anis, espumante rosé, rosas vermelhas escuras, perfume importado, velas aromáticas.",
-            cores: "Preto e dourado.",
-            dia: "Sexta-feira",
-            horario: "00:00",
-            signo: "Touro / Leão (Sedução mística, autoestima e segredos ocultos)",
-            badge: "Mistério Noturno"
+                "oferenda": "Licor de cacau ou anis, espumante rosé, rosas vermelhas escuras, perfume importado, velas aromáticas.",
+                "cores": "Preto aveludado, Prata, Violeta e Azul meia-noite.",
+                "dia": "Sexta-feira",
+                "horario": "00:00 (Meia-noite) ou 03:33 (Hora do mistério)",
+                "signo": "Touro / Leão / Iemanjá (Sedução mística, autoestima e segredos ocultos)",
+                "badge": "Mistério Noturno"
+        },
+        "pombagira da figueira": {
+                "oferenda": "Vinho tinto suave, figos frescos, mel, fumo de rolo, rosas vermelhas, sementes de figueira.",
+                "cores": "Verde musgo, Marrom terra, Roxo terroso, Dourado velho e Preto.",
+                "dia": "Terça-feira",
+                "horario": "21:00 (Hora da ancestralidade) ou Sábado às 06:00",
+                "signo": "Touro / Ossain (Enraizamento estável, ancestralidade vegetal e cura)",
+                "badge": "Ancestralidade Terrena"
         },
         "da figueira": {
-            oferenda: "Vinho tinto suave, figos frescos, mel, fumo de rolo, rosas vermelhas, sementes de figueira.",
-            cores: "Verde escuro, preto e vermelho.",
-            dia: "Quinta-feira",
-            horario: "18:00",
-            signo: "Touro (Enraizamento estável, ancestralidade vegetal e cura fitoterapêutica)",
-            badge: "Ancestralidade Terrena"
+                "oferenda": "Vinho tinto suave, figos frescos, mel, fumo de rolo, rosas vermelhas, sementes de figueira.",
+                "cores": "Verde musgo, Marrom terra, Roxo terroso, Dourado velho e Preto.",
+                "dia": "Terça-feira",
+                "horario": "21:00 (Hora da ancestralidade) ou Sábado às 06:00",
+                "signo": "Touro / Ossain (Enraizamento estável, ancestralidade vegetal e cura)",
+                "badge": "Ancestralidade Terrena"
+        },
+        "pombagira da praia": {
+                "oferenda": "Champanhe branco, rosas vermelhas lançadas ao mar, mel, frutas aquáticas, conchas do mar.",
+                "cores": "Azul marinho, Branco espuma, Prata, Verde água-marinha e Rosa.",
+                "dia": "Segunda-feira",
+                "horario": "06:00 (Nascer do sol no mar) ou 18:00 (Pôr do sol)",
+                "signo": "Câncer / Peixes / Iemanjá (Fluidez emocional, purificação nas águas)",
+                "badge": "Fluidez e Limpeza"
         },
         "da praia": {
-            oferenda: "Champanhe branco, rosas vermelhas lançadas ao mar, mel, frutas aquáticas, conchas do mar.",
-            cores: "Vermelho, azul e branco.",
-            dia: "Sábado",
-            horario: "06:00 ou 18:00",
-            signo: "Câncer / Peixes (Fluidez emocional, purificação nas águas, intuição)",
-            badge: "Fluidez e Limpeza"
+                "oferenda": "Champanhe branco, rosas vermelhas lançadas ao mar, mel, frutas aquáticas, conchas do mar.",
+                "cores": "Azul marinho, Branco espuma, Prata, Verde água-marinha e Rosa.",
+                "dia": "Segunda-feira",
+                "horario": "06:00 (Nascer do sol no mar) ou 18:00 (Pôr do sol)",
+                "signo": "Câncer / Peixes / Iemanjá (Fluidez emocional, purificação nas águas)",
+                "badge": "Fluidez e Limpeza"
+        },
+        "pombagira da lua": {
+                "oferenda": "Espumante brut, rosas vermelhas, uvas brancas, essência de alfazema, prata, incenso de mirra.",
+                "cores": "Prata luzente, Branco lunar, Roxo violeta, Azul celeste e Cinza.",
+                "dia": "Segunda-feira",
+                "horario": "00:00 (Sob o luar pleno)",
+                "signo": "Câncer / Lua (Subconsciente profundo, visões noturnas e magnetismo)",
+                "badge": "Magnetismo Celeste"
         },
         "da lua": {
-            oferenda: "Espumante brut, rosas vermelhas, uvas brancas, essência de alfazema, prata, incenso de mirra.",
-            cores: "Prateado, preto e azul escuro.",
-            dia: "Segunda-feira",
-            horario: "00:00 (Sob o luar)",
-            signo: "Câncer (Subconsciente profundo, visões noturnas e magnetismo etérico)",
-            badge: "Magnetismo Celeste"
+                "oferenda": "Espumante brut, rosas vermelhas, uvas brancas, essência de alfazema, prata, incenso de mirra.",
+                "cores": "Prata luzente, Branco lunar, Roxo violeta, Azul celeste e Cinza.",
+                "dia": "Segunda-feira",
+                "horario": "00:00 (Sob o luar pleno)",
+                "signo": "Câncer / Lua (Subconsciente profundo, visões noturnas e magnetismo)",
+                "badge": "Magnetismo Celeste"
+        },
+        "pombagira da serra": {
+                "oferenda": "Vinho seco, fumo de corda, mel, rosas vermelhas com espinhos grandes, minerais rochosos.",
+                "cores": "Verde montanha, Cinza rocha, Marrom pedra, Azul céu e Branco nuvem.",
+                "dia": "Domingo",
+                "horario": "06:00 (Nascer do sol na serra) ou Quinta-feira às 15:00",
+                "signo": "Sagitário / Capricórnio / Oxóssi (Superação de limites, visão panorâmica)",
+                "badge": "Elevação & Foco"
         },
         "da serra": {
-            oferenda: "Vinho seco, fumo de corda, mel, rosas vermelhas com espinhos grandes, minerais rochosos.",
-            cores: "Marrom, preto e vermelho.",
-            dia: "Terça-feira",
-            horario: "12:00",
-            signo: "Sagitário / Capricórnio (Superação de limites, elevação de consciência)",
-            badge: "Elevação & Foco"
+                "oferenda": "Vinho seco, fumo de corda, mel, rosas vermelhas com espinhos grandes, minerais rochosos.",
+                "cores": "Verde montanha, Cinza rocha, Marrom pedra, Azul céu e Branco nuvem.",
+                "dia": "Domingo",
+                "horario": "06:00 (Nascer do sol na serra) ou Quinta-feira às 15:00",
+                "signo": "Sagitário / Capricórnio / Oxóssi (Superação de limites, visão panorâmica)",
+                "badge": "Elevação & Foco"
+        },
+        "pombagira da sombra": {
+                "oferenda": "Champanhe, cigarros de cravo, rosas vermelhas escuras, carvão vegetal, incenso de arruda.",
+                "cores": "Preto opaco, Cinza sombra, Roxo escurecido e Marrom noturno.",
+                "dia": "Sábado",
+                "horario": "00:00 ou 04:00 (Hora da invisibilidade)",
+                "signo": "Escorpião / Oxóssi (Integração das sombras da mente e proteção discreta)",
+                "badge": "Autoconhecimento"
         },
         "da sombra": {
-            oferenda: "Champanhe, cigarros de cravo, rosas vermelhas escuras, carvão vegetal, incenso de arruda.",
-            cores: "Preto absoluto e roxo escuro.",
-            dia: "Segunda-feira",
-            horario: "00:00",
-            signo: "Escorpião (Integração das sombras da mente e cura de medos reprimidos)",
-            badge: "Autoconhecimento"
+                "oferenda": "Champanhe, cigarros de cravo, rosas vermelhas escuras, carvão vegetal, incenso de arruda.",
+                "cores": "Preto opaco, Cinza sombra, Roxo escurecido e Marrom noturno.",
+                "dia": "Sábado",
+                "horario": "00:00 ou 04:00 (Hora da invisibilidade)",
+                "signo": "Escorpião / Oxóssi (Integração das sombras da mente e proteção discreta)",
+                "badge": "Autoconhecimento"
         },
         "das águas profundas": {
-            oferenda: "Champanhe branco, rosas vermelhas, perfume doce, conchas grandes, cristais de quartzo azul.",
-            cores: "Azul marinho, preto e prata.",
-            dia: "Sábado",
-            horario: "00:00",
-            signo: "Peixes / Escorpião (Cura de mágoas profundas, desvendamento emocional)",
-            badge: "Subconsciente"
+                "oferenda": "Champanhe branco, rosas vermelhas, perfume doce, conchas grandes, cristais de quartzo azul.",
+                "cores": "Azul profundo, Verde abismo, Preto marinho, Roxo submerso e Prata.",
+                "dia": "Segunda-feira",
+                "horario": "23:00 ou 00:00 (Maré alta e profunda)",
+                "signo": "Peixes / Escorpião / Iemanjá (Cura de mágoas profundas e inconsciente)",
+                "badge": "Subconsciente"
+        },
+        "pombagira das águas profundas": {
+                "oferenda": "Champanhe branco, rosas vermelhas, perfume doce, conchas grandes, cristais de quartzo azul.",
+                "cores": "Azul profundo, Verde abismo, Preto marinho, Roxo submerso e Prata.",
+                "dia": "Segunda-feira",
+                "horario": "23:00 ou 00:00 (Maré alta e profunda)",
+                "signo": "Peixes / Escorpião / Iemanjá (Cura de mágoas profundas e inconsciente)",
+                "badge": "Subconsciente"
+        },
+        "águas profundas": {
+                "oferenda": "Champanhe branco, rosas vermelhas, perfume doce, conchas grandes, cristais de quartzo azul.",
+                "cores": "Azul profundo, Verde abismo, Preto marinho, Roxo submerso e Prata.",
+                "dia": "Segunda-feira",
+                "horario": "23:00 ou 00:00 (Maré alta e profunda)",
+                "signo": "Peixes / Escorpião / Iemanjá (Cura de mágoas profundas e inconsciente)",
+                "badge": "Subconsciente"
         },
         "das almas": {
-            oferenda: "Vinho licoroso, rosas brancas e vermelhas, velas brancas, padê de mel, água de flor de laranjeira.",
-            cores: "Preto, branco e vermelho.",
-            dia: "Segunda-feira",
-            horario: "18:00 ou 00:00",
-            signo: "Capricórnio / Peixes (Passagem astral, conforto de almas e evolução cósmica)",
-            badge: "Consolo & Passagem"
+                "oferenda": "Vinho licoroso, rosas brancas e vermelhas, velas brancas e pretas, padê de mel, água de flor de laranjeira.",
+                "cores": "Branco fosco, Preto veludo, Cinza névoa, Prata lunar e Roxo claro.",
+                "dia": "Sábado",
+                "horario": "00:00 ou Domingo às 04:00 (Hora das almas)",
+                "signo": "Capricórnio / Peixes / Omolu (Passagem astral e consolo espiritual)",
+                "badge": "Consolo & Passagem"
+        },
+        "pombagira das almas": {
+                "oferenda": "Vinho licoroso, rosas brancas e vermelhas, velas brancas e pretas, padê de mel, água de flor de laranjeira.",
+                "cores": "Branco fosco, Preto veludo, Cinza névoa, Prata lunar e Roxo claro.",
+                "dia": "Sábado",
+                "horario": "00:00 ou Domingo às 04:00 (Hora das almas)",
+                "signo": "Capricórnio / Peixes / Omolu (Passagem astral e consolo espiritual)",
+                "badge": "Consolo & Passagem"
+        },
+        "almas": {
+                "oferenda": "Vinho licoroso, rosas brancas e vermelhas, velas brancas e pretas, padê de mel, água de flor de laranjeira.",
+                "cores": "Branco fosco, Preto veludo, Cinza névoa, Prata lunar e Roxo claro.",
+                "dia": "Sábado",
+                "horario": "00:00 ou Domingo às 04:00 (Hora das almas)",
+                "signo": "Capricórnio / Peixes / Omolu (Passagem astral e consolo espiritual)",
+                "badge": "Consolo & Passagem"
         },
         "das trevas": {
-            oferenda: "Cachaça forte, charutos, rosas vermelhas escuras, padê de enxofre e carvão, punhal de aço.",
-            cores: "Preto azeviche e roxo escuro.",
-            dia: "Segunda-feira",
-            horario: "00:00 (Limpeza profunda)",
-            signo: "Escorpião / Áries (Neutralização de obsessões severas, desatar nós espirituais)",
-            badge: "Quebra de Amarras"
+                "oferenda": "Cachaça forte, charutos, rosas vermelhas escuras, padê de carvão, punhal de aço.",
+                "cores": "Preto absoluto, Roxo escuro, Azul meia-noite e Vermelho sangue velho.",
+                "dia": "Sábado",
+                "horario": "03:33 (Hora morta profunda) ou 00:00 de Lua Nova",
+                "signo": "Escorpião / Omolu (Neutralização de demandas severas e proteção)",
+                "badge": "Quebra de Amarras"
+        },
+        "pombagira das trevas": {
+                "oferenda": "Cachaça forte, charutos, rosas vermelhas escuras, padê de carvão, punhal de aço.",
+                "cores": "Preto absoluto, Roxo escuro, Azul meia-noite e Vermelho sangue velho.",
+                "dia": "Sábado",
+                "horario": "03:33 (Hora morta profunda) ou 00:00 de Lua Nova",
+                "signo": "Escorpião / Omolu (Neutralização de demandas severas e proteção)",
+                "badge": "Quebra de Amarras"
+        },
+        "trevas": {
+                "oferenda": "Cachaça forte, charutos, rosas vermelhas escuras, padê de carvão, punhal de aço.",
+                "cores": "Preto absoluto, Roxo escuro, Azul meia-noite e Vermelho sangue velho.",
+                "dia": "Sábado",
+                "horario": "03:33 (Hora morta profunda) ou 00:00 de Lua Nova",
+                "signo": "Escorpião / Omolu (Neutralização de demandas severas e proteção)",
+                "badge": "Quebra de Amarras"
         },
         "do fogo": {
-            oferenda: "Licor de gengibre, cigarros finos, rosas vermelhas abertas, padê de pimenta e dendê, velas vermelhas de alta chama.",
-            cores: "Vermelho escarlate e amarelo fogo.",
-            dia: "Terça-feira",
-            horario: "12:00 ou 00:00",
-            signo: "Áries / Leão (Impulso vital, destruição de miasmas por purificação)",
-            badge: "Energia Primordial"
+                "oferenda": "Licor de gengibre, cigarros finos, rosas vermelhas abertas, padê de pimenta e dendê, velas vermelhas de alta chama.",
+                "cores": "Vermelho fogo, Laranja brasa, Amarelo chama e Dourado faísca.",
+                "dia": "Sexta-feira",
+                "horario": "21:00 (Hora do fogo) ou Terça-feira ao meio-dia",
+                "signo": "Áries / Leão / Iansã (Impulso vital, destruição de miasmas por purificação)",
+                "badge": "Energia Primordial"
+        },
+        "pombagira do fogo": {
+                "oferenda": "Licor de gengibre, cigarros finos, rosas vermelhas abertas, padê de pimenta e dendê, velas vermelhas de alta chama.",
+                "cores": "Vermelho fogo, Laranja brasa, Amarelo chama e Dourado faísca.",
+                "dia": "Sexta-feira",
+                "horario": "21:00 (Hora do fogo) ou Terça-feira ao meio-dia",
+                "signo": "Áries / Leão / Iansã (Impulso vital, destruição de miasmas por purificação)",
+                "badge": "Energia Primordial"
+        },
+        "fogo": {
+                "oferenda": "Licor de gengibre, cigarros finos, rosas vermelhas abertas, padê de pimenta e dendê, velas vermelhas de alta chama.",
+                "cores": "Vermelho fogo, Laranja brasa, Amarelo chama e Dourado faísca.",
+                "dia": "Sexta-feira",
+                "horario": "21:00 (Hora do fogo) ou Terça-feira ao meio-dia",
+                "signo": "Áries / Leão / Iansã (Impulso vital, destruição de miasmas por purificação)",
+                "badge": "Energia Primordial"
         },
         "sete encruzilhadas": {
-            oferenda: "Champanhe, cigarros de menta, 7 rosas vermelhas abertas, padê de mel e dendê, moedas douradas.",
-            cores: "Vermelho, preto e dourado.",
-            dia: "Quarta-feira",
-            horario: "00:00",
-            signo: "Gêmeos / Libra (Decisões cruciais, equilíbrio e abertura de novos rumos)",
-            badge: "Senhora da Escolha"
+                "oferenda": "Champanhe, cigarros de menta, 7 rosas vermelhas abertas, padê de mel e dendê, moedas douradas.",
+                "cores": "Amarelo ouro, Branco, Preto, Cinza prata, Vermelho escarlate e Verde.",
+                "dia": "Sexta-feira",
+                "horario": "19:00 ou Quarta-feira à meia-noite (Hora das decisões)",
+                "signo": "Gêmeos / Libra / Exu (Decisões cruciais e múltiplos caminhos)",
+                "badge": "Senhora da Escolha"
         },
         "da fenda": {
-            oferenda: "Vinho tinto seco, fumo de corda, mel de flores, rosas vermelhas, cristais brutos de ametista.",
-            cores: "Cinza, preto e vermelho.",
-            dia: "Quinta-feira",
-            horario: "18:00",
-            signo: "Virgem / Touro (Sustentação mineral estável, segurança material)",
-            badge: "Portais Minerais"
+                "oferenda": "Vinho tinto seco, fumo de corda, mel de flores, rosas vermelhas, cristais brutos de ametista.",
+                "cores": "Marrom fenda, Preto brecha, Roxo portal, Cinza poeira e Verde musgo.",
+                "dia": "Quarta-feira",
+                "horario": "03:00 (Hora das fendas) ou Domingo à meia-noite",
+                "signo": "Virgem / Touro / Exu (Portais minerais e transições ocultas)",
+                "badge": "Portais Minerais"
+        },
+        "pombagira da fenda": {
+                "oferenda": "Vinho tinto seco, fumo de corda, mel de flores, rosas vermelhas, cristais brutos de ametista.",
+                "cores": "Marrom fenda, Preto brecha, Roxo portal, Cinza poeira e Verde musgo.",
+                "dia": "Quarta-feira",
+                "horario": "03:00 (Hora das fendas) ou Domingo à meia-noite",
+                "signo": "Virgem / Touro / Exu (Portais minerais e transições ocultas)",
+                "badge": "Portais Minerais"
+        },
+        "fenda": {
+                "oferenda": "Vinho tinto seco, fumo de corda, mel de flores, rosas vermelhas, cristais brutos de ametista.",
+                "cores": "Marrom fenda, Preto brecha, Roxo portal, Cinza poeira e Verde musgo.",
+                "dia": "Quarta-feira",
+                "horario": "03:00 (Hora das fendas) ou Domingo à meia-noite",
+                "signo": "Virgem / Touro / Exu (Portais minerais e transições ocultas)",
+                "badge": "Portais Minerais"
         },
         "da calunga profunda": {
-            oferenda: "Vinho de uva doce, cigarros, rosas escuras sem pétalas, padê de mel e pó de ferro, turmalina negra.",
-            cores: "Preto e roxo.",
-            dia: "Segunda-feira",
-            horario: "00:00",
-            signo: "Escorpião (Silêncio curativo, encerramento de ciclos negativos e eternidade)",
-            badge: "Eternidade & Silêncio"
+                "oferenda": "Vinho de uva doce, cigarros, rosas escuras sem pétalas, padê de mel e pó de ferro, turmalina negra.",
+                "cores": "Preto absoluto, Roxo túmulo, Cinza cinzas, Branco osso e Vermelho ancestral.",
+                "dia": "Sábado",
+                "horario": "03:33 ou Sexta-feira à meia-noite profunda",
+                "signo": "Escorpião / Omolu (Silêncio curativo, ancestralidade e encerramento kármico)",
+                "badge": "Eternidade & Silêncio"
+        },
+        "pombagira da calunga profunda": {
+                "oferenda": "Vinho de uva doce, cigarros, rosas escuras sem pétalas, padê de mel e pó de ferro, turmalina negra.",
+                "cores": "Preto absoluto, Roxo túmulo, Cinza cinzas, Branco osso e Vermelho ancestral.",
+                "dia": "Sábado",
+                "horario": "03:33 ou Sexta-feira à meia-noite profunda",
+                "signo": "Escorpião / Omolu (Silêncio curativo, ancestralidade e encerramento kármico)",
+                "badge": "Eternidade & Silêncio"
+        },
+        "calunga profunda": {
+                "oferenda": "Vinho de uva doce, cigarros, rosas escuras sem pétalas, padê de mel e pó de ferro, turmalina negra.",
+                "cores": "Preto absoluto, Roxo túmulo, Cinza cinzas, Branco osso e Vermelho ancestral.",
+                "dia": "Sábado",
+                "horario": "03:33 ou Sexta-feira à meia-noite profunda",
+                "signo": "Escorpião / Omolu (Silêncio curativo, ancestralidade e encerramento kármico)",
+                "badge": "Eternidade & Silêncio"
         },
         "da neblina": {
-            oferenda: "Espumante branco, cigarros de cravo, rosas vermelhas, incenso de alfazema, pó de sumiço.",
-            cores: "Cinza neblina, branco e vermelho.",
-            dia: "Segunda-feira",
-            horario: "03:00 (Hora mística)",
-            signo: "Peixes / Gêmeos (Camuflagem protetora contra males invisíveis)",
-            badge: "Ocultamento"
+                "oferenda": "Espumante branco, cigarros de cravo, rosas vermelhas, incenso de alfazema, pó de sumiço.",
+                "cores": "Cinza névoa, Branco neblina, Prata difuso, Roxo nublado e Azul cinza.",
+                "dia": "Quarta-feira",
+                "horario": "05:00 (Neblina matinal) ou 18:00 (Neblina noturna)",
+                "signo": "Peixes / Gêmeos / Iansã (Camuflagem protetora e clareza mental)",
+                "badge": "Ocultamento"
+        },
+        "pombagira da neblina": {
+                "oferenda": "Espumante branco, cigarros de cravo, rosas vermelhas, incenso de alfazema, pó de sumiço.",
+                "cores": "Cinza névoa, Branco neblina, Prata difuso, Roxo nublado e Azul cinza.",
+                "dia": "Quarta-feira",
+                "horario": "05:00 (Neblina matinal) ou 18:00 (Neblina noturna)",
+                "signo": "Peixes / Gêmeos / Iansã (Camuflagem protetora e clareza mental)",
+                "badge": "Ocultamento"
+        },
+        "neblina": {
+                "oferenda": "Espumante branco, cigarros de cravo, rosas vermelhas, incenso de alfazema, pó de sumiço.",
+                "cores": "Cinza névoa, Branco neblina, Prata difuso, Roxo nublado e Azul cinza.",
+                "dia": "Quarta-feira",
+                "horario": "05:00 (Neblina matinal) ou 18:00 (Neblina noturna)",
+                "signo": "Peixes / Gêmeos / Iansã (Camuflagem protetora e clareza mental)",
+                "badge": "Ocultamento"
         },
         "das correntes": {
-            oferenda: "Champanhe seco, cigarros finos, 7 rosas vermelhas, mel de abelha, ferro forjado antigo.",
-            cores: "Vermelho, preto e cinza metálico.",
-            dia: "Quarta-feira",
-            horario: "18:00",
-            signo: "Aquário / Áries (Libertação kármica, autonomia pessoal e quebra de pactos)",
-            badge: "Libertação"
+                "oferenda": "Champanhe seco, cigarros finos, 7 rosas vermelhas, mel de abelha, ferro forjado antigo.",
+                "cores": "Cinza ferro, Preto corrente, Prata corte, Vermelho quebra e Azul liberdade.",
+                "dia": "Quinta-feira",
+                "horario": "15:00 (Hora da justiça libertadora) ou Sábado às 06:00",
+                "signo": "Aquário / Áries / Ogum (Libertação kármica e quebra de amarras)",
+                "badge": "Libertação"
+        },
+        "pombagira das correntes": {
+                "oferenda": "Champanhe seco, cigarros finos, 7 rosas vermelhas, mel de abelha, ferro forjado antigo.",
+                "cores": "Cinza ferro, Preto corrente, Prata corte, Vermelho quebra e Azul liberdade.",
+                "dia": "Quinta-feira",
+                "horario": "15:00 (Hora da justiça libertadora) ou Sábado às 06:00",
+                "signo": "Aquário / Áries / Ogum (Libertação kármica e quebra de amarras)",
+                "badge": "Libertação"
+        },
+        "correntes": {
+                "oferenda": "Champanhe seco, cigarros finos, 7 rosas vermelhas, mel de abelha, ferro forjado antigo.",
+                "cores": "Cinza ferro, Preto corrente, Prata corte, Vermelho quebra e Azul liberdade.",
+                "dia": "Quinta-feira",
+                "horario": "15:00 (Hora da justiça libertadora) ou Sábado às 06:00",
+                "signo": "Aquário / Áries / Ogum (Libertação kármica e quebra de amarras)",
+                "badge": "Libertação"
+        },
+        "da estrada": {
+                "oferenda": "Cerveja clara, cigarros finos, rosas vermelhas, padê de mel, moedas correntes.",
+                "cores": "Marrom estrada, Cinza asfalto, Amarelo linha, Vermelho distância e Verde.",
+                "dia": "Domingo ou Sexta-feira",
+                "horario": "18:00 (Retorno de viagem) ou 21:00 (Saída para a estrada)",
+                "signo": "Gêmeos / Mercúrio / Exu (Proteção em trânsito e abertura de caminhos)",
+                "badge": "Guardiã dos Viajantes"
+        },
+        "pombagira da estrada": {
+                "oferenda": "Cerveja clara, cigarros finos, rosas vermelhas, padê de mel, moedas correntes.",
+                "cores": "Marrom estrada, Cinza asfalto, Amarelo linha, Vermelho distância e Verde.",
+                "dia": "Domingo ou Sexta-feira",
+                "horario": "18:00 (Retorno de viagem) ou 21:00 (Saída para a estrada)",
+                "signo": "Gêmeos / Mercúrio / Exu (Proteção em trânsito e abertura de caminhos)",
+                "badge": "Guardiã dos Viajantes"
+        },
+        "estrada": {
+                "oferenda": "Cerveja clara, cigarros finos, rosas vermelhas, padê de mel, moedas correntes.",
+                "cores": "Marrom estrada, Cinza asfalto, Amarelo linha, Vermelho distância e Verde.",
+                "dia": "Domingo ou Sexta-feira",
+                "horario": "18:00 (Retorno de viagem) ou 21:00 (Saída para a estrada)",
+                "signo": "Gêmeos / Mercúrio / Exu (Proteção em trânsito e abertura de caminhos)",
+                "badge": "Guardiã dos Viajantes"
+        },
+        "do vento": {
+                "oferenda": "Velas brancas ou azuis claras de queima rápida, flores brancas, perfume suave, incenso de alfazema.",
+                "cores": "Branco vento, Azul céu, Cinza nuvem, Prata ar e Amarelo leve.",
+                "dia": "Domingo ou Terça-feira",
+                "horario": "15:00 (Vento da tarde) ou ao nascer do sol",
+                "signo": "Aquário / Mercúrio / Iansã (Comunicação instantânea e leveza)",
+                "badge": "Leveza e Mensagens"
+        },
+        "pombagira do vento": {
+                "oferenda": "Velas brancas ou azuis claras de queima rápida, flores brancas, perfume suave, incenso de alfazema.",
+                "cores": "Branco vento, Azul céu, Cinza nuvem, Prata ar e Amarelo leve.",
+                "dia": "Domingo ou Terça-feira",
+                "horario": "15:00 (Vento da tarde) ou ao nascer do sol",
+                "signo": "Aquário / Mercúrio / Iansã (Comunicação instantânea e leveza)",
+                "badge": "Leveza e Mensagens"
+        },
+        "vento": {
+                "oferenda": "Velas brancas ou azuis claras de queima rápida, flores brancas, perfume suave, incenso de alfazema.",
+                "cores": "Branco vento, Azul céu, Cinza nuvem, Prata ar e Amarelo leve.",
+                "dia": "Domingo ou Terça-feira",
+                "horario": "15:00 (Vento da tarde) ou ao nascer do sol",
+                "signo": "Aquário / Mercúrio / Iansã (Comunicação instantânea e leveza)",
+                "badge": "Leveza e Mensagens"
+        },
+        "cacurucaia – senhora do cruzeiro": {
+                "oferenda": "Vinho tinto seco, rosas escuras no cruzeiro, velas pretas e roxas firmadas no chão, padê de carvão e mel.",
+                "cores": "Preto fosco, Vermelho escuro, Bordô, Roxo profundo e Marrom-terra.",
+                "dia": "Segunda-feira ou Sábado de Calunga",
+                "horario": "00:00 às 03:00 (Madrugada do Cruzeiro)",
+                "signo": "Capricórnio / Saturno / Omolu (Estabilização de almas e corte de laços doentios)",
+                "badge": "Senhora do Cruzeiro"
+        },
+        "cacurucaia": {
+                "oferenda": "Vinho tinto seco, rosas escuras no cruzeiro, velas pretas e roxas firmadas no chão, padê de carvão e mel.",
+                "cores": "Preto fosco, Vermelho escuro, Bordô, Roxo profundo e Marrom-terra.",
+                "dia": "Segunda-feira ou Sábado de Calunga",
+                "horario": "00:00 às 03:00 (Madrugada do Cruzeiro)",
+                "signo": "Capricórnio / Saturno / Omolu (Estabilização de almas e corte de laços doentios)",
+                "badge": "Senhora do Cruzeiro"
+        },
+        "cacurucaia - senhora do cruzeiro": {
+                "oferenda": "Vinho tinto seco, rosas escuras no cruzeiro, velas pretas e roxas firmadas no chão, padê de carvão e mel.",
+                "cores": "Preto fosco, Vermelho escuro, Bordô, Roxo profundo e Marrom-terra.",
+                "dia": "Segunda-feira ou Sábado de Calunga",
+                "horario": "00:00 às 03:00 (Madrugada do Cruzeiro)",
+                "signo": "Capricórnio / Saturno / Omolu (Estabilização de almas e corte de laços doentios)",
+                "badge": "Senhora do Cruzeiro"
+        },
+        "pombagira cacurucaia": {
+                "oferenda": "Vinho tinto seco, rosas escuras no cruzeiro, velas pretas e roxas firmadas no chão, padê de carvão e mel.",
+                "cores": "Preto fosco, Vermelho escuro, Bordô, Roxo profundo e Marrom-terra.",
+                "dia": "Segunda-feira ou Sábado de Calunga",
+                "horario": "00:00 às 03:00 (Madrugada do Cruzeiro)",
+                "signo": "Capricórnio / Saturno / Omolu (Estabilização de almas e corte de laços doentios)",
+                "badge": "Senhora do Cruzeiro"
+        },
+        "calunga": {
+                "oferenda": "Vinho de uva doce, cigarros, rosas escuras sem pétalas, padê de mel e pó de ferro, turmalina negra.",
+                "cores": "Preto absoluto, Roxo túmulo, Cinza cinzas, Branco osso e Vermelho ancestral.",
+                "dia": "Sábado",
+                "horario": "03:33 ou Sexta-feira à meia-noite profunda",
+                "signo": "Escorpião / Omolu (Silêncio curativo, ancestralidade e encerramento kármico)",
+                "badge": "Eternidade & Silêncio"
         }
-    };
+};
 
     /* ==========================================
        6. DYNAMIC CARDS DETAIL DRAWERS MODAL
@@ -689,7 +961,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Click handler for pombagira cards
     pombagiraCards.forEach(card => {
-        card.addEventListener('click', () => {
+        card.addEventListener('click', (e) => {
+            // Se o usuário clicou no botão "Ver Fundamentos", deixa a navegação nativa do link ocorrer
+            if (e.target.closest('.card-action-btn')) {
+                return;
+            }
+
             const rawTitle = card.querySelector('.card-title').textContent.trim();
             const normalizedKey = rawTitle.toLowerCase();
             const cardImgSrc = card.querySelector('.card-img').src;
@@ -717,11 +994,65 @@ document.addEventListener('DOMContentLoaded', () => {
             modalHorario.textContent = details.horario;
             modalSigno.textContent = details.signo;
  
-            // Handle link to dedicated page (all 24 entities now have gorgeous dedicated pages!)
+            // Handle link to dedicated page (all 27 entities have dedicated root URLs)
             const modalArticleLink = document.getElementById('modalArticleLink');
             if (modalArticleLink) {
-                const pageName = normalizedKey.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-');
-                modalArticleLink.href = `${pageName}.html`;
+                const slugMap = {
+                    "maria padilha": "maria-padilha",
+                    "maria mulambo": "maria-mulambo",
+                    "maria navalha": "maria-navalha",
+                    "maria quiteria": "maria-quiteria",
+                    "maria farrapo": "maria-farrapo",
+                    "pombagira cigana": "cigana",
+                    "cigana": "cigana",
+                    "pombagira menina": "menina",
+                    "menina": "menina",
+                    "rosa caveira": "rosa-caveira",
+                    "pombagira sete saias": "sete-saias",
+                    "sete saias": "sete-saias",
+                    "pombagira da praia": "praia",
+                    "da praia": "praia",
+                    "praia": "praia",
+                    "dama da noite": "dama-da-noite",
+                    "pombagira da figueira": "figueira",
+                    "figueira": "figueira",
+                    "pombagira das almas": "das-almas",
+                    "das almas": "das-almas",
+                    "pombagira sete encruzilhadas": "sete-encruzilhadas",
+                    "sete encruzilhadas": "sete-encruzilhadas",
+                    "pombagira da lua": "da-lua",
+                    "da lua": "da-lua",
+                    "pombagira das trevas": "das-trevas",
+                    "das trevas": "das-trevas",
+                    "pombagira da serra": "da-serra",
+                    "da serra": "da-serra",
+                    "pombagira do fogo": "do-fogo",
+                    "do fogo": "do-fogo",
+                    "pombagira das aguas profundas": "aguas-profundas",
+                    "das aguas profundas": "aguas-profundas",
+                    "pombagira da sombra": "da-sombra",
+                    "da sombra": "da-sombra",
+                    "pombagira da fenda": "da-fenda",
+                    "da fenda": "da-fenda",
+                    "pombagira da calunga profunda": "calunga",
+                    "calunga": "calunga",
+                    "pombagira das correntes": "correntes",
+                    "das correntes": "correntes",
+                    "correntes": "correntes",
+                    "pombagira da neblina": "da-neblina",
+                    "da neblina": "da-neblina",
+                    "pombagira da estrada": "estrada",
+                    "da estrada": "estrada",
+                    "estrada": "estrada",
+                    "pombagira do vento": "vento",
+                    "do vento": "vento",
+                    "vento": "vento",
+                    "pombagira cacurucaia": "cacurucaia",
+                    "cacurucaia": "cacurucaia"
+                };
+                const norm = normalizedKey.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim().toLowerCase();
+                const slug = slugMap[norm] || norm.replace(/\s+/g, '-');
+                modalArticleLink.href = `/${slug}/`;
                 modalArticleLink.style.display = 'block';
             }
  
