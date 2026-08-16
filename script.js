@@ -656,18 +656,7 @@ document.querySelectorAll('.faq-question').forEach(q => {
     });
 });
 
-// Inicializa Escutador Dinâmico para os Cards do Grid
-document.querySelectorAll('#pombagiras .card').forEach(card => {
-    card.style.cursor = 'pointer';
-    card.addEventListener('click', () => {
-        const titleElement = card.querySelector('h4');
-        if (titleElement) {
-            // Limpa o nome extraído ignorando qualquer tag html interna (como ícones de FontAwesome)
-            const rawName = titleElement.textContent.trim();
-            openModal(rawName);
-        }
-    });
-});
+// Navegação exclusiva via botão Ver Fundamentos nos cards
 
 function normalizeFileName(name) {
     return name
