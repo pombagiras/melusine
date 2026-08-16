@@ -661,7 +661,7 @@ p {
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     display: flex;
     flex-direction: column;
-    cursor: pointer;
+    cursor: default;
     position: relative;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
 }
