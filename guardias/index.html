@@ -3454,7 +3454,8 @@
             const trigger = item.querySelector('.faq-trigger');
             const content = item.querySelector('.faq-content');
             if (!trigger || !content) return;
-            trigger.addEventListener('click', () => {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
                 const isActive = item.classList.contains('active');
                 faqItems.forEach(otherItem => {
                     const otherTrigger = otherItem.querySelector('.faq-trigger');
@@ -3467,7 +3468,8 @@
                 if (!isActive) {
                     item.classList.add('active');
                     trigger.setAttribute('aria-expanded', 'true');
-                    content.style.maxHeight = `${content.scrollHeight}px`;
+                    const measuredHeight = content.scrollHeight;
+                    content.style.maxHeight = (measuredHeight > 0 ? (measuredHeight + 40) : 600) + 'px';
                 }
             });
         });

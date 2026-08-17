@@ -850,8 +850,12 @@ p {
 .faq-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.3s ease;
     padding: 0 2rem;
+}
+
+.faq-item.active .faq-content {
+    max-height: 800px;
 }
 
 .faq-content p {

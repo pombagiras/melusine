@@ -990,7 +990,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Skip banner cards (e.g. Bahuchara Mata, Natureza Humana) that use .faq-item but lack accordion elements
         if (!trigger || !content) return;
 
-        trigger.addEventListener('click', () => {
+        trigger.addEventListener('click', (e) => {
+            e.preventDefault();
             const isActive = item.classList.contains('active');
 
             faqItems.forEach(otherItem => {
@@ -1005,7 +1006,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!isActive) {
                 item.classList.add('active');
                 trigger.setAttribute('aria-expanded', 'true');
-                content.style.maxHeight = `${content.scrollHeight}px`;
+                const measuredHeight = content.scrollHeight;
+                content.style.maxHeight = (measuredHeight > 0 ? (measuredHeight + 40) : 600) + 'px';
             }
         });
     });
