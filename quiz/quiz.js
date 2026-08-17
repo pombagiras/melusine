@@ -8,7 +8,7 @@
       id: 0,
       nome: 'Maria Padilha',
       epiteto: 'A Rainha das Encruzilhadas',
-      img: 'https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_maria_padilha.png',
+      img: 'https://cdn.pombagiras.com/fotos/pombagira_maria_padilha.png',
       desc: 'Comanda com luxo, magnetismo e uma vontade que não pede licença. Onde ela pisa, o poder muda de mãos.',
       tags: ['Poder', 'Sedução', 'Comando']
     },
@@ -16,7 +16,7 @@
       id: 1,
       nome: 'Maria Mulambo',
       epiteto: 'A Guardiã dos Esquecidos',
-      img: 'https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_maria_mulambo.png',
+      img: 'https://cdn.pombagiras.com/fotos/pombagira_maria_mulambo.png',
       desc: 'Veste o que sobrou e protege quem o mundo descartou. Sua força mora na lealdade silenciosa.',
       tags: ['Proteção', 'Lealdade', 'Raiz']
     },
@@ -24,7 +24,7 @@
       id: 2,
       nome: 'Maria Quitéria',
       epiteto: 'A Guerreira da Justiça',
-      img: 'https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_maria_quiteria.png',
+      img: 'https://cdn.pombagiras.com/fotos/pombagira_maria_quiteria.png',
       desc: 'Não foge da briga quando a causa é justa. Coragem é o idioma que ela fala melhor.',
       tags: ['Coragem', 'Justiça', 'Fogo']
     },
@@ -32,7 +32,7 @@
       id: 3,
       nome: 'Rosa Caveira',
       epiteto: 'A Senhora dos Mistérios',
-      img: 'https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_rosa_caveira.png',
+      img: 'https://cdn.pombagiras.com/fotos/pombagira_rosa_caveira.png',
       desc: 'Caminha entre a vida e a morte sem medo de nenhuma das duas. Transforma o que toca.',
       tags: ['Mistério', 'Transformação', 'Profundeza']
     },
@@ -40,7 +40,7 @@
       id: 4,
       nome: 'Dama da Noite',
       epiteto: 'A Sedutora das Sombras',
-      img: 'https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_dama_da_noite.png',
+      img: 'https://cdn.pombagiras.com/fotos/pombagira_dama_da_noite.png',
       desc: 'Espera a escuridão para agir, porque é nela que enxerga com mais clareza.',
       tags: ['Mistério', 'Estratégia', 'Sedução']
     },
@@ -48,7 +48,7 @@
       id: 5,
       nome: 'Sete Saias',
       epiteto: 'A Dona dos Sete Véus',
-      img: 'https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_sete_saias.png',
+      img: 'https://cdn.pombagiras.com/fotos/pombagira_sete_saias.png',
       desc: 'Cada camada esconde uma verdade diferente. Quem acha que a conhece, só viu a primeira saia.',
       tags: ['Camadas', 'Enigma', 'Versatilidade']
     },
@@ -56,7 +56,7 @@
       id: 6,
       nome: 'Pombagira Cigana',
       epiteto: 'A Livre da Estrada',
-      img: 'https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_cigana.png',
+      img: 'https://cdn.pombagiras.com/fotos/pombagira_cigana.png',
       desc: 'Não pertence a lugar nenhum além do caminho. Lê o destino como quem lê um mapa velho.',
       tags: ['Liberdade', 'Intuição', 'Movimento']
     },
@@ -64,7 +64,7 @@
       id: 7,
       nome: 'Maria Navalha',
       epiteto: 'A que Corta o Destino',
-      img: 'https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_maria_navalha.png',
+      img: 'https://cdn.pombagiras.com/fotos/pombagira_maria_navalha.png',
       desc: 'Decide rápido e corta sem dó o que já não serve. Proteção afiada, sem meio-termo.',
       tags: ['Decisão', 'Defesa', 'Precisão']
     },
@@ -72,7 +72,7 @@
       id: 8,
       nome: 'Pombagira da Praia',
       epiteto: 'A Filha das Ondas',
-      img: 'https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_da_praia.png',
+      img: 'https://cdn.pombagiras.com/fotos/pombagira_da_praia.png',
       desc: 'Leva embora o que pesa e devolve leveza na maré seguinte. Cura como o mar cura.',
       tags: ['Purificação', 'Leveza', 'Acolhimento']
     },
@@ -80,7 +80,7 @@
       id: 9,
       nome: 'Maria Farrapo',
       epiteto: 'A Humilde de Coração Forte',
-      img: 'https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_maria_farrapo.png',
+      img: 'https://cdn.pombagiras.com/fotos/pombagira_maria_farrapo.png',
       desc: 'Não precisa de trono para reinar. Sua simplicidade é a prova mais dura de força.',
       tags: ['Simplicidade', 'Resistência', 'Humildade']
     },
@@ -88,7 +88,7 @@
       id: 10,
       nome: 'Pombagira Menina',
       epiteto: 'A Travessa de Riso Fácil',
-      img: 'https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_menina.png',
+      img: 'https://cdn.pombagiras.com/fotos/pombagira_menina.png',
       desc: 'Brinca com o que assusta os outros e vira qualquer jogo a seu favor com um sorriso.',
       tags: ['Travessura', 'Charme', 'Leveza']
     },
@@ -96,7 +96,7 @@
       id: 11,
       nome: 'Pombagira da Figueira',
       epiteto: 'A Raiz Ancestral',
-      img: 'https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/pombagira_da_figueira.png',
+      img: 'https://cdn.pombagiras.com/fotos/pombagira_da_figueira.png',
       desc: 'Ligada às raízes mais fundas, guarda sabedoria que vem de antes de você nascer.',
       tags: ['Ancestralidade', 'Sabedoria', 'Natureza']
     }
