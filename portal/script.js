@@ -987,27 +987,29 @@ document.addEventListener('DOMContentLoaded', () => {
         const trigger = item.querySelector('.faq-trigger');
         const content = item.querySelector('.faq-content');
 
-        // Skip banner cards (e.g. Bahuchara Mata, Natureza Humana) that use .faq-item but lack accordion elements
+        // Skip banner cards that lack accordion elements
         if (!trigger || !content) return;
 
         trigger.addEventListener('click', (e) => {
             e.preventDefault();
+            e.stopPropagation();
             const isActive = item.classList.contains('active');
 
+            // Close all items
             faqItems.forEach(otherItem => {
                 const otherTrigger = otherItem.querySelector('.faq-trigger');
                 const otherContent = otherItem.querySelector('.faq-content');
                 if (!otherTrigger || !otherContent) return;
                 otherItem.classList.remove('active');
                 otherTrigger.setAttribute('aria-expanded', 'false');
-                otherContent.style.maxHeight = '0';
+                otherContent.style.maxHeight = null;
             });
 
+            // Toggle active item
             if (!isActive) {
                 item.classList.add('active');
                 trigger.setAttribute('aria-expanded', 'true');
-                const measuredHeight = content.scrollHeight;
-                content.style.maxHeight = (measuredHeight > 0 ? (measuredHeight + 40) : 600) + 'px';
+                content.style.maxHeight = '1000px';
             }
         });
     });
@@ -1041,28 +1043,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ==========================================
-       10. SURGICAL SMOOTH SCROLL FOR AUTHOR BUTTON
-       ========================================== */
-    const authorBtn = document.querySelector('a[href="#about-author"]');
-    if (authorBtn) {
-        authorBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const target = document.getElementById('about-author');
-            if (target) {
-                const headerOffset = 90; // Balanced offset to bring the biography beautifully and surgically into view
-                const elementPosition = target.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    }
-
-    /* ==========================================
-       11. LUXURY SLIDESHOW CONTROLLER (HERO)
+       10. LUXURY SLIDESHOW CONTROLLER (HERO)
        ========================================== */
     const heroWrapper = document.querySelector('.hero-banner-wrapper');
     const slides = document.querySelectorAll('.hero-slideshow-img');
@@ -1077,7 +1058,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btn1Text: "Explorar Portal",
             btn1Href: "#portal",
             btn2Text: "Conhecer a Autora",
-            btn2Href: "#about-author"
+            btn2Href: "https://pombagiras.com/alexiamelusine/"
         },
         {
             kicker: "Oráculo & Tradição",
@@ -1085,8 +1066,8 @@ document.addEventListener('DOMContentLoaded', () => {
             desc: "Conheça as falanges e linhas de atuação espiritual das guardiãs de esquerda. Um dicionário litúrgico e histórico profundo detalhando oferendas, dias de poder e arquétipos cósmicos.",
             btn1Text: "Explorar Guardiãs",
             btn1Href: "#portal",
-            btn2Text: "Ver Oferendas",
-            btn2Href: "#portal"
+            btn2Text: "Conhecer a Autora",
+            btn2Href: "https://pombagiras.com/alexiamelusine/"
         },
         {
             kicker: "Mitos & Teologia Consciente",
@@ -1094,8 +1075,8 @@ document.addEventListener('DOMContentLoaded', () => {
             desc: "Desmistificando preconceitos e tirando dúvidas teológicas sobre a esquerda com rigor, clareza e desconstrução filosófica de visões deturpadas e preconceituosas.",
             btn1Text: "Acessar FAQ",
             btn1Href: "#portal",
-            btn2Text: "Estudo Crítico",
-            btn2Href: "#portal"
+            btn2Text: "Conhecer a Autora",
+            btn2Href: "https://pombagiras.com/alexiamelusine/"
         },
         {
             kicker: "Ciência & Ocultismo",
@@ -1103,15 +1084,15 @@ document.addEventListener('DOMContentLoaded', () => {
             desc: "Fatos históricos intrigantes, curiosidades liturgicamente corretas e o papel psicoterapêutico das guardiãs na evolução e equilíbrio mental humano.",
             btn1Text: "Ver Curiosidades",
             btn1Href: "#portal",
-            btn2Text: "Sabedoria Prática",
-            btn2Href: "#portal"
+            btn2Text: "Conhecer a Autora",
+            btn2Href: "https://pombagiras.com/alexiamelusine/"
         },
         {
             kicker: "Conexão & Egrégora",
             title: "Comunidade de Lebarás",
             desc: "Junte-se à nossa egrégora no Telegram, WhatsApp, Discord e Spotify. Conecte-se com a diretora Alexia Melusine para partilhar conhecimento consciente e arte visceral.",
             btn1Text: "Sobre a Autora",
-            btn1Href: "#about-author",
+            btn1Href: "https://pombagiras.com/alexiamelusine/",
             btn2Text: "Entrar no Canal",
             btn2Href: "https://t.me/pomba_giras"
         },
@@ -1121,8 +1102,8 @@ document.addEventListener('DOMContentLoaded', () => {
             desc: "Expressão estética refinada que celebra a força ancestral. Um percurso visual e literário pelas representações mais impactantes das guardiãs de caminho.",
             btn1Text: "Explorar Portal",
             btn1Href: "#portal",
-            btn2Text: "Ver Galeria",
-            btn2Href: "#portal"
+            btn2Text: "Conhecer a Autora",
+            btn2Href: "https://pombagiras.com/alexiamelusine/"
         },
         {
             kicker: "Mistérios Femininos",
@@ -1130,8 +1111,8 @@ document.addEventListener('DOMContentLoaded', () => {
             desc: "A representação da autonomia feminina e da soberania espiritual. Entidades que guiam caminhos, promovem justiça e iluminam as sombras humanas.",
             btn1Text: "Explorar Portal",
             btn1Href: "#portal",
-            btn2Text: "Ver Guardiãs",
-            btn2Href: "#portal"
+            btn2Text: "Conhecer a Autora",
+            btn2Href: "https://pombagiras.com/alexiamelusine/"
         },
         {
             kicker: "Evolução & Egrégora",
@@ -1139,8 +1120,8 @@ document.addEventListener('DOMContentLoaded', () => {
             desc: "Orientação e sabedoria milenar para romper barreiras e desfazer entraves. A força de esquerda atuando no equilíbrio kármico e na autotransformação.",
             btn1Text: "Explorar Portal",
             btn1Href: "#portal",
-            btn2Text: "Conhecer História",
-            btn2Href: "#portal"
+            btn2Text: "Conhecer a Autora",
+            btn2Href: "https://pombagiras.com/alexiamelusine/"
         }
     ];
 
@@ -1154,13 +1135,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (slides.length > 0 && indicators.length > 0) {
         let currentSlide = 0;
         let slideInterval;
-        const slideDuration = 3000; // 3 seconds per photo
+        const slideDuration = 3500; // 3.5 seconds per photo
         let isPaused = false;
  
         const showSlide = (index) => {
+            if (index < 0 || index >= slides.length) return;
             if (index === currentSlide && slides[index].classList.contains('active')) return;
  
-            // Transição elegante do conteúdo textual (Fade Out -> Update -> Fade In)
+            // Transição elegante do conteúdo textual
             if (heroContent && heroContentData[index]) {
                 heroContent.classList.add('fade-out');
                 
@@ -1169,19 +1151,27 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (kickerEl) kickerEl.textContent = data.kicker;
                     if (titleEl) titleEl.textContent = data.title;
                     if (descEl) descEl.textContent = data.desc;
-                    
+                    if (btnOutlineEl) {
+                        btnOutlineEl.textContent = data.btn2Text || "Conhecer a Autora";
+                        btnOutlineEl.href = data.btn2Href || "https://pombagiras.com/alexiamelusine/";
+                        if (data.btn2Href && data.btn2Href.startsWith('http')) {
+                            btnOutlineEl.target = "_blank";
+                            btnOutlineEl.rel = "noopener";
+                        } else {
+                            btnOutlineEl.removeAttribute('target');
+                            btnOutlineEl.removeAttribute('rel');
+                        }
+                    }
                     heroContent.classList.remove('fade-out');
-                }, 400);
+                }, 300);
             }
  
-            // Define o slide atual como 'leaving' para transição de opacidade/Ken Burns de saída
+            // Atualiza slides
             slides.forEach((slide, i) => {
                 slide.classList.remove('leaving');
                 if (slide.classList.contains('active')) {
                     slide.classList.remove('active');
                     slide.classList.add('leaving');
-                    
-                    // Limpa a classe de saída após o término da animação
                     setTimeout(() => {
                         slide.classList.remove('leaving');
                     }, 1800);
@@ -1216,33 +1206,29 @@ document.addEventListener('DOMContentLoaded', () => {
         const stopSlideShow = () => {
             if (slideInterval) {
                 clearInterval(slideInterval);
+                slideInterval = null;
             }
         };
  
-        // Torna a função showSlide disponível globalmente para sincronização com as abas e footer
         window.showHeroSlide = (index) => {
             showSlide(index);
-            startSlideShow(); // Reinicia o timer após interação
+            startSlideShow();
         };
  
-        // Permite clicar nos indicadores para mudar de foto manualmente
+        // Clicar nos indicadores para mudar de foto manualmente
         indicators.forEach(indicator => {
             indicator.addEventListener('click', () => {
-                const targetIndex = parseInt(indicator.getAttribute('data-index'));
-                window.showHeroSlide(targetIndex);
+                const targetIndex = parseInt(indicator.getAttribute('data-index'), 10);
+                if (!isNaN(targetIndex)) {
+                    window.showHeroSlide(targetIndex);
+                }
             });
         });
 
-        // Eventos de Hover para pausar/resumir o carrossel e apreciar a imagem
+        // Hover events
         if (heroWrapper) {
             heroWrapper.addEventListener('mouseenter', () => {
                 isPaused = true;
-                // Pausa o preenchimento do indicador ativo (visual)
-                const activeIndicator = document.querySelector('.hero-slideshow-indicators .indicator.active::after');
-                if (activeIndicator) {
-                    activeIndicator.style.width = getComputedStyle(activeIndicator).width;
-                    activeIndicator.style.transition = 'none';
-                }
             });
 
             heroWrapper.addEventListener('mouseleave', () => {
@@ -1251,7 +1237,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Inicializa o slideshow
+        // Inicia o slideshow automaticamente
         startSlideShow();
     }
 });
