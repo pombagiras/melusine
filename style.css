@@ -281,7 +281,8 @@ h4,
     position: relative;
     cursor: pointer;
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease, z-index 0s;
-    border: 1px solid rgba(212, 175, 55, 0.25);
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.2), 0 0 4px rgba(217, 4, 41, 0.15);
     flex-shrink: 0;
     z-index: 1;
 }
@@ -296,8 +297,12 @@ h4,
 
 .carousel-item:hover {
     transform: scale(1.35) translateY(-18px);
-    border-color: var(--secondary);
-    box-shadow: 0 25px 60px rgba(217, 4, 41, 0.6), 0 0 40px rgba(217, 4, 41, 0.3);
+    border-color: #D90429;
+    box-shadow:
+        0 0 0 2px rgba(217, 4, 41, 0.6),
+        0 0 24px rgba(217, 4, 41, 0.7),
+        0 0 50px rgba(217, 4, 41, 0.4),
+        0 25px 60px rgba(0, 0, 0, 0.6);
     z-index: 9999;
     overflow: visible;
 }
