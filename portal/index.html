@@ -15,7 +15,7 @@
 
     <!-- Critical CSS & Fonts at the very top of head to prevent render blocking -->
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=1.0.6">
+    <link rel="stylesheet" href="style.css?v=2.0.0">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
@@ -741,9 +741,9 @@
 function toggleLangDropdown(e) {
     e.stopPropagation();
     const dropdown = e.currentTarget.nextElementSibling;
-    const isVisible = dropdown.style.display === 'block';
+    const isVisible = dropdown && dropdown.style.display === 'block';
     document.querySelectorAll('.lang-dropdown').forEach(d => d.style.display = 'none');
-    dropdown.style.display = isVisible ? 'none' : 'block';
+    if (dropdown) dropdown.style.display = isVisible ? 'none' : 'block';
 }
 document.addEventListener('click', () => {
     document.querySelectorAll('.lang-dropdown').forEach(d => d.style.display = 'none');
@@ -758,10 +758,9 @@ function changeLanguage(e, lang) {
     
     // Determine clean filename and folders
     const parts = currentPath.split('/').filter(p => p);
-    let langPrefix = '';
     
     if (parts[0] === 'en' || parts[0] === 'es') {
-        langPrefix = parts.shift();
+        parts.shift();
     }
     
     const pagePath = parts.join('/');
@@ -784,13 +783,6 @@ function changeLanguage(e, lang) {
     
     window.location.href = targetPath;
 }
- else if (path.includes('/es/')) {
-            label.textContent = 'Español';
-        } else {
-            label.textContent = 'Português';
-        }
-    }
-});
 </script>
 
     </header>
@@ -2206,6 +2198,6 @@ function changeLanguage(e, lang) {
     <!-- FIM DO BLOCO MACHINE-ONLY -->
 
     <!-- Script File -->
-    <script src="script.js" defer></script>
+    <script src="script.js?v=2.0.0" defer></script>
 </body>
 </html>
