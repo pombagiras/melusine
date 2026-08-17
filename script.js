@@ -431,7 +431,7 @@ if (track) {
         });
         
         // Recalcular dimensões logo após renderizar os itens
-        setTimeout(updateDimensions, 100);
+        setTimeout(() => { if (typeof updateDimensions === 'function') updateDimensions(); }, 200);
     };
 
     if ('requestIdleCallback' in window) {
