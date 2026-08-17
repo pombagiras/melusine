@@ -387,7 +387,7 @@ function getPombagiraImageUrl(key) {
         slug = "pombagira_cacurucaia";
     }
     
-    return `https://raw.githubusercontent.com/pombagiras/melusine/main/fotos/${slug}.png`;
+    return `https://cdn.pombagiras.com/fotos/${slug}.png`;
 }
 
 Object.keys(pombagirasData).forEach(key => {

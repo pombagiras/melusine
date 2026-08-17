@@ -674,6 +674,7 @@ const modalPhrase = document.getElementById('modalPhrase');
 const modalDesc = document.getElementById('modalDesc');
 const modalSpecsGrid = document.getElementById('modalSpecsGrid');
 const modalArticleLink = document.getElementById('modalArticleLink');
+const modalImage = document.getElementById('modalImage');
 
 function openModal(name) {
     if (!modal) return;
@@ -685,6 +686,20 @@ function openModal(name) {
     if (modalTitle) modalTitle.textContent = data.nome;
     if (modalPhrase) modalPhrase.textContent = data.frase ? `“${data.frase}”` : "";
     if (modalDesc) modalDesc.textContent = data.descricao;
+
+    // Imagem da guardiã
+    const imgEntry = carouselImages.find(i => getNormalizedName(i.name) === normalizedKey || i.name === name);
+    if (modalImage) {
+        if (imgEntry) {
+            const displayName = getNormalizedName(imgEntry.name);
+            modalImage.src = imgEntry.url;
+            modalImage.alt = `Representação conceitual da Guardiã ${displayName}`;
+            modalImage.style.display = 'block';
+        } else {
+            modalImage.src = '';
+            modalImage.style.display = 'none';
+        }
+    }
 
     if (modalSpecsGrid) {
         modalSpecsGrid.innerHTML = `
