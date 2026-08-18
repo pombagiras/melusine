@@ -83,10 +83,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             draw() {
-                const alpha = this.life / this.maxLife;
+                const alpha = Math.max(0, this.life / this.maxLife);
+                const radius = Math.max(0, this.size * alpha);
+                if (radius <= 0) return;
                 ctx.save();
                 ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size * alpha, 0, Math.PI * 2);
+                ctx.arc(this.x, this.y, radius, 0, Math.PI * 2);
                 // Incrível efeito de brilho e néon com shadowBlur de alto desempenho
                 ctx.shadowBlur = this.size * 3.5;
                 ctx.shadowColor = `rgba(${this.color}, ${alpha * 0.8})`;
@@ -958,6 +960,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalDia = document.getElementById('modalDia');
     const modalHorario = document.getElementById('modalHorario');
     const modalSigno = document.getElementById('modalSigno');
+
+    const closeModal = () => {
+        if (cardModal) {
+            cardModal.classList.remove('is-active');
+            cardModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+    };
 
     if (cardModalClose) {
         cardModalClose.addEventListener('click', closeModal);
