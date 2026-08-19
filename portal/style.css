@@ -1666,6 +1666,26 @@ p {
         overflow: hidden;
     }
 
+    .card-btn-wrapper {
+        padding-top: 0.6rem !important;
+        margin-top: auto !important;
+    }
+
+    .card-action-btn {
+        padding: 6px 4px !important;
+        font-size: 0.70rem !important;
+        font-weight: 600 !important;
+        white-space: nowrap !important;
+        gap: 3px !important;
+        border-radius: 20px !important;
+        width: 100% !important;
+        letter-spacing: 0 !important;
+    }
+
+    .card-action-btn .btn-arrow {
+        font-size: 0.72rem !important;
+    }
+
     /* --- Prevent Horizontal Page Overflow on Mobile --- */
     html, body, .main-content, .container, .tab-panel, #tab-curiosidades, #tab-glossario {
         max-width: 100% !important;
@@ -1883,6 +1903,39 @@ p {
     
     .footer-heading {
         margin-bottom: 1rem !important;
+    }
+
+    /* --- Horizontal Social Frame in Mobile Footer --- */
+    .social-box-frame {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: block !important;
+        padding: 0.75rem 0.6rem !important;
+        box-sizing: border-box !important;
+    }
+
+    .social-grid-2x3,
+    .social-grid-2x2 {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        gap: 0.4rem !important;
+        width: 100% !important;
+    }
+
+    .footer-social-btn {
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 10px !important;
+        flex: 1 1 auto !important;
+        max-width: 48px !important;
+    }
+
+    .social-svg {
+        width: 18px !important;
+        height: 18px !important;
     }
 
     /* --- Otimização dos Botões de Filtro Horizontal no Mobile --- */
