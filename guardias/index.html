@@ -1178,17 +1178,19 @@
         }
 
         .quote-box {
-            background: var(--accent-color);
-            color: white;
+            background: linear-gradient(135deg, rgba(80, 10, 20, 0.85) 0%, rgba(30, 5, 10, 0.9) 100%);
+            border: 1px solid rgba(255, 215, 0, 0.35);
+            border-left: 4px solid var(--secondary-color);
+            color: #FAF6EE;
             padding: 26px;
             border-radius: 16px;
             margin: 26px 0;
-            border-left: 4px solid var(--secondary-color);
             font-family: var(--font-display);
             font-style: italic;
+            font-weight: 500;
             text-align: center;
-            font-size: 1.15em;
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.15);
+            font-size: 1.25em;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15);
         }
 
         .warning-box {
@@ -3227,7 +3229,7 @@
                 <div class="article-content">
                     <p>As Pombagiras não são entidades "diabólicas", mas sim espíritos que trabalham pela lei e evolução. É fundamental combater a intolerância religiosa através do conhecimento.</p>
                     <blockquote class="quote-box">
-                        O verdadeiro poder espiritual não está em dominar, mas em evoluir.
+                        “O verdadeiro poder espiritual não está em dominar, mas em evoluir.”
                     </blockquote>
                 </div>
             </article>
@@ -3240,7 +3242,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Sobre Este Hub</h3>
-                    <p>Este espaço foi criado com o objetivo de divulgar conhecimento respeitoso e responsável sobre as Pombagiras, combatendo preconceitos através da arte visceral e da tecnologia.</p>
+                    <p style="font-style: italic; opacity: 0.92;">“Este espaço foi criado com o objetivo de divulgar conhecimento respeitoso e responsável sobre as Pombagiras, combatendo preconceitos através da arte visceral e da tecnologia.”</p>
                     <div style="margin-top: 15px; margin-bottom: 5px;">
                         <span class="email-copy-trigger" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; cursor: pointer; color: var(--text-color); opacity: 0.75; transition: opacity 0.2s, color 0.2s; background: rgba(0, 0, 0, 0.05); border: 1px solid rgba(255, 215, 0, 0.2); padding: 6px 12px; border-radius: 20px;" onclick="const e='contato'+'@'+'pombagiras.com'; navigator.clipboard.writeText(e); const t=this.querySelector('.copy-status'); t.textContent='Copiado!'; t.style.color='#00ff88'; setTimeout(()=>{t.textContent='(Copiar)'; t.style.color='';}, 2000);" onmouseenter="this.style.opacity='1'; this.style.borderColor='var(--secondary-color)';" onmouseleave="this.style.opacity='0.75'; this.style.borderColor='rgba(255, 215, 0, 0.2)';" role="button" aria-label="Copiar e-mail contato@pombagiras.com">
                             <i class="fa-solid fa-envelope" style="color: var(--primary-color);"></i>
@@ -3252,19 +3254,19 @@
                 <div class="footer-section">
                     <h3>Navegação Rápida</h3>
                     <nav aria-label="Links rápidos do rodapé">
-                        <ul>
-                            <li><a href="#artigos">Artigos &amp; Arquétipos</a></li>
-                            <li><a href="#linha">Linha de Trabalho</a></li>
-                            <li><a href="#faq">Perguntas Frequentes (FAQ)</a></li>
-                            <li><a href="#respeito">Ética e Responsabilidade</a></li>
-                            <li><a href="./termos.html">Termos de Uso &amp; Políticas</a></li>
-                            <li><a href="../metodologia.html">Metodologia</a></li>
+                        <ul style="display: flex; flex-direction: column; gap: 8px;">
+                            <li><a href="#artigos" style="display: inline-flex; align-items: center; gap: 8px;"><i class="fa-solid fa-gem" style="color: var(--secondary-color); font-size: 0.82em;"></i>Artigos &amp; Arquétipos</a></li>
+                            <li><a href="#linha" style="display: inline-flex; align-items: center; gap: 8px;"><i class="fa-solid fa-fire" style="color: var(--secondary-color); font-size: 0.82em;"></i>Linha de Trabalho</a></li>
+                            <li><a href="#faq" style="display: inline-flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-question" style="color: var(--secondary-color); font-size: 0.82em;"></i>Perguntas Frequentes (FAQ)</a></li>
+                            <li><a href="#respeito" style="display: inline-flex; align-items: center; gap: 8px;"><i class="fa-solid fa-shield-halved" style="color: var(--secondary-color); font-size: 0.82em;"></i>Ética e Responsabilidade</a></li>
+                            <li><a href="./termos.html" style="display: inline-flex; align-items: center; gap: 8px;"><i class="fa-solid fa-file-contract" style="color: var(--secondary-color); font-size: 0.82em;"></i>Termos de Uso &amp; Políticas</a></li>
+                            <li><a href="../metodologia.html" style="display: inline-flex; align-items: center; gap: 8px;"><i class="fa-solid fa-compass" style="color: var(--secondary-color); font-size: 0.82em;"></i>Metodologia</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="footer-section">
                     <h3>Respeito às Tradições</h3>
-                    <p>Honramos e respeitamos todas as tradições espirituais afro-brasileiras. Mojubá a todas as guardiãs de caminho!</p>
+                    <p style="font-style: italic; opacity: 0.92;">“Honramos e respeitamos todas as tradições espirituais afro-brasileiras. Mojubá a todas as guardiãs de caminho!”</p>
                     
                     <h4 style="margin-top: 24px; margin-bottom: 12px; font-family: var(--font-display); color: var(--secondary-color); font-size: 1.1em; font-weight: 400; letter-spacing: -0.01em;">Ancoragem de Conhecimento</h4>
                     <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px;">
