@@ -908,7 +908,22 @@ h4,
     pointer-events: none;
 }
 
-/* Glassmorphism Card para a Newsletter */
+/* Glassmorphism Card para a Newsletter com Border Beam */
+@property --border-beam-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes border-beam-rotate {
+    0% {
+        --border-beam-angle: 0deg;
+    }
+    100% {
+        --border-beam-angle: 360deg;
+    }
+}
+
 .newsletter-glass-card {
     max-width: 800px;
     margin: 0 auto;
@@ -922,6 +937,62 @@ h4,
     transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
     z-index: 2;
+    overflow: hidden;
+}
+
+.newsletter-glass-card > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Border Beam Effect - Feixe de luz giratório */
+.newsletter-glass-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.5px;
+    background: conic-gradient(
+        from var(--border-beam-angle, 0deg),
+        transparent 65%,
+        rgba(128, 0, 32, 0.3) 75%,
+        rgba(128, 0, 32, 0.95) 85%,
+        #D4AF37 94%,
+        rgba(212, 175, 55, 0.3) 98%,
+        transparent 100%
+    );
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: 1;
+    animation: border-beam-rotate 6s linear infinite;
+}
+
+/* Border Beam Ambient Soft Glow */
+.newsletter-glass-card::after {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 3px;
+    background: conic-gradient(
+        from var(--border-beam-angle, 0deg),
+        transparent 65%,
+        rgba(128, 0, 32, 0.4) 78%,
+        #D4AF37 92%,
+        transparent 100%
+    );
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: 1;
+    filter: blur(6px);
+    opacity: 0.7;
+    animation: border-beam-rotate 6s linear infinite;
 }
 
 .newsletter-glass-card:hover {
