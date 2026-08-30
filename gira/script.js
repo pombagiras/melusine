@@ -87,14 +87,18 @@ document.querySelectorAll('a,button,.pombagira-card,.faq-question,.wheel-btn').f
 const hamburger = document.getElementById('nav-hamburger');
 if (hamburger) hamburger.addEventListener('click', () => { document.body.classList.toggle('nav-open'); hamburger.setAttribute('aria-expanded', document.body.classList.contains('nav-open')); });
 
-// ── HELIX CHRONO MATRIX (Hero 3D Physics Engine) ──
-(function initHelixChronoMatrix() {
-  const container = document.getElementById('hero-matrix-container');
-  const canvas = document.getElementById('hero-matrix-canvas');
+// ── HELIX CHRONO MATRIX (Hero & Footer 3D Physics Engine) ──
+function createHelixChronoMatrix(containerId, canvasId, config = {}) {
+  const container = document.getElementById(containerId);
+  const canvas = document.getElementById(canvasId);
   if (!container || !canvas) return;
 
   const ctx = canvas.getContext('2d', { alpha: false });
   if (!ctx) return;
+
+  const ringCount = config.ringCount || 26;
+  const particleCount = config.particleCount || 40;
+  const pointsPerRing = config.pointsPerRing || 110;
 
   let isRunning = true;
   let topology = 'DOUBLE_HELIX';
@@ -115,13 +119,10 @@ if (hamburger) hamburger.addEventListener('click', () => { document.body.classLi
 
   function initTopology(w, h) {
     rings = [];
-    const ringCount = 28;
-    const pointsPerRing = 120;
-
     for (let r = 0; r < ringCount; r++) {
       const progress = r / ringCount;
       const points = [];
-      const baseRadius = Math.min(w, h) * 0.38 * (0.35 + progress * 0.65);
+      const baseRadius = Math.min(w, h) * (config.radiusScale || 0.38) * (0.35 + progress * 0.65);
       const yOffset = (progress - 0.5) * (h * 0.48);
 
       for (let p = 0; p < pointsPerRing; p++) {
@@ -147,7 +148,6 @@ if (hamburger) hamburger.addEventListener('click', () => { document.body.classLi
     }
 
     particles = [];
-    const particleCount = 45;
     for (let i = 0; i < particleCount; i++) {
       particles.push({
         ringIndex: Math.floor(Math.random() * ringCount),
@@ -163,6 +163,7 @@ if (hamburger) hamburger.addEventListener('click', () => { document.body.classLi
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
     width = rect.width;
     height = rect.height;
+    if (width === 0 || height === 0) return;
     canvas.width = Math.floor(rect.width * dpr);
     canvas.height = Math.floor(rect.height * dpr);
     canvas.style.width = `${rect.width}px`;
@@ -173,7 +174,7 @@ if (hamburger) hamburger.addEventListener('click', () => { document.body.classLi
   }
 
   window.addEventListener('resize', resize);
-  setTimeout(resize, 50);
+  setTimeout(resize, 60);
 
   // Pointer interaction
   container.addEventListener('mousemove', (e) => {
@@ -215,6 +216,14 @@ if (hamburger) hamburger.addEventListener('click', () => { document.body.classLi
     };
     topology = nextMode;
   }, 9000);
+
+  // Pause when offscreen to preserve GPU/battery
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { isRunning = entry.isIntersecting; });
+    }, { threshold: 0.05 });
+    observer.observe(container);
+  }
 
   // Render loop
   let time = 0;
@@ -398,7 +407,11 @@ if (hamburger) hamburger.addEventListener('click', () => { document.body.classLi
   }
 
   requestAnimationFrame(render);
-})();
+}
+
+// Initialize Hero and Footer Helix Chrono Matrix Engines
+createHelixChronoMatrix('hero-matrix-container', 'hero-matrix-canvas', { ringCount: 28, particleCount: 45 });
+createHelixChronoMatrix('footer-matrix-container', 'footer-matrix-canvas', { ringCount: 20, particleCount: 25, radiusScale: 0.5 });
 
 // ── PARTICLES ──
 (function() {
@@ -681,7 +694,9 @@ obsReveal();setTimeout(obsReveal,150);
 
   bridge.addEventListener('click', (e) => {
     e.preventDefault();
-    wheelSec.scrollIntoView({ behavior: 'smooth' });
+    const isMobile = window.innerWidth <= 768 || (wheelSec && window.getComputedStyle(wheelSec).display === 'none');
+    const target = isMobile ? (document.querySelector('.pombagiras-section') || wheelSec) : wheelSec;
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
   });
 
   let ticking = false;

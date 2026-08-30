@@ -55,8 +55,8 @@ body:not(.cursor-moved) #cursor-dot,body:not(.cursor-moved) #cursor-ring{opacity
 .particle{position:absolute;border-radius:50%;opacity:0;animation:floatParticle linear infinite}
 @keyframes floatParticle{0%{opacity:0;transform:translateY(0) scale(0)}10%{opacity:1}90%{opacity:.6}100%{opacity:0;transform:translateY(-100vh) scale(1.5)}}
 
-/* HERO NAVIGATION DECK (Floating Luxury Dock) */
-.hero-nav-deck{position:absolute;top:36px;z-index:25;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px;padding:6px 10px;background:rgba(10,2,14,0.85);border:1.5px solid rgba(197,160,89,0.3);border-radius:100px;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 12px 40px rgba(0,0,0,0.7),0 0 25px rgba(197,160,89,0.18);animation:fadeInUp .8s var(--ease-out) .2s forwards;opacity:0}
+/* HERO NAVIGATION DECK */
+.hero-nav-deck{position:absolute;top:36px;z-index:25;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;padding:6px 10px;background:transparent;border:none;box-shadow:none;animation:fadeInUp .8s var(--ease-out) .2s forwards;opacity:0}
 .deck-link{font-family:var(--font-sans);font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--cream-dim);text-decoration:none;border-radius:100px;padding:8px 18px;transition:all 0.35s var(--ease-out);display:inline-flex;align-items:center;gap:8px;position:relative;white-space:nowrap}
 .deck-link:hover{color:var(--brass-light);background:rgba(197,160,89,0.12);box-shadow:0 0 15px rgba(197,160,89,0.25);transform:translateY(-1px)}
 
@@ -159,19 +159,21 @@ body:not(.cursor-moved) #cursor-dot,body:not(.cursor-moved) #cursor-ring{opacity
 @keyframes ecoDotPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.7)}}
 
 /* FOOTER & EMAIL COPY */
-footer{border-top:1px solid rgba(197,160,89,.12);padding:48px 24px;text-align:center;background:linear-gradient(to bottom,transparent,rgba(10,2,14,0.7));position:relative;z-index:10}
-.footer-logo{font-family:var(--font-serif);font-size:1.4rem;font-weight:900;color:var(--brass);letter-spacing:.15em;display:block;margin-bottom:16px;text-shadow:0 0 20px rgba(197,160,89,.4)}
+footer{border-top:1px solid rgba(197,160,89,.18);padding:56px 24px 44px;text-align:center;position:relative;overflow:hidden;background:#050505;z-index:10}
+.footer-matrix-canvas{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:1;pointer-events:none}
+.footer-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(74,14,23,.32) 0%,transparent 70%),radial-gradient(ellipse 80% 60% at 20% 80%,rgba(91,26,106,.22) 0%,transparent 65%);z-index:2;pointer-events:none}
+.footer-content{position:relative;z-index:5;display:flex;flex-direction:column;align-items:center}
+.footer-logo{font-family:var(--font-serif);font-size:1.4rem;font-weight:900;color:var(--brass);letter-spacing:.15em;display:block;margin-bottom:18px;text-shadow:0 0 20px rgba(197,160,89,.4)}
 
-.footer-email-box{display:inline-flex;flex-direction:column;align-items:center;gap:8px;margin-bottom:28px}
-.footer-email-label{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--brass-dim);font-weight:600}
-.footer-copy-email{display:inline-flex;align-items:center;gap:10px;padding:10px 22px;border-radius:100px;background:rgba(197,160,89,0.06);border:1px solid rgba(197,160,89,0.3);color:var(--cream);font-family:var(--font-sans);font-size:0.88rem;font-weight:600;cursor:pointer;transition:all 0.3s var(--ease-out);backdrop-filter:blur(8px);box-shadow:0 4px 20px rgba(0,0,0,0.4)}
-.footer-copy-email:hover{background:rgba(197,160,89,0.15);border-color:var(--brass);color:var(--brass-light);transform:translateY(-2px);box-shadow:0 8px 25px rgba(197,160,89,0.25)}
+.footer-email-box{display:inline-flex;flex-direction:column;align-items:center;margin-bottom:28px}
+.footer-copy-email{display:inline-flex;align-items:center;gap:10px;padding:10px 22px;border-radius:100px;background:rgba(10,2,14,0.8);border:1px solid rgba(197,160,89,0.35);color:var(--cream);font-family:var(--font-sans);font-size:0.88rem;font-weight:600;cursor:pointer;transition:all 0.3s var(--ease-out);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 6px 24px rgba(0,0,0,0.6),0 0 15px rgba(197,160,89,0.15)}
+.footer-copy-email:hover{background:rgba(197,160,89,0.18);border-color:var(--brass);color:var(--brass-light);transform:translateY(-2px);box-shadow:0 8px 25px rgba(197,160,89,0.3)}
 .copy-badge{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--brass);background:rgba(197,160,89,0.15);padding:4px 10px;border-radius:100px;display:inline-flex;align-items:center;gap:5px;transition:all 0.3s ease}
 
 .footer-links{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:20px;list-style:none}
 .footer-links a{font-size:.78rem;color:var(--cream-dim);text-decoration:none;letter-spacing:.1em;text-transform:uppercase;transition:color .3s ease}
 .footer-links a:hover{color:var(--brass)}
-.footer-copy{font-size:.75rem;color:var(--cream-dim);opacity:0.6;letter-spacing:.08em;margin-top:12px}
+.footer-copy{font-size:.75rem;color:var(--cream-dim);opacity:0.65;letter-spacing:.08em;margin-top:12px}
 
 /* ANIMATIONS */
 @keyframes fadeInUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
@@ -245,13 +247,14 @@ footer{border-top:1px solid rgba(197,160,89,.12);padding:48px 24px;text-align:ce
   .site-nav{padding:14px 20px}
   .nav-hamburger{display:flex;z-index:600}
   .nav-links{display:none}
-  .hero{padding:110px 12px 40px}
-  .hero-nav-deck{top:72px;gap:4px;padding:4px 8px;max-width:96vw;overflow-x:auto;-webkit-overflow-scrolling:touch}
-  .deck-link{font-size:0.62rem;padding:6px 10px;gap:4px}
-  .deck-highlight{font-size:0.64rem;padding:6px 12px}
+  .hero{padding:100px 12px 40px}
+  .hero-nav-deck{top:32px;gap:6px;padding:4px 8px;max-width:96vw;background:transparent;border:none;box-shadow:none;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .deck-link{font-size:0.64rem;padding:6px 12px;gap:4px}
+  .deck-highlight{font-size:0.66rem;padding:6px 14px}
+  .wheel-section{display:none !important}
+  #wheel-preview,#wheel-left-stage,#fire-canvas,#wheel-tooltip{display:none !important}
   .grid-pombagiras{grid-template-columns:repeat(2,1fr);gap:12px}
   .pombagira-card{border-radius:12px}
-  .wheel-section{padding:20px 12px 60px}
   .faq-section{padding:40px 16px 60px}
   .faq-question{padding:16px 18px;font-size:.88rem}
   .faq-answer p{padding:0 18px 16px}
