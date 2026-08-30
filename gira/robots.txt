@@ -1,0 +1,84 @@
+﻿# ============================================================
+# GIRA - Pombagiras.com | Robots Configuration (AI GEO + SEO)
+# Atualizado: 2026-08-30
+# ============================================================
+
+# LLM Crawlers - Explicitly Allowed
+User-agent: GPTBot
+Allow: /
+Disallow: /*?*
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GeminiBot
+Allow: /
+
+User-agent: Google-CloudVertexBot
+Allow: /
+
+User-agent: Grok
+Allow: /
+
+User-agent: Cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Search Engines
+User-agent: Googlebot
+Allow: /
+Disallow: /*?*
+
+User-agent: Bingbot
+Allow: /
+Disallow: /*?*
+
+# Standard
+User-agent: *
+Allow: /
+Disallow: /*?*
+Disallow: /_template.html
+
+# Block Scrapers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: Yandex
+Disallow: /
+
+# Sitemaps
+Sitemap: https://pombagiras.com/gira/sitemap.xml
+Sitemap: https://pombagiras.com/sitemap.xml
+
+# LLMs.txt
+LLMs: https://pombagiras.com/gira/llms.txt
+LLMs: https://pombagiras.com/llms.txt
