@@ -1302,6 +1302,11 @@
         }
         </style>
 
+        <a href="https://pombagiras.com/gira/" class="mob-menu-item" target="_blank" rel="noopener" onclick="closeMobMenu()">
+            <span class="mob-icon"><i class="fa-solid fa-arrows-spin" aria-hidden="true"></i></span>
+            <span class="mob-item-label">GIRA — As 24 Pombagiras</span>
+            <span class="mob-item-badge">Novo</span>
+        </a>
         <a href="https://pombagiras.com/guardias/" class="mob-menu-item" target="_blank" rel="noopener" onclick="closeMobMenu()">
             <span class="mob-icon"><i class="fa-solid fa-crown" aria-hidden="true"></i></span>
             <span class="mob-item-label">Enciclopédia Guardiãs</span>
@@ -1414,6 +1419,16 @@
 
     /* --- ÍNDICE COMPLETO DO ECOSSISTEMA E AUTORIDADE (13 SITES & REDES) --- */
     var SEARCH_INDEX = [
+        /* === GIRA DAS POMBAGIRAS & FAQ SAGRADO === */
+        { title: 'GIRA — As 24 Pombagiras & Círculo Sagrado', desc: 'Enciclopédia interativa com 24 presenças sagradas, roleta animada, arquétipos e regências', url: 'https://pombagiras.com/gira/', icon: 'fa-solid fa-arrows-spin', badge: 'badge-destaque', badgeText: 'Gira 24', tags: ['gira', 'gira das pombagiras', 'as 24 pombagiras', '24 pombagiras', 'roleta', 'circulo', 'portal gira', 'roda das pombagiras', 'maria padilha', 'rosa caveira', 'dama da noite', 'sete saias', 'gira.html'] },
+        { title: 'Como saber qual é minha Pombagira?', desc: 'Fundamentos, oráculos sagrados (Búzios e Cartomancia) e desenvolvimento mediúnico na GIRA', url: 'https://pombagiras.com/gira/#faq', icon: 'fa-solid fa-circle-question', badge: 'badge-ecossistema', badgeText: 'FAQ Gira', tags: ['como saber qual e minha pombagira', 'qual e minha pombagira', 'minha pombagira', 'como saber minha pombagira', 'descobrir pombagira', 'qual minha pomba gira', 'regencia espiritual'] },
+        { title: 'Por que sinto a presença das Pombagiras?', desc: 'Sinais sutis, arrepios, calor, intuições, perfumes de rosas e alinhamento áurico com as Guardiãs', url: 'https://pombagiras.com/gira/#faq', icon: 'fa-solid fa-wand-magic-sparkles', badge: 'badge-ecossistema', badgeText: 'FAQ Gira', tags: ['por que sinto a presenca das pombagiras', 'sentir presenca', 'sinto presenca', 'arrepios pombagira', 'cheiro de rosas', 'calor espiritual', 'sinais da presenca'] },
+        { title: 'Pombagira é um demônio?', desc: 'Desmistificação: Pombagira é um arquétipo de luz, justiça divina e poder do feminino sagrado', url: 'https://pombagiras.com/gira/#faq', icon: 'fa-solid fa-shield-halved', badge: 'badge-destaque', badgeText: 'Desmistificação', tags: ['pombagira e um demonio', 'pombagira e demonio', 'demonio', 'malefica', 'e do mal', 'diabo', 'preconceito religioso', 'desmistificacao', 'umbanda quimbanda'] },
+        { title: 'Como consigo me conectar com uma Pombagira?', desc: 'Respeito, firmeza de vela, banhos de ervas, orações sinceras e sintonia moral elevada', url: 'https://pombagiras.com/gira/#faq', icon: 'fa-solid fa-fire', badge: 'badge-ecossistema', badgeText: 'FAQ Gira', tags: ['como consigo me conectar com uma pombagira', 'como conectar com pombagira', 'conexao pombagira', 'firmar vela pombagira', 'como agradar pombagira', 'oracao pombagira'] },
+        { title: 'Posso fazer pedidos a uma Pombagira?', desc: 'Diretrizes éticas: merecimento, cura, proteção, amor-próprio e respeito ao livre-arbítrio alheio', url: 'https://pombagiras.com/gira/#faq', icon: 'fa-solid fa-hand-holding-heart', badge: 'badge-ecossistema', badgeText: 'FAQ Gira', tags: ['posso fazer pedidos a uma pombagira', 'fazer pedidos', 'pedir pombagira', 'pedidos amor', 'pedidos prosperidade', 'etica espiritual', 'o que pedir'] },
+        { title: 'Pombagira faz o mal?', desc: 'Esclarecimento: Pombagiras são entidades da Lei Maior que curam, protegem e desfazem demandas', url: 'https://pombagiras.com/gira/#faq', icon: 'fa-solid fa-scale-balanced', badge: 'badge-destaque', badgeText: 'FAQ Gira', tags: ['pombagira faz o mal', 'fazer o mal', 'faz maldade', 'trabalho para o mal', 'quiumba', 'obsessor', 'lei maior', 'justica divina'] },
+        { title: 'Pombagira e a Lei do Retorno?', desc: 'Ação e Reação / Causa e Efeito: como a Pombagira acelera e cumpre o retorno kármico semeado', url: 'https://pombagiras.com/gira/#faq', icon: 'fa-solid fa-infinity', badge: 'badge-ecossistema', badgeText: 'FAQ Gira', tags: ['pombagira e a lei do retorno', 'lei do retorno', 'retorno', 'karma', 'causa e efeito', 'acao e reacao', 'justica karmica'] },
+
         /* === 13 SITES PRÓPRIOS & PORTAIS DO ECOSSISTEMA === */
         { title: 'Pombagiras.com — Hub Mãe & Enciclopédia Central', desc: 'Portal central de pesquisas, enciclopédia sagrada e antropologia espiritual', url: 'https://pombagiras.com/', icon: 'fa-solid fa-house-fire', badge: 'badge-ecossistema', badgeText: 'Hub Mãe', tags: ['pombagiras', 'pombagiras.com', 'hub', 'mae', 'home', 'portal', 'enciclopedia', 'site mae', 'inicio', 'alexia melusine'] },
         { title: 'O Manifesto — Desmistificação & Soberania Ancestral', desc: 'O manifesto fundador por Alexia Melusine: clareza, ética, desmistificação e tecnologia na Umbanda e Quimbanda', url: 'manifesto/', icon: 'fa-solid fa-scroll', badge: 'badge-ecossistema', badgeText: 'Manifesto', tags: ['manifesto', 'o manifesto', 'alexia melusine', 'desmistificacao', 'sagrado', 'tecnologia', 'encruzilhada', 'filosofia', 'carta', 'principios', 'manifesto.html'] },
