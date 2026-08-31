@@ -173,6 +173,7 @@ footer{border-top:1px solid rgba(197,160,89,.18);padding:56px 24px 44px;text-ali
 .footer-links{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:20px;list-style:none}
 .footer-links a{font-size:.78rem;color:var(--cream-dim);text-decoration:none;letter-spacing:.1em;text-transform:uppercase;transition:color .3s ease}
 .footer-links a:hover{color:var(--brass)}
+.footer-quote{font-size:.82rem;color:var(--cream-dim);font-style:italic;letter-spacing:.04em;margin-top:14px;opacity:0.85}
 .footer-copy{font-size:.75rem;color:var(--cream-dim);opacity:0.65;letter-spacing:.08em;margin-top:12px}
 
 /* ANIMATIONS */
