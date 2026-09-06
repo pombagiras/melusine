@@ -151,6 +151,12 @@
   <priority>0.8</priority>
 </url>
 <url>
+  <loc>https://pombagiras.com/donativos/</loc>
+  <lastmod>2026-09-06</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
   <loc>https://pombagiras.com/estrada/</loc>
   <lastmod>2026-08-30</lastmod>
   <changefreq>monthly</changefreq>
