@@ -58,6 +58,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
   font-size: 16px;
   background-color: var(--bg-body);
   color: var(--creme-quente);
@@ -970,6 +971,17 @@ body {
     display: none;
   }
 
+  /* Ocultar botão Contribuir no cabeçalho SOMENTE no celular para eliminar qualquer folga horizontal */
+  .header-cta-btn {
+    display: none !important;
+  }
+
+  /* Fotos naturais, vivas e sem efeito escuro SOMENTE no celular */
+  .color-reveal-img {
+    filter: none !important;
+    opacity: 1 !important;
+  }
+
   .hero-section {
     padding-top: 2rem;
     padding-bottom: 2.5rem;
@@ -1002,7 +1014,6 @@ body {
 
   .btn-primary,
   .btn-secondary,
-  .header-cta-btn,
   .card-btn,
   .btn-featured-stripe,
   .faq-trigger {
