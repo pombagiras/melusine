@@ -353,6 +353,13 @@ h1, h2, h3, h4, .serif {
     color: var(--latao-brilho);
 }
 
+.spiritual-logo-img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
+}
+
 .spiritual-quote {
     font-family: 'Fraunces', serif;
     font-style: italic;
