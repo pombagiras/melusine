@@ -1086,4 +1086,11 @@
   <changefreq>weekly</changefreq>
   <priority>0.85</priority>
 </url>
+<url>
+  <loc>https://pombagiras.com/racismo-religioso</loc>
+  <lastmod>2026-09-08</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.90</priority>
+</url>
 </urlset>
+
