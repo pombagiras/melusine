@@ -325,13 +325,14 @@
         .portal-header .brand {
             font-family: var(--ff-display);
             font-weight: 800;
-            font-size: 1.85rem;
-            letter-spacing: 0.08em;
+            font-size: 1.75rem;
+            letter-spacing: 0.06em;
             color: var(--text-color);
             text-decoration: none;
             text-transform: uppercase;
             margin-bottom: 0.85rem;
             display: inline-block;
+            max-width: 100%;
         }
 
         .portal-header .brand span {
@@ -757,12 +758,34 @@
 
         /* ── RESPONSIVIDADE RIGOROSA MOBILE ───────────────────────────────── */
         @media (max-width: 680px) {
+            html, body {
+                overflow-x: hidden;
+                width: 100%;
+            }
             main {
                 padding: 1rem 0.75rem 2.5rem;
+                width: 100%;
+                overflow-x: hidden;
+            }
+            .portal-header {
+                padding: 0.85rem 0 1.25rem;
+                width: 100%;
+            }
+            .portal-header .brand {
+                font-size: clamp(1.18rem, 5.6vw, 1.42rem);
+                letter-spacing: 0.04em;
+                margin-bottom: 0.75rem;
+                max-width: 100%;
+            }
+            .btn-back {
+                padding: 7px 20px;
+                font-size: 0.84rem;
             }
             .glass-card {
                 padding: 1.6rem 1.15rem;
                 border-radius: 14px;
+                width: 100%;
+                box-sizing: border-box;
             }
             h1 {
                 font-size: 1.85rem;
