@@ -1846,6 +1846,32 @@ footer.main-footer .footer-signature i {
         gap: 12px;
     }
 
+    /* About buttons: grid 2 colunas no celular com botão Portal estendido */
+    .about-buttons-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px 10px !important;
+        width: 100% !important;
+        max-width: 360px !important;
+        margin: 0 auto !important;
+    }
+
+    .about-buttons-grid .btn {
+        padding: 12px 8px !important;
+        min-height: 46px !important;
+        font-size: 0.76rem !important;
+        letter-spacing: 0.8px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        white-space: nowrap !important;
+        box-sizing: border-box !important;
+    }
+
+    .about-buttons-grid .btn:last-child {
+        grid-column: 1 / -1 !important;
+        width: 100% !important;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -1890,8 +1916,62 @@ footer.main-footer .footer-signature i {
         color: inherit !important;
     }
 
-    .footer-links-container {
+    footer.main-footer .footer-links-container {
         display: flex !important;
+        justify-content: center !important;
+    }
+
+    footer.main-footer .footer-col-identity,
+    footer.main-footer .footer-col-nav,
+    footer.main-footer .footer-col-social {
+        text-align: center !important;
+    }
+
+    footer.main-footer .footer-logo-title {
+        text-align: center !important;
+    }
+
+    footer.main-footer .footer-subtitle {
+        text-align: center !important;
+    }
+
+    footer.main-footer .footer-bio {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    footer.main-footer .footer-col-title {
+        text-align: center !important;
+    }
+
+    footer.main-footer .footer-col-title::after {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    footer.main-footer .footer-nav-links {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 12px !important;
+    }
+
+    footer.main-footer .footer-nav-links li {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    footer.main-footer .footer-nav-links a {
+        justify-content: center !important;
+    }
+
+    footer.main-footer .footer-contact-info,
+    footer.main-footer .footer-donativos-info {
+        display: flex !important;
+        justify-content: center !important;
+        text-align: center !important;
     }
 }
 
@@ -1968,23 +2048,30 @@ footer.main-footer .footer-signature i {
         margin-bottom: 20px !important;
     }
 
-    /* About buttons: 2x2 grid on mobile with touch ergonomics */
+    /* About buttons: grid 2 colunas no celular com botão Portal estendido */
     .about-buttons-grid {
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 12px 10px !important;
+        gap: 10px 10px !important;
         width: 100% !important;
-        max-width: 340px !important;
+        max-width: 360px !important;
         margin: 0 auto !important;
     }
 
     .about-buttons-grid .btn {
-        padding: 12px 10px !important;
+        padding: 12px 8px !important;
         min-height: 46px !important;
         font-size: 0.76rem !important;
         letter-spacing: 0.8px !important;
         display: inline-flex !important;
         align-items: center !important;
         justify-content: center !important;
+        white-space: nowrap !important;
+        box-sizing: border-box !important;
+    }
+
+    .about-buttons-grid .btn:last-child {
+        grid-column: 1 / -1 !important;
+        width: 100% !important;
     }
 
     .newsletter-glass-card {

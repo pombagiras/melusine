@@ -34,7 +34,7 @@
     <!-- Critical CSS & Fonts at the very top of head to prevent render blocking -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap"></noscript>
-    <link rel="stylesheet" href="style.css?v=2.1.0">
+    <link rel="stylesheet" href="style.css?v=2.1.2">
     
     <!-- Asynchronous non-blocking load of FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
@@ -991,6 +991,12 @@
         transform: translateY(-7px) rotate(-45deg);
     }
 
+    html.mob-menu-open,
+    body.mob-menu-open {
+        overflow: hidden !important;
+        overscroll-behavior: none !important;
+    }
+
     /* === OVERLAY DE FUNDO === */
     .mob-menu-overlay {
         display: block !important;
@@ -1003,6 +1009,7 @@
         transition: opacity 0.35s ease;
         backdrop-filter: blur(2px);
         -webkit-backdrop-filter: blur(2px);
+        touch-action: none;
     }
     .mob-menu-overlay.is-visible {
         opacity: 1;
@@ -1024,7 +1031,7 @@
         transform: translateX(-102%);
         transition: transform 0.38s cubic-bezier(0.4,0,0.2,1);
         flex-direction: column;
-        overflow-y: auto;
+        overflow: hidden;
         overscroll-behavior: contain;
     }
     .mob-menu-drawer.is-open {
@@ -1059,6 +1066,8 @@
         flex: 1;
         padding: 8px 0 16px 0;
         overflow-y: auto;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
     }
 
     /* Separador de seção */
@@ -1149,11 +1158,12 @@
         margin: 8px 22px;
     }
 
-    /* === REDES SOCIAIS NO RODAPÉ DO DRAWER === */
+    /* === CANAIS NO RODAPÉ DO DRAWER === */
     .mob-menu-social {
-        padding: 14px 20px 20px 20px;
+        padding: 12px 14px 18px 14px;
         border-top: 1px solid rgba(181,162,122,0.13);
         flex-shrink: 0;
+        touch-action: none;
     }
     .mob-menu-social-label {
         font-family: 'Geist', sans-serif;
@@ -1162,27 +1172,34 @@
         letter-spacing: 0.15em;
         text-transform: uppercase;
         color: rgba(181,162,122,0.5);
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
     .mob-menu-social-row {
         display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
+        gap: 6px;
+        flex-wrap: nowrap;
+        width: 100%;
+        box-sizing: border-box;
     }
     .mob-social-pill {
-        display: flex;
+        flex: 1 1 0;
+        min-width: 0;
+        display: inline-flex;
         align-items: center;
-        gap: 6px;
-        padding: 6px 12px;
+        justify-content: center;
+        gap: 5px;
+        padding: 6px 4px;
         border: 1px solid rgba(181,162,122,0.18);
         border-radius: 20px;
         background: rgba(181,162,122,0.06);
         color: rgba(250,246,238,0.75);
         font-family: 'Geist', sans-serif;
-        font-size: 0.72rem;
+        font-size: 0.68rem;
         font-weight: 600;
         text-decoration: none;
+        white-space: nowrap;
         transition: all 0.2s ease;
+        box-sizing: border-box;
     }
     .mob-social-pill:hover {
         border-color: rgba(181,162,122,0.5);
@@ -1190,14 +1207,16 @@
         background: rgba(181,162,122,0.12);
     }
     .mob-social-pill img {
-        width: 14px;
-        height: 14px;
+        width: 13px;
+        height: 13px;
         object-fit: contain;
         filter: brightness(0.85);
+        flex-shrink: 0;
     }
     .mob-social-pill i {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         color: #B5A27A;
+        flex-shrink: 0;
     }
 }
 </style>
@@ -1343,9 +1362,9 @@
 
     </div><!-- /.mob-menu-body -->
 
-    <!-- Redes Sociais no rodapé do drawer -->
+    <!-- Canais no rodapé do drawer -->
     <div class="mob-menu-social">
-        <div class="mob-menu-social-label">Redes Sociais</div>
+        <div class="mob-menu-social-label">Canais</div>
         <div class="mob-menu-social-row">
             <a href="https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G" class="mob-social-pill" target="_blank" rel="noopener" aria-label="WhatsApp">
                 <img src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="WhatsApp" loading="lazy" decoding="async">
@@ -1358,10 +1377,6 @@
             <a href="https://discord.gg/gWZP8R7Dqu" class="mob-social-pill" target="_blank" rel="noopener" aria-label="Discord">
                 <img src="https://cdn.simpleicons.org/discord/ffffff" alt="Discord" loading="lazy" decoding="async">
                 Discord
-            </a>
-            <a href="https://alexiamelusine.substack.com/" class="mob-social-pill" target="_blank" rel="noopener" aria-label="Substack">
-                <img src="https://cdn.simpleicons.org/substack/ffffff" alt="Substack" loading="lazy" decoding="async">
-                Substack
             </a>
         </div>
     </div>
@@ -1384,7 +1399,10 @@
         drawer.setAttribute('aria-hidden', 'false');
         overlay.classList.add('is-visible');
         overlay.setAttribute('aria-hidden', 'false');
+        document.documentElement.classList.add('mob-menu-open');
+        document.body.classList.add('mob-menu-open');
         document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
     }
 
     window.closeMobMenu = function() {
@@ -1395,7 +1413,10 @@
         drawer.setAttribute('aria-hidden', 'true');
         overlay.classList.remove('is-visible');
         overlay.setAttribute('aria-hidden', 'true');
+        document.documentElement.classList.remove('mob-menu-open');
+        document.body.classList.remove('mob-menu-open');
         document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
     };
 
     // Clicar em aba do portal educativo e navegar
@@ -1416,7 +1437,42 @@
         _open ? closeMobMenu() : openMobMenu();
     });
     if (closeB) closeB.addEventListener('click', closeMobMenu);
-    if (overlay) overlay.addEventListener('click', closeMobMenu);
+    if (overlay) {
+        overlay.addEventListener('click', closeMobMenu);
+        overlay.addEventListener('touchmove', function(e) { e.preventDefault(); }, { passive: false });
+    }
+
+    var menuBody = drawer ? drawer.querySelector('.mob-menu-body') : null;
+    var menuHeader = drawer ? drawer.querySelector('.mob-menu-header') : null;
+    var menuSocial = drawer ? drawer.querySelector('.mob-menu-social') : null;
+
+    if (menuHeader) {
+        menuHeader.addEventListener('touchmove', function(e) { e.preventDefault(); }, { passive: false });
+    }
+    if (menuSocial) {
+        menuSocial.addEventListener('touchmove', function(e) { e.preventDefault(); }, { passive: false });
+    }
+
+    if (menuBody) {
+        var startY = 0;
+        menuBody.addEventListener('touchstart', function(e) {
+            if (e.touches.length === 1) {
+                startY = e.touches[0].clientY;
+            }
+        }, { passive: true });
+
+        menuBody.addEventListener('touchmove', function(e) {
+            if (!_open || e.touches.length !== 1) return;
+            var currentY = e.touches[0].clientY;
+            var deltaY = currentY - startY;
+            var atTop = menuBody.scrollTop <= 0;
+            var atBottom = (menuBody.scrollTop + menuBody.clientHeight) >= (menuBody.scrollHeight - 1);
+
+            if ((atTop && deltaY > 0) || (atBottom && deltaY < 0)) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+    }
 
     // Fechar com ESC
     document.addEventListener('keydown', function(e) {
@@ -3842,9 +3898,9 @@ initLangSwitcher();
                     <p><span style="color: var(--accent); font-size: 1.4em; font-weight: 700; vertical-align: -0.05em; margin-right: 2px;">“</span>Não trago títulos acadêmicos, mas trago décadas de contato direto, aprendizado oral e vivência prática com este tema desde a minha infância. Meu objetivo aqui não é criar teses, mas documentar com respeito, detalhe e verdade esse conhecimento.<span style="color: var(--accent); font-size: 1.4em; font-weight: 700; vertical-align: -0.05em; margin-left: 2px;">”</span></p>
                     <div class="about-buttons-grid">
                         <a href="https://alexiamelusine.com/limbosonoro/" class="btn btn-outline" target="_blank" rel="noopener" id="btn-podcast-limbo"><i
-                                class="fa-solid fa-podcast"></i> Limbo Sonoro</a>
+                                class="fa-solid fa-podcast"></i> Pessoal</a>
                         <a href="https://open.spotify.com/show/0oeCL1QScD3v7dHeUvJjgJ" class="btn btn-outline" target="_blank" rel="noopener" id="btn-podcast-forca"><i
-                                class="fa-brands fa-spotify"></i> Força Revelada</a>
+                                class="fa-brands fa-spotify"></i> Podcast</a>
                         <a href="https://pombagiras.com/manifesto/" class="btn btn-outline" id="btn-podcast-manifesto"><i
                                 class="fa-solid fa-scroll"></i> Manifesto</a>
                         <a href="https://pombagiras.com/github/" class="btn btn-outline" target="_blank" rel="noopener"><i
@@ -3915,7 +3971,7 @@ initLangSwitcher();
                         </span>
                     </div>
                     <div class="footer-donativos-info" style="margin-top: 12px;">
-                        <a href="https://pombagiras.com/donativos/" class="footer-donativos-link" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; text-decoration: none; color: var(--warm-cream); opacity: 0.9; transition: all 0.3s ease; background: rgba(230, 0, 38, 0.06); border: 1px solid rgba(230, 0, 38, 0.35); padding: 6px 14px; border-radius: 20px; box-shadow: 0 0 12px rgba(230, 0, 38, 0.12);" onmouseenter="this.style.opacity='1'; this.style.borderColor='#E60026'; this.style.boxShadow='0 0 18px rgba(230, 0, 38, 0.35)'; this.style.transform='translateY(-2px)';" onmouseleave="this.style.opacity='0.9'; this.style.borderColor='rgba(230, 0, 38, 0.35)'; this.style.boxShadow='0 0 12px rgba(230, 0, 38, 0.12)'; this.style.transform='none';">
+                        <a href="https://pombagiras.com/donativos/" class="footer-donativos-link" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; text-decoration: none; color: var(--warm-cream); opacity: 0.9; transition: all 0.3s ease; background: rgba(230, 0, 38, 0.06); border: none; padding: 6px 14px; border-radius: 20px; box-shadow: 0 0 12px rgba(230, 0, 38, 0.12);" onmouseenter="this.style.opacity='1'; this.style.boxShadow='0 0 18px rgba(230, 0, 38, 0.35)'; this.style.transform='translateY(-2px)';" onmouseleave="this.style.opacity='0.9'; this.style.boxShadow='0 0 12px rgba(230, 0, 38, 0.12)'; this.style.transform='none';">
                             <i class="fa-solid fa-heart" style="color: #E60026; font-size: 0.85rem;" aria-hidden="true"></i>
                             <span style="font-weight: 500; letter-spacing: 0.5px;">Donativos &amp; Sustentabilidade</span>
                         </a>
@@ -3926,6 +3982,8 @@ initLangSwitcher();
             <div class="footer-divider-container">
                 <hr class="section-divider">
             </div>
+
+            <p style="text-align: center; font-size: 0.8rem; color: var(--warm-cream); opacity: 0.55; font-style: italic; letter-spacing: 0.04em; margin: 0 0 18px 0;">"Fundamento de Exu e Pombagira não se vende em prateleira e nem se expõe na internet".</p>
 
             <div class="footer-bottom">
                 <div style="margin-top: 10px; margin-bottom: 16px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
