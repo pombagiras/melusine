@@ -779,15 +779,78 @@
             border-color: var(--accent-red-bright);
         }
 
-        @media (max-width: 600px) {
-            .glass-card {
-                padding: 1.6rem 1.2rem;
+        /* ── AJUSTES EXCLUSIVOS PARA CELULAR (MOBILE ONLY) ─────────────────── */
+        @media (max-width: 768px) {
+            main {
+                padding: 1rem 0.8rem 2.5rem !important;
             }
-            .bento-grid {
-                grid-template-columns: 1fr;
+            .portal-header {
+                padding: 0.8rem 0 1.2rem !important;
+                margin-bottom: 1.2rem !important;
+                gap: 0.5rem !important;
+            }
+            .portal-header .brand {
+                font-size: clamp(1.18rem, 4.8vw, 1.32rem) !important;
+                letter-spacing: 0.02em !important;
+                margin-bottom: 0.5rem !important;
+                white-space: nowrap !important;
+            }
+            .btn-back {
+                padding: 6px 18px !important;
+                font-size: 0.82rem !important;
+            }
+            .glass-card {
+                padding: 1.35rem 1rem !important;
+                border-radius: 12px !important;
             }
             h1 {
-                font-size: 1.85rem;
+                font-size: clamp(1.45rem, 5.2vw, 1.7rem) !important;
+                line-height: 1.25 !important;
+                letter-spacing: -0.02em !important;
+                margin-bottom: 0.6rem !important;
+                word-wrap: break-word !important;
+                overflow-wrap: break-word !important;
+            }
+            .subtitle {
+                font-size: 0.95rem !important;
+                line-height: 1.5 !important;
+                margin-bottom: 1.4rem !important;
+            }
+            .featured-img-container {
+                margin-bottom: 1.6rem !important;
+                border-radius: 10px !important;
+            }
+            h2 {
+                font-size: 1.3rem !important;
+                margin-top: 1.8rem !important;
+                margin-bottom: 0.9rem !important;
+                padding-left: 10px !important;
+            }
+            h3 {
+                font-size: 1.1rem !important;
+                margin-top: 1.4rem !important;
+            }
+            p, li {
+                font-size: 0.98rem !important;
+                line-height: 1.65 !important;
+            }
+            .quote-box, .quote-highlight, .academic-box {
+                padding: 1rem 1.1rem !important;
+                margin: 1.4rem 0 !important;
+                font-size: 0.96rem !important;
+            }
+            .bento-grid {
+                grid-template-columns: 1fr !important;
+                gap: 12px !important;
+                margin: 1.6rem 0 !important;
+            }
+            .faq-question {
+                padding: 14px 16px !important;
+                font-size: 0.96rem !important;
+            }
+            .faq-answer {
+                padding: 0 16px 14px 16px !important;
+                font-size: 0.92rem !important;
             }
         }
     </style>
