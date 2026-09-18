@@ -135,6 +135,7 @@ Disallow: /admin/
 # Standard Public Access
 User-agent: *
 Allow: /
+Allow: /oga
 Disallow: /*?*
 Disallow: /search/
 Disallow: /login/
