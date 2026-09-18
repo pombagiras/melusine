@@ -1545,6 +1545,19 @@ footer.main-footer .footer-signature i {
         display: block !important;
         filter: grayscale(100%) contrast(135%) brightness(40%) !important;
         object-fit: cover !important;
+        z-index: 1 !important;
+        cursor: pointer !important;
+        pointer-events: auto !important;
+        transition: filter 0.45s ease, -webkit-filter 0.45s ease !important;
+        -webkit-tap-highlight-color: transparent !important;
+        touch-action: manipulation !important;
+    }
+
+    /* Ao tocar com o dedo na foto da Pombagira na Hero (celular): revela a cor original */
+    .hero-mobile-img:active,
+    .hero-mobile-img.is-colored {
+        filter: none !important;
+        -webkit-filter: none !important;
     }
 
     .hero-content {
