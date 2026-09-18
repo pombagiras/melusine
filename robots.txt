@@ -136,6 +136,7 @@ Disallow: /admin/
 User-agent: *
 Allow: /
 Allow: /oga
+Allow: /nomes
 Disallow: /*?*
 Disallow: /search/
 Disallow: /login/
