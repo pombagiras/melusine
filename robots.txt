@@ -138,6 +138,7 @@ Allow: /
 Allow: /oga
 Allow: /nomes
 Allow: /umbanda
+Allow: /quimbanda
 Disallow: /*?*
 Disallow: /search/
 Disallow: /login/
