@@ -137,6 +137,7 @@ User-agent: *
 Allow: /
 Allow: /oga
 Allow: /nomes
+Allow: /umbanda
 Disallow: /*?*
 Disallow: /search/
 Disallow: /login/
