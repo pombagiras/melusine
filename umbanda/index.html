@@ -160,11 +160,21 @@
             padding-bottom: 0.8rem; 
         }
         .subtitle {
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             color: var(--accent-gold);
             margin-bottom: 2rem;
             font-style: italic;
             line-height: 1.45;
+            text-align: left !important;
+            word-spacing: normal !important;
+            letter-spacing: normal !important;
+        }
+        @media (min-width: 769px) {
+            .subtitle {
+                white-space: nowrap !important;
+                font-size: clamp(0.85rem, 1.25vw, 1.04rem) !important;
+                text-align: left !important;
+            }
         }
         h2 {
             font-size: 1.75rem;
@@ -309,6 +319,7 @@
             transition: transform 0.3s ease;
         }
         .faq-answer {
+            display: none;
             padding: 0 1.4rem 1.2rem 1.4rem;
             font-size: 1rem;
             line-height: 1.65;
@@ -393,7 +404,9 @@
             .subtitle {
                 font-size: 0.98rem;
                 margin-bottom: 1.4rem;
-                text-align: left;
+                text-align: left !important;
+                white-space: normal !important;
+                word-spacing: normal !important;
             }
             h2 {
                 font-size: 1.35rem;
@@ -420,6 +433,7 @@
                 padding: 1rem 1.1rem;
             }
             .faq-answer {
+                display: none;
                 padding: 0 1.1rem 1rem 1.1rem;
                 font-size: 0.94rem;
             }
