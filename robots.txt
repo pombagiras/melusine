@@ -135,6 +135,7 @@ Disallow: /admin/
 # Standard Public Access
 User-agent: *
 Allow: /
+Allow: /segredo/
 Allow: /oga
 Allow: /nomes
 Allow: /umbanda

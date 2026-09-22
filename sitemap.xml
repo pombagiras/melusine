@@ -1158,5 +1158,11 @@
   <changefreq>monthly</changefreq>
   <priority>0.90</priority>
 </url>
+<url>
+  <loc>https://pombagiras.com/segredo/</loc>
+  <lastmod>2026-09-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.90</priority>
+</url>
 </urlset>
 
