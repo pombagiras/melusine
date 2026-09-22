@@ -136,6 +136,7 @@ Disallow: /admin/
 User-agent: *
 Allow: /
 Allow: /segredo/
+Allow: /glossario/
 Allow: /oga
 Allow: /nomes
 Allow: /umbanda
