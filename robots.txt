@@ -141,6 +141,7 @@ Allow: /oga
 Allow: /nomes
 Allow: /umbanda
 Allow: /quimbanda
+Allow: /pombagiras-do-lodo-e-das-sombras/
 Allow: /lodo/
 Disallow: /*?*
 Disallow: /search/
