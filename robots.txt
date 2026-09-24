@@ -143,6 +143,8 @@ Allow: /umbanda
 Allow: /quimbanda
 Allow: /pombagiras-do-lodo-e-das-sombras/
 Allow: /lodo/
+Allow: /fundamento/
+Allow: /fundamento
 Disallow: /*?*
 Disallow: /search/
 Disallow: /login/
