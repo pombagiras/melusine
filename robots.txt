@@ -145,6 +145,10 @@ Allow: /pombagiras-do-lodo-e-das-sombras/
 Allow: /lodo/
 Allow: /fundamento/
 Allow: /fundamento
+Allow: /dignidade-mediunidade/
+Allow: /dignidade-mediunidade
+Allow: /dignidade/
+Allow: /dignidade
 Disallow: /*?*
 Disallow: /search/
 Disallow: /login/
