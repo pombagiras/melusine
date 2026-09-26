@@ -366,7 +366,7 @@ const carouselImages = [
     { name: "Menina", url: "https://cdn.pombagiras.com/fotos/pombagira_menina.png", link: "menina/index.html" },
     { name: "Da Figueira", url: "https://cdn.pombagiras.com/fotos/pombagira_da_figueira.png", link: "figueira/index.html" },
     { name: "Das Almas", url: "https://cdn.pombagiras.com/fotos/pombagira_das_almas.png" },
-    { name: "Sete Encruzilhadas", url: "https://cdn.pombagiras.com/fotos/pombagira_sete_encruzilhadas.png" },
+    { name: "Sete Encruzilhadas", url: "https://cdn.pombagiras.com/fotos/pombagira_sete_encruzilhadas.png", link: "sete-encruzilhadas/index.html" },
     { name: "Da Lua", url: "https://cdn.pombagiras.com/fotos/pombagira_da_lua.png" },
     { name: "Das Trevas", url: "https://cdn.pombagiras.com/fotos/pombagira_das_trevas.png" },
     { name: "Da Serra", url: "https://cdn.pombagiras.com/fotos/pombagira_da_serra.png" },
