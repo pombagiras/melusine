@@ -379,7 +379,7 @@ const carouselImages = [
     { name: "Da Neblina", url: "https://cdn.pombagiras.com/fotos/pombagira_da_neblina.png", link: "da-neblina/index.html" },
     { name: "Da Estrada", url: "https://cdn.pombagiras.com/fotos/pombagira_da_estrada.png", link: "estrada/index.html" },
     { name: "Do Vento", url: "https://cdn.pombagiras.com/fotos/pombagira_do_vento.png", link: "vento/index.html" },
-    { name: "Cacurucaia", url: "https://cdn.pombagiras.com/fotos/pombagira_cacurucaia.png" }
+    { name: "Cacurucaia", url: "https://cdn.pombagiras.com/fotos/pombagira_cacurucaia.png", link: "cacurucaia/index.html" }
 ];
 
 function getNormalizedName(name) {
