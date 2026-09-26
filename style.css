@@ -273,6 +273,9 @@ h4,
 }
 
 .carousel-item {
+    display: block;
+    text-decoration: none;
+    color: inherit;
     width: 200px;
     height: 200px;
     margin: 0 12px;

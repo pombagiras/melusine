@@ -416,22 +416,27 @@ if (track) {
     // Diferir a criação e injeção dos itens no DOM para quando a CPU estiver idle (melhora o TBT/FID/INP)
     const renderCarouselItems = () => {
         [...carouselImages, ...carouselImages].forEach(img => {
-            const div = document.createElement('div');
-            div.className = 'carousel-item';
+            const isLink = Boolean(img.link);
+            const el = document.createElement(isLink ? 'a' : 'div');
+            el.className = 'carousel-item';
+            if (isLink) {
+                el.href = img.link;
+            }
             const displayName = getNormalizedName(img.name);
             const altText = displayName.startsWith("Pombagira") ? `Representação artística conceitual da ${displayName}` : `Representação artística conceitual da Pombagira ${displayName}`;
-            div.innerHTML = `<img src="${img.url}" alt="${altText}" loading="lazy" decoding="async" width="200" height="200"><span>${img.name}</span>`;
+            el.innerHTML = `<img src="${img.url}" alt="${altText}" loading="lazy" decoding="async" width="200" height="200"><span>${img.name}</span>`;
             
             // No clique, checamos se o usuário não estava apenas arrastando o carrossel
-            div.addEventListener('click', () => {
-                if (isDragging || wasJustDragging) return;
-                if (img.link) {
-                    window.location.href = img.link;
+            el.addEventListener('click', (e) => {
+                if (isDragging || wasJustDragging) {
+                    e.preventDefault();
                     return;
                 }
-                openModal(img.name);
+                if (!img.link) {
+                    openModal(img.name);
+                }
             });
-            track.appendChild(div);
+            track.appendChild(el);
         });
         
         // Recalcular dimensões logo após renderizar os itens
