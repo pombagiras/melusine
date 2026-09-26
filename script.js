@@ -374,7 +374,7 @@ const carouselImages = [
     { name: "Das Águas Profundas", url: "https://cdn.pombagiras.com/fotos/pombagira_das_aguas_profundas.png", link: "aguas-profundas/index.html" },
     { name: "Da Sombra", url: "https://cdn.pombagiras.com/fotos/pombagira_da_sombra.png", link: "da-sombra/index.html" },
     { name: "Da Fenda", url: "https://cdn.pombagiras.com/fotos/pombagira_da_fenda.png", link: "da-fenda/index.html" },
-    { name: "Da Calunga Profunda", url: "https://cdn.pombagiras.com/fotos/pombagira_da_calunga_profunda.png" },
+    { name: "Da Calunga Profunda", url: "https://cdn.pombagiras.com/fotos/pombagira_da_calunga_profunda.png", link: "calunga-profunda/index.html" },
     { name: "Das Correntes", url: "https://cdn.pombagiras.com/fotos/pombagira_das_correntes.png" },
     { name: "Da Neblina", url: "https://cdn.pombagiras.com/fotos/pombagira_da_neblina.png" },
     { name: "Da Estrada", url: "https://cdn.pombagiras.com/fotos/pombagira_da_estrada.png", link: "estrada/index.html" },
