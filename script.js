@@ -361,7 +361,7 @@ const carouselImages = [
     { name: "Sete Saias", url: "https://cdn.pombagiras.com/fotos/pombagira_sete_saias.png" },
     { name: "Cigana", url: "https://cdn.pombagiras.com/fotos/pombagira_cigana.png" },
     { name: "Maria Navalha", url: "https://cdn.pombagiras.com/fotos/pombagira_maria_navalha.png", link: "maria-navalha/index.html" },
-    { name: "Da Praia", url: "https://cdn.pombagiras.com/fotos/pombagira_da_praia.png" },
+    { name: "Da Praia", url: "https://cdn.pombagiras.com/fotos/pombagira_da_praia.png", link: "praia/index.html" },
     { name: "Maria Farrapo", url: "https://cdn.pombagiras.com/fotos/pombagira_maria_farrapo.png", link: "maria-farrapo/index.html" },
     { name: "Menina", url: "https://cdn.pombagiras.com/fotos/pombagira_menina.png", link: "menina/index.html" },
     { name: "Da Figueira", url: "https://cdn.pombagiras.com/fotos/pombagira_da_figueira.png", link: "figueira/index.html" },
@@ -720,7 +720,9 @@ function openModal(name) {
 
     if (modalArticleLink) {
         // Gera link local direto para a página estática do artigo correspondente!
-        if (normalizedKey === "Maria Padilha") {
+        if (imgEntry && imgEntry.link) {
+            modalArticleLink.href = imgEntry.link;
+        } else if (normalizedKey === "Maria Padilha") {
             modalArticleLink.href = "maria-padilha/index.html";
         } else {
             modalArticleLink.href = `guardias/${normalizeFileName(normalizedKey)}.html`;
