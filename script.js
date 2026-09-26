@@ -378,7 +378,7 @@ const carouselImages = [
     { name: "Das Correntes", url: "https://cdn.pombagiras.com/fotos/pombagira_das_correntes.png" },
     { name: "Da Neblina", url: "https://cdn.pombagiras.com/fotos/pombagira_da_neblina.png" },
     { name: "Da Estrada", url: "https://cdn.pombagiras.com/fotos/pombagira_da_estrada.png" },
-    { name: "Do Vento", url: "https://cdn.pombagiras.com/fotos/pombagira_do_vento.png" },
+    { name: "Do Vento", url: "https://cdn.pombagiras.com/fotos/pombagira_do_vento.png", link: "vento/index.html" },
     { name: "Cacurucaia", url: "https://cdn.pombagiras.com/fotos/pombagira_cacurucaia.png" }
 ];
 
