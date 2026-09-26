@@ -362,7 +362,7 @@ const carouselImages = [
     { name: "Cigana", url: "https://cdn.pombagiras.com/fotos/pombagira_cigana.png" },
     { name: "Maria Navalha", url: "https://cdn.pombagiras.com/fotos/pombagira_maria_navalha.png", link: "maria-navalha/index.html" },
     { name: "Da Praia", url: "https://cdn.pombagiras.com/fotos/pombagira_da_praia.png" },
-    { name: "Maria Farrapo", url: "https://cdn.pombagiras.com/fotos/pombagira_maria_farrapo.png" },
+    { name: "Maria Farrapo", url: "https://cdn.pombagiras.com/fotos/pombagira_maria_farrapo.png", link: "maria-farrapo/index.html" },
     { name: "Menina", url: "https://cdn.pombagiras.com/fotos/pombagira_menina.png" },
     { name: "Da Figueira", url: "https://cdn.pombagiras.com/fotos/pombagira_da_figueira.png" },
     { name: "Das Almas", url: "https://cdn.pombagiras.com/fotos/pombagira_das_almas.png" },
