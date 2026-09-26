@@ -360,7 +360,7 @@ const carouselImages = [
     { name: "Dama da Noite", url: "https://cdn.pombagiras.com/fotos/pombagira_dama_da_noite.png" },
     { name: "Sete Saias", url: "https://cdn.pombagiras.com/fotos/pombagira_sete_saias.png" },
     { name: "Cigana", url: "https://cdn.pombagiras.com/fotos/pombagira_cigana.png" },
-    { name: "Maria Navalha", url: "https://cdn.pombagiras.com/fotos/pombagira_maria_navalha.png" },
+    { name: "Maria Navalha", url: "https://cdn.pombagiras.com/fotos/pombagira_maria_navalha.png", link: "maria-navalha/index.html" },
     { name: "Da Praia", url: "https://cdn.pombagiras.com/fotos/pombagira_da_praia.png" },
     { name: "Maria Farrapo", url: "https://cdn.pombagiras.com/fotos/pombagira_maria_farrapo.png" },
     { name: "Menina", url: "https://cdn.pombagiras.com/fotos/pombagira_menina.png" },
