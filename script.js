@@ -356,7 +356,7 @@ const carouselImages = [
     { name: "Maria Padilha", url: "https://cdn.pombagiras.com/fotos/pombagira_maria_padilha.png", link: "maria-padilha/index.html" },
     { name: "Maria Mulambo", url: "https://cdn.pombagiras.com/fotos/pombagira_maria_mulambo.png", link: "maria-mulambo/index.html" },
     { name: "Maria Quitéria", url: "https://cdn.pombagiras.com/fotos/pombagira_maria_quiteria.png", link: "maria-quiteria/index.html" },
-    { name: "Rosa Caveira", url: "https://cdn.pombagiras.com/fotos/pombagira_rosa_caveira.png" },
+    { name: "Rosa Caveira", url: "https://cdn.pombagiras.com/fotos/pombagira_rosa_caveira.png", link: "rosa-caveira/index.html" },
     { name: "Dama da Noite", url: "https://cdn.pombagiras.com/fotos/pombagira_dama_da_noite.png" },
     { name: "Sete Saias", url: "https://cdn.pombagiras.com/fotos/pombagira_sete_saias.png" },
     { name: "Cigana", url: "https://cdn.pombagiras.com/fotos/pombagira_cigana.png" },
