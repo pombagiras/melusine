@@ -383,21 +383,24 @@
 
         h1 {
             font-family: var(--ff-display);
-            font-size: 2.25rem;
+            font-size: clamp(1.85rem, 5vw, 2.5rem);
             font-weight: 800;
-            line-height: 1.25;
-            color: var(--text-color);
-            margin-bottom: 0.75rem;
-            letter-spacing: -0.01em;
+            color: var(--accent-pink);
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.6rem;
+            border-bottom: 2px solid var(--accent-red);
+            padding-bottom: 0.6rem;
             text-align: left;
         }
 
         .subtitle {
-            font-size: 1.05rem;
-            color: var(--accent-pink);
-            margin-bottom: 1.75rem;
+            font-family: var(--ff-display);
+            font-style: italic;
+            font-size: clamp(0.98rem, 2.8vw, 1.15rem);
+            color: var(--muted-text);
+            margin-bottom: 1.85rem;
             line-height: 1.55;
-            font-weight: 400;
             text-align: left;
         }
 
