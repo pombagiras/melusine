@@ -353,7 +353,7 @@ const pombagirasData = {
 };
 
 const carouselImages = [
-    { name: "Maria Padilha", url: "https://cdn.pombagiras.com/fotos/pombagira_maria_padilha.png" },
+    { name: "Maria Padilha", url: "https://cdn.pombagiras.com/fotos/pombagira_maria_padilha.png", link: "maria-padilha/index.html" },
     { name: "Maria Mulambo", url: "https://cdn.pombagiras.com/fotos/pombagira_maria_mulambo.png" },
     { name: "Maria Quitéria", url: "https://cdn.pombagiras.com/fotos/pombagira_maria_quiteria.png" },
     { name: "Rosa Caveira", url: "https://cdn.pombagiras.com/fotos/pombagira_rosa_caveira.png" },
@@ -425,6 +425,10 @@ if (track) {
             // No clique, checamos se o usuário não estava apenas arrastando o carrossel
             div.addEventListener('click', () => {
                 if (isDragging || wasJustDragging) return;
+                if (img.link) {
+                    window.location.href = img.link;
+                    return;
+                }
                 openModal(img.name);
             });
             track.appendChild(div);
@@ -716,7 +720,11 @@ function openModal(name) {
 
     if (modalArticleLink) {
         // Gera link local direto para a página estática do artigo correspondente!
-        modalArticleLink.href = `guardias/${normalizeFileName(normalizedKey)}.html`;
+        if (normalizedKey === "Maria Padilha") {
+            modalArticleLink.href = "maria-padilha/index.html";
+        } else {
+            modalArticleLink.href = `guardias/${normalizeFileName(normalizedKey)}.html`;
+        }
     }
 
     modal.classList.add('active');
