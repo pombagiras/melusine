@@ -103,6 +103,12 @@
   <priority>0.9</priority>
 </url>
 <url>
+  <loc>https://pombagiras.com/da-sombra/</loc>
+  <lastmod>2026-09-26</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
   <loc>https://pombagiras.com/vento/</loc>
   <lastmod>2026-09-26</lastmod>
   <changefreq>weekly</changefreq>
@@ -285,12 +291,6 @@
 </url>
 <url>
   <loc>https://pombagiras.com/da-serra/</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/da-sombra/</loc>
   <lastmod>2026-08-30</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
