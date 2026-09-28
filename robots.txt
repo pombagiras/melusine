@@ -149,6 +149,10 @@ Allow: /dignidade-mediunidade/
 Allow: /dignidade-mediunidade
 Allow: /dignidade/
 Allow: /dignidade
+Allow: /pombagira-de-cada-geracao
+Allow: /pombagira-de-cada-geracao/
+Allow: /geracao/
+Allow: /geracao
 Disallow: /*?*
 Disallow: /search/
 Disallow: /login/
