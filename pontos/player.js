@@ -8,7 +8,7 @@
 (function () {
   'use strict';
 
-  // 13 Faixas Oficiais da Playlist
+  // 15 Faixas Oficiais da Playlist
   const TRACKS = [
     {
       id: "eDouWBmWQsw",
@@ -87,6 +87,18 @@
       title: "Rosas queimam, corujas anunciam",
       author: "Almas de Pombagira | Alexia Melusine",
       desc: "Cântico profundo das Almas: a anunciação dos mistérios noturnos, o aroma das rosas e a presença viva da guardiã."
+    },
+    {
+      id: "hZKpyN2zt5Y",
+      title: "No cruzamento, a tempestade não é cenário é manifestação",
+      author: "Almas de Pombagira | Alexia Melusine",
+      desc: "No cruzamento sagrado, relâmpagos e fogo revelam o que não permanece oculto: a tempestade como manifestação viva da força das Guardiãs."
+    },
+    {
+      id: "VMPgE82iRs0",
+      title: "Música lenta, fria e profundamente melancólica",
+      author: "Almas de Pombagira | Alexia Melusine",
+      desc: "Cântico denso de limiar e atmosfera noturna: a voz como presença sagrada entre chamas e caminhos ancestrais."
     }
   ];
 
