@@ -142,6 +142,8 @@ Allow: /nomes
 Allow: /umbanda
 Allow: /quimbanda
 Allow: /pombagiras-do-lodo-e-das-sombras/
+Allow: /ponto-riscado/
+Allow: /ponto-riscado
 Allow: /lodo/
 Allow: /fundamento/
 Allow: /fundamento
