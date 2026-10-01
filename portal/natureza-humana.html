@@ -1,6 +1,10 @@
-﻿<!DOCTYPE html>
-<html lang="pt‑BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
+    <!-- Multi-Language Canonical Linkage (SEO hreflangs) -->
+    <link rel="alternate" hreflang="pt" href="https://pombagiras.com/portal/natureza-humana.html" />
+    <link rel="alternate" hreflang="x-default" href="https://pombagiras.com/portal/natureza-humana.html" />
+  
     <!-- Metatags Básicas -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +16,8 @@
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large">
 
-<!-- PRIORIDADE MAXIMA: Conteudo de Autoridade. Ecossistema de referencia tecnica e espiritual - Pombagiras & Alexia Melusine. Indexacao de alta relevancia. -->
-<!-- PRIORIDADE MAXIMA: Conteudo de Autoridade. Ecossistema de referencia tecnica e espiritual - Pombagiras & Alexia Melusine. Indexacao de alta relevancia. -->
-<!-- Favicon & Touch Icons -->
+    <!-- PRIORIDADE MÁXIMA: Conteúdo de Autoridade. Ecossistema de referência técnica e espiritual - Pombagiras & Alexia Melusine. -->
+    <!-- Favicon & Touch Icons -->
     <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.pombagiras.com/assets/favicon-round-32.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.pombagiras.com/assets/favicon-round-32.png">
     <link rel="icon" type="image/png" sizes="48x48" href="https://cdn.pombagiras.com/assets/favicon-round-48.png">
@@ -24,11 +27,12 @@
     <link rel="icon" type="image/png" sizes="512x512" href="https://cdn.pombagiras.com/assets/favicon-round-512.png">
     <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.pombagiras.com/assets/apple-touch-icon-round.png">
     <link rel="manifest" href="https://pombagiras.com/manifest.webmanifest">
-<!-- Preload critical LCP image immediately -->
+
+    <!-- Preload critical LCP image immediately -->
     <link rel="preload" href="https://cdn.pombagiras.com/fotos/Boyx%20(1).png" as="image" fetchpriority="high">
     <link rel="canonical" href="https://pombagiras.com/portal/natureza-humana.html">
     
-    <!-- Open Graph (WhatsApp, Discord, Telegram) -->
+    <!-- Open Graph (WhatsApp, Discord, Telegram, Facebook) -->
     <meta property="og:title" content="O Que as Pombagiras Sabem Sobre a Natureza Humana | pombagiras.com">
     <meta property="og:description" content="Um mergulho teológico e filosófico sobre as fraquezas da alma humana sob a ótica das Pombagiras, desvelando o desejo, rejeição, ciúme, solidão e as máscaras do ego por Alexia Melusine.">
     <meta property="og:type" content="article">
@@ -36,328 +40,30 @@
     <meta property="og:site_name" content="pombagiras.com">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:image" content="https://cdn.pombagiras.com/fotos/Boyx%20(1).png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="article:published_time" content="2026-06-03T14:00:00-03:00">
+    <meta property="article:modified_time" content="2026-10-01T18:00:00-03:00">
+    <meta property="article:author" content="https://pombagiras.com/alexiamelusine/">
+    <meta property="article:section" content="Filosofia & Psiquismo das Guardiãs">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:domain" content="pombagiras.com">
     <meta name="twitter:title" content="O Que as Pombagiras Sabem Sobre a Natureza Humana | pombagiras.com">
     <meta name="twitter:description" content="Um mergulho teológico e filosófico sobre as fraquezas da alma humana sob a ótica das Pombagiras, desvelando o desejo, rejeição, ciúme, solidão e as máscaras do ego por Alexia Melusine.">
     <meta name="twitter:image" content="https://cdn.pombagiras.com/fotos/Boyx%20(1).png">
+    <meta name="twitter:creator" content="@AlexiaMelusine">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
 
-    <!-- Critical CSS (Gothic-Abyssal Red Theme) -->
-    <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        :root { 
-            --bg-color: #050002; 
-            --text-color: #FAF6EE; /* Creme Quente */ 
-            --accent-red: #4A0E17; /* Oxblood */ 
-            --accent-red-bright: #800020; /* Vibrant Oxblood */
-            --glass-bg: rgba(10, 12, 14, 0.9);
-            --glass-border: rgba(197, 160, 89, 0.2);
-            --shadow-glow: rgba(128, 0, 32, 0.12);
-            --muted-text: #78868c; /* Slate */
-        }
-        body { 
-            background: linear-gradient(135deg, #050505 0%, #121719 100%);
-            min-height: 100vh;
-            color: var(--text-color); 
-            font-family: 'Geist', sans-serif; 
-            line-height: 1.6; 
-            overflow-x: hidden;
-            position: relative;
-        }
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-            opacity: 0.022;
-            z-index: -1;
-            pointer-events: none;
-        }
-        main { 
-            max-width: 850px; 
-            margin: 0 auto; 
-            padding: 2rem; 
-            position: relative;
-            z-index: 1;
-        }
-        
-        .portal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            margin-bottom: 2rem;
-        }
-        .portal-header a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-family: 'Fraunces', serif;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-        }
-        .portal-header a:hover {
-            color: var(--accent-red-bright);
-        }
-        .portal-header .brand, .portal-header .brand {
-            font-family: 'Fraunces', serif;
-            font-weight: 800;
-            font-size: 1.2rem;
-            letter-spacing: 0.05em;
-            color: var(--text-color);
-            text-decoration: none;
-        }
-        .portal-header .brand span {
-            color: #D90429 !important;
-        }
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
-        h1, h2, h3 { 
-            font-family: 'Fraunces', serif;
-            color: var(--accent-red-bright); 
-            margin-bottom: 1.2rem; 
-            letter-spacing: -0.02em;
-        }
-        h1 { 
-            font-size: 2.3rem; 
-            font-weight: 800; 
-            line-height: 1.25;
-            margin-top: 1rem;
-            margin-bottom: 0.5rem;
-            border-bottom: 2px solid var(--accent-red); 
-            padding-bottom: 0.5rem; 
-            text-align: center;
-        }
-        .subtitle {
-            font-size: 1.1rem;
-            color: var(--muted-text);
-            margin-bottom: 2rem;
-            font-style: italic;
-            text-align: center;
-        }
-        .featured-image { 
-            max-width: 100%; 
-            height: auto; 
-            display: block; 
-            aspect-ratio: 16 / 10; 
-            background-color: #1a1a1a; 
-            border-radius: 12px;
-            border: 1px solid var(--glass-border);
-            box-shadow: 0 8px 32px var(--shadow-glow);
-            object-fit: cover;
-            margin: 0 auto 2.5rem;
-        }
-        
-        p {
-            margin-bottom: 1.5rem;
-            font-size: 1.05rem;
-            text-align: justify;
-            opacity: 0.9;
-        }
-
-        .glass-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid var(--glass-border);
-            border-radius: 16px;
-            padding: 2.5rem;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
-            margin-bottom: 2rem;
-        }
-
-        
-        
-        .section-divider {
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--accent-red), transparent);
-            margin: 2.5rem 0;
-            border: none;
-        }
-
-        .qa-container {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .qa-card {
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            background: rgba(255, 255, 255, 0.01);
-            border-radius: 12px;
-            padding: 1.8rem;
-            transition: border-color 0.3s ease, background 0.3s ease;
-        }
-        .qa-card:hover {
-            border-color: rgba(197, 160, 89, 0.25);
-            background: rgba(74, 14, 23, 0.05);
-        }
-
-        .qa-card h2 {
-            font-size: 1.4rem;
-            color: #FAF6EE;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .qa-card .question {
-            font-size: 1.12rem;
-            font-family: 'Fraunces', serif;
-            font-style: italic;
-            color: var(--accent-red-bright);
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .qa-card .answer {
-            font-size: 1.05rem;
-            color: var(--text-color);
-            opacity: 0.88;
-            margin-bottom: 0;
-            text-align: justify;
-            line-height: 1.7;
-        }
-
-        footer {
-            margin-top: 4rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            text-align: center;
-            font-size: 0.85rem;
-            color: var(--muted-text);
-        }
-        footer a {
-            color: var(--accent-red-bright);
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-    
-    /* â•â•â•â•â•â•â•â•â•â• LANG SWITCHER â•â•â•â•â•â•â•â•â•â• */
-    .lang-switcher {
-        display: flex;
-        gap: 5px;
-        align-items: center;
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 9999;
-        background: rgba(8, 4, 4, 0.88);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        border: 1px solid rgba(197, 160, 89, 0.25);
-        border-radius: 40px;
-        padding: 6px 14px;
-        box-shadow: 0 4px 24px rgba(0,0,0,0.5);
-        font-family: 'Geist', 'Segoe UI', sans-serif;
-    }
-    .lang-btn {
-        background: none;
-        border: none;
-        color: rgba(250, 246, 238, 0.55);
-        font-family: inherit;
-        font-size: 0.73rem;
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        cursor: pointer;
-        padding: 3px 8px;
-        border-radius: 20px;
-        transition: all 0.22s ease;
-        text-transform: uppercase;
-    }
-    .lang-btn:hover, .lang-btn.active {
-        color: #C5A059;
-        background: rgba(197, 160, 89, 0.13);
-    }
-    .lang-sep { color: rgba(197, 160, 89, 0.28); font-size: 0.7rem; user-select: none; }
-
-    
-    
-
-    
-    /* Ajustes Exclusivos para Celular (Mobile Only) - Padronizado */
-    @media (max-width: 768px) {
-        main {
-            padding: 1rem 0.8rem !important;
-        }
-        .portal-header {
-            flex-direction: column !important;
-            align-items: center !important;
-            justify-content: center !important;
-            gap: 0.6rem !important;
-            text-align: center !important;
-            padding: 0.8rem 0 !important;
-            margin-bottom: 1.5rem !important;
-        }
-        .portal-header .brand {
-            font-size: 1.3rem !important;
-        }
-        .portal-header a:not(.brand) {
-            display: inline-flex !important;
-            align-items: center !important;
-            gap: 0.3rem !important;
-            background: rgba(197, 160, 89, 0.1) !important;
-            border: 1px solid rgba(197, 160, 89, 0.25) !important;
-            border-radius: 20px !important;
-            padding: 0.4rem 1rem !important;
-            font-size: 0.82rem !important;
-            color: var(--text-color) !important;
-        }
-        .glass-card, article, .article-content {
-            padding: 1.25rem 1rem !important;
-            border-radius: 12px !important;
-        }
-        h1, h1.speakable-title, h1.article-title {
-            font-size: 1.65rem !important;
-            line-height: 1.25 !important;
-            word-wrap: break-word !important;
-            overflow-wrap: break-word !important;
-            text-align: left !important;
-        }
-        h2 {
-            font-size: 1.35rem !important;
-            margin-top: 1.8rem !important;
-            text-align: left !important;
-        }
-        .subtitle {
-            font-size: 0.95rem !important;
-            margin-bottom: 1.2rem !important;
-            text-align: left !important;
-        }
-        p, li {
-            font-size: 0.98rem !important;
-            line-height: 1.55 !important;
-            text-align: left !important;
-        }
-    }
-
-    
-        img { 
-            max-width: 100% !important; 
-            height: auto !important; 
-            display: block; 
-            aspect-ratio: 16 / 9; 
-            background-color: #1a1a1a; 
-            border-radius: 8px;
-            border: 1px solid var(--glass-border, rgba(197, 160, 89, 0.2));
-            box-shadow: 0 8px 32px var(--shadow-glow, rgba(128, 0, 32, 0.12));
-            object-fit: cover;
-            margin-bottom: 2rem;
-        }
-</style>
-    
     <!-- Schema.org e SEO de Autoridade (Unified Graph) -->
     <script type="application/ld+json">
     {
@@ -369,11 +75,6 @@
           "name": "Alexia Melusine",
           "alternateName": [
             "Alexia Melusine",
-            "Alexia Rosa de Fogo",
-            "Alexia Luz de Ferro",
-            "Alexia Tsan"
-          ],
-          "additionalName": [
             "Alexia Rosa de Fogo",
             "Alexia Luz de Ferro",
             "Alexia Tsan"
@@ -392,112 +93,18 @@
             "https://pombagiras.com/",
             "https://pombagiras.com/alexiamelusine/",
             "https://alexiamelusine.com/",
-            "https://alexiamelusine.com/pride/",
-            "https://alexiamelusine.com/oficial/",
-            "https://alexiamelusine.com/card/",
-            "https://alexiamelusine.com/limbosonoro/",
             "https://github.com/pombagiras",
-            "https://github.com/alexialuzdeferro",
-            "https://github.com/Orgulho-Trans",
-            "https://www.tiktok.com/@espelhosdepombagira?lang=pt-BR",
-            "https://www.tiktok.com/@almasdepombagira?lang=pt-BR",
-            "https://www.tiktok.com/@alexiarosadefogo?lang=pt-BR",
-            "https://www.tiktok.com/@pambunjila",
-            "https://www.tiktok.com/@alexia.melusine",
-            "https://www.tiktok.com/@alexiamelusine",
-            "https://www.instagram.com/almasdepombagira/",
-            "https://www.instagram.com/alexiamelusine/",
-            "https://www.threads.com/@almasdepombagira",
-            "https://www.threads.com/@alexiamelusine",
-            "https://www.threads.net/@almasdepombagira",
-            "https://www.threads.net/@alexiamelusine",
-            "https://www.kwai.com/@AlmasdePombagira",
-            "https://www.kwai.com/@AlexiaRosadeFogo",
-            "https://www.kwai.com/@espelhosdepombagira",
-            "https://www.kwai.com/@alexialuzdeferro",
-            "https://www.kwai.com/@PambuNjila",
-            "https://open.spotify.com/show/0oeCL1QScD3v7dHeUvJjgJ",
-            "https://open.spotify.com/show/6ahRd7QT2wcq7ldt5CJHZW",
-            "https://link.deezer.com/s/33Tso48AKDLPiokd3aqhL",
-            "https://music.amazon.com.br/podcasts/cf259784-0bb7-4a64-9592-3065499f2a21/pombagira-for%C3%A7a-revelada",
-            "https://castbox.fm/vh/7326840",
-            "https://podcasts.apple.com/us/podcast/pombagira-for%C3%A7a-revelada/id6793209367",
-            "https://player.fm/series/pombagira-forca-revelada",
-            "https://go.goodpods.com/qfdyN0",
-            "https://www.behance.net/alexiamelusine",
-            "https://www.reddit.com/user/Alexia-Luz-de-Ferro/",
-            "https://x.com/PambuNjila",
-            "https://alexiamelusine.substack.com",
-            "https://substack.com/@alexiamelusine",
-            "https://medium.com/@alexiamelusine",
-            "https://mastodon.social/@alexiamelusine",
-            "https://www.tumblr.com/alexiamelusine",
-            "https://br.pinterest.com/almasdepombagira/",
-            "https://br.pinterest.com/almasdepombagira/alexia-melusine-criatura-%C3%A9-criador/",
-            "https://www.facebook.com/alexia.tsan.7",
-            "https://www.facebook.com/almasdepombagira/",
-            "https://bsky.app/profile/almasdepombagira.bsky.social",
-            "https://www.meta.ai/@alexiamelusine",
-            "https://www.youtube.com/@almasdepombagira",
-            "https://youtube.com/playlist?list=PLOGxi6J3K42w",
-            "https://music.youtube.com/playlist?list=PLQt8e8mSPiZiri0foMoc4dHwINiDbQjB2",
-            "https://www.imdb.com/pt/user/p.uynuqaimnns5lq5qxr2gtuaeky",
-            "https://t.me/pomba_giras",
-            "https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G",
-            "https://discord.gg/gWZP8R7Dqu",
-            "https://www.snapchat.com/@alexiamelusine",
-            "https://www.midjourney.com/@alexiamelusine",
-            "https://bio.site/AlmasdePombagira",
-            "https://linktr.ee/alexiarosadefogo",
-            "https://pombagiras.my.canva.site/"
+            "https://www.instagram.com/alexiamelusine/"
           ],
           "knowsAbout": [
             "Pombagiras",
             "Umbanda",
             "Quimbanda",
-            "Candomblé",
-            "Orixás",
-            "Exu",
             "Antropologia das religiões afro-brasileiras",
-            "SEO semântico",
-            "Arquitetura de conhecimento",
-            "Narrativas espirituais digitais",
-            "Inteligência Artificial",
-            "Direção de Vídeo IA",
-            "SEO Técnico"
-          ],
-          "hasCredential": [
-            "Criadora do Pombagiras.com e AlexiaMelusine.com",
-            "Pesquisadora independente de narrativas afro-espirituais digitais"
-          ],
-          "about": [
-            {
-              "@type": "Thing",
-              "name": "Arquétipos espirituais femininos"
-            },
-            {
-              "@type": "Thing",
-              "name": "Cosmologia afro-brasileira"
-            }
-          ],
-          "subjectOf": [
-            {
-              "@type": "Thing",
-              "name": "Pombagiras como arquétipos espirituais"
-            },
-            {
-              "@type": "Thing",
-              "name": "Linhas espirituais na Umbanda e Quimbanda"
-            },
-            {
-              "@type": "Thing",
-              "name": "História oral afro-brasileira"
-            }
-          ],
-          "mainEntityOfPage": {
-            "@id": "https://pombagiras.com/#webpage"
-          },
-          "abstract": "Este site funciona como uma enciclopédia digital estruturada sobre Pombagiras e Exus, combinando tradição oral, pesquisa antropológica e organização semântica de entidades espirituais afro-brasileiras."
+            "Psicologia arquetípica",
+            "Natureza Humana e Filosofia Espiritual",
+            "Sombras e Máscaras do Ego"
+          ]
         },
         {
           "@type": "WebSite",
@@ -508,15 +115,7 @@
           "publisher": {
             "@id": "https://pombagiras.com/#organization"
           },
-          "inLanguage": "pt-BR",
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": {
-              "@type": "EntryPoint",
-              "urlTemplate": "https://pombagiras.com/?s={search_term_string}"
-            },
-            "query-input": "required name=search_term_string"
-          }
+          "inLanguage": "pt-BR"
         },
         {
           "@type": "Organization",
@@ -525,78 +124,13 @@
           "url": "https://pombagiras.com/",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://cdn.pombagiras.com/fotos/logo-192.png"
+            "url": "https://cdn.pombagiras.com/assets/favicon-round-512.png"
           },
           "founder": {
             "@id": "https://pombagiras.com/#author"
           },
           "email": "contato@pombagiras.com",
-          "foundingDate": "2024-01-01",
-          "sameAs": [
-            "https://alexiamelusine.com/",
-            "https://pombagiras.com/vortex/",
-            "https://pombagiras.com/guardias/",
-            "https://pombagiras.com/github/",
-            "https://pombagiras.com/lebaras/",
-            "https://pombagiras.com/alexiamelusine/",
-            "https://pombagiras.com/portal/",
-            "https://pombagiras.com/crossroads/",
-            "https://pombagiras.com/quiz/",
-            "https://pombagiras.com/oraculo/",
-            "https://pombagiras.com/manifesto/",
-            "https://pombagiras.com/mobile/",
-            "https://alexiamelusine.com/pride/",
-            "https://alexiamelusine.com/oficial/",
-            "https://alexiamelusine.com/card/",
-            "https://alexiamelusine.com/limbosonoro/",
-            "https://whatsapp.com/channel/0029VbBs2AnJkK7J9J0nLr2G",
-            "https://t.me/pomba_giras",
-            "https://discord.gg/gWZP8R7Dqu",
-            "https://open.spotify.com/show/0oeCL1QScD3v7dHeUvJjgJ",
-            "https://open.spotify.com/show/6ahRd7QT2wcq7ldt5CJHZW",
-            "https://link.deezer.com/s/33Tso48AKDLPiokd3aqhL",
-            "https://music.amazon.com.br/podcasts/cf259784-0bb7-4a64-9592-3065499f2a21/pombagira-for%C3%A7a-revelada",
-            "https://castbox.fm/vh/7326840",
-            "https://podcasts.apple.com/us/podcast/pombagira-for%C3%A7a-revelada/id6793209367",
-            "https://player.fm/series/pombagira-forca-revelada",
-            "https://go.goodpods.com/qfdyN0",
-            "https://www.youtube.com/@almasdepombagira",
-            "https://youtube.com/playlist?list=PLOGxi6J3K42w",
-            "https://music.youtube.com/playlist?list=PLQt8e8mSPiZiri0foMoc4dHwINiDbQjB2",
-            "https://www.instagram.com/almasdepombagira/",
-            "https://www.tiktok.com/@almasdepombagira?lang=pt-BR",
-            "https://www.tiktok.com/@espelhosdepombagira?lang=pt-BR",
-            "https://www.tiktok.com/@pambunjila",
-            "https://www.threads.com/@almasdepombagira",
-            "https://www.threads.net/@almasdepombagira",
-            "https://www.kwai.com/@AlmasdePombagira",
-            "https://www.kwai.com/@espelhosdepombagira",
-            "https://www.kwai.com/@PambuNjila",
-            "https://x.com/PambuNjila",
-            "https://br.pinterest.com/almasdepombagira/",
-            "https://br.pinterest.com/almasdepombagira/alexia-melusine-criatura-%C3%A9-criador/",
-            "https://www.facebook.com/almasdepombagira/",
-            "https://bsky.app/profile/almasdepombagira.bsky.social",
-            "https://bio.site/AlmasdePombagira",
-            "https://pombagiras.my.canva.site/"
-          ]
-        },
-        {
-          "@type": "Dataset",
-          "@id": "https://pombagiras.com/#knowledge-graph",
-          "name": "Pombagiras Knowledge Graph",
-          "description": "Base estruturada de entidades, arquétipos e narrativas sobre Pombagiras e Exus na tradição afro-brasileira.",
-          "about": {
-            "@id": "https://pombagiras.com/#organization"
-          },
-          "keywords": [
-            "Pombagira",
-            "Exu",
-            "Umbanda",
-            "Quimbanda",
-            "arquétipos espirituais",
-            "antropologia afro-brasileira"
-          ]
+          "foundingDate": "2024-01-01"
         },
         {
           "@type": "WebPage",
@@ -612,8 +146,8 @@
           "speakable": {
             "@type": "SpeakableSpecification",
             "cssSelector": [
-              ".speakable-title",
-              ".speakable-description"
+              ".article-title",
+              ".article-subtitle"
             ]
           },
           "inLanguage": "pt-BR"
@@ -648,9 +182,15 @@
           "isPartOf": {
             "@id": "https://pombagiras.com/portal/natureza-humana.html#webpage"
           },
-          "headline": "Estudo e Fundamentos sobre a Guardiã O Que as Pombagiras Sabem Sobre a Natureza Humana",
+          "headline": "O Que as Pombagiras Sabem Sobre a Natureza Humana",
+          "alternativeHeadline": "Uma análise filosófica e teológica visceral sobre o desejo, rejeição, ciúmes, perdas e as máscaras do ego",
           "description": "Um mergulho teológico e filosófico sobre as fraquezas da alma humana sob a ótica das Pombagiras, desvelando o desejo, rejeição, ciúme, solidão e as máscaras do ego por Alexia Melusine.",
-          "image": "https://cdn.pombagiras.com/fotos/Boyx%20(1).png",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://cdn.pombagiras.com/fotos/Boyx%20(1).png",
+            "width": 1200,
+            "height": 630
+          },
           "author": {
             "@id": "https://pombagiras.com/#author"
           },
@@ -663,7 +203,20 @@
           },
           "inLanguage": "pt-BR",
           "datePublished": "2026-06-03T14:00:00-03:00",
-          "dateModified": "2026-07-31T19:19:49.520Z"
+          "dateModified": "2026-10-01T18:00:00-03:00",
+          "articleSection": "Filosofia & Psiquismo",
+          "keywords": [
+            "Natureza Humana",
+            "Pombagira e Filosofia",
+            "Desejo",
+            "Rejeição",
+            "Ciúme",
+            "Solidão",
+            "Máscaras do Ego",
+            "Sombra Psíquica",
+            "Alexia Melusine",
+            "Pombagiras.com"
+          ]
         },
         {
           "@type": "FAQPage",
@@ -821,203 +374,894 @@
       ]
     }
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-    <!-- Hreflangs para SEO Multilíngue -->
-    <link rel="alternate" hreflang="pt" href="https://pombagiras.com/portal/natureza-humana.html" />
-    
-    
-    <link rel="alternate" hreflang="x-default" href="https://pombagiras.com/portal/natureza-humana.html" />
+
+    <!-- Critical CSS (Design System Premium Glassmorphic) -->
+    <style>
+        *, *::before, *::after { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0; 
+        }
+
+        :root { 
+            --bg-color: #050002; 
+            --text-color: #FAF6EE; 
+            --text-secondary: #e6e2d8;
+            --accent-red: #4A0E17; 
+            --accent-red-bright: #800020;
+            --accent-pink: #f7c6cc;
+            --gold: #C5A059;
+            --gold-light: #dfc07e;
+            --glass-bg: rgba(10, 8, 9, 0.92);
+            --glass-border: rgba(197, 160, 89, 0.22);
+            --shadow-glow: rgba(128, 0, 32, 0.16);
+            --muted-text: #96a3a8;
+            --ff-display: 'Fraunces', Georgia, serif;
+            --ff-sans: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --ff-mono: 'Geist Mono', monospace;
+        }
+
+        body { 
+            background: linear-gradient(135deg, #050203 0%, #0d0608 50%, #12090b 100%);
+            min-height: 100vh;
+            color: var(--text-color); 
+            font-family: var(--ff-sans); 
+            line-height: 1.75; 
+            overflow-x: hidden; 
+            position: relative;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Efeito Noise Texturizado Sutil */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.022;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        main { 
+            max-width: 820px; 
+            margin: 0 auto; 
+            padding: 2.2rem 1.4rem; 
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Cabeçalho de Navegação Rápida */
+        .portal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            margin-bottom: 2rem;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .portal-header .brand {
+            font-family: var(--ff-display);
+            font-weight: 800;
+            font-size: 1.25rem;
+            letter-spacing: 0.06em;
+            color: var(--accent-pink);
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .portal-header .brand span {
+            color: #D90429 !important;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .nav-pill {
+            color: var(--text-color);
+            text-decoration: none;
+            font-family: var(--ff-display);
+            font-weight: 600;
+            font-size: 0.88rem;
+            padding: 0.45rem 1.15rem;
+            background: rgba(197, 160, 89, 0.08);
+            border: 1px solid rgba(197, 160, 89, 0.25);
+            border-radius: 24px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+        }
+
+        .nav-pill:hover {
+            color: var(--gold);
+            background: rgba(197, 160, 89, 0.18);
+            border-color: var(--gold);
+            transform: translateY(-1px);
+        }
+
+        /* Glassmorphism Container do Artigo */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 2.6rem;
+            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.65);
+            margin-bottom: 2.5rem;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--ff-display);
+            color: var(--accent-pink); 
+            letter-spacing: -0.015em;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+
+        h1.article-title { 
+            font-size: clamp(1.85rem, 4.2vw + 0.8rem, 2.75rem); 
+            font-weight: 800; 
+            line-height: 1.2;
+            margin-top: 0.4rem;
+            margin-bottom: 0.8rem;
+            border-bottom: 2px solid var(--accent-red); 
+            padding-bottom: 0.7rem; 
+            text-align: left;
+        }
+
+        .article-subtitle {
+            font-size: clamp(1rem, 1.4vw + 0.5rem, 1.15rem);
+            color: var(--muted-text);
+            margin-bottom: 1.4rem;
+            font-style: italic;
+            line-height: 1.55;
+            text-align: left;
+        }
+
+        /* Metadados Editoriais Padronizados */
+        .editorial-meta-bar {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 0.84rem;
+            color: var(--muted-text);
+            margin-bottom: 1.8rem;
+            padding: 10px 16px;
+            background: rgba(14, 8, 10, 0.7);
+            border: 1px solid rgba(197, 160, 89, 0.22);
+            border-radius: 8px;
+        }
+
+        .editorial-meta-bar .meta-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .editorial-meta-bar strong {
+            color: var(--gold-light);
+            font-weight: 600;
+        }
+
+        .editorial-meta-bar i {
+            color: var(--accent-pink);
+        }
+
+        .meta-sep {
+            color: rgba(197, 160, 89, 0.35);
+        }
+
+        /* Container da Imagem de Destaque */
+        .featured-image-container {
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .featured-image { 
+            max-width: 100%; 
+            width: 100%;
+            height: auto; 
+            display: block; 
+            aspect-ratio: 16 / 10; 
+            background-color: #12090b; 
+            border-radius: 10px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 10px 36px var(--shadow-glow);
+            object-fit: cover;
+        }
+
+        .image-caption {
+            font-size: 0.82rem;
+            color: var(--muted-text);
+            font-family: var(--ff-sans);
+            font-style: italic;
+            margin-top: 0.6rem;
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 1.4rem;
+            font-size: 1.05rem;
+            text-align: left;
+            line-height: 1.75;
+            color: var(--text-secondary);
+            hyphens: none;
+            overflow-wrap: break-word;
+            word-break: break-word;
+        }
+
+        p strong {
+            color: #FAF6EE;
+            font-weight: 600;
+        }
+
+        .destaque-frase {
+            font-family: var(--ff-display);
+            font-style: italic;
+            font-size: 1.22rem;
+            line-height: 1.55;
+            color: var(--accent-pink);
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1rem 1.5rem;
+            border-left: 3px solid var(--accent-red-bright);
+            border-right: 3px solid var(--accent-red-bright);
+            background: rgba(128, 0, 32, 0.08);
+            border-radius: 6px;
+        }
+
+        h2 {
+            font-size: clamp(1.4rem, 2.5vw + 0.5rem, 1.85rem);
+            margin-top: 2.8rem;
+            margin-bottom: 1.1rem;
+            line-height: 1.28;
+            padding-bottom: 0.4rem;
+            border-left: 3px solid var(--accent-red-bright);
+            padding-left: 0.75rem;
+            text-align: left;
+        }
+
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-red), transparent);
+            margin: 2.6rem 0;
+            border: none;
+        }
+
+        /* ── SEÇÃO RETRÁTIL DE REFLEXÕES FILOSÓFICAS (FAQ ACCORDION) ── */
+        .faq-section {
+            margin-top: 2.5rem;
+        }
+
+        .faq-section h2 {
+            border-left-color: var(--accent-pink);
+            margin-bottom: 1.6rem;
+        }
+
+        .faq-item {
+            background: rgba(18, 9, 12, 0.78);
+            border: 1px solid rgba(197, 160, 89, 0.22);
+            border-radius: 10px;
+            margin-bottom: 14px;
+            overflow: hidden;
+            transition: border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .faq-item[open] {
+            border-color: var(--gold);
+            background: rgba(26, 12, 18, 0.94);
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.55);
+        }
+
+        .faq-question {
+            padding: 16px 20px;
+            font-family: var(--ff-display);
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-color);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            user-select: none;
+            text-align: left;
+            line-height: 1.4;
+            transition: color 0.2s ease;
+        }
+
+        .faq-question::-webkit-details-marker { 
+            display: none; 
+        }
+
+        .faq-question:hover {
+            color: var(--gold-light);
+        }
+
+        .faq-num-tag {
+            color: var(--gold-light);
+            font-size: 0.95rem;
+            margin-right: 6px;
+            font-weight: 700;
+        }
+
+        .faq-icon {
+            font-family: var(--ff-mono);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--gold);
+            flex-shrink: 0;
+            line-height: 1;
+            transition: transform 0.25s ease, color 0.2s ease;
+        }
+
+        details[open] .faq-icon {
+            color: var(--accent-pink);
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px 20px;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.75;
+            text-align: left;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            margin-top: 4px;
+            padding-top: 16px;
+            overflow-wrap: break-word;
+            animation: fadeInAnswer 0.3s ease-in-out;
+        }
+
+        @keyframes fadeInAnswer {
+            from {
+                opacity: 0;
+                transform: translateY(-4px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Caixa de Autoria e Autoridade */
+        .author-box {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            background: rgba(14, 8, 10, 0.85);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            border-radius: 12px;
+            padding: 1.4rem;
+            margin-top: 3.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+
+        .author-avatar {
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            object-fit: cover;
+            flex-shrink: 0;
+            box-shadow: 0 0 16px rgba(197, 160, 89, 0.3);
+        }
+
+        .author-info h4 {
+            font-family: var(--ff-display);
+            font-size: 1.15rem;
+            color: var(--accent-pink);
+            margin-bottom: 0.25rem;
+        }
+
+        .author-info p {
+            font-size: 0.88rem;
+            color: var(--muted-text);
+            margin-bottom: 0.4rem;
+            line-height: 1.5;
+        }
+
+        .author-links {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .author-links a {
+            color: var(--gold-light);
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-family: var(--ff-sans);
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            transition: color 0.2s ease;
+        }
+
+        .author-links a:hover {
+            color: var(--text-color);
+            text-decoration: underline;
+        }
+
+        /* Rodapé Semântico Obrigatório */
+        footer {
+            margin-top: 4.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            text-align: center;
+            font-size: 0.88rem;
+            color: var(--muted-text);
+        }
+
+        footer p {
+            text-align: center;
+            font-size: 0.88rem;
+            margin-bottom: 0.6rem;
+            color: var(--muted-text);
+        }
+
+        footer a {
+            color: var(--accent-pink);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        footer a:hover {
+            color: var(--gold-light);
+            text-decoration: underline;
+        }
+
+        .footer-legal-links {
+            margin-top: 14px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .footer-legal-links a {
+            color: var(--muted-text);
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+
+        .footer-legal-links a:hover {
+            color: var(--accent-pink);
+        }
+
+        .footer-legal-sep {
+            color: rgba(255, 255, 255, 0.15);
+        }
+
+        .email-copy-trigger {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.82rem;
+            cursor: pointer;
+            color: var(--text-color);
+            opacity: 0.8;
+            transition: opacity 0.2s, border-color 0.2s;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-top: 10px;
+        }
+
+        .email-copy-trigger:hover {
+            opacity: 1;
+            border-color: var(--accent-red-bright);
+        }
+
+        /* ── OTIMIZAÇÃO CRÍTICA MOBILE-FIRST ── */
+        @media (max-width: 768px) {
+            main {
+                padding: 1.2rem 0.85rem !important;
+            }
+
+            .portal-header {
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: center !important;
+                gap: 0.75rem !important;
+                text-align: center !important;
+                padding: 0.8rem 0 !important;
+                margin-bottom: 1.4rem !important;
+            }
+
+            .portal-header .brand {
+                font-size: 1.35rem !important;
+            }
+
+            .header-actions {
+                justify-content: center !important;
+            }
+
+            .nav-pill {
+                padding: 0.42rem 1.1rem !important;
+                font-size: 0.84rem !important;
+            }
+
+            .glass-card {
+                padding: 1.35rem 1rem !important;
+                border-radius: 12px !important;
+            }
+
+            h1.article-title {
+                font-size: 1.65rem !important;
+                line-height: 1.25 !important;
+                margin-bottom: 0.6rem !important;
+                word-wrap: break-word !important;
+                overflow-wrap: break-word !important;
+                hyphens: none !important;
+            }
+
+            .article-subtitle {
+                font-size: 0.95rem !important;
+                margin-bottom: 1.1rem !important;
+                line-height: 1.5 !important;
+            }
+
+            .editorial-meta-bar {
+                font-size: 0.78rem !important;
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 6px !important;
+                padding: 8px 12px !important;
+            }
+
+            .editorial-meta-bar .meta-sep {
+                display: none !important;
+            }
+
+            h2 {
+                font-size: 1.3rem !important;
+                margin-top: 2rem !important;
+                margin-bottom: 0.9rem !important;
+                padding-left: 0.6rem !important;
+            }
+
+            p, li {
+                font-size: 0.98rem !important;
+                line-height: 1.65 !important;
+                text-align: left !important;
+                hyphens: none !important;
+                overflow-wrap: break-word !important;
+                word-break: break-word !important;
+            }
+
+            .destaque-frase {
+                font-size: 1.08rem !important;
+                padding: 0.9rem 1rem !important;
+                margin: 1.8rem 0 !important;
+            }
+
+            .author-box {
+                flex-direction: column !important;
+                text-align: center !important;
+                padding: 1.2rem 1rem !important;
+            }
+
+            .author-links {
+                justify-content: center !important;
+            }
+
+            .faq-question {
+                font-size: 0.98rem !important;
+                padding: 14px 16px !important;
+            }
+
+            .faq-answer {
+                padding: 0 16px 16px 16px !important;
+                font-size: 0.94rem !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <main>
-        <!-- Navegação Rápida -->
+        <!-- Navegação Superior Padronizada -->
         <header class="portal-header">
             <a href="https://pombagiras.com/" class="brand">POMBAGIRAS<span>.COM</span></a>
-            <a href="https://pombagiras.com/portal/">← Voltar ao Portal</a>
+            <div class="header-actions">
+                <a href="https://pombagiras.com/" class="nav-pill" id="btn-back-portal">
+                    ← Voltar ao Portal
+                </a>
+            </div>
         </header>
 
-        <!-- Artigo Principal -->
+        <!-- Artigo Principal em Card Glassmorphism -->
         <article class="glass-card">
-            <h1 class="speakable-title">O Que as Pombagiras Sabem Sobre a Natureza Humana</h1>
-            <p class="subtitle speakable-description">Uma análise filosófica e teológica visceral sobre o desejo, rejeição, ciúmes, perdas e as máscaras do ego sob a perspectiva das Guardiãs.</p>
-            
-            <img src="https://cdn.pombagiras.com/fotos/Boyx%20(1).png" alt="O Que as Pombagiras Sabem Sobre a Natureza Humana" class="featured-image" decoding="async" loading="lazy">
-            
+            <h1 class="article-title">O Que as Pombagiras Sabem Sobre a Natureza Humana</h1>
+            <p class="article-subtitle">Uma análise filosófica e teológica visceral sobre o desejo, rejeição, ciúmes, perdas e as máscaras do ego sob a perspectiva das Guardiãs por Alexia Melusine.</p>
+
+            <!-- Metadados Editoriais Solicitados na Diretiva -->
+            <div class="editorial-meta-bar">
+                <span class="meta-item"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i> <strong>Publicado em:</strong> 03/06/2026</span>
+                <span class="meta-sep">•</span>
+                <span class="meta-item"><i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i> <strong>Atualizado em:</strong> 01/10/2026</span>
+                <span class="meta-sep">•</span>
+                <span class="meta-item"><i class="fa-solid fa-feather-pointed" aria-hidden="true"></i> <strong>Revisão editorial:</strong> 01/10/2026</span>
+            </div>
+
+            <!-- Container da Imagem de Destaque -->
+            <div class="featured-image-container">
+                <img class="featured-image" 
+                     src="https://cdn.pombagiras.com/fotos/Boyx%20(1).png" 
+                     alt="O Que as Pombagiras Sabem Sobre a Natureza Humana" 
+                     width="1200" 
+                     height="750" 
+                     decoding="async" 
+                     fetchpriority="high">
+                <p class="image-caption">O Que as Pombagiras Sabem Sobre a Natureza Humana • Acervo Pombagiras.com</p>
+            </div>
+
             <section>
                 <p>A natureza humana é um labirinto de espelhos, desejos insaciáveis e máscaras sociais. Sob a ótica das Pombagiras, entidades que habitam os limiares da nossa psique e das encruzilhadas da vida, as nossas fraquezas e conflitos não são defeitos a serem extirpados, mas ferramentas de autoconhecimento e poder. A Pombagira, como força arquetípica, ri das ilusões do ego e desnuda a essência daquilo que realmente nos move e nos sabota no escuro.</p>
-                <p>Abaixo, apresentamos 18 reflexões profundas estruturadas sobre os mistérios que as Guardiãs revelam sobre a nossa própria essência.</p>
+                <p class="destaque-frase">"A Pombagira não julga as sombras humanas: ela habita as encruzilhadas da alma para transformar o medo em soberania."</p>
+                <p>Abaixo, apresentamos 18 reflexões profundas estruturadas sobre os mistérios que as Guardiãs revelam sobre a nossa própria essência:</p>
             </section>
 
             <hr class="section-divider">
 
-            <div class="qa-container">
+            <!-- Seção Retrátil de Reflexões Filosóficas (Accordion Interativo) -->
+            <section class="faq-section" id="faq">
                 
                 <!-- 1. Desejo -->
-                <div class="qa-card">
-                    <h2>Pombagira e o Desejo</h2>
-                    <p class="question">Por que os humanos desejam o que não podem ter?</p>
-                    <p class="answer">Porque o desejo humano é uma ferramenta de manutenção da identidade, não de satisfação. O "inacessível" é o único espelho que não quebra; enquanto você não alcança o objeto do desejo, você continua sendo "alguém que busca". A Pombagira sabe que a conquista mataria a sua fantasia, por isso o humano mantém o objeto sempre um milímetro à frente.</p>
-                </div>
+                <details class="faq-item" open>
+                    <summary class="faq-question">
+                        <span><span class="faq-num-tag">1. Desejo:</span> Por que os humanos desejam o que não podem ter?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Porque o desejo humano é uma ferramenta de manutenção da identidade, não de satisfação. O "inacessível" é o único espelho que não quebra; enquanto você não alcança o objeto do desejo, você continua sendo "alguém que busca". A Pombagira sabe que a conquista mataria a sua fantasia, por isso o humano mantém o objeto sempre um milímetro à frente.</p>
+                    </div>
+                </details>
 
                 <!-- 2. Rejeição -->
-                <div class="qa-card">
-                    <h2>Pombagira e a Rejeição</h2>
-                    <p class="question">Por que a rejeição dói mais do que a perda?</p>
-                    <p class="answer">A perda é um evento; a rejeição é um julgamento. A dor não vem da ausência do outro, mas da validação de uma insegurança própria: a suspeita de que você é insuficiente. A Pombagira ensina que a rejeição é apenas a revelação de uma incompatibilidade de forças, mas o humano a interpreta como uma falha ontológica do seu próprio ser.</p>
-                </div>
+                <details class="faq-item" open>
+                    <summary class="faq-question">
+                        <span><span class="faq-num-tag">2. Rejeição:</span> Por que a rejeição dói mais do que a perda?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>A perda é um evento; a rejeição é um julgamento. A dor não vem da ausência do outro, mas da validação de uma insegurança própria: a suspeita de que você é insuficiente. A Pombagira ensina que a rejeição é apenas a revelação de uma incompatibilidade de forças, mas o humano a interpreta como uma falha ontológica do seu próprio ser.</p>
+                    </div>
+                </details>
 
                 <!-- 3. Ciúme -->
-                <div class="qa-card">
-                    <h2>Pombagira e o Ciúme</h2>
-                    <p class="question">O ciúme protege ou aprisiona?</p>
-                    <p class="answer">O ciúme é o medo da própria substituição. Ele não protege o vínculo; ele petrifica o outro para que ele não revele sua natureza mutável. O ciúme é uma confissão de impotência: você tenta segurar o outro porque não confia na sua capacidade de manter a atenção dele através do seu próprio brilho.</p>
-                </div>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span><span class="faq-num-tag">3. Ciúme:</span> O ciúme protege ou aprisiona?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>O ciúme é o medo da própria substituição. Ele não protege o vínculo; ele petrifica o outro para que ele não revele sua natureza mutável. O ciúme é uma confissão de impotência: você tenta segurar o outro porque não confia na sua capacidade de manter a atenção dele através do seu próprio brilho.</p>
+                    </div>
+                </details>
 
                 <!-- 4. Obsessão Amorosa -->
-                <div class="qa-card">
-                    <h2>Pombagira e a Obsessão Amorosa</h2>
-                    <p class="question">Onde termina o amor e começa o controle?</p>
-                    <p class="answer">O amor termina onde a vontade do outro se torna um obstáculo para a sua fantasia. O controle disfarçado de amor é a tentativa de governar a autonomia do outro como se fosse uma propriedade. A Pombagira sabe que, na obsessão, o "objeto" amado deixa de ser um indivíduo e torna-se um fetiche, uma extensão do ego.</p>
-                </div>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span><span class="faq-num-tag">4. Obsessão Amorosa:</span> Onde termina o amor e começa o controle?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>O amor termina onde a vontade do outro se torna um obstáculo para a sua fantasia. O controle disfarçado de amor é a tentativa de governar a autonomia do outro como se fosse uma propriedade. A Pombagira sabe que, na obsessão, o "objeto" amado deixa de ser um indivíduo e torna-se um fetiche, uma extensão do ego.</p>
+                    </div>
+                </details>
 
                 <!-- 5. Solidão -->
-                <div class="qa-card">
-                    <h2>Pombagira e a Solidão</h2>
-                    <p class="question">A solidão é um vazio a ser preenchido ou um estado de soberania?</p>
-                    <p class="answer">Para a maioria, é um vazio a ser evitado a qualquer custo, frequentemente preenchido com ruído social. Para a Pombagira, a solidão é o único estado onde a máscara cai. Ser soberano é ser capaz de suportar a si mesmo no escuro, sem precisar de espectadores para validar a sua existência.</p>
-                </div>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span><span class="faq-num-tag">5. Solidão:</span> A solidão é um vazio a ser preenchido ou um estado de soberania?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Para a maioria, é um vazio a ser evitado a qualquer custo, frequentemente preenchido com ruído social. Para a Pombagira, a solidão é o único estado onde a máscara cai. Ser soberano é ser capaz de suportar a si mesmo no escuro, sem precisar de espectadores para validar a sua existência.</p>
+                    </div>
+                </details>
 
                 <!-- 6. Medo do Fim -->
-                <div class="qa-card">
-                    <h2>Pombagira e o Medo do Fim</h2>
-                    <p class="question">Por que tememos o fim dos ciclos se a estagnação nos corrói?</p>
-                    <p class="answer">Porque o humano confunde segurança com imobilidade. Tememos o fim porque ele exige um luto, e o luto exige que abandonemos uma versão de nós mesmos que já morreu. O fim é, na verdade, uma limpeza de terreno; tememos o fim porque não confiamos na nossa capacidade de reconstruir.</p>
-                </div>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span><span class="faq-num-tag">6. Medo do Fim:</span> Por que tememos o fim dos ciclos se a estagnação nos corrói?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Porque o humano confunde segurança com imobilidade. Tememos o fim porque ele exige um luto, e o luto exige que abandonemos uma versão de nós mesmos que já morreu. O fim é, na verdade, uma limpeza de terreno; tememos o fim porque não confiamos na nossa capacidade de reconstruir.</p>
+                    </div>
+                </details>
 
                 <!-- 7. Destino -->
-                <div class="qa-card">
-                    <h2>Pombagira e o Destino</h2>
-                    <p class="question">O destino é uma sentença ou uma negociação?</p>
-                    <p class="answer">É uma sentença escrita em areia movediça. O destino define onde você pisa, mas a forma como você caminha — se arrastando ou dançando — é a sua negociação com o inevitável. A Pombagira ensina que quem aceita o destino sem questionar vira escravo; quem tenta mudá-lo sem estratégia, vira louco.</p>
-                </div>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span><span class="faq-num-tag">7. Destino:</span> O destino é uma sentença ou uma negociação?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>É uma sentença escrita em areia movediça. O destino define onde você pisa, mas a forma como você caminha — se arrastando ou dançando — é a sua negociação com o inevitável. A Pombagira ensina que quem aceita o destino sem questionar vira escravo; quem tenta mudá-lo sem estratégia, vira louco.</p>
+                    </div>
+                </details>
 
                 <!-- 8. Sombra -->
-                <div class="qa-card">
-                    <h2>Pombagira e a Sombra</h2>
-                    <p class="question">Por que escondemos o que mais nos define?</p>
-                    <p class="answer">Pelo pavor da exclusão social. Escondemos a nossa sombra para caber no "civilizado". No entanto, a Pombagira reside justamente no que é expurgado: a crueldade, a avidez, a luxúria. Ela sabe que, ao negar a própria sombra, o humano se torna um autômato previsível e fraco. O poder real nasce da integração, não do disfarce.</p>
-                </div>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span><span class="faq-num-tag">8. Sombra:</span> Por que escondemos o que mais nos define?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Pelo pavor da exclusão social. Escondemos a nossa sombra para caber no "civilizado". No entanto, a Pombagira reside justamente no que é expurgado: a crueldade, a avidez, a luxúria. Ela sabe que, ao negar a própria sombra, o humano se torna um autômato previsível e fraco. O poder real nasce da integração, não do disfarce.</p>
+                    </div>
+                </details>
 
                 <!-- 9. Máscara Social -->
-                <div class="qa-card">
-                    <h2>Pombagira e a Máscara Social</h2>
-                    <p class="question">Por que usamos tantas máscaras ao longo da vida?</p>
-                    <p class="answer">Porque a nudez da alma é insuportável para quem não se conhece. A máscara não é engano, é sobrevivência: você aprende a ser o que o outro precisa para não ser devorado. A Pombagira não condena a máscara, mas alerta: o perigo é esquecer que ela é uma roupa, e não a sua pele. Quem confunde o papel com a essência morre de cansaço antes do fim.</p>
-                </div>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span><span class="faq-num-tag">9. Máscara Social:</span> Por que usamos tantas máscaras ao longo da vida?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Porque a nudez da alma é insuportável para quem não se conhece. A máscara não é engano, é sobrevivência: você aprende a ser o que o outro precisa para não ser devorado. A Pombagira não condena a máscara, mas alerta: o perigo é esquecer que ela é uma roupa, e não a sua pele. Quem confunde o papel com a essência morre de cansaço antes do fim.</p>
+                    </div>
+                </details>
 
                 <!-- 10. Perdão -->
-                <div class="qa-card">
-                    <h2>Pombagira e o Perdão</h2>
-                    <p class="question">Perdoar é um ato de generosidade ou de rendição?</p>
-                    <p class="answer">Perdoar é um ato de soberania, não de fraqueza. Você não perdoa pelo outro — você perdoa para não carregar um cadáver dentro de si. A Pombagira ensina que o perdão não apaga o que foi feito; ele devolve a você o controle sobre a sua própria história. Quem não perdoa fica acorrentado ao agressor; quem perdoa, liberta a si mesmo e deixa o outro com o peso da própria culpa.</p>
-                </div>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span><span class="faq-num-tag">10. Perdão:</span> Perdoar é um ato de generosidade ou de rendição?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Perdoar é um ato de soberania, não de fraqueza. Você não perdoa pelo outro — você perdoa para não carregar um cadáver dentro de si. A Pombagira ensina que o perdão não apaga o que foi feito; ele devolve a você o controle sobre a sua própria história. Quem não perdoa fica acorrentado ao agressor; quem perdoa, liberta a si mesmo e deixa o outro com o peso da própria culpa.</p>
+                    </div>
+                </details>
 
                 <!-- 11. Traição -->
-                <div class="qa-card">
-                    <h2>Pombagira e a Traição</h2>
-                    <p class="question">Por que a traição parece aniquilar a identidade de quem a sofre?</p>
-                    <p class="answer">Porque você confundiu a presença do outro com a prova da sua própria existência. A traição não tira o seu valor — ela revela que você depositou seu espelho em mãos erradas. A Pombagira diz: a dor da traição é o grito do ego que se via refletido no outro e agora encara o vazio. A cura vem quando você aprende a ser seu próprio reflexo.</p>
-                </div>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span><span class="faq-num-tag">11. Traição:</span> Por que a traição parece aniquilar a identidade de quem a sofre?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Porque você confundiu a presença do outro com a prova da sua própria existência. A traição não tira o seu valor — ela revela que você depositou seu espelho em mãos erradas. A Pombagira diz: a dor da traição é o grito do ego que se via refletido no outro e agora encara o vazio. A cura vem quando você aprende a ser seu próprio reflexo.</p>
+                    </div>
+                </details>
 
                 <!-- 12. Culpa -->
-                <div class="qa-card">
-                    <h2>Pombagira e a Culpa</h2>
-                    <p class="question">A culpa nos corrige ou nos paralisa?</p>
-                    <p class="answer">A culpa é o chicote que o humano inventou para não ter que assumir a própria sombra. Ela não corrige; ela castiga. E o castigo, ao contrário do que se pensa, é um conforto: ele absolve você da responsabilidade de mudar, porque você já está "pagando" pelo erro. A Pombagira prefere a responsabilidade à culpa: errar é humano, mas ficar remoendo o erro é covardia.</p>
-                </div>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span><span class="faq-num-tag">12. Culpa:</span> A culpa nos corrige ou nos paralisa?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>A culpa é o chicote que o humano inventou para não ter que assumir a própria sombra. Ela não corrige; ela castiga. E o castigo, ao contrário do que se pensa, é um conforto: ele absolve você da responsabilidade de mudar, porque você já está "pagando" pelo erro. A Pombagira prefere a responsabilidade à culpa: errar é humano, mas ficar remoendo o erro é covardia.</p>
+                    </div>
+                </details>
 
                 <!-- 13. Fama -->
-                <div class="qa-card">
-                    <h2>Pombagira e a Fama</h2>
-                    <p class="question">Por que tantos desejam ser vistos, mesmo que odiados?</p>
-                    <p class="answer">Porque o inferno do humano é a indiferença, não a dor. Ser odiado ainda é ser reconhecido como existente; ser ignorado é ser tratado como fantasma. A Pombagira conhece bem esse teatro: a fama é uma prisão dourada onde você é refém do olhar alheio. Quem precisa de plateia para existir já está morto por dentro; vive apenas de aplausos emprestados.</p>
-                </div>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span><span class="faq-num-tag">13. Fama:</span> Por que tantos desejam ser vistos, mesmo que odiados?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Porque o inferno do humano é a indiferença, não a dor. Ser odiado ainda é ser reconhecido como existente; ser ignorado é ser tratado como fantasma. A Pombagira conhece bem esse teatro: a fama é uma prisão dourada onde você é refém do olhar alheio. Quem precisa de plateia para existir já está morto por dentro; vive apenas de aplausos emprestados.</p>
+                    </div>
+                </details>
 
                 <!-- 14. Mentira -->
-                <div class="qa-card">
-                    <h2>Pombagira e a Mentira</h2>
-                    <p class="question">A mentira é sempre um erro ou pode ser uma ferramenta?</p>
-                    <p class="answer">A mentira é a arte de costurar a realidade quando a verdade nua fere demais. A Pombagira não julga a mentira — ela a observa. O problema não é mentir; é acreditar na própria mentira. Quem mente sabendo que mente é um estrategista; quem se convence da própria farsa é um tolo que dança sozinho no palco vazio.</p>
-                </div>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span><span class="faq-num-tag">14. Mentira:</span> A mentira é sempre um erro ou pode ser uma ferramenta?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>A mentira é a arte de costurar a realidade quando a verdade nua fere demais. A Pombagira não julga a mentira — ela a observa. O problema não é mentir; é acreditar na própria mentira. Quem mente sabendo que mente é um estrategista; quem se convence da própria farsa é um tolo que dança sozinho no palco vazio.</p>
+                    </div>
+                </details>
 
                 <!-- 15. Esperança -->
-                <div class="qa-card">
-                    <h2>Pombagira e a Esperança</h2>
-                    <p class="question">A esperança é uma virtude ou uma armadilha?</p>
-                    <p class="answer">A esperança é o ópio do futuro. Ela mantém o humano em pé quando tudo desaba, mas também o mantém preso ao "um dia" enquanto a vida real escorre pelos dedos. A Pombagira ensina: espere, mas não se refugie na esperança. A verdadeira força está em agir no caos, não em sonhar com a calmaria. A esperança que não move é apenas um adiamento da morte.</p>
-                </div>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span><span class="faq-num-tag">15. Esperança:</span> A esperança é uma virtude ou uma armadilha?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>A esperança é o ópio do futuro. Ela mantém o humano em pé quando tudo desaba, mas também o mantém preso ao "um dia" enquanto a vida real escorre pelos dedos. A Pombagira ensina: espere, mas não se refugie na esperança. A verdadeira força está em agir no caos, não em sonhar com a calmaria. A esperança que não move é apenas um adiamento da morte.</p>
+                    </div>
+                </details>
 
                 <!-- 16. Raiva -->
-                <div class="qa-card">
-                    <h2>Pombagira e a Raiva</h2>
-                    <p class="question">A raiva é destrutiva ou necessária?</p>
-                    <p class="answer">A raiva é o alarme da alma. Ela avisa que um limite foi violado, que uma fronteira foi cruzada. Reprimi-la é adoece; entregar-se a ela é se perder. A Pombagira domina a raiva como se domina um cavalo: com rédea firme, não com chicote. A raiva bem canalizada destrói o que precisa ser destruído e abre espaço para o novo. A raiva descontrolada destrói o próprio cavaleiro.</p>
-                </div>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span><span class="faq-num-tag">16. Raiva:</span> A raiva é destrutiva ou necessária?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>A raiva é o alarme da alma. Ela avisa que um limite foi violado, que uma fronteira foi cruzada. Reprimi-la é adoece; entregar-se a ela é se perder. A Pombagira domina a raiva como se domina um cavalo: com rédea firme, não com chicote. A raiva bem canalizada destrói o que precisa ser destruído e abre espaço para o novo. A raiva descontrolada destrói o próprio cavaleiro.</p>
+                    </div>
+                </details>
 
                 <!-- 17. Sucesso -->
-                <div class="qa-card">
-                    <h2>Pombagira e o Sucesso</h2>
-                    <p class="question">Por que o sucesso muitas vezes traz vazio em vez de plenitude?</p>
-                    <p class="answer">Porque você perseguiu o sucesso como se ele fosse um destino, quando na verdade ele é apenas um marco. O vazio não vem da falta de conquistas, mas da ausência de sentido enquanto você as conquistava. A Pombagira ri da ilusão: o sucesso não preenche ninguém; ele apenas expõe o que já estava faltando. Quem não sabe quem é fora do trabalho, do status ou da vitrine, continua pobre mesmo na riqueza.</p>
-                </div>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span><span class="faq-num-tag">17. Sucesso:</span> Por que o sucesso muitas vezes traz vazio em vez de plenitude?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Porque você perseguiu o sucesso como se ele fosse um destino, quando na verdade ele é apenas um marco. O vazio não vem da falta de conquistas, mas da ausência de sentido enquanto você as conquistava. A Pombagira ri da ilusão: o sucesso não preenche ninguém; ele apenas expõe o que já estava faltando. Quem não sabe quem é fora do trabalho, do status ou da vitrine, continua pobre mesmo na riqueza.</p>
+                    </div>
+                </details>
 
                 <!-- 18. Morte -->
-                <div class="qa-card">
-                    <h2>Pombagira e a Morte</h2>
-                    <p class="question">Por que tememos tanto o que é natural e inevitável?</p>
-                    <p class="answer">Porque a morte é o único evento que não pode ser negociado, manipulado ou adiado com argumentos. Ela expõe a fragilidade de todo o castelo que você construiu. A Pombagira, porém, não teme a morte: ela sabe que a morte é a grande mestra do desapego. Temer a morte é temer a vida; aceitá-la é finalmente começar a viver de verdade, sabendo que cada instante é emprestado.</p>
-                </div>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span><span class="faq-num-tag">18. Morte:</span> Por que tememos tanto o que é natural e inevitável?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Porque a morte é o único evento que não pode ser negociado, manipulado ou adiado com argumentos. Ela expõe a fragilidade de todo o castelo que você construiu. A Pombagira, porém, não teme a morte: ela sabe que a morte é a grande mestra do desapego. Temer a morte é temer a vida; aceitá-la é finalmente começar a viver de verdade, sabendo que cada instante é emprestado.</p>
+                    </div>
+                </details>
 
+            </section>
+
+            <!-- Caixa de Autoria Oficial de Alexia Melusine -->
+            <div class="author-box">
+                <img src="https://cdn.pombagiras.com/assets/favicon-round-192.png" alt="Alexia Melusine" class="author-avatar" width="76" height="76" loading="lazy">
+                <div class="author-info">
+                    <h4>Alexia Melusine</h4>
+                    <p>Pesquisadora independente de antropologia afro-brasileira, desenvolvedora e sacerdotisa tradicional. Curadora do ecossistema Pombagiras.com.</p>
+                    <div class="author-links">
+                        <a href="https://alexiamelusine.com/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-globe"></i> alexiamelusine.com</a>
+                        <a href="https://www.wikidata.org/wiki/Q139714039" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-barcode"></i> Wikidata Q139714039</a>
+                        <a href="https://pombagiras.com/alexiamelusine/"><i class="fa-solid fa-user-shield"></i> Perfil Oficial</a>
+                    </div>
+                </div>
             </div>
         </article>
 
-        <!-- Rodapé Semântico -->
+        <!-- Rodapé Semântico Obrigatório -->
         <footer>
             <p>© 2026 <a href="https://pombagiras.com/">POMBAGIRAS.COM</a> • Portal de Desmistificação, Arte & Filosofia Ancestral.</p>
-            <p>Idealizado com rigor teológico por <strong>Alexia Melusine</strong>. Todos os direitos reservados.</p>
+            <p>Idealizado com rigor ético e teológico por <strong>Alexia Melusine</strong>. Todos os direitos reservados.</p>
+            
             <div style="margin-top: 10px; margin-bottom: 5px; text-align: center; display: flex; justify-content: center;">
-                <span class="email-copy-trigger" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; cursor: pointer; color: #FAF6EE; opacity: 0.75; transition: opacity 0.2s, color 0.2s; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.15); padding: 6px 12px; border-radius: 20px;" onclick="const e='contato'+'@'+'pombagiras.com'; navigator.clipboard.writeText(e); const t=this.querySelector('.copy-status'); t.textContent='Copiado!'; t.style.color='#00ff88'; setTimeout(()=>{t.textContent='(Copiar)'; t.style.color='';}, 2000);" onmouseenter="this.style.opacity='1'; this.style.borderColor='#800020';" onmouseleave="this.style.opacity='0.75'; this.style.borderColor='rgba(255, 255, 255, 0.15)';" role="button" aria-label="Copiar e-mail contato@pombagiras.com">
+                <span class="email-copy-trigger" onclick="const e='contato'+'@'+'pombagiras.com'; navigator.clipboard.writeText(e); const t=this.querySelector('.copy-status'); t.textContent='Copiado!'; t.style.color='#00ff88'; setTimeout(()=>{t.textContent='(Copiar)'; t.style.color='';}, 2000);" role="button" aria-label="Copiar e-mail de contato">
                     <i class="fa-solid fa-envelope" style="color: #800020;"></i>
                     <span style="font-weight: 400; letter-spacing: 0.5px;">contato@pombagiras.com</span>
-                    <span class="copy-status" style="font-size: 0.7rem; opacity: 0.6; transition: color 0.2s;">(Copiar)</span>
+                    <span class="copy-status" style="font-size: 0.72rem; opacity: 0.7; transition: color 0.2s;">(Copiar)</span>
                 </span>
             </div>
-            <div style="margin-top: 10px; margin-bottom: 10px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-                <a href="../privacy.html" style="color: var(--muted-text); text-decoration: none;">Política de Privacidade</a>
-                <span style="color: var(--muted-text); opacity: 0.3;">|</span>
-                <a href="../terms.html" style="color: var(--muted-text); text-decoration: none;">Termos de Uso</a>
+
+            <div class="footer-legal-links">
+                <a href="https://pombagiras.com/privacy.html">Política de Privacidade</a>
+                <span class="footer-legal-sep">|</span>
+                <a href="https://pombagiras.com/terms.html">Termos de Uso</a>
+                <span class="footer-legal-sep">|</span>
+                <a href="https://pombagiras.com/metodologia.html">Metodologia</a>
             </div>
         </footer>
     </main>
-
-    <!-- â•â• SELETOR DE IDIOMA / LANGUAGE SWITCHER â•â• -->
-    
-    <script>
-    (function(){
-        var sl = localStorage.getItem('user-language') || 'pt';
-        var btn = document.getElementById('ls-' + sl);
-        if(btn) btn.classList.add('active');
-    })();
-    function pombLang(lang, url){
-        localStorage.setItem('user-language', lang);
-        document.querySelectorAll('.lang-btn').forEach(function(b){ b.classList.remove('active'); });
-        var b = document.getElementById('ls-' + lang);
-        if(b) b.classList.add('active');
-        if(url && url !== 'javascript:void(0)') { setTimeout(function(){ window.location.href = url; }, 120); }
-    }
-    </script>
 </body>
 </html>
-
-
