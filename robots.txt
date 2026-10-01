@@ -31,6 +31,14 @@ Disallow: /login/
 Disallow: /private/
 Disallow: /admin/
 
+User-agent: anthropic-ai
+Allow: /
+Disallow: /*?*
+Disallow: /search/
+Disallow: /login/
+Disallow: /private/
+Disallow: /admin/
+
 User-agent: Google-Extended
 Allow: /
 Disallow: /*?*
@@ -131,6 +139,26 @@ Disallow: /search/
 Disallow: /login/
 Disallow: /private/
 Disallow: /admin/
+
+User-agent: Applebot
+Allow: /
+Disallow: /*?*
+Disallow: /search/
+Disallow: /login/
+Disallow: /private/
+Disallow: /admin/
+
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /*?*
+Disallow: /search/
+Disallow: /login/
+Disallow: /private/
+Disallow: /admin/
+
+User-agent: CCBot
+Allow: /
+Disallow: /*?*
 
 # Standard Public Access
 User-agent: *
