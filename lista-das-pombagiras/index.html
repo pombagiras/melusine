@@ -849,8 +849,15 @@
 
         /* ── OTIMIZAÇÃO CRÍTICA MOBILE-FIRST ── */
         @media (max-width: 768px) {
+            html, body {
+                overflow-x: hidden !important;
+                max-width: 100vw !important;
+            }
+
             main {
                 padding: 1.2rem 0.85rem !important;
+                max-width: 100% !important;
+                overflow-x: hidden !important;
             }
 
             .portal-header {
@@ -962,12 +969,57 @@
                 font-size: 0.94rem !important;
             }
 
+            /* Ajuste cirúrgico mobile: Tabela de Classificação Editorial e eliminação de overflow */
             .classification-table {
-                font-size: 0.82rem !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                table-layout: fixed !important;
+                font-size: 0.8rem !important;
+                margin: 1.2rem 0 1.6rem !important;
             }
             .classification-table th,
             .classification-table td {
-                padding: 8px 10px !important;
+                padding: 8px 6px !important;
+                vertical-align: top !important;
+                box-sizing: border-box !important;
+            }
+            .classification-table th:first-child,
+            .classification-table td:first-child {
+                width: 38% !important;
+                padding-left: 0 !important;
+                padding-right: 6px !important;
+            }
+            .classification-table th:last-child,
+            .classification-table td:last-child {
+                width: 62% !important;
+                padding-left: 8px !important;
+                padding-right: 0 !important;
+            }
+            .classification-table th {
+                font-size: 0.72rem !important;
+                letter-spacing: 0.5px !important;
+                line-height: 1.3 !important;
+                border-bottom: 2px solid var(--accent-red) !important;
+            }
+            .classification-table td {
+                font-size: 0.82rem !important;
+                line-height: 1.5 !important;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+                word-break: normal !important;
+                overflow-wrap: break-word !important;
+            }
+            .classification-table .doc-status {
+                display: inline-block !important;
+                font-size: 0.58rem !important;
+                letter-spacing: 0.3px !important;
+                padding: 3px 6px !important;
+                border-radius: 12px !important;
+                margin-bottom: 0 !important;
+                white-space: normal !important;
+                word-break: break-word !important;
+                line-height: 1.25 !important;
+                text-align: center !important;
+                max-width: 100% !important;
             }
         }
     </style>
@@ -1709,10 +1761,10 @@
                 <tbody>
                     <tr>
                         <td><span class="doc-status forte" style="font-size:0.65rem">Forte</span></td>
-                        <td>Maria Padilha, Maria Mulambo/Molambo, Sete Saias, Cigana, das Almas, Maria Quitéria, Dama da Noite, Menina, da Praia, Sete Encruzilhadas, Rosa Caveira</td>
+                        <td>Maria Padilha, Maria Mulambo/<wbr>Molambo, Sete Saias, Cigana, das Almas, Maria Quitéria, Dama da Noite, Menina, da Praia, Sete Encruzilhadas, Rosa Caveira</td>
                     </tr>
                     <tr>
-                        <td><span class="doc-status contemporanea" style="font-size:0.65rem">Posterior/Localizada</span></td>
+                        <td><span class="doc-status contemporanea" style="font-size:0.65rem">Posterior/<wbr>Localizada</span></td>
                         <td>Maria Navalha, Maria Farrapo, da Figueira, da Lua, do Lodo, Baronesa</td>
                     </tr>
                     <tr>
