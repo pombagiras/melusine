@@ -181,6 +181,8 @@ Allow: /dignidade/
 Allow: /dignidade
 Allow: /pombagira-de-cada-geracao
 Allow: /pombagira-de-cada-geracao/
+Allow: /lista-das-pombagiras/
+Allow: /lista-das-pombagiras
 Allow: /geracao/
 Allow: /geracao
 Disallow: /*?*
