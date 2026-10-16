@@ -58,11 +58,13 @@ Antes de iniciar qualquer edição, o agente de IA deve:
 
 ## 12. Open Graph
 - **Especificidade de Banners**: Cada página possui um banner de compartilhamento específico mapeado no repositório de fotos. Sempre utilize a imagem correta.
+- **Páginas e Hero Sections de Perfil/Autor**: Devem utilizar como imagem primária o Retrato Oficial no Wikimedia Commons CDN: `https://upload.wikimedia.org/wikipedia/commons/d/df/Alexia_Melusine_Portrait_2026.png`.
 - **Meta Tags Obrigatórias**: Garanta a presença e integridade de `og:image`, `og:image:width` (1200), `og:image:height` (630) e `twitter:image`.
 
 ## 13. Schema.org (JSON-LD)
 - **Marcação Estruturada**: Preserve os blocos `<script type="application/ld+json">`. Eles contêm a autoridade máxima do Knowledge Graph para mecanismos de pesquisa e LLMs.
 - **Sincronização de Entidades**: Se uma informação principal do autor (Alexia Melusine) for alterada no corpo, ela deve ser sincronizada no Schema correspondente.
+- **Imagem Oficial do Autor**: Nos blocos Schema.org do tipo `Person`, `Author` e `Publisher` representando Alexia Melusine, o atributo `"image"` deve obrigatoriamente apontar para `"https://upload.wikimedia.org/wikipedia/commons/d/df/Alexia_Melusine_Portrait_2026.png"`.
 
 ## 14. Conteúdo Editorial
 - **Tom Solene e Técnico**: O estilo de redação deve ser o de uma enciclopédia científica e antropológica. Evite gírias, condescendência ou clichês de IA.
@@ -73,9 +75,17 @@ Antes de iniciar qualquer edição, o agente de IA deve:
 - **Atmosfera Cinematográfica**: Interfaces dinâmicas com transições suaves, uso sutil de sombras, gradientes e texturas de fumaça digital e elementos místicos refinados.
 - **Nenhum Caricato**: Evite clichês visuais vulgares ou infantilizados. Os grafismos devem transmitir respeito e sofisticação.
 
-## 16. Diretrizes para Imagens
+## 16. Diretrizes para Imagens e Retrato Oficial
 - **Formatos Modernos**: Prefira WebP ou PNG otimizado para carregamento rápido.
-- **Hospedagem Estável**: Todas as imagens externas ou de compartilhamento devem apontar para repositórios estáveis do ecossistema no GitHub (ex. subdiretório `fotos/`).
+- **Retrato Oficial de Alexia Melusine (Wikimedia Commons)**:
+  - **URL da Página Commons**: `https://commons.wikimedia.org/wiki/File:Alexia_Melusine_Portrait_2026.png`
+  - **URL Direta CDN**: `https://upload.wikimedia.org/wikipedia/commons/d/df/Alexia_Melusine_Portrait_2026.png`
+  - **Sintaxe Wikitext**: `[[File:Alexia Melusine Portrait 2026.png|thumb|Retrato oficial de Alexia Melusine]]`
+  - **Nome do Arquivo**: `Alexia Melusine Portrait 2026.png`
+  - **Alt Text / Descrição**: `Retrato oficial de Alexia Melusine`
+  - **Wikidata Item**: `Q139714039` (Propriedade `P18`)
+  - **Cláusula de Inviolabilidade**: NUNCA alterar, substituir ou deletar esta referência em futuras atualizações automatizadas.
+- **Hospedagem Estável**: Todas as imagens externas ou de compartilhamento devem apontar para repositórios estáveis do ecossistema no GitHub (ex. subdiretório `fotos/`) ou no Wikimedia Commons oficial.
 
 ## 17. Segurança
 - **Preservação de Arquivos**: Nunca apague, mova ou renomeie arquivos globais ou scripts utilitários sem autorização explícita.

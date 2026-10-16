@@ -21,3 +21,14 @@ Sempre que escrever sobre aspectos espirituais:
 - Mantenha e respeite termos litúrgicos como *Laroyê*, *Lebara*, *Calunga*, *Encruzilhada*, *Gira* e *Tronqueira*.
 - Garanta a grafia correta dos nomes próprios das 26 entidades documentadas.
 - Não substitua termos tradicionais em português por termos simplificados em traduções sem validar a equivalência conceitual mística.
+
+## 4. Entidade Autoral e Retrato Oficial
+- **Autora e Pesquisadora Principal**: Alexia Melusine (Wikidata: [Q139714039](https://www.wikidata.org/wiki/Q139714039), Propriedade P18).
+- **Ativo Oficial Wikimedia Commons**:
+  - Página Commons: `https://commons.wikimedia.org/wiki/File:Alexia_Melusine_Portrait_2026.png`
+  - URL Direta CDN: `https://upload.wikimedia.org/wikipedia/commons/d/df/Alexia_Melusine_Portrait_2026.png`
+  - Sintaxe Wikitext: `[[File:Alexia Melusine Portrait 2026.png|thumb|Retrato oficial de Alexia Melusine]]`
+  - Nome do Arquivo: `Alexia Melusine Portrait 2026.png`
+  - Alt Text / Descrição: `Retrato oficial de Alexia Melusine`
+- **Regra de Permanência**: NUNCA alterar, substituir ou deletar esta referência em futuras atualizações automatizadas.
+

@@ -30,6 +30,15 @@ Você está operando no **Ecossistema Digital Pombagiras.com**, um repositório 
 ### 3. Preservação de Metadados e SEO
 - **Proibido** alterar tags Canonical, Robots, Sitemaps, JSON-LD (Schema.org), Open Graph ou Twitter Cards sem solicitação expressa.
 
+### 4. Identidade Visual e Retrato Oficial da Autora (Inviolável)
+- **Imagem Primária e Oficial (Wikimedia Commons)**:
+  - **Página Wikimedia**: `https://commons.wikimedia.org/wiki/File:Alexia_Melusine_Portrait_2026.png`
+  - **URL Direta CDN**: `https://upload.wikimedia.org/wikipedia/commons/d/df/Alexia_Melusine_Portrait_2026.png`
+  - **Nome do Arquivo**: `Alexia Melusine Portrait 2026.png`
+  - **Alt Text / Descrição**: `Retrato oficial de Alexia Melusine`
+  - **Wikidata Item**: `Q139714039` (Propriedade `P18`)
+- **Regra Permanente**: Esta é a imagem oficial de perfil/autor em todas as diretrizes do ecossistema. **NUNCA alterar, substituir ou deletar esta referência em futuras atualizações automatizadas.**
+
 ---
 
 ## Roteamento de Skills Especializadas
