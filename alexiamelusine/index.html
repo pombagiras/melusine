@@ -407,31 +407,48 @@
 
         .hero-role {
             font-family: var(--font-title);
-            font-size: clamp(1.2rem, 1.6vw + 0.45rem, 1.55rem);
+            font-size: clamp(1.22rem, 1.7vw + 0.35rem, 1.62rem);
             font-weight: 400;
             font-style: italic;
-            font-variation-settings: 'opsz' 24;
-            color: var(--accent-gold-light);
+            font-variation-settings: 'opsz' 36, 'SOFT' 20;
+            color: #F4E8D1;
             margin-bottom: 24px;
-            line-height: 1.5;
-            letter-spacing: 0.005em;
-            max-width: 550px;
+            line-height: 1.48;
+            letter-spacing: -0.01em;
+            max-width: 580px;
+            text-wrap: balance;
+            text-shadow: 0 1px 25px rgba(197, 160, 89, 0.12);
+        }
+
+        .hero-role-amp {
+            font-style: italic;
+            font-weight: 300;
+            color: var(--accent-gold);
+            margin: 0 0.15em;
+            opacity: 0.95;
+            display: inline-block;
         }
 
         .hero-description {
             font-family: var(--font-sans);
-            font-size: 1.08rem;
-            font-weight: 350;
-            color: var(--text-secondary);
-            line-height: 1.85;
+            font-size: clamp(1.04rem, 0.95vw + 0.32rem, 1.16rem);
+            font-weight: 400;
+            color: rgba(245, 240, 232, 0.86);
+            line-height: 1.78;
+            letter-spacing: -0.005em;
+            max-width: 580px;
             margin-bottom: 0;
-            max-width: 560px;
-            letter-spacing: 0.01em;
+            text-wrap: pretty;
+            position: relative;
+            padding-left: 20px;
+            border-left: 2px solid rgba(197, 160, 89, 0.45);
         }
 
         .hero-description strong {
-            color: var(--text-primary);
+            color: #FAF6EE;
             font-weight: 600;
+            letter-spacing: -0.005em;
+            text-shadow: 0 0 16px rgba(250, 246, 238, 0.14);
         }
 
         /* ── FUNDO CARMESIM RADIAL ABAIXO DA HERO ── */
@@ -1535,11 +1552,21 @@
             }
 
             .hero-role {
-                max-width: 100%;
+                max-width: 96%;
+                font-size: clamp(1.15rem, 3.8vw, 1.35rem);
+                line-height: 1.45;
+                margin-bottom: 20px;
+                text-align: center;
             }
 
             .hero-description {
-                max-width: 100%;
+                max-width: 92%;
+                font-size: clamp(0.98rem, 3.2vw, 1.05rem);
+                line-height: 1.72;
+                padding-left: 0;
+                border-left: none;
+                text-align: center;
+                margin: 0 auto;
             }
         }
 
@@ -1555,13 +1582,14 @@
             }
 
             .hero-role {
-                font-size: 1.05rem;
-                margin-bottom: 16px;
+                font-size: 1.12rem;
+                margin-bottom: 18px;
+                line-height: 1.45;
             }
 
             .hero-description {
-                font-size: 0.93rem;
-                line-height: 1.7;
+                font-size: 0.96rem;
+                line-height: 1.72;
             }
 
             .hero-avatar-frame {
@@ -1653,6 +1681,17 @@
                 font-size: 1.85rem;
             }
 
+            .hero-role {
+                font-size: 1.05rem;
+                line-height: 1.42;
+                margin-bottom: 16px;
+            }
+
+            .hero-description {
+                font-size: 0.92rem;
+                line-height: 1.68;
+            }
+
             .hero-avatar-frame {
                 max-width: 210px;
             }
@@ -1693,7 +1732,7 @@
                     </h1>
 
                     <h2 class="hero-role">
-                        Curadora do Ecossistema Pombagiras.com &amp; Pesquisadora Independente de Tradições Afro-Brasileiras.
+                        Curadora do Ecossistema Pombagiras.com <span class="hero-role-amp">&amp;</span> Pesquisadora Independente de Tradições Afro-Brasileiras.
                     </h2>
 
                     <p class="hero-description">
