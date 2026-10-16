@@ -385,7 +385,8 @@
         .hero-left {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
+            text-align: center;
         }
 
         .hero-title {
@@ -395,7 +396,8 @@
             line-height: 1.08;
             letter-spacing: -0.025em;
             color: var(--text-primary);
-            margin-bottom: 18px;
+            margin-bottom: 22px;
+            text-align: center;
         }
 
         .hero-name {
@@ -403,52 +405,35 @@
             color: var(--accent-crimson-bright);
             text-shadow: 0 0 45px var(--accent-crimson-glow), 0 0 90px rgba(139, 0, 0, 0.15);
             letter-spacing: -0.015em;
+            text-align: center;
         }
 
         .hero-role {
             font-family: var(--font-title);
-            font-size: clamp(1.22rem, 1.7vw + 0.35rem, 1.62rem);
+            font-size: clamp(1.22rem, 1.55vw + 0.35rem, 1.55rem);
             font-weight: 400;
             font-style: italic;
             font-variation-settings: 'opsz' 36, 'SOFT' 20;
             color: #F4E8D1;
-            margin-bottom: 24px;
-            line-height: 1.48;
-            letter-spacing: -0.01em;
-            max-width: 580px;
-            text-wrap: balance;
-            text-shadow: 0 1px 25px rgba(197, 160, 89, 0.12);
-        }
-
-        .hero-role-amp {
-            font-style: italic;
-            font-weight: 300;
-            color: var(--accent-gold);
-            margin: 0 0.15em;
-            opacity: 0.95;
-            display: inline-block;
-        }
-
-        .hero-description {
-            font-family: var(--font-sans);
-            font-size: clamp(1.04rem, 0.95vw + 0.32rem, 1.16rem);
-            font-weight: 400;
-            color: rgba(245, 240, 232, 0.86);
-            line-height: 1.78;
-            letter-spacing: -0.005em;
-            max-width: 580px;
             margin-bottom: 0;
-            text-wrap: pretty;
-            position: relative;
-            padding-left: 20px;
-            border-left: 2px solid rgba(197, 160, 89, 0.45);
+            line-height: 1.6;
+            letter-spacing: -0.012em;
+            max-width: 680px;
+            text-align: center;
+            text-shadow: 0 1px 25px rgba(197, 160, 89, 0.14);
         }
 
-        .hero-description strong {
-            color: #FAF6EE;
-            font-weight: 600;
-            letter-spacing: -0.005em;
-            text-shadow: 0 0 16px rgba(250, 246, 238, 0.14);
+        .hero-role-line {
+            display: block;
+            text-align: center;
+        }
+
+        .hero-role-line + .hero-role-line {
+            margin-top: 6px;
+        }
+
+        .hero-role-nowrap {
+            white-space: nowrap;
         }
 
         /* ── FUNDO CARMESIM RADIAL ABAIXO DA HERO ── */
@@ -1473,8 +1458,10 @@
         .footer-legal-links {
             display: flex;
             justify-content: center;
-            gap: 16px;
-            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: nowrap;
+            white-space: nowrap;
             font-size: 0.85rem;
             margin: 0 0 16px;
         }
@@ -1483,6 +1470,7 @@
             color: var(--text-muted);
             text-decoration: none;
             transition: color 0.2s;
+            white-space: nowrap;
         }
 
         .footer-legal-links a:hover {
@@ -1490,7 +1478,8 @@
         }
 
         .footer-legal-sep {
-            color: rgba(255, 255, 255, 0.15);
+            color: rgba(255, 255, 255, 0.25);
+            user-select: none;
         }
 
         .email-copy-trigger {
@@ -1554,19 +1543,9 @@
             .hero-role {
                 max-width: 96%;
                 font-size: clamp(1.15rem, 3.8vw, 1.35rem);
-                line-height: 1.45;
-                margin-bottom: 20px;
+                line-height: 1.48;
+                margin-bottom: 0;
                 text-align: center;
-            }
-
-            .hero-description {
-                max-width: 92%;
-                font-size: clamp(0.98rem, 3.2vw, 1.05rem);
-                line-height: 1.72;
-                padding-left: 0;
-                border-left: none;
-                text-align: center;
-                margin: 0 auto;
             }
         }
 
@@ -1582,14 +1561,9 @@
             }
 
             .hero-role {
-                font-size: 1.12rem;
-                margin-bottom: 18px;
-                line-height: 1.45;
-            }
-
-            .hero-description {
-                font-size: 0.96rem;
-                line-height: 1.72;
+                font-size: 1.15rem;
+                margin-bottom: 0;
+                line-height: 1.48;
             }
 
             .hero-avatar-frame {
@@ -1684,12 +1658,7 @@
             .hero-role {
                 font-size: 1.05rem;
                 line-height: 1.42;
-                margin-bottom: 16px;
-            }
-
-            .hero-description {
-                font-size: 0.92rem;
-                line-height: 1.68;
+                margin-bottom: 0;
             }
 
             .hero-avatar-frame {
@@ -1712,6 +1681,13 @@
             .gallery-grid {
                 grid-template-columns: 1fr;
             }
+
+            .footer-legal-links {
+                gap: 8px;
+                font-size: 0.76rem;
+                flex-wrap: nowrap;
+                white-space: nowrap;
+            }
         }
     </style>
 
@@ -1728,16 +1704,13 @@
                 <!-- Coluna da Esquerda: Apresentação & Biografia -->
                 <div class="hero-left">
                     <h1 class="hero-title speakable-title">
-                        <span class="hero-name">Alexia Melusine.</span>
+                        <span class="hero-name">Alexia Melusine</span>
                     </h1>
 
                     <h2 class="hero-role">
-                        Curadora do Ecossistema Pombagiras.com <span class="hero-role-amp">&amp;</span> Pesquisadora Independente de Tradições Afro-Brasileiras.
+                        <span class="hero-role-line">Curadora do Ecossistema Pombagiras.com</span>
+                        <span class="hero-role-line">Pesquisadora Independente <span class="hero-role-nowrap">de Tradições Afro-Brasileiras.</span></span>
                     </h2>
-
-                    <p class="hero-description">
-                        Atuo na intersecção entre <strong>antropologia, filosofia ancestral e tecnologia digital</strong>. Dedico minha pesquisa e criação à desmistificação das Pombagiras, à preservação da memória oral e à afirmação da dignidade e autonomia espiritual.
-                    </p>
                 </div>
 
                 <!-- Coluna da Direita: Retrato com Halo de Luz -->
@@ -2015,10 +1988,10 @@
     <footer id="contact" role="contentinfo">
         <div class="container">
             <div class="footer-legal-links">
-                <a href="../privacy.html">Política de Privacidade</a>
-                <span class="footer-legal-sep">|</span>
-                <a href="../terms.html">Termos de Uso</a>
-                <span class="footer-legal-sep">|</span>
+                <a href="../privacy.html">Privacidade</a>
+                <span class="footer-legal-sep">-</span>
+                <a href="../terms.html">Termo de Uso</a>
+                <span class="footer-legal-sep">-</span>
                 <a href="../metodologia.html">Metodologia</a>
             </div>
 
