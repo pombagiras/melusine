@@ -420,6 +420,7 @@
       border: 2px solid #ff2e5c;
       box-shadow: 0 0 24px rgba(255,30,90,0.55), 0 0 60px rgba(255,30,90,0.18);
       object-fit: cover;
+      object-position: center 20%;
       transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.35s ease;
     }
 
@@ -698,6 +699,42 @@
       outline: none;
     }
 
+    .footer-legal-links {
+      margin-top: 12px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+      font-size: 0.82rem;
+    }
+
+    .footer-legal-links a {
+      color: #ff90aa;
+      text-decoration: none;
+      opacity: 0.75;
+      transition: opacity 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+
+    .footer-legal-links a:hover {
+      opacity: 1;
+      color: #fff;
+    }
+
+    .footer-legal-sep {
+      color: #ff90aa;
+      opacity: 0.35;
+      user-select: none;
+    }
+
+    .footer-copyright {
+      font-size: 0.84rem;
+      opacity: 0.9;
+    }
+
     /* â•â•â•â•â•â•â•â•â•â•â• HAPTIC / MOBILE â•â•â•â•â•â•â•â•â•â•â• */
     .chip:active, .portal-card:active, .pombagira-badge:active {
       transform: scale(0.97) !important;
@@ -712,6 +749,12 @@
       .stats-row { flex-direction: column; align-items: stretch; }
       .filter-group { justify-content: flex-start; }
       .bento-master { grid-template-columns: 1fr; gap: 1rem; }
+      .footer-legal-links {
+        gap: 8px;
+        font-size: 0.76rem;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+      }
     }
 
     /* Fallback: sem backdrop-filter */
@@ -773,8 +816,9 @@
   <header class="glass-panel hero-dashboard">
     <div class="profile-area">
       <img class="avatar-neon" fetchpriority="high" decoding="async"
-        src="https://cdn.pombagiras.com/fotos/vC%20(8).png"
-        alt="Foto de perfil de Alexia Melusine em estilo renderizado com luz neon" />
+        src="https://upload.wikimedia.org/wikipedia/commons/d/df/Alexia_Melusine_Portrait_2026.png"
+        alt="Retrato oficial de Alexia Melusine"
+        onerror="this.src='https://cdn.pombagiras.com/PODCAST/A.Melusine.png'" />
       <div class="title-badge">
         <h1 class="speakable-title">✦ ALEXIA MELUSINE ✦</h1>
         <div class="substack">LUZ DE FERRO • ROSA DE FOGO</div>
@@ -849,14 +893,14 @@
         <i class="fa-brands fa-github" aria-hidden="true"></i>
       </a>
     </address>
-    <div style="margin-top: 10px; margin-bottom: 10px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; font-size: 0.82rem;">
-      <a href="../privacy.html" style="color: #ff90aa; text-decoration: none; opacity: 0.75; transition: opacity 0.2s;" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.75'">Política de Privacidade</a>
-      <span style="color: #ff90aa; opacity: 0.3;">|</span>
-      <a href="../terms.html" style="color: #ff90aa; text-decoration: none; opacity: 0.75; transition: opacity 0.2s;" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.75'">Termos de Uso</a>
-      <span style="color: #ff90aa; opacity: 0.3;">|</span>
-      <a href="../metodologia.html" style="color: #ff90aa; text-decoration: none; opacity: 0.75; transition: opacity 0.2s;" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.75'">Metodologia</a>
+    <div class="footer-legal-links">
+      <a href="../privacy.html">Privacidade</a>
+      <span class="footer-legal-sep">-</span>
+      <a href="../terms.html">Termos de Uso</a>
+      <span class="footer-legal-sep">-</span>
+      <a href="../metodologia.html">Metodologia</a>
     </div>
-    <div>© 2026 Alexia Melusine — Todas as Guardiãs ecoam em silício e alma.</div>
+    <div class="footer-copyright">© 2026 Alexia Melusine • Todos os direitos reservados.</div>
     <div style="margin-top: 10px; margin-bottom: 5px;">
         <span class="email-copy-trigger" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; cursor: pointer; color: #FAF6EE; opacity: 0.75; transition: opacity 0.2s, color 0.2s; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 77, 109, 0.2); padding: 6px 12px; border-radius: 20px;" onclick="const e='contato'+'@'+'pombagiras.com'; navigator.clipboard.writeText(e); const t=this.querySelector('.copy-status'); t.textContent='Copiado!'; t.style.color='#00ff88'; setTimeout(()=>{t.textContent='(Copiar)'; t.style.color='';}, 2000);" onmouseenter="this.style.opacity='1'; this.style.borderColor='#ff4d6d';" onmouseleave="this.style.opacity='0.75'; this.style.borderColor='rgba(255, 77, 109, 0.2)';" role="button" aria-label="Copiar e-mail contato@pombagiras.com">
             <i class="fa-solid fa-envelope" style="color: #ff4d6d;"></i>
