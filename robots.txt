@@ -165,6 +165,8 @@ User-agent: *
 Allow: /
 Allow: /segredo/
 Allow: /glossario/
+Allow: /enciclopedia/
+Allow: /enciclopedia
 Allow: /oga
 Allow: /nomes
 Allow: /umbanda

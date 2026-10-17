@@ -26,7 +26,7 @@ Sempre que escrever sobre aspectos espirituais:
 - **Autora e Pesquisadora Principal**: Alexia Melusine (Wikidata: [Q139714039](https://www.wikidata.org/wiki/Q139714039), Propriedade P18).
 - **Ativo Oficial Wikimedia Commons**:
   - Página Commons: `https://commons.wikimedia.org/wiki/File:Alexia_Melusine_Portrait_2026.png`
-  - URL Direta CDN: `https://upload.wikimedia.org/wikipedia/commons/d/df/Alexia_Melusine_Portrait_2026.png`
+  - URL Direta CDN: `https://upload.wikimedia.org/wikipedia/commons/d/dd/Alexia_Melusine_Portrait_2026.png`
   - Sintaxe Wikitext: `[[File:Alexia Melusine Portrait 2026.png|thumb|Retrato oficial de Alexia Melusine]]`
   - Nome do Arquivo: `Alexia Melusine Portrait 2026.png`
   - Alt Text / Descrição: `Retrato oficial de Alexia Melusine`
