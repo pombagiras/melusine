@@ -362,8 +362,8 @@ html[data-font-scale="md"]{--scale-factor:1;}
 html[data-font-scale="lg"]{--scale-factor:1.11;}
 html[data-font-scale="xl"]{--scale-factor:1.22;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;background-color:var(--bg-canvas);color:var(--ink-primary);font-family:var(--font-sans);font-size:16px;line-height:1.65;}
-body{min-height:100vh;background-color:var(--bg-canvas);color:var(--ink-primary);overflow-x:hidden;padding-bottom:74px;transition:background-color 0.2s ease,color 0.2s ease;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;background-color:var(--bg-canvas);color:var(--ink-primary);font-family:var(--font-sans);font-size:16px;line-height:1.65;overflow-x:hidden;max-width:100vw;width:100%;}
+body{min-height:100vh;background-color:var(--bg-canvas);color:var(--ink-primary);overflow-x:hidden;max-width:100vw;width:100%;position:relative;padding-bottom:84px;transition:background-color 0.2s ease,color 0.2s ease;}.btn-label-mobile{display:none;}
 #reading-progress-bar{position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--accent-crimson),var(--accent-gold));z-index:9999;transition:width 0.1s linear;}
 #cursor-reticle,#cursor-dot{display:none;pointer-events:none;position:fixed;top:0;left:0;z-index:9998;transform:translate(-50%,-50%);}
 @media (hover:hover) and (pointer:fine){#cursor-reticle{display:block;width:30px;height:30px;border:1.25px solid var(--border-accent);border-radius:50%;transition:width 0.18s ease,height 0.18s ease,background-color 0.18s ease,border-color 0.18s ease;}
@@ -480,16 +480,44 @@ html[data-density="compact"] .card-desc-clamp{display:-webkit-box;-webkit-line-c
 .enc-table tr:last-child td{border-bottom:none;}
 #wiki-popover{position:fixed;z-index:9500;width:min(340px,calc(100vw - 24px));background:var(--bg-surface);border:1.5px solid var(--accent-crimson);border-radius:var(--radius-md);box-shadow:var(--shadow-lg);padding:0.85rem;display:none;flex-direction:column;gap:0.45rem;}
 #wiki-popover.visible{display:flex;animation:fadeInView 0.14s ease;}
-.mobile-bottom-dock{position:fixed;bottom:0;left:0;right:0;z-index:950;background:var(--bg-glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--border-strong);display:grid;grid-template-columns:repeat(6,1fr);padding:0.3rem 0.25rem calc(0.3rem + env(safe-area-inset-bottom,0px));box-shadow:0 -4px 16px rgba(0,0,0,0.08);}
-@media (min-width:900px){.mobile-bottom-dock{display:none;}
+.mobile-bottom-dock{position:fixed;bottom:0;left:0;right:0;width:100%;max-width:100vw;z-index:950;background:var(--bg-glass);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-top:1px solid var(--border-strong);display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0;padding:0.32rem 0.08rem calc(0.35rem + env(safe-area-inset-bottom,8px));box-shadow:0 -4px 20px rgba(0,0,0,0.15);box-sizing:border-box;overflow:hidden;}
+@media (min-width:900px){.mobile-bottom-dock{display:none !important;}
 body{padding-bottom:2rem;}
 }
-.dock-btn{background:none;border:none;color:var(--ink-muted);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.15rem;padding:0.25rem 0.1rem;font-family:var(--font-mono);font-size:0.62rem;cursor:pointer;border-radius:var(--radius-sm);}
-.dock-btn.active{color:var(--accent-crimson);font-weight:600;}
-.dock-icon{font-size:1.05rem;line-height:1;}
-@media (max-width:767px){.desktop-only{display:none !important;}
+.dock-btn{background:transparent;border:none;color:var(--ink-muted);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.12rem;padding:0.2rem 0.04rem;font-family:var(--font-sans);cursor:pointer;border-radius:var(--radius-sm);min-width:0;width:100%;position:relative;transition:color 0.15s ease;-webkit-tap-highlight-color:transparent;}
+.dock-indicator{display:block;width:12px;height:2px;border-radius:999px;background:transparent;transition:background-color 0.15s ease,width 0.15s ease;margin-bottom:2px;}
+.dock-btn.active .dock-indicator{background:var(--accent-crimson);width:18px;}
+.dock-svg{width:18px;height:18px;display:block;flex-shrink:0;stroke:currentColor;transition:transform 0.15s ease,stroke 0.15s ease;}
+.dock-label{font-size:0.62rem;font-weight:500;letter-spacing:-0.015em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;line-height:1.15;color:inherit;}
+.dock-btn:hover{color:var(--ink-primary);}
+.dock-btn.active{color:var(--accent-crimson);}
+.dock-btn.active .dock-label{font-weight:600;}
+.dock-btn.active .dock-svg{transform:translateY(-1px);stroke:var(--accent-crimson);}
+@media (max-width:767px){
+*,*::before,*::after{box-sizing:border-box;}
+html,body{overflow-x:hidden !important;max-width:100vw !important;width:100% !important;}
+.desktop-only{display:none !important;}
+.btn-label-desktop{display:none !important;}
+.btn-label-mobile{display:inline !important;}
+.top-utility-bar{display:flex;flex-direction:column;align-items:stretch;gap:0.35rem;padding:0.35rem 0.65rem;width:100%;max-width:100vw;overflow-x:hidden;box-sizing:border-box;}
+.top-utility-stats{width:100%;max-width:100%;overflow-x:auto;white-space:nowrap;font-size:0.68rem;scrollbar-width:none;}
+.utility-controls{width:100%;max-width:100%;margin-left:0;display:flex;align-items:center;justify-content:flex-start;gap:0.25rem;overflow-x:auto;white-space:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-bottom:2px;}
+.utility-controls::-webkit-scrollbar,.top-utility-stats::-webkit-scrollbar{display:none;}
+.btn-util{font-size:0.68rem;padding:0.18rem 0.42rem;min-height:26px;flex-shrink:0;}
+.site-masthead{padding:0.45rem 0.65rem;width:100%;max-width:100vw;overflow-x:hidden;box-sizing:border-box;}
+.masthead-inner{width:100%;max-width:100%;min-width:0;}
+.brand-row{flex-direction:column;align-items:stretch;gap:0.45rem;width:100%;min-width:0;}
+.brand-identity{width:100%;min-width:0;}
+.brand-title{font-size:1.25rem;word-break:break-word;}
+.search-omnibox{width:100%;max-width:100%;min-width:0;}
+.search-input{width:100%;font-size:0.8rem;padding:0.45rem 2rem 0.45rem 1.9rem;}
+.lens-tabs{width:100%;max-width:100%;min-width:0;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+.main-container{padding:0.65rem 0.55rem 2.5rem;width:100%;max-width:100vw;box-sizing:border-box;overflow-x:hidden;}
+.editorial-dates-strip{width:100%;max-width:100%;word-break:break-word;overflow-wrap:anywhere;box-sizing:border-box;}
+.epistemic-banner,.article-reader,.dossier-sidebar,.abstract-box,.filter-toolbar,.cards-grid,.encyclopedia-card,.table-scroll-wrap{width:100%;max-width:100%;min-width:0;box-sizing:border-box;}
 .mobile-reader-mode .dossier-sidebar{display:none;}
-.chapter-jump-bar{top:88px;}
+.chapter-jump-bar{top:88px;width:100%;max-width:100%;min-width:0;overflow-x:auto;box-sizing:border-box;}
+.enc-body{max-width:100%;word-break:break-word;overflow-wrap:break-word;}
 }
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms !important;transition-duration:0.01ms !important;scroll-behavior:auto !important;}
 }
@@ -526,10 +554,10 @@ body{padding-bottom:2rem;}
 <span id="density-label">↕ Compacto</span>
 </button>
 <button type="button" class="btn-util active" id="btn-open-code-modal" title="Ver e copiar o código HTML completo">
-📄 Código HTML (Copiar)
+📄 <span class="btn-label-desktop">Código HTML (Copiar)</span><span class="btn-label-mobile">HTML</span>
 </button>
 <button type="button" class="btn-util" id="btn-copy-html" title="Copiar código HTML único direto">
-📋 Copiar Rápido
+📋 <span class="btn-label-desktop">Copiar Rápido</span><span class="btn-label-mobile">Copiar</span>
 </button>
 </div>
 </div>
@@ -1113,29 +1141,68 @@ Pombagiras.com — Enciclopédia Digital Independente
 </p>
 </footer>
 <nav class="mobile-bottom-dock" aria-label="Navegação rápida mobile">
-<button type="button" class="dock-btn active" data-dock-lens="dossies">
-<span class="dock-icon">📖</span>
-<span>Dossiês</span>
+<button type="button" class="dock-btn active" data-dock-lens="dossies" aria-label="Dossiês">
+<span class="dock-indicator" aria-hidden="true"></span>
+<svg class="dock-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+  <line x1="9" y1="7" x2="16" y2="7"/>
+  <line x1="9" y1="11" x2="14" y2="11"/>
+</svg>
+<span class="dock-label">Dossiês</span>
 </button>
-<button type="button" class="dock-btn" data-dock-lens="guardias">
-<span class="dock-icon">🌹</span>
-<span>Guardiãs</span>
+<button type="button" class="dock-btn" data-dock-lens="guardias" aria-label="Guardiãs">
+<span class="dock-indicator" aria-hidden="true"></span>
+<svg class="dock-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <circle cx="12" cy="7" r="4"/>
+  <path d="M5.5 21v-2a6.5 6.5 0 0 1 13 0v2"/>
+  <path d="M12 11v6"/>
+  <path d="M9.5 14h5"/>
+</svg>
+<span class="dock-label">Guardiãs</span>
 </button>
-<button type="button" class="dock-btn" data-dock-lens="glossario">
-<span class="dock-icon">🔤</span>
-<span>Glossário</span>
+<button type="button" class="dock-btn" data-dock-lens="glossario" aria-label="Glossário">
+<span class="dock-indicator" aria-hidden="true"></span>
+<svg class="dock-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <rect x="3" y="3" width="18" height="18" rx="3"/>
+  <path d="M7 16l3.5-8 3.5 8"/>
+  <line x1="8.2" y1="13.2" x2="12.8" y2="13.2"/>
+  <line x1="16" y1="8" x2="16" y2="16"/>
+</svg>
+<span class="dock-label">Glossário</span>
 </button>
-<button type="button" class="dock-btn" data-dock-lens="tratado">
-<span class="dock-icon">📜</span>
-<span>Tratado</span>
+<button type="button" class="dock-btn" data-dock-lens="tratado" aria-label="Tratado">
+<span class="dock-indicator" aria-hidden="true"></span>
+<svg class="dock-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+  <polyline points="14 2 14 8 20 8"/>
+  <line x1="16" y1="13" x2="8" y2="13"/>
+  <line x1="16" y1="17" x2="8" y2="17"/>
+</svg>
+<span class="dock-label">Tratado</span>
 </button>
-<button type="button" class="dock-btn" data-dock-lens="oraculo">
-<span class="dock-icon">🔮</span>
-<span>Oráculo</span>
+<button type="button" class="dock-btn" data-dock-lens="oraculo" aria-label="Oráculo">
+<span class="dock-indicator" aria-hidden="true"></span>
+<svg class="dock-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M8.5 14.5A2.5 2.5 0 0 0 11 17c1.38 0 2.5-1.12 2.5-2.5 0-1.63-1.5-2.75-1.5-4.5 0-1.5.5-2.5 1-3-2 .5-4.5 2.5-4.5 7.5z"/>
+  <path d="M12 2c0 3.5-3 5.5-3 9.5a5.5 5.5 0 0 0 11 0c0-3.5-2.5-6.5-4.5-8.5-.5 1-1.5 2-2.5 2-1 0-1-1-1-3z"/>
+</svg>
+<span class="dock-label">Oráculo</span>
 </button>
-<button type="button" class="dock-btn" data-dock-lens="mapa">
-<span class="dock-icon">🕸️</span>
-<span>45 Links</span>
+<button type="button" class="dock-btn" data-dock-lens="mapa" aria-label="Rede">
+<span class="dock-indicator" aria-hidden="true"></span>
+<svg class="dock-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <circle cx="12" cy="12" r="3"/>
+  <circle cx="5" cy="6" r="2"/>
+  <circle cx="19" cy="6" r="2"/>
+  <circle cx="5" cy="18" r="2"/>
+  <circle cx="19" cy="18" r="2"/>
+  <line x1="6.8" y1="7.4" x2="9.8" y2="10.2"/>
+  <line x1="17.2" y1="7.4" x2="14.2" y2="10.2"/>
+  <line x1="6.8" y1="16.6" x2="9.8" y2="13.8"/>
+  <line x1="17.2" y1="16.6" x2="14.2" y2="13.8"/>
+</svg>
+<span class="dock-label">Rede</span>
 </button>
 </nav>
 <script>
