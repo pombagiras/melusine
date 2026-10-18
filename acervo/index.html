@@ -251,11 +251,16 @@
       font-family: var(--font-sans);
       line-height: 1.55;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
     }
     body {
       background-color: var(--bg-shell);
       color: var(--text-main);
       overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
       transition: background-color 0.35s var(--ease-out), color 0.35s var(--ease-out);
     }
     ::selection { background-color: var(--oxblood); color: var(--creme-quente); }
@@ -317,6 +322,9 @@
       display: grid;
       grid-template-columns: var(--sidebar-w) 1fr;
       min-height: 100vh;
+      width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden;
     }
     aside.command-rail {
       position: sticky;
@@ -1594,39 +1602,201 @@
       border-bottom: 1px solid var(--border-hairline);
     }
     @media (max-width: 960px) {
-      .app-shell { grid-template-columns: 1fr; }
+      .app-shell { grid-template-columns: 1fr; width: 100%; max-width: 100vw; overflow-x: hidden; }
       aside.command-rail {
         position: static; height: auto;
         border-right: none;
         border-bottom: 1px solid var(--border-strong);
         padding: 1.1rem 1rem;
+        width: 100%; max-width: 100vw; box-sizing: border-box; overflow-x: hidden;
       }
-      .bento-hero { min-height: auto; }
-      .bento-hero-main, .bento-hero-oracle { grid-column: span 12; }
-      .dossier-bento, .cinema-bento, .vault-grid { grid-template-columns: 1fr; }
+      main.stage-workspace { width: 100%; max-width: 100vw; min-width: 0; overflow-x: hidden; }
+      .bento-hero { min-height: auto; display: flex; flex-direction: column; width: 100%; max-width: 100%; overflow-x: hidden; }
+      .bento-hero-main, .bento-hero-oracle { width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; }
+      .single-line-header {
+        white-space: normal !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+        font-size: clamp(1.35rem, 5vw, 1.75rem) !important;
+      }
+      .dossier-bento, .cinema-bento, .vault-grid, .omni-bento { grid-template-columns: 1fr; width: 100%; max-width: 100%; }
+      .dossier-portrait-cell, .authority-node, .cinema-screen-cell, .vault-cell { border-right: none; width: 100%; max-width: 100%; box-sizing: border-box; }
+      .ledger-grid { grid-template-columns: 1fr; width: 100%; max-width: 100%; }
+      .ledger-item { border-right: none; width: 100%; max-width: 100%; box-sizing: border-box; }
     }
     @media (max-width: 680px) {
       .hide-on-mobile { display: none !important; }
-      body { padding-bottom: 62px; }
-      .module-header { padding: 1.15rem 1rem 0.95rem; }
-      .bento-cell { padding: 1.4rem 1rem; }
-      .codex-gallery { grid-template-columns: repeat(2, 1fr); gap: 0.65rem; padding: 0.9rem; }
+      body { padding-bottom: 64px; overflow-x: hidden; width: 100%; max-width: 100vw; }
+      
+      /* Ajuste cirúrgico: nome Pombagiras.com proporcional e contido no celular */
+      .hero-monumental-title {
+        font-size: clamp(1.85rem, 8.2vw, 2.45rem) !important;
+        line-height: 1.05 !important;
+        letter-spacing: -0.02em !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+        max-width: 100% !important;
+        margin-top: 0.25rem !important;
+      }
+      .bento-hero-main {
+        gap: 1.25rem;
+        padding: 1.4rem 1rem;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+      }
+      .bento-kicker {
+        font-size: 0.68rem;
+        letter-spacing: 0.1em;
+        flex-wrap: wrap;
+      }
+      .parchment-manifesto {
+        padding: 1.15rem 1rem;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+      }
+      .parchment-manifesto h3 {
+        font-size: 1.12rem;
+        line-height: 1.35;
+      }
+      .parchment-manifesto p {
+        font-size: 0.9rem;
+        line-height: 1.55;
+      }
+      .bento-hero-oracle {
+        padding: 1.4rem 1rem;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+      }
+      .bento-cell {
+        padding: 1.4rem 1rem;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        border-right: none;
+      }
+      .module-header {
+        padding: 1.15rem 1rem 0.95rem;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+      }
+      .module-title-wrap {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+      }
+      .single-line-header {
+        white-space: normal !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+        font-size: 1.35rem !important;
+        line-height: 1.2 !important;
+      }
+      .codex-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.65rem;
+        padding: 0.9rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
       .codex-gallery.is-mobile-compact figure.reveal-node:nth-child(n+9) { display: none; }
-      .mobile-expand-bar { display: block; }
+      .mobile-expand-bar {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
       .reveal-node figcaption { padding: 0.55rem; min-height: 3rem; }
       .reveal-node figcaption strong { font-size: 0.82rem; }
-      .reel-strip { grid-template-columns: repeat(2, 1fr); max-height: 290px; }
-      .vault-buttons { grid-template-columns: 1fr; }
+      .ribbon-27 {
+        padding: 1.2rem 1rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+      .ribbon-list {
+        gap: 0.35rem;
+        width: 100%;
+        max-width: 100%;
+      }
+      .ribbon-link {
+        font-size: 0.65rem;
+        padding: 0.3rem 0.5rem;
+      }
+      .reel-strip {
+        grid-template-columns: repeat(2, 1fr);
+        max-height: 290px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+      .vault-buttons {
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+      .vault-cell {
+        padding: 1.4rem 1rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+      .faq-container {
+        padding: 1.2rem 1rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+      .faq-summary {
+        padding: 0.95rem 1rem;
+        font-size: 0.98rem;
+      }
+      .faq-content {
+        padding: 0 1rem 1rem;
+        font-size: 0.88rem;
+      }
+      .site-footer {
+        padding: 2rem 1rem 2.5rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+      .footer-nav-row {
+        gap: 0.75rem 1rem;
+        font-size: 0.7rem;
+      }
+      .footer-disclaimer-card {
+        padding: 1rem;
+        font-size: 0.8rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
       .mobile-bottom-dock {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         position: fixed;
         bottom: 0; left: 0; right: 0;
+        width: 100%;
+        max-width: 100vw;
+        box-sizing: border-box;
         height: 56px;
         background-color: rgba(14, 13, 12, 0.96);
         backdrop-filter: blur(12px);
         border-top: 1px solid var(--latao);
         z-index: 999;
+        overflow: hidden;
       }
       .dock-link {
         display: flex;
@@ -1639,6 +1809,9 @@
         color: var(--creme-quente);
         gap: 0.12rem;
         border-right: 1px solid rgba(181, 139, 59, 0.2);
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       .dock-link:last-child { background-color: var(--oxblood); color: var(--latao-luz); border-right: none; }
     }
