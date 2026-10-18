@@ -1618,8 +1618,8 @@
       }
       .dossier-bento, .cinema-bento, .vault-grid, .omni-bento { grid-template-columns: 1fr; width: 100%; max-width: 100%; }
       .dossier-portrait-cell, .authority-node, .cinema-screen-cell, .vault-cell { border-right: none; width: 100%; max-width: 100%; box-sizing: border-box; }
-      .ledger-grid { grid-template-columns: 1fr; width: 100%; max-width: 100%; }
-      .ledger-item { border-right: none; width: 100%; max-width: 100%; box-sizing: border-box; }
+      .ledger-grid { grid-template-columns: minmax(0, 1fr); width: 100%; max-width: 100%; overflow: hidden; }
+      .ledger-item { border-right: none; width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; }
     }
     @media (max-width: 680px) {
       .hide-on-mobile { display: none !important; }
@@ -1729,6 +1729,49 @@
       .ribbon-link {
         font-size: 0.65rem;
         padding: 0.3rem 0.5rem;
+      }
+      /* Módulo 03: Diretório 41 Sites Próprios - Ajuste Cirúrgico Mobile */
+      .ledger-grid {
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+      }
+      .ledger-item {
+        padding: 0.72rem 0.85rem;
+        gap: 0.5rem;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+      .ledger-left {
+        gap: 0.45rem;
+        min-width: 0;
+        flex: 1 1 auto;
+        overflow: hidden;
+      }
+      .ledger-num {
+        font-size: 0.62rem;
+        flex-shrink: 0;
+      }
+      .ledger-title {
+        font-size: clamp(0.78rem, 3.1vw, 0.85rem);
+        font-weight: 500;
+        letter-spacing: -0.01em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        min-width: 0;
+      }
+      .ledger-slug {
+        font-size: 0.60rem;
+        flex-shrink: 0;
+        white-space: nowrap;
+        margin-left: auto;
+        padding-left: 0.25rem;
+        text-align: right;
       }
       .reel-strip {
         grid-template-columns: repeat(2, 1fr);
