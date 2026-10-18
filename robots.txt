@@ -167,6 +167,8 @@ Allow: /segredo/
 Allow: /glossario/
 Allow: /enciclopedia/
 Allow: /enciclopedia
+Allow: /acervo/
+Allow: /acervo
 Allow: /oga
 Allow: /nomes
 Allow: /umbanda
