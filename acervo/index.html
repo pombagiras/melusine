@@ -175,14 +175,6 @@
               "@type": "Answer",
               "text": "A curadoria é conduzida por Alexia Melusine (Wikidata Q139714039), aliando antropologia das religiões de matriz afro-brasileira, rigor etnográfico, escuta atenta da tradição oral de terreiro e tecnologia computacional de ponta, sem mercantilização ou quebra de segredos iniciáticos."
             }
-          },
-          {
-            "@type": "Question",
-            "name": "Onde encontrar os Termos de Uso, Política de Privacidade e Metodologia Editorial?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Todos os documentos institucionais estão disponíveis de forma pública e transparente no rodapé: Política de Privacidade (https://pombagiras.com/privacy.html), Termos de Uso (https://pombagiras.com/terms.html) e Metodologia Editorial (https://pombagiras.com/metodologia.html)."
-            }
           }
         ]
       }
@@ -365,6 +357,15 @@
       font-weight: 500;
       line-height: 1.05;
       letter-spacing: -0.02em;
+    }
+    .rail-brand h1 a {
+      color: inherit;
+      text-decoration: none;
+      display: inline-block;
+      transition: color 0.2s var(--ease-out);
+    }
+    .rail-brand h1 a:hover {
+      color: var(--latao-luz);
     }
     .rail-brand h1 em {
       font-style: italic;
@@ -1826,11 +1827,7 @@
     <aside class="command-rail" aria-label="Navegação Principal Pombagiras.com">
       <div>
         <div class="rail-brand">
-          <div class="rail-sigil-row">
-            <span class="sigil-badge">✦ ACERVO OFICIAL</span>
-            <span style="font-family: var(--font-mono); font-size: 0.64rem; color: var(--latao);">44 ARTES</span>
-          </div>
-          <h1>Pombagiras<em>.com</em></h1>
+          <h1><a href="https://pombagiras.com/" data-cursor="INÍCIO">Pombagiras<em>.com</em></a></h1>
           <p>Enciclopédia Digital Independente</p>
         </div>
 
@@ -2370,13 +2367,6 @@
             <summary class="faq-summary">Qual é a metodologia de pesquisa e curadoria utilizada no Acervo?</summary>
             <div class="faq-content">
               A curadoria é conduzida por Alexia Melusine (Wikidata Q139714039), aliando antropologia das religiões de matriz afro-brasileira, rigor etnográfico, escuta atenta da tradição oral de terreiro e tecnologia computacional de ponta, sem mercantilização ou quebra de segredos iniciáticos.
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-summary">Onde encontrar os Termos de Uso, Política de Privacidade e Metodologia Editorial?</summary>
-            <div class="faq-content">
-              Todos os documentos institucionais estão disponíveis de forma pública e transparente no rodapé: <a href="https://pombagiras.com/privacy.html" target="_blank" rel="noopener" style="text-decoration: underline; color: var(--latao);">Política de Privacidade</a>, <a href="https://pombagiras.com/terms.html" target="_blank" rel="noopener" style="text-decoration: underline; color: var(--latao);">Termos de Uso</a> e <a href="https://pombagiras.com/metodologia.html" target="_blank" rel="noopener" style="text-decoration: underline; color: var(--latao);">Metodologia Editorial</a>.
             </div>
           </details>
         </div>
