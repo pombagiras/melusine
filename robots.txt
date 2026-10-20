@@ -3,6 +3,14 @@
 # ============================================================
 
 # LLM Crawlers & AI Search Bots (Explicitly Allowed for Knowledge Graph Discoverability)
+User-agent: Searchgpt
+Allow: /
+Disallow: /*?*
+
+User-agent: SearchGPT
+Allow: /
+Disallow: /*?*
+
 User-agent: GPTBot
 Allow: /
 Disallow: /*?*
