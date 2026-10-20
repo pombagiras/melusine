@@ -981,38 +981,26 @@
 
             .editorial-meta-bar {
                 display: flex !important;
-                flex-direction: row !important;
-                flex-wrap: nowrap !important;
-                white-space: nowrap !important;
-                align-items: center !important;
-                justify-content: flex-start !important;
-                padding: 8px 10px !important;
-                gap: clamp(4px, 1.5vw, 8px) !important;
-                font-size: clamp(0.68rem, 2.2vw, 0.78rem) !important;
-                overflow-x: auto !important;
-                overflow-y: hidden !important;
-                scrollbar-width: none !important;
-                -ms-overflow-style: none !important;
-                -webkit-overflow-scrolling: touch !important;
-            }
-
-            .editorial-meta-bar::-webkit-scrollbar {
-                display: none !important;
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                padding: 10px 14px !important;
+                gap: 7px !important;
+                font-size: 0.8rem !important;
+                white-space: normal !important;
+                overflow-x: visible !important;
+                border-radius: 8px !important;
             }
 
             .editorial-meta-bar .meta-sep {
-                display: inline-block !important;
-                flex-shrink: 0 !important;
-                color: rgba(197, 160, 89, 0.4) !important;
+                display: none !important;
             }
 
             .editorial-meta-bar .meta-item {
-                width: auto !important;
+                width: 100% !important;
                 display: inline-flex !important;
                 align-items: center !important;
-                gap: 4px !important;
+                gap: 6px !important;
                 white-space: nowrap !important;
-                flex-shrink: 0 !important;
             }
 
             h2 {
