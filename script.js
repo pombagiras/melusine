@@ -424,6 +424,8 @@ if (track) {
             }
             const displayName = getNormalizedName(img.name);
             const altText = displayName.startsWith("Pombagira") ? `Representação artística conceitual da ${displayName}` : `Representação artística conceitual da Pombagira ${displayName}`;
+            el.setAttribute('aria-label', displayName);
+            el.setAttribute('title', displayName);
             el.innerHTML = `<img src="${img.url}" alt="${altText}" loading="lazy" decoding="async" width="200" height="200"><span>${img.name}</span>`;
             
             // No clique, checamos se o usuário não estava apenas arrastando o carrossel
@@ -958,17 +960,30 @@ document.addEventListener('DOMContentLoaded', () => {
         // 1. Create and inject custom cursor elements
         const cursorDot = document.createElement('div');
         cursorDot.className = 'custom-cursor-dot';
+        cursorDot.style.opacity = '0';
         const cursorGlow = document.createElement('div');
         cursorGlow.className = 'custom-cursor-glow';
+        cursorGlow.style.opacity = '0';
         document.body.appendChild(cursorDot);
         document.body.appendChild(cursorGlow);
 
-        let mX = window.innerWidth / 2;
-        let mY = window.innerHeight / 2;
+        let mX = -200;
+        let mY = -200;
         let gX = mX;
         let gY = mY;
+        let hasMoved = false;
 
         window.addEventListener('mousemove', (e) => {
+            if (window.innerWidth <= 768) {
+                cursorDot.style.opacity = '0';
+                cursorGlow.style.opacity = '0';
+                return;
+            }
+            if (!hasMoved) {
+                cursorDot.style.opacity = '1';
+                cursorGlow.style.opacity = '1';
+                hasMoved = true;
+            }
             mX = e.clientX;
             mY = e.clientY;
             cursorDot.style.left = `${mX}px`;

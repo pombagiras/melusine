@@ -28,8 +28,8 @@
     <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin>
     <link rel="dns-prefetch" href="https://raw.githubusercontent.com">
 
-    <!-- Preload critical LCP image immediately -->
-    <link rel="preload" href="https://cdn.pombagiras.com/ViboraAlbina_poster.jpg" as="image" fetchpriority="high">
+    <!-- Preload critical LCP image immediately (hero desktop only — mobile não baixa esta imagem) -->
+    <link rel="preload" href="https://cdn.pombagiras.com/DONATIVOS/pombagiras-hero-1920.webp" as="image" type="image/webp" fetchpriority="high" media="(min-width: 769px)">
 
     <!-- Critical CSS & Fonts at the very top of head to prevent render blocking -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -958,6 +958,423 @@
         background: rgba(197, 160, 89, 0.13);
     }
     .lang-sep { color: rgba(197, 160, 89, 0.28); font-size: 0.7rem; user-select: none; }
+</style>
+<style id="hero-desktop-photo">
+/* ══════════ HERO WEB — SOMENTE DESKTOP (≥769px) ══════════
+   Foto única no lugar do vídeo + hero reduzido para o topo do
+   carrossel aparecer na primeira tela. Nada aqui afeta o mobile. */
+.hero-desktop-picture { display: none; }
+
+@media (min-width: 769px) {
+    .hero {
+        height: 80vh !important;
+        min-height: 560px !important;
+        max-height: 780px !important;
+        padding: 24px 80px;
+        box-sizing: border-box;
+    }
+
+    .hero-desktop-picture {
+        display: block;
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        overflow: hidden;
+        pointer-events: none;
+    }
+    .hero-desktop-picture img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 62% 50%;
+        filter: brightness(0.78);
+    }
+    /* Fade inferior para transição limpa hero → carrossel */
+    .hero-desktop-picture::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, rgba(5, 5, 5, 0) 72%, rgba(5, 5, 5, 0.85) 100%);
+        pointer-events: none;
+    }
+
+    /* Oval escuro de ênfase — adaptado à nova altura */
+    .hero-text-overlay {
+        inset: -48px -150px;
+        background: radial-gradient(
+            closest-side,
+            rgba(5, 5, 5, 0.82) 0%,
+            rgba(5, 5, 5, 0.62) 45%,
+            rgba(5, 5, 5, 0.25) 78%,
+            rgba(5, 5, 5, 0) 100%
+        );
+        pointer-events: none;
+    }
+
+    /* Espaçamento vertical compacto do bloco central */
+    .hero h1 { margin-bottom: 10px; }
+    .hero p.subtitle { margin: 0 auto 26px; }
+    .hero-search-bar {
+        max-width: 620px !important;
+        margin: 0 auto 24px !important;
+    }
+    .hero .cta-group { gap: 16px; }
+    .hero .cta-group .btn { padding: 13px 32px; }
+
+    /* Botões laterais da direita — pilha compacta */
+    .floating-social {
+        top: clamp(290px, 40vh, 390px) !important;
+        transform: translateY(-50%) !important;
+        gap: 10px !important;
+    }
+    .floating-social .social-icon,
+    .floating-social .back-to-top {
+        width: 48px !important;
+        height: 48px !important;
+        border-radius: 12px !important;
+    }
+    .floating-social .social-icon img,
+    .floating-social .social-icon svg {
+        width: 22px !important;
+        height: 22px !important;
+    }
+    .floating-social .back-to-top i { font-size: 1.35rem; }
+
+    /* Seção do carrossel — padding vertical equilibrado (sem vazio excessivo e com peek visível) */
+    .carousel-section {
+        padding-top: 28px !important;
+        padding-bottom: 36px !important;
+    }
+}
+
+/* Telas desktop baixas (<700px de altura): mantém 44px para respiro */
+@media (min-width: 769px) and (max-height: 700px) {
+    .floating-social {
+        top: 40vh !important;
+        gap: 8px !important;
+    }
+    .floating-social .social-icon,
+    .floating-social .back-to-top {
+        width: 44px !important;
+        height: 44px !important;
+        border-radius: 10px !important;
+    }
+    .floating-social .social-icon img,
+    .floating-social .social-icon svg {
+        width: 20px !important;
+        height: 20px !important;
+    }
+}
+
+/* ══════════ RODAPÉ WEB — SOMENTE DESKTOP (≥769px) ══════════ */
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.footer-legal-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    color: rgba(250, 246, 238, 0.85);
+    text-align: center;
+}
+.footer-legal-a {
+    color: var(--warm-cream);
+    opacity: 0.85;
+    text-decoration: none;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+.footer-legal-sep {
+    color: var(--accent);
+    opacity: 0.45;
+    user-select: none;
+    margin: 0 2px;
+}
+
+@media (min-width: 769px) {
+    footer.main-footer {
+        padding: 52px 80px 32px 32px !important;
+        border-top: 1px solid rgba(197, 160, 89, 0.22) !important;
+        box-sizing: border-box !important;
+    }
+
+    .footer-grid {
+        display: grid !important;
+        grid-template-columns: 1.2fr 1fr 1fr !important;
+        gap: 48px !important;
+        align-items: start !important;
+        max-width: 1200px !important;
+        margin: 0 auto !important;
+        text-align: left !important;
+    }
+
+    /* Divisores verticais sutis entre colunas 1-2 e 2-3 */
+    .footer-col-identity {
+        border-right: 1px solid rgba(197, 160, 89, 0.16) !important;
+        padding-right: 36px !important;
+    }
+    .footer-col-nav {
+        border-right: 1px solid rgba(197, 160, 89, 0.16) !important;
+        padding-right: 36px !important;
+    }
+    .footer-col-identity::after,
+    .footer-col-nav::after {
+        display: none !important;
+    }
+
+    /* Unificação dos títulos das colunas 2 e 3 com traço dourado de 32px */
+    .footer-col-title {
+        font-size: 1.15rem !important;
+        font-weight: 600 !important;
+        color: #C5A059 !important;
+        margin-bottom: 20px !important;
+        letter-spacing: 1.5px !important;
+        position: relative !important;
+        padding-bottom: 10px !important;
+        text-align: left !important;
+    }
+    .footer-col-title::after {
+        content: '' !important;
+        position: absolute !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        width: 32px !important;
+        height: 1.5px !important;
+        background: #C5A059 !important;
+        opacity: 0.8 !important;
+    }
+
+    /* Ancoragem de conhecimento: links com hover/foco visível */
+    .footer-nav-links {
+        align-items: flex-start !important;
+        text-align: left !important;
+    }
+    .footer-nav-links a {
+        color: rgba(250, 246, 238, 0.75) !important;
+        transition: color 0.2s ease, transform 0.2s ease !important;
+    }
+    .footer-nav-links a:hover,
+    .footer-nav-links a:focus {
+        color: #C5A059 !important;
+        opacity: 1 !important;
+        transform: translateX(4px) !important;
+        outline: none !important;
+    }
+
+    /* Conexão Sagrada: alinhamento à esquerda, cópia do e-mail legível */
+    footer.main-footer .footer-links-container {
+        justify-content: flex-start !important;
+    }
+    .footer-contact-info {
+        display: flex !important;
+        justify-content: flex-start !important;
+        text-align: left !important;
+    }
+    .email-copy-trigger .copy-status {
+        color: #C5A059 !important;
+        opacity: 0.9 !important;
+        font-weight: 600 !important;
+    }
+
+    /* Donativos & Sustentabilidade: botão pílula elegante no estilo do site */
+    .footer-donativos-info {
+        display: flex !important;
+        justify-content: flex-start !important;
+    }
+    .footer-donativos-link {
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        font-size: 0.8rem !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.8px !important;
+        text-transform: uppercase !important;
+        text-decoration: none !important;
+        color: #FAF6EE !important;
+        background: rgba(197, 160, 89, 0.1) !important;
+        border: 1px solid rgba(197, 160, 89, 0.35) !important;
+        padding: 8px 18px !important;
+        border-radius: 50px !important;
+        transition: all 0.3s ease !important;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4) !important;
+    }
+    .footer-donativos-link:hover,
+    .footer-donativos-link:focus {
+        background: rgba(197, 160, 89, 0.22) !important;
+        border-color: rgba(197, 160, 89, 0.75) !important;
+        color: #FFFFFF !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(197, 160, 89, 0.25) !important;
+        outline: none !important;
+    }
+
+    /* Divisor horizontal legal compacto */
+    .footer-divider-container {
+        margin: 32px 0 24px !important;
+    }
+
+    /* Linha legal desktop: única linha horizontal centralizada */
+    .footer-bottom {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+    .footer-legal-row {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 12px !important;
+        flex-wrap: nowrap !important;
+        white-space: nowrap !important;
+        font-size: 0.78rem !important;
+        color: rgba(250, 246, 238, 0.75) !important;
+        letter-spacing: 0.5px !important;
+    }
+    .footer-legal-copy {
+        color: rgba(250, 246, 238, 0.75) !important;
+    }
+    .footer-legal-sep {
+        color: #C5A059 !important;
+        opacity: 0.55 !important;
+        user-select: none !important;
+    }
+    .footer-legal-a {
+        color: rgba(250, 246, 238, 0.75) !important;
+        text-decoration: none !important;
+        transition: color 0.2s ease, opacity 0.2s ease !important;
+    }
+    .footer-legal-a:hover,
+    .footer-legal-a:focus {
+        color: #C5A059 !important;
+        opacity: 1 !important;
+        outline: none !important;
+    }
+
+    /* Aviso educativo: 720px, fonte legível e contraste sobre o preto */
+    .footer-disclaimer {
+        max-width: 720px !important;
+        font-size: 0.82rem !important;
+        color: rgba(250, 246, 238, 0.78) !important;
+        opacity: 1 !important;
+        line-height: 1.5 !important;
+        margin: 12px auto 0 !important;
+        text-align: center !important;
+    }
+
+    /* Newsletter desktop: redução do espaço preto acima e abaixo mantendo respiro */
+    .edu-section {
+        padding-bottom: 24px !important;
+    }
+    .newsletter-section {
+        padding-top: 48px !important;
+        padding-bottom: 56px !important;
+    }
+    .about-section {
+        padding-top: 32px !important;
+    }
+
+    /* Item 1a & 1c: Carrossel desktop — título dourado e respiro lateral para trilho */
+    .carousel-title-desktop {
+        display: block !important;
+        text-align: center !important;
+        font-family: 'Fraunces', serif !important;
+        font-size: 1.45rem !important;
+        font-weight: 500 !important;
+        color: #C5A059 !important;
+        letter-spacing: 0.05em !important;
+        margin: 0 0 16px 0 !important;
+        line-height: 1.25 !important;
+    }
+    .carousel-track-container {
+        padding-right: 80px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Item 2: Cards do Portal Educativo e Artigos — mesma altura na linha e link preso na base */
+    .grid-cards {
+        align-items: stretch !important;
+    }
+    .grid-cards .card {
+        display: flex !important;
+        flex-direction: column !important;
+        height: 100% !important;
+        box-sizing: border-box !important;
+    }
+    .grid-cards .card > strong:last-child {
+        margin-top: auto !important;
+        padding-top: 16px !important;
+    }
+}
+
+/* Item 4: Título do carrossel visível no celular e desktop */
+.carousel-title-desktop {
+    display: block !important;
+    text-align: center !important;
+    font-family: 'Fraunces', serif !important;
+    font-size: clamp(1.15rem, 4.2vw, 1.45rem) !important;
+    font-weight: 500 !important;
+    color: #C5A059 !important;
+    letter-spacing: 0.05em !important;
+    margin: 0 0 14px 0 !important;
+    line-height: 1.25 !important;
+}
+
+/* Item 5: Feedback visual de toque para pílulas da Newsletter no celular */
+@media (max-width: 768px) {
+    .newsletter-meta > a:active .btn-circle {
+        background: rgba(197, 160, 89, 0.28) !important;
+        border-color: #C5A059 !important;
+        transform: scale(0.97) !important;
+    }
+
+    /* Rodapé celular: separação visual entre colunas empilhadas com divisor dourado centralizado */
+    footer.main-footer {
+        padding-bottom: calc(125px + env(safe-area-inset-bottom, 0px)) !important;
+    }
+    footer.main-footer .footer-col-identity,
+    footer.main-footer .footer-col-nav {
+        margin-bottom: 20px !important;
+    }
+    footer.main-footer .footer-col-identity::after,
+    footer.main-footer .footer-col-nav::after {
+        content: '' !important;
+        display: block !important;
+        width: 32px !important;
+        height: 1.5px !important;
+        background: #C5A059 !important;
+        opacity: 0.55 !important;
+        margin: 20px auto 0 !important;
+        clear: both !important;
+    }
+}
+
+/* Item 4b: Contraste acessível (≥4.5:1) para 'Ler Artigo Completo' sobre fundo escuro */
+.card strong {
+    color: #E5383B !important;
+}
+
+/* Item 4b: Foco visível acessível (WCAG 2.4.7) */
+.search-box input:focus-visible,
+#heroSearchInput:focus-visible,
+.hero-search-input:focus-visible,
+.nav-tab:focus-visible,
+.btn:focus-visible,
+.floating-social .social-icon:focus-visible,
+.floating-social .back-to-top:focus-visible,
+.carousel-item:focus-visible,
+.newsletter-meta a:focus-visible {
+    outline: 2px solid #C5A059 !important;
+    outline-offset: 3px !important;
+}
 </style>
 </head>
 
@@ -2166,6 +2583,17 @@
         var heroIcon    = document.querySelector('#heroSearchBar .hero-search-icon');
 
         if (heroInput && heroResults) {
+            /* Sincroniza placeholder para mobile sem alterar o do desktop */
+            var syncHeroPlaceholder = function() {
+                if (window.innerWidth <= 768) {
+                    heroInput.placeholder = 'Buscar entidade ou artigo…';
+                } else {
+                    heroInput.placeholder = 'Buscar entidade, artigo ou termo…';
+                }
+            };
+            syncHeroPlaceholder();
+            window.addEventListener('resize', syncHeroPlaceholder, { passive: true });
+
             /* Digitar: mostra resultados em tempo real */
             heroInput.addEventListener('input', function() {
                 var q = this.value.trim();
@@ -2272,13 +2700,11 @@
     </div>
 
     <section class="hero" id="home">
-        <video class="hero-video" autoplay loop muted playsinline poster="https://cdn.pombagiras.com/ViboraAlbina_poster.jpg" preload="metadata" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
-            <source src="https://cdn.pombagiras.com/ViboraAlbina_720.webm" type="video/webm" media="(max-width: 768px)">
-            <source src="https://cdn.pombagiras.com/ViboraAlbina_1080.webm" type="video/webm">
-            <source src="https://cdn.pombagiras.com/ViboraAlbina_720.mp4" type="video/mp4" media="(max-width: 768px)">
-            <source src="https://cdn.pombagiras.com/ViboraAlbina_1080.mp4" type="video/mp4">
-            Seu navegador não suporta vídeos HTML5.
-        </video>
+        <!-- Fundo do hero — SOMENTE desktop (≥769px). No mobile o <img> usa um GIF 1x1 inline, sem requisição de rede. -->
+        <picture class="hero-desktop-picture">
+            <source media="(min-width: 769px)" srcset="https://cdn.pombagiras.com/DONATIVOS/pombagiras-hero-1920.webp" type="image/webp" width="1920" height="960">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Mãos acendendo uma vela vermelha no altar, com rosas e fumaça" width="1920" height="960" loading="eager" fetchpriority="high" decoding="async">
+        </picture>
         <img class="hero-mobile-img" src="https://cdn.pombagiras.com/BOM.png" alt="Pombagiras.com - Portal Sagrado" loading="eager" fetchpriority="high">
         <div class="hero-content">
             <div class="hero-text-overlay" aria-hidden="true"></div>
@@ -2413,6 +2839,7 @@ initLangSwitcher();
     </section>
 
     <section class="carousel-section" id="carousel-guardias">
+        <h2 class="carousel-title-desktop">Conheça as Pombagiras</h2>
         <div class="carousel-track-container">
             <div class="carousel-track" id="carouselTrack"></div>
         </div>
@@ -2433,7 +2860,7 @@ initLangSwitcher();
             <div class="nav-tab" data-target="pombagiras">Guardiãs</div>
             <div class="nav-tab" data-target="bibliografia">Livros</div>
             <div class="nav-tab" data-target="cosmovisoes">Cosmovisões</div>
-            <a href="https://pombagiras.com/julho-mes-das-pombagiras.html" class="nav-tab nav-tab-data-oficial" style="text-decoration: none; color: inherit;">Data Oficial</a>
+            <a href="https://pombagiras.com/acervo/" class="nav-tab nav-tab-acervo" style="text-decoration: none; color: inherit;">Acervo</a>
         </nav>
 
         <main>
@@ -2540,7 +2967,7 @@ initLangSwitcher();
                     <a href="portal/dossie.html" target="_blank" class="faq-item dossie-item" style="display: block; text-decoration: none; border: 1px solid rgba(197, 160, 89, 0.3); background: rgba(74, 14, 23, 0.25); overflow: hidden; margin-bottom: 24px; border-radius: 24px; transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='rgba(197, 160, 89, 0.8)'; this.style.boxShadow='0 12px 30px rgba(197, 160, 89, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(197, 160, 89, 0.3)'; this.style.boxShadow='none';">
                         <div class="dossie-card-content" style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center; padding: 25px 35px;">
                             <div class="dossie-img-wrapper" style="flex: 1 1 200px; max-width: 280px; height: 160px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(197, 160, 89, 0.2); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);">
-                                <img src="https://cdn.pombagiras.com/fotos/DOSSIE.png" alt="Dossiê Histórico-Antropológico: As Doze Pombagiras" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(10%) contrast(1.15);">
+                                <img src="https://cdn.pombagiras.com/fotos/DOSSIE.png" alt="Dossiê Histórico-Antropológico: As Doze Pombagiras" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(10%) contrast(1.15);">
                             </div>
                             <div class="dossie-info" style="flex: 2 1 300px; display: flex; flex-direction: column; gap: 8px;">
                                 <h3 style="font-family: 'Fraunces', serif; color: #FAF6EE; font-size: 1.6rem; margin: 0; line-height: 1.25;">Dossiê Histórico-Antropológico: As Doze Pombagiras</h3>
@@ -2554,7 +2981,7 @@ initLangSwitcher();
                     <a href="portal/bahuchara-mata.html" target="_blank" class="faq-item bahuchara-item" style="display: block; text-decoration: none; border: 1px solid rgba(197, 160, 89, 0.3); background: rgba(74, 14, 23, 0.25); overflow: hidden; margin-bottom: 24px; border-radius: 24px; transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='rgba(197, 160, 89, 0.8)'; this.style.boxShadow='0 12px 30px rgba(197, 160, 89, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(197, 160, 89, 0.3)'; this.style.boxShadow='none';">
                         <div class="bahuchara-card-content" style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center; padding: 25px 35px;">
                             <div class="bahuchara-img-wrapper" style="flex: 1 1 200px; max-width: 280px; height: 160px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(197, 160, 89, 0.2); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);">
-                                <img src="https://cdn.pombagiras.com/fotos/Bahuchara%20Mata.png" alt="Bahuchara Mata: A Deusa que Vive Entre os Mundos" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(10%) contrast(1.15);">
+                                <img src="https://cdn.pombagiras.com/fotos/Bahuchara%20Mata.png" alt="Bahuchara Mata: A Deusa que Vive Entre os Mundos" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(10%) contrast(1.15);">
                             </div>
                             <div class="bahuchara-info" style="flex: 2 1 300px; display: flex; flex-direction: column; gap: 8px;">
                                 <h3 style="font-family: 'Fraunces', serif; color: #FAF6EE; font-size: 1.6rem; margin: 0; line-height: 1.25;">Bahuchara Mata: A Deusa que Vive Entre os Mundos</h3>
@@ -2568,7 +2995,7 @@ initLangSwitcher();
                     <a href="portal/natureza-humana.html" target="_blank" class="faq-item nature-item" style="display: block; text-decoration: none; border: 1px solid rgba(197, 160, 89, 0.3); background: rgba(74, 14, 23, 0.25); overflow: hidden; margin-bottom: 24px; border-radius: 24px; transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='rgba(197, 160, 89, 0.8)'; this.style.boxShadow='0 12px 30px rgba(197, 160, 89, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(197, 160, 89, 0.3)'; this.style.boxShadow='none';">
                         <div class="nature-card-content" style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center; padding: 25px 35px;">
                             <div class="nature-img-wrapper" style="flex: 1 1 200px; max-width: 280px; height: 160px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(197, 160, 89, 0.2); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);">
-                                <img src="https://cdn.pombagiras.com/fotos/Boyx%20(1).png" alt="O Que as Pombagiras Sabem Sobre a Natureza Humana" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(10%) contrast(1.15);">
+                                <img src="https://cdn.pombagiras.com/fotos/Boyx%20(1).png" alt="O Que as Pombagiras Sabem Sobre a Natureza Humana" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(10%) contrast(1.15);">
                             </div>
                             <div class="nature-info" style="flex: 2 1 300px; display: flex; flex-direction: column; gap: 8px;">
                                 <h3 style="font-family: 'Fraunces', serif; color: #FAF6EE; font-size: 1.6rem; margin: 0; line-height: 1.25;">O Que as Pombagiras Sabem Sobre a Natureza Humana</h3>
@@ -4000,23 +4427,23 @@ initLangSwitcher();
                     <h2>Alexia Melusine</h2>
                     <p><span style="color: var(--accent); font-size: 1.4em; font-weight: 700; vertical-align: -0.05em; margin-right: 2px;">“</span>Não trago títulos acadêmicos, mas trago décadas de contato direto, aprendizado oral e vivência prática com este tema desde a minha infância. Meu objetivo aqui não é criar teses, mas documentar com respeito, detalhe e verdade esse conhecimento.<span style="color: var(--accent); font-size: 1.4em; font-weight: 700; vertical-align: -0.05em; margin-left: 2px;">”</span></p>
                     <div class="about-buttons-grid">
-                        <a href="https://alexiamelusine.com/limbosonoro/" class="btn btn-outline" target="_blank" rel="noopener" id="btn-podcast-limbo"><i
+                        <a href="https://alexiamelusine.com/limbosonoro/" class="btn btn-outline" target="_blank" rel="noopener" id="btn-podcast-limbo" title="Limbo Sonoro — Podcast & Produções de Áudio" aria-label="Limbo Sonoro — Podcast & Produções de Áudio"><i
                                 class="fa-solid fa-podcast"></i> Pessoal</a>
-                        <a href="https://open.spotify.com/show/0oeCL1QScD3v7dHeUvJjgJ" class="btn btn-outline" target="_blank" rel="noopener" id="btn-podcast-forca"><i
+                        <a href="https://open.spotify.com/show/0oeCL1QScD3v7dHeUvJjgJ" class="btn btn-outline" target="_blank" rel="noopener" id="btn-podcast-forca" title="Podcast Pombagira: Força Revelada" aria-label="Podcast Pombagira: Força Revelada"><i
                                 class="fa-brands fa-spotify"></i> Podcast</a>
-                        <a href="https://pombagiras.com/manifesto/" class="btn btn-outline" id="btn-podcast-manifesto"><i
+                        <a href="https://pombagiras.com/manifesto/" class="btn btn-outline" id="btn-podcast-manifesto" title="O Manifesto | POMBAGIRAS.COM" aria-label="O Manifesto | POMBAGIRAS.COM"><i
                                 class="fa-solid fa-scroll"></i> Manifesto</a>
-                        <a href="https://pombagiras.com/github/" class="btn btn-outline" target="_blank" rel="noopener"><i
+                        <a href="https://pombagiras.com/github/" class="btn btn-outline" target="_blank" rel="noopener" title="POMBAGIRAS.COM | Ecossistema Digital — Alexia Melusine" aria-label="POMBAGIRAS.COM | Ecossistema Digital — Alexia Melusine"><i
                                 class="fab fa-github"></i> Github</a>
-                        <a href="https://pombagiras.com/guardias/" class="btn btn-outline" target="_blank" rel="noopener"><i
+                        <a href="https://pombagiras.com/guardias/" class="btn btn-outline" target="_blank" rel="noopener" title="Pombagiras: Guardiãs de Caminhos" aria-label="Pombagiras: Guardiãs de Caminhos"><i
                                 class="fa-solid fa-address-book"></i> Guardiãs</a>
-                        <a href="https://pombagiras.com/vortex/" class="btn btn-outline" target="_blank" rel="noopener"><i
+                        <a href="https://pombagiras.com/vortex/" class="btn btn-outline" target="_blank" rel="noopener" title="Vortex: Imersão Cultural e Expressão Artística" aria-label="Vortex: Imersão Cultural e Expressão Artística"><i
                                 class="fa-solid fa-wand-magic-sparkles"></i> Vortex</a>
-                        <a href="https://pombagiras.com/lebaras/" class="btn btn-outline" target="_blank" rel="noopener"><i
+                        <a href="https://pombagiras.com/lebaras/" class="btn btn-outline" target="_blank" rel="noopener" title="Lebaras: Rainhas da Noite Eterna" aria-label="Lebaras: Rainhas da Noite Eterna"><i
                                 class="fa-brands fa-slack"></i> Lebarás</a>
-                        <a href="https://pombagiras.com/alexiamelusine/" class="btn btn-outline" target="_blank" rel="noopener"><i
+                        <a href="https://pombagiras.com/alexiamelusine/" class="btn btn-outline" target="_blank" rel="noopener" title="Alexia Melusine | Pesquisadora, Desenvolvedora & Sacerdotisa" aria-label="Alexia Melusine | Pesquisadora, Desenvolvedora & Sacerdotisa"><i
                                 class="fa-solid fa-eye"></i> Alexia</a>
-                        <a href="https://pombagiras.com/portal/" class="btn btn-outline" target="_blank" rel="noopener"><i
+                        <a href="https://pombagiras.com/portal/" class="btn btn-outline" target="_blank" rel="noopener" title="Portal de Artigos, Ensaios e Teologia" aria-label="Portal de Artigos, Ensaios e Teologia"><i
                                 class="fa-solid fa-house"></i> Portal</a>
                     </div>
                 </div>
@@ -4086,17 +4513,16 @@ initLangSwitcher();
                 <hr class="section-divider">
             </div>
 
-            <div class="footer-bottom" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 8px;">
-                <div class="footer-legal-links" style="margin: 0; display: flex; justify-content: center; align-items: center; gap: clamp(6px, 1.8vw, 12px); flex-wrap: nowrap; white-space: nowrap;">
-                    <a href="privacy.html" style="color: var(--warm-cream); opacity: 0.85; text-decoration: none; font-size: clamp(0.74rem, 2.4vw, 0.82rem); transition: opacity 0.2s; white-space: nowrap;" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.85'">Privacidade</a>
-                    <span style="color: var(--accent); opacity: 0.45; font-size: clamp(0.74rem, 2.4vw, 0.82rem); user-select: none;">-</span>
-                    <a href="terms.html" style="color: var(--warm-cream); opacity: 0.85; text-decoration: none; font-size: clamp(0.74rem, 2.4vw, 0.82rem); transition: opacity 0.2s; white-space: nowrap;" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.85'">Termo de Uso</a>
-                    <span style="color: var(--accent); opacity: 0.45; font-size: clamp(0.74rem, 2.4vw, 0.82rem); user-select: none;">-</span>
-                    <a href="metodologia.html" style="color: var(--warm-cream); opacity: 0.85; text-decoration: none; font-size: clamp(0.74rem, 2.4vw, 0.82rem); transition: opacity 0.2s; white-space: nowrap;" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.85'">Metodologia</a>
+            <div class="footer-bottom">
+                <div class="footer-legal-row">
+                    <span class="footer-legal-copy">© 2026 Alexia Melusine</span>
+                    <span class="footer-legal-sep" aria-hidden="true">•</span>
+                    <a href="privacy.html" class="footer-legal-a">Privacidade</a>
+                    <span class="footer-legal-sep" aria-hidden="true">•</span>
+                    <a href="terms.html" class="footer-legal-a">Termo de Uso</a>
+                    <span class="footer-legal-sep" aria-hidden="true">•</span>
+                    <a href="metodologia.html" class="footer-legal-a">Metodologia</a>
                 </div>
-                <p class="footer-copyright" style="margin: 0 !important; text-align: center; text-transform: none !important; letter-spacing: 1px; font-size: 0.75rem; opacity: 0.75;">
-                    All Rights Reserved @ 2026 @alexiamelusine
-                </p>
             </div>
             <p class="footer-disclaimer" style="text-align: center; font-size: 0.76rem; color: var(--warm-cream); opacity: 0.6; margin: 14px auto 0; max-width: 1200px; line-height: 1.4; letter-spacing: 0.02em;">Este conteúdo tem caráter educativo e reflexivo. Ele não substitui orientação de dirigentes espirituais qualificados. Respeite as particularidades de cada casa e tradição.</p>
         </footer>

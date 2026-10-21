@@ -1579,7 +1579,7 @@ footer.main-footer .footer-signature i {
     .hero-content {
         position: relative !important;
         z-index: 2 !important;
-        padding: 28px 20px !important;
+        padding: 20px 18px !important;
         background: radial-gradient(circle at center, rgba(10, 10, 10, 0.85) 0%, rgba(10, 10, 10, 0.65) 70%, rgba(10, 10, 10, 0) 100%) !important;
         backdrop-filter: blur(12px) !important;
         -webkit-backdrop-filter: blur(12px) !important;
@@ -1588,6 +1588,9 @@ footer.main-footer .footer-signature i {
         box-shadow: 0 12px 40px rgba(0, 0, 0, 0.75) !important;
         max-width: 92% !important;
         margin: 0 auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
     }
 
     .hero-text-overlay {
@@ -1602,6 +1605,7 @@ footer.main-footer .footer-signature i {
 
     .hero h1,
     .hero .speakable-title {
+        order: 1 !important;
         background: none !important;
         -webkit-background-clip: initial !important;
         -webkit-text-fill-color: #F5EADD !important;
@@ -1610,29 +1614,31 @@ footer.main-footer .footer-signature i {
         font-size: clamp(1.85rem, 7.8vw, 2.5rem) !important;
         font-weight: 700 !important;
         line-height: 1.2 !important;
-        margin-bottom: 16px !important;
+        margin-bottom: 12px !important;
         word-break: keep-all !important;
         overflow-wrap: break-word !important;
     }
 
     .hero p.subtitle,
     .hero .speakable-description {
+        order: 2 !important;
         color: #B8B8B8 !important;
         font-size: clamp(0.9rem, 3.6vw, 1.02rem) !important;
         font-weight: 300 !important;
-        line-height: 1.6 !important;
-        margin: 0 auto 26px !important;
+        line-height: 1.45 !important;
+        margin: 0 auto 16px !important;
         max-width: 95% !important;
         text-shadow: 0 1px 8px rgba(0, 0, 0, 0.85) !important;
     }
 
     .hero .cta-group {
+        order: 3 !important;
         display: flex !important;
         flex-direction: column !important;
         gap: 12px !important;
         width: 100% !important;
         max-width: 280px !important;
-        margin: 0 auto !important;
+        margin: 0 auto 14px !important;
     }
 
     .hero .cta-group .btn {
@@ -1678,9 +1684,9 @@ footer.main-footer .footer-signature i {
         right: 0;
         transform: none;
         flex-direction: row;
-        gap: 6px;
+        gap: clamp(4px, 1.2vw, 8px) !important;
         background: rgba(10, 1, 8, 0.95);
-        padding: 8px 12px;
+        padding: 6px 6px calc(6px + env(safe-area-inset-bottom, 0px)) !important;
         border-radius: 0;
         border: none;
         border-top: 1px solid rgba(255, 255, 255, 0.06);
@@ -1688,25 +1694,24 @@ footer.main-footer .footer-signature i {
         width: 100%;
         justify-content: center;
         z-index: 2000;
+        box-sizing: border-box;
     }
 
-    /* Show all floating social icons on mobile */
+    /* Show all floating social icons on mobile with at least 44px touch target */
     .floating-social .social-icon,
     .floating-social .back-to-top {
         display: flex !important;
         opacity: 1 !important;
         visibility: visible !important;
-    }
-
-    .social-icon,
-    .back-to-top {
-        width: 36px;
-        height: 36px;
-        border-radius: 8px;
+        width: 44px !important;
+        height: 44px !important;
+        min-width: 44px !important;
+        min-height: 44px !important;
+        border-radius: 10px !important;
     }
 
     .social-icon img {
-        width: 18px;
+        width: 20px;
     }
 
     .back-to-top i {
@@ -1759,8 +1764,17 @@ footer.main-footer .footer-signature i {
         width: 100% !important;
         max-width: 100% !important;
         margin-top: 2px !important;
-        background: rgba(128, 0, 32, 0.45) !important;
-        border-color: rgba(212, 175, 55, 0.5) !important;
+        background: rgba(255, 255, 255, 0.04) !important;
+        border: 1px solid rgba(255, 255, 255, 0.08) !important;
+        color: rgba(255, 255, 255, 0.85) !important;
+        box-shadow: none !important;
+    }
+
+    .nav-tab.active {
+        background: var(--secondary) !important;
+        border-color: var(--secondary) !important;
+        color: #FFFFFF !important;
+        box-shadow: 0 4px 15px rgba(217, 4, 41, 0.35) !important;
     }
 
     /* Padronização dos Cards de Cosmovisões no Celular */
@@ -1914,16 +1928,33 @@ footer.main-footer .footer-signature i {
 
     /* Body bottom padding so footer bar doesn't cover content */
     body {
-        padding-bottom: 60px;
+        padding-bottom: calc(75px + env(safe-area-inset-bottom, 0px)) !important;
     }
 
-    /* Footer adjustments on mobile — padding reduzido */
+    /* Footer adjustments on mobile — padding inferior amplo para não esconder aviso educativo atrás da barra */
     footer.main-footer {
-        padding: 35px 15px 70px !important;
+        padding: 35px 15px calc(125px + env(safe-area-inset-bottom, 0px)) !important;
     }
 
     .footer-grid {
-        gap: 25px !important;
+        display: block !important;
+    }
+
+    footer.main-footer .footer-col-identity,
+    footer.main-footer .footer-col-nav {
+        margin-bottom: 20px !important;
+    }
+
+    footer.main-footer .footer-col-identity::after,
+    footer.main-footer .footer-col-nav::after {
+        content: '' !important;
+        display: block !important;
+        width: 32px !important;
+        height: 1.5px !important;
+        background: #C5A059 !important;
+        opacity: 0.55 !important;
+        margin: 20px auto 0 !important;
+        clear: both !important;
     }
 
     /* Make all footer content visible on mobile */
@@ -1948,6 +1979,14 @@ footer.main-footer .footer-signature i {
     footer.main-footer .footer-links-container {
         display: flex !important;
         justify-content: center !important;
+        gap: 10px !important;
+    }
+
+    footer.main-footer .footer-links-container .social-circle {
+        width: 44px !important;
+        height: 44px !important;
+        min-width: 44px !important;
+        min-height: 44px !important;
     }
 
     footer.main-footer .footer-col-identity,
@@ -2284,8 +2323,8 @@ footer.main-footer .footer-signature i {
    PREMIUM CUSTOM INTERACTIVE CURSOR & PULSING EFFECTS
    ========================================================================== */
 
-/* Cursor Follower - Desativado em toque por pointer: fine */
-@media (pointer: fine) {
+/* Cursor Follower - Somente Desktop (>768px) com mouse */
+@media (pointer: fine) and (min-width: 769px) {
     .custom-cursor-dot {
         width: 8px;
         height: 8px;
@@ -2326,6 +2365,17 @@ footer.main-footer .footer-signature i {
         border-color: var(--accent); /* Latão */
         background-color: rgba(197, 160, 89, 0.08); /* Latão Glow */
         box-shadow: 0 0 20px rgba(197, 160, 89, 0.3);
+    }
+}
+
+/* Cursor Customizado: Totalmente ocultado no celular e dispositivos de toque */
+@media (max-width: 768px), (pointer: coarse) {
+    .custom-cursor-dot,
+    .custom-cursor-glow {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
     }
 }
 
@@ -2800,10 +2850,34 @@ a.hero-search-result-item.is-focused {
 }
 
 
-/* Desktop-only: oculta a barra de busca do hero no mobile (que vai pro drawer) */
+/* HERO MOBILE: Barra de busca visível no celular, logo abaixo dos botões do hero */
 @media (max-width: 768px) {
     .hero-search-bar {
-        display: none !important;
+        display: block !important;
+        order: 4 !important;
+        width: 100% !important;
+        max-width: 280px !important;
+        margin: 0 auto !important;
+        position: relative !important;
+    }
+
+    .hero-search-bar input[type="search"],
+    #heroSearchInput {
+        height: 44px !important;
+        font-size: 0.86rem !important;
+        padding: 0 38px 0 38px !important;
+        border-radius: 40px !important;
+    }
+
+    .hero-search-icon {
+        left: 14px !important;
+        font-size: 0.85rem !important;
+    }
+
+    .hero-search-results,
+    #heroSearchResults {
+        width: 100% !important;
+        max-width: 100% !important;
     }
 }
 
