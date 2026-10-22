@@ -1328,17 +1328,59 @@
     line-height: 1.25 !important;
 }
 
-/* Item 5: Feedback visual de toque para pílulas da Newsletter no celular */
+/* ==========================================================================
+   AJUSTES CIRÚRGICOS EXCLUSIVOS MOBILE (≤768px) — VERSÃO WEB NÃO MUDA NADA
+   1. Hero foto sem efeito escuro (cor normal)
+   2. Hero sem os dois botões (Iniciar Jornada / Melusine) + busca após subtítulo
+      + hero encurtado para revelar carrossel e topo dos cards na 1ª tela
+   3. Rodapé sem vazio grande (distância aviso -> barra fixa entre 24px e 40px)
+   ========================================================================== */
 @media (max-width: 768px) {
+    /* Item 1: Foto do hero com cor e brilho normais (sem filtro escuro/grayscale) */
+    .hero-mobile-img {
+        filter: none !important;
+        -webkit-filter: none !important;
+    }
+
+    /* Item 2a: Ocultar botões 'Iniciar Jornada' e 'Melusine' no celular */
+    .hero .cta-group {
+        display: none !important;
+    }
+
+    /* Item 2b: Busca logo após o subtítulo, sem espaço vazio deixado pelos botões */
+    .hero-search-bar {
+        order: 3 !important;
+        margin: 0 auto !important;
+    }
+
+    /* Item 2c: Encurtar o hero para carrossel e topo dos cards aparecerem na 1ª tela */
+    .hero {
+        height: calc(100vh - 160px) !important;
+        height: calc(100dvh - 160px) !important;
+        min-height: 480px !important;
+        max-height: none !important;
+        padding: 16px 14px !important;
+        box-sizing: border-box !important;
+    }
+
+    .hero-content {
+        padding: 16px 16px !important;
+        max-width: 92% !important;
+    }
+
     .newsletter-meta > a:active .btn-circle {
         background: rgba(197, 160, 89, 0.28) !important;
         border-color: #C5A059 !important;
         transform: scale(0.97) !important;
     }
 
-    /* Rodapé celular: separação visual entre colunas empilhadas com divisor dourado centralizado */
+    /* Item 3: Rodapé celular — remoção do vazio preto grande (distância 32px até barra fixa) */
+    body {
+        padding-bottom: 0 !important;
+    }
+
     footer.main-footer {
-        padding-bottom: calc(125px + env(safe-area-inset-bottom, 0px)) !important;
+        padding-bottom: calc(88px + env(safe-area-inset-bottom, 0px)) !important;
     }
     footer.main-footer .footer-col-identity,
     footer.main-footer .footer-col-nav {
