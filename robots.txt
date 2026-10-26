@@ -185,6 +185,7 @@ Allow: /pombagiras-do-lodo-e-das-sombras/
 Allow: /quando-a-pombagira-diz-nao/
 Allow: /quando-a-pombagira-diz-nao
 Allow: /promessa-nao-cumprida/
+Allow: /pedir-justica-a-uma-pombagira/
 Allow: /ponto-riscado/
 Allow: /ponto-riscado
 Allow: /lodo/
