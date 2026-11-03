@@ -1158,6 +1158,31 @@ p {
     font-weight: 300;
 }
 
+.footer-legal-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: nowrap;
+}
+
+.footer-legal-link {
+    color: #FAF6EE;
+    opacity: 0.75;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+}
+
+.footer-legal-link:hover {
+    opacity: 1;
+}
+
+.footer-legal-sep {
+    color: #FAF6EE;
+    opacity: 0.3;
+}
+
 .footer-closing-vibe {
     font-family: var(--font-heading);
     font-size: 1rem;
@@ -1631,6 +1656,53 @@ p {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 1rem !important;
     }
+
+    /* --- Cacurucaia Full-Width Horizontal Card on Mobile (Print 3) --- */
+    .card-cacurucaia {
+        grid-column: 1 / -1 !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: stretch !important;
+    }
+
+    .card-cacurucaia .card-image-box {
+        width: 38% !important;
+        min-width: 110px !important;
+        max-width: 140px !important;
+        height: auto !important;
+        min-height: 100% !important;
+        border-bottom: none !important;
+        border-right: 1px solid rgba(255, 255, 255, 0.05) !important;
+        flex-shrink: 0 !important;
+    }
+
+    .card-cacurucaia .card-img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    .card-cacurucaia .card-info {
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        padding: 0.85rem 0.8rem !important;
+    }
+
+    .card-cacurucaia .card-title {
+        font-size: 1.05rem !important;
+        line-height: 1.25 !important;
+    }
+
+    .card-cacurucaia .card-text {
+        font-size: 0.8rem !important;
+        line-height: 1.35 !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 3 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+    }
     
     .pombagira-card {
         border-radius: var(--border-radius-sm);
@@ -1697,24 +1769,22 @@ p {
         box-sizing: border-box !important;
     }
 
-    /* --- Mobile Navigation & Tab Tuning --- */
+    /* --- Mobile Navigation & Tab Tuning (Print 2) --- */
     .tabs-nav-bar {
         padding: 0.4rem 0 !important;
         margin-bottom: 1.5rem !important;
         max-width: 100% !important;
-        overflow-x: hidden !important;
+        overflow: visible !important;
     }
 
     .tabs-nav-inner {
-        display: flex !important;
-        flex-wrap: nowrap !important;
-        justify-content: center !important;
-        overflow-x: auto !important;
-        gap: 0.45rem !important;
-        padding: 0.4rem 0.2rem !important;
-        scrollbar-width: none !important;
-        -webkit-overflow-scrolling: touch !important;
-        max-width: 100% !important;
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 0.3rem !important;
+        width: 100% !important;
+        padding: 0.3rem 0 !important;
+        box-sizing: border-box !important;
+        overflow: visible !important;
     }
 
     .tabs-nav-inner::-webkit-scrollbar {
@@ -1722,19 +1792,42 @@ p {
     }
 
     .tab-trigger {
-        flex: 0 0 auto !important;
-        font-size: 0.85rem !important;
-        padding: 0.5rem 0.9rem !important;
-        border-radius: 20px !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 0.22rem !important;
+        padding: 0.45rem 0.15rem !important;
+        font-size: 0.72rem !important;
+        line-height: 1.15 !important;
+        border-radius: 12px !important;
         white-space: nowrap !important;
         background: rgba(255, 255, 255, 0.04) !important;
         border: 1px solid rgba(197, 160, 89, 0.2) !important;
+    }
+
+    .tab-trigger .tab-icon {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .tab-trigger .tab-svg {
+        width: 15px !important;
+        height: 15px !important;
     }
 
     .tab-trigger.active {
         background: rgba(128, 0, 32, 0.4) !important;
         border-color: var(--color-gold, #C59B27) !important;
         color: #FAF6EE !important;
+        box-shadow: 0 0 10px rgba(184, 15, 43, 0.35) !important;
+    }
+
+    .active-tab-line {
+        display: none !important;
     }
 
     /* --- Vertical Cards Stack for Curiosidades (Mobile, Zero Horizontal Void) --- */
@@ -1931,6 +2024,26 @@ p {
     
     .footer-pombagiras {
         padding: 3rem 0 2rem !important;
+    }
+
+    /* --- Single Row Footer Legal Links on Mobile (Print 4) --- */
+    .footer-legal-links {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 6px !important;
+        flex-wrap: nowrap !important;
+        width: 100% !important;
+    }
+
+    .footer-legal-link {
+        font-size: 0.72rem !important;
+        white-space: nowrap !important;
+        letter-spacing: -0.01em !important;
+    }
+
+    .footer-legal-sep {
+        font-size: 0.7rem !important;
     }
     
     .footer-top-row {
