@@ -1260,9 +1260,9 @@ p {
     
     .hero-overlay {
         background: linear-gradient(180deg, 
-            rgba(4, 4, 4, 0.95) 0%, 
-            rgba(4, 4, 4, 0.85) 60%, 
-            rgba(4, 4, 4, 0.98) 100%);
+            rgba(12, 1, 4, 0.2) 0%, 
+            rgba(12, 1, 4, 0.35) 45%, 
+            rgba(4, 4, 4, 0.75) 100%);
     }
     
     .main-page-title {
@@ -1627,6 +1627,28 @@ p {
     
     .hero-banner-wrapper {
         padding: 3rem 1.5rem;
+    }
+
+    /* --- Hero Slideshow Mobile Colorful Mode (Sem Fundo Preto) --- */
+    .hero-slideshow-img {
+        filter: none !important;
+        opacity: 0;
+    }
+
+    .hero-slideshow-img.active {
+        opacity: 1 !important;
+        filter: brightness(1.0) contrast(1.05) saturate(1.1) !important;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(180deg, 
+            rgba(12, 1, 4, 0.2) 0%, 
+            rgba(12, 1, 4, 0.35) 45%, 
+            rgba(4, 4, 4, 0.75) 100%) !important;
+    }
+
+    .hero-banner-content {
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
     }
     
     .main-page-title {
