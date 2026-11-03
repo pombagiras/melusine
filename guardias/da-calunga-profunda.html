@@ -53,7 +53,10 @@
             --glass-bg: rgba(10, 12, 14, 0.9);
             --glass-border: rgba(197, 160, 89, 0.2);
             --shadow-glow: rgba(128, 0, 32, 0.12);
-            --muted-text: #78868c; /* Slate */
+            --muted-text: #9aa4a8; /* Slate clareado para contraste */
+            --gold: #C5A059;
+            --gold-light: #E5C383;
+            --accent-pink: #D94680;
         }
         body { 
             background: linear-gradient(135deg, #050505 0%, #121719 100%);
@@ -202,36 +205,208 @@
             font-size: 1.1rem;
         }
 
-        /* Bloco de FAQ */
-        .faq-section {
-            margin-top: 3rem;
-        }
-        .faq-item {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        .faq-question {
-            font-family: 'Fraunces', serif;
-            color: var(--text-color);
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            border-left: 2px solid var(--accent-red-bright);
-            padding-left: 0.75rem;
-        }
-        .faq-answer {
+        /* Diretiva de Trabalho — Metadados Editoriais (Linha Horizontal Única & Responsivo) */
+        .editorial-meta-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: nowrap;
+            white-space: nowrap;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            gap: 10px;
+            font-size: clamp(0.72rem, 1.7vw, 0.82rem);
             color: var(--muted-text);
-            font-size: 1rem;
-            line-height: 1.5;
-            padding-left: 0.75rem;
+            margin-bottom: 1.8rem;
+            padding: 8px 14px;
+            background: rgba(14, 8, 10, 0.75);
+            border: 1px solid rgba(197, 160, 89, 0.22);
+            border-radius: 8px;
+        }
+        .editorial-meta-bar::-webkit-scrollbar {
+            display: none;
+        }
+        .editorial-meta-bar .meta-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            flex-shrink: 0;
+            white-space: nowrap;
+        }
+        .editorial-meta-bar strong {
+            color: var(--gold-light);
+            font-weight: 600;
+        }
+        .editorial-meta-bar i {
+            color: var(--accent-pink);
+            font-size: 0.88em;
+        }
+        .meta-sep {
+            color: rgba(197, 160, 89, 0.35);
+            flex-shrink: 0;
+            user-select: none;
         }
 
-        /* Rodapé do Artigo */
+        /* Container da Imagem de Destaque */
+        .featured-image-container {
+            margin-bottom: 2.2rem;
+            position: relative;
+        }
+        .featured-image {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            display: block;
+            aspect-ratio: 16 / 9;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 8px 32px var(--shadow-glow);
+            object-fit: cover;
+            object-position: center top;
+            margin-bottom: 0.5rem;
+        }
+        .image-caption {
+            font-size: 0.82rem;
+            color: var(--muted-text);
+            font-style: italic;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Seção Retrátil de Perguntas Frequentes (FAQ Accordion) */
+        .faq-section {
+            margin-top: 3.2rem;
+            padding-top: 0.5rem;
+        }
+        .faq-section h2 {
+            border-left: 3px solid var(--accent-red-bright);
+            padding-left: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+        .faq-item {
+            background: rgba(18, 9, 12, 0.78);
+            border: 1px solid rgba(197, 160, 89, 0.22);
+            border-radius: 10px;
+            margin-bottom: 14px;
+            overflow: hidden;
+            transition: border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+        }
+        .faq-item[open] {
+            border-color: var(--gold);
+            background: rgba(26, 12, 18, 0.94);
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.55);
+        }
+        .faq-question {
+            padding: 16px 20px;
+            font-family: 'Fraunces', serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-color);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            user-select: none;
+            text-align: left;
+            line-height: 1.4;
+            transition: color 0.2s ease;
+        }
+        .faq-question::-webkit-details-marker { display: none; }
+        .faq-question:hover { color: var(--gold-light); }
+        .faq-icon {
+            font-family: 'Geist Mono', monospace;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--gold);
+            flex-shrink: 0;
+            line-height: 1;
+            transition: transform 0.25s ease, color 0.2s ease;
+        }
+        details[open] .faq-icon {
+            color: var(--accent-pink);
+            transform: rotate(45deg);
+        }
+        .faq-answer {
+            padding: 0 20px 20px 20px;
+            font-size: 1rem;
+            color: var(--muted-text);
+            line-height: 1.7;
+            text-align: left;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            margin-top: 4px;
+            padding-top: 16px;
+            overflow-wrap: break-word;
+            animation: fadeInAnswer 0.3s ease-in-out;
+        }
+        .faq-answer p {
+            margin-bottom: 0.5rem;
+            text-align: left;
+        }
+        @keyframes fadeInAnswer {
+            from { opacity: 0; transform: translateY(-4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Caixa de Autoria Oficial de Alexia Melusine */
+        .author-box {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            background: rgba(14, 8, 10, 0.85);
+            border: 1px solid rgba(197, 160, 89, 0.22);
+            border-radius: 12px;
+            padding: 1.4rem;
+            margin-top: 3.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+        .author-avatar {
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            object-fit: cover;
+            flex-shrink: 0;
+            box-shadow: 0 0 16px rgba(197, 160, 89, 0.3);
+        }
+        .author-info h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            color: var(--gold);
+            margin-bottom: 0.25rem;
+        }
+        .author-info p {
+            font-size: 0.88rem;
+            color: var(--muted-text);
+            margin-bottom: 0.4rem;
+            line-height: 1.5;
+            text-align: left;
+        }
+        .author-links {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .author-links a {
+            color: var(--gold-light);
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-family: 'Geist', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.2s ease;
+        }
+        .author-links a:hover {
+            color: var(--text-color);
+        }
+
+        /* Rodapé Semântico */
         footer {
-            margin-top: 4rem;
+            margin-top: 3.5rem;
             padding-top: 1.5rem;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
             text-align: center;
@@ -239,11 +414,92 @@
             color: var(--muted-text);
         }
         footer a {
-            color: var(--accent-red-bright);
+            color: var(--gold-light);
             text-decoration: none;
         }
         footer a:hover {
-            text-decoration: underline;
+            color: var(--text-color);
+        }
+        .footer-legal-links {
+            margin-top: 14px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .footer-legal-links a {
+            color: var(--muted-text);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s ease;
+        }
+        .footer-legal-links a:hover {
+            color: var(--gold);
+        }
+        .footer-legal-sep {
+            color: rgba(255, 255, 255, 0.15);
+        }
+        .email-copy-trigger {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.82rem;
+            cursor: pointer;
+            color: var(--text-color);
+            opacity: 0.8;
+            transition: opacity 0.2s, border-color 0.2s;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-top: 10px;
+        }
+        .email-copy-trigger:hover {
+            opacity: 1;
+            border-color: var(--gold);
+        }
+
+        @media (max-width: 768px) {
+            main { padding: 1rem; }
+            .glass-card { padding: 1.5rem 1.1rem; }
+            h1 { font-size: 2rem; }
+            .author-box {
+                flex-direction: column !important;
+                text-align: center !important;
+                padding: 1.2rem 1rem !important;
+            }
+            .author-info p { text-align: center !important; }
+            .author-links { justify-content: center !important; }
+            .faq-question { font-size: 0.98rem !important; padding: 14px 16px !important; }
+            .faq-answer { padding: 0 16px 16px 16px !important; font-size: 0.94rem !important; }
+            .editorial-meta-bar {
+                flex-direction: row !important;
+                flex-wrap: nowrap !important;
+                white-space: nowrap !important;
+                justify-content: flex-start !important;
+                overflow-x: auto !important;
+                -webkit-overflow-scrolling: touch !important;
+                scrollbar-width: none !important;
+                gap: 8px !important;
+                padding: 7px 10px !important;
+                font-size: 0.72rem !important;
+            }
+            .editorial-meta-bar::-webkit-scrollbar {
+                display: none !important;
+            }
+            .editorial-meta-bar .meta-item {
+                flex-shrink: 0 !important;
+                white-space: nowrap !important;
+            }
+            .meta-sep {
+                display: inline-block !important;
+                opacity: 0.45 !important;
+                flex-shrink: 0 !important;
+            }
+            .featured-image {
+                object-position: center top !important;
+            }
         }
     
     /* â•â•â•â•â•â•â•â•â•â• LANG SWITCHER â•â•â•â•â•â•â•â•â•â• */
@@ -657,7 +913,7 @@
           },
           "inLanguage": "pt‑BR",
           "datePublished": "2026-06-03T14:00:00-03:00",
-          "dateModified": "2026-06-19T14:50:29.311Z"
+          "dateModified": "2026-11-03T07:00:00-03:00"
         },
         {
           "@type": "FAQPage",
@@ -671,7 +927,7 @@
               "name": "Quem é a Pombagira Da Calunga Profunda?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Da Calunga Profunda é uma entidade de esquerda que trabalha sob as vibrações de Eternidade & Silêncio. Ela atua rege os limites sagrados do esquecimento e o descanso cósmico das energias físicas que retornam à terra."
+                "text": "Da Calunga Profunda é uma entidade de esquerda que trabalha sob as vibrações de Eternidade & Silêncio. Ela rege os limites sagrados do esquecimento e o descanso cósmico das energias físicas que retornam à terra."
               }
             },
             {
@@ -679,7 +935,7 @@
               "name": "Qual o significado de seu arquétipo na espiritualidade?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "O arquétipo de Da Calunga Profunda representa autonomia espiritual, a quebra de correntes materiais e a soberania do indivíduo. Ela ensina que a beleza e a sabedoria residem no equilíbrio interna e na responsabilidade kármica."
+                "text": "O arquétipo de Da Calunga Profunda representa a autonomia espiritual, a quebra de correntes materiais e a soberania do indivíduo. Ela ensina que a beleza e a sabedoria residem no equilíbrio interno e na responsabilidade kármica."
               }
             },
             {
@@ -687,7 +943,31 @@
               "name": "Qual o papel dessa guardiã na vida prática?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Ela atua abrindo caminhos profissionais, desfazendo amarras, protegendo contra energias nocivas e estimulando a autoestima consciente e libertadora."
+                "text": "Ela atua abrindo caminhos profissionais, desfazendo amarras energéticas densas, protegendo contra obsessões nocivas e estimulando a autoestima consciente e libertadora."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Qual a oferenda simbólica ideal para Da Calunga Profunda?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sua oferenda litúrgica é constituída tradicionalmente por: Vinho de uva doce, cigarros, rosas escuras sem pétalas, padê de mel e pó de ferro, turmalina negra. Deve ser oferecida com respeito em local consagrado, sob intenção pura e sincera de evolução."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Como funciona a proteção kármica com esta guardiã?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Da Calunga Profunda atua como escudo vibratório na esquerda de nossa evolução. Ela neutraliza correntes mentais tóxicas, afasta obsessores e quebra pactos de subjugação de forma implacável e justa."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Qual a conexão astrológica de seu arquétipo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "O arquétipo ressoa com a energia de Escorpião (Silêncio curativo, encerramento de ciclos negativos e eternidade), refletindo a força de vontade, a atração correta e a determinação fundamentais para vencer qualquer obstáculo material."
               }
             }
           ]
@@ -717,7 +997,20 @@
             <h1>Da Calunga Profunda: Eternidade & Silêncio</h1>
             <p class="subtitle">A decodificação litúrgica e arquetípica da senhora da linha de Eternidade & Silêncio por Alexia Melusine.</p>
             
-            <img src="https://cdn.pombagiras.com/fotos/pombagira_da_calunga_profunda.png" alt="Retrato artístico visceral de Da Calunga Profunda em tons carmesins e profundos" decoding="async" loading="lazy">
+            <!-- Metadados Editoriais Solicitados na Diretiva -->
+            <div class="editorial-meta-bar">
+                <span class="meta-item"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i> <strong>Publicado em:</strong> 03/06/2026</span>
+                <span class="meta-sep">•</span>
+                <span class="meta-item"><i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i> <strong>Atualizado em:</strong> 03/11/2026</span>
+                <span class="meta-sep">•</span>
+                <span class="meta-item"><i class="fa-solid fa-feather-pointed" aria-hidden="true"></i> <strong>Revisão editorial:</strong> 03/11/2026</span>
+            </div>
+
+            <!-- Container da Imagem de Destaque -->
+            <div class="featured-image-container">
+                <img class="featured-image" src="https://cdn.pombagiras.com/fotos/pombagira_da_calunga_profunda.png" alt="Retrato artístico visceral de Da Calunga Profunda em tons carmesins e profundos" decoding="async" loading="lazy" width="800" height="450">
+                <p class="image-caption">Da Calunga Profunda: Eternidade & Silêncio • Acervo Pombagiras.com</p>
+            </div>
             
             <section>
                 <h2>A Guardiã do Axé de Eternidade & Silêncio</h2>
@@ -763,49 +1056,105 @@
 
             <hr class="section-divider">
 
-            <!-- FAQ Section -->
-            <section class="faq-section">
-                <h2>Perguntas Frequentes (FAQ)</h2>
-                
-                <div class="faq-item">
-                    <h3 class="faq-question">1. Qual a oferenda simbólica ideal para Da Calunga Profunda?</h3>
-                    <div class="faq-answer">
-                        <p>Sua oferenda litúrgica é constituída tradicionalmente por: <strong>Vinho de uva doce, cigarros, rosas escuras sem pétalas, padê de mel e pó de ferro, turmalina negra.</strong>. Deve ser oferecida com respeito em local consagrado, sob intenção pura e sincera de evolução.</p>
-                    </div>
-                </div>
+            <!-- SEÇÃO RETRÁTIL DE PERGUNTAS FREQUENTES (FAQ ACCORDION) -->
+            <section class="faq-section" id="faq">
+                <h2>Perguntas Frequentes sobre Da Calunga Profunda</h2>
 
-                <div class="faq-item">
-                    <h3 class="faq-question">2. Como funciona a proteção kármica com esta guardiã?</h3>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Quem é a Pombagira Da Calunga Profunda?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Da Calunga Profunda é uma entidade de esquerda que trabalha sob as vibrações de Eternidade &amp; Silêncio. Ela rege os limites sagrados do esquecimento e o descanso cósmico das energias físicas que retornam à terra.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Qual o significado de seu arquétipo na espiritualidade?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>O arquétipo de Da Calunga Profunda representa a autonomia espiritual, a quebra de correntes materiais e a soberania do indivíduo. Ela ensina que a beleza e a sabedoria residem no equilíbrio interno e na responsabilidade kármica.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Qual o papel dessa guardiã na vida prática?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Ela atua abrindo caminhos profissionais, desfazendo amarras energéticas densas, protegendo contra obsessões nocivas e estimulando a autoestima consciente e libertadora.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Qual a oferenda simbólica ideal para Da Calunga Profunda?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Sua oferenda litúrgica é constituída tradicionalmente por: <strong>Vinho de uva doce, cigarros, rosas escuras sem pétalas, padê de mel e pó de ferro, turmalina negra</strong>. Deve ser oferecida com respeito em local consagrado, sob intenção pura e sincera de evolução.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Como funciona a proteção kármica com esta guardiã?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </summary>
                     <div class="faq-answer">
                         <p>Da Calunga Profunda atua como escudo vibratório na esquerda de nossa evolução. Ela neutraliza correntes mentais tóxicas, afasta obsessores e quebra pactos de subjugação de forma implacável e justa.</p>
                     </div>
-                </div>
+                </details>
 
-                <div class="faq-item">
-                    <h3 class="faq-question">3. Qual a conexão astrológica de seu arquétipo?</h3>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Qual a conexão astrológica de seu arquétipo?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </summary>
                     <div class="faq-answer">
                         <p>O arquétipo ressoa com a energia de <strong>Escorpião (Silêncio curativo, encerramento de ciclos negativos e eternidade)</strong>, refletindo a força de vontade, a atração correta e a determinação fundamentais para vencer qualquer obstáculo material.</p>
                     </div>
-                </div>
+                </details>
             </section>
+
+            <!-- Caixa de Autoria Oficial de Alexia Melusine -->
+            <div class="author-box">
+                <img src="https://cdn.pombagiras.com/assets/favicon-round-192.png" alt="Alexia Melusine" class="author-avatar" width="76" height="76" loading="lazy">
+                <div class="author-info">
+                    <h4>Alexia Melusine</h4>
+                    <p>Pesquisadora independente de antropologia afro-brasileira, desenvolvedora web, diretora de vídeo por IA e ensaísta. Curadora editorial do ecossistema Pombagiras.com.</p>
+                    <div class="author-links">
+                        <a href="https://alexiamelusine.com/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-globe"></i> alexiamelusine.com</a>
+                        <a href="https://www.wikidata.org/wiki/Q139714039" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-barcode"></i> Wikidata Q139714039</a>
+                        <a href="https://pombagiras.com/alexiamelusine/"><i class="fa-solid fa-user-shield"></i> Perfil Oficial</a>
+                    </div>
+                </div>
+            </div>
         </article>
 
-        <!-- Rodapé Semântico -->
+        <!-- Rodapé Semântico Obrigatório -->
         <footer>
-            <p>© 2026 <a href="index.html">POMBAGIRAS.COM</a> • Portal de Desmistificação, Arte & Filosofia Ancestral.</p>
-            <p>Idealizado com rigor teológico por <strong>Alexia Melusine</strong>. Todos os direitos reservados.</p>
-                    <div style="margin-top: 10px; margin-bottom: 5px; text-align: center; display: flex; justify-content: center;">
-            <span class="email-copy-trigger" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; cursor: pointer; color: #FAF6EE; opacity: 0.75; transition: opacity 0.2s, color 0.2s; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.15); padding: 6px 12px; border-radius: 20px;" onclick="const e='contato'+'@'+'pombagiras.com'; navigator.clipboard.writeText(e); const t=this.querySelector('.copy-status'); t.textContent='Copiado!'; t.style.color='#00ff88'; setTimeout(()=>{t.textContent='(Copiar)'; t.style.color='';}, 2000);" onmouseenter="this.style.opacity='1'; this.style.borderColor='#800020';" onmouseleave="this.style.opacity='0.75'; this.style.borderColor='rgba(255, 255, 255, 0.15)';" role="button" aria-label="Copiar e-mail contato@pombagiras.com">
-                <i class="fa-solid fa-envelope" style="color: #800020;"></i>
-                <span style="font-weight: 400; letter-spacing: 0.5px;">contato@pombagiras.com</span>
-                <span class="copy-status" style="font-size: 0.7rem; opacity: 0.6; transition: color 0.2s;">(Copiar)</span>
-            </span>
-        </div>
-        
-            <div style="margin-top: 10px; margin-bottom: 10px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-                <a href="../privacy.html" style="color: var(--muted-text); text-decoration: none;">Política de Privacidade</a>
-                <span style="color: var(--muted-text); opacity: 0.3;">|</span>
-                <a href="../terms.html" style="color: var(--muted-text); text-decoration: none;">Termos de Uso</a>
+            <p>© 2026 <a href="https://pombagiras.com/">POMBAGIRAS.COM</a> • Portal de Desmistificação, Arte &amp; Filosofia Ancestral.</p>
+            <p>Idealizado com rigor ético e teológico por <strong>Alexia Melusine</strong>. Todos os direitos reservados.</p>
+            
+            <div style="margin-top: 10px; margin-bottom: 5px; text-align: center; display: flex; justify-content: center;">
+                <span class="email-copy-trigger" onclick="const e='contato'+'@'+'pombagiras.com'; navigator.clipboard.writeText(e); const t=this.querySelector('.copy-status'); t.textContent='Copiado!'; t.style.color='#00ff88'; setTimeout(()=>{t.textContent='(Copiar)'; t.style.color='';}, 2000);" role="button" aria-label="Copiar e-mail de contato">
+                    <i class="fa-solid fa-envelope" style="color: #800020;"></i>
+                    <span style="font-weight: 400; letter-spacing: 0.5px;">contato@pombagiras.com</span>
+                    <span class="copy-status" style="font-size: 0.72rem; opacity: 0.7; transition: color 0.2s;">(Copiar)</span>
+                </span>
+            </div>
+
+            <div class="footer-legal-links">
+                <a href="https://pombagiras.com/privacy.html">Política de Privacidade</a>
+                <span class="footer-legal-sep">|</span>
+                <a href="https://pombagiras.com/terms.html">Termos de Uso</a>
+                <span class="footer-legal-sep">|</span>
+                <a href="https://pombagiras.com/metodologia.html">Metodologia</a>
             </div>
         </footer>
     </main>
