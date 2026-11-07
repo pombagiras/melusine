@@ -136,6 +136,68 @@ def publish_post(acc_key, image_url, caption):
     print(f"🎉 POST PUBLICADO COM SUCESSO NO INSTAGRAM! (Media ID: {media_id})")
     return media_id
 
+def publish_reel(acc_key, video_url, caption, share_to_feed=True):
+    acc = ACCOUNTS[acc_key]
+    token = acc["token"]
+    ig_id = acc["id"]
+    
+    if not token:
+        raise ValueError(f"Token não configurado para {acc['name']}")
+    
+    print(f"🚀 Iniciando publicação de REEL em {acc['name']}...")
+    print(f"   • Vídeo: {video_url}")
+    
+    # 1. Cria o Reel Media Container
+    container_payload = {
+        "media_type": "REELS",
+        "video_url": video_url,
+        "caption": caption,
+        "share_to_feed": "true" if share_to_feed else "false",
+        "access_token": token
+    }
+    
+    res_container = api_request(f"{ig_id}/media", method="POST", data=container_payload)
+    if "error" in res_container or "id" not in res_container:
+        print(f"❌ Erro ao criar container de Reel: {res_container}")
+        return False
+    
+    creation_id = res_container["id"]
+    print(f"📦 Container de Reel criado com sucesso (ID: {creation_id})")
+    
+    # 2. Aguarda processamento de vídeo (status_code polling)
+    print("⏳ Aguardando transcodificação e processamento nos servidores da Meta...")
+    max_attempts = 24
+    for attempt in range(1, max_attempts + 1):
+        time.sleep(5)
+        status_res = api_request(f"{creation_id}", {"fields": "status_code,status", "access_token": token})
+        status_code = status_res.get("status_code")
+        print(f"   [{attempt}/{max_attempts}] Status: {status_code} ({status_res.get('status', '')})")
+        
+        if status_code == "FINISHED":
+            print("✅ Vídeo pronto para publicação!")
+            break
+        elif status_code == "ERROR":
+            print(f"❌ Falha no processamento do vídeo pela Meta: {status_res}")
+            return False
+    else:
+        print("⚠️ Timeout aguardando o processamento do vídeo.")
+        return False
+
+    # 3. Publica o Reel Container
+    publish_payload = {
+        "creation_id": creation_id,
+        "access_token": token
+    }
+    
+    res_pub = api_request(f"{ig_id}/media_publish", method="POST", data=publish_payload)
+    if "error" in res_pub or "id" not in res_pub:
+        print(f"❌ Erro ao disparar publicação do Reel: {res_pub}")
+        return False
+    
+    media_id = res_pub["id"]
+    print(f"🎉 REEL PUBLICADO COM SUCESSO NO INSTAGRAM! (Media ID: {media_id})")
+    return media_id
+
 def main():
     parser = argparse.ArgumentParser(description="Publicador oficial do Pombagiras Portal no Instagram")
     parser.add_argument("--account", choices=["almas", "alexia", "both"], default="almas", help="Conta alvo")
