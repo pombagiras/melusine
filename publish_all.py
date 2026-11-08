@@ -115,8 +115,8 @@ def run_dispatch(persona="almas", text="", image=None, video=None, link=None, ti
                 results["Bluesky"] = f"ERRO: {e}"
                 print(f"  [-] Bluesky falhou: {e}")
 
-    # 4. Mastodon (Persona Alexia ou All)
-    if persona in ["alexia", "all"]:
+    # 4. Mastodon (Persona Alexia, Almas ou All)
+    if persona in ["alexia", "all", "almas"]:
         print(f"\n[4/6] 🐘 MASTODON (@alexiamelusine@mastodon.social)...")
         masto_text = smart_truncate(text, max_len=495, link=link, tags=tags)
         if dry_run:
@@ -132,8 +132,8 @@ def run_dispatch(persona="almas", text="", image=None, video=None, link=None, ti
                 results["Mastodon"] = f"ERRO: {e}"
                 print(f"  [-] Mastodon falhou: {e}")
 
-    # 5. Tumblr (Persona Alexia ou All)
-    if persona in ["alexia", "all"]:
+    # 5. Tumblr (Persona Alexia, Almas ou All)
+    if persona in ["alexia", "all", "almas"]:
         print(f"\n[5/6] 🥀 TUMBLR (alexiamelusine.tumblr.com)...")
         if dry_run:
             print(f"  [DRY-RUN] Publicaria no Tumblr com imagem {image}")

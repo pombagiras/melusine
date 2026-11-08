@@ -10,24 +10,28 @@ O ecossistema opera sob duas personas distintas que **NUNCA** devem ser misturad
 
 ### A. Persona Editorial / Sagrada: Portal Pombagiras (`almas`)
 - **Foco Temático**: Tradição, memória, teologia, antropologia de Pombagiras e Exus, estudos de Umbanda e Quimbanda, oráculos e firmezas.
-- **Canais Autorizados**:
+- **Canais Autorizados no Disparo de Artigos**:
   - Instagram: `@almasdepombagira` (Feed e Reels)
   - Threads: `@almasdepombagira`
   - Bluesky: `@almasdepombagira.bsky.social`
+  - Mastodon: `@alexiamelusine@mastodon.social`
+  - Tumblr: `alexiamelusine.tumblr.com`
   - YouTube Shorts: `@almasdepombagira` (quando houver vídeo vertical)
   - Telegram: Canal Oficial (`t.me/pomba_giras`)
   - Discord: Servidor Oficial
   - Pinterest: `@almasdepombagira`
-- **BLINDAGEM ABSOLUTA**:
-  - As contas de Instagram `@alexiamelusine` e Threads `@alexiamelusine` **NUNCA** devem receber posts automáticos de novos artigos do portal.
+- **BLINDAGEM ABSOLUTA (REGRA INVIOLÁVEL: SOMENTE ESTES DOIS CANAIS NUNCA RECEBEM DISPARO)**:
+  - 1. Instagram: `https://www.instagram.com/alexiamelusine/` (`@alexiamelusine`)
+  - 2. Threads: `https://www.threads.com/@alexiamelusine` (`@alexiamelusine`)
+  - **TODOS OS DEMAIS CANAIS SÃO AUTORIZADOS E DEVEM RECEBER OS DISPAROS DE NOVOS ARTIGOS.**
 
 ### B. Persona Artística e Filosófica: Alexia Melusine (`alexia`)
 - **Foco Temático**: Identidade Trans / Pride, Arte Digital Generativa, Cyberpunk, Gótico Contemporâneo, Manifestos e Poética.
-- **Canais Autorizados**:
-  - Instagram: `@alexiamelusine`
-  - Threads: `@alexiamelusine`
-  - Mastodon: `@alexiamelusine@mastodon.social`
-  - Tumblr: `alexiamelusine.tumblr.com`
+- **Canais da Persona**:
+  - Instagram: `@alexiamelusine` (exclusivo para conteúdos autorais/pride, nunca artigos)
+  - Threads: `@alexiamelusine` (exclusivo para conteúdos autorais/pride, nunca artigos)
+  - Mastodon: `@alexiamelusine@mastodon.social` (recebe conteúdos autorais e artigos)
+  - Tumblr: `alexiamelusine.tumblr.com` (recebe conteúdos autorais e artigos)
   - Discord (canal específico)
 
 ---
