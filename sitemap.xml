@@ -4,34 +4,28 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- Gerado via auditoria de SEO | Atualizado em: 2026-10-25 -->
+<!-- Gerado via auditoria de SEO | Atualizado em: 2026-11-08 -->
 
 <url>
   <loc>https://pombagiras.com/</loc>
-  <lastmod>2026-10-25</lastmod>
+  <lastmod>2026-11-08</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://pombagiras.com/enciclopedia/</loc>
-  <lastmod>2026-10-17</lastmod>
+  <lastmod>2026-11-05</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://pombagiras.com/acervo</loc>
-  <lastmod>2026-10-18</lastmod>
+  <loc>https://pombagiras.com/acervo/</loc>
+  <lastmod>2026-11-05</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://pombagiras.com/maria-navalha-pombagira-malandragem/</loc>
-  <lastmod>2026-10-15</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/malandragem/</loc>
   <lastmod>2026-10-15</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.8</priority>
@@ -84,12 +78,6 @@
   <lastmod>2026-09-30</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/casa/</loc>
-  <lastmod>2026-09-30</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
 </url>
 <url>
   <loc>https://pombagiras.com/maria-padilha/</loc>
@@ -188,25 +176,25 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://pombagiras.com/pombagira-de-cada-geracao</loc>
+  <loc>https://pombagiras.com/pombagira-de-cada-geracao/</loc>
   <lastmod>2026-09-28</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://pombagiras.com/dignidade-mediunidade</loc>
+  <loc>https://pombagiras.com/dignidade-mediunidade/</loc>
   <lastmod>2026-09-24</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://pombagiras.com/fundamento</loc>
+  <loc>https://pombagiras.com/fundamento/</loc>
   <lastmod>2026-09-24</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://pombagiras.com/literatura</loc>
+  <loc>https://pombagiras.com/literatura/</loc>
   <lastmod>2026-09-25</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.8</priority>
@@ -218,37 +206,37 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://pombagiras.com/infancia</loc>
+  <loc>https://pombagiras.com/infancia/</loc>
   <lastmod>2026-09-17</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://pombagiras.com/cambono</loc>
+  <loc>https://pombagiras.com/cambono/</loc>
   <lastmod>2026-09-17</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://pombagiras.com/oga</loc>
+  <loc>https://pombagiras.com/oga/</loc>
   <lastmod>2026-09-18</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>https://pombagiras.com/jurema</loc>
+  <loc>https://pombagiras.com/jurema/</loc>
   <lastmod>2026-09-18</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://pombagiras.com/nomes</loc>
+  <loc>https://pombagiras.com/nomes/</loc>
   <lastmod>2026-09-18</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://pombagiras.com/12-pombagiras</loc>
+  <loc>https://pombagiras.com/12-pombagiras/</loc>
   <lastmod>2026-09-21</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
@@ -276,12 +264,6 @@
   <lastmod>2026-08-30</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/almas/</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.60</priority>
 </url>
 <url>
   <loc>https://pombagiras.com/cacurucaia/</loc>
@@ -320,22 +302,10 @@
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://pombagiras.com/da-estrada/</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>https://pombagiras.com/da-fenda/</loc>
   <lastmod>2026-09-26</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/da-figueira/</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://pombagiras.com/da-lua/</loc>
@@ -348,12 +318,6 @@
   <lastmod>2026-09-26</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/da-praia/</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://pombagiras.com/da-serra/</loc>
@@ -369,12 +333,6 @@
 </url>
 <url>
   <loc>https://pombagiras.com/das-almas/</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/do-vento/</loc>
   <lastmod>2026-08-30</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
@@ -396,18 +354,6 @@
   <lastmod>2026-09-04</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/fenda/</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/fogo/</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.60</priority>
 </url>
 <url>
   <loc>https://pombagiras.com/gira/</loc>
@@ -578,224 +524,8 @@
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://pombagiras.com/guardias/da-calunga-profunda.html</loc>
-  <lastmod>2026-11-03</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/da-fenda.html</loc>
-  <lastmod>2026-11-03</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/da-figueira.html</loc>
-  <lastmod>2026-11-03</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/da-lua.html</loc>
-  <lastmod>2026-11-03</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/da-neblina.html</loc>
-  <lastmod>2026-11-03</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/da-praia.html</loc>
-  <lastmod>2026-11-03</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/da-serra.html</loc>
-  <lastmod>2026-11-03</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/da-sombra.html</loc>
-  <lastmod>2026-11-03</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/dama-da-noite.html</loc>
-  <lastmod>2026-11-03</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/das-aguas-profundas.html</loc>
-  <lastmod>2026-11-03</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/das-almas.html</loc>
-  <lastmod>2026-11-03</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/das-correntes.html</loc>
-  <lastmod>2026-11-03</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/das-trevas.html</loc>
-  <lastmod>2026-11-03</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/do-fogo.html</loc>
-  <lastmod>2026-11-03</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/maria-farrapo.html</loc>
-  <lastmod>2026-11-03</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/maria-mulambo.html</loc>
-  <lastmod>2026-11-03</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/maria-navalha.html</loc>
-  <lastmod>2026-11-03</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
   <loc>https://pombagiras.com/guardias/maria-padilha-nao-e-servico-de-entrega.html</loc>
   <lastmod>2026-11-03</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/maria-padilha.html</loc>
-  <lastmod>2026-11-03</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/maria-quiteria.html</loc>
-  <lastmod>2026-11-03</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/pombagira-cacurucaia-senhora-do-cruzeiro.html</loc>
-  <lastmod>2026-11-03</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/pombagira-cigana.html</loc>
-  <lastmod>2026-11-03</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/pombagira-da-calunga-profunda.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/pombagira-da-estrada.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/pombagira-da-fenda.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/pombagira-da-figueira.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/pombagira-da-lua.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/pombagira-da-neblina.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/pombagira-da-praia.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/pombagira-da-serra.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/pombagira-da-sombra.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/pombagira-das-aguas-profundas.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/pombagira-das-almas.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/pombagira-das-correntes.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/pombagira-das-trevas.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/pombagira-do-fogo.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/pombagira-do-vento.html</loc>
-  <lastmod>2026-08-30</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.70</priority>
 </url>
@@ -808,18 +538,6 @@
 <url>
   <loc>https://pombagiras.com/guardias/pombagira-entidade-que-o-brasil-tentou-transformar-em-pecado.html</loc>
   <lastmod>2026-11-03</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/pombagira-menina.html</loc>
-  <lastmod>2026-11-03</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/pombagira-sete-encruzilhadas.html</loc>
-  <lastmod>2026-08-30</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.70</priority>
 </url>
@@ -837,24 +555,6 @@
 </url>
 <url>
   <loc>https://pombagiras.com/guardias/rosa-caveira-linha-de-caveira-exus-pombagiras.html</loc>
-  <lastmod>2026-11-03</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/rosa-caveira.html</loc>
-  <lastmod>2026-11-03</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/sete-encruzilhadas.html</loc>
-  <lastmod>2026-11-03</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/guardias/sete-saias.html</loc>
   <lastmod>2026-11-03</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.70</priority>
@@ -884,12 +584,6 @@
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://pombagiras.com/lua/</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
   <loc>https://pombagiras.com/manifesto/</loc>
   <lastmod>2026-08-30</lastmod>
   <changefreq>monthly</changefreq>
@@ -897,18 +591,6 @@
 </url>
 <url>
   <loc>https://pombagiras.com/metodologia.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/mobile/</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/neblina/</loc>
   <lastmod>2026-08-30</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.60</priority>
@@ -956,90 +638,6 @@
   <priority>0.70</priority>
 </url>
 <url>
-  <loc>https://pombagiras.com/portal/da-calunga-profunda.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/portal/da-fenda.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/portal/da-figueira.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/portal/da-lua.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/portal/da-neblina.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/portal/da-praia.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/portal/da-serra.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/portal/da-sombra.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/portal/dama-da-noite.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/portal/das-aguas-profundas.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/portal/das-almas.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/portal/das-correntes.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/portal/das-trevas.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/portal/do-fogo.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
   <loc>https://pombagiras.com/portal/dossie.html</loc>
   <lastmod>2026-10-01</lastmod>
   <changefreq>monthly</changefreq>
@@ -1054,36 +652,6 @@
 <url>
   <loc>https://pombagiras.com/portal/fronteiras-sagradas.html</loc>
   <lastmod>2026-10-01</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/portal/maria-farrapo.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/portal/maria-mulambo.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/portal/maria-navalha.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/portal/maria-padilha.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/portal/maria-quiteria.html</loc>
-  <lastmod>2026-08-30</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.70</priority>
 </url>
@@ -1106,18 +674,6 @@
   <priority>0.70</priority>
 </url>
 <url>
-  <loc>https://pombagiras.com/portal/pombagira-cigana.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/portal/pombagira-menina.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
   <loc>https://pombagiras.com/portal/pombagiras-na-historia.html</loc>
   <lastmod>2026-10-01</lastmod>
   <changefreq>monthly</changefreq>
@@ -1136,26 +692,8 @@
   <priority>0.70</priority>
 </url>
 <url>
-  <loc>https://pombagiras.com/portal/rosa-caveira.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
   <loc>https://pombagiras.com/portal/sao-cipriano.html</loc>
   <lastmod>2026-10-01</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/portal/sete-encruzilhadas.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/portal/sete-saias.html</loc>
-  <lastmod>2026-08-30</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.70</priority>
 </url>
@@ -1196,25 +734,7 @@
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://pombagiras.com/serra/</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/sombra/</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
   <loc>https://pombagiras.com/terms.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/trevas/</loc>
   <lastmod>2026-08-30</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.60</priority>
@@ -1224,12 +744,6 @@
   <lastmod>2026-09-01</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://pombagiras.com/whatsapp.html</loc>
-  <lastmod>2026-08-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.60</priority>
 </url>
 <url>
   <loc>https://pombagiras.com/tratado/</loc>
@@ -1244,7 +758,7 @@
   <priority>0.85</priority>
 </url>
 <url>
-  <loc>https://pombagiras.com/racismo-religioso</loc>
+  <loc>https://pombagiras.com/racismo-religioso/</loc>
   <lastmod>2026-09-08</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.90</priority>
