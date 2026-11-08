@@ -91,8 +91,9 @@ def check_account(acc_key):
     print(f"   • Nome: {res.get('name')}")
     return True
 
-def publish_post(acc_key, image_url, caption):
-    acc = ACCOUNTS[acc_key]
+def publish_post(acc_key="almas", image_url=None, caption="", account=None):
+    target_acc = account or acc_key or "almas"
+    acc = ACCOUNTS[target_acc]
     token = acc["token"]
     ig_id = acc["id"]
     
@@ -134,7 +135,7 @@ def publish_post(acc_key, image_url, caption):
     
     media_id = res_pub["id"]
     print(f"🎉 POST PUBLICADO COM SUCESSO NO INSTAGRAM! (Media ID: {media_id})")
-    return media_id
+    return {"id": media_id}
 
 def publish_reel(acc_key, video_url, caption, share_to_feed=True):
     acc = ACCOUNTS[acc_key]
