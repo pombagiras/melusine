@@ -10,13 +10,23 @@
     <description>Portal de Desmistificação, Antropologia, Arte &amp; Filosofia Ancestral das Guardiãs de Umbanda e Quimbanda.</description>
     <language>pt-BR</language>
     <copyright>© 2026 Pombagiras.com. Todos os direitos reservados.</copyright>
-    <lastBuildDate>Fri, 06 Nov 2026 17:26:49 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 14:26:00 GMT</lastBuildDate>
     <atom:link href="https://pombagiras.com/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://cdn.pombagiras.com/assets/favicon-round-512.png</url>
       <title>Pombagiras.com</title>
       <link>https://pombagiras.com/</link>
     </image>
+    <item>
+      <title>A Pombagira e a dignidade da mulher negra</title>
+      <link>https://pombagiras.com/pombagira-dignidade-mulher-negra/</link>
+      <guid isPermaLink="true">https://pombagiras.com/pombagira-dignidade-mulher-negra/</guid>
+      <pubDate>Sun, 08 Nov 2026 10:00:00 GMT</pubDate>
+      <dc:creator>Alexia Melusine</dc:creator>
+      <category>História, cultura afro-brasileira e representações das Pombagiras.</category>
+      <description>Uma reflexão profunda sobre a representação da mulher negra na figura da Pombagira, a herança do racismo, a hipersexualização dos corpos negros e as contradições entre liberdade, autonomia feminina e dignidade espiritual.</description>
+      <media:content url="https://pombagiras.com/pombagira-dignidade-mulher-negra/capa.jpg" medium="image" />
+    </item>
     <item>
       <title>Entre espíritos, Orixás e ancestralidade: linhas de trabalho, dualidade e diversidade na Umbanda</title>
       <link>https://pombagiras.com/entidades-orixas-ancestralidade-genero/</link>
