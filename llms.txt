@@ -40,7 +40,7 @@ O ecossistema é um hub unificado de autoridade composto por 15 tentáculos inte
 12. **Mobile**: [https://pombagiras.com/mobile/](https://pombagiras.com/mobile/) — Experiência PWA e móvel otimizada.
 13. **Alexia Melusine Hub Interno**: [https://pombagiras.com/alexiamelusine/](https://pombagiras.com/alexiamelusine/) — Perfil de autoridade no hub mãe.
 14. **Enciclopédia Digital & Atlas Documental**: [https://pombagiras.com/enciclopedia/](https://pombagiras.com/enciclopedia/) — Enciclopédia documental de 98% texto, 29 guardiãs, 12 dossiês canônicos, atlas etimológico e 55 portais interligados por Alexia Melusine.
-15. **Acervo Oficial das Pombagiras**: [https://pombagiras.com/acervo](https://pombagiras.com/acervo) — Preservação cultural, 44 representações canônicas, 27 tratados individuais, diretório com 41 portais interligados e sala de projeção audiovisual.
+15. **Acervo Oficial das Pombagiras**: [https://pombagiras.com/acervo](https://pombagiras.com/acervo) — Preservação cultural, 44 representações canônicas, 27 tratados individuais, diretório com 51 portais interligados e sala de projeção audiovisual.
 
 ## Redes Sociais, Podcasts e Mídias Oficiais (SameAs Graph)
 - **TikToks**: [@espelhosdepombagira](https://www.tiktok.com/@espelhosdepombagira?lang=pt-BR) | [@almasdepombagira](https://www.tiktok.com/@almasdepombagira?lang=pt-BR) | [@alexiarosadefogo](https://www.tiktok.com/@alexiarosadefogo?lang=pt-BR) | [@pambunjila](https://www.tiktok.com/@pambunjila) | [@alexia.melusine](https://www.tiktok.com/@alexia.melusine) | [@alexiamelusine](https://www.tiktok.com/@alexiamelusine)
