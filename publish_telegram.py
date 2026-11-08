@@ -116,3 +116,4 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"[-] Erro ao enviar para o Telegram: {e}", file=sys.stderr)
         sys.exit(1)
+

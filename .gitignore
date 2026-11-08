@@ -25,6 +25,10 @@ __pycache__/
 .env
 .env.local
 .env.*
+client_secret*.json
+youtube_token*.json
+credentials.json
+
 
 # Migração R2 — scripts locais, logs e backups
 migrate_r2/

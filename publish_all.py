@@ -28,6 +28,7 @@ from publish_mastodon import get_mastodon_client
 from publish_tumblr import get_tumblr_client
 from publish_telegram import send_telegram
 from publish_discord import send_discord
+from publish_youtube import upload_short as yt_upload
 
 def smart_truncate(text, max_len=300, link=None, tags=None):
     """
@@ -57,7 +58,7 @@ def smart_truncate(text, max_len=300, link=None, tags=None):
 
     return f"{truncated}...{suffix}".strip()
 
-def run_dispatch(persona="almas", text="", image=None, link=None, title=None, tags=None, dry_run=False):
+def run_dispatch(persona="almas", text="", image=None, video=None, link=None, title=None, tags=None, dry_run=False):
     print("=" * 70)
     print(f"🔮 DISPARADOR CENTRAL MULTIPLATAFORMA - PERSONA: [{persona.upper()}]")
     print("=" * 70)
@@ -186,6 +187,26 @@ def run_dispatch(persona="almas", text="", image=None, link=None, title=None, ta
             results["Discord"] = f"ERRO: {e}"
             print(f"  [-] Discord falhou: {e}")
 
+    # 7. YouTube Shorts (se vídeo for fornecido)
+    if video:
+        print(f"\n[7/7] 🎬 YOUTUBE SHORTS (@almasdepombagira)...")
+        if dry_run:
+            print(f"  [DRY-RUN] Enviaria vídeo {video} para o YouTube Shorts")
+            results["YouTube"] = "SKIPPED (dry-run)"
+        else:
+            try:
+                res_yt = yt_upload(
+                    video_path=video,
+                    title=title or text[:80],
+                    description=f"{text}\n\n👉 {link or 'https://pombagiras.com'}",
+                    tags=tags
+                )
+                results["YouTube"] = f"OK ({res_yt.get('shorts_url')})"
+                print(f"  [+] YouTube Shorts: {results['YouTube']}")
+            except Exception as e:
+                results["YouTube"] = f"ERRO: {e}"
+                print(f"  [-] YouTube Shorts falhou: {e}")
+
     print("\n" + "=" * 70)
     print("📊 RESUMO GERAL DO DISPARO")
     print("=" * 70)
@@ -198,9 +219,10 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Master Multi-Publisher Pombagiras Digital")
     parser.add_argument("--persona", default="almas", choices=["almas", "alexia", "all"], help="Persona/conta a disparar")
     parser.add_argument("--text", required=True, help="Texto principal do post")
-    parser.add_argument("--image", required=True, help="Imagem (URL pública ou caminho local)")
+    parser.add_argument("--image", default=None, help="Imagem (URL pública ou caminho local)")
+    parser.add_argument("--video", default=None, help="Vídeo MP4 local para YouTube Shorts / Reels")
     parser.add_argument("--link", default="https://pombagiras.com", help="Link do artigo ou portal")
-    parser.add_argument("--title", default=None, help="Título do post (para Telegram/Discord)")
+    parser.add_argument("--title", default=None, help="Título do post (para YouTube/Telegram/Discord)")
     parser.add_argument("--tags", default=None, help="Hashtags separadas por vírgula")
     parser.add_argument("--dry-run", action="store_true", help="Simula o disparo sem publicar de verdade")
 
@@ -210,6 +232,7 @@ if __name__ == "__main__":
         persona=args.persona,
         text=args.text,
         image=args.image,
+        video=args.video,
         link=args.link,
         title=args.title,
         tags=args.tags,
