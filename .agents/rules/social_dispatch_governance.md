@@ -43,3 +43,4 @@ Ao publicar uma nova página no portal `pombagiras.com`:
 ## 3. Disparos Avulsos Sob Demanda
 Quando a usuária solicitar disparos pontuais (ex: *"Mande no Telegram e Discord uma frase de cura de autoestima"*):
 - Disparar apenas nos canais explicitamente solicitados via `dispatch_custom.py` ou chamando as funções especializadas.
+
