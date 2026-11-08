@@ -96,7 +96,8 @@ def dispatch_custom(targets, text, image=None, video=None, link=None, title=None
             else:
                 try:
                     masto = get_mastodon_client()
-                    res_m = masto.post_status(text=text, image_path_or_url=image)
+                    masto_body = f"{text}\n\n👉 {link}" if link and link not in text else text
+                    res_m = masto.post_status(text=masto_body, image_path_or_url=image)
                     results["Mastodon"] = f"OK ({res_m.get('url')})"
                     print(f"  [+] Mastodon: {results['Mastodon']}")
                 except Exception as e:
