@@ -255,7 +255,7 @@ Sitemap: https://pombagiras.com/sitemap.xml
 Sitemap: https://pombagiras.com/feed.xml
 
 # LLMs.txt — Endpoint de conhecimento semântico para indexadores de IA
-LLMs: https://pombagiras.com/llms.txt
+# LLMs: https://pombagiras.com/llms.txt
 
 # Feed RSS — Distribuição de conteúdo e agregadores
-RSS: https://pombagiras.com/feed.xml
+# RSS: https://pombagiras.com/feed.xml
