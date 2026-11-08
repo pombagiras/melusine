@@ -353,33 +353,33 @@ const pombagirasData = {
 };
 
 const carouselImages = [
-    { name: "Maria Padilha", url: "https://cdn.pombagiras.com/fotos/pombagira_maria_padilha.png", link: "maria-padilha/index.html" },
-    { name: "Maria Mulambo", url: "https://cdn.pombagiras.com/fotos/pombagira_maria_mulambo.png", link: "maria-mulambo/index.html" },
-    { name: "Maria Quitéria", url: "https://cdn.pombagiras.com/fotos/pombagira_maria_quiteria.png", link: "maria-quiteria/index.html" },
-    { name: "Rosa Caveira", url: "https://cdn.pombagiras.com/fotos/pombagira_rosa_caveira.png", link: "rosa-caveira/index.html" },
-    { name: "Dama da Noite", url: "https://cdn.pombagiras.com/fotos/pombagira_dama_da_noite.png", link: "dama-da-noite/index.html" },
-    { name: "Sete Saias", url: "https://cdn.pombagiras.com/fotos/pombagira_sete_saias.png", link: "sete-saias/index.html" },
-    { name: "Cigana", url: "https://cdn.pombagiras.com/fotos/pombagira_cigana.png", link: "cigana/index.html" },
-    { name: "Maria Navalha", url: "https://cdn.pombagiras.com/fotos/pombagira_maria_navalha.png", link: "maria-navalha/index.html" },
-    { name: "Da Praia", url: "https://cdn.pombagiras.com/fotos/pombagira_da_praia.png", link: "praia/index.html" },
-    { name: "Maria Farrapo", url: "https://cdn.pombagiras.com/fotos/pombagira_maria_farrapo.png", link: "maria-farrapo/index.html" },
-    { name: "Menina", url: "https://cdn.pombagiras.com/fotos/pombagira_menina.png", link: "menina/index.html" },
-    { name: "Da Figueira", url: "https://cdn.pombagiras.com/fotos/pombagira_da_figueira.png", link: "figueira/index.html" },
-    { name: "Das Almas", url: "https://cdn.pombagiras.com/fotos/pombagira_das_almas.png", link: "das-almas/index.html" },
-    { name: "Sete Encruzilhadas", url: "https://cdn.pombagiras.com/fotos/pombagira_sete_encruzilhadas.png", link: "sete-encruzilhadas/index.html" },
-    { name: "Da Lua", url: "https://cdn.pombagiras.com/fotos/pombagira_da_lua.png", link: "da-lua/index.html" },
-    { name: "Das Trevas", url: "https://cdn.pombagiras.com/fotos/pombagira_das_trevas.png", link: "das-trevas/index.html" },
-    { name: "Da Serra", url: "https://cdn.pombagiras.com/fotos/pombagira_da_serra.png", link: "da-serra/index.html" },
-    { name: "Do Fogo", url: "https://cdn.pombagiras.com/fotos/pombagira_do_fogo.png", link: "do-fogo/index.html" },
-    { name: "Das Águas Profundas", url: "https://cdn.pombagiras.com/fotos/pombagira_das_aguas_profundas.png", link: "aguas-profundas/index.html" },
-    { name: "Da Sombra", url: "https://cdn.pombagiras.com/fotos/pombagira_da_sombra.png", link: "da-sombra/index.html" },
-    { name: "Da Fenda", url: "https://cdn.pombagiras.com/fotos/pombagira_da_fenda.png", link: "da-fenda/index.html" },
-    { name: "Da Calunga Profunda", url: "https://cdn.pombagiras.com/fotos/pombagira_da_calunga_profunda.png", link: "calunga-profunda/index.html" },
-    { name: "Das Correntes", url: "https://cdn.pombagiras.com/fotos/pombagira_das_correntes.png", link: "correntes/index.html" },
-    { name: "Da Neblina", url: "https://cdn.pombagiras.com/fotos/pombagira_da_neblina.png", link: "da-neblina/index.html" },
-    { name: "Da Estrada", url: "https://cdn.pombagiras.com/fotos/pombagira_da_estrada.png", link: "estrada/index.html" },
-    { name: "Do Vento", url: "https://cdn.pombagiras.com/fotos/pombagira_do_vento.png", link: "vento/index.html" },
-    { name: "Cacurucaia", url: "https://cdn.pombagiras.com/fotos/pombagira_cacurucaia.png", link: "cacurucaia/index.html" }
+    { name: "Maria Padilha", url: "fotos/pombagira_maria_padilha.webp", link: "maria-padilha/index.html" },
+    { name: "Maria Mulambo", url: "fotos/pombagira_maria_mulambo.webp", link: "maria-mulambo/index.html" },
+    { name: "Maria Quitéria", url: "fotos/pombagira_maria_quiteria.webp", link: "maria-quiteria/index.html" },
+    { name: "Rosa Caveira", url: "fotos/pombagira_rosa_caveira.webp", link: "rosa-caveira/index.html" },
+    { name: "Dama da Noite", url: "fotos/pombagira_dama_da_noite.webp", link: "dama-da-noite/index.html" },
+    { name: "Sete Saias", url: "fotos/pombagira_sete_saias.webp", link: "sete-saias/index.html" },
+    { name: "Cigana", url: "fotos/pombagira_cigana.webp", link: "cigana/index.html" },
+    { name: "Maria Navalha", url: "fotos/pombagira_maria_navalha.webp", link: "maria-navalha/index.html" },
+    { name: "Da Praia", url: "fotos/pombagira_da_praia.webp", link: "praia/index.html" },
+    { name: "Maria Farrapo", url: "fotos/pombagira_maria_farrapo.webp", link: "maria-farrapo/index.html" },
+    { name: "Menina", url: "fotos/pombagira_menina.webp", link: "menina/index.html" },
+    { name: "Da Figueira", url: "fotos/pombagira_da_figueira.webp", link: "figueira/index.html" },
+    { name: "Das Almas", url: "fotos/pombagira_das_almas.webp", link: "das-almas/index.html" },
+    { name: "Sete Encruzilhadas", url: "fotos/pombagira_sete_encruzilhadas.webp", link: "sete-encruzilhadas/index.html" },
+    { name: "Da Lua", url: "fotos/pombagira_da_lua.webp", link: "da-lua/index.html" },
+    { name: "Das Trevas", url: "fotos/pombagira_das_trevas.webp", link: "das-trevas/index.html" },
+    { name: "Da Serra", url: "fotos/pombagira_da_serra.webp", link: "da-serra/index.html" },
+    { name: "Do Fogo", url: "fotos/pombagira_do_fogo.webp", link: "do-fogo/index.html" },
+    { name: "Das Águas Profundas", url: "fotos/pombagira_das_aguas_profundas.webp", link: "aguas-profundas/index.html" },
+    { name: "Da Sombra", url: "fotos/pombagira_da_sombra.webp", link: "da-sombra/index.html" },
+    { name: "Da Fenda", url: "fotos/pombagira_da_fenda.webp", link: "da-fenda/index.html" },
+    { name: "Da Calunga Profunda", url: "fotos/pombagira_da_calunga_profunda.webp", link: "calunga-profunda/index.html" },
+    { name: "Das Correntes", url: "fotos/pombagira_das_correntes.webp", link: "correntes/index.html" },
+    { name: "Da Neblina", url: "fotos/pombagira_da_neblina.webp", link: "da-neblina/index.html" },
+    { name: "Da Estrada", url: "fotos/pombagira_da_estrada.webp", link: "estrada/index.html" },
+    { name: "Do Vento", url: "fotos/pombagira_do_vento.webp", link: "vento/index.html" },
+    { name: "Cacurucaia", url: "fotos/pombagira_cacurucaia.webp", link: "cacurucaia/index.html" }
 ];
 
 function getNormalizedName(name) {
@@ -426,7 +426,12 @@ if (track) {
             const altText = displayName.startsWith("Pombagira") ? `Representação artística conceitual da ${displayName}` : `Representação artística conceitual da Pombagira ${displayName}`;
             el.setAttribute('aria-label', displayName);
             el.setAttribute('title', displayName);
-            el.innerHTML = `<img src="${img.url}" alt="${altText}" loading="lazy" decoding="async" width="200" height="200"><span>${img.name}</span>`;
+            const isWebp = img.url.endsWith('.webp');
+            const fallbackPng = isWebp ? img.url.replace(/\.webp$/, '.png') : null;
+            const imgHtml = isWebp
+                ? `<picture style="width:100%;height:100%;display:block;"><source type="image/webp" srcset="${img.url}"><img src="${fallbackPng}" alt="${altText}" loading="lazy" decoding="async" width="200" height="200"></picture>`
+                : `<img src="${img.url}" alt="${altText}" loading="lazy" decoding="async" width="200" height="200">`;
+            el.innerHTML = `${imgHtml}<span>${img.name}</span>`;
             
             // No clique, checamos se o usuário não estava apenas arrastando o carrossel
             el.addEventListener('click', (e) => {
