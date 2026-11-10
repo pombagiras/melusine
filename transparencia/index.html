@@ -242,6 +242,8 @@
             font-family: var(--ff-sans);
             line-height: 1.7;
             overflow-x: hidden;
+            overflow-wrap: break-word;
+            word-break: break-word;
             position: relative;
             text-rendering: optimizeLegibility;
             -webkit-font-smoothing: antialiased;
@@ -253,8 +255,10 @@
             position: fixed;
             top: 0;
             left: 0;
-            width: 100vw;
-            height: 100vh;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
             opacity: 0.022;
             z-index: -1;
@@ -862,6 +866,130 @@
 
         .footer-legal-sep {
             color: rgba(197, 160, 89, 0.3);
+        }
+
+        /* ── OTIMIZAÇÃO RESPONSIVA CIRÚRGICA MOBILE (<= 768px) ── */
+        @media (max-width: 768px) {
+            main {
+                padding: 1.2rem 1rem 3.5rem;
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .portal-header {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.85rem;
+                padding: 0.8rem 0;
+                margin-bottom: 1.8rem;
+                text-align: center;
+            }
+
+            .portal-header .brand {
+                font-size: 1.3rem;
+                justify-content: center;
+            }
+
+            .portal-header .portal-nav-actions {
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+
+            .portal-header a.nav-btn {
+                font-size: 0.82rem;
+                padding: 0.45rem 0.9rem;
+            }
+
+            .transparency-hero {
+                margin-bottom: 2.5rem;
+            }
+
+            .transparency-hero h1 {
+                font-size: 1.85rem;
+            }
+
+            .transparency-lead {
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+
+            .goal-highlight-card {
+                padding: 1.8rem 1.1rem;
+                margin-bottom: 2.5rem;
+            }
+
+            .goal-value {
+                font-size: clamp(2.4rem, 8vw, 3.4rem);
+            }
+
+            .distribution-label-row {
+                flex-direction: column;
+                gap: 0.3rem;
+                text-align: center;
+            }
+
+            .distribution-legend {
+                grid-template-columns: 1fr;
+                gap: 0.6rem;
+            }
+
+            .breakdown-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+                margin-bottom: 2.5rem;
+            }
+
+            .breakdown-card {
+                padding: 1.5rem 1.2rem;
+            }
+
+            .breakdown-card-top {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+
+            .clarifications-section {
+                padding: 1.6rem 1.1rem;
+                margin-bottom: 2.5rem;
+            }
+
+            .privacy-box {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                padding: 1.5rem 1.1rem;
+                margin-bottom: 2.5rem;
+            }
+
+            .cta-apoio-box {
+                padding: 1.8rem 1.2rem;
+                margin-bottom: 2.5rem;
+            }
+
+            .cta-apoio-btn {
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+                white-space: normal;
+                padding: 0.85rem 1.1rem;
+            }
+
+            .author-box {
+                padding: 1.4rem 1.1rem;
+            }
+
+            .footer-legal-links {
+                flex-wrap: wrap;
+                gap: 0.5rem 0.8rem;
+                line-height: 1.6;
+                padding: 0 0.5rem;
+            }
+
+            .footer-legal-links a {
+                font-size: 0.8rem;
+            }
         }
     </style>
 </head>
