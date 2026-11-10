@@ -253,28 +253,323 @@
             border-color: var(--gold);
         }
 
-        /* Success Banner */
-        .success-banner {
+        /* ── SEÇÃO DE AGRADECIMENTO COMPLETO (?status=sucesso) ── */
+        .success-section {
             display: none;
-            background: linear-gradient(135deg, rgba(74, 14, 23, 0.65) 0%, rgba(197, 160, 89, 0.25) 100%);
+            background: linear-gradient(135deg, rgba(45, 14, 25, 0.95) 0%, rgba(18, 10, 14, 0.98) 100%);
             border: 1px solid var(--gold);
-            border-radius: 12px;
-            padding: 1.2rem 1.5rem;
-            margin-bottom: 2rem;
+            border-radius: 16px;
+            padding: 2.4rem 2rem;
+            margin-bottom: 3.2rem;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(128, 0, 32, 0.35);
+            box-shadow: 0 14px 40px rgba(128, 0, 32, 0.35);
+            position: relative;
+            overflow: hidden;
         }
 
-        .success-banner h3 {
+        .success-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #dfc07e, #800020, #dfc07e);
+        }
+
+        .success-flame-icon {
+            font-size: 2.4rem;
+            color: var(--gold-light);
+            margin-bottom: 0.8rem;
+            display: inline-block;
+            filter: drop-shadow(0 0 10px rgba(197, 160, 89, 0.5));
+        }
+
+        .success-section h2 {
             font-family: var(--ff-display);
             color: var(--gold-light);
-            font-size: 1.3rem;
+            font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+            margin-bottom: 0.9rem;
+            font-weight: 700;
+            line-height: 1.25;
+        }
+
+        .success-explanation {
+            color: var(--text-secondary);
+            font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+            line-height: 1.65;
+            max-width: 760px;
+            margin: 0 auto 1.8rem;
+        }
+
+        .success-quick-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.2rem;
+        }
+
+        .success-action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.4rem;
+            border-radius: 8px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .success-action-btn.portal {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--glass-border);
+            color: var(--text-color);
+        }
+
+        .success-action-btn.portal:hover {
+            background: rgba(197, 160, 89, 0.18);
+            border-color: var(--gold);
+            color: var(--gold-light);
+            transform: translateY(-2px);
+        }
+
+        .success-action-btn.transparencia {
+            background: var(--gold);
+            border: 1px solid var(--gold);
+            color: #050002;
+        }
+
+        .success-action-btn.transparencia:hover {
+            background: #fff;
+            color: #050002;
+            box-shadow: 0 4px 16px rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* ── MURALHA DAS GUARDIÃS (OPT-IN COM CONSENTIMENTO) ── */
+        .mural-optin-box {
+            background: rgba(12, 6, 10, 0.75);
+            border: 1px solid rgba(197, 160, 89, 0.25);
+            border-radius: 12px;
+            padding: 1.8rem 1.6rem;
+            max-width: 680px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .mural-optin-header {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
             margin-bottom: 0.4rem;
         }
 
-        .success-banner p {
+        .mural-optin-header i {
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+
+        .mural-optin-header h4 {
+            font-family: var(--ff-display);
+            font-size: 1.15rem;
+            color: var(--gold-light);
+        }
+
+        .mural-optin-subtext {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .mural-checkbox-label {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.65rem;
+            cursor: pointer;
+            font-size: 0.92rem;
             color: var(--text-color);
-            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            user-select: none;
+        }
+
+        .mural-checkbox-label input[type="checkbox"] {
+            margin-top: 3px;
+            accent-color: var(--gold);
+            width: 17px;
+            height: 17px;
+            cursor: pointer;
+        }
+
+        .mural-input-wrap {
+            margin-top: 0.9rem;
+            padding-top: 0.9rem;
+            border-top: 1px dashed rgba(197, 160, 89, 0.2);
+        }
+
+        .mural-input-row {
+            display: flex;
+            gap: 0.6rem;
+        }
+
+        @media (max-width: 580px) {
+            .mural-input-row {
+                flex-direction: column;
+            }
+        }
+
+        .mural-input-row input[type="text"] {
+            flex: 1;
+            background: rgba(5, 2, 3, 0.85);
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            font-size: 0.92rem;
+            color: var(--text-color);
+            font-family: var(--ff-sans);
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .mural-input-row input[type="text"]:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 2px rgba(197, 160, 89, 0.25);
+        }
+
+        .mural-submit-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            padding: 0.75rem 1.3rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            background: var(--gold);
+            color: #050002;
+            border: none;
+            cursor: pointer;
+            font-family: var(--ff-sans);
+            transition: all 0.25s ease;
+            white-space: nowrap;
+        }
+
+        .mural-submit-btn:hover {
+            background: #fff;
+            transform: translateY(-1px);
+        }
+
+        .mural-submit-btn:disabled {
+            opacity: 0.65;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .mural-privacy-hint {
+            font-size: 0.78rem;
+            color: var(--muted-text);
+            margin-top: 0.7rem;
+            line-height: 1.45;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.4rem;
+        }
+
+        .mural-privacy-hint i {
+            color: var(--gold);
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .mural-feedback {
+            font-size: 0.88rem;
+            margin-top: 0.8rem;
+            display: none;
+            line-height: 1.45;
+        }
+
+        .mural-feedback.sucesso {
+            display: block;
+            color: #8ce99a;
+        }
+
+        .mural-feedback.erro {
+            display: block;
+            color: #ff8787;
+        }
+
+        /* ── BANNER GENTIL DE CANCELAMENTO (?status=cancelado) ── */
+        .cancel-banner {
+            display: none;
+            background: linear-gradient(135deg, rgba(22, 14, 18, 0.95) 0%, rgba(14, 10, 13, 0.92) 100%);
+            border: 1px solid rgba(197, 160, 89, 0.35);
+            border-radius: 14px;
+            padding: 2rem 2.2rem;
+            margin-bottom: 3.2rem;
+            display: none;
+            align-items: flex-start;
+            gap: 1.4rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+        }
+
+        @media (max-width: 640px) {
+            .cancel-banner {
+                flex-direction: column;
+                padding: 1.5rem 1.3rem;
+                text-align: center;
+                align-items: center;
+            }
+        }
+
+        .cancel-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: rgba(197, 160, 89, 0.12);
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-light);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .cancel-content h3 {
+            font-family: var(--ff-display);
+            font-size: 1.35rem;
+            color: var(--gold-light);
+            margin-bottom: 0.4rem;
+        }
+
+        .cancel-content p {
+            font-size: 0.94rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1.1rem;
+        }
+
+        .cancel-action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            font-weight: 500;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            color: var(--text-color);
+            transition: all 0.25s ease;
+        }
+
+        .cancel-action-btn:hover {
+            background: rgba(197, 160, 89, 0.15);
+            border-color: var(--gold);
+            color: var(--gold-light);
         }
 
         /* Hero Hub */
@@ -932,10 +1227,85 @@
             </div>
         </header>
 
-        <!-- Banner de Sucesso (Visível se retornar do Stripe via ?status=sucesso) -->
-        <div class="success-banner" id="success-banner" role="status">
-            <h3><i class="fa-solid fa-circle-check" style="color: #dfc07e;"></i> Sua Assinatura foi Confirmada com Sucesso!</h3>
-            <p>Agradecemos profundamente pelo seu apoio à sustentabilidade do Pombagiras.com. Seu gesto garante que a sabedoria ancestral continue preservada, protegida e aberta para todos os pesquisadores.</p>
+        <!-- ================================================================
+             SEÇÃO DE AGRADECIMENTO COMPLETO (?status=sucesso)
+             ================================================================ -->
+        <section class="success-section" id="success-section" role="status" aria-label="Agradecimento pelo apoio">
+            <div class="success-flame-icon">
+                <i class="fa-solid fa-fire-flame-curved" aria-hidden="true"></i>
+            </div>
+            <h2>Obrigada. Sua chama mantém este templo no ar.</h2>
+            <p class="success-explanation">
+                Seu apoio é destinado diretamente à nossa meta mensal pública de R$ 200 para custear as ferramentas de inteligência, iconografia ancestral e reserva de domínios. Você pode gerenciar ou cancelar sua contribuição sozinha quando quiser no Portal do Stripe, e o conteúdo continua 100% gratuito e aberto para todas as pessoas.
+            </p>
+
+            <div class="success-quick-actions">
+                <a href="https://billing.stripe.com/p/login/00w00jcaO5bB4L8ewtes000" target="_blank" rel="noopener noreferrer" class="success-action-btn portal">
+                    <i class="fa-solid fa-sliders"></i>
+                    <span>Gerenciar no Portal do Assinante Stripe</span>
+                </a>
+                <a href="https://pombagiras.com/transparencia/" class="success-action-btn transparencia">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Acompanhar na Transparência Pública</span>
+                </a>
+            </div>
+
+            <!-- Reconhecimento com consentimento (Muralha das Guardiãs) -->
+            <div class="mural-optin-box">
+                <div class="mural-optin-header">
+                    <i class="fa-solid fa-monument"></i>
+                    <h4>Muralha das Guardiãs</h4>
+                </div>
+                <p class="mural-optin-subtext">
+                    Como gesto de gratidão à sua energia mantenedora, você pode registrar seu primeiro nome para constar na futura Muralha das Guardiãs.
+                </p>
+                <form id="mural-optin-form" onsubmit="handleMuralSubmit(event, this)">
+                    <label class="mural-checkbox-label">
+                        <input type="checkbox" id="mural-consent-checkbox" onchange="toggleMuralInput(this)">
+                        <span>Quer que seu primeiro nome apareça na Muralha das Guardiãs? (opcional)</span>
+                    </label>
+                    <div class="mural-input-wrap" id="mural-input-wrap" style="display: none;">
+                        <div class="mural-input-row">
+                            <input 
+                                type="text" 
+                                name="primeiro_nome" 
+                                id="mural-primeiro-nome" 
+                                placeholder="Digite apenas seu primeiro nome (ex: Alexia)" 
+                                maxlength="40"
+                                autocomplete="given-name"
+                                aria-label="Seu primeiro nome para a Muralha das Guardiãs"
+                            >
+                            <button type="submit" class="mural-submit-btn" id="mural-submit-btn">
+                                <span>Registrar Nome</span>
+                                <i class="fa-solid fa-check"></i>
+                            </button>
+                        </div>
+                        <p class="mural-privacy-hint">
+                            <i class="fa-solid fa-shield-halved"></i> Nenhum sobrenome, valor ou e-mail é divulgado. A muralha só será exibida após curadoria manual de Alexia Melusine.
+                        </p>
+                    </div>
+                    <div class="mural-feedback" id="mural-feedback" role="status" aria-live="polite"></div>
+                </form>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             BANNER GENTIL DE CANCELAMENTO (?status=cancelado)
+             ================================================================ -->
+        <div class="cancel-banner" id="cancel-banner" role="status" aria-label="Aviso de apoio não concluído">
+            <div class="cancel-icon">
+                <i class="fa-solid fa-seedling" aria-hidden="true"></i>
+            </div>
+            <div class="cancel-content">
+                <h3>Está tudo bem. Nenhuma cobrança foi realizada.</h3>
+                <p>
+                    Entendemos e acolhemos sua decisão com serenidade e respeito. Nenhuma transação foi efetuada e sua presença continua sendo uma honra em nossa comunidade. As portas deste templo de conhecimento ancestral permanecem sempre abertas para você, com acesso 100% gratuito e irrestrito a todos os textos, enciclopédias e estudos.
+                </p>
+                <a href="https://pombagiras.com/" class="cancel-action-btn">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Continuar Navegando no Portal</span>
+                </a>
+            </div>
         </div>
 
         <!-- Hero Hub -->
@@ -1196,14 +1566,103 @@
     </main>
 
     <script>
-        // Detecção de status de sucesso no retorno do Stripe Checkout
-        if (window.location.search.includes('status=sucesso')) {
-            const banner = document.getElementById('success-banner');
+        // 1. Detecção de status de retorno do Stripe
+        const urlParams = new URLSearchParams(window.location.search);
+        const statusParam = urlParams.get('status');
+
+        if (statusParam === 'sucesso') {
+            const section = document.getElementById('success-section');
+            if (section) {
+                section.style.display = 'block';
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        } else if (statusParam === 'cancelado') {
+            const banner = document.getElementById('cancel-banner');
             if (banner) {
-                banner.style.display = 'block';
-                banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                banner.style.display = 'flex';
+                banner.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        // 2. Alternar campo de texto da Muralha das Guardiãs
+        function toggleMuralInput(checkbox) {
+            const wrap = document.getElementById('mural-input-wrap');
+            const input = document.getElementById('mural-primeiro-nome');
+            if (!wrap) return;
+
+            if (checkbox.checked) {
+                wrap.style.display = 'block';
+                if (input) input.focus();
+            } else {
+                wrap.style.display = 'none';
+            }
+        }
+
+        // 3. Envio seguro com opt-in para a tabela mural_guardias (Supabase REST com RLS anon)
+        async function handleMuralSubmit(e, form) {
+            e.preventDefault();
+            const checkbox = document.getElementById('mural-consent-checkbox');
+            const input = document.getElementById('mural-primeiro-nome');
+            const btn = document.getElementById('mural-submit-btn');
+            const feedback = document.getElementById('mural-feedback');
+
+            if (!checkbox || !checkbox.checked) {
+                feedback.textContent = 'Por favor, marque a caixa confirmando seu consentimento.';
+                feedback.className = 'mural-feedback erro';
+                feedback.style.display = 'block';
+                return;
+            }
+
+            const rawVal = (input ? input.value : '').trim();
+            // Isolar rigorosamente apenas o primeiro nome (primeira palavra), sem sobrenomes
+            const primeiroNome = rawVal.split(/\s+/)[0];
+
+            if (!primeiroNome || primeiroNome.length < 2) {
+                feedback.textContent = 'Por favor, informe pelo menos o seu primeiro nome.';
+                feedback.className = 'mural-feedback erro';
+                feedback.style.display = 'block';
+                return;
+            }
+
+            btn.disabled = true;
+            btn.innerHTML = '<span>Guardando...</span>';
+            feedback.style.display = 'none';
+
+            try {
+                const resp = await fetch('https://qeayxaqcwajitbrzdhzp.supabase.co/rest/v1/mural_guardias', {
+                    method: 'POST',
+                    headers: {
+                        'apikey': 'sb_publishable_2np1-QAVxRzRYwhlS4FHeA_otT0J9VI',
+                        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFlYXl4YXFjd2FqaXRicnpkaHpwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM5NTc1NDIsImV4cCI6MjEwOTUzMzU0Mn0.ykY2C4BRy6UNWrJQ6ZfMo9ph4J4aFoe3APkRrlGh1js',
+                        'Content-Type': 'application/json',
+                        'Prefer': 'return=minimal'
+                    },
+                    body: JSON.stringify({
+                        primeiro_nome: primeiroNome,
+                        consentimento: true,
+                        status_aprovacao: 'pendente'
+                    })
+                });
+
+                if (resp.status === 201) {
+                    feedback.textContent = 'Primeiro nome registrado com sucesso e respeito. Ele fará parte da curadoria da Muralha das Guardiãs!';
+                    feedback.className = 'mural-feedback sucesso';
+                    feedback.style.display = 'block';
+                    input.disabled = true;
+                    checkbox.disabled = true;
+                    btn.innerHTML = '<span>Registrado!</span> <i class="fa-solid fa-check"></i>';
+                } else {
+                    throw new Error('Status: ' + resp.status);
+                }
+            } catch (err) {
+                feedback.textContent = 'Não foi possível registrar o nome no momento. Mas seu apoio já está firmado. Muito obrigada!';
+                feedback.className = 'mural-feedback erro';
+                feedback.style.display = 'block';
+                btn.disabled = false;
+                btn.innerHTML = '<span>Tentar Novamente</span>';
             }
         }
     </script>
 </body>
 </html>
+
