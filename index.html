@@ -1421,6 +1421,402 @@
     outline-offset: 3px !important;
 }
 </style>
+<style id="mobile-perf-overhaul">
+/* Controles exclusivos mobile — sempre ocultos fora de ≤768px (Desktop intocado) */
+.mob-terms-toggle-wrap,
+.mob-portal-more-wrap,
+.mob-carousel-nav {
+    display: none !important;
+}
+.mob-extra-terms {
+    display: inline;
+}
+
+@media (max-width: 768px) {
+    /* ── 6. Desativar efeitos pesados de GPU/parallax/blur no celular (paleta sólida mantida) ── */
+    body {
+        background-attachment: scroll !important;
+        background-image: none !important;
+        background-color: #050505 !important;
+        padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)) !important;
+    }
+
+    .hero-content,
+    .hero-search-bar input[type="search"],
+    #heroSearchInput,
+    .hero-search-results,
+    #heroSearchResults,
+    .mob-hamburger-btn,
+    .mob-menu-overlay,
+    .newsletter-glass-card,
+    .search-filter-container,
+    .btn,
+    .floating-social .social-icon,
+    .floating-social .back-to-top {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+
+    /* ── 1. Hero mais curta (~68% tela), texto livre do hambúrguer e INICIAR JORNADA visível sem rolar ── */
+    .hero {
+        height: auto !important;
+        min-height: 62dvh !important;
+        max-height: 70dvh !important;
+        padding: 64px 12px 14px !important;
+        box-sizing: border-box !important;
+    }
+
+    .hero-text-overlay {
+        display: none !important;
+    }
+
+    .hero-mobile-img {
+        transition: none !important;
+    }
+
+    .hero-content {
+        padding: 12px 14px !important;
+        max-width: 96% !important;
+        width: 100% !important;
+        background: rgba(10, 5, 7, 0.9) !important;
+        border: 1px solid rgba(197, 160, 89, 0.3) !important;
+        border-radius: 16px !important;
+        box-shadow: none !important;
+        margin: 0 auto !important;
+    }
+
+    .hero h1,
+    .hero .speakable-title {
+        font-size: clamp(1.55rem, 6.8vw, 2.05rem) !important;
+        line-height: 1.15 !important;
+        margin-bottom: 6px !important;
+        animation: none !important;
+        text-shadow: none !important;
+    }
+
+    .hero p.subtitle,
+    .hero .speakable-description {
+        font-size: clamp(0.8rem, 3.2vw, 0.92rem) !important;
+        line-height: 1.32 !important;
+        margin: 0 auto 10px !important;
+        max-width: 100% !important;
+        text-shadow: none !important;
+    }
+
+    .hero p.subtitle span:last-child {
+        margin-top: 4px !important;
+        font-size: 0.88em !important;
+    }
+
+    .hero-search-bar {
+        order: 3 !important;
+        width: 100% !important;
+        margin: 0 auto 10px !important;
+    }
+
+    .hero-search-bar input[type="search"],
+    #heroSearchInput {
+        height: 44px !important;
+        min-height: 44px !important;
+        background: #0c0408 !important;
+        box-shadow: none !important;
+    }
+
+    .hero .cta-group {
+        order: 4 !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 8px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    .hero .cta-group .btn {
+        flex: 1 1 0 !important;
+        min-height: 44px !important;
+        padding: 10px 8px !important;
+        font-size: 0.72rem !important;
+        letter-spacing: 0.8px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        white-space: nowrap !important;
+        box-shadow: none !important;
+    }
+
+    /* ── 4. Carrossel "Conheça as Pombagiras" sem corte no celular (1 cartão inteiro por vez) ── */
+    .carousel-section {
+        padding: 12px 10px 14px !important;
+    }
+
+    .carousel-track-container {
+        width: 224px !important;
+        max-width: 224px !important;
+        margin: 0 auto !important;
+        padding: 4px 0 !important;
+        overflow: hidden !important;
+    }
+
+    #carouselTrack {
+        transform: translateX(var(--mob-slide-x, 0px)) !important;
+        transition: transform 0.25s ease !important;
+    }
+
+    .carousel-item {
+        width: 224px !important;
+        height: 224px !important;
+        margin: 0 !important;
+        flex-shrink: 0 !important;
+        box-shadow: none !important;
+        transition: none !important;
+    }
+
+    .carousel-item:hover {
+        transform: none !important;
+        box-shadow: none !important;
+    }
+
+    .mob-carousel-nav {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 14px !important;
+        margin-top: 8px !important;
+    }
+
+    .mob-carousel-arrow {
+        min-width: 44px !important;
+        min-height: 44px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: #12060a !important;
+        border: 1px solid rgba(197, 160, 89, 0.45) !important;
+        color: #C5A059 !important;
+        border-radius: 50% !important;
+        font-size: 1rem !important;
+        cursor: pointer !important;
+    }
+
+    .mob-carousel-counter {
+        font-size: 0.78rem !important;
+        color: #FAF6EE !important;
+        opacity: 0.85 !important;
+        letter-spacing: 0.04em !important;
+        min-width: 72px !important;
+        text-align: center !important;
+    }
+
+    /* ── 3. Linha de 21 termos curta (6 iniciais + "Ver mais termos" / "Ver menos") ── */
+    .mob-extra-terms {
+        display: none;
+    }
+
+    #educativo .section-header.is-terms-expanded .mob-extra-terms {
+        display: inline;
+    }
+
+    .mob-terms-toggle-wrap {
+        display: flex !important;
+        justify-content: center !important;
+        margin-top: 8px !important;
+    }
+
+    .mob-terms-toggle-btn {
+        min-height: 44px !important;
+        padding: 8px 18px !important;
+        border-radius: 50px !important;
+        background: #12060a !important;
+        border: 1px solid rgba(197, 160, 89, 0.45) !important;
+        color: #C5A059 !important;
+        font-family: 'Geist', sans-serif !important;
+        font-size: 0.78rem !important;
+        font-weight: 600 !important;
+        cursor: pointer !important;
+    }
+
+    /* ── 2. Portal Educativo: 3 cartões primeiro + botão "Ver mais 3" ── */
+    .edu-section {
+        padding: 22px 14px !important;
+    }
+
+    .section-header {
+        margin-bottom: 16px !important;
+    }
+
+    .edu-nav {
+        margin: 0 auto 18px !important;
+        padding: 10px !important;
+    }
+
+    .nav-tab {
+        min-height: 44px !important;
+    }
+
+    .card {
+        box-shadow: none !important;
+        padding: 18px 16px !important;
+    }
+
+    #curiosidades .grid-cards > .card.mob-card-hidden {
+        display: none !important;
+    }
+
+    .mob-portal-more-wrap {
+        display: flex !important;
+        justify-content: center !important;
+        margin-top: 16px !important;
+    }
+
+    .mob-portal-more-btn {
+        min-height: 44px !important;
+        padding: 11px 28px !important;
+        border-radius: 50px !important;
+        background: rgba(128, 0, 32, 0.25) !important;
+        border: 1px solid #800020 !important;
+        color: #FAF6EE !important;
+        font-family: 'Geist', sans-serif !important;
+        font-size: 0.82rem !important;
+        font-weight: 600 !important;
+        letter-spacing: 1px !important;
+        text-transform: uppercase !important;
+        cursor: pointer !important;
+    }
+
+    /* ── 8. Enxugar Newsletter, Alexia Melusine e Rodapé no celular ── */
+    .newsletter-glow-1,
+    .newsletter-glow-2,
+    .newsletter-glass-card::before,
+    .newsletter-glass-card::after {
+        display: none !important;
+        animation: none !important;
+    }
+
+    .newsletter-section {
+        padding: 20px 12px !important;
+    }
+
+    .newsletter-glass-card {
+        padding: 18px 14px 16px !important;
+        background: #0d0407 !important;
+        border: 1px solid rgba(197, 160, 89, 0.3) !important;
+        border-radius: 18px !important;
+        box-shadow: none !important;
+    }
+
+    .newsletter-badge {
+        min-height: 44px !important;
+        margin-bottom: 10px !important;
+        padding: 8px 14px !important;
+    }
+
+    .newsletter-section h2.newsletter-title {
+        font-size: clamp(1.75rem, 6.5vw, 2.2rem) !important;
+        margin-bottom: 8px !important;
+    }
+
+    .newsletter-quote {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 14px !important;
+    }
+
+    .newsletter-meta {
+        margin-bottom: 14px !important;
+        gap: 8px !important;
+    }
+
+    .newsletter-meta > a .btn-circle {
+        min-height: 44px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        box-shadow: none !important;
+    }
+
+    .newsletter-btn-link {
+        min-height: 44px !important;
+        padding: 10px 18px !important;
+        box-shadow: none !important;
+    }
+
+    .about-section {
+        padding: 22px 14px !important;
+    }
+
+    .about-grid {
+        gap: 12px !important;
+    }
+
+    .about-image {
+        width: 112px !important;
+        height: 112px !important;
+        max-width: 112px !important;
+        margin: 0 auto 8px !important;
+        box-shadow: none !important;
+    }
+
+    .about-content h2 {
+        font-size: 1.65rem !important;
+        margin-bottom: 6px !important;
+    }
+
+    .about-content p {
+        font-size: 0.86rem !important;
+        line-height: 1.45 !important;
+        margin-bottom: 12px !important;
+    }
+
+    .about-buttons-grid {
+        gap: 8px !important;
+    }
+
+    .about-buttons-grid .btn {
+        min-height: 44px !important;
+        padding: 10px 8px !important;
+    }
+
+    footer.main-footer {
+        padding: 24px 14px calc(76px + env(safe-area-inset-bottom, 0px)) !important;
+    }
+
+    footer.main-footer .footer-col-identity,
+    footer.main-footer .footer-col-nav {
+        margin-bottom: 12px !important;
+    }
+
+    footer.main-footer .footer-col-identity::after,
+    footer.main-footer .footer-col-nav::after {
+        margin: 12px auto 0 !important;
+    }
+
+    /* ── 7. Barra flutuante de baixo compacta: máx 4 ícones, >=44px e esconde ao rolar p/ baixo ── */
+    body .floating-social {
+        max-width: 100vw !important;
+        gap: 14px !important;
+        padding: 6px 12px calc(6px + env(safe-area-inset-bottom, 0px)) !important;
+        background: rgba(10, 2, 6, 0.96) !important;
+        border-top: 1px solid rgba(197, 160, 89, 0.25) !important;
+        box-shadow: none !important;
+        transition: transform 0.22s ease, opacity 0.2s ease !important;
+    }
+
+    body .floating-social.mob-bar-hidden {
+        transform: translateY(115%) !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+
+    body .floating-social a[title="Site Bilingue (ES/EN)"],
+    body .floating-social a[title="Discord"],
+    body .floating-social a[title="Substack"] {
+        display: none !important;
+    }
+}
+</style>
 </head>
 
 <body>
@@ -2148,6 +2544,15 @@ initLangSwitcher();
         <div class="carousel-track-container">
             <div class="carousel-track" id="carouselTrack"></div>
         </div>
+        <div class="mob-carousel-nav" aria-label="Navegação do carrossel no celular">
+            <button type="button" class="mob-carousel-arrow" id="mobCarouselPrev" aria-label="Guardiã anterior">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <span class="mob-carousel-counter" id="mobCarouselCounter">1 / 27</span>
+            <button type="button" class="mob-carousel-arrow" id="mobCarouselNext" aria-label="Próxima guardiã">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </button>
+        </div>
     </section>
 
     <section class="edu-section" id="educativo">
@@ -2157,7 +2562,10 @@ initLangSwitcher();
             <h2>Portal Educativo</h2>
             <p>Conhecimento, respeito e desmistificação das tradições sagradas.</p>
             <p style="margin-top: 14px; font-size: 0.92rem; font-weight: 700; color: #C5A059; letter-spacing: 0.04em;"><i class="fa-solid fa-magnifying-glass" style="font-size: 0.8rem; margin-right: 6px;" aria-hidden="true"></i>Pesquise acima seu termo</p>
-            <p class="section-keywords" style="margin: 8px auto 0; max-width: 860px; font-size: 0.85rem; color: #FAF6EE; opacity: 0.65; letter-spacing: 0.04em; line-height: 1.65;">Lista das Pombagiras · Ponto Riscado · Pedir Justiça a uma Pombagira · Orixás · Ancestralidade · Promessa não Cumprida · Maria Navalha · Quimbanda · Jurema · Segredo · Fundamento · Pombagira sem vestido vermelho · Umbanda · Cultura · Literatura · História oral · Podcast · Pontos · Memória · Consulta sem resposta · Dignidade</p>
+            <p class="section-keywords" style="margin: 8px auto 0; max-width: 860px; font-size: 0.85rem; color: #FAF6EE; opacity: 0.65; letter-spacing: 0.04em; line-height: 1.65;">Lista das Pombagiras · Ponto Riscado · Pedir Justiça a uma Pombagira · Orixás · Ancestralidade · Promessa não Cumprida<span class="mob-extra-terms"> · Maria Navalha · Quimbanda · Jurema · Segredo · Fundamento · Pombagira sem vestido vermelho · Umbanda · Cultura · Literatura · História oral · Podcast · Pontos · Memória · Consulta sem resposta · Dignidade</span></p>
+            <div class="mob-terms-toggle-wrap">
+                <button type="button" class="mob-terms-toggle-btn" id="mobTermsToggleBtn" aria-expanded="false">Ver mais termos</button>
+            </div>
         </div>
 
         <nav class="edu-nav" aria-label="Navegação Temática do Portal">
@@ -2173,6 +2581,7 @@ initLangSwitcher();
                 <div class="grid-cards">
                     <div class="card" onclick="window.open('portal/fronteiras-sagradas.html', '_blank')" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
                         <picture>
+                            <source media="(max-width: 768px)" srcset="https://pombagiras.com/BOM-mobile.webp" type="image/webp">
                             <source type="image/webp" srcset="BOM.webp">
                             <img src="BOM.png" alt="Fronteiras Sagradas - Por Que Seu Pedido à Pombagira Pode Ser Espiritualmente Ofensivo" width="800" height="447" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(255, 255, 255, 0.1);" decoding="async" loading="lazy">
                         </picture>
@@ -2291,7 +2700,110 @@ initLangSwitcher();
                         <strong><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Ler Artigo Completo 🌹</strong>
                     </div>
                 </div>
+                <div class="mob-portal-more-wrap" id="mobPortalMoreWrap">
+                    <button type="button" class="mob-portal-more-btn" id="mobCuriosidadesMoreBtn">Ver mais 3</button>
+                </div>
             </div>
+            <script id="mobile-perf-script">
+            (function() {
+                // 2. Paginação mobile "Ver mais 3" (CSS garante que .mob-card-hidden só atua em <=768px)
+                var curGrid = document.querySelector('#curiosidades .grid-cards');
+                var curCards = curGrid ? Array.from(curGrid.querySelectorAll('.card')) : [];
+                var mobVisible = 3;
+                var moreWrap = document.getElementById('mobPortalMoreWrap');
+                var moreBtn = document.getElementById('mobCuriosidadesMoreBtn');
+
+                function syncMobCards() {
+                    curCards.forEach(function(card, idx) {
+                        if (idx < mobVisible) card.classList.remove('mob-card-hidden');
+                        else card.classList.add('mob-card-hidden');
+                    });
+                    if (moreWrap && mobVisible >= curCards.length) {
+                        moreWrap.style.setProperty('display', 'none', 'important');
+                    }
+                }
+                syncMobCards();
+
+                if (moreBtn) {
+                    moreBtn.addEventListener('click', function() {
+                        mobVisible = Math.min(curCards.length, mobVisible + 3);
+                        syncMobCards();
+                    });
+                }
+
+                // 3. Toggle 6 <-> 21 termos no celular
+                var eduHeader = document.querySelector('#educativo .section-header');
+                var termsBtn = document.getElementById('mobTermsToggleBtn');
+                if (termsBtn && eduHeader) {
+                    termsBtn.addEventListener('click', function() {
+                        var expanded = eduHeader.classList.toggle('is-terms-expanded');
+                        termsBtn.textContent = expanded ? 'Ver menos' : 'Ver mais termos';
+                        termsBtn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+                    });
+                }
+
+                // 4. Carrossel 1 cartão inteiro por vez no celular (sem corte horizontal)
+                var track = document.getElementById('carouselTrack');
+                var container = document.querySelector('.carousel-track-container');
+                var prevBtn = document.getElementById('mobCarouselPrev');
+                var nextBtn = document.getElementById('mobCarouselNext');
+                var counterEl = document.getElementById('mobCarouselCounter');
+                var slideIdx = 0;
+                var totalUnique = 27;
+
+                function applySlide() {
+                    if (!track) return;
+                    var items = track.querySelectorAll('.carousel-item').length;
+                    if (items >= 2) totalUnique = Math.floor(items / 2);
+                    if (slideIdx < 0) slideIdx = totalUnique - 1;
+                    if (slideIdx >= totalUnique) slideIdx = 0;
+                    track.style.setProperty('--mob-slide-x', (-slideIdx * 224) + 'px');
+                    if (counterEl) counterEl.textContent = (slideIdx + 1) + ' / ' + totalUnique;
+                }
+
+                if (track) {
+                    var obs = new MutationObserver(function() { applySlide(); });
+                    obs.observe(track, { childList: true });
+                }
+                if (prevBtn) prevBtn.addEventListener('click', function() { slideIdx--; applySlide(); });
+                if (nextBtn) nextBtn.addEventListener('click', function() { slideIdx++; applySlide(); });
+
+                if (container) {
+                    var touchStartX = 0;
+                    container.addEventListener('touchstart', function(e) {
+                        if (window.innerWidth > 768 || !e.touches.length) return;
+                        touchStartX = e.touches[0].clientX;
+                    }, { passive: true });
+                    container.addEventListener('touchend', function(e) {
+                        if (window.innerWidth > 768 || !e.changedTouches.length) return;
+                        var dx = e.changedTouches[0].clientX - touchStartX;
+                        if (Math.abs(dx) > 30) {
+                            if (dx < 0) slideIdx++;
+                            else slideIdx--;
+                            applySlide();
+                        }
+                    }, { passive: true });
+                }
+
+                // 7. Barra flutuante de baixo: some ao rolar p/ baixo e volta ao rolar p/ cima (só mobile)
+                var floatBar = document.querySelector('.floating-social');
+                var lastY = window.scrollY || 0;
+                window.addEventListener('scroll', function() {
+                    if (!floatBar) return;
+                    if (window.innerWidth > 768) {
+                        floatBar.classList.remove('mob-bar-hidden');
+                        return;
+                    }
+                    var curY = window.scrollY || 0;
+                    if (curY <= 80 || curY < lastY - 8) {
+                        floatBar.classList.remove('mob-bar-hidden');
+                    } else if (curY > lastY + 12) {
+                        floatBar.classList.add('mob-bar-hidden');
+                    }
+                    lastY = curY;
+                }, { passive: true });
+            })();
+            </script>
 
             <section id="faq" class="tab-content" itemscope itemtype="https://schema.org/FAQPage">
                 <div class="faq-list">
@@ -3761,8 +4273,11 @@ initLangSwitcher();
         <section class="about-section" id="author-profile">
             <div class="about-grid">
                 <div class="about-image">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Alexia_Melusine_Portrait_2026.png" referrerpolicy="no-referrer"
-                        alt="Retrato da Autora Alexia Melusine" loading="lazy" decoding="async" width="160" height="160">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Alexia_Melusine_Portrait_2026.png/330px-Alexia_Melusine_Portrait_2026.png">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Alexia_Melusine_Portrait_2026.png" referrerpolicy="no-referrer"
+                            alt="Retrato da Autora Alexia Melusine" loading="lazy" decoding="async" width="160" height="160">
+                    </picture>
                 </div>
                 <div class="about-content">
                     <h2>Alexia Melusine</h2>
