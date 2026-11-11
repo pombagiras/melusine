@@ -1087,6 +1087,16 @@
     color: rgba(250, 246, 238, 0.85);
     text-align: center;
 }
+.footer-legal-copy {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.footer-legal-links {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
 .footer-legal-a {
     color: var(--warm-cream);
     opacity: 0.85;
@@ -1243,7 +1253,17 @@
         letter-spacing: 0.5px !important;
     }
     .footer-legal-copy {
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        white-space: nowrap !important;
         color: rgba(250, 246, 238, 0.75) !important;
+    }
+    .footer-legal-links {
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 12px !important;
+        white-space: nowrap !important;
     }
     .footer-legal-sep {
         color: #C5A059 !important;
@@ -1438,7 +1458,7 @@
         background-attachment: scroll !important;
         background-image: none !important;
         background-color: #050505 !important;
-        padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)) !important;
+        padding-bottom: 0 !important;
     }
 
     .hero-content,
@@ -1780,7 +1800,11 @@
     }
 
     footer.main-footer {
-        padding: 24px 14px calc(76px + env(safe-area-inset-bottom, 0px)) !important;
+        padding: 24px 14px calc(28px + env(safe-area-inset-bottom, 0px)) !important;
+    }
+
+    body footer.main-footer .footer-col-identity .footer-logo-title {
+        display: none !important;
     }
 
     footer.main-footer .footer-col-identity,
@@ -1791,6 +1815,52 @@
     footer.main-footer .footer-col-identity::after,
     footer.main-footer .footer-col-nav::after {
         margin: 12px auto 0 !important;
+    }
+
+    body footer.main-footer .footer-bottom {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    body footer.main-footer .footer-legal-row {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-wrap: nowrap !important;
+        gap: 6px !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    body footer.main-footer .footer-legal-links {
+        order: 1 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-wrap: nowrap !important;
+        white-space: nowrap !important;
+        gap: 6px !important;
+        font-size: 0.72rem !important;
+    }
+
+    body footer.main-footer .footer-legal-mid-sep {
+        display: none !important;
+    }
+
+    body footer.main-footer .footer-legal-copy {
+        order: 2 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-wrap: nowrap !important;
+        white-space: nowrap !important;
+        gap: 5px !important;
+        font-size: clamp(0.66rem, 3.1vw, 0.72rem) !important;
+        color: rgba(250, 246, 238, 0.78) !important;
     }
 
     /* ── 7. Barra flutuante de baixo compacta: máx 4 ícones, >=44px e esconde ao rolar p/ baixo ── */
@@ -2802,6 +2872,20 @@ initLangSwitcher();
                     }
                     lastY = curY;
                 }, { passive: true });
+
+                // 8. FAQ: todas as perguntas começam fechadas no celular (≤768px), desktop intacto
+                function closeFaqOnMobile() {
+                    if (window.innerWidth > 768) return;
+                    document.querySelectorAll('#faq details.faq-item[open], #faq details.faq-item.active').forEach(function(item) {
+                        item.removeAttribute('open');
+                        item.classList.remove('active');
+                    });
+                }
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', closeFaqOnMobile);
+                } else {
+                    closeFaqOnMobile();
+                }
             })();
             </script>
 
@@ -4353,14 +4437,18 @@ initLangSwitcher();
                         }
                         @media (max-width: 768px) {
                             .footer-editorial-dates {
-                                flex-wrap: wrap;
+                                flex-direction: column;
+                                align-items: center;
                                 white-space: normal;
                                 justify-content: center;
                                 text-align: center;
                                 margin-left: auto;
                                 margin-right: auto;
-                                font-size: 0.65rem;
-                                gap: 4px 6px;
+                                font-size: 0.66rem;
+                                gap: 4px;
+                            }
+                            .footer-editorial-dates .date-sep {
+                                display: none;
                             }
                         }
                     </style>
@@ -4417,13 +4505,15 @@ initLangSwitcher();
 
             <div class="footer-bottom">
                 <div class="footer-legal-row">
-                    <span class="footer-legal-copy">© 2026 Alexia Melusine</span>
-                    <span class="footer-legal-sep" aria-hidden="true">•</span>
-                    <a href="privacy.html" class="footer-legal-a">Privacidade</a>
-                    <span class="footer-legal-sep" aria-hidden="true">•</span>
-                    <a href="terms.html" class="footer-legal-a">Termo de Uso</a>
-                    <span class="footer-legal-sep" aria-hidden="true">•</span>
-                    <a href="metodologia.html" class="footer-legal-a">Metodologia</a>
+                    <span class="footer-legal-copy">Todos os direitos reservados <span class="footer-legal-sep" aria-hidden="true">·</span> © 2026 Alexia Melusine</span>
+                    <span class="footer-legal-sep footer-legal-mid-sep" aria-hidden="true">•</span>
+                    <span class="footer-legal-links">
+                        <a href="privacy.html" class="footer-legal-a">Privacidade</a>
+                        <span class="footer-legal-sep" aria-hidden="true">•</span>
+                        <a href="terms.html" class="footer-legal-a">Termo de Uso</a>
+                        <span class="footer-legal-sep" aria-hidden="true">•</span>
+                        <a href="metodologia.html" class="footer-legal-a">Metodologia</a>
+                    </span>
                 </div>
             </div>
             <p class="footer-disclaimer" style="text-align: center; font-size: 0.76rem; color: var(--warm-cream); opacity: 0.6; margin: 14px auto 0; max-width: 1200px; line-height: 1.4; letter-spacing: 0.02em;">Este conteúdo tem caráter educativo e reflexivo. Ele não substitui orientação de dirigentes espirituais qualificados. Respeite as particularidades de cada casa e tradição.</p>
