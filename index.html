@@ -2013,73 +2013,6 @@
         </a>
     </div>
 
-    <style id="hero-gradient-text">
-    /* ══════════ DEGRADÊ CIRÚRGICO NAS LETRAS DO HERO (TOPO) ══════════
-       Paleta Oficial do Site:
-       #FFFFFF (Luz), #FAF6EE (--text-light), #E6C875 (Dourado Claro), #C5A059 (--accent)
-       Direção unificada: 135deg (diagonal suave)
-       Fallback universal: cores sólidas declaradas para navegadores sem suporte
-       ════════════════════════════════════════════════════════════════════ */
-
-    /* 1. Título Pombagiras.com */
-    .hero h1.speakable-title {
-        color: #FAF6EE !important;
-        background: linear-gradient(135deg, #FFFFFF 0%, #FAF6EE 35%, #E6C875 70%, #C5A059 100%) !important;
-        -webkit-background-clip: text !important;
-        background-clip: text !important;
-        -webkit-text-fill-color: transparent !important;
-        text-shadow: none !important;
-        filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.7));
-    }
-
-    /* 2. Subtítulo: Uma enciclopédia digital independente sobre Pombagiras. */
-    .hero p.subtitle span:first-child {
-        color: #FAF6EE;
-        background: linear-gradient(135deg, #FFFFFF 0%, #FAF6EE 40%, #E6C875 75%, #C5A059 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        display: inline-block !important;
-        filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.65));
-    }
-
-    /* 3. Subtítulo descritivo: Documentação, estudo e preservação cultural... */
-    .hero p.subtitle span:last-child {
-        color: #FAF6EE;
-        background: linear-gradient(135deg, #FFFFFF 0%, #FAF6EE 45%, #E6C875 80%, #C5A059 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        display: inline-block !important;
-        filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.65));
-    }
-
-    /* 4. Placeholder do Campo de Busca (degradê nas letras do placeholder) */
-    #heroSearchInput::placeholder {
-        color: #C5A059;
-        background: linear-gradient(135deg, #FFFFFF 0%, #FAF6EE 40%, #C5A059 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        opacity: 0.85;
-    }
-    /* Texto digitado no campo de busca permanece 100% sólido e nítido */
-    #heroSearchInput {
-        color: #FAF6EE !important;
-        -webkit-text-fill-color: initial !important;
-    }
-
-    /* 5 e 6. Letras dos botões INICIAR JORNADA e MELUSINE (fundo dos botões preservado) */
-    .hero-btn-gradient-text {
-        color: #FAF6EE;
-        background: linear-gradient(135deg, #FFFFFF 0%, #FAF6EE 40%, #E6C875 75%, #C5A059 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        display: inline-block;
-    }
-    </style>
-
     <section class="hero" id="home">
         <!-- Fundo do hero — SOMENTE desktop (≥769px). No mobile o <img> usa um GIF 1x1 inline, sem requisição de rede. -->
         <picture class="hero-desktop-picture">
@@ -2110,8 +2043,8 @@
             </div>
 
             <div class="cta-group">
-                <a href="#educativo" class="btn btn-primary"><span class="hero-btn-gradient-text">Iniciar Jornada</span></a>
-                <a href="https://alexiamelusine.com/" class="btn btn-outline" target="_blank" rel="noopener"><span class="hero-btn-gradient-text">Melusine</span></a>
+                <a href="#educativo" class="btn btn-primary">Iniciar Jornada</a>
+                <a href="https://alexiamelusine.com/" class="btn btn-outline" target="_blank" rel="noopener">Melusine</a>
 <script>
 function toggleLangDropdown(e) {
     if (e) {
