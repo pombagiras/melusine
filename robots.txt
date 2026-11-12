@@ -189,6 +189,8 @@ Allow: /pedir-justica-a-uma-pombagira/
 Allow: /ponto-riscado/
 Allow: /ponto-riscado
 Allow: /lodo/
+Allow: /mirongueira/
+Allow: /mirongueira
 Allow: /fundamento/
 Allow: /fundamento
 Allow: /dignidade-mediunidade/
