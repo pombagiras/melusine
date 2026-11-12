@@ -1085,6 +1085,77 @@
     }
 }
 
+/* Hover arco-íris nos 7 botões da barra flutuante direita — SOMENTE desktop com rato */
+@media (min-width: 769px) and (hover: hover) and (pointer: fine) {
+    .floating-social .social-icon,
+    .floating-social .back-to-top {
+        transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
+    }
+    .floating-social .social-icon:hover,
+    .floating-social .back-to-top:hover {
+        transform: none;
+        color: #ffffff;
+    }
+    .floating-social .social-icon:hover svg,
+    .floating-social .back-to-top:hover i {
+        color: #ffffff;
+        fill: #ffffff;
+    }
+    .floating-social .social-icon:hover img {
+        filter: brightness(0) invert(1);
+    }
+    /* 1. Tradução — Vermelho */
+    .floating-social > a:nth-child(1):hover,
+    .floating-social a[title="Site Bilingue (ES/EN)"]:hover {
+        background-color: #D32F2F;
+        border-color: #D32F2F;
+        box-shadow: 0 0 18px rgba(211, 47, 47, 0.45);
+    }
+    /* 2. WhatsApp — Laranja */
+    .floating-social > a:nth-child(2):hover,
+    .floating-social a[title="WhatsApp"]:hover {
+        background-color: #EF6C00;
+        border-color: #EF6C00;
+        box-shadow: 0 0 18px rgba(239, 108, 0, 0.45);
+    }
+    /* 3. Telegram — Amarelo-ouro */
+    .floating-social > a:nth-child(3):hover,
+    .floating-social a[title="Telegram"]:hover {
+        background-color: #FF8F00;
+        border-color: #FF8F00;
+        box-shadow: 0 0 18px rgba(255, 143, 0, 0.45);
+    }
+    /* 4. Discord — Verde */
+    .floating-social > a:nth-child(4):hover,
+    .floating-social a[title="Discord"]:hover {
+        background-color: #2E7D32;
+        border-color: #2E7D32;
+        box-shadow: 0 0 18px rgba(46, 125, 50, 0.45);
+    }
+    /* 5. Spotify — Azul */
+    .floating-social > a:nth-child(5):hover,
+    .floating-social a[title="Podcast"]:hover {
+        background-color: #1565C0;
+        border-color: #1565C0;
+        box-shadow: 0 0 18px rgba(21, 101, 192, 0.45);
+    }
+    /* 6. Favoritos/lista (Substack) — Anil */
+    .floating-social > a:nth-child(6):hover,
+    .floating-social a[title="Substack"]:hover {
+        background-color: #4527A0;
+        border-color: #4527A0;
+        box-shadow: 0 0 18px rgba(69, 39, 160, 0.45);
+    }
+    /* 7. Voltar ao topo — Violeta */
+    .floating-social > a:nth-child(7):hover,
+    .floating-social #backToTopBtn:hover,
+    .floating-social a.back-to-top:hover {
+        background-color: #6A1B9A;
+        border-color: #6A1B9A;
+        box-shadow: 0 0 18px rgba(106, 27, 154, 0.45);
+    }
+}
+
 /* ══════════ RODAPÉ WEB — SOMENTE DESKTOP (≥769px) ══════════ */
 .footer-bottom {
     display: flex;
