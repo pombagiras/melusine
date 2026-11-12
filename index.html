@@ -443,8 +443,8 @@
           "@type": "ItemList",
           "@id": "https://pombagiras.com/#itemlist",
           "name": "Guardiãs - Pombagiras",
-          "description": "Enciclopédia ilustrada e teológica com 28 Guardiãs da Umbanda e Quimbanda.",
-          "numberOfItems": 28,
+          "description": "Enciclopédia ilustrada e teológica com 29 Guardiãs da Umbanda e Quimbanda.",
+          "numberOfItems": 29,
           "itemListElement": [
             {
               "@type": "ListItem",
@@ -585,6 +585,11 @@
               "@type": "ListItem",
               "position": 28,
               "name": "Pombagira Mirongueira – Guardiã da Mironga e Soberania da Magia"
+            },
+            {
+              "@type": "ListItem",
+              "position": 29,
+              "name": "Pombagira Baronesa – Guardiã da Nobreza e Soberania da Elegância"
             }
           ]
         },
@@ -2623,7 +2628,7 @@ initLangSwitcher();
             <button type="button" class="mob-carousel-arrow" id="mobCarouselPrev" aria-label="Guardiã anterior">
                 <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
             </button>
-            <span class="mob-carousel-counter" id="mobCarouselCounter">1 / 28</span>
+            <span class="mob-carousel-counter" id="mobCarouselCounter">1 / 29</span>
             <button type="button" class="mob-carousel-arrow" id="mobCarouselNext" aria-label="Próxima guardiã">
                 <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
             </button>
@@ -2824,7 +2829,7 @@ initLangSwitcher();
                 var nextBtn = document.getElementById('mobCarouselNext');
                 var counterEl = document.getElementById('mobCarouselCounter');
                 var slideIdx = 0;
-                var totalUnique = 28;
+                var totalUnique = 29;
 
                 function createMirongueiraCard() {
                     var el = document.createElement('a');
@@ -2867,9 +2872,46 @@ initLangSwitcher();
                     }
                 }
 
+                function createBaronesaCard() {
+                    var el = document.createElement('a');
+                    el.className = 'carousel-item';
+                    el.href = 'https://pombagiras.com/baronesa/';
+                    var displayName = 'Pombagira Baronesa';
+                    var altText = 'Representação artística conceitual da ' + displayName;
+                    el.setAttribute('aria-label', displayName);
+                    el.setAttribute('title', displayName);
+                    el.innerHTML = '<picture style="width:100%;height:100%;display:block;">' +
+                        '<source type="image/webp" srcset="fotos/pombagira_baronesa.webp">' +
+                        '<img src="fotos/pombagira_baronesa.png" alt="' + altText + '" loading="lazy" decoding="async" width="200" height="200" onerror="this.onerror=null;this.src=\'https://cdn.pombagiras.com/fotos/pombagira_baronesa.png\';">' +
+                        '</picture>' +
+                        '<span>Baronesa</span>';
+                    var dragStartPos = 0;
+                    el.addEventListener('mousedown', function(e) { dragStartPos = e.clientX; });
+                    el.addEventListener('click', function(e) {
+                        if (Math.abs(e.clientX - dragStartPos) > 6) {
+                            e.preventDefault();
+                        }
+                    });
+                    return el;
+                }
+
+                function ensureBaronesaCard() {
+                    if (!track) return;
+                    if (track.querySelector('a[href*="baronesa"]')) return;
+                    var mirongueiras = track.querySelectorAll('a[href*="mirongueira"]');
+                    if (mirongueiras.length >= 2) {
+                        var card1 = createBaronesaCard();
+                        var card2 = createBaronesaCard();
+                        mirongueiras[0].insertAdjacentElement('afterend', card1);
+                        mirongueiras[1].insertAdjacentElement('afterend', card2);
+                        window.dispatchEvent(new Event('resize'));
+                    }
+                }
+
                 function applySlide() {
                     if (!track) return;
                     ensureMirongueiraCard();
+                    ensureBaronesaCard();
                     var items = track.querySelectorAll('.carousel-item').length;
                     if (items >= 2) totalUnique = Math.floor(items / 2);
                     if (slideIdx < 0) slideIdx = totalUnique - 1;
@@ -2884,6 +2926,7 @@ initLangSwitcher();
                     });
                     obs.observe(track, { childList: true });
                     ensureMirongueiraCard();
+                    ensureBaronesaCard();
                     applySlide();
                 }
                 if (prevBtn) prevBtn.addEventListener('click', function() { slideIdx--; applySlide(); });
@@ -5087,7 +5130,7 @@ initLangSwitcher();
         { title: 'Oráculo Digital das Pombagiras', desc: 'Tire uma carta e receba a orientação espiritual e poética das Guardiãs', url: 'oraculo/', icon: 'fa-solid fa-fire', badge: 'badge-ecossistema', badgeText: 'Oráculo', tags: ['oraculo', 'cartas', 'tiragem', 'mensagem', 'orientacao', 'conselho', 'sorte', 'previsao', 'espiritual', 'oraculo.html'] },
         { title: 'Vortex — Imersão Multimídia & Galeria', desc: 'Experiência imersiva e galeria visual de guardiãs de alta fidelidade', url: 'vortex/', icon: 'fa-solid fa-dharmachakra', badge: 'badge-ecossistema', badgeText: 'Vortex', tags: ['vortex', 'galeria', 'fotos', 'imagens', 'arte', 'imersao', 'multimidia', 'vortex.html'] },
         { title: 'Lébaras — Espaço de Culto & Tradição', desc: 'Estudos e enciclopédia das Lébaras na Quimbanda e Umbanda', url: 'lebaras/', icon: 'fa-solid fa-fire-flame-curved', badge: 'badge-ecossistema', badgeText: 'Lébaras', tags: ['lebaras', 'lebara', 'culto', 'tradicao', 'oferendas', 'quimbanda', 'lebaras.html'] },
-        { title: 'As Guardiãs — Panteão & Falanges', desc: 'Enciclopédia ilustrada e teológica com 28 Guardiãs da Umbanda e Quimbanda', url: 'guardias/', icon: 'fa-solid fa-crown', badge: 'badge-ecossistema', badgeText: 'Guardiãs', tags: ['guardias', 'as guardias', 'panteao', 'entidades', 'enciclopedia', 'maria padilha', 'rosa caveira', 'guardias.html'] },
+        { title: 'As Guardiãs — Panteão & Falanges', desc: 'Enciclopédia ilustrada e teológica com 29 Guardiãs da Umbanda e Quimbanda', url: 'guardias/', icon: 'fa-solid fa-crown', badge: 'badge-ecossistema', badgeText: 'Guardiãs', tags: ['guardias', 'as guardias', 'panteao', 'entidades', 'enciclopedia', 'maria padilha', 'rosa caveira', 'guardias.html'] },
         { title: 'Falanges de Pombagira: Nomes, Funções e Hierarquia na Umbanda', desc: 'A complexa arquitetura espiritual, nomes, funções e linhagens rituais na Umbanda por Alexia Melusine', url: 'falanges/', icon: 'fa-solid fa-sitemap', badge: 'badge-destaque', badgeText: 'Guia Especial', tags: ['falanges', 'falanges de pombagira', 'falange', 'hierarquia espiritual', 'nomes de pombagira', 'maria padilha', 'maria mulambo', 'sete saias', 'rosa caveira', 'linhas de umbanda', 'arquitetura espiritual', 'alexia melusine', 'falanges.html', 'falanges/'] },
         { title: 'Crossroads — Portal Bilíngue (ES/EN)', desc: 'Estudos traduzidos em Espanhol e Inglês para preservação global', url: 'crossroads/', icon: 'fa-solid fa-language', badge: 'badge-ecossistema', badgeText: 'Crossroads', tags: ['crossroads', 'bilingue', 'english', 'espanol', 'traducao', 'global', 'crossroads.html'] },
         { title: 'Quiz Arquetípico — Qual é a sua Pombagira?', desc: 'Descubra qual guardiã rege seus caminhos através de análise comportamental', url: 'quiz/', icon: 'fa-solid fa-star-of-life', badge: 'badge-ecossistema', badgeText: 'Quiz', tags: ['quiz', 'teste', 'qual', 'descobrir', 'minha pombagira', 'rege', 'caminhos', 'jogo', 'quiz.html'] },
@@ -5221,6 +5264,10 @@ initLangSwitcher();
         { title: 'Quem é a Pombagira Mirongueira nas tradições de Umbanda e Quimbanda?', desc: 'Guardiã da mironga e da magia protetora que conhece ervas, pós e rezas, desmanchando demandas antes de chegarem.', url: 'https://pombagiras.com/mirongueira/#faq', icon: 'fa-solid fa-circle-question', badge: 'badge-ecossistema', badgeText: 'FAQ Mirongueira', tags: ['quem e pombagira mirongueira', 'guardia da mironga', 'senhora da mironga', 'mirongueira/'] },
         { title: 'O que significa mironga?', desc: 'De raiz banta, significa feitiço, magia e mandinga: o saber das ervas, dos pós, das rezas e dos caminhos escondidos.', url: 'https://pombagiras.com/mirongueira/#faq', icon: 'fa-solid fa-book-open', badge: 'badge-destaque', badgeText: 'FAQ Mirongueira', tags: ['o que significa mironga', 'significado de mironga', 'raiz banta', 'mirongueira/'] },
         { title: 'É verdade que a Pombagira Mirongueira desmancha demandas antes de chegarem?', desc: 'A proteção antecipada é fundamento de sua ação litúrgica, desfazendo o mal antes de ele bater à porta.', url: 'https://pombagiras.com/mirongueira/#faq', icon: 'fa-solid fa-shield-halved', badge: 'badge-destaque', badgeText: 'FAQ Mirongueira', tags: ['desmancha demandas antes de chegarem', 'protecao antecipada', 'mironga preventiva', 'mirongueira/'] },
+        { title: 'Pombagira Baronesa: A Guardiã da Nobreza, Soberania da Elegância e o Mistério da Diplomacia', desc: 'Estudo aprofundado e decodificação litúrgica: a nobreza espiritual, a soberania da elegância, as portas altas do salão e o mistério da diplomacia na Umbanda e Quimbanda por Alexia Melusine.', url: 'https://pombagiras.com/baronesa/', icon: 'fa-solid fa-crown', badge: 'badge-destaque', badgeText: 'Guardiã', tags: ['pombagira baronesa', 'baronesa', 'dona baronesa', 'senhora do salao', 'senhora do salão', 'guardia da nobreza', 'guardiã da nobreza', 'soberania da elegancia', 'soberania da elegância', 'diplomacia espiritual', 'dignidade', 'salão de baile', 'umbanda', 'quimbanda', 'alexia melusine', 'baronesa/', 'pombagiras.com/baronesa/'] },
+        { title: 'Quem é a Pombagira Baronesa nas tradições de Umbanda e Quimbanda?', desc: 'Guardiã da nobreza e da elegância soberana que protege a dignidade dos humilhados e abre portas altas.', url: 'https://pombagiras.com/baronesa/#faq', icon: 'fa-solid fa-circle-question', badge: 'badge-ecossistema', badgeText: 'FAQ Baronesa', tags: ['quem e pombagira baronesa', 'guardia da nobreza', 'senhora do salao', 'baronesa/'] },
+        { title: 'Qual é a relação entre a Pombagira Baronesa e Maria Padilha?', desc: 'Em certas linhagens é compreendida como título de Maria Padilha; em outras, constitui falange autônoma.', url: 'https://pombagiras.com/baronesa/#faq', icon: 'fa-solid fa-gem', badge: 'badge-destaque', badgeText: 'FAQ Baronesa', tags: ['relacao baronesa e maria padilha', 'titulo maria padilha', 'falange autonoma', 'baronesa/'] },
+        { title: 'A Pombagira Baronesa protege quem foi humilhado?', desc: 'Protege a dignidade de quem foi humilhado, devolvendo a honra sem alimentar vinganças destrutivas.', url: 'https://pombagiras.com/baronesa/#faq', icon: 'fa-solid fa-hand-holding-heart', badge: 'badge-destaque', badgeText: 'FAQ Baronesa', tags: ['protege quem foi humilhado', 'dignidade espiritual', 'reparacao de honra', 'baronesa/'] },
 
         /* === LISTA DAS POMBAGIRAS — DOSSIÊ DOCUMENTAL === */
         { title: 'Lista das Pombagiras: Nomes, Falanges, Tradições e Registros Documentais', desc: 'Dossiê histórico-antropológico sobre Pombagiras conhecidas, difundidas, regionais, raras e de documentação incerta. O que é documentado e o que permanece sem comprovação independente.', url: 'https://pombagiras.com/lista-das-pombagiras/', icon: 'fa-solid fa-scroll', badge: 'badge-destaque', badgeText: 'Dossiê', tags: ['lista das pombagiras', 'lista de pombagiras', 'todas as pombagiras', 'nomes das pombagiras', 'falanges', 'quantas pombagiras existem', 'quais sao as pombagiras', 'dossie', 'dossiê', 'reginaldo prandi', 'marlyse meyer', 'lista completa', 'pombagiras conhecidas', 'pombagiras raras', 'pombagiras documentadas', 'lista-das-pombagiras', 'lista-das-pombagiras/', 'pombagiras.com/lista-das-pombagiras/'] },
