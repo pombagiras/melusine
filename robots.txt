@@ -191,6 +191,8 @@ Allow: /ponto-riscado
 Allow: /lodo/
 Allow: /mirongueira/
 Allow: /mirongueira
+Allow: /baronesa/
+Allow: /baronesa
 Allow: /fundamento/
 Allow: /fundamento
 Allow: /dignidade-mediunidade/
