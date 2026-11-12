@@ -443,8 +443,8 @@
           "@type": "ItemList",
           "@id": "https://pombagiras.com/#itemlist",
           "name": "Guardiãs - Pombagiras",
-          "description": "Enciclopédia ilustrada e teológica com 29 Guardiãs da Umbanda e Quimbanda.",
-          "numberOfItems": 29,
+          "description": "Enciclopédia ilustrada e teológica com 30 Guardiãs da Umbanda e Quimbanda.",
+          "numberOfItems": 30,
           "itemListElement": [
             {
               "@type": "ListItem",
@@ -590,6 +590,11 @@
               "@type": "ListItem",
               "position": 29,
               "name": "Pombagira Baronesa – Guardiã da Nobreza e Soberania da Elegância"
+            },
+            {
+              "@type": "ListItem",
+              "position": 30,
+              "name": "Pombagira do Lodo – Guardiã da Transmutação e Soberania da Decantação"
             }
           ]
         },
@@ -2628,7 +2633,7 @@ initLangSwitcher();
             <button type="button" class="mob-carousel-arrow" id="mobCarouselPrev" aria-label="Guardiã anterior">
                 <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
             </button>
-            <span class="mob-carousel-counter" id="mobCarouselCounter">1 / 29</span>
+            <span class="mob-carousel-counter" id="mobCarouselCounter">1 / 30</span>
             <button type="button" class="mob-carousel-arrow" id="mobCarouselNext" aria-label="Próxima guardiã">
                 <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
             </button>
@@ -2829,7 +2834,7 @@ initLangSwitcher();
                 var nextBtn = document.getElementById('mobCarouselNext');
                 var counterEl = document.getElementById('mobCarouselCounter');
                 var slideIdx = 0;
-                var totalUnique = 29;
+                var totalUnique = 30;
 
                 function createMirongueiraCard() {
                     var el = document.createElement('a');
@@ -2908,10 +2913,47 @@ initLangSwitcher();
                     }
                 }
 
+                function createLodoCard() {
+                    var el = document.createElement('a');
+                    el.className = 'carousel-item';
+                    el.href = 'https://pombagiras.com/lodo/';
+                    var displayName = 'Pombagira do Lodo';
+                    var altText = 'Representação artística conceitual da ' + displayName;
+                    el.setAttribute('aria-label', displayName);
+                    el.setAttribute('title', displayName);
+                    el.innerHTML = '<picture style="width:100%;height:100%;display:block;">' +
+                        '<source type="image/webp" srcset="fotos/pombagira_do_lodo.webp">' +
+                        '<img src="fotos/pombagira_do_lodo.png" alt="' + altText + '" loading="lazy" decoding="async" width="200" height="200" onerror="this.onerror=null;this.src=\'https://cdn.pombagiras.com/fotos/pombagira_do_lodo.png\';">' +
+                        '</picture>' +
+                        '<span>Lodo</span>';
+                    var dragStartPos = 0;
+                    el.addEventListener('mousedown', function(e) { dragStartPos = e.clientX; });
+                    el.addEventListener('click', function(e) {
+                        if (Math.abs(e.clientX - dragStartPos) > 6) {
+                            e.preventDefault();
+                        }
+                    });
+                    return el;
+                }
+
+                function ensureLodoCard() {
+                    if (!track) return;
+                    if (track.querySelector('a[href$="/lodo/"]')) return;
+                    var baronesas = track.querySelectorAll('a[href*="baronesa"]');
+                    if (baronesas.length >= 2) {
+                        var card1 = createLodoCard();
+                        var card2 = createLodoCard();
+                        baronesas[0].insertAdjacentElement('afterend', card1);
+                        baronesas[1].insertAdjacentElement('afterend', card2);
+                        window.dispatchEvent(new Event('resize'));
+                    }
+                }
+
                 function applySlide() {
                     if (!track) return;
                     ensureMirongueiraCard();
                     ensureBaronesaCard();
+                    ensureLodoCard();
                     var items = track.querySelectorAll('.carousel-item').length;
                     if (items >= 2) totalUnique = Math.floor(items / 2);
                     if (slideIdx < 0) slideIdx = totalUnique - 1;
@@ -2927,6 +2969,7 @@ initLangSwitcher();
                     obs.observe(track, { childList: true });
                     ensureMirongueiraCard();
                     ensureBaronesaCard();
+                    ensureLodoCard();
                     applySlide();
                 }
                 if (prevBtn) prevBtn.addEventListener('click', function() { slideIdx--; applySlide(); });
@@ -5130,7 +5173,7 @@ initLangSwitcher();
         { title: 'Oráculo Digital das Pombagiras', desc: 'Tire uma carta e receba a orientação espiritual e poética das Guardiãs', url: 'oraculo/', icon: 'fa-solid fa-fire', badge: 'badge-ecossistema', badgeText: 'Oráculo', tags: ['oraculo', 'cartas', 'tiragem', 'mensagem', 'orientacao', 'conselho', 'sorte', 'previsao', 'espiritual', 'oraculo.html'] },
         { title: 'Vortex — Imersão Multimídia & Galeria', desc: 'Experiência imersiva e galeria visual de guardiãs de alta fidelidade', url: 'vortex/', icon: 'fa-solid fa-dharmachakra', badge: 'badge-ecossistema', badgeText: 'Vortex', tags: ['vortex', 'galeria', 'fotos', 'imagens', 'arte', 'imersao', 'multimidia', 'vortex.html'] },
         { title: 'Lébaras — Espaço de Culto & Tradição', desc: 'Estudos e enciclopédia das Lébaras na Quimbanda e Umbanda', url: 'lebaras/', icon: 'fa-solid fa-fire-flame-curved', badge: 'badge-ecossistema', badgeText: 'Lébaras', tags: ['lebaras', 'lebara', 'culto', 'tradicao', 'oferendas', 'quimbanda', 'lebaras.html'] },
-        { title: 'As Guardiãs — Panteão & Falanges', desc: 'Enciclopédia ilustrada e teológica com 29 Guardiãs da Umbanda e Quimbanda', url: 'guardias/', icon: 'fa-solid fa-crown', badge: 'badge-ecossistema', badgeText: 'Guardiãs', tags: ['guardias', 'as guardias', 'panteao', 'entidades', 'enciclopedia', 'maria padilha', 'rosa caveira', 'guardias.html'] },
+        { title: 'As Guardiãs — Panteão & Falanges', desc: 'Enciclopédia ilustrada e teológica com 30 Guardiãs da Umbanda e Quimbanda', url: 'guardias/', icon: 'fa-solid fa-crown', badge: 'badge-ecossistema', badgeText: 'Guardiãs', tags: ['guardias', 'as guardias', 'panteao', 'entidades', 'enciclopedia', 'maria padilha', 'rosa caveira', 'guardias.html'] },
         { title: 'Falanges de Pombagira: Nomes, Funções e Hierarquia na Umbanda', desc: 'A complexa arquitetura espiritual, nomes, funções e linhagens rituais na Umbanda por Alexia Melusine', url: 'falanges/', icon: 'fa-solid fa-sitemap', badge: 'badge-destaque', badgeText: 'Guia Especial', tags: ['falanges', 'falanges de pombagira', 'falange', 'hierarquia espiritual', 'nomes de pombagira', 'maria padilha', 'maria mulambo', 'sete saias', 'rosa caveira', 'linhas de umbanda', 'arquitetura espiritual', 'alexia melusine', 'falanges.html', 'falanges/'] },
         { title: 'Crossroads — Portal Bilíngue (ES/EN)', desc: 'Estudos traduzidos em Espanhol e Inglês para preservação global', url: 'crossroads/', icon: 'fa-solid fa-language', badge: 'badge-ecossistema', badgeText: 'Crossroads', tags: ['crossroads', 'bilingue', 'english', 'espanol', 'traducao', 'global', 'crossroads.html'] },
         { title: 'Quiz Arquetípico — Qual é a sua Pombagira?', desc: 'Descubra qual guardiã rege seus caminhos através de análise comportamental', url: 'quiz/', icon: 'fa-solid fa-star-of-life', badge: 'badge-ecossistema', badgeText: 'Quiz', tags: ['quiz', 'teste', 'qual', 'descobrir', 'minha pombagira', 'rege', 'caminhos', 'jogo', 'quiz.html'] },
@@ -5268,6 +5311,10 @@ initLangSwitcher();
         { title: 'Quem é a Pombagira Baronesa nas tradições de Umbanda e Quimbanda?', desc: 'Guardiã da nobreza e da elegância soberana que protege a dignidade dos humilhados e abre portas altas.', url: 'https://pombagiras.com/baronesa/#faq', icon: 'fa-solid fa-circle-question', badge: 'badge-ecossistema', badgeText: 'FAQ Baronesa', tags: ['quem e pombagira baronesa', 'guardia da nobreza', 'senhora do salao', 'baronesa/'] },
         { title: 'Qual é a relação entre a Pombagira Baronesa e Maria Padilha?', desc: 'Em certas linhagens é compreendida como título de Maria Padilha; em outras, constitui falange autônoma.', url: 'https://pombagiras.com/baronesa/#faq', icon: 'fa-solid fa-gem', badge: 'badge-destaque', badgeText: 'FAQ Baronesa', tags: ['relacao baronesa e maria padilha', 'titulo maria padilha', 'falange autonoma', 'baronesa/'] },
         { title: 'A Pombagira Baronesa protege quem foi humilhado?', desc: 'Protege a dignidade de quem foi humilhado, devolvendo a honra sem alimentar vinganças destrutivas.', url: 'https://pombagiras.com/baronesa/#faq', icon: 'fa-solid fa-hand-holding-heart', badge: 'badge-destaque', badgeText: 'FAQ Baronesa', tags: ['protege quem foi humilhado', 'dignidade espiritual', 'reparacao de honra', 'baronesa/'] },
+        { title: 'Pombagira do Lodo: A Guardiã da Transmutação, Soberania da Decantação e o Mistério do Lodo que Cura', desc: 'Estudo aprofundado e decodificação litúrgica: a guardiã do lodo, a transmutação das águas escuras, a decantação e os territórios liminares na Umbanda e Quimbanda por Alexia Melusine.', url: 'https://pombagiras.com/lodo/', icon: 'fa-solid fa-water', badge: 'badge-destaque', badgeText: 'Guardiã', tags: ['pombagira do lodo', 'lodo', 'dona do lodo', 'senhora das aguas escuras', 'senhora das águas escuras', 'guardia do lodo', 'guardiã do lodo', 'transmutacao', 'transmutação', 'decantacao', 'decantação', 'aguas escuras', 'águas escuras', 'territorios liminares', 'territórios liminares', 'povo do lodo', 'exu do lodo', 'nana', 'nanã', 'umbanda', 'quimbanda', 'alexia melusine', 'lodo/', 'pombagiras.com/lodo/'] },
+        { title: 'Quem é a Pombagira do Lodo nas tradições de Umbanda e Quimbanda?', desc: 'Guardiã da transmutação e das águas escuras que protege as zonas densas e decanta o que estava impuro.', url: 'https://pombagiras.com/lodo/#faq', icon: 'fa-solid fa-circle-question', badge: 'badge-ecossistema', badgeText: 'FAQ Lodo', tags: ['quem e pombagira do lodo', 'guardia do lodo', 'senhora das aguas escuras', 'lodo/'] },
+        { title: 'Quem é o Exu do Lodo e o que é o Povo do Lodo?', desc: 'O Exu do Lodo é a contraparte masculina da Pombagira do Lodo e chefe do Povo do Lodo, sob a regência de Nanã e Omulu.', url: 'https://pombagiras.com/lodo/#faq', icon: 'fa-solid fa-users', badge: 'badge-destaque', badgeText: 'FAQ Lodo', tags: ['exu do lodo', 'povo do lodo', 'nana e omulu', 'lodo/'] },
+        { title: 'O lodo é um lugar de castigo ou de cura — e o que é a decantação?', desc: 'O lodo é lugar de cura, não de castigo: a guardiã protege os espaços, decanta o peso e devolve a água limpa.', url: 'https://pombagiras.com/lodo/#faq', icon: 'fa-solid fa-droplet', badge: 'badge-destaque', badgeText: 'FAQ Lodo', tags: ['lodo castigo ou cura', 'decantacao', 'decantação', 'lodo/'] },
 
         /* === LISTA DAS POMBAGIRAS — DOSSIÊ DOCUMENTAL === */
         { title: 'Lista das Pombagiras: Nomes, Falanges, Tradições e Registros Documentais', desc: 'Dossiê histórico-antropológico sobre Pombagiras conhecidas, difundidas, regionais, raras e de documentação incerta. O que é documentado e o que permanece sem comprovação independente.', url: 'https://pombagiras.com/lista-das-pombagiras/', icon: 'fa-solid fa-scroll', badge: 'badge-destaque', badgeText: 'Dossiê', tags: ['lista das pombagiras', 'lista de pombagiras', 'todas as pombagiras', 'nomes das pombagiras', 'falanges', 'quantas pombagiras existem', 'quais sao as pombagiras', 'dossie', 'dossiê', 'reginaldo prandi', 'marlyse meyer', 'lista completa', 'pombagiras conhecidas', 'pombagiras raras', 'pombagiras documentadas', 'lista-das-pombagiras', 'lista-das-pombagiras/', 'pombagiras.com/lista-das-pombagiras/'] },

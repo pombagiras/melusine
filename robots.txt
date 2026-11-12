@@ -193,6 +193,7 @@ Allow: /mirongueira/
 Allow: /mirongueira
 Allow: /baronesa/
 Allow: /baronesa
+Allow: /lodo
 Allow: /fundamento/
 Allow: /fundamento
 Allow: /dignidade-mediunidade/
