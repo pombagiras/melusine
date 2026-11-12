@@ -801,30 +801,252 @@
             border-color: var(--accent-red-bright);
         }
 
+        /* ── LINKS DO RODAPÉ (4 LINKS CANÔNICOS) ── */
         .footer-legal-links {
             margin-top: 14px;
             margin-bottom: 12px;
             display: flex;
             justify-content: center;
-            gap: 16px;
-            flex-wrap: wrap;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: nowrap;
+        }
+
+        .footer-legal-group {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
         }
 
         .footer-legal-links a {
             color: var(--muted-text);
             text-decoration: none;
             font-size: 0.85rem;
+            transition: color 0.2s ease;
+            white-space: nowrap;
         }
 
         .footer-legal-links a:hover {
             color: var(--accent-pink);
         }
 
+        .footer-legal-links .footer-link-apoio {
+            color: var(--gold) !important;
+            font-weight: 700 !important;
+        }
+
+        .footer-legal-links .footer-link-apoio:hover {
+            color: var(--gold-light) !important;
+            text-decoration: underline;
+        }
+
         .footer-legal-sep {
             color: rgba(255, 255, 255, 0.15);
         }
 
+        /* ── BLOCO DISCRETO: CARTA DAS POMBAGIRAS (NEWSLETTER) ── */
+        .newsletter-carta-box {
+            background: linear-gradient(135deg, rgba(28, 14, 20, 0.8) 0%, rgba(14, 8, 12, 0.9) 100%);
+            border: 1px solid rgba(197, 160, 89, 0.28);
+            border-radius: 14px;
+            padding: 1.8rem 2rem;
+            margin: 3.5rem 0 2rem;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+        }
+
+        .newsletter-carta-inner {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.4rem;
+        }
+
+        .newsletter-carta-icon {
+            font-size: 1.8rem;
+            color: var(--gold-light);
+            flex-shrink: 0;
+            background: rgba(197, 160, 89, 0.1);
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid rgba(197, 160, 89, 0.25);
+        }
+
+        .newsletter-carta-body {
+            flex: 1;
+            width: 100%;
+        }
+
+        .newsletter-carta-title {
+            font-family: var(--ff-display);
+            font-size: 1.35rem;
+            color: var(--gold-light);
+            margin-top: 0;
+            margin-bottom: 0.35rem;
+            font-weight: 700;
+        }
+
+        .newsletter-carta-desc {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+            margin-bottom: 1.1rem;
+            text-align: left;
+        }
+
+        .newsletter-carta-input-wrap {
+            display: flex;
+            gap: 0.6rem;
+            max-width: 520px;
+        }
+
+        .newsletter-carta-input {
+            flex: 1;
+            background: rgba(5, 2, 3, 0.85);
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            font-size: 0.92rem;
+            color: var(--text-color);
+            font-family: var(--ff-body);
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .newsletter-carta-input:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 2px rgba(197, 160, 89, 0.25);
+        }
+
+        .newsletter-carta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.4rem;
+            border-radius: 8px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            background: var(--gold);
+            color: #050002;
+            border: none;
+            cursor: pointer;
+            font-family: var(--ff-body);
+            transition: all 0.25s ease;
+            white-space: nowrap;
+        }
+
+        .newsletter-carta-btn:hover {
+            background: #fff;
+            box-shadow: 0 4px 16px rgba(255, 255, 255, 0.25);
+            transform: translateY(-1px);
+        }
+
+        .newsletter-carta-btn:disabled {
+            opacity: 0.65;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .newsletter-carta-msg {
+            font-size: 0.85rem;
+            margin-top: 0.7rem;
+            display: none;
+            line-height: 1.4;
+        }
+
+        .newsletter-carta-msg.sucesso {
+            display: block;
+            color: #8ce99a;
+        }
+
+        .newsletter-carta-msg.aviso {
+            display: block;
+            color: #dfc07e;
+        }
+
+        .newsletter-carta-msg.erro {
+            display: block;
+            color: #ff8787;
+        }
+
+        .newsletter-carta-privacy {
+            font-size: 0.76rem;
+            color: var(--muted-text);
+            margin-top: 0.6rem;
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            text-align: left;
+        }
+
         /* ── MOBILE OPTIMIZATIONS ───────────────────────────────────── */
+        @media (max-width: 768px) {
+            .portal-header .brand {
+                font-size: 1.35rem !important;
+                white-space: nowrap !important;
+            }
+
+            /* Ajuste responsivo do rodapé (2 linhas, 2 links por linha em grade 2 colunas) */
+            .footer-legal-links {
+                flex-direction: column !important;
+                gap: 8px !important;
+                width: 100% !important;
+                margin-top: 16px !important;
+            }
+
+            .footer-legal-sep-mid {
+                display: none !important;
+            }
+
+            .footer-legal-group {
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                gap: 12px !important;
+                width: 100% !important;
+            }
+
+            /* Ajuste responsivo da newsletter no celular */
+            .newsletter-carta-box {
+                padding: 1.4rem 1.1rem !important;
+                margin: 2.5rem 0 1.8rem !important;
+            }
+
+            .newsletter-carta-inner {
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+                gap: 1rem !important;
+            }
+
+            .newsletter-carta-desc {
+                text-align: center !important;
+            }
+
+            .newsletter-carta-input-wrap {
+                flex-direction: column !important;
+                max-width: 100% !important;
+                width: 100% !important;
+            }
+
+            .newsletter-carta-input {
+                width: 100% !important;
+            }
+
+            .newsletter-carta-btn {
+                width: 100% !important;
+            }
+
+            .newsletter-carta-privacy {
+                justify-content: center !important;
+                text-align: center !important;
+            }
+        }
+
         @media (max-width: 600px) {
             main { padding: 1rem 0.85rem 2.8rem; }
             .glass-card { padding: 1.6rem 1.2rem; border-radius: 14px; }
@@ -1174,6 +1396,44 @@ Ela veio pra trabalhar!</div>
                 </details>
             </section>
 
+            <!-- ================================================================
+                 CAPTURA DISCRETA: RECEBER A CARTA DAS POMBAGIRAS (NEWSLETTER)
+                 ================================================================ -->
+            <section class="newsletter-carta-box" aria-label="Receber a Carta das Pombagiras">
+                <div class="newsletter-carta-inner">
+                    <div class="newsletter-carta-icon">
+                        <i class="fa-solid fa-envelope-open-text" aria-hidden="true"></i>
+                    </div>
+                    <div class="newsletter-carta-body">
+                        <h3 class="newsletter-carta-title">Receber a Carta das Pombagiras</h3>
+                        <p class="newsletter-carta-desc">
+                            Um comunicado discreto e mensal com ensaios inéditos, estudos antropológicos e atualizações do acervo. Sem spam, sem venda de dados e sem mensagens comerciais.
+                        </p>
+                        <form class="newsletter-carta-form" onsubmit="handleCartaSubmit(event, this)">
+                            <div class="newsletter-carta-input-wrap">
+                                <input 
+                                    type="email" 
+                                    name="email" 
+                                    class="newsletter-carta-input" 
+                                    placeholder="Digite seu melhor e-mail com discrição..." 
+                                    required 
+                                    autocomplete="email"
+                                    aria-label="Endereço de e-mail para a Carta das Pombagiras"
+                                >
+                                <button type="submit" class="newsletter-carta-btn">
+                                    <span>Inscrever-se</span>
+                                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <div class="newsletter-carta-msg" role="status" aria-live="polite"></div>
+                            <p class="newsletter-carta-privacy">
+                                <i class="fa-solid fa-lock" aria-hidden="true"></i> Seus dados nunca serão compartilhados nem vendidos. Cancele com um clique quando desejar.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
             <!-- 11. CAIXA DE AUTORIA OFICIAL (ALEXIA MELUSINE) -->
             <div class="author-box">
                 <img src="https://cdn.pombagiras.com/assets/favicon-round-192.png" alt="Selo de Alexia Melusine" class="author-avatar" width="76" height="76" loading="lazy">
@@ -1203,11 +1463,17 @@ Ela veio pra trabalhar!</div>
             </div>
 
             <div class="footer-legal-links">
-                <a href="https://pombagiras.com/privacy.html">Política de Privacidade</a>
-                <span class="footer-legal-sep">|</span>
-                <a href="https://pombagiras.com/terms.html">Termos de Uso</a>
-                <span class="footer-legal-sep">|</span>
-                <a href="https://pombagiras.com/metodologia.html">Metodologia</a>
+                <div class="footer-legal-group">
+                    <a href="https://pombagiras.com/privacy.html">Política de Privacidade</a>
+                    <span class="footer-legal-sep">|</span>
+                    <a href="https://pombagiras.com/terms.html">Termos de Uso</a>
+                </div>
+                <span class="footer-legal-sep footer-legal-sep-mid">|</span>
+                <div class="footer-legal-group">
+                    <a href="https://pombagiras.com/metodologia.html">Metodologia</a>
+                    <span class="footer-legal-sep">|</span>
+                    <a href="https://pombagiras.com/apoio/" class="footer-link-apoio">Apoio</a>
+                </div>
             </div>
 
             <p style="margin-top: 1.25rem; font-size: 0.8rem; opacity: 0.7;">
@@ -1216,5 +1482,59 @@ Ela veio pra trabalhar!</div>
         </footer>
     </main>
 
+    <!-- Script de Inscrição na Carta das Pombagiras -->
+    <script>
+    async function handleCartaSubmit(e, form) {
+        e.preventDefault();
+        const input = form.querySelector('input[name="email"]');
+        const btn = form.querySelector('button[type="submit"]');
+        const msg = form.querySelector('.newsletter-carta-msg');
+        const email = (input.value || '').trim();
+        if (!email) return;
+
+        btn.disabled = true;
+        btn.innerHTML = '<span>Enviando...</span>';
+        msg.className = 'newsletter-carta-msg';
+        msg.style.display = 'none';
+
+        try {
+            const resp = await fetch('https://qeayxaqcwajitbrzdhzp.supabase.co/rest/v1/newsletter_subscribers', {
+                method: 'POST',
+                headers: {
+                    'apikey': 'sb_publishable_2np1-QAVxRzRYwhlS4FHeA_otT0J9VI',
+                    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFlYXl4YXFjd2FqaXRicnpkaHpwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM5NTc1NDIsImV4cCI6MjEwOTUzMzU0Mn0.ykY2C4BRy6UNWrJQ6ZfMo9ph4J4aFoe3APkRrlGh1js',
+                    'Content-Type': 'application/json',
+                    'Prefer': 'return=minimal'
+                },
+                body: JSON.stringify({
+                    email: email,
+                    source_page: '/calunga/'
+                })
+            });
+
+            if (resp.status === 201) {
+                msg.textContent = 'Inscrição confirmada com sucesso! Você receberá a Carta das Pombagiras.';
+                msg.className = 'newsletter-carta-msg sucesso';
+                msg.style.display = 'block';
+                input.value = '';
+                btn.innerHTML = '<span>Inscrito!</span> <i class="fa-solid fa-check"></i>';
+            } else if (resp.status === 409) {
+                msg.textContent = 'Este e-mail já está inscrito para receber a Carta das Pombagiras. Muito obrigada!';
+                msg.className = 'newsletter-carta-msg aviso';
+                msg.style.display = 'block';
+                btn.disabled = false;
+                btn.innerHTML = '<span>Inscrever-se</span> <i class="fa-solid fa-arrow-right"></i>';
+            } else {
+                throw new Error('Status: ' + resp.status);
+            }
+        } catch (err) {
+            msg.textContent = 'Não foi possível registrar seu e-mail no momento. Por favor, tente novamente mais tarde.';
+            msg.className = 'newsletter-carta-msg erro';
+            msg.style.display = 'block';
+            btn.disabled = false;
+            btn.innerHTML = '<span>Inscrever-se</span> <i class="fa-solid fa-arrow-right"></i>';
+        }
+    }
+    </script>
 </body>
 </html>
