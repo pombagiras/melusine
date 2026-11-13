@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -6,7 +6,7 @@
 
   <!-- ===== SEO PRIMÁRIO ===== -->
   <title>Quiz: Qual Pombagira Comanda Seu Destino? — Pombagiras.com</title>
-  <meta name="description" content="Responda 12 perguntas e descubra qual das 12 Pombagiras caminha ao seu lado. Um quiz imersivo sobre arquetipologia afro-brasileira, identidade ancestral e poder feminino profundo.">
+  <meta name="description" content="Responda 15 perguntas e descubra qual das 30 Pombagiras caminha ao seu lado. Um quiz imersivo sobre arquetipologia afro-brasileira, identidade ancestral e poder feminino profundo.">
   <meta name="keywords" content="quiz pombagira, qual pombagira sou eu, pombagira quiz, umbanda quiz, pombagiras identidade, quiz espiritual, pombagira destino, pombagiras.com">
   <meta name="author" content="Alexia Melusine">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -21,7 +21,7 @@
   <meta property="og:image" content="https://cdn.pombagiras.com/fotos/QUIZ.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Quiz: Qual Pombagira Comanda Seu Destino? — 12 perguntas, 12 mulheres de poder">
+  <meta property="og:image:alt" content="Quiz: Qual Pombagira Comanda Seu Destino? — 15 perguntas, 30 mulheres de poder">
   <meta property="og:locale" content="pt_BR">
 
   <!-- ===== TWITTER / X CARD ===== -->
@@ -52,6 +52,8 @@
 
   <!-- ===== CSS ===== -->
   <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
   <!-- ===== SCHEMA.ORG: Quiz ===== -->
   <script type="application/ld+json">
@@ -299,12 +301,12 @@
           "@type": "Quiz",
           "name": "Qual Pombagira Comanda Seu Destino?",
           "alternateName": "Quiz Pombagira",
-          "description": "Quiz imersivo com 12 perguntas para descobrir qual das 12 Pombagiras caminha ao seu lado, baseado em arquetipologia afro-brasileira e feminino profundo.",
+          "description": "Quiz imersivo com 15 perguntas para descobrir qual das 30 Pombagiras caminha ao seu lado, baseado em arquetipologia afro-brasileira e feminino profundo.",
           "url": "https://pombagiras.com/quiz/",
           "inLanguage": "pt-BR",
           "datePublished": "2026-07-02",
-          "dateModified": "2026-07-02",
-          "numberOfQuestions": 12,
+          "dateModified": "2026-11-13",
+          "numberOfQuestions": 15,
           "author": {
             "@id": "https://pombagiras.com/#author"
           },
@@ -322,7 +324,7 @@
           "@context": "https://schema.org",
           "@type": "WebApplication",
           "name": "Quiz: Qual Pombagira Comanda Seu Destino?",
-          "description": "Aplicação web interativa com 12 perguntas de múltipla escolha para identificação arquetípica com as 12 Pombagiras da Umbanda e Quimbanda.",
+          "description": "Aplicação web interativa com 15 perguntas de múltipla escolha para identificação arquetípica com as 30 Pombagiras da Umbanda e Quimbanda.",
           "url": "https://pombagiras.com/quiz/",
           "applicationCategory": "EntertainmentApplication",
           "operatingSystem": "Web",
@@ -341,7 +343,7 @@
           },
           "image": "https://cdn.pombagiras.com/fotos/Ecossistema%20(5).png",
           "datePublished": "2026-07-02",
-          "dateModified": "2026-07-02"
+          "dateModified": "2026-11-13"
         },
         {
           "@context": "https://schema.org",
@@ -386,20 +388,56 @@
 <!-- ================= INTRO ================= -->
 <section class="stage" id="screen-intro" aria-label="Introdução do Quiz">
   <h1 class="speakable-title">Qual <em>Pombagira</em><br>comanda seu destino?</h1>
-  <p class="lede speakable-description">Responda com o que sente, não com o que acha certo! E descubra qual Pombagira caminha ao seu lado.</p>
+  <p class="lede speakable-description">Responda com o que sente, não com o que acha certo! E descubra qual Pombagira caminha ao seu lado. São 30 guardiãs e 15 perguntas.</p>
 
   <div class="grid-pombas" id="introGrid" aria-hidden="false"></div>
 
   <button class="btn" id="btnStart" aria-label="Iniciar o quiz">Abrir a Gira</button>
   <p class="skip-hint">Pombagira não mente. Se vier buscar verdade, prepare-se para encontrá-la.</p>
+
+            <section class="newsletter-carta-box" aria-label="Receber a Carta das Pombagiras">
+                <div class="newsletter-carta-inner">
+                    <div class="newsletter-carta-icon">
+                        <i class="fa-solid fa-envelope-open-text" aria-hidden="true"></i>
+                    </div>
+                    <div class="newsletter-carta-body">
+                        <h3 class="newsletter-carta-title">Receber a Carta das Pombagiras</h3>
+                        <p class="newsletter-carta-desc">
+                            Um comunicado discreto e mensal com ensaios inéditos, estudos antropológicos e atualizações do acervo. Sem spam, sem venda de dados e sem mensagens comerciais.
+                        </p>
+                        <form class="newsletter-carta-form" onsubmit="handleCartaSubmit(event, this)">
+                            <div class="newsletter-carta-input-wrap">
+                                <input 
+                                    type="email" 
+                                    name="email" 
+                                    class="newsletter-carta-input" 
+                                    placeholder="Digite seu melhor e-mail com discrição..." 
+                                    required 
+                                    autocomplete="email"
+                                    aria-label="Endereço de e-mail para a Carta das Pombagiras"
+                                >
+                                <button type="submit" class="newsletter-carta-btn">
+                                    <span>Inscrever-se</span>
+                                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <div class="newsletter-carta-msg" role="status" aria-live="polite"></div>
+                            <p class="newsletter-carta-privacy">
+                                <i class="fa-solid fa-lock" aria-hidden="true"></i> Seus dados nunca serão compartilhados nem vendidos. Cancele com um clique quando desejar.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
 </section>
 
 <!-- ================= QUIZ ================= -->
 <section class="stage" id="screen-quiz" hidden="" aria-label="Perguntas do quiz">
   <div class="quiz-wrap">
-    <div class="progress-row" role="progressbar" aria-valuemin="0" aria-valuemax="12" aria-valuenow="0" aria-label="Progresso do quiz">
+    <div class="progress-row" role="progressbar" aria-valuemin="0" aria-valuemax="15" aria-valuenow="0" aria-label="Progresso do quiz">
       <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
-      <div class="progress-count" id="progressCount" aria-live="polite">01 / 12</div>
+      <div class="progress-count" id="progressCount" aria-live="polite">01 / 15</div>
     </div>
     <div class="q-eyebrow" id="qEyebrow" aria-live="polite">Pergunta 01</div>
     <h2 class="q-text" id="qText"></h2>
@@ -420,8 +458,46 @@
     <p class="saudacao" id="resultSaudacao"></p>
     <div class="result-actions">
       <button class="btn" id="btnRestart" aria-label="Jogar novamente">Jogar Novamente</button>
+      <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" id="btnEntity" aria-label="Conhecer a Pombagira do resultado">Conhecer</a>
+      <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" id="btnShare" aria-label="Partilhar o meu resultado no WhatsApp">Partilhar o meu resultado</a>
       <a href="https://pombagiras.com/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" aria-label="Ir para Pombagiras.com">Pombagiras.com</a>
     </div>
+
+            <section class="newsletter-carta-box" aria-label="Receber a Carta das Pombagiras">
+                <div class="newsletter-carta-inner">
+                    <div class="newsletter-carta-icon">
+                        <i class="fa-solid fa-envelope-open-text" aria-hidden="true"></i>
+                    </div>
+                    <div class="newsletter-carta-body">
+                        <h3 class="newsletter-carta-title">Receber a Carta das Pombagiras</h3>
+                        <p class="newsletter-carta-desc">
+                            Um comunicado discreto e mensal com ensaios inéditos, estudos antropológicos e atualizações do acervo. Sem spam, sem venda de dados e sem mensagens comerciais.
+                        </p>
+                        <form class="newsletter-carta-form" onsubmit="handleCartaSubmit(event, this)">
+                            <div class="newsletter-carta-input-wrap">
+                                <input 
+                                    type="email" 
+                                    name="email" 
+                                    class="newsletter-carta-input" 
+                                    placeholder="Digite seu melhor e-mail com discrição..." 
+                                    required 
+                                    autocomplete="email"
+                                    aria-label="Endereço de e-mail para a Carta das Pombagiras"
+                                >
+                                <button type="submit" class="newsletter-carta-btn">
+                                    <span>Inscrever-se</span>
+                                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <div class="newsletter-carta-msg" role="status" aria-live="polite"></div>
+                            <p class="newsletter-carta-privacy">
+                                <i class="fa-solid fa-lock" aria-hidden="true"></i> Seus dados nunca serão compartilhados nem vendidos. Cancele com um clique quando desejar.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
   </div>
 </section>
 
@@ -443,6 +519,62 @@
 </div>
 
 <script src="quiz.js"></script>
+
+    <!-- Script de Inscrição na Carta das Pombagiras (Supabase REST com RLS anon) -->
+    <script>
+    async function handleCartaSubmit(e, form) {
+        e.preventDefault();
+        const input = form.querySelector('input[name="email"]');
+        const btn = form.querySelector('button[type="submit"]');
+        const msg = form.querySelector('.newsletter-carta-msg');
+        const email = (input.value || '').trim();
+        if (!email) return;
+
+        btn.disabled = true;
+        btn.innerHTML = '<span>Enviando...</span>';
+        msg.className = 'newsletter-carta-msg';
+        msg.style.display = 'none';
+
+        try {
+            const resp = await fetch('https://qeayxaqcwajitbrzdhzp.supabase.co/rest/v1/newsletter_subscribers', {
+                method: 'POST',
+                headers: {
+                    'apikey': 'sb_publishable_2np1-QAVxRzRYwhlS4FHeA_otT0J9VI',
+                    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFlYXl4YXFjd2FqaXRicnpkaHpwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM5NTc1NDIsImV4cCI6MjEwOTUzMzU0Mn0.ykY2C4BRy6UNWrJQ6ZfMo9ph4J4aFoe3APkRrlGh1js',
+                    'Content-Type': 'application/json',
+                    'Prefer': 'return=minimal'
+                },
+                body: JSON.stringify({
+                    email: email,
+                    source_page: window.location.pathname
+                })
+            });
+
+            if (resp.status === 201) {
+                msg.textContent = 'Inscrição confirmada com sucesso! Você receberá a Carta das Pombagiras.';
+                msg.className = 'newsletter-carta-msg sucesso';
+                msg.style.display = 'block';
+                input.value = '';
+                btn.innerHTML = '<span>Inscrito!</span> <i class="fa-solid fa-check"></i>';
+            } else if (resp.status === 409) {
+                msg.textContent = 'Este e-mail já está inscrito para receber a Carta das Pombagiras. Muito obrigada!';
+                msg.className = 'newsletter-carta-msg aviso';
+                msg.style.display = 'block';
+                btn.disabled = false;
+                btn.innerHTML = '<span>Inscrever-se</span> <i class="fa-solid fa-arrow-right"></i>';
+            } else {
+                throw new Error('Status: ' + resp.status);
+            }
+        } catch (err) {
+            msg.textContent = 'Não foi possível registrar seu e-mail no momento. Por favor, tente novamente mais tarde.';
+            msg.className = 'newsletter-carta-msg erro';
+            msg.style.display = 'block';
+            btn.disabled = false;
+            btn.innerHTML = '<span>Inscrever-se</span> <i class="fa-solid fa-arrow-right"></i>';
+        }
+    }
+    </script>
+
 
 </body>
 </html>

@@ -11,6 +11,13 @@
   --ok: #C9A227;
   --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
   --font-body: 'Geist', -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --gold: #C5A059;
+  --gold-light: #dfc07e;
+  --text-color: #FAF6EE;
+  --text-secondary: #e6e2d8;
+  --muted-text: #96a3a8;
+  --ff-display: 'Fraunces', serif;
+  --ff-sans: 'Geist', sans-serif;
 }
 
 * {
@@ -642,6 +649,15 @@ h1 em {
     margin: 6px 0 30px;
   }
 
+  .pomba-thumb span {
+    font-size: 0.62rem;
+    line-height: 1.25;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
   .btn {
     width: 100%;
     padding: 16px 20px;
@@ -875,3 +891,164 @@ h1 em {
     height: 160px;
   }
 }
+
+        /* ── BLOCO DISCRETO: CARTA DAS POMBAGIRAS (NEWSLETTER) ── */
+        .newsletter-carta-box {
+            background: linear-gradient(135deg, rgba(28, 14, 20, 0.8) 0%, rgba(14, 8, 12, 0.9) 100%);
+            border: 1px solid rgba(197, 160, 89, 0.28);
+            border-radius: 14px;
+            padding: 1.8rem 2rem;
+            margin: 3.5rem 0 2rem;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+        }
+
+        .newsletter-carta-inner {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.4rem;
+        }
+
+        @media (max-width: 640px) {
+            .newsletter-carta-box {
+                padding: 1.4rem 1.1rem !important;
+                margin: 2.5rem 0 1.8rem !important;
+            }
+            .newsletter-carta-inner {
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+                gap: 1rem !important;
+            }
+        }
+
+        .newsletter-carta-icon {
+            font-size: 1.8rem;
+            color: var(--gold-light);
+            flex-shrink: 0;
+            background: rgba(197, 160, 89, 0.1);
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid rgba(197, 160, 89, 0.25);
+        }
+
+        .newsletter-carta-body {
+            flex: 1;
+            width: 100%;
+        }
+
+        .newsletter-carta-title {
+            font-family: var(--ff-display);
+            font-size: 1.35rem;
+            color: var(--gold-light);
+            margin-bottom: 0.35rem;
+            font-weight: 700;
+        }
+
+        .newsletter-carta-desc {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+            margin-bottom: 1.1rem;
+        }
+
+        .newsletter-carta-input-wrap {
+            display: flex;
+            gap: 0.6rem;
+            max-width: 520px;
+        }
+
+        @media (max-width: 640px) {
+            .newsletter-carta-input-wrap {
+                flex-direction: column !important;
+                max-width: 100% !important;
+            }
+        }
+
+        .newsletter-carta-input {
+            flex: 1;
+            background: rgba(5, 2, 3, 0.85);
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            font-size: 0.92rem;
+            color: var(--text-color);
+            font-family: var(--ff-sans);
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .newsletter-carta-input:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 2px rgba(197, 160, 89, 0.25);
+        }
+
+        .newsletter-carta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.4rem;
+            border-radius: 8px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            background: var(--gold);
+            color: #050002;
+            border: none;
+            cursor: pointer;
+            font-family: var(--ff-sans);
+            transition: all 0.25s ease;
+            white-space: nowrap;
+        }
+
+        .newsletter-carta-btn:hover {
+            background: #fff;
+            box-shadow: 0 4px 16px rgba(255, 255, 255, 0.25);
+            transform: translateY(-1px);
+        }
+
+        .newsletter-carta-btn:disabled {
+            opacity: 0.65;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .newsletter-carta-msg {
+            font-size: 0.85rem;
+            margin-top: 0.7rem;
+            display: none;
+            line-height: 1.4;
+        }
+
+        .newsletter-carta-msg.sucesso {
+            display: block;
+            color: #8ce99a;
+        }
+
+        .newsletter-carta-msg.aviso {
+            display: block;
+            color: #dfc07e;
+        }
+
+        .newsletter-carta-msg.erro {
+            display: block;
+            color: #ff8787;
+        }
+
+        .newsletter-carta-privacy {
+            font-size: 0.76rem;
+            color: var(--muted-text);
+            margin-top: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        @media (max-width: 640px) {
+            .newsletter-carta-privacy {
+                justify-content: center;
+            }
+        }
