@@ -442,6 +442,7 @@
   const elQEyebrow = document.getElementById('qEyebrow');
   const elQText = document.getElementById('qText');
   const elQOptions = document.getElementById('qOptions');
+  const elQHint = document.getElementById('qHint');
   const elProgressFill = document.getElementById('progressFill');
   const elProgressCount = document.getElementById('progressCount');
 
@@ -549,6 +550,7 @@
     elProgressCount.textContent = `${pad2(state.current + 1)} / ${pad2(QUESTIONS.length)}`;
     elProgressFill.style.width = `${(state.current / QUESTIONS.length) * 100}%`;
     elQText.textContent = q.texto;
+    if (elQHint) elQHint.textContent = 'toque para responder — ou use as teclas 1 a 4';
 
     elQOptions.innerHTML = '';
     const letras = ['A', 'B', 'C', 'D'];
@@ -641,6 +643,9 @@
     elProgressCount.textContent = `${pad2(QUESTIONS.length)} / ${pad2(QUESTIONS.length)}`;
     elProgressFill.style.width = '100%';
     elQText.textContent = 'Mais de uma guardiã te chamou. Qual delas te chama mais forte?';
+    // A dica do teclado acompanha o numero real de opcoes do desempate
+    // (o teclado suporta 1 a 9; acima disso o toque continua a funcionar).
+    if (elQHint) elQHint.textContent = `toque para responder — ou use as teclas 1 a ${Math.min(tied.length, 9)}`;
 
     elQOptions.innerHTML = '';
     const letras = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'];
