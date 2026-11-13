@@ -10,13 +10,23 @@
     <description>Portal de Desmistificação, Antropologia, Arte &amp; Filosofia Ancestral das Guardiãs de Umbanda e Quimbanda.</description>
     <language>pt-BR</language>
     <copyright>© 2026 Pombagiras.com. Todos os direitos reservados.</copyright>
-    <lastBuildDate>Mon, 09 Nov 2026 10:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 10:00:00 GMT</lastBuildDate>
     <atom:link href="https://pombagiras.com/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://cdn.pombagiras.com/assets/favicon-round-512.png</url>
       <title>Pombagiras.com</title>
       <link>https://pombagiras.com/</link>
     </image>
+    <item>
+      <title>A Pombagira e a pessoa que não se identifica com sua imagem: expectativas, representações e experiência espiritual</title>
+      <link>https://pombagiras.com/nao-se-identifica-com-sua-imagem/</link>
+      <guid isPermaLink="true">https://pombagiras.com/nao-se-identifica-com-sua-imagem/</guid>
+      <pubDate>Fri, 13 Nov 2026 10:00:00 GMT</pubDate>
+      <dc:creator>Alexia Melusine</dc:creator>
+      <category>História, cultura afro-brasileira e representações das Pombagiras</category>
+      <description>Nem toda pessoa se reconhece na imagem popular da Pombagira. Um estudo sobre expectativas, representações e experiência espiritual — e a liberdade de não corresponder a uma imagem.</description>
+      <media:content url="https://pombagiras.com/nao-se-identifica-com-sua-imagem/capa.jpg" medium="image" />
+    </item>
     <item>
       <title>A Pombagira sem vestido vermelho: a pluralidade das cores, das vestimentas e das aparências no universo das Pombagiras</title>
       <link>https://pombagiras.com/pombagira-sem-vestido-vermelho/</link>

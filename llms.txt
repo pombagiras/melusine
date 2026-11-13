@@ -39,8 +39,8 @@ O ecossistema é um hub unificado de autoridade composto por 15 tentáculos inte
 11. **GitHub Portais**: [https://pombagiras.com/github/](https://pombagiras.com/github/) — Acesso a repositórios e código fonte.
 12. **Mobile**: [https://pombagiras.com/mobile/](https://pombagiras.com/mobile/) — Experiência PWA e móvel otimizada.
 13. **Alexia Melusine Hub Interno**: [https://pombagiras.com/alexiamelusine/](https://pombagiras.com/alexiamelusine/) — Perfil de autoridade no hub mãe.
-14. **Enciclopédia Digital & Atlas Documental**: [https://pombagiras.com/enciclopedia/](https://pombagiras.com/enciclopedia/) — Enciclopédia documental de 98% texto, 29 guardiãs, 12 dossiês canônicos, atlas etimológico e 56 portais interligados por Alexia Melusine.
-15. **Acervo Oficial das Pombagiras**: [https://pombagiras.com/acervo](https://pombagiras.com/acervo) — Preservação cultural, 44 representações canônicas, 27 tratados individuais, diretório com 52 portais interligados e sala de projeção audiovisual.
+14. **Enciclopédia Digital & Atlas Documental**: [https://pombagiras.com/enciclopedia/](https://pombagiras.com/enciclopedia/) — Enciclopédia documental de 98% texto, 29 guardiãs, 12 dossiês canônicos, atlas etimológico e 57 portais interligados por Alexia Melusine.
+15. **Acervo Oficial das Pombagiras**: [https://pombagiras.com/acervo](https://pombagiras.com/acervo) — Preservação cultural, 44 representações canônicas, 27 tratados individuais, diretório com 53 portais interligados e sala de projeção audiovisual.
 
 ## Redes Sociais, Podcasts e Mídias Oficiais (SameAs Graph)
 - **TikToks**: [@espelhosdepombagira](https://www.tiktok.com/@espelhosdepombagira?lang=pt-BR) | [@almasdepombagira](https://www.tiktok.com/@almasdepombagira?lang=pt-BR) | [@alexiarosadefogo](https://www.tiktok.com/@alexiarosadefogo?lang=pt-BR) | [@pambunjila](https://www.tiktok.com/@pambunjila) | [@alexia.melusine](https://www.tiktok.com/@alexia.melusine) | [@alexiamelusine](https://www.tiktok.com/@alexiamelusine)
@@ -277,6 +277,12 @@ A: Uma reflexão profunda sobre a representação da mulher negra na figura da P
 
 **Q: Toda Pombagira precisa vestir vermelho?**
 A: Não. Nem toda Pombagira veste vermelho. Um estudo sobre a pluralidade das cores, das vestimentas e das aparências no universo das Pombagiras — e por que nenhuma cor pode ser regra universal. Demonstra registros de Pombagiras vestidas de preto, branco, túnicas, calças e diferentes composições, respeitando os fundamentos e a diversidade das tradições religiosas sem fixar estereótipos.
+
+### Artigo: A Pombagira e a pessoa que não se identifica com sua imagem: expectativas, representações e experiência espiritual
+**URL**: https://pombagiras.com/nao-se-identifica-com-sua-imagem/
+
+**Q: Preciso me identificar com a aparência da Pombagira para ter uma relação espiritual com ela?**
+A: Não. Nem toda pessoa se reconhece na imagem popular da Pombagira. Um estudo sobre expectativas, representações e experiência espiritual — e a liberdade de não corresponder a uma imagem. A identificação estética não é uma medida universal de vínculo religioso. Uma pessoa pode respeitar e estudar as Pombagiras sem se identificar com vestidos, cores, maquiagem ou comportamentos associados às representações populares.
 
 ### Artigo: Gente que Ama a Pombagira
 **URL**: https://alexiamelusine.com/gente-que-ama-a-pombagira/
