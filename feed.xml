@@ -10,13 +10,23 @@
     <description>Portal de Desmistificação, Antropologia, Arte &amp; Filosofia Ancestral das Guardiãs de Umbanda e Quimbanda.</description>
     <language>pt-BR</language>
     <copyright>© 2026 Pombagiras.com. Todos os direitos reservados.</copyright>
-    <lastBuildDate>Fri, 13 Nov 2026 10:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 10:00:00 GMT</lastBuildDate>
     <atom:link href="https://pombagiras.com/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://cdn.pombagiras.com/assets/favicon-round-512.png</url>
       <title>Pombagiras.com</title>
       <link>https://pombagiras.com/</link>
     </image>
+    <item>
+      <title>Exus e Pombagiras: pares, relações espirituais e tradições</title>
+      <link>https://pombagiras.com/exus-e-pombagiras-relacoes-espirituais-tradicoes/</link>
+      <guid isPermaLink="true">https://pombagiras.com/exus-e-pombagiras-relacoes-espirituais-tradicoes/</guid>
+      <pubDate>Mon, 16 Nov 2026 10:00:00 GMT</pubDate>
+      <dc:creator>Alexia Melusine</dc:creator>
+      <category>Estudos e relações espirituais</category>
+      <description>Exus e Pombagiras são sempre pares? Investigue diferentes relações espirituais, falanges, narrativas de casais e concepções na Umbanda e na Quimbanda.</description>
+      <media:content url="https://pombagiras.com/exus-e-pombagiras-relacoes-espirituais-tradicoes/capa.jpg" medium="image" />
+    </item>
     <item>
       <title>As relações entre Pombagira, Exu e outras entidades: diferenças, fundamentos e classificações nas religiões afro-brasileiras</title>
       <link>https://pombagiras.com/pombagira-exu-outras-entidades/</link>
