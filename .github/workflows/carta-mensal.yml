@@ -1,0 +1,121 @@
+name: Carta Mensal das Pombagiras
+
+on:
+  schedule:
+    # 09:00 America/Sao_Paulo (12:00 UTC) no dia 28 e no dia 1 de cada mês
+    - cron: '0 12 28 * *'
+    - cron: '0 12 1 * *'
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: 'Modo de execução (auto = decide pelo dia em Brasília)'
+        required: false
+        default: 'auto'
+        type: choice
+        options:
+          - auto
+          - check-permissions
+          - notify-draft
+          - send-if-approved
+      mes:
+        description: 'Mês alvo opcional (ex: 2026_12)'
+        required: false
+        default: ''
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: carta-mensal-pombagiras
+  cancel-in-progress: false
+
+jobs:
+  carta-mensal:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Configurar Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Determinar ação do agendamento
+        id: resolve
+        env:
+          INPUT_MODO: ${{ inputs.modo }}
+          INPUT_MES: ${{ inputs.mes }}
+        run: |
+          ACTION="$INPUT_MODO"
+          if [ -z "$ACTION" ] || [ "$ACTION" = "auto" ]; then
+            DAY_SP=$(TZ=America/Sao_Paulo date +%d | sed 's/^0*//')
+            if [ "$DAY_SP" -ge 25 ]; then
+              ACTION="notify-draft"
+            elif [ "$DAY_SP" -le 5 ]; then
+              ACTION="send-if-approved"
+            else
+              ACTION="check-permissions"
+            fi
+          fi
+          echo "action=$ACTION" >> "$GITHUB_OUTPUT"
+          echo "mes=$INPUT_MES" >> "$GITHUB_OUTPUT"
+          echo "Ação selecionada: $ACTION (mês informado: ${INPUT_MES:-automático})"
+
+      - name: Fluxo do Dia 28 — Garantir rascunho e enviar notificação
+        if: steps.resolve.outputs.action == 'notify-draft'
+        env:
+          TARGET_MES: ${{ steps.resolve.outputs.mes }}
+        run: |
+          MONTH_ARGS=()
+          if [ -n "$TARGET_MES" ]; then
+            MONTH_ARGS=(--month "$TARGET_MES")
+          fi
+
+          node scripts/enviar_carta_mensal.mjs --ensure-next-draft "${MONTH_ARGS[@]}"
+
+          if [ -n "$(git status --porcelain cartas/)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add cartas/carta_*.html
+            git commit -m "chore(cartas): cria rascunho automático para revisão do dia 28"
+            git push
+            sleep 5
+          fi
+
+          node scripts/enviar_carta_mensal.mjs --notify-draft "${MONTH_ARGS[@]}"
+
+      - name: Fluxo do Dia 1 — Disparo somente se APROVADA SIM
+        if: steps.resolve.outputs.action == 'send-if-approved'
+        env:
+          TARGET_MES: ${{ steps.resolve.outputs.mes }}
+        run: |
+          MONTH_ARGS=()
+          if [ -n "$TARGET_MES" ]; then
+            MONTH_ARGS=(--month "$TARGET_MES")
+          fi
+
+          node scripts/enviar_carta_mensal.mjs --send-if-approved "${MONTH_ARGS[@]}"
+
+          if [ -n "$(git status --porcelain cartas/logs/)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add cartas/logs/*.json
+            git commit -m "chore(cartas): registra log de envio mensal"
+            git push
+          fi
+
+      - name: Verificação de permissões e saúde (zero envios)
+        if: steps.resolve.outputs.action == 'check-permissions'
+        env:
+          TARGET_MES: ${{ steps.resolve.outputs.mes }}
+        run: |
+          MONTH_ARGS=()
+          if [ -n "$TARGET_MES" ]; then
+            MONTH_ARGS=(--month "$TARGET_MES")
+          fi
+
+          node scripts/enviar_carta_mensal.mjs --check-permissions "${MONTH_ARGS[@]}"
