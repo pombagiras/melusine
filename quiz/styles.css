@@ -1207,3 +1207,154 @@ h1 em {
     display: none;
   }
 }
+
+/* ================= QUIZ CAPA — HOVER ESTILO APPLE (SOMENTE WEB/DESKTOP) ================= */
+
+/* Evita hover preso em tablets/telas grandes com toque */
+@media (min-width: 769px) and (hover: none),
+       (min-width: 769px) and (pointer: coarse) {
+  #introGrid .pomba-thumb:hover {
+    transform: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-color: rgba(181, 134, 58, 0.25);
+  }
+
+  #introGrid .pomba-thumb:hover::before {
+    opacity: 0;
+    animation: none;
+  }
+
+  #introGrid .pomba-thumb:hover img {
+    transform: scale(1.02);
+    filter: none;
+  }
+
+  #introGrid .pomba-thumb:hover span {
+    opacity: 0.75;
+    transform: none;
+    color: var(--creme);
+    text-shadow: none;
+  }
+}
+
+/* Hover com mouse na web/desktop */
+@media (min-width: 769px) and (hover: hover) and (pointer: fine) {
+  #introGrid .pomba-thumb {
+    z-index: 0;
+    transform-style: flat;
+    will-change: transform;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+  }
+
+  #introGrid .pomba-thumb img {
+    transform-origin: center 25%;
+    transition: transform 0.3s ease;
+  }
+
+  #introGrid .pomba-thumb span {
+    transition: opacity 0.3s ease, text-shadow 0.3s ease;
+  }
+
+  #introGrid .pomba-thumb:hover {
+    z-index: 10;
+    transform: translateY(-4px) scale(1.12);
+    border-color: #C5A059;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.55),
+                0 0 0 1px rgba(197, 160, 89, 0.55),
+                0 8px 24px rgba(197, 160, 89, 0.28);
+  }
+
+  #introGrid .pomba-thumb:hover::before {
+    opacity: 0;
+    animation: none;
+  }
+
+  #introGrid .pomba-thumb:hover::after {
+    background: linear-gradient(180deg, transparent 52%, rgba(18, 17, 16, 0.88) 100%);
+  }
+
+  #introGrid .pomba-thumb:hover img {
+    filter: none;
+    transform: scale(1.05);
+  }
+
+  #introGrid .pomba-thumb:hover span {
+    opacity: 1;
+    transform: none;
+    color: var(--creme);
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.85);
+  }
+}
+
+/* Foco por teclado (:focus-visible) na web/desktop */
+@media (min-width: 769px) {
+  #introGrid .pomba-thumb {
+    z-index: 0;
+    transform-style: flat;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+  }
+
+  #introGrid .pomba-thumb img {
+    transform-origin: center 25%;
+    transition: transform 0.3s ease;
+  }
+
+  #introGrid .pomba-thumb span {
+    transition: opacity 0.3s ease, text-shadow 0.3s ease;
+  }
+
+  #introGrid .pomba-thumb:focus-visible {
+    z-index: 10;
+    transform: translateY(-4px) scale(1.12);
+    border-color: #C5A059;
+    outline: 2px solid #C5A059;
+    outline-offset: 2px;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.55),
+                0 0 0 1px rgba(197, 160, 89, 0.55),
+                0 8px 24px rgba(197, 160, 89, 0.28);
+  }
+
+  #introGrid .pomba-thumb:focus-visible::before {
+    opacity: 0;
+    animation: none;
+  }
+
+  #introGrid .pomba-thumb:focus-visible::after {
+    background: linear-gradient(180deg, transparent 52%, rgba(18, 17, 16, 0.88) 100%);
+  }
+
+  #introGrid .pomba-thumb:focus-visible img {
+    filter: none;
+    transform: scale(1.05);
+  }
+
+  #introGrid .pomba-thumb:focus-visible span {
+    opacity: 1;
+    transform: none;
+    color: var(--creme);
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.85);
+  }
+}
+
+/* Respeita prefers-reduced-motion: sem crescimento/animação, mantém apenas borda/sombra dourada */
+@media (min-width: 769px) and (prefers-reduced-motion: reduce) {
+  #introGrid .pomba-thumb,
+  #introGrid .pomba-thumb img,
+  #introGrid .pomba-thumb span {
+    transition: none !important;
+  }
+
+  #introGrid .pomba-thumb:hover,
+  #introGrid .pomba-thumb:focus-visible {
+    transform: none !important;
+  }
+
+  #introGrid .pomba-thumb:hover img,
+  #introGrid .pomba-thumb:focus-visible img {
+    transform: scale(1.02) !important;
+  }
+}
