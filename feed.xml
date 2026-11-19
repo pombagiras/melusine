@@ -10,13 +10,23 @@
     <description>Portal de Desmistificação, Antropologia, Arte &amp; Filosofia Ancestral das Guardiãs de Umbanda e Quimbanda.</description>
     <language>pt-BR</language>
     <copyright>© 2026 Pombagiras.com. Todos os direitos reservados.</copyright>
-    <lastBuildDate>Tue, 17 Nov 2026 10:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 10:00:00 GMT</lastBuildDate>
     <atom:link href="https://pombagiras.com/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://cdn.pombagiras.com/assets/favicon-round-512.png</url>
       <title>Pombagiras.com</title>
       <link>https://pombagiras.com/</link>
     </image>
+    <item>
+      <title>Pombagira, Cabocla e outras entidades femininas: diferenças, aproximações e identidades nas tradições afro-brasileiras</title>
+      <link>https://pombagiras.com/pombagira-cabocla-entidades-femininas/</link>
+      <guid isPermaLink="true">https://pombagiras.com/pombagira-cabocla-entidades-femininas/</guid>
+      <pubDate>Thu, 19 Nov 2026 10:00:00 GMT</pubDate>
+      <dc:creator>Alexia Melusine</dc:creator>
+      <category>Estudos, identidades espirituais e diversidade das tradições</category>
+      <description>Entenda como diferentes comunidades religiosas distinguem Pombagiras, Caboclas, entidades femininas da Jurema e outras manifestações espirituais. Uma investigação sobre identidades, fundamentos, linhas de trabalho e diversidade religiosa.</description>
+      <media:content url="https://pombagiras.com/pombagira-cabocla-entidades-femininas/capa.jpg" medium="image" />
+    </item>
     <item>
       <title>O que é trabalhar na esquerda sem ser trabalho do mal? Pombagiras, Exus, fronteiras espirituais e a diferença entre transformação e maldade</title>
       <link>https://pombagiras.com/o-que-e-trabalhar-na-esquerda/</link>

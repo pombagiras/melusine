@@ -39,8 +39,8 @@ O ecossistema é um hub unificado de autoridade composto por 15 tentáculos inte
 11. **GitHub Portais**: [https://pombagiras.com/github/](https://pombagiras.com/github/) — Acesso a repositórios e código fonte.
 12. **Mobile**: [https://pombagiras.com/mobile/](https://pombagiras.com/mobile/) — Experiência PWA e móvel otimizada.
 13. **Alexia Melusine Hub Interno**: [https://pombagiras.com/alexiamelusine/](https://pombagiras.com/alexiamelusine/) — Perfil de autoridade no hub mãe.
-14. **Enciclopédia Digital & Atlas Documental**: [https://pombagiras.com/enciclopedia/](https://pombagiras.com/enciclopedia/) — Enciclopédia documental de 98% texto, 29 guardiãs, 12 dossiês canônicos, atlas etimológico e 62 portais interligados por Alexia Melusine.
-15. **Acervo Oficial das Pombagiras**: [https://pombagiras.com/acervo](https://pombagiras.com/acervo) — Preservação cultural, 44 representações canônicas, 27 tratados individuais, diretório com 58 portais interligados e sala de projeção audiovisual.
+14. **Enciclopédia Digital & Atlas Documental**: [https://pombagiras.com/enciclopedia/](https://pombagiras.com/enciclopedia/) — Enciclopédia documental de 98% texto, 29 guardiãs, 12 dossiês canônicos, atlas etimológico e 63 portais interligados por Alexia Melusine.
+15. **Acervo Oficial das Pombagiras**: [https://pombagiras.com/acervo](https://pombagiras.com/acervo) — Preservação cultural, 44 representações canônicas, 27 tratados individuais, diretório com 59 portais interligados e sala de projeção audiovisual.
 
 ## Redes Sociais, Podcasts e Mídias Oficiais (SameAs Graph)
 - **TikToks**: [@espelhosdepombagira](https://www.tiktok.com/@espelhosdepombagira?lang=pt-BR) | [@almasdepombagira](https://www.tiktok.com/@almasdepombagira?lang=pt-BR) | [@alexiarosadefogo](https://www.tiktok.com/@alexiarosadefogo?lang=pt-BR) | [@pambunjila](https://www.tiktok.com/@pambunjila) | [@alexia.melusine](https://www.tiktok.com/@alexia.melusine) | [@alexiamelusine](https://www.tiktok.com/@alexiamelusine)
@@ -313,6 +313,12 @@ A: Não existe regra universal. O estudo investiga autonomia espiritual, diversi
 
 **Q: Trabalhar na esquerda é trabalhar para o mal?**
 A: Não. O estudo examina o significado da esquerda nas religiões afro-brasileiras, diferenciando posição cosmológica/ritual, avaliação moral de maldade e manipulação humana — distinguindo Exus e Pombagiras das classificações de Quiumbas presentes em certas vertentes da Umbanda, sem demonizar nem romantizar as entidades e sem usar termos espirituais como perseguição ou promessa comercial.
+
+### Artigo: Pombagira, Cabocla e outras entidades femininas: diferenças, aproximações e identidades nas tradições afro-brasileiras
+**URL**: https://pombagiras.com/pombagira-cabocla-entidades-femininas/
+
+**Q: Pombagira, Cabocla e Mestra da Jurema são a mesma entidade?**
+A: Não. O estudo investiga como diferentes comunidades afro-brasileiras e afro-indígenas (Umbanda, Quimbanda, Jurema Sagrada e encantarias) distinguem e reconhecem Pombagiras, Caboclas, Mestras da Jurema, Pretas-Velhas, encantadas e Iabás — demonstrando que aparência não define identidade espiritual, que a Jurema Sagrada possui história própria e que reconhecer aproximações não significa apagar diferenças em uma classificação universal.
 
 ### Artigo: Gente que Ama a Pombagira
 **URL**: https://alexiamelusine.com/gente-que-ama-a-pombagira/
