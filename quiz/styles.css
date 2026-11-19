@@ -1398,3 +1398,48 @@ h1 em {
     transform: none !important;
   }
 }
+
+/* ================= QUIZ — NÍVEL 3, FINAL ================= */
+
+.result-explore-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 14px;
+  margin: 22px 0 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.result-text-link {
+  color: var(--gold-light);
+  text-decoration: underline;
+  text-decoration-color: rgba(197, 160, 89, 0.45);
+  text-underline-offset: 4px;
+  padding: 6px 4px;
+  transition: color 0.25s ease, text-decoration-color 0.25s ease;
+}
+
+.result-text-link:hover,
+.result-text-link:focus-visible {
+  color: var(--creme);
+  text-decoration-color: var(--gold-light);
+  outline: none;
+}
+
+.result-link-sep {
+  color: rgba(242, 231, 210, 0.35);
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .result-explore-links {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .result-link-sep {
+    display: none;
+  }
+}

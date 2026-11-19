@@ -477,6 +477,33 @@
     return String(n).padStart(2, '0');
   }
 
+  function getEntitySlug(p) {
+    if (!p || !p.url) return '';
+    return p.url.replace(/^https?:\/\/[^/]+\//, '').replace(/\/+$/, '').toLowerCase();
+  }
+
+  function findEntityBySlug(rawSlug) {
+    if (!rawSlug || typeof rawSlug !== 'string') return null;
+    const clean = rawSlug.trim().toLowerCase();
+    if (!clean) return null;
+    return POMBAGIRAS.find(p => getEntitySlug(p) === clean) || null;
+  }
+
+  function getShareUrlForEntity(p) {
+    return `https://pombagiras.com/quiz/?resultado=${getEntitySlug(p)}`;
+  }
+
+  function updateBrowserUrlResult(p) {
+    if (!window.history || typeof window.history.replaceState !== 'function') return;
+    const url = new URL(window.location.href);
+    if (p) {
+      url.searchParams.set('resultado', getEntitySlug(p));
+    } else {
+      url.searchParams.delete('resultado');
+    }
+    window.history.replaceState(null, '', url.pathname + url.search + url.hash);
+  }
+
   function prefersReducedMotion() {
     return typeof window.matchMedia === 'function' &&
       window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -741,7 +768,8 @@
     triggerFadeIn([elQEyebrow, elQText, elQOptions]);
   }
 
-  function displayResult(bestId) {
+  function displayResult(bestId, options) {
+    const opts = options || { updateUrl: true };
     const p = POMBAGIRAS[bestId];
 
     elResultImg.src = p.img;
@@ -769,10 +797,15 @@
     }
 
     if (elBtnShare) {
-      elBtnShare.href = 'https://pombagiras.com/quiz/';
+      elBtnShare.href = getShareUrlForEntity(p);
       elBtnShare.textContent = 'Partilhar o meu resultado';
     }
 
+    if (opts.updateUrl !== false) {
+      updateBrowserUrlResult(p);
+    }
+
+    elIntro.hidden = true;
     elQuiz.hidden = true;
     elResult.hidden = false;
     triggerFadeIn(elResult.querySelector('.result-wrap'));
@@ -792,6 +825,7 @@
     state.scores = {};
     state.current = 0;
     state.tiebreak = false;
+    updateBrowserUrlResult(null);
     elResult.hidden = true;
     elIntro.hidden = false;
   }
@@ -830,7 +864,7 @@
 
         const quizTitle = 'Qual Pombagira comanda seu destino?';
         const shareText = `${p.nome} — ${p.epiteto} — ${quizTitle}`;
-        const shareUrl = 'https://pombagiras.com/quiz/';
+        const shareUrl = getShareUrlForEntity(p);
         const fullCopyText = `${shareText} ${shareUrl}`;
         const isMobileEnv =
           (typeof window.matchMedia === 'function' && window.matchMedia('(max-width: 768px)').matches) ||
@@ -874,6 +908,13 @@
         }
       }
     });
+
+    // Deep-link direto para resultado compartilhado (?resultado=<slug>)
+    const params = new URLSearchParams(window.location.search);
+    const linkedEntity = findEntityBySlug(params.get('resultado'));
+    if (linkedEntity) {
+      displayResult(linkedEntity.id, { updateUrl: false });
+    }
   }
 
   // Run on DOMContentLoaded
