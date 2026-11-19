@@ -477,6 +477,64 @@
     return String(n).padStart(2, '0');
   }
 
+  function prefersReducedMotion() {
+    return typeof window.matchMedia === 'function' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  }
+
+  function triggerFadeIn(elements) {
+    const list = Array.isArray(elements) ? elements : [elements];
+    list.forEach(el => {
+      if (!el) return;
+      el.classList.remove('quiz-step-enter');
+    });
+    if (prefersReducedMotion()) return;
+    if (list[0]) void list[0].offsetWidth;
+    list.forEach(el => {
+      if (!el) return;
+      el.classList.add('quiz-step-enter');
+    });
+  }
+
+  function setQuestionHint(keysText) {
+    if (!elQHint) return;
+    const touchSpan = elQHint.querySelector('.q-hint-touch');
+    const keysSpan = elQHint.querySelector('.q-hint-keys');
+    if (touchSpan && keysSpan) {
+      touchSpan.textContent = 'toque para responder';
+      keysSpan.textContent = keysText;
+    } else {
+      elQHint.textContent = `toque para responder${keysText}`;
+    }
+  }
+
+  async function copyShareText(text) {
+    if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+      await navigator.clipboard.writeText(text);
+      return;
+    }
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+  }
+
+  let shareResetTimer = null;
+  function showShareCopiedFeedback() {
+    if (!elBtnShare) return;
+    if (shareResetTimer) clearTimeout(shareResetTimer);
+    elBtnShare.textContent = 'Copiado!';
+    shareResetTimer = setTimeout(() => {
+      elBtnShare.textContent = 'Partilhar o meu resultado';
+      shareResetTimer = null;
+    }, 2000);
+  }
+
   // ================= POPUP =================
   // (refs declared lazily inside init to guarantee DOM is ready)
 
@@ -550,7 +608,7 @@
     elProgressCount.textContent = `${pad2(state.current + 1)} / ${pad2(QUESTIONS.length)}`;
     elProgressFill.style.width = `${(state.current / QUESTIONS.length) * 100}%`;
     elQText.textContent = q.texto;
-    if (elQHint) elQHint.textContent = 'toque para responder — ou use as teclas 1 a 4';
+    setQuestionHint(' — ou use as teclas 1 a 4');
 
     elQOptions.innerHTML = '';
     const letras = ['A', 'B', 'C', 'D'];
@@ -573,6 +631,8 @@
 
       elQOptions.appendChild(btn);
     });
+
+    triggerFadeIn([elQEyebrow, elQText, elQOptions]);
   }
 
   function chooseOption(btn, pid, kin) {
@@ -645,7 +705,7 @@
     elQText.textContent = 'Mais de uma guardiã te chamou. Qual delas te chama mais forte?';
     // A dica do teclado acompanha o numero real de opcoes do desempate
     // (o teclado suporta 1 a 9; acima disso o toque continua a funcionar).
-    if (elQHint) elQHint.textContent = `toque para responder — ou use as teclas 1 a ${Math.min(tied.length, 9)}`;
+    setQuestionHint(` — ou use as teclas 1 a ${Math.min(tied.length, 9)}`);
 
     elQOptions.innerHTML = '';
     const letras = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'];
@@ -678,6 +738,7 @@
 
     elResult.hidden = true;
     elQuiz.hidden = false;
+    triggerFadeIn([elQEyebrow, elQText, elQOptions]);
   }
 
   function displayResult(bestId) {
@@ -708,12 +769,13 @@
     }
 
     if (elBtnShare) {
-      const text = `A Pombagira que comanda o meu destino é a ${p.nome} — ${p.epiteto}. Descobre a tua: https://pombagiras.com/quiz/`;
-      elBtnShare.href = 'https://wa.me/?text=' + encodeURIComponent(text);
+      elBtnShare.href = 'https://pombagiras.com/quiz/';
+      elBtnShare.textContent = 'Partilhar o meu resultado';
     }
 
     elQuiz.hidden = true;
     elResult.hidden = false;
+    triggerFadeIn(elResult.querySelector('.result-wrap'));
 
     window._lastResult = p;
   }
@@ -759,6 +821,42 @@
     // Quiz controls
     elBtnStart.addEventListener('click', startQuiz);
     elBtnRestart.addEventListener('click', restartQuiz);
+
+    if (elBtnShare) {
+      elBtnShare.addEventListener('click', async function (e) {
+        e.preventDefault();
+        const p = window._lastResult;
+        if (!p) return;
+
+        const quizTitle = 'Qual Pombagira comanda seu destino?';
+        const shareText = `${p.nome} — ${p.epiteto} — ${quizTitle}`;
+        const shareUrl = 'https://pombagiras.com/quiz/';
+        const fullCopyText = `${shareText} ${shareUrl}`;
+        const isMobileEnv =
+          (typeof window.matchMedia === 'function' && window.matchMedia('(max-width: 768px)').matches) ||
+          (typeof window.matchMedia === 'function' && window.matchMedia('(hover: none) and (pointer: coarse)').matches);
+
+        if (isMobileEnv && typeof navigator.share === 'function') {
+          try {
+            await navigator.share({
+              title: quizTitle,
+              text: shareText,
+              url: shareUrl
+            });
+            return;
+          } catch (err) {
+            if (err && err.name === 'AbortError') return;
+          }
+        }
+
+        try {
+          await copyShareText(fullCopyText);
+          showShareCopiedFeedback();
+        } catch (err) {
+          console.error('Falha ao copiar resultado:', err);
+        }
+      });
+    }
 
     // Single unified keydown handler
     document.addEventListener('keydown', function (e) {

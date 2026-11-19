@@ -1358,3 +1358,43 @@ h1 em {
     transform: scale(1.02) !important;
   }
 }
+
+/* ================= QUIZ — NÍVEL 2, POLIMENTO ================= */
+
+#screen-quiz {
+  justify-content: flex-start;
+  padding-top: clamp(96px, 18vh, 170px);
+}
+
+@media (max-width: 768px) {
+  #screen-quiz {
+    padding-top: 14vh;
+  }
+
+  #qHint .q-hint-keys {
+    display: none;
+  }
+}
+
+@keyframes quizFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.quiz-step-enter {
+  animation: quizFadeIn 0.3s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quiz-step-enter {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
