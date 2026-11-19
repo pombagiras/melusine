@@ -1052,3 +1052,158 @@ h1 em {
                 justify-content: center;
             }
         }
+
+/* ================= QUIZ CAPA — MOBILE NÍVEL 1 (SOMENTE CELULAR) ================= */
+
+.intro-cta-meta {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #screen-intro {
+    padding: 28px 16px 40px;
+    justify-content: flex-start;
+  }
+
+  #screen-intro h1 {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Item 1: Subtítulo legível >= 16px, line-height >= 1.5, contraste >= 4.5:1 */
+  #screen-intro .lede {
+    width: 100%;
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.55;
+    color: var(--text-color);
+    opacity: 1;
+    margin: 0 0 24px;
+    overflow-wrap: break-word;
+  }
+
+  /* Item 2: Grade de 30 retratos em 3 colunas, imagem maior e nome legível embaixo sem corte */
+  #screen-intro .grid-pombas {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    max-width: 100%;
+    width: 100%;
+    margin: 6px 0 28px;
+    perspective: none;
+  }
+
+  #screen-intro .pomba-thumb {
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: auto;
+    min-height: 44px;
+    border-radius: 8px;
+    background: rgba(18, 17, 16, 0.94);
+    border: 1px solid rgba(181, 134, 58, 0.34);
+    overflow: hidden;
+    transform-style: flat;
+  }
+
+  #screen-intro .pomba-thumb::before,
+  #screen-intro .pomba-thumb::after {
+    display: none;
+  }
+
+  #screen-intro .pomba-thumb img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center top;
+    flex-shrink: 0;
+    transform: none;
+  }
+
+  #screen-intro .pomba-thumb span {
+    position: static;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    width: 100%;
+    padding: 7px 5px;
+    font-size: 0.75rem;
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+    color: var(--text-color);
+    opacity: 1;
+    font-weight: 500;
+    text-align: center;
+    background: rgba(18, 17, 16, 0.96);
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: initial;
+    overflow: visible;
+    white-space: normal;
+    overflow-wrap: normal;
+    word-break: normal;
+    transform: none;
+  }
+
+  #screen-intro .pomba-thumb:hover,
+  #screen-intro .pomba-thumb:focus-visible {
+    transform: none;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+    border-color: var(--latao);
+  }
+
+  #screen-intro .pomba-thumb:hover img,
+  #screen-intro .pomba-thumb:focus-visible img {
+    transform: none;
+    filter: none;
+  }
+
+  #screen-intro .pomba-thumb:hover span,
+  #screen-intro .pomba-thumb:focus-visible span {
+    transform: none;
+    color: var(--gold-light);
+    text-shadow: none;
+  }
+
+  /* Item 3: Botão "Abrir a Gira" como botão principal + microtexto "15 perguntas" */
+  #screen-intro #btnStart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    min-height: 52px;
+    padding: 15px 24px;
+    font-size: 1.0625rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    border-radius: 8px;
+    color: var(--preto);
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+    border: 1px solid rgba(250, 246, 238, 0.35);
+    box-shadow: 0 10px 28px -6px rgba(197, 160, 89, 0.45);
+  }
+
+  #screen-intro .intro-cta-meta {
+    display: block;
+    width: 100%;
+    margin: 10px 0 0;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    color: var(--text-secondary);
+    letter-spacing: 0.04em;
+    text-align: center;
+  }
+
+  #screen-intro .skip-hint {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  /* Item 4: Newsletter escondida só na capa do quiz no celular (visível após o resultado) */
+  #screen-intro .newsletter-carta-box {
+    display: none;
+  }
+}
