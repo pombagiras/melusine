@@ -10,13 +10,23 @@
     <description>Portal de Desmistificação, Antropologia, Arte &amp; Filosofia Ancestral das Guardiãs de Umbanda e Quimbanda.</description>
     <language>pt-BR</language>
     <copyright>© 2026 Pombagiras.com. Todos os direitos reservados.</copyright>
-    <lastBuildDate>Fri, 20 Nov 2026 10:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 10:00:00 GMT</lastBuildDate>
     <atom:link href="https://pombagiras.com/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://cdn.pombagiras.com/assets/favicon-round-512.png</url>
       <title>Pombagiras.com</title>
       <link>https://pombagiras.com/</link>
     </image>
+    <item>
+      <title>A Pombagira e a ancestralidade: memória, raízes familiares e herança espiritual</title>
+      <link>https://pombagiras.com/a-pombagira-e-a-ancestralidade/</link>
+      <guid isPermaLink="true">https://pombagiras.com/a-pombagira-e-a-ancestralidade/</guid>
+      <pubDate>Mon, 23 Nov 2026 10:00:00 GMT</pubDate>
+      <dc:creator>Alexia Melusine</dc:creator>
+      <category>Estudos, ancestralidade e memória cultural</category>
+      <description>Uma Pombagira pode ser ancestral? Um estudo sobre memória familiar, raízes, herança espiritual e a diferença entre ancestralidade biológica, cultural e religiosa.</description>
+      <media:content url="https://pombagiras.com/a-pombagira-e-a-ancestralidade/capa.jpg" medium="image" />
+    </item>
     <item>
       <title>O que significa uma falange? Entre organização espiritual, linha de trabalho e diferentes formas de compreender as entidades</title>
       <link>https://pombagiras.com/o-que-e-uma-falange/</link>

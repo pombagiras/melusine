@@ -39,8 +39,8 @@ O ecossistema é um hub unificado de autoridade composto por 15 tentáculos inte
 11. **GitHub Portais**: [https://pombagiras.com/github/](https://pombagiras.com/github/) — Acesso a repositórios e código fonte.
 12. **Mobile**: [https://pombagiras.com/mobile/](https://pombagiras.com/mobile/) — Experiência PWA e móvel otimizada.
 13. **Alexia Melusine Hub Interno**: [https://pombagiras.com/alexiamelusine/](https://pombagiras.com/alexiamelusine/) — Perfil de autoridade no hub mãe.
-14. **Enciclopédia Digital & Atlas Documental**: [https://pombagiras.com/enciclopedia/](https://pombagiras.com/enciclopedia/) — Enciclopédia documental de 98% texto, 29 guardiãs, 12 dossiês canônicos, atlas etimológico e 64 portais interligados por Alexia Melusine.
-15. **Acervo Oficial das Pombagiras**: [https://pombagiras.com/acervo](https://pombagiras.com/acervo) — Preservação cultural, 44 representações canônicas, 27 tratados individuais, diretório com 60 portais interligados e sala de projeção audiovisual.
+14. **Enciclopédia Digital & Atlas Documental**: [https://pombagiras.com/enciclopedia/](https://pombagiras.com/enciclopedia/) — Enciclopédia documental de 98% texto, 29 guardiãs, 12 dossiês canônicos, atlas etimológico e 65 portais interligados por Alexia Melusine.
+15. **Acervo Oficial das Pombagiras**: [https://pombagiras.com/acervo](https://pombagiras.com/acervo) — Preservação cultural, 44 representações canônicas, 27 tratados individuais, diretório com 61 portais interligados e sala de projeção audiovisual.
 
 ## Redes Sociais, Podcasts e Mídias Oficiais (SameAs Graph)
 - **TikToks**: [@espelhosdepombagira](https://www.tiktok.com/@espelhosdepombagira?lang=pt-BR) | [@almasdepombagira](https://www.tiktok.com/@almasdepombagira?lang=pt-BR) | [@alexiarosadefogo](https://www.tiktok.com/@alexiarosadefogo?lang=pt-BR) | [@pambunjila](https://www.tiktok.com/@pambunjila) | [@alexia.melusine](https://www.tiktok.com/@alexia.melusine) | [@alexiamelusine](https://www.tiktok.com/@alexiamelusine)
@@ -248,6 +248,12 @@ A: Não. O estudo investiga como diferentes comunidades afro-brasileiras e afro-
 
 **Q: O que significa uma falange no universo das Pombagiras e dos Exus?**
 A: O estudo investiga como diferentes casas de Umbanda, Quimbanda e tradições afro-brasileiras compreendem o conceito de falange, suas relações com linhas de trabalho, povos, legiões e identidades individuais ou coletivas, e a transmissão pela tradição oral — demonstrando que falange não é categoria universal nem classificação única obrigatória entre todas as comunidades.
+
+### Artigo: A Pombagira e a ancestralidade: memória, raízes familiares e herança espiritual
+**URL**: https://pombagiras.com/a-pombagira-e-a-ancestralidade/
+
+**Q: Uma Pombagira pode ser ancestral?**
+A: Depende da tradição religiosa. O estudo distingue ancestralidade biológica, cultural, histórica, religiosa e espiritual nas tradições afro-brasileiras (Umbanda, Quimbanda, Candomblé e Jurema) — explicando por que não se deve presumir parentesco sanguíneo, biografia histórica única ou vinculação obrigatória por ascendência familiar.
 
 ### Artigo: Gente que Ama a Pombagira
 **URL**: https://alexiamelusine.com/gente-que-ama-a-pombagira/
