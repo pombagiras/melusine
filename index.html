@@ -1085,74 +1085,146 @@
     }
 }
 
-/* Hover arco-íris nos 7 botões da barra flutuante direita — SOMENTE desktop com rato */
+/* Hover vidro Apple + arco-íris nos 7 botões da barra flutuante direita — SOMENTE desktop com rato */
 @media (min-width: 769px) and (hover: hover) and (pointer: fine) {
     .floating-social .social-icon,
     .floating-social .back-to-top {
-        transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
+        position: relative;
+        z-index: 1;
+        transform-origin: right center;
+        transition:
+            transform 220ms cubic-bezier(0.34, 1.56, 0.64, 1),
+            background-color 180ms ease,
+            border-color 180ms ease,
+            color 180ms ease;
+    }
+    .floating-social .social-icon svg,
+    .floating-social .social-icon img,
+    .floating-social .back-to-top i {
+        transition: transform 220ms cubic-bezier(0.34, 1.56, 0.64, 1);
     }
     .floating-social .social-icon:hover,
-    .floating-social .back-to-top:hover {
-        transform: none;
+    .floating-social .back-to-top:hover,
+    .floating-social .social-icon:focus-visible,
+    .floating-social .back-to-top:focus-visible {
+        transform: scale(1.2);
+        z-index: 2;
         color: #ffffff;
+        backdrop-filter: blur(16px) saturate(1.4);
+        -webkit-backdrop-filter: blur(16px) saturate(1.4);
     }
     .floating-social .social-icon:hover svg,
-    .floating-social .back-to-top:hover i {
+    .floating-social .social-icon:focus-visible svg,
+    .floating-social .social-icon:hover img,
+    .floating-social .social-icon:focus-visible img,
+    .floating-social .back-to-top:hover i,
+    .floating-social .back-to-top:focus-visible i {
+        transform: scale(1.1);
+    }
+    .floating-social .social-icon:hover svg,
+    .floating-social .social-icon:focus-visible svg,
+    .floating-social .back-to-top:hover i,
+    .floating-social .back-to-top:focus-visible i {
         color: #ffffff;
         fill: #ffffff;
     }
-    .floating-social .social-icon:hover img {
+    .floating-social .social-icon:hover img,
+    .floating-social .social-icon:focus-visible img {
         filter: brightness(0) invert(1);
     }
-    /* 1. Tradução — Vermelho */
+    .floating-social .social-icon:active,
+    .floating-social .back-to-top:active {
+        transform: scale(0.97);
+        transition-duration: 140ms, 180ms, 180ms, 180ms;
+    }
+    /* 1. Tradução — Vermelho vidro */
     .floating-social > a:nth-child(1):hover,
-    .floating-social a[title="Site Bilingue (ES/EN)"]:hover {
-        background-color: #D32F2F;
-        border-color: #D32F2F;
-        box-shadow: 0 0 18px rgba(211, 47, 47, 0.45);
+    .floating-social > a:nth-child(1):focus-visible,
+    .floating-social a[title="Site Bilingue (ES/EN)"]:hover,
+    .floating-social a[title="Site Bilingue (ES/EN)"]:focus-visible {
+        background-color: rgba(211, 47, 47, 0.8);
+        border-color: rgba(255, 205, 210, 0.55);
+        box-shadow: 0 8px 24px rgba(211, 47, 47, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
     }
-    /* 2. WhatsApp — Laranja */
+    /* 2. WhatsApp — Laranja vidro */
     .floating-social > a:nth-child(2):hover,
-    .floating-social a[title="WhatsApp"]:hover {
-        background-color: #EF6C00;
-        border-color: #EF6C00;
-        box-shadow: 0 0 18px rgba(239, 108, 0, 0.45);
+    .floating-social > a:nth-child(2):focus-visible,
+    .floating-social a[title="WhatsApp"]:hover,
+    .floating-social a[title="WhatsApp"]:focus-visible {
+        background-color: rgba(239, 108, 0, 0.8);
+        border-color: rgba(255, 224, 178, 0.55);
+        box-shadow: 0 8px 24px rgba(239, 108, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
     }
-    /* 3. Telegram — Amarelo-ouro */
+    /* 3. Telegram — Amarelo-ouro vidro */
     .floating-social > a:nth-child(3):hover,
-    .floating-social a[title="Telegram"]:hover {
-        background-color: #FF8F00;
-        border-color: #FF8F00;
-        box-shadow: 0 0 18px rgba(255, 143, 0, 0.45);
+    .floating-social > a:nth-child(3):focus-visible,
+    .floating-social a[title="Telegram"]:hover,
+    .floating-social a[title="Telegram"]:focus-visible {
+        background-color: rgba(255, 143, 0, 0.8);
+        border-color: rgba(255, 236, 179, 0.55);
+        box-shadow: 0 8px 24px rgba(255, 143, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
     }
-    /* 4. Discord — Verde */
+    /* 4. Discord — Verde vidro */
     .floating-social > a:nth-child(4):hover,
-    .floating-social a[title="Discord"]:hover {
-        background-color: #2E7D32;
-        border-color: #2E7D32;
-        box-shadow: 0 0 18px rgba(46, 125, 50, 0.45);
+    .floating-social > a:nth-child(4):focus-visible,
+    .floating-social a[title="Discord"]:hover,
+    .floating-social a[title="Discord"]:focus-visible {
+        background-color: rgba(46, 125, 50, 0.8);
+        border-color: rgba(200, 230, 201, 0.55);
+        box-shadow: 0 8px 24px rgba(46, 125, 50, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
     }
-    /* 5. Spotify — Azul */
+    /* 5. Spotify — Azul vidro */
     .floating-social > a:nth-child(5):hover,
-    .floating-social a[title="Podcast"]:hover {
-        background-color: #1565C0;
-        border-color: #1565C0;
-        box-shadow: 0 0 18px rgba(21, 101, 192, 0.45);
+    .floating-social > a:nth-child(5):focus-visible,
+    .floating-social a[title="Podcast"]:hover,
+    .floating-social a[title="Podcast"]:focus-visible {
+        background-color: rgba(21, 101, 192, 0.8);
+        border-color: rgba(187, 222, 251, 0.55);
+        box-shadow: 0 8px 24px rgba(21, 101, 192, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
     }
-    /* 6. Favoritos/lista (Substack) — Anil */
+    /* 6. Favoritos/lista (Substack) — Anil vidro */
     .floating-social > a:nth-child(6):hover,
-    .floating-social a[title="Substack"]:hover {
-        background-color: #4527A0;
-        border-color: #4527A0;
-        box-shadow: 0 0 18px rgba(69, 39, 160, 0.45);
+    .floating-social > a:nth-child(6):focus-visible,
+    .floating-social a[title="Substack"]:hover,
+    .floating-social a[title="Substack"]:focus-visible {
+        background-color: rgba(69, 39, 160, 0.8);
+        border-color: rgba(209, 196, 233, 0.55);
+        box-shadow: 0 8px 24px rgba(69, 39, 160, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
     }
-    /* 7. Voltar ao topo — Violeta */
+    /* 7. Voltar ao topo — Violeta vidro */
     .floating-social > a:nth-child(7):hover,
+    .floating-social > a:nth-child(7):focus-visible,
     .floating-social #backToTopBtn:hover,
-    .floating-social a.back-to-top:hover {
-        background-color: #6A1B9A;
-        border-color: #6A1B9A;
-        box-shadow: 0 0 18px rgba(106, 27, 154, 0.45);
+    .floating-social #backToTopBtn:focus-visible,
+    .floating-social a.back-to-top:hover,
+    .floating-social a.back-to-top:focus-visible {
+        background-color: rgba(106, 27, 154, 0.8);
+        border-color: rgba(225, 190, 231, 0.55);
+        box-shadow: 0 8px 24px rgba(106, 27, 154, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    }
+}
+
+@media (min-width: 769px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: reduce) {
+    .floating-social .social-icon,
+    .floating-social .back-to-top,
+    .floating-social .social-icon svg,
+    .floating-social .social-icon img,
+    .floating-social .back-to-top i {
+        transition: none !important;
+    }
+    .floating-social .social-icon:hover,
+    .floating-social .back-to-top:hover,
+    .floating-social .social-icon:focus-visible,
+    .floating-social .back-to-top:focus-visible,
+    .floating-social .social-icon:active,
+    .floating-social .back-to-top:active,
+    .floating-social .social-icon:hover svg,
+    .floating-social .social-icon:focus-visible svg,
+    .floating-social .social-icon:hover img,
+    .floating-social .social-icon:focus-visible img,
+    .floating-social .back-to-top:hover i,
+    .floating-social .back-to-top:focus-visible i {
+        transform: none !important;
     }
 }
 
