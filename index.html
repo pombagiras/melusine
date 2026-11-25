@@ -5158,149 +5158,226 @@ initLangSwitcher();
             <div class="newsletter-glow-1"></div>
             <div class="newsletter-glow-2"></div>
             <div class="newsletter-glass-card">
-                <a href="https://pombagiras.com/quiz/" class="newsletter-badge quiz-badge">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rose-icon lucide-rose quiz-rose-icon"><path d="M17 10h-1a4 4 0 1 1 4-4v.534"/><path d="M17 6h1a4 4 0 0 1 1.42 7.74l-2.29.87a6 6 0 0 1-5.339-10.68l2.069-1.31"/><path d="M4.5 17c2.8-.5 4.4 0 5.5.8s1.8 2.2 2.3 3.7c-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2"/><path d="M9.77 12C4 15 2 22 2 22"/><circle cx="17" cy="8" r="2"/></svg>
+                <style id="newsletter-hierarchy-styles">
+                #newsletter {
+                    --nl-ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+                }
+                #newsletter .newsletter-glass-card h2.newsletter-title.newsletter-kicker {
+                    font-family: 'Geist', sans-serif !important;
+                    font-size: 0.76rem !important;
+                    font-weight: 600 !important;
+                    font-variant: small-caps;
+                    text-transform: uppercase;
+                    letter-spacing: 0.22em !important;
+                    color: rgba(197, 160, 89, 0.85) !important;
+                    background: none !important;
+                    -webkit-background-clip: initial !important;
+                    -webkit-text-fill-color: rgba(197, 160, 89, 0.85) !important;
+                    margin: 0 0 14px !important;
+                    line-height: 1.3 !important;
+                }
+                #newsletter .newsletter-glass-card a.newsletter-badge.quiz-badge.newsletter-quiz-cta {
+                    display: inline-flex !important;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    min-height: 54px !important;
+                    padding: 14px 28px !important;
+                    margin: 0 auto 18px !important;
+                    border-radius: 999px !important;
+                    background: linear-gradient(135deg, #d8b552 0%, #c5a059 55%, #a88339 100%) !important;
+                    border: 1px solid #ecd084 !important;
+                    color: #120509 !important;
+                    font-family: 'Fraunces', serif !important;
+                    font-size: clamp(1.04rem, 4.1vw, 1.32rem) !important;
+                    font-weight: 700 !important;
+                    letter-spacing: 0.01em !important;
+                    text-transform: none !important;
+                    line-height: 1.25 !important;
+                    text-align: center;
+                    box-shadow: 0 8px 24px rgba(197, 160, 89, 0.28) !important;
+                    touch-action: manipulation;
+                    user-select: none;
+                    -webkit-user-select: none;
+                    -webkit-touch-callout: none;
+                    -webkit-tap-highlight-color: transparent;
+                    transition: transform 140ms var(--nl-ease-out), filter 180ms ease, box-shadow 180ms ease !important;
+                }
+                #newsletter .newsletter-glass-card a.newsletter-quiz-cta .quiz-rose-icon {
+                    width: 20px;
+                    height: 20px;
+                    stroke: #120509 !important;
+                    flex-shrink: 0;
+                    animation: none !important;
+                    transition: none !important;
+                }
+                #newsletter .newsletter-glass-card p.newsletter-quote {
+                    margin: 0 auto 22px !important;
+                }
+                #newsletter .newsletter-glass-card .newsletter-meta {
+                    display: grid !important;
+                    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+                    gap: 12px !important;
+                    width: 100%;
+                    max-width: 600px;
+                    margin: 0 auto 24px !important;
+                    align-items: stretch !important;
+                }
+                #newsletter .newsletter-glass-card .newsletter-meta > a {
+                    display: flex !important;
+                    width: 100% !important;
+                    text-decoration: none !important;
+                    border-radius: 999px;
+                    touch-action: manipulation;
+                    user-select: none;
+                    -webkit-user-select: none;
+                    -webkit-touch-callout: none;
+                    -webkit-tap-highlight-color: transparent;
+                    transition: transform 140ms var(--nl-ease-out) !important;
+                }
+                #newsletter .newsletter-glass-card .newsletter-meta > a .btn-circle {
+                    display: flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                    width: 100% !important;
+                    min-height: 48px !important;
+                    padding: 12px 14px !important;
+                    border-radius: 999px !important;
+                    border: 1px solid rgba(197, 160, 89, 0.38) !important;
+                    background: rgba(197, 160, 89, 0.11) !important;
+                    color: #FAF6EE !important;
+                    font-family: 'Geist', sans-serif !important;
+                    font-size: clamp(0.9rem, 2.8vw, 0.96rem) !important;
+                    font-weight: 600 !important;
+                    letter-spacing: 0.04em !important;
+                    line-height: 1.2 !important;
+                    text-align: center !important;
+                    text-decoration: none !important;
+                    box-sizing: border-box !important;
+                    box-shadow: none !important;
+                    opacity: 1 !important;
+                    transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease !important;
+                }
+                #newsletter .newsletter-glass-card .newsletter-meta > a.btn-lgbt .btn-circle {
+                    background: rgba(197, 160, 89, 0.15) !important;
+                    border-color: rgba(197, 160, 89, 0.48) !important;
+                }
+                #newsletter .newsletter-glass-card a.newsletter-btn-link.newsletter-substack-quiet {
+                    background: transparent !important;
+                    border: 1px solid rgba(197, 160, 89, 0.34) !important;
+                    color: rgba(250, 246, 238, 0.82) !important;
+                    box-shadow: none !important;
+                    padding: 10px 20px !important;
+                    min-height: 44px !important;
+                    font-size: 0.82rem !important;
+                    font-weight: 500 !important;
+                    letter-spacing: 0.04em !important;
+                    text-transform: none !important;
+                    border-radius: 999px !important;
+                    display: inline-flex !important;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px !important;
+                    touch-action: manipulation;
+                    user-select: none;
+                    -webkit-user-select: none;
+                    -webkit-touch-callout: none;
+                    -webkit-tap-highlight-color: transparent;
+                    transition: transform 140ms var(--nl-ease-out), background-color 180ms ease, border-color 180ms ease, color 180ms ease !important;
+                }
+                #newsletter .newsletter-glass-card a.newsletter-substack-quiet::after {
+                    display: none !important;
+                }
+                #newsletter .newsletter-glass-card a.newsletter-quiz-cta:hover,
+                #newsletter .newsletter-glass-card .newsletter-meta > a:hover,
+                #newsletter .newsletter-glass-card a.newsletter-substack-quiet:hover {
+                    transform: none !important;
+                }
+                #newsletter .newsletter-glass-card a.newsletter-quiz-cta:active,
+                #newsletter .newsletter-glass-card .newsletter-meta > a:active,
+                #newsletter .newsletter-glass-card a.newsletter-substack-quiet:active {
+                    transform: scale(0.97) !important;
+                }
+                #newsletter .newsletter-glass-card a.newsletter-quiz-cta:focus-visible,
+                #newsletter .newsletter-glass-card .newsletter-meta > a:focus-visible,
+                #newsletter .newsletter-glass-card a.newsletter-substack-quiet:focus-visible {
+                    outline: 2px solid #C5A059 !important;
+                    outline-offset: 3px !important;
+                }
+                @media (hover: hover) and (pointer: fine) {
+                    #newsletter .newsletter-glass-card a.newsletter-quiz-cta:hover {
+                        filter: brightness(1.06);
+                        box-shadow: 0 10px 28px rgba(197, 160, 89, 0.38) !important;
+                    }
+                    #newsletter .newsletter-glass-card .newsletter-meta > a:hover .btn-circle {
+                        background: rgba(197, 160, 89, 0.22) !important;
+                        border-color: #C5A059 !important;
+                        color: #FFFFFF !important;
+                    }
+                    #newsletter .newsletter-glass-card a.newsletter-substack-quiet:hover {
+                        background: rgba(197, 160, 89, 0.1) !important;
+                        border-color: rgba(197, 160, 89, 0.65) !important;
+                        color: #FAF6EE !important;
+                    }
+                }
+                @media (max-width: 768px) {
+                    #newsletter .newsletter-glass-card a.newsletter-badge.quiz-badge.newsletter-quiz-cta {
+                        width: 100% !important;
+                        max-width: 100% !important;
+                        padding: 14px 16px !important;
+                        box-sizing: border-box !important;
+                    }
+                    #newsletter .newsletter-glass-card .newsletter-meta {
+                        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+                        gap: 10px !important;
+                        width: 100% !important;
+                        max-width: 100% !important;
+                        margin: 0 auto 20px !important;
+                    }
+                    #newsletter .newsletter-glass-card .newsletter-meta > a .btn-circle {
+                        min-height: 48px !important;
+                        padding: 12px 10px !important;
+                        font-size: 0.9rem !important;
+                        letter-spacing: 0.03em !important;
+                    }
+                }
+                @media (prefers-reduced-motion: reduce) {
+                    #newsletter .newsletter-glass-card a.newsletter-quiz-cta,
+                    #newsletter .newsletter-glass-card .newsletter-meta > a,
+                    #newsletter .newsletter-glass-card .newsletter-meta > a .btn-circle,
+                    #newsletter .newsletter-glass-card a.newsletter-substack-quiet {
+                        transition: none !important;
+                    }
+                    #newsletter .newsletter-glass-card a.newsletter-quiz-cta:active,
+                    #newsletter .newsletter-glass-card .newsletter-meta > a:active,
+                    #newsletter .newsletter-glass-card a.newsletter-substack-quiet:active {
+                        transform: none !important;
+                    }
+                }
+                </style>
+
+                <h2 class="newsletter-title newsletter-kicker">Newsletter</h2>
+
+                <a href="https://pombagiras.com/quiz/" class="newsletter-badge quiz-badge newsletter-quiz-cta">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rose-icon lucide-rose quiz-rose-icon" aria-hidden="true"><path d="M17 10h-1a4 4 0 1 1 4-4v.534"/><path d="M17 6h1a4 4 0 0 1 1.42 7.74l-2.29.87a6 6 0 0 1-5.339-10.68l2.069-1.31"/><path d="M4.5 17c2.8-.5 4.4 0 5.5.8s1.8 2.2 2.3 3.7c-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2"/><path d="M9.77 12C4 15 2 22 2 22"/><circle cx="17" cy="8" r="2"/></svg>
                     <span>Descubra sua Pombagira (Quiz)</span>
                 </a>
-                <h2 class="serif newsletter-title">Newsletter</h2>
-                
+
                 <p class="newsletter-quote">
                     <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
                     Quem tem uma pombagira, tem uma rainha, uma guardiã e uma força que nunca te deixa andar só.
                     <i class="fa-solid fa-quote-right" aria-hidden="true"></i>
                 </p>
-                
-                <style>
-                /* Newsletter buttons — mobile 2x2 grid */
-                @media (max-width: 768px) {
-                    .newsletter-meta {
-                        display: grid !important;
-                        grid-template-columns: 1fr 1fr !important;
-                        gap: 12px !important;
-                        justify-items: center;
-                        max-width: 340px;
-                        margin-left: auto;
-                        margin-right: auto;
-                    }
-                    .newsletter-meta > a {
-                        width: 100%;
-                        justify-content: center;
-                    }
-                    .newsletter-meta > a .btn-circle {
-                        width: 100%;
-                        text-align: center;
-                        padding: 10px 12px !important;
-                        font-size: 0.78rem !important;
-                        letter-spacing: 1px !important;
-                    }
-                    /* LGBT+ button — special accent on mobile */
-                    .btn-lgbt .btn-circle {
-                        background: rgba(197,160,89,0.13) !important;
-                        border-color: rgba(197,160,89,0.45) !important;
-                        box-shadow: 0 4px 18px rgba(197,160,89,0.14) !important;
-                    }
-                }
-                </style>
-                <div class="newsletter-meta" style="margin-bottom: 25px; display: flex; justify-content: center; gap: 20px; align-items: center; flex-wrap: wrap;">
-                    <a href="https://pombagiras.com/oraculo/" class="btn-oraculo" style="
-                        display: inline-flex;
-                        align-items: center;
-                        text-decoration: none;
-                        transition: all 0.3s ease;
-                        font-family: 'Geist', sans-serif;
-                    " onmouseover="this.querySelector('.btn-circle').style.background='rgba(197, 160, 89, 0.2)'; this.querySelector('.btn-circle').style.borderColor='#C5A059'; this.querySelector('.btn-circle').style.boxShadow='0 8px 25px rgba(197, 160, 89, 0.25)'; this.style.transform='translateY(-2px)';" onmouseout="this.querySelector('.btn-circle').style.background='rgba(197, 160, 89, 0.08)'; this.querySelector('.btn-circle').style.borderColor='rgba(197, 160, 89, 0.3)'; this.querySelector('.btn-circle').style.boxShadow='0 4px 15px rgba(197, 160, 89, 0.08)'; this.style.transform='none';">
-                        <span class="btn-circle" style="
-                            border: 1px solid rgba(197, 160, 89, 0.3);
-                            background: rgba(197, 160, 89, 0.08);
-                            color: var(--text-light);
-                            padding: 10px 24px;
-                            border-radius: 50px;
-                            font-size: 0.85rem;
-                            font-weight: 600;
-                            letter-spacing: 1.5px;
-                            text-transform: none;
-                            text-decoration: none;
-                            transition: all 0.3s ease;
-                            box-shadow: 0 4px 15px rgba(197, 160, 89, 0.08);
-                            display: inline-block;
-                        ">Or&#225;culo</span>
-                    </a>
-                    
-                    <a href="https://alexiamelusine.com/gente-que-ama-a-pombagira/" class="btn-ensaio" target="_blank" rel="noopener" style="
-                        display: inline-flex;
-                        align-items: center;
-                        text-decoration: none;
-                        transition: all 0.3s ease;
-                        font-family: 'Geist', sans-serif;
-                    " onmouseover="this.querySelector('.btn-circle').style.background='rgba(197, 160, 89, 0.2)'; this.querySelector('.btn-circle').style.borderColor='#C5A059'; this.querySelector('.btn-circle').style.boxShadow='0 8px 25px rgba(197, 160, 89, 0.25)'; this.style.transform='translateY(-2px)';" onmouseout="this.querySelector('.btn-circle').style.background='rgba(197, 160, 89, 0.08)'; this.querySelector('.btn-circle').style.borderColor='rgba(197, 160, 89, 0.3)'; this.querySelector('.btn-circle').style.boxShadow='0 4px 15px rgba(197, 160, 89, 0.08)'; this.style.transform='none';">
-                        <span class="btn-circle" style="
-                            border: 1px solid rgba(197, 160, 89, 0.3);
-                            background: rgba(197, 160, 89, 0.08);
-                            color: var(--text-light);
-                            padding: 10px 24px;
-                            border-radius: 50px;
-                            font-size: 0.85rem;
-                            font-weight: 600;
-                            letter-spacing: 1.5px;
-                            text-transform: none;
-                            text-decoration: none;
-                            transition: all 0.3s ease;
-                            box-shadow: 0 4px 15px rgba(197, 160, 89, 0.08);
-                            display: inline-block;
-                        ">Ensaio</span>
-                    </a>
 
-                    <a href="https://pombagiras.com/hijras.html" class="btn-hijras" target="_blank" rel="noopener" id="btn-hijras-newsletter" style="
-                        display: inline-flex;
-                        align-items: center;
-                        text-decoration: none;
-                        transition: all 0.3s ease;
-                        font-family: 'Geist', sans-serif;
-                    " onmouseover="this.querySelector('.btn-circle').style.background='rgba(197, 160, 89, 0.2)'; this.querySelector('.btn-circle').style.borderColor='#C5A059'; this.querySelector('.btn-circle').style.boxShadow='0 8px 25px rgba(197, 160, 89, 0.25)'; this.style.transform='translateY(-2px)';" onmouseout="this.querySelector('.btn-circle').style.background='rgba(197, 160, 89, 0.08)'; this.querySelector('.btn-circle').style.borderColor='rgba(197, 160, 89, 0.3)'; this.querySelector('.btn-circle').style.boxShadow='0 4px 15px rgba(197, 160, 89, 0.08)'; this.style.transform='none';">
-                        <span class="btn-circle" style="
-                            border: 1px solid rgba(197, 160, 89, 0.3);
-                            background: rgba(197, 160, 89, 0.08);
-                            color: var(--text-light);
-                            padding: 10px 24px;
-                            border-radius: 50px;
-                            font-size: 0.85rem;
-                            font-weight: 600;
-                            letter-spacing: 1.5px;
-                            text-transform: none;
-                            text-decoration: none;
-                            transition: all 0.3s ease;
-                            box-shadow: 0 4px 15px rgba(197, 160, 89, 0.08);
-                            display: inline-block;
-                        ">Hijras</span>
-                    </a>
-
-                    <a href="pombagira-lgbt.html" class="btn-lgbt" id="btn-lgbt-newsletter" style="
-                        display: inline-flex;
-                        align-items: center;
-                        text-decoration: none;
-                        transition: all 0.3s ease;
-                        font-family: 'Geist', sans-serif;
-                    " onmouseover="this.querySelector('.btn-circle').style.background='rgba(197, 160, 89, 0.22)'; this.querySelector('.btn-circle').style.borderColor='#C5A059'; this.querySelector('.btn-circle').style.boxShadow='0 8px 25px rgba(197, 160, 89, 0.3)'; this.style.transform='translateY(-2px)';" onmouseout="this.querySelector('.btn-circle').style.background='rgba(197, 160, 89, 0.1)'; this.querySelector('.btn-circle').style.borderColor='rgba(197, 160, 89, 0.4)'; this.querySelector('.btn-circle').style.boxShadow='0 4px 18px rgba(197, 160, 89, 0.12)'; this.style.transform='none';">
-                        <span class="btn-circle" style="
-                            border: 1px solid rgba(197, 160, 89, 0.4);
-                            background: rgba(197, 160, 89, 0.1);
-                            color: var(--text-light);
-                            padding: 10px 24px;
-                            border-radius: 50px;
-                            font-size: 0.85rem;
-                            font-weight: 600;
-                            letter-spacing: 1.5px;
-                            text-transform: none;
-                            text-decoration: none;
-                            transition: all 0.3s ease;
-                            box-shadow: 0 4px 18px rgba(197, 160, 89, 0.12);
-                            display: inline-block;
-                        ">Pride</span>
-                    </a>
+                <div class="newsletter-meta">
+                    <a href="https://pombagiras.com/oraculo/" class="btn-oraculo"><span class="btn-circle">Or&#225;culo</span></a>
+                    <a href="https://alexiamelusine.com/gente-que-ama-a-pombagira/" class="btn-ensaio" target="_blank" rel="noopener"><span class="btn-circle">Ensaio</span></a>
+                    <a href="https://pombagiras.com/hijras.html" class="btn-hijras" target="_blank" rel="noopener" id="btn-hijras-newsletter"><span class="btn-circle">Hijras</span></a>
+                    <a href="pombagira-lgbt.html" class="btn-lgbt" id="btn-lgbt-newsletter"><span class="btn-circle">Pride</span></a>
                 </div>
-                
-                <a href="https://alexiamelusine.substack.com/" class="btn btn-primary newsletter-btn-link" target="_blank" rel="noopener">
-                    <i class="fa-brands fa-substack"></i> <span>Inscreva-se no Substack</span>
+
+                <a href="https://alexiamelusine.substack.com/" class="btn newsletter-btn-link newsletter-substack-quiet" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-substack" aria-hidden="true"></i> <span>Inscreva-se no Substack</span>
                 </a>
             </div>
         </section>
