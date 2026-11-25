@@ -176,6 +176,7 @@ h1 {
   text-transform: uppercase;
   color: var(--latao);
   font-weight: 600;
+  min-height: 1.2em;
   margin: 0 0 28px;
 }
 
@@ -192,6 +193,7 @@ h1 {
 .carta-portrait {
   width: 100%;
   max-width: 420px;
+  aspect-ratio: 1 / 1;
   border-radius: 6px;
   overflow: hidden;
   margin: 0 auto 24px;
@@ -211,6 +213,7 @@ h1 {
   font-size: clamp(1.5rem, 6vw, 2.5rem);
   font-weight: 700;
   line-height: 1.16;
+  min-height: 1.2em;
   margin: 0 0 8px;
   color: var(--creme);
   width: 100%;
@@ -222,6 +225,7 @@ h1 {
   font-family: var(--font-display);
   color: rgba(242, 231, 210, 0.72);
   font-size: 1.05rem;
+  min-height: 1.4em;
   margin: 0 0 20px;
 }
 
@@ -233,6 +237,7 @@ h1 {
   color: var(--gold-light);
   max-width: 480px;
   width: 100%;
+  min-height: 3.4em;
   margin: 0 auto 20px;
   padding: 14px 18px;
   border-top: 1px solid rgba(181, 134, 58, 0.28);
@@ -246,6 +251,7 @@ h1 {
   color: rgba(242, 231, 210, 0.84);
   max-width: 480px;
   width: 100%;
+  min-height: 5.1em;
   margin: 0 auto 24px;
   overflow-wrap: break-word;
 }
@@ -255,6 +261,7 @@ h1 {
   gap: 8px;
   flex-wrap: wrap;
   justify-content: center;
+  min-height: 32px;
   margin-bottom: 30px;
   width: 100%;
 }

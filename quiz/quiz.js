@@ -601,6 +601,8 @@
       const img = document.createElement('img');
       img.src = p.img.replace(/-md\.webp$/, '-thumb.webp');
       img.alt = p.nome;
+      img.width = 240;
+      img.height = 320;
       img.loading = 'lazy';
       img.onerror = function () {
         this.onerror = null;

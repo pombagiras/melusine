@@ -193,6 +193,7 @@ h1 em {
   gap: 10px;
   max-width: 620px;
   width: 100%;
+  min-height: 673px;
   margin: 6px 0 40px;
   perspective: 1000px;
 }

@@ -26,8 +26,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin>
-    <link rel="dns-prefetch" href="https://raw.githubusercontent.com">
+    <link rel="preconnect" href="https://cdn.pombagiras.com">
+    <link rel="dns-prefetch" href="https://cdn.pombagiras.com">
 
     <!-- Preload critical LCP image immediately (hero desktop only — mobile não baixa esta imagem) -->
     <link rel="preload" href="https://cdn.pombagiras.com/DONATIVOS/pombagiras-hero-1920.webp" as="image" type="image/webp" fetchpriority="high" media="(min-width: 769px)">
@@ -1582,7 +1582,13 @@
 
 /* Item 4b: Contraste acessível (≥4.5:1) para 'Ler Artigo Completo' sobre fundo escuro */
 .card strong {
-    color: #E5383B !important;
+    color: #FF6B6E !important;
+}
+
+a.card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Item 4b: Foco visível acessível (WCAG 2.4.7) */
@@ -1591,6 +1597,8 @@
 .hero-search-input:focus-visible,
 .nav-tab:focus-visible,
 .btn:focus-visible,
+a.card:focus-visible,
+.email-copy-trigger:focus-visible,
 .floating-social .social-icon:focus-visible,
 .floating-social .back-to-top:focus-visible,
 .carousel-item:focus-visible,
@@ -2199,7 +2207,7 @@
         font-weight: 700;
         letter-spacing: 0.15em;
         text-transform: uppercase;
-        color: rgba(181,162,122,0.55);
+        color: rgba(181,162,122,0.82);
         padding: 14px 22px 6px 22px;
     }
 
@@ -2293,7 +2301,7 @@
         font-weight: 700;
         letter-spacing: 0.15em;
         text-transform: uppercase;
-        color: rgba(181,162,122,0.5);
+        color: rgba(181,162,122,0.82);
         margin-bottom: 8px;
     }
     .mob-menu-social-row {
@@ -2620,9 +2628,9 @@
         <a href="https://substack.com/@alexiamelusine" class="social-icon" target="_blank" rel="noopener" title="Substack">
             <img src="https://cdn.simpleicons.org/substack/ffffff" alt="Substack" decoding="async" loading="lazy">
         </a>
-        <a class="back-to-top" id="backToTopBtn" title="Voltar ao topo">
+        <button type="button" class="back-to-top" id="backToTopBtn" title="Voltar ao topo" aria-label="Voltar ao topo">
             <i class="fas fa-arrow-up" aria-hidden="true"></i>
-        </a>
+        </button>
     </div>
 
     <section class="hero" id="home">
@@ -2633,7 +2641,7 @@
         </picture>
         <picture class="hero-mobile-picture">
             <source media="(max-width: 768px)" srcset="https://pombagiras.com/BOM-mobile.webp" type="image/webp">
-            <img class="hero-mobile-img" src="BOM.png" alt="Pombagiras.com - Portal Sagrado" loading="eager" fetchpriority="high" width="800" height="447" decoding="async">
+            <img class="hero-mobile-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Pombagiras.com - Portal Sagrado" loading="eager" fetchpriority="high" width="800" height="447" decoding="async">
         </picture>
         <div class="hero-content">
             <div class="hero-text-overlay" aria-hidden="true"></div>
@@ -3550,7 +3558,7 @@ initLangSwitcher();
                 })();
                 </script>
                 <div class="grid-cards">
-                    <div class="card" onclick="window.open('portal/fronteiras-sagradas.html', '_blank')" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
+                    <a class="card" href="portal/fronteiras-sagradas.html" target="_blank" rel="noopener" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
                         <picture>
                             <source media="(max-width: 768px)" srcset="https://pombagiras.com/BOM-mobile.webp" type="image/webp">
                             <source type="image/webp" srcset="BOM.webp">
@@ -3559,9 +3567,9 @@ initLangSwitcher();
                         <h4><i class="fa-solid fa-hand" aria-hidden="true"></i> Fronteiras Sagradas</h4>
                         <p><strong>Por que seu pedido à Pombagira pode ser espiritualmente ofensivo.</strong> Uma reflexão ética e teológica sobre o erro mercantil de transformar Pombagira em prestadora de serviços, a autonomia espiritual e a verdadeira devoção ancestral por Alexia Melusine.</p>
                         <strong><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Ler Artigo Completo 🌹</strong>
-                    </div>
+                    </a>
 
-                    <div class="card" onclick="window.open('portal/como-nasce-uma-pombagira.html', '_blank')" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
+                    <a class="card" href="portal/como-nasce-uma-pombagira.html" target="_blank" rel="noopener" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
                         <picture>
                             <source type="image/webp" srcset="fotos/como-nasce-uma-pombagira.webp">
                             <img src="fotos/como-nasce-uma-pombagira.png" alt="Como Nasce Uma Pombagira? A Genealogia das Histórias e a Memória Oral" width="800" height="450" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(255, 255, 255, 0.1);" decoding="async" loading="lazy">
@@ -3569,9 +3577,9 @@ initLangSwitcher();
                         <h4><i class="fa-solid fa-seedling" aria-hidden="true"></i> Como Nasce Uma Pombagira?</h4>
                         <p><strong>A Genealogia das Histórias e a Memória Oral.</strong> Uma reflexão antropológica e histórica sobre a criação cultural das Pombagiras, a preservação oral das mulheres e os conhecimentos que o tempo pode ter apagado por Alexia Melusine.</p>
                         <strong><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Ler Artigo Completo 🌹</strong>
-                    </div>
+                    </a>
 
-                    <div class="card" onclick="window.open('portal/feiticos-comerciais.html', '_blank')" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
+                    <a class="card" href="portal/feiticos-comerciais.html" target="_blank" rel="noopener" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
                         <picture>
                             <source type="image/webp" srcset="fotos/alem-dos-feiticos-comerciais.webp">
                             <img src="fotos/alem-dos-feiticos-comerciais.png" alt="Além dos Feitiços Comerciais - Soberania Espiritual nos Rituais Diários" width="800" height="450" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(255, 255, 255, 0.1);" decoding="async" loading="lazy">
@@ -3579,9 +3587,9 @@ initLangSwitcher();
                         <h4><i class="fa-solid fa-gem" aria-hidden="true"></i> Além dos Feitiços Comerciais</h4>
                         <p><strong>Encontrando a Verdadeira Soberania Espiritual em Seus Rituais Diários.</strong> Uma análise profunda sobre a mercantilização da fé, a economia da ansiedade espiritual e a encruzilhada como método filosófico por Alexia Melusine.</p>
                         <strong><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Ler Artigo Completo 🌹</strong>
-                    </div>
+                    </a>
 
-                    <div class="card" onclick="window.open('portal/sao-cipriano.html', '_blank')" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
+                    <a class="card" href="portal/sao-cipriano.html" target="_blank" rel="noopener" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
                         <picture>
                             <source type="image/webp" srcset="fotos/SCipriano.webp">
                             <img src="fotos/SCipriano.png" alt="Livro de São Cipriano" width="800" height="450" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(255, 255, 255, 0.1);" decoding="async" loading="lazy">
@@ -3589,9 +3597,9 @@ initLangSwitcher();
                         <h4><i class="fa-solid fa-book-bible" aria-hidden="true"></i> Livro de São Cipriano</h4>
                         <p><strong>Desmistifique um dos maiores mitos sobre as Guardiãs.</strong> As Pombagiras vieram da literatura cipriânica ou surgiram da rica fusão sincrética em solo brasileiro? Uma investigação histórica detalhada por Alexia Melusine.</p>
                         <strong><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Ler Artigo Completo 🌹</strong>
-                    </div>
+                    </a>
 
-                    <div class="card" onclick="window.open('portal/caracteristicas.html', '_blank')" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
+                    <a class="card" href="portal/caracteristicas.html" target="_blank" rel="noopener" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
                         <picture>
                             <source type="image/webp" srcset="fotos/MPom.webp">
                             <img src="fotos/MPom.png" alt="Características de quem tem Pombagira" width="800" height="450" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(255, 255, 255, 0.1);" decoding="async" loading="lazy">
@@ -3599,9 +3607,9 @@ initLangSwitcher();
                         <h4><i class="fa-solid fa-user-check" aria-hidden="true"></i> Quem Tem Pombagira</h4>
                         <p><strong>Desmistifique os estereótipos sobre a ligação espiritual.</strong> Quais são as verdadeiras características de uma pessoa ligada às Pombagiras? Uma análise desmistificadora sobre autonomia, renascimento e magnetismo por Alexia Melusine.</p>
                         <strong><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Ler Artigo Completo 🌹</strong>
-                    </div>
+                    </a>
 
-                    <div class="card" onclick="window.open('portal/como-saber.html', '_blank')" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
+                    <a class="card" href="portal/como-saber.html" target="_blank" rel="noopener" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
                         <picture>
                             <source type="image/webp" srcset="fotos/TOP.webp">
                             <img src="fotos/TOP.png" alt="Como saber se tenho uma Pombagira me acompanhando" width="800" height="450" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(255, 255, 255, 0.1);" decoding="async" loading="lazy">
@@ -3609,9 +3617,9 @@ initLangSwitcher();
                         <h4><i class="fa-solid fa-circle-question" aria-hidden="true"></i> Pombagira Acompanhando</h4>
                         <p><strong>Descubra os sinais e sensações de sua presença.</strong> Como identificar se há uma Pombagira guiando seus passos? Entenda os sonhos, a intuição e a verdadeira força de transformação por Alexia Melusine.</p>
                         <strong><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Ler Artigo Completo 🌹</strong>
-                    </div>
+                    </a>
 
-                    <div class="card" onclick="window.open('portal/quatro-faces.html', '_blank')" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
+                    <a class="card" href="portal/quatro-faces.html" target="_blank" rel="noopener" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
                         <picture>
                             <source type="image/webp" srcset="fotos/quatro-faces.webp">
                             <img src="fotos/quatro-faces.png" alt="Hécate, Lilith, Morrigan e Kali" width="800" height="450" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(255, 255, 255, 0.1);" decoding="async" loading="lazy">
@@ -3619,9 +3627,9 @@ initLangSwitcher();
                         <h4><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i> As Quatro Faces</h4>
                         <p><strong>Reflita sobre os arquétipos indomáveis e transições do feminino.</strong> Por que culturas tão diferentes criaram figuras femininas tão semelhantes? Uma análise arquetípica detalhada por Alexia Melusine.</p>
                         <strong><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Ler Artigo Completo 🌹</strong>
-                    </div>
+                    </a>
 
-                    <div class="card" onclick="window.open('portal/por-que-nunca-desaparecem.html', '_blank')" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
+                    <a class="card" href="portal/por-que-nunca-desaparecem.html" target="_blank" rel="noopener" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
                         <picture>
                             <source type="image/webp" srcset="fotos/por-que-nunca-desaparecem.webp">
                             <img src="fotos/por-que-nunca-desaparecem.png" alt="Por Que Algumas Figuras Nunca Desaparecem" width="800" height="533" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(255, 255, 255, 0.1);" decoding="async" loading="lazy">
@@ -3629,9 +3637,9 @@ initLangSwitcher();
                         <h4><i class="fa-solid fa-infinity" aria-hidden="true"></i> Por Que Não Desaparecem?</h4>
                         <p><strong>A liminaridade e o papel destas figuras místicas na transformação.</strong> O elo indissolúvel entre Hécate, Lilith, Morrigan, Kali e as Pombagiras na transição existencial humana por Alexia Melusine.</p>
                         <strong><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Ler Artigo Completo 🌹</strong>
-                    </div>
+                    </a>
 
-                    <div class="card" onclick="window.open('portal/pombagiras-na-historia.html', '_blank')" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
+                    <a class="card" href="portal/pombagiras-na-historia.html" target="_blank" rel="noopener" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
                         <picture>
                             <source type="image/webp" srcset="fotos/pombagiras-na-historia.webp">
                             <img src="fotos/pombagiras-na-historia.png" alt="Onde as Pombagiras Aparecem na História" width="800" height="450" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(255, 255, 255, 0.1);" decoding="async" loading="lazy">
@@ -3639,9 +3647,9 @@ initLangSwitcher();
                         <h4><i class="fa-solid fa-landmark" aria-hidden="true"></i> Pombagiras na História</h4>
                         <p><strong>Uma jornada histórica pelos ambientes que os livros oficiais ocultaram.</strong> Portos, zonas boêmias, inquisição e as rotas da diáspora que moldaram o arquétipo. Análise por Alexia Melusine.</p>
                         <strong><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Ler Artigo Completo 🌹</strong>
-                    </div>
+                    </a>
 
-                    <div class="card" onclick="window.open('portal/sombra-feminina.html', '_blank')" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
+                    <a class="card" href="portal/sombra-feminina.html" target="_blank" rel="noopener" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
                         <picture>
                             <source type="image/webp" srcset="fotos/sombra-feminina.webp">
                             <img src="fotos/sombra-feminina.jpeg" alt="A Sombra Feminina da Pombagira em Mim" width="800" height="446" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(255, 255, 255, 0.1);" decoding="async" loading="lazy">
@@ -3649,9 +3657,9 @@ initLangSwitcher();
                         <h4><i class="fa-solid fa-moon" aria-hidden="true"></i> Sombra Feminina</h4>
                         <p><strong>Uma análise profunda entre espiritualidade e psicologia.</strong> A Pombagira como espelho da psique, arquétipo da sombra feminina, individuação e liberdade existencial por Alexia Melusine.</p>
                         <strong><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Ler Artigo Completo 🌹</strong>
-                    </div>
+                    </a>
 
-                    <div class="card" onclick="window.open('portal/medo-pombagira.html', '_blank')" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
+                    <a class="card" href="portal/medo-pombagira.html" target="_blank" rel="noopener" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
                         <picture>
                             <source type="image/webp" srcset="fotos/medo-de-pombagira.webp">
                             <img src="fotos/medo-de-pombagira.jpeg" alt="Por Que Algumas Pessoas Têm Medo das Pombagiras?" width="800" height="446" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(255, 255, 255, 0.1);" decoding="async" loading="lazy">
@@ -3659,9 +3667,9 @@ initLangSwitcher();
                         <h4><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Medo de Pombagira</h4>
                         <p><strong>Uma investigação sobre o medo do feminino livre.</strong> Razões teológicas, históricas e psicológicas da aversão e fascínio pelas Guardiãs da encruzilhada por Alexia Melusine.</p>
                         <strong><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Ler Artigo Completo 🌹</strong>
-                    </div>
+                    </a>
 
-                    <div class="card" onclick="window.open('portal/sinais-pombagira.html', '_blank')" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
+                    <a class="card" href="portal/sinais-pombagira.html" target="_blank" rel="noopener" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
                         <picture>
                             <source type="image/webp" srcset="fotos/quatro-faces-variante.webp">
                             <img src="fotos/quatro-faces-variante.jpeg" alt="Quais São os Sinais de uma Pombagira?" width="800" height="446" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(255, 255, 255, 0.1);" decoding="async" loading="lazy">
@@ -3669,7 +3677,7 @@ initLangSwitcher();
                         <h4><i class="fa-solid fa-bell" aria-hidden="true"></i> Sinais de Pombagira</h4>
                         <p><strong>Um guia completo para entender a ligação espiritual.</strong> Sonhos, intuição, mediunidade, o papel dos homens, acolhimento da diversidade LGBT+ e transformação interior por Alexia Melusine.</p>
                         <strong><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Ler Artigo Completo 🌹</strong>
-                    </div>
+                    </a>
                 </div>
                 <div class="mob-portal-more-wrap" id="mobPortalMoreWrap">
                     <button type="button" class="mob-portal-more-btn" id="mobCuriosidadesMoreBtn">Ver mais 3</button>
@@ -5055,7 +5063,7 @@ initLangSwitcher();
 
             <div id="cosmovisoes" class="tab-content">
                 <div class="grid-cards">
-                    <div class="card" onclick="window.open('portal/sombra-feminina.html', '_blank')" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
+                    <a class="card" href="portal/sombra-feminina.html" target="_blank" rel="noopener" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
                         <picture>
                             <source type="image/webp" srcset="fotos/sombra-feminina.webp">
                             <img src="fotos/sombra-feminina.jpeg" alt="A Sombra Feminina da Pombagira" width="800" height="446" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(255, 255, 255, 0.1);" decoding="async" loading="lazy">
@@ -5063,9 +5071,9 @@ initLangSwitcher();
                         <h4><i class="fa-solid fa-brain" aria-hidden="true"></i> Sombra da Pombagira</h4>
                         <p><strong>A Sombra Feminina da Pombagira em Mim.</strong> Uma análise profunda conectando espiritualidade, psicologia analítica de Jung e autoconhecimento sob a ótica de Alexia Melusine.</p>
                         <strong><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Ler Artigo Completo 🌹</strong>
-                    </div>
+                    </a>
 
-                    <div class="card" onclick="window.open('portal/medo-pombagira.html', '_blank')" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
+                    <a class="card" href="portal/medo-pombagira.html" target="_blank" rel="noopener" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
                         <picture>
                             <source type="image/webp" srcset="fotos/medo-de-pombagira.webp">
                             <img src="fotos/medo-de-pombagira.jpeg" alt="Medo das Pombagiras" width="800" height="446" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(255, 255, 255, 0.1);" decoding="async" loading="lazy">
@@ -5073,9 +5081,9 @@ initLangSwitcher();
                         <h4><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Medo das Pombagiras</h4>
                         <p><strong>Por Que Algumas Pessoas Têm Medo das Pombagiras?</strong> Uma investigação histórica e psicológica sobre o medo do feminino livre e a autonomia indômita sob a ótica de Alexia Melusine.</p>
                         <strong><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Ler Artigo Completo 🌹</strong>
-                    </div>
+                    </a>
 
-                    <div class="card" onclick="window.open('portal/sinais-pombagira.html', '_blank')" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
+                    <a class="card" href="portal/sinais-pombagira.html" target="_blank" rel="noopener" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
                         <picture>
                             <source type="image/webp" srcset="fotos/quatro-faces-variante.webp">
                             <img src="fotos/quatro-faces-variante.jpeg" alt="Quais São os Sinais de uma Pombagira?" width="800" height="446" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(255, 255, 255, 0.1);" decoding="async" loading="lazy">
@@ -5083,7 +5091,7 @@ initLangSwitcher();
                         <h4><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Sinais de Pombagira</h4>
                         <p><strong>Quais São os Sinais de uma Pombagira?</strong> Um Guia Completo Para Quem Busca Entender Essa Ligação Espiritual. Analisando a mediunidade, o autoconhecimento, a intuição, os sonhos e as transformações profundas sob a ótica de Alexia Melusine.</p>
                         <strong><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Ler Artigo Completo 🌹</strong>
-                    </div>
+                    </a>
 
                     <div class="card">
                         <h4><i class="fa-solid fa-church" aria-hidden="true"></i> Umbanda</h4>
@@ -5584,11 +5592,11 @@ initLangSwitcher();
                         </a>
                     </div>
                     <div class="footer-contact-info" style="margin-top: 20px;">
-                        <span class="email-copy-trigger" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; cursor: pointer; color: var(--warm-cream); opacity: 0.85; transition: opacity 0.2s, color 0.2s; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(197, 160, 89, 0.2); padding: 6px 12px; border-radius: 20px;" onclick="const e='contato'+'@'+'pombagiras.com'; navigator.clipboard.writeText(e); const t=this.querySelector('.copy-status'); t.textContent='Copiado!'; t.style.color='#00ff88'; setTimeout(()=>{t.textContent='(Copiar)'; t.style.color='';}, 2000);" onmouseenter="this.style.opacity='1'; this.style.borderColor='var(--accent)';" onmouseleave="this.style.opacity='0.85'; this.style.borderColor='rgba(197, 160, 89, 0.2)';">
+                        <button type="button" class="email-copy-trigger" aria-label="Copiar e-mail de contato" style="font-family: inherit; display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; cursor: pointer; color: var(--warm-cream); opacity: 0.85; transition: opacity 0.2s, color 0.2s; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(197, 160, 89, 0.2); padding: 6px 12px; border-radius: 20px;" onclick="const e='contato'+'@'+'pombagiras.com'; navigator.clipboard.writeText(e); const t=this.querySelector('.copy-status'); t.textContent='Copiado!'; t.style.color='#00ff88'; setTimeout(()=>{t.textContent='(Copiar)'; t.style.color='';}, 2000);" onmouseenter="this.style.opacity='1'; this.style.borderColor='var(--accent)';" onmouseleave="this.style.opacity='0.85'; this.style.borderColor='rgba(197, 160, 89, 0.2)';">
                             <i class="fa-solid fa-envelope" style="color: var(--secondary);"></i>
                             <span style="font-weight: 400; letter-spacing: 0.5px;">contato<span style="display:none;">noreply</span>@pombagiras.com</span>
                             <span class="copy-status" style="font-size: 0.7rem; opacity: 0.7; transition: color 0.2s;">(Copiar)</span>
-                        </span>
+                        </button>
                     </div>
                     <div class="footer-donativos-info" style="margin-top: 12px;">
                         <a href="https://pombagiras.com/apoio/" class="footer-donativos-link" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; text-decoration: none; color: var(--warm-cream); opacity: 0.9; transition: all 0.3s ease; background: rgba(230, 0, 38, 0.06); border: none; padding: 6px 14px; border-radius: 20px; box-shadow: 0 0 12px rgba(230, 0, 38, 0.12);" onmouseenter="this.style.opacity='1'; this.style.boxShadow='0 0 18px rgba(230, 0, 38, 0.35)'; this.style.transform='translateY(-2px)';" onmouseleave="this.style.opacity='0.9'; this.style.boxShadow='0 0 12px rgba(230, 0, 38, 0.12)'; this.style.transform='none';">

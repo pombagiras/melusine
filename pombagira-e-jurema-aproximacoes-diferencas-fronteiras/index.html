@@ -33,7 +33,7 @@
     <link rel="manifest" href="https://pombagiras.com/manifest.webmanifest">
 
     <!-- Preload Critical LCP Image -->
-    <link rel="preload" href="capa.jpg" as="image" fetchpriority="high">
+    <link rel="preload" as="image" type="image/webp" imagesrcset="capa-640.webp 640w, capa.webp 1024w" imagesizes="(max-width: 768px) calc(100vw - 32px), 770px" fetchpriority="high">
 
     <!-- Open Graph (Facebook, WhatsApp, Telegram) -->
     <meta property="og:title" content="Pombagira e a Jurema: aproximações, diferenças e fronteiras entre tradições">
@@ -60,7 +60,8 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap"></noscript>
 
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
@@ -814,6 +815,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
+            font-family: inherit;
             font-size: 0.82rem;
             cursor: pointer;
             color: var(--text-color);
@@ -1209,13 +1211,16 @@
 
             <!-- Container da Imagem de Destaque -->
             <div class="featured-image-container">
-                <img class="featured-image"
-                     src="capa.jpg"
-                     alt="Pombagira e a Jurema: aproximações, diferenças e fronteiras entre tradições"
-                     width="1024"
-                     height="576"
-                     decoding="async"
-                     fetchpriority="high">
+                <picture>
+                    <source type="image/webp" srcset="capa-640.webp 640w, capa.webp 1024w" sizes="(max-width: 768px) calc(100vw - 32px), 770px">
+                    <img class="featured-image"
+                         src="capa.jpg"
+                         alt="Pombagira e a Jurema: aproximações, diferenças e fronteiras entre tradições"
+                         width="1024"
+                         height="576"
+                         decoding="async"
+                         fetchpriority="high">
+                </picture>
                 <p class="image-caption">Pombagira e a Jurema: aproximações, diferenças e fronteiras entre tradições • Acervo Pombagiras.com</p>
             </div>
 
@@ -1732,11 +1737,11 @@
             <p>Idealizado com rigor ético e teológico por <strong>Alexia Melusine</strong>. Todos os direitos reservados.</p>
 
             <div style="margin-top: 10px; margin-bottom: 5px; text-align: center; display: flex; justify-content: center;">
-                <span class="email-copy-trigger" onclick="const e='contato'+'@'+'pombagiras.com'; navigator.clipboard.writeText(e); const t=this.querySelector('.copy-status'); t.textContent='Copiado!'; t.style.color='#00ff88'; setTimeout(()=>{t.textContent='(Copiar)'; t.style.color='';}, 2000);" role="button" aria-label="Copiar e-mail de contato">
+                <button type="button" class="email-copy-trigger" onclick="const e='contato'+'@'+'pombagiras.com'; navigator.clipboard.writeText(e); const t=this.querySelector('.copy-status'); t.textContent='Copiado!'; t.style.color='#00ff88'; setTimeout(()=>{t.textContent='(Copiar)'; t.style.color='';}, 2000);" aria-label="Copiar e-mail de contato">
                     <i class="fa-solid fa-envelope" style="color: #800020;"></i>
                     <span style="font-weight: 400; letter-spacing: 0.5px;">contato@pombagiras.com</span>
                     <span class="copy-status" style="font-size: 0.72rem; opacity: 0.7; transition: color 0.2s;">(Copiar)</span>
-                </span>
+                </button>
             </div>
 
             <div class="footer-legal-links">
