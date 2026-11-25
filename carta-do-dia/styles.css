@@ -1,0 +1,568 @@
+:root {
+  --creme: #F2E7D2;
+  --latao: #B5863A;
+  --latao-fosco: #8C6A2E;
+  --ardosia: #3B424B;
+  --ardosia-2: #262B31;
+  --preto: #121110;
+  --oxblood: #4A1420;
+  --roxo: #5B2A6B;
+  --vermelho: #B4262B;
+  --ok: #C9A227;
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Geist', -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --gold: #C5A059;
+  --gold-light: #dfc07e;
+  --text-color: #FAF6EE;
+  --text-secondary: #e6e2d8;
+  --muted-text: #96a3a8;
+  --ff-display: 'Fraunces', serif;
+  --ff-sans: 'Geist', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background:
+    radial-gradient(circle at 15% 0%, rgba(91,42,107,.35), transparent 45%),
+    radial-gradient(circle at 90% 15%, rgba(180,38,43,.22), transparent 40%),
+    linear-gradient(180deg, var(--preto) 0%, var(--ardosia-2) 100%);
+  color: var(--creme);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  padding-top: 78px;
+}
+
+::selection {
+  background: var(--vermelho);
+  color: var(--creme);
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* ================= HEADER SUPERIOR ================= */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 22px 32px;
+  background: linear-gradient(180deg, rgba(18, 17, 16, 0.95) 0%, rgba(18, 17, 16, 0.85) 70%, transparent 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(181, 134, 58, 0.12);
+}
+
+.site-logo {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 2px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.site-logo:hover {
+  transform: translateY(-2px);
+}
+
+.logo-pombagiras {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+  color: var(--creme);
+  transition: color 0.3s ease;
+}
+
+.logo-dot {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--latao);
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.logo-com {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+  color: var(--latao);
+  transition: color 0.3s ease;
+}
+
+.site-logo:hover .logo-pombagiras {
+  color: var(--latao);
+}
+
+.site-logo:hover .logo-dot {
+  color: var(--vermelho);
+  transform: scale(1.2) rotate(90deg);
+}
+
+.site-logo:hover .logo-com {
+  color: var(--creme);
+}
+
+/* ================= LAYOUT (COLUNA ÚNICA) ================= */
+
+.stage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 20px 64px;
+  position: relative;
+}
+
+.carta-wrap {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 6.2vw, 2.8rem);
+  line-height: 1.12;
+  margin: 0 0 16px;
+  letter-spacing: -0.01em;
+  overflow-wrap: break-word;
+  width: 100%;
+}
+
+.lede {
+  max-width: 520px;
+  width: 100%;
+  font-family: var(--font-display);
+  font-size: clamp(0.98rem, 3.2vw, 1.12rem);
+  line-height: 1.55;
+  font-weight: 400;
+  color: var(--creme);
+  opacity: 0.92;
+  margin: 0 auto 14px;
+  overflow-wrap: break-word;
+}
+
+.carta-date {
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--latao);
+  font-weight: 600;
+  margin: 0 0 28px;
+}
+
+/* ================= CARTA ================= */
+
+.carta-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.carta-portrait {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 0 auto 24px;
+  border: 1px solid rgba(181, 134, 58, 0.4);
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.65);
+  background: var(--preto);
+}
+
+.carta-portrait img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.carta-name {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 6vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.16;
+  margin: 0 0 8px;
+  color: var(--creme);
+  width: 100%;
+  overflow-wrap: break-word;
+}
+
+.carta-epithet {
+  font-style: italic;
+  font-family: var(--font-display);
+  color: rgba(242, 231, 210, 0.72);
+  font-size: 1.05rem;
+  margin: 0 0 20px;
+}
+
+.carta-frase {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.08rem, 3.8vw, 1.32rem);
+  line-height: 1.48;
+  color: var(--gold-light);
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto 20px;
+  padding: 14px 18px;
+  border-top: 1px solid rgba(181, 134, 58, 0.28);
+  border-bottom: 1px solid rgba(181, 134, 58, 0.28);
+  overflow-wrap: break-word;
+}
+
+.carta-desc {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: rgba(242, 231, 210, 0.84);
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto 24px;
+  overflow-wrap: break-word;
+}
+
+.carta-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.carta-tags span {
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 7px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(181, 134, 58, 0.4);
+  color: var(--latao);
+}
+
+/* ================= BUTTONS (COLUNA ÚNICA) ================= */
+
+.carta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.btn {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  padding: 16px 24px;
+  min-height: 48px;
+  width: 100%;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  color: var(--creme);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(120deg, var(--oxblood), var(--roxo) 60%, var(--vermelho));
+  background-size: 180% 180%;
+  background-position: 0% 50%;
+  box-shadow: 0 10px 30px -12px rgba(180, 38, 43, 0.55);
+  transition: background-position 0.5s ease, transform 0.18s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  background-position: 100% 50%;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px -10px rgba(91, 42, 107, 0.65);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--latao);
+  outline-offset: 3px;
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(242, 231, 210, 0.3);
+  box-shadow: none;
+  padding: 14px 20px;
+}
+
+.btn-ghost:hover {
+  border-color: var(--latao);
+  background: rgba(181, 134, 58, 0.08);
+  box-shadow: none;
+  transform: translateY(-2px);
+}
+
+.carta-footnote {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: rgba(242, 231, 210, 0.55);
+  max-width: 460px;
+  margin: 8px auto 0;
+  text-align: center;
+}
+
+.footer-mark {
+  position: fixed;
+  bottom: 14px;
+  right: 18px;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  color: rgba(242, 231, 210, 0.25);
+  text-transform: uppercase;
+  z-index: 5;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 640px) {
+  .site-header {
+    padding: 16px 20px;
+  }
+
+  .logo-pombagiras {
+    font-size: 1.1rem;
+  }
+
+  .logo-dot {
+    font-size: 1.1rem;
+  }
+
+  .logo-com {
+    font-size: 0.82rem;
+  }
+
+  body {
+    padding-top: 62px;
+  }
+
+  .stage {
+    padding: 24px 16px 44px;
+    min-height: 100svh;
+  }
+
+  .carta-portrait {
+    max-width: 100%;
+  }
+
+  .carta-actions {
+    max-width: 100%;
+  }
+
+  .footer-mark {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001s !important;
+    transition-duration: 0.001s !important;
+  }
+}
+
+        /* ── BLOCO DISCRETO: CARTA DAS POMBAGIRAS (NEWSLETTER) ── */
+        .newsletter-carta-box {
+            background: linear-gradient(135deg, rgba(28, 14, 20, 0.8) 0%, rgba(14, 8, 12, 0.9) 100%);
+            border: 1px solid rgba(197, 160, 89, 0.28);
+            border-radius: 14px;
+            padding: 1.8rem 2rem;
+            margin: 3.5rem 0 2rem;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+            width: 100%;
+            text-align: left;
+        }
+
+        .newsletter-carta-inner {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.4rem;
+        }
+
+        @media (max-width: 640px) {
+            .newsletter-carta-box {
+                padding: 1.4rem 1.1rem !important;
+                margin: 2.5rem 0 1.8rem !important;
+            }
+            .newsletter-carta-inner {
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+                gap: 1rem !important;
+            }
+        }
+
+        .newsletter-carta-icon {
+            font-size: 1.8rem;
+            color: var(--gold-light);
+            flex-shrink: 0;
+            background: rgba(197, 160, 89, 0.1);
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid rgba(197, 160, 89, 0.25);
+        }
+
+        .newsletter-carta-body {
+            flex: 1;
+            width: 100%;
+        }
+
+        .newsletter-carta-title {
+            font-family: var(--ff-display);
+            font-size: 1.35rem;
+            color: var(--gold-light);
+            margin-bottom: 0.35rem;
+            font-weight: 700;
+        }
+
+        .newsletter-carta-desc {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+            margin-bottom: 1.1rem;
+        }
+
+        .newsletter-carta-input-wrap {
+            display: flex;
+            gap: 0.6rem;
+            max-width: 520px;
+        }
+
+        @media (max-width: 640px) {
+            .newsletter-carta-input-wrap {
+                flex-direction: column !important;
+                max-width: 100% !important;
+            }
+        }
+
+        .newsletter-carta-input {
+            flex: 1;
+            min-width: 0;
+            width: 100%;
+            background: rgba(5, 2, 3, 0.85);
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            font-size: 0.92rem;
+            color: var(--text-color);
+            font-family: var(--ff-sans);
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .newsletter-carta-input:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 2px rgba(197, 160, 89, 0.25);
+        }
+
+        .newsletter-carta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.4rem;
+            border-radius: 8px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            background: var(--gold);
+            color: #050002;
+            border: none;
+            cursor: pointer;
+            font-family: var(--ff-sans);
+            transition: all 0.25s ease;
+            white-space: nowrap;
+        }
+
+        .newsletter-carta-btn:hover {
+            background: #fff;
+            box-shadow: 0 4px 16px rgba(255, 255, 255, 0.25);
+            transform: translateY(-1px);
+        }
+
+        .newsletter-carta-btn:disabled {
+            opacity: 0.65;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .newsletter-carta-msg {
+            font-size: 0.85rem;
+            margin-top: 0.7rem;
+            display: none;
+            line-height: 1.4;
+        }
+
+        .newsletter-carta-msg.sucesso {
+            display: block;
+            color: #8ce99a;
+        }
+
+        .newsletter-carta-msg.aviso {
+            display: block;
+            color: #dfc07e;
+        }
+
+        .newsletter-carta-msg.erro {
+            display: block;
+            color: #ff8787;
+        }
+
+        .newsletter-carta-privacy {
+            font-size: 0.76rem;
+            color: var(--muted-text);
+            margin-top: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        @media (max-width: 640px) {
+            .newsletter-carta-privacy {
+                justify-content: center;
+            }
+        }

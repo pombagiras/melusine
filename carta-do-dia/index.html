@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <!-- ===== SEO PRIMÁRIO ===== -->
+  <title>Carta do Dia — Qual guardiã caiu para ti hoje?</title>
+  <meta name="description" content="Todos os dias, uma guardiã. Descobre qual guardiã caiu para ti hoje e conhece a sua história. Uma brincadeira cultural e de reflexão do pombagiras.com.">
+  <meta name="author" content="Alexia Melusine">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://pombagiras.com/carta-do-dia/">
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pombagiras.com">
+  <meta property="og:url" content="https://pombagiras.com/carta-do-dia/">
+  <meta property="og:title" content="Carta do Dia — Qual guardiã caiu para ti hoje?">
+  <meta property="og:description" content="Todos os dias, uma guardiã. Descobre qual guardiã caiu para ti hoje e conhece a sua história. Uma brincadeira cultural e de reflexão do pombagiras.com.">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- ===== TWITTER / X CARD ===== -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@pombagiras">
+  <meta name="twitter:creator" content="@AlexiaMelusine">
+  <meta name="twitter:title" content="Carta do Dia — Qual guardiã caiu para ti hoje?">
+  <meta name="twitter:description" content="Todos os dias, uma guardiã. Descobre qual guardiã caiu para ti hoje e conhece a sua história. Uma brincadeira cultural e de reflexão do pombagiras.com.">
+
+  <!-- Favicon & Touch Icons -->
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.pombagiras.com/assets/favicon-round-32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.pombagiras.com/assets/favicon-round-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="https://cdn.pombagiras.com/assets/favicon-round-48.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://cdn.pombagiras.com/assets/favicon-round-96.png">
+  <link rel="icon" type="image/png" sizes="144x144" href="https://cdn.pombagiras.com/assets/favicon-round-144.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://cdn.pombagiras.com/assets/favicon-round-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="https://cdn.pombagiras.com/assets/favicon-round-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.pombagiras.com/assets/apple-touch-icon-round.png">
+  <link rel="manifest" href="https://pombagiras.com/manifest.webmanifest">
+
+  <!-- ===== FONTS ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- ===== CSS & FONT AWESOME ===== -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+  <!-- ===== SCHEMA.ORG: WebPage ===== -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Carta do Dia — Qual guardiã caiu para ti hoje?",
+      "description": "Todos os dias, uma guardiã. Descobre qual guardiã caiu para ti hoje e conhece a sua história. Uma brincadeira cultural e de reflexão do pombagiras.com.",
+      "url": "https://pombagiras.com/carta-do-dia/",
+      "inLanguage": "pt-BR",
+      "datePublished": "2026-11-25",
+      "dateModified": "2026-11-25"
+    }
+  </script>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <a href="https://pombagiras.com/" target="_blank" rel="noopener noreferrer" class="site-logo">
+    <span class="logo-pombagiras">Pombagiras</span><span class="logo-dot">.</span><span class="logo-com">com</span>
+  </a>
+</header>
+
+<div class="footer-mark">Encruzilhada Digital</div>
+
+<!-- ================= CARTA DO DIA ================= -->
+<main class="stage" aria-label="Carta do Dia">
+  <div class="carta-wrap">
+    <h1>Carta do Dia — Qual guardiã caiu para ti hoje?</h1>
+    <p class="lede">Todos os dias, uma guardiã. A mesma carta para toda a gente. Volta amanhã para outra.</p>
+    <p class="carta-date" id="cartaDate"></p>
+
+    <article class="carta-card" aria-live="polite">
+      <div class="carta-portrait">
+        <img id="cartaImg" src="" alt="" loading="eager">
+      </div>
+      <h2 class="carta-name" id="cartaName"></h2>
+      <p class="carta-epithet" id="cartaEpithet"></p>
+      <p class="carta-frase" id="cartaFrase"></p>
+      <p class="carta-desc" id="cartaDesc"></p>
+      <div class="carta-tags" id="cartaTags" aria-label="Palavras-chave da guardiã do dia"></div>
+    </article>
+
+    <div class="carta-actions">
+      <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" id="btnEntity"></a>
+      <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" id="btnShare">Partilhar a minha carta</a>
+      <a href="https://pombagiras.com/quiz/" class="btn btn-ghost">Fazer o quiz completo</a>
+    </div>
+
+            <section class="newsletter-carta-box" aria-label="Receber a Carta das Pombagiras">
+                <div class="newsletter-carta-inner">
+                    <div class="newsletter-carta-icon">
+                        <i class="fa-solid fa-envelope-open-text" aria-hidden="true"></i>
+                    </div>
+                    <div class="newsletter-carta-body">
+                        <h3 class="newsletter-carta-title">Receber a Carta das Pombagiras</h3>
+                        <p class="newsletter-carta-desc">
+                            Um comunicado discreto e mensal com ensaios inéditos, estudos antropológicos e atualizações do acervo. Sem spam, sem venda de dados e sem mensagens comerciais.
+                        </p>
+                        <form class="newsletter-carta-form" onsubmit="handleCartaSubmit(event, this)">
+                            <div class="newsletter-carta-input-wrap">
+                                <input 
+                                    type="email" 
+                                    name="email" 
+                                    class="newsletter-carta-input" 
+                                    placeholder="Digite seu melhor e-mail com discrição..." 
+                                    required 
+                                    autocomplete="email"
+                                    aria-label="Endereço de e-mail para a Carta das Pombagiras"
+                                >
+                                <button type="submit" class="newsletter-carta-btn">
+                                    <span>Inscrever-se</span>
+                                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <div class="newsletter-carta-msg" role="status" aria-live="polite"></div>
+                            <p class="newsletter-carta-privacy">
+                                <i class="fa-solid fa-lock" aria-hidden="true"></i> Seus dados nunca serão compartilhados nem vendidos. Cancele com um clique quando desejar.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+    <p class="carta-footnote">A Carta do Dia é uma brincadeira cultural e de reflexão. Não é consulta nem previsão.</p>
+  </div>
+</main>
+
+<script src="carta.js"></script>
+
+    <!-- Script de Inscrição na Carta das Pombagiras (Supabase REST com RLS anon) -->
+    <script>
+    async function handleCartaSubmit(e, form) {
+        e.preventDefault();
+        const input = form.querySelector('input[name="email"]');
+        const btn = form.querySelector('button[type="submit"]');
+        const msg = form.querySelector('.newsletter-carta-msg');
+        const email = (input.value || '').trim();
+        if (!email) return;
+
+        btn.disabled = true;
+        btn.innerHTML = '<span>Enviando...</span>';
+        msg.className = 'newsletter-carta-msg';
+        msg.style.display = 'none';
+
+        try {
+            const resp = await fetch('https://qeayxaqcwajitbrzdhzp.supabase.co/rest/v1/newsletter_subscribers', {
+                method: 'POST',
+                headers: {
+                    'apikey': 'sb_publishable_2np1-QAVxRzRYwhlS4FHeA_otT0J9VI',
+                    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFlYXl4YXFjd2FqaXRicnpkaHpwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM5NTc1NDIsImV4cCI6MjEwOTUzMzU0Mn0.ykY2C4BRy6UNWrJQ6ZfMo9ph4J4aFoe3APkRrlGh1js',
+                    'Content-Type': 'application/json',
+                    'Prefer': 'return=minimal'
+                },
+                body: JSON.stringify({
+                    email: email,
+                    source_page: window.location.pathname
+                })
+            });
+
+            if (resp.status === 201) {
+                msg.textContent = 'Inscrição confirmada com sucesso! Você receberá a Carta das Pombagiras.';
+                msg.className = 'newsletter-carta-msg sucesso';
+                msg.style.display = 'block';
+                input.value = '';
+                btn.innerHTML = '<span>Inscrito!</span> <i class="fa-solid fa-check"></i>';
+            } else if (resp.status === 409) {
+                msg.textContent = 'Este e-mail já está inscrito para receber a Carta das Pombagiras. Muito obrigada!';
+                msg.className = 'newsletter-carta-msg aviso';
+                msg.style.display = 'block';
+                btn.disabled = false;
+                btn.innerHTML = '<span>Inscrever-se</span> <i class="fa-solid fa-arrow-right"></i>';
+            } else {
+                throw new Error('Status: ' + resp.status);
+            }
+        } catch (err) {
+            msg.textContent = 'Não foi possível registrar seu e-mail no momento. Por favor, tente novamente mais tarde.';
+            msg.className = 'newsletter-carta-msg erro';
+            msg.style.display = 'block';
+            btn.disabled = false;
+            btn.innerHTML = '<span>Inscrever-se</span> <i class="fa-solid fa-arrow-right"></i>';
+        }
+    }
+    </script>
+
+</body>
+</html>

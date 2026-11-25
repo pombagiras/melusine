@@ -782,6 +782,12 @@
   <priority>0.90</priority>
 </url>
 <url>
+  <loc>https://pombagiras.com/carta-do-dia/</loc>
+  <lastmod>2026-11-25</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
   <loc>https://pombagiras.com/terms.html</loc>
   <lastmod>2026-08-30</lastmod>
   <changefreq>monthly</changefreq>
