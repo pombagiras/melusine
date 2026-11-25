@@ -2734,6 +2734,749 @@ initLangSwitcher();
             </div>
 
             <div id="curiosidades" class="tab-content active">
+                <style id="deck-styles">
+                .deck-section {
+                    --deck-ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+                    width: 100%;
+                    margin: 0 auto 36px;
+                    padding: 4px 0 28px;
+                    border-bottom: 1px solid rgba(197, 160, 89, 0.16);
+                    overflow-x: clip;
+                }
+                .deck-header {
+                    text-align: center;
+                    margin: 0 auto 22px;
+                    max-width: 480px;
+                    padding: 0 6px;
+                }
+                .deck-heading {
+                    font-family: 'Fraunces', serif;
+                    font-size: clamp(1.35rem, 4.4vw, 1.75rem);
+                    font-weight: 600;
+                    color: var(--accent, #C5A059);
+                    margin: 0 0 8px;
+                    line-height: 1.22;
+                    letter-spacing: 0.01em;
+                }
+                .deck-subtitle {
+                    font-family: 'Geist', sans-serif;
+                    font-size: clamp(0.88rem, 2.8vw, 0.98rem);
+                    font-weight: 300;
+                    color: rgba(250, 246, 238, 0.8);
+                    margin: 0 auto;
+                    line-height: 1.5;
+                }
+                .deck-container {
+                    width: 100%;
+                    max-width: 420px;
+                    margin: 0 auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                @media (min-width: 769px) {
+                    .deck-container {
+                        max-width: 480px;
+                    }
+                }
+                .deck-stage {
+                    display: grid;
+                    grid-template-columns: minmax(0, 1fr);
+                    width: 100%;
+                    margin-bottom: 32px;
+                    position: relative;
+                    touch-action: pan-y;
+                    -webkit-tap-highlight-color: transparent;
+                    outline: none;
+                }
+                .deck-card {
+                    grid-area: 1 / 1;
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    box-sizing: border-box;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    background: linear-gradient(165deg, #16070f 0%, #0b0307 100%);
+                    border: 1px solid rgba(197, 160, 89, 0.32);
+                    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.6);
+                    transform-origin: center bottom;
+                    cursor: pointer;
+                    -webkit-tap-highlight-color: transparent;
+                }
+                .deck-card-media {
+                    display: block;
+                    width: 100%;
+                    aspect-ratio: 16 / 9;
+                    overflow: hidden;
+                    background: #090206;
+                    border-bottom: 1px solid rgba(197, 160, 89, 0.14);
+                    flex-shrink: 0;
+                }
+                .deck-card-img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    pointer-events: none;
+                    user-select: none;
+                    -webkit-user-select: none;
+                    -webkit-user-drag: none;
+                }
+                .deck-card-body {
+                    display: flex;
+                    flex-direction: column;
+                    flex: 1 1 auto;
+                    padding: 15px 15px 16px;
+                    text-align: left;
+                    gap: 8px;
+                }
+                @media (min-width: 769px) {
+                    .deck-card-body {
+                        padding: 18px 20px 20px;
+                    }
+                }
+                .deck-card-title {
+                    font-family: 'Fraunces', serif;
+                    font-size: clamp(1.08rem, 3.6vw, 1.32rem);
+                    font-weight: 600;
+                    line-height: 1.25;
+                    color: var(--accent, #C5A059);
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                }
+                .deck-card-title i {
+                    font-size: 0.9em;
+                    color: #E5383B;
+                    flex-shrink: 0;
+                }
+                .deck-card-desc {
+                    font-family: 'Geist', sans-serif;
+                    font-size: clamp(0.81rem, 2.5vw, 0.92rem);
+                    font-weight: 400;
+                    line-height: 1.42;
+                    color: rgba(250, 246, 238, 0.88);
+                    margin: 0 0 6px;
+                }
+                .deck-cta {
+                    margin-top: auto;
+                    min-height: 48px;
+                    padding: 12px 18px;
+                    border-radius: 999px;
+                    background: rgba(128, 0, 32, 0.48);
+                    border: 1px solid rgba(229, 56, 59, 0.6);
+                    color: #FAF6EE;
+                    font-family: 'Geist', sans-serif;
+                    font-size: 0.86rem;
+                    font-weight: 600;
+                    letter-spacing: 0.03em;
+                    text-decoration: none;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 6px;
+                    width: 100%;
+                    box-sizing: border-box;
+                    touch-action: manipulation;
+                    user-select: none;
+                    -webkit-user-select: none;
+                    -webkit-touch-callout: none;
+                    transition: transform 140ms var(--deck-ease-out), background-color 180ms ease, border-color 180ms ease;
+                }
+                .deck-card[data-deck-pos="0"] {
+                    z-index: 4;
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: auto;
+                    will-change: transform, opacity;
+                    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+                    transition: transform 260ms var(--deck-ease-out), opacity 220ms var(--deck-ease-out);
+                }
+                .deck-card[data-deck-pos="0"].deck-card-pressed {
+                    transform: scale(0.97);
+                    transition: transform 140ms var(--deck-ease-out), opacity 140ms var(--deck-ease-out);
+                }
+                .deck-card[data-deck-pos="1"] {
+                    z-index: 3;
+                    opacity: 0.82;
+                    visibility: visible;
+                    pointer-events: none;
+                    background: #11040b;
+                    border-color: rgba(197, 160, 89, 0.24);
+                    transform: translate3d(0, 10px, 0) scale(0.955) rotate(1.1deg);
+                    transition: transform 260ms var(--deck-ease-out), opacity 220ms var(--deck-ease-out);
+                }
+                .deck-card[data-deck-pos="2"] {
+                    z-index: 2;
+                    opacity: 0.52;
+                    visibility: visible;
+                    pointer-events: none;
+                    background: #0c0308;
+                    border-color: rgba(197, 160, 89, 0.16);
+                    transform: translate3d(0, 20px, 0) scale(0.91) rotate(-1.2deg);
+                    transition: transform 260ms var(--deck-ease-out), opacity 220ms var(--deck-ease-out);
+                }
+                .deck-card[data-deck-pos="out-left"] {
+                    z-index: 5;
+                    opacity: 0;
+                    visibility: visible;
+                    pointer-events: none;
+                    will-change: transform, opacity;
+                    transform: translate3d(-28px, -4px, 0) scale(0.96) rotate(-2.4deg);
+                    transition: transform 200ms var(--deck-ease-out), opacity 180ms var(--deck-ease-out);
+                }
+                .deck-card[data-deck-pos="out-back"] {
+                    z-index: 1;
+                    opacity: 0;
+                    visibility: visible;
+                    pointer-events: none;
+                    transform: translate3d(0, 26px, 0) scale(0.88) rotate(0deg);
+                    transition: transform 200ms var(--deck-ease-out), opacity 180ms var(--deck-ease-out);
+                }
+                .deck-card[data-deck-pos="hidden"] {
+                    z-index: 1;
+                    opacity: 0;
+                    visibility: hidden;
+                    pointer-events: none;
+                    transform: translate3d(0, 26px, 0) scale(0.88) rotate(0deg);
+                    transition: none;
+                }
+                .deck-stage.deck-instant .deck-card,
+                .deck-card.deck-dragging {
+                    transition: none !important;
+                }
+                .deck-controls {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+                    width: 100%;
+                }
+                .deck-counter {
+                    font-family: 'Geist Mono', 'Geist', monospace;
+                    font-size: 0.84rem;
+                    font-weight: 600;
+                    letter-spacing: 0.08em;
+                    color: rgba(250, 246, 238, 0.8);
+                    font-variant-numeric: tabular-nums;
+                    margin: 0 0 2px;
+                }
+                .deck-next-btn,
+                .deck-all-link {
+                    min-height: 48px;
+                    width: 100%;
+                    max-width: 260px;
+                    padding: 12px 22px;
+                    border-radius: 999px;
+                    font-family: 'Geist', sans-serif;
+                    font-weight: 600;
+                    letter-spacing: 0.04em;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    box-sizing: border-box;
+                    touch-action: manipulation;
+                    user-select: none;
+                    -webkit-user-select: none;
+                    -webkit-touch-callout: none;
+                    -webkit-tap-highlight-color: transparent;
+                    transition: transform 140ms var(--deck-ease-out), background-color 180ms ease, border-color 180ms ease;
+                }
+                .deck-next-btn {
+                    background: var(--secondary, #800020);
+                    border: 1px solid rgba(197, 160, 89, 0.45);
+                    color: #FAF6EE;
+                    font-size: 0.88rem;
+                    cursor: pointer;
+                }
+                .deck-all-link {
+                    background: rgba(197, 160, 89, 0.08);
+                    border: 1px solid rgba(197, 160, 89, 0.32);
+                    color: var(--accent, #C5A059);
+                    font-size: 0.84rem;
+                    text-decoration: none;
+                }
+                .deck-cta:active,
+                .deck-next-btn:active,
+                .deck-all-link:active {
+                    transform: scale(0.97);
+                }
+                .deck-cta:focus-visible,
+                .deck-next-btn:focus-visible,
+                .deck-all-link:focus-visible,
+                .deck-stage:focus-visible {
+                    outline: 2px solid #C5A059;
+                    outline-offset: 3px;
+                }
+                .deck-list-anchor {
+                    display: block;
+                    height: 0;
+                    margin: 0;
+                    padding: 0;
+                    scroll-margin-top: 92px;
+                }
+                @media (hover: hover) and (pointer: fine) {
+                    .deck-cta:hover {
+                        background: rgba(128, 0, 32, 0.72);
+                        border-color: #E5383B;
+                    }
+                    .deck-next-btn:hover {
+                        background: #9e0028;
+                        border-color: #C5A059;
+                    }
+                    .deck-all-link:hover {
+                        background: rgba(197, 160, 89, 0.16);
+                        border-color: #C5A059;
+                        color: #FAF6EE;
+                    }
+                }
+                @media (max-width: 768px) {
+                    .deck-section {
+                        margin-bottom: 24px;
+                        padding-bottom: 22px;
+                    }
+                    .deck-card {
+                        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.55);
+                    }
+                }
+                @media (prefers-reduced-motion: reduce) {
+                    .deck-section *,
+                    .deck-card,
+                    .deck-cta,
+                    .deck-next-btn,
+                    .deck-all-link {
+                        transition: none !important;
+                        animation: none !important;
+                    }
+                    .deck-cta:active,
+                    .deck-next-btn:active,
+                    .deck-all-link:active,
+                    .deck-card[data-deck-pos="0"].deck-card-pressed {
+                        transform: none !important;
+                    }
+                }
+                </style>
+
+                <section class="deck-section" id="deck-descobre" aria-labelledby="deck-heading">
+                    <div class="deck-header">
+                        <h3 class="deck-heading" id="deck-heading">Descobre um artigo</h3>
+                        <p class="deck-subtitle">Toca para passar ao próximo. Quando um te chamar, abre-o.</p>
+                    </div>
+                    <div class="deck-container">
+                        <div class="deck-stage" id="deckStage" tabindex="0" role="region" aria-roledescription="baralho de artigos" aria-label="Baralho Descobre um artigo — usa as setas esquerda e direita para mudar de cartão">
+                            <article class="deck-card" data-deck-pos="0">
+                                <picture class="deck-card-media">
+                                    <source media="(max-width: 768px)" srcset="https://pombagiras.com/BOM-mobile.webp" type="image/webp">
+                                    <source type="image/webp" srcset="BOM.webp">
+                                    <img class="deck-card-img" src="BOM.png" alt="Fronteiras Sagradas - Por Que Seu Pedido à Pombagira Pode Ser Espiritualmente Ofensivo" width="800" height="447" decoding="async" loading="lazy">
+                                </picture>
+                                <div class="deck-card-body">
+                                    <h4 class="deck-card-title"><i class="fa-solid fa-hand" aria-hidden="true"></i> Fronteiras Sagradas</h4>
+                                    <p class="deck-card-desc">Por que seu pedido à Pombagira pode ser espiritualmente ofensivo.</p>
+                                    <a class="deck-cta" href="portal/fronteiras-sagradas.html" target="_blank" rel="noopener">Ler Artigo Completo 🌹</a>
+                                </div>
+                            </article>
+
+                            <article class="deck-card" data-deck-pos="1" aria-hidden="true" inert>
+                                <picture class="deck-card-media">
+                                    <source type="image/webp" srcset="fotos/como-nasce-uma-pombagira.webp">
+                                    <img class="deck-card-img" src="fotos/como-nasce-uma-pombagira.png" alt="Como Nasce Uma Pombagira? A Genealogia das Histórias e a Memória Oral" width="800" height="450" decoding="async" loading="lazy">
+                                </picture>
+                                <div class="deck-card-body">
+                                    <h4 class="deck-card-title"><i class="fa-solid fa-seedling" aria-hidden="true"></i> Como Nasce Uma Pombagira?</h4>
+                                    <p class="deck-card-desc">A Genealogia das Histórias e a Memória Oral.</p>
+                                    <a class="deck-cta" href="portal/como-nasce-uma-pombagira.html" target="_blank" rel="noopener" tabindex="-1">Ler Artigo Completo 🌹</a>
+                                </div>
+                            </article>
+
+                            <article class="deck-card" data-deck-pos="2" aria-hidden="true" inert>
+                                <picture class="deck-card-media">
+                                    <source type="image/webp" srcset="fotos/alem-dos-feiticos-comerciais.webp">
+                                    <img class="deck-card-img" src="fotos/alem-dos-feiticos-comerciais.png" alt="Além dos Feitiços Comerciais - Soberania Espiritual nos Rituais Diários" width="800" height="450" decoding="async" loading="lazy">
+                                </picture>
+                                <div class="deck-card-body">
+                                    <h4 class="deck-card-title"><i class="fa-solid fa-gem" aria-hidden="true"></i> Além dos Feitiços Comerciais</h4>
+                                    <p class="deck-card-desc">Encontrando a Verdadeira Soberania Espiritual em Seus Rituais Diários.</p>
+                                    <a class="deck-cta" href="portal/feiticos-comerciais.html" target="_blank" rel="noopener" tabindex="-1">Ler Artigo Completo 🌹</a>
+                                </div>
+                            </article>
+
+                            <article class="deck-card" data-deck-pos="hidden" aria-hidden="true" inert>
+                                <picture class="deck-card-media">
+                                    <source type="image/webp" srcset="fotos/SCipriano.webp">
+                                    <img class="deck-card-img" src="fotos/SCipriano.png" alt="Livro de São Cipriano" width="800" height="450" decoding="async" loading="lazy">
+                                </picture>
+                                <div class="deck-card-body">
+                                    <h4 class="deck-card-title"><i class="fa-solid fa-book-bible" aria-hidden="true"></i> Livro de São Cipriano</h4>
+                                    <p class="deck-card-desc">Desmistifique um dos maiores mitos sobre as Guardiãs.</p>
+                                    <a class="deck-cta" href="portal/sao-cipriano.html" target="_blank" rel="noopener" tabindex="-1">Ler Artigo Completo 🌹</a>
+                                </div>
+                            </article>
+
+                            <article class="deck-card" data-deck-pos="hidden" aria-hidden="true" inert>
+                                <picture class="deck-card-media">
+                                    <source type="image/webp" srcset="fotos/MPom.webp">
+                                    <img class="deck-card-img" src="fotos/MPom.png" alt="Características de quem tem Pombagira" width="800" height="450" decoding="async" loading="lazy">
+                                </picture>
+                                <div class="deck-card-body">
+                                    <h4 class="deck-card-title"><i class="fa-solid fa-user-check" aria-hidden="true"></i> Quem Tem Pombagira</h4>
+                                    <p class="deck-card-desc">Desmistifique os estereótipos sobre a ligação espiritual.</p>
+                                    <a class="deck-cta" href="portal/caracteristicas.html" target="_blank" rel="noopener" tabindex="-1">Ler Artigo Completo 🌹</a>
+                                </div>
+                            </article>
+
+                            <article class="deck-card" data-deck-pos="hidden" aria-hidden="true" inert>
+                                <picture class="deck-card-media">
+                                    <source type="image/webp" srcset="fotos/TOP.webp">
+                                    <img class="deck-card-img" src="fotos/TOP.png" alt="Como saber se tenho uma Pombagira me acompanhando" width="800" height="450" decoding="async" loading="lazy">
+                                </picture>
+                                <div class="deck-card-body">
+                                    <h4 class="deck-card-title"><i class="fa-solid fa-circle-question" aria-hidden="true"></i> Pombagira Acompanhando</h4>
+                                    <p class="deck-card-desc">Descubra os sinais e sensações de sua presença.</p>
+                                    <a class="deck-cta" href="portal/como-saber.html" target="_blank" rel="noopener" tabindex="-1">Ler Artigo Completo 🌹</a>
+                                </div>
+                            </article>
+
+                            <article class="deck-card" data-deck-pos="hidden" aria-hidden="true" inert>
+                                <picture class="deck-card-media">
+                                    <source type="image/webp" srcset="fotos/quatro-faces.webp">
+                                    <img class="deck-card-img" src="fotos/quatro-faces.png" alt="Hécate, Lilith, Morrigan e Kali" width="800" height="450" decoding="async" loading="lazy">
+                                </picture>
+                                <div class="deck-card-body">
+                                    <h4 class="deck-card-title"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i> As Quatro Faces</h4>
+                                    <p class="deck-card-desc">Reflita sobre os arquétipos indomáveis e transições do feminino.</p>
+                                    <a class="deck-cta" href="portal/quatro-faces.html" target="_blank" rel="noopener" tabindex="-1">Ler Artigo Completo 🌹</a>
+                                </div>
+                            </article>
+
+                            <article class="deck-card" data-deck-pos="hidden" aria-hidden="true" inert>
+                                <picture class="deck-card-media">
+                                    <source type="image/webp" srcset="fotos/por-que-nunca-desaparecem.webp">
+                                    <img class="deck-card-img" src="fotos/por-que-nunca-desaparecem.png" alt="Por Que Algumas Figuras Nunca Desaparecem" width="800" height="533" decoding="async" loading="lazy">
+                                </picture>
+                                <div class="deck-card-body">
+                                    <h4 class="deck-card-title"><i class="fa-solid fa-infinity" aria-hidden="true"></i> Por Que Não Desaparecem?</h4>
+                                    <p class="deck-card-desc">A liminaridade e o papel destas figuras místicas na transformação.</p>
+                                    <a class="deck-cta" href="portal/por-que-nunca-desaparecem.html" target="_blank" rel="noopener" tabindex="-1">Ler Artigo Completo 🌹</a>
+                                </div>
+                            </article>
+
+                            <article class="deck-card" data-deck-pos="hidden" aria-hidden="true" inert>
+                                <picture class="deck-card-media">
+                                    <source type="image/webp" srcset="fotos/pombagiras-na-historia.webp">
+                                    <img class="deck-card-img" src="fotos/pombagiras-na-historia.png" alt="Onde as Pombagiras Aparecem na História" width="800" height="450" decoding="async" loading="lazy">
+                                </picture>
+                                <div class="deck-card-body">
+                                    <h4 class="deck-card-title"><i class="fa-solid fa-landmark" aria-hidden="true"></i> Pombagiras na História</h4>
+                                    <p class="deck-card-desc">Uma jornada histórica pelos ambientes que os livros oficiais ocultaram.</p>
+                                    <a class="deck-cta" href="portal/pombagiras-na-historia.html" target="_blank" rel="noopener" tabindex="-1">Ler Artigo Completo 🌹</a>
+                                </div>
+                            </article>
+
+                            <article class="deck-card" data-deck-pos="hidden" aria-hidden="true" inert>
+                                <picture class="deck-card-media">
+                                    <source type="image/webp" srcset="fotos/sombra-feminina.webp">
+                                    <img class="deck-card-img" src="fotos/sombra-feminina.jpeg" alt="A Sombra Feminina da Pombagira em Mim" width="800" height="446" decoding="async" loading="lazy">
+                                </picture>
+                                <div class="deck-card-body">
+                                    <h4 class="deck-card-title"><i class="fa-solid fa-moon" aria-hidden="true"></i> Sombra Feminina</h4>
+                                    <p class="deck-card-desc">Uma análise profunda entre espiritualidade e psicologia.</p>
+                                    <a class="deck-cta" href="portal/sombra-feminina.html" target="_blank" rel="noopener" tabindex="-1">Ler Artigo Completo 🌹</a>
+                                </div>
+                            </article>
+
+                            <article class="deck-card" data-deck-pos="hidden" aria-hidden="true" inert>
+                                <picture class="deck-card-media">
+                                    <source type="image/webp" srcset="fotos/medo-de-pombagira.webp">
+                                    <img class="deck-card-img" src="fotos/medo-de-pombagira.jpeg" alt="Por Que Algumas Pessoas Têm Medo das Pombagiras?" width="800" height="446" decoding="async" loading="lazy">
+                                </picture>
+                                <div class="deck-card-body">
+                                    <h4 class="deck-card-title"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Medo de Pombagira</h4>
+                                    <p class="deck-card-desc">Uma investigação sobre o medo do feminino livre.</p>
+                                    <a class="deck-cta" href="portal/medo-pombagira.html" target="_blank" rel="noopener" tabindex="-1">Ler Artigo Completo 🌹</a>
+                                </div>
+                            </article>
+
+                            <article class="deck-card" data-deck-pos="hidden" aria-hidden="true" inert>
+                                <picture class="deck-card-media">
+                                    <source type="image/webp" srcset="fotos/quatro-faces-variante.webp">
+                                    <img class="deck-card-img" src="fotos/quatro-faces-variante.jpeg" alt="Quais São os Sinais de uma Pombagira?" width="800" height="446" decoding="async" loading="lazy">
+                                </picture>
+                                <div class="deck-card-body">
+                                    <h4 class="deck-card-title"><i class="fa-solid fa-bell" aria-hidden="true"></i> Sinais de Pombagira</h4>
+                                    <p class="deck-card-desc">Um guia completo para entender a ligação espiritual.</p>
+                                    <a class="deck-cta" href="portal/sinais-pombagira.html" target="_blank" rel="noopener" tabindex="-1">Ler Artigo Completo 🌹</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="deck-controls">
+                            <p class="deck-counter" id="deckCounter" aria-live="polite" aria-atomic="true">1 / 12</p>
+                            <button type="button" class="deck-next-btn" id="deckNextBtn">Próximo artigo</button>
+                            <a href="#deck-todos-artigos" class="deck-all-link" id="deckAllLink">Ver todos os artigos</a>
+                        </div>
+                    </div>
+                </section>
+                <div id="deck-todos-artigos" class="deck-list-anchor" aria-hidden="true"></div>
+
+                <script id="deck-script">
+                (function() {
+                    var deckRoot = document.getElementById('deck-descobre');
+                    var deckStage = document.getElementById('deckStage');
+                    var deckCounter = document.getElementById('deckCounter');
+                    var deckNextBtn = document.getElementById('deckNextBtn');
+                    var deckAllLink = document.getElementById('deckAllLink');
+                    if (!deckRoot || !deckStage) return;
+
+                    var deckCards = Array.prototype.slice.call(deckStage.querySelectorAll('.deck-card'));
+                    var deckTotal = deckCards.length;
+                    if (!deckTotal) return;
+
+                    var deckIndex = 0;
+                    var deckExitTimer = null;
+                    var deckPointerId = null;
+                    var deckStartX = 0;
+                    var deckStartY = 0;
+                    var deckLastDx = 0;
+                    var deckIsHoriz = false;
+                    var deckWasDragged = false;
+                    var deckDragResetTimer = null;
+
+                    function deckReducedMotion() {
+                        return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+                    }
+
+                    function deckSyncA11y() {
+                        for (var i = 0; i < deckTotal; i++) {
+                            var card = deckCards[i];
+                            var cta = card.querySelector('.deck-cta');
+                            if (i === deckIndex) {
+                                card.removeAttribute('aria-hidden');
+                                card.removeAttribute('inert');
+                                if (cta) cta.removeAttribute('tabindex');
+                            } else {
+                                card.setAttribute('aria-hidden', 'true');
+                                card.setAttribute('inert', '');
+                                if (cta) cta.setAttribute('tabindex', '-1');
+                            }
+                        }
+                        if (deckCounter) {
+                            deckCounter.textContent = (deckIndex + 1) + ' / ' + deckTotal;
+                        }
+                    }
+
+                    function deckApplyStackPositions(activeIdx, skipHideCard) {
+                        var next1 = (activeIdx + 1) % deckTotal;
+                        var next2 = (activeIdx + 2) % deckTotal;
+                        for (var i = 0; i < deckTotal; i++) {
+                            var card = deckCards[i];
+                            if (card === skipHideCard) continue;
+                            card.classList.remove('deck-dragging', 'deck-card-pressed');
+                            card.style.transform = '';
+                            card.style.opacity = '';
+                            if (i === activeIdx) {
+                                card.setAttribute('data-deck-pos', '0');
+                            } else if (i === next1 && deckTotal > 1) {
+                                card.setAttribute('data-deck-pos', '1');
+                            } else if (i === next2 && deckTotal > 2) {
+                                card.setAttribute('data-deck-pos', '2');
+                            } else {
+                                card.setAttribute('data-deck-pos', 'hidden');
+                            }
+                        }
+                    }
+
+                    function deckGo(targetIdx, dir, source) {
+                        var nextIdx = ((targetIdx % deckTotal) + deckTotal) % deckTotal;
+                        if (nextIdx === deckIndex && deckTotal > 1) return;
+
+                        if (deckExitTimer) {
+                            clearTimeout(deckExitTimer);
+                            deckExitTimer = null;
+                        }
+
+                        var oldIdx = deckIndex;
+                        var instant = deckReducedMotion() || source === 'keyboard';
+
+                        if (instant) {
+                            deckStage.classList.add('deck-instant');
+                            deckIndex = nextIdx;
+                            deckApplyStackPositions(deckIndex, null);
+                            deckSyncA11y();
+                            void deckStage.offsetWidth;
+                            deckStage.classList.remove('deck-instant');
+                            return;
+                        }
+
+                        if (dir === 'prev') {
+                            var oldBackIdx = (oldIdx + 2) % deckTotal;
+                            var oldBackCard = (deckTotal > 2 && oldBackIdx !== nextIdx) ? deckCards[oldBackIdx] : null;
+                            var incomingCard = deckCards[nextIdx];
+
+                            if (oldBackCard) {
+                                oldBackCard.setAttribute('data-deck-pos', 'out-back');
+                            }
+
+                            incomingCard.classList.add('deck-dragging');
+                            incomingCard.style.transform = 'translate3d(-28px, -4px, 0) scale(0.96) rotate(-2.4deg)';
+                            incomingCard.style.opacity = '0';
+                            incomingCard.setAttribute('data-deck-pos', '0');
+                            void incomingCard.offsetWidth;
+
+                            deckIndex = nextIdx;
+                            incomingCard.classList.remove('deck-dragging');
+                            deckApplyStackPositions(deckIndex, oldBackCard);
+                            deckSyncA11y();
+
+                            if (oldBackCard) {
+                                deckExitTimer = setTimeout(function() {
+                                    if (oldBackCard.getAttribute('data-deck-pos') === 'out-back') {
+                                        oldBackCard.setAttribute('data-deck-pos', 'hidden');
+                                    }
+                                }, 220);
+                            }
+                            return;
+                        }
+
+                        var outgoingCard = deckCards[oldIdx];
+                        outgoingCard.classList.remove('deck-dragging', 'deck-card-pressed');
+                        outgoingCard.style.transform = '';
+                        outgoingCard.style.opacity = '';
+                        outgoingCard.setAttribute('data-deck-pos', 'out-left');
+
+                        deckIndex = nextIdx;
+                        deckApplyStackPositions(deckIndex, outgoingCard);
+                        deckSyncA11y();
+
+                        deckExitTimer = setTimeout(function() {
+                            if (outgoingCard.getAttribute('data-deck-pos') === 'out-left') {
+                                outgoingCard.setAttribute('data-deck-pos', 'hidden');
+                            }
+                        }, 220);
+                    }
+
+                    if (deckNextBtn) {
+                        deckNextBtn.addEventListener('click', function() {
+                            deckGo(deckIndex + 1, 'next', 'button');
+                        });
+                    }
+
+                    if (deckAllLink) {
+                        deckAllLink.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            var anchor = document.getElementById('deck-todos-artigos') || document.querySelector('#curiosidades .grid-cards');
+                            if (anchor) {
+                                anchor.scrollIntoView({ behavior: deckReducedMotion() ? 'auto' : 'smooth', block: 'start' });
+                            }
+                        });
+                    }
+
+                    deckStage.addEventListener('pointerdown', function(e) {
+                        if (deckPointerId !== null) return;
+                        if (e.pointerType === 'mouse' && e.button !== 0) return;
+                        if (e.target && e.target.closest('.deck-cta')) return;
+
+                        deckPointerId = e.pointerId;
+                        deckStartX = e.clientX;
+                        deckStartY = e.clientY;
+                        deckLastDx = 0;
+                        deckIsHoriz = false;
+
+                        if (!deckReducedMotion() && deckCards[deckIndex]) {
+                            deckCards[deckIndex].classList.add('deck-card-pressed');
+                        }
+                    });
+
+                    deckStage.addEventListener('pointermove', function(e) {
+                        if (e.pointerId !== deckPointerId) return;
+                        var dx = e.clientX - deckStartX;
+                        var dy = e.clientY - deckStartY;
+                        var activeCard = deckCards[deckIndex];
+
+                        if (!deckIsHoriz) {
+                            if (Math.abs(dy) > 10 && Math.abs(dy) >= Math.abs(dx)) {
+                                if (activeCard) activeCard.classList.remove('deck-card-pressed');
+                                deckPointerId = null;
+                                return;
+                            }
+                            if (Math.abs(dx) > 10 && Math.abs(dx) > Math.abs(dy) * 1.2) {
+                                deckIsHoriz = true;
+                                deckWasDragged = true;
+                                if (deckDragResetTimer) clearTimeout(deckDragResetTimer);
+                                if (activeCard) activeCard.classList.remove('deck-card-pressed');
+                                if (deckStage.setPointerCapture) {
+                                    try { deckStage.setPointerCapture(e.pointerId); } catch (_) {}
+                                }
+                            }
+                        }
+
+                        if (deckIsHoriz && activeCard) {
+                            deckLastDx = dx;
+                            if (!deckReducedMotion()) {
+                                var damped = Math.max(-120, Math.min(120, dx * 0.65));
+                                activeCard.classList.add('deck-dragging');
+                                activeCard.style.transform = 'translate3d(' + damped + 'px, 0, 0) rotate(' + (damped * 0.03) + 'deg)';
+                            }
+                        }
+                    });
+
+                    function deckFinishPointer(e) {
+                        if (e.pointerId !== deckPointerId) return;
+                        var activeCard = deckCards[deckIndex];
+                        var finalDx = deckIsHoriz ? (e.clientX - deckStartX || deckLastDx) : 0;
+                        var wasHoriz = deckIsHoriz;
+
+                        if (activeCard) {
+                            activeCard.classList.remove('deck-card-pressed', 'deck-dragging');
+                            activeCard.style.transform = '';
+                        }
+                        if (deckStage.releasePointerCapture) {
+                            try { deckStage.releasePointerCapture(e.pointerId); } catch (_) {}
+                        }
+
+                        deckPointerId = null;
+                        deckIsHoriz = false;
+                        deckLastDx = 0;
+
+                        if (wasHoriz) {
+                            if (Math.abs(finalDx) >= 52) {
+                                if (finalDx < 0) deckGo(deckIndex + 1, 'next', 'swipe');
+                                else deckGo(deckIndex - 1, 'prev', 'swipe');
+                            }
+                            deckDragResetTimer = setTimeout(function() {
+                                deckWasDragged = false;
+                            }, 60);
+                        }
+                    }
+
+                    deckStage.addEventListener('pointerup', deckFinishPointer);
+                    deckStage.addEventListener('pointercancel', deckFinishPointer);
+
+                    deckStage.addEventListener('click', function(e) {
+                        if (e.target && e.target.closest('.deck-cta')) return;
+                        if (deckWasDragged) {
+                            deckWasDragged = false;
+                            return;
+                        }
+                        deckGo(deckIndex + 1, 'next', 'tap');
+                    });
+
+                    deckRoot.addEventListener('keydown', function(e) {
+                        if (e.key === 'ArrowRight') {
+                            e.preventDefault();
+                            deckGo(deckIndex + 1, 'next', 'keyboard');
+                        } else if (e.key === 'ArrowLeft') {
+                            e.preventDefault();
+                            deckGo(deckIndex - 1, 'prev', 'keyboard');
+                        }
+                    });
+
+                    deckApplyStackPositions(0, null);
+                    deckSyncA11y();
+                })();
+                </script>
                 <div class="grid-cards">
                     <div class="card" onclick="window.open('portal/fronteiras-sagradas.html', '_blank')" style="cursor: pointer; border: 1px solid rgba(217, 4, 41, 0.2);">
                         <picture>
