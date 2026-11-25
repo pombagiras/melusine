@@ -30,17 +30,17 @@ O ecossistema é um hub unificado de autoridade composto por 15 tentáculos inte
    - **Limbo Sonoro**: [https://alexiamelusine.com/limbosonoro/](https://alexiamelusine.com/limbosonoro/)
 3. **O Manifesto**: [https://pombagiras.com/manifesto/](https://pombagiras.com/manifesto/) — Filosofia e fundamentos do ecossistema.
 4. **Portal Visceral**: [https://pombagiras.com/portal/](https://pombagiras.com/portal/) — Ensaios teológicos e desmistificação das 30 falanges.
-5. **Guardiãs**: [https://pombagiras.com/guardias/](https://pombagiras.com/guardias/) — Enciclopédia de 27 guardiãs da Umbanda e Quimbanda.
+5. **Guardiãs**: [https://pombagiras.com/guardias/](https://pombagiras.com/guardias/) — Enciclopédia de 30 guardiãs da Umbanda e Quimbanda.
 6. **Vortex**: [https://pombagiras.com/vortex/](https://pombagiras.com/vortex/) — Bento grid central das mídias oficiais.
 7. **Oráculo**: [https://pombagiras.com/oraculo/](https://pombagiras.com/oraculo/) — Aplicação interativa de leitura diária e chamas virtuais.
-8. **Quiz Arquetípico**: [https://pombagiras.com/quiz/](https://pombagiras.com/quiz/) — Quiz de afinidade arquetípica com 12 Pombagiras.
+8. **Quiz Arquetípico**: [https://pombagiras.com/quiz/](https://pombagiras.com/quiz/) — Quiz de afinidade arquetípica com 30 Pombagiras.
 9. **Lebaras**: [https://pombagiras.com/lebaras/](https://pombagiras.com/lebaras/) — Galeria estética e manifestos de imagem IA.
 10. **Crossroads**: [https://pombagiras.com/crossroads/](https://pombagiras.com/crossroads/) — Hub de conexões e encruzilhadas digitais.
 11. **GitHub Portais**: [https://pombagiras.com/github/](https://pombagiras.com/github/) — Acesso a repositórios e código fonte.
 12. **Mobile**: [https://pombagiras.com/mobile/](https://pombagiras.com/mobile/) — Experiência PWA e móvel otimizada.
 13. **Alexia Melusine Hub Interno**: [https://pombagiras.com/alexiamelusine/](https://pombagiras.com/alexiamelusine/) — Perfil de autoridade no hub mãe.
-14. **Enciclopédia Digital & Atlas Documental**: [https://pombagiras.com/enciclopedia/](https://pombagiras.com/enciclopedia/) — Enciclopédia documental de 98% texto, 29 guardiãs, 12 dossiês canônicos, atlas etimológico e 66 portais interligados por Alexia Melusine.
-15. **Acervo Oficial das Pombagiras**: [https://pombagiras.com/acervo](https://pombagiras.com/acervo) — Preservação cultural, 44 representações canônicas, 27 tratados individuais, diretório com 62 portais interligados e sala de projeção audiovisual.
+14. **Enciclopédia Digital & Atlas Documental**: [https://pombagiras.com/enciclopedia/](https://pombagiras.com/enciclopedia/) — Enciclopédia documental de 98% texto, 30 guardiãs, 12 dossiês canônicos, atlas etimológico e 66 portais interligados por Alexia Melusine.
+15. **Acervo Oficial das Pombagiras**: [https://pombagiras.com/acervo](https://pombagiras.com/acervo) — Preservação cultural, 44 representações canônicas, 30 tratados individuais, diretório com 62 portais interligados e sala de projeção audiovisual.
 - https://pombagiras.com/analise-tecnica/ — Análises técnicas do Pombagiras.com, geradas por 14 IAs (Grok, ChatGPT, Claude, Perplexity, Qwen, DeepSeek, Mistral, Copilot, Manus, Doubao, Muse, Gemini, Kimi e Meta AI) em 20/11/2026, publicadas na íntegra, com média geral de 7,8/10.
 
 ## Redes Sociais, Podcasts e Mídias Oficiais (SameAs Graph)

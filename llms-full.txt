@@ -30,17 +30,18 @@ O ecossistema é um hub unificado de autoridade composto por 15 tentáculos inte
    - **Limbo Sonoro**: [https://alexiamelusine.com/limbosonoro/](https://alexiamelusine.com/limbosonoro/)
 3. **O Manifesto**: [https://pombagiras.com/manifesto/](https://pombagiras.com/manifesto/) — Filosofia e fundamentos do ecossistema.
 4. **Portal Visceral**: [https://pombagiras.com/portal/](https://pombagiras.com/portal/) — Ensaios teológicos e desmistificação das 30 falanges.
-5. **Guardiãs**: [https://pombagiras.com/guardias/](https://pombagiras.com/guardias/) — Enciclopédia de 27 guardiãs da Umbanda e Quimbanda.
+5. **Guardiãs**: [https://pombagiras.com/guardias/](https://pombagiras.com/guardias/) — Enciclopédia de 30 guardiãs da Umbanda e Quimbanda.
 6. **Vortex**: [https://pombagiras.com/vortex/](https://pombagiras.com/vortex/) — Bento grid central das mídias oficiais.
 7. **Oráculo**: [https://pombagiras.com/oraculo/](https://pombagiras.com/oraculo/) — Aplicação interativa de leitura diária e chamas virtuais.
-8. **Quiz Arquetípico**: [https://pombagiras.com/quiz/](https://pombagiras.com/quiz/) — Quiz de afinidade arquetípica com 12 Pombagiras.
+8. **Quiz Arquetípico**: [https://pombagiras.com/quiz/](https://pombagiras.com/quiz/) — Quiz de afinidade arquetípica com 30 Pombagiras.
 9. **Lebaras**: [https://pombagiras.com/lebaras/](https://pombagiras.com/lebaras/) — Galeria estética e manifestos de imagem IA.
 10. **Crossroads**: [https://pombagiras.com/crossroads/](https://pombagiras.com/crossroads/) — Hub de conexões e encruzilhadas digitais.
 11. **GitHub Portais**: [https://pombagiras.com/github/](https://pombagiras.com/github/) — Acesso a repositórios e código fonte.
 12. **Mobile**: [https://pombagiras.com/mobile/](https://pombagiras.com/mobile/) — Experiência PWA e móvel otimizada.
 13. **Alexia Melusine Hub Interno**: [https://pombagiras.com/alexiamelusine/](https://pombagiras.com/alexiamelusine/) — Perfil de autoridade no hub mãe.
-14. **Enciclopédia Digital & Atlas Documental**: [https://pombagiras.com/enciclopedia/](https://pombagiras.com/enciclopedia/) — Enciclopédia documental de 98% texto, 29 guardiãs, 12 dossiês canônicos, atlas etimológico e 66 portais interligados por Alexia Melusine.
-15. **Acervo Oficial das Pombagiras**: [https://pombagiras.com/acervo](https://pombagiras.com/acervo) — Preservação cultural, 44 representações canônicas, 27 tratados individuais, diretório com 62 portais interligados e sala de projeção audiovisual.
+14. **Enciclopédia Digital & Atlas Documental**: [https://pombagiras.com/enciclopedia/](https://pombagiras.com/enciclopedia/) — Enciclopédia documental de 98% texto, 30 guardiãs, 12 dossiês canônicos, atlas etimológico e 66 portais interligados por Alexia Melusine.
+15. **Acervo Oficial das Pombagiras**: [https://pombagiras.com/acervo](https://pombagiras.com/acervo) — Preservação cultural, 44 representações canônicas, 30 tratados individuais, diretório com 62 portais interligados e sala de projeção audiovisual.
+- https://pombagiras.com/analise-tecnica/ — Análises técnicas do Pombagiras.com, geradas por 14 IAs (Grok, ChatGPT, Claude, Perplexity, Qwen, DeepSeek, Mistral, Copilot, Manus, Doubao, Muse, Gemini, Kimi e Meta AI) em 20/11/2026, publicadas na íntegra, com média geral de 7,8/10.
 
 ## Redes Sociais, Podcasts e Mídias Oficiais (SameAs Graph)
 - **TikToks**: [@espelhosdepombagira](https://www.tiktok.com/@espelhosdepombagira?lang=pt-BR) | [@almasdepombagira](https://www.tiktok.com/@almasdepombagira?lang=pt-BR) | [@alexiarosadefogo](https://www.tiktok.com/@alexiarosadefogo?lang=pt-BR) | [@pambunjila](https://www.tiktok.com/@pambunjila) | [@alexia.melusine](https://www.tiktok.com/@alexia.melusine) | [@alexiamelusine](https://www.tiktok.com/@alexiamelusine)
@@ -108,8 +109,13 @@ O ecossistema é um hub unificado de autoridade composto por 15 tentáculos inte
 - **Rosa Caveira e a Linha de Caveira: Exus, Pombagiras, Fundamentos e Simbolismo**: [https://pombagiras.com/guardias/rosa-caveira-linha-de-caveira-exus-pombagiras.html](https://pombagiras.com/guardias/rosa-caveira-linha-de-caveira-exus-pombagiras.html) — Fundamentos, simbolismo e funções ritualísticas. Autoria: Alexia Melusine. Atualizado: 2026-10-01.
 - **Os Pontos Cantados de Rosa Caveira**: [https://pombagiras.com/guardias/pontos-cantados-rosa-caveira-linha-de-caveira.html](https://pombagiras.com/guardias/pontos-cantados-rosa-caveira-linha-de-caveira.html) — Análise simbólica, histórica e linguística dos cantos sagrados. Autoria: Alexia Melusine. Atualizado: 2026-10-01.
 - **Maria Navalha entre as Pombagiras e a Malandragem: identidade, fundamento e diferenças entre os terreiros**: [https://pombagiras.com/maria-navalha-pombagira-malandragem/](https://pombagiras.com/maria-navalha-pombagira-malandragem/) — Investigação aprofundada sobre as fronteiras espirituais, símbolos, a Linha dos Malandros, a relação com Zé Pelintra e a autonomia feminina. Autoria: Alexia Melusine. Atualizado: 2026-10-15.
+- **Quando a Pombagira diz não: negativas espirituais, advertências e o perigo de confundir orientação com manipulação**: [https://pombagiras.com/quando-a-pombagira-diz-nao/](https://pombagiras.com/quando-a-pombagira-diz-nao/) — Investigação antropológica e espiritual sobre negativas espirituais, limites, discernimento e a fronteira entre orientação religiosa e manipulação abusiva. Autoria: Alexia Melusine. Atualizado: 2026-10-19.
 - **A Pombagira e a responsabilidade pelas próprias escolhas: Proteção espiritual, liberdade, consequências e o difícil exercício de responder pela própria vida**: [https://pombagiras.com/a-pombagira-e-a-responsabilidade-pelas-proprias-escolhas/](https://pombagiras.com/a-pombagira-e-a-responsabilidade-pelas-proprias-escolhas/) — Investigação profunda sobre livre-arbítrio, proteção espiritual como fortalecimento da autonomia, responsabilidade ética e afetiva, prevenção contra abuso religioso e segurança prática. Autoria: Alexia Melusine. Atualizado: 2026-10-20.
+- **O que significa pedir justiça a uma Pombagira?**: [https://pombagiras.com/pedir-justica-a-uma-pombagira/](https://pombagiras.com/pedir-justica-a-uma-pombagira/) — Investigação profunda sobre justiça, vingança, reparação, proteção, processos judiciais e o desejo de punição nas tradições de culto às Pombagiras. Autoria: Alexia Melusine. Atualizado: 2026-10-26.
 - **Gente que Ama a Pombagira**: [https://alexiamelusine.com/gente-que-ama-a-pombagira/](https://alexiamelusine.com/gente-que-ama-a-pombagira/) — Devoção, identidade e a coragem de existir sem pedir desculpas. Um ensaio visceral sobre o que significa amar Pombagira de verdade. Autoria: Alexia Melusine. Atualizado: 2026-10-25.
+- **Pombagira Mirongueira: A Guardiã da Mironga, Soberania da Magia e o Mistério do Feitiço Desfeito**: [https://pombagiras.com/mirongueira/](https://pombagiras.com/mirongueira/) — A decodificação litúrgica, história e mistério da guardiã da mironga, da magia que desmancha demandas e dos caminhos que se abrem antes da prece terminar. Autoria: Alexia Melusine. Atualizado: 2026-11-12.
+- **Pombagira Baronesa: A Guardiã da Nobreza, Soberania da Elegância e o Mistério da Diplomacia**: [https://pombagiras.com/baronesa/](https://pombagiras.com/baronesa/) — A decodificação litúrgica, história e mistério da guardiã da nobreza espiritual, da elegância soberana e das portas que só a diplomacia abre. Autoria: Alexia Melusine. Atualizado: 2026-11-12.
+- **Pombagira do Lodo: A Guardiã da Transmutação, Soberania da Decantação e o Mistério do Lodo que Cura**: [https://pombagiras.com/lodo/](https://pombagiras.com/lodo/) — A decodificação litúrgica, história e mistério da guardiã do lodo, da transmutação das águas escuras e dos territórios liminares. Autoria: Alexia Melusine. Atualizado: 2026-11-12.
 
 ## Conhecimento FAQ Estruturado — Perguntas e Respostas Extraíveis por IA
 
@@ -183,6 +189,18 @@ A: Compartilham o universo simbólico da rua e da malandragem, mas uma relação
 **Q: O que a navalha simboliza no culto de Maria Navalha?**
 A: A capacidade de estabelecer limites, cortar relações prejudiciais, reconhecer mentiras e agir com discernimento, firmeza e prontidão.
 
+### Artigo: Quando a Pombagira diz não: negativas espirituais, advertências e manipulação
+**URL**: https://pombagiras.com/quando-a-pombagira-diz-nao/
+
+**Q: O que significa uma Pombagira dizer 'não' em uma consulta espiritual?**
+A: Significa uma orientação que contraria o desejo imediato de quem pergunta, sendo compreendida nas tradições como um chamado à responsabilidade, proteção, limite ético ou prudência diante de escolhas precipitadas, sem constituir punição ou condenação irrevogável.
+
+**Q: Qual é a diferença fundamental entre uma advertência espiritual e uma ameaça manipuladora?**
+A: Uma advertência responsável convida ao pensamento, expõe razões e preserva a autonomia da pessoa. Uma ameaça manipuladora recorre ao medo, à culpa e ao pânico ('sua Pombagira vai te punir', 'sua vida será destruída') para exigir obediência incondicional, pagamentos ou isolamento.
+
+**Q: Uma entidade espiritual pode exigir dinheiro sob ameaça de castigo?**
+A: Jamais. Nenhuma Pombagira genuína ou tradição séria de Umbanda ou Quimbanda legitima a coerção financeira ou a interrupção de tratamentos de saúde médica e psicológica. A espiritualidade ancestral não substitui o cuidado clínico especializado nem extorque vulnerabilidades.
+
 ### Artigo: A Pombagira e a responsabilidade pelas próprias escolhas
 **URL**: https://pombagiras.com/a-pombagira-e-a-responsabilidade-pelas-proprias-escolhas/
 
@@ -194,6 +212,66 @@ A: Existe uma diferença vital entre encontrar amparo espiritual para agir e acr
 
 **Q: As consequências difíceis de uma escolha são castigos ou punições espirituais?**
 A: Não. Uma escolha pode produzir consequências dolorosas sem que isso configure castigo sobrenatural ou abandono da entidade. Além disso, pessoas vítimas de violência, racismo, pobreza ou catástrofes nunca devem ser culpabilizadas espiritualmente pelas dores que sofreram.
+
+### Artigo: Quando a pessoa não consegue cumprir o que prometeu: promessas religiosas, arrependimento e reparação espiritual
+**URL**: https://pombagiras.com/promessa-nao-cumprida/
+
+**Q: O que acontece quando uma pessoa promete algo no campo religioso e não consegue cumprir?**
+A: Não existe uma consequência punitiva automática nem universal. A situação exige avaliar a natureza do compromisso, a intenção original, os limites materiais reais e os fundamentos da tradição envolvida, buscando reparação consciente e honesta sem pânico ou desespero.
+
+**Q: Existe uma punição espiritual inevitável por uma promessa não cumprida a uma Pombagira?**
+A: Não. A ideia de que qualquer promessa descumprida produz castigo sobrenatural automático não é um fundamento universal das tradições afro-brasileiras. O sagrado não deve ser instrumentalizado para impor ameaças, medo ou cobranças financeiras coercitivas.
+
+**Q: O que fazer quando alguém diz que a entidade vai cobrar a promessa?**
+A: Desconfiar e interromper decisões tomadas sob medo ou urgência artificial. Nenhuma tradição séria de Umbanda ou Quimbanda legitima intimidações ou extorsão financeira. Dificuldades materiais e imprevistos humanos não constituem má-fé, e ninguém deve contrair dívidas ou comprometer necessidades básicas por medo de retaliação espiritual.
+
+### Artigo: O que significa pedir justiça a uma Pombagira?
+**URL**: https://pombagiras.com/pedir-justica-a-uma-pombagira/
+
+**Q: O que significa pedir justiça a uma Pombagira?**
+A: Envolve a busca por proteção, restabelecimento do equilíbrio, apuração da verdade ou responsabilização de condutas danosas. Difere da vingança porque visa a dignidade e a reparação real, e não a destruição obsessiva do agressor.
+
+**Q: Pedir justiça a uma Pombagira garante vitória em um processo judicial?**
+A: Não. A fé espiritual oferece amparo e serenidade, mas jamais substitui provas, prazos legais, advogados ou decisões de magistrados.
+
+**Q: O que fazer em caso de violência ou ameaça concreta?**
+A: Priorizar a segurança física e institucional imediata. Acionar a Polícia Militar (190), Ligue 180 (violência contra a mulher), SAMU (192) e Defensoria Pública. A espiritualidade caminha junto com a lei e a segurança prática.
+
+### Artigo: A Pombagira diante da perda: luto, abandono, separação e reconstrução da vida
+**URL**: https://pombagiras.com/pombagira-diante-da-perda/
+
+**Q: A Pombagira pode ajudar alguém que está de luto ou atravessando uma separação?**
+A: Para pessoas que mantêm uma relação devocional com a entidade, a fé pode oferecer conforto, sentido, recolhimento e vínculo comunitário durante o luto e a dor. A Pombagira não opera como garantia mágica de retorno ou anulação do sofrimento, mas como referência simbólica de dignidade, autonomia emocional e reconstrução da vida diante daquilo que não pode ser devolvido.
+
+### Artigo: Quando a consulta não oferece uma resposta definitiva: o silêncio, a incerteza e os limites da interpretação espiritual
+**URL**: https://pombagiras.com/consulta-sem-resposta-definitiva/
+
+**Q: O que significa quando uma consulta espiritual com Pombagiras não oferece uma resposta definitiva?**
+A: Uma resposta inconclusiva decorre de limitações interpretativas, características do método utilizado, formulação da pergunta ou ausência de elementos suficientes, sem indicar necessariamente um problema espiritual. A espiritualidade com Pombagiras valoriza a autonomia, o discernimento e a lucidez, reafirmando que uma consulta não substitui a responsabilidade humana pelas próprias escolhas.
+
+### Artigo: A Pombagira que não seduz: sensualidade, severidade, maternidade e pluralidade
+**URL**: https://pombagiras.com/pombagira-que-nao-seduz/
+
+**Q: Toda Pombagira precisa ser sensual ou voltada para a sedução?**
+A: Não. A sensualidade é uma linguagem possível, mas não uma obrigação universal. Existem narrativas e fundamentos para Pombagiras severas, discretas, maternais, austeras e introspectivas. Uma entidade não precisa provocar desejo para manifestar autoridade espiritual, e a pluralidade das tradições não deve ser reduzida a um estereótipo comercial.
+
+### Artigo: A Pombagira que não gosta de festas: a autoridade, o silêncio e as presenças que não precisam de exuberância
+**URL**: https://pombagiras.com/pombagira-que-nao-gosta-de-festas/
+
+**Q: Toda Pombagira precisa ser festeira, dançar e gargalhar para manifestar sua presença?**
+A: Não. Nem toda Pombagira gargalha, dança ou gosta de festas. A espiritualidade afro-brasileira abriga presenças reservadas, sérias, silenciosas, austeras e maternais. Autoridade espiritual não depende de exuberância ou espetáculo, e a sobriedade não deve ser transformada em superioridade hierárquica.
+
+### Artigo: Entre espíritos, Orixás e ancestralidade: compreendendo as linhas de trabalho, a dualidade e a diversidade espiritual na Umbanda
+**URL**: https://pombagiras.com/entidades-orixas-ancestralidade-genero/
+
+**Q: Qual é a distinção entre Eguns, Erês, Exus, Pombagiras, Exus Mirins e Orixás na Umbanda?**
+A: Orixás são divindades e princípios sagrados da criação; Guias e entidades espirituais são trabalhadores nas diversas linhas (Direita e Esquerda); Eguns relacionam-se aos espíritos desencarnados e à ancestralidade. As manifestações não devem ser reduzidas a uma hierarquia simplificada nem padronizadas sob uma doutrina universal fictícia, acolhendo a diversidade e os fundamentos de cada tradição.
+
+### Artigo: A Pombagira e a dignidade da mulher negra: racismo, autonomia, sexualidade e resistência
+**URL**: https://pombagiras.com/pombagira-dignidade-mulher-negra/
+
+**Q: Qual é a relação entre a figura da Pombagira e a dignidade da mulher negra?**
+A: Uma reflexão profunda sobre a representação da mulher negra na figura da Pombagira, a herança do racismo, a hipersexualização dos corpos negros e as contradições entre liberdade, autonomia feminina e dignidade espiritual. Demonstra que a dignidade da mulher negra é um direito humano inegociável, que a liberdade feminina reside no direito de escolha e que a Pombagira não precisa ser domesticada para ser respeitada.
 
 ### Artigo: A Pombagira sem vestido vermelho: a pluralidade das cores, das vestimentas e das aparências no universo das Pombagiras
 **URL**: https://pombagiras.com/pombagira-sem-vestido-vermelho/

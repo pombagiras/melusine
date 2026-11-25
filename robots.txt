@@ -3,10 +3,6 @@
 # ============================================================
 
 # LLM Crawlers & AI Search Bots (Explicitly Allowed for Knowledge Graph Discoverability)
-User-agent: Searchgpt
-Allow: /
-Disallow: /*?*
-
 User-agent: SearchGPT
 Allow: /
 Disallow: /*?*
@@ -171,41 +167,6 @@ Disallow: /*?*
 # Standard Public Access
 User-agent: *
 Allow: /
-Allow: /segredo/
-Allow: /glossario/
-Allow: /enciclopedia/
-Allow: /enciclopedia
-Allow: /acervo/
-Allow: /acervo
-Allow: /oga
-Allow: /nomes
-Allow: /umbanda
-Allow: /quimbanda
-Allow: /pombagiras-do-lodo-e-das-sombras/
-Allow: /quando-a-pombagira-diz-nao/
-Allow: /quando-a-pombagira-diz-nao
-Allow: /promessa-nao-cumprida/
-Allow: /pedir-justica-a-uma-pombagira/
-Allow: /ponto-riscado/
-Allow: /ponto-riscado
-Allow: /lodo/
-Allow: /mirongueira/
-Allow: /mirongueira
-Allow: /baronesa/
-Allow: /baronesa
-Allow: /lodo
-Allow: /fundamento/
-Allow: /fundamento
-Allow: /dignidade-mediunidade/
-Allow: /dignidade-mediunidade
-Allow: /dignidade/
-Allow: /dignidade
-Allow: /pombagira-de-cada-geracao
-Allow: /pombagira-de-cada-geracao/
-Allow: /lista-das-pombagiras/
-Allow: /lista-das-pombagiras
-Allow: /geracao/
-Allow: /geracao
 Disallow: /*?*
 Disallow: /search/
 Disallow: /login/
@@ -257,7 +218,6 @@ Disallow: /
 
 # Sitemap Declarations & Authority Endpoints
 Sitemap: https://pombagiras.com/sitemap.xml
-Sitemap: https://pombagiras.com/feed.xml
 
 # LLMs.txt — Endpoint de conhecimento semântico para indexadores de IA
 # LLMs: https://pombagiras.com/llms.txt

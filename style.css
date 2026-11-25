@@ -36,6 +36,31 @@ body {
     transition: background-image 1.2s ease;
 }
 
+.skip-link {
+    position: fixed;
+    top: -120px;
+    left: 16px;
+    z-index: 10000;
+    background: #800020;
+    color: #FAF6EE;
+    border: 2px solid #C5A059;
+    border-radius: 999px;
+    padding: 10px 18px;
+    font-family: 'Geist', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.65);
+    transition: top 0.15s ease;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+    top: 16px;
+    outline: 3px solid #FAF6EE;
+    outline-offset: 2px;
+}
+
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -623,6 +648,8 @@ h4,
 .nav-tab {
     padding: 12px 20px;
     background: rgba(20, 5, 15, 0.8);
+    color: var(--text-light);
+    font-family: inherit;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 40px;
     cursor: pointer;
@@ -3012,5 +3039,24 @@ a.hero-search-result-item.is-focused {
         font-style: italic;
         text-align: center;
     }
+}
+
+.mob-menu-logo {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+}
+
+.footer-legal-a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    padding: 2px 4px;
+}
+
+.footer-nav-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 26px;
 }
 

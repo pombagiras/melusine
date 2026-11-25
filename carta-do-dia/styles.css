@@ -51,6 +51,31 @@ a {
   color: inherit;
 }
 
+.skip-link {
+  position: fixed;
+  top: -120px;
+  left: 16px;
+  z-index: 10000;
+  background: var(--oxblood);
+  color: var(--text-color);
+  border: 2px solid var(--gold);
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.65);
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 16px;
+  outline: 3px solid var(--text-color);
+  outline-offset: 2px;
+}
+
 button {
   font-family: inherit;
 }
@@ -72,7 +97,9 @@ button {
 
 .site-logo {
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
+  min-height: 32px;
+  padding-block: 4px;
   gap: 2px;
   text-decoration: none;
   cursor: pointer;
