@@ -10,13 +10,23 @@
     <description>Portal de Desmistificação, Antropologia, Arte &amp; Filosofia Ancestral das Guardiãs de Umbanda e Quimbanda.</description>
     <language>pt-BR</language>
     <copyright>© 2026 Pombagiras.com. Todos os direitos reservados.</copyright>
-    <lastBuildDate>Mon, 23 Nov 2026 10:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 10:00:00 GMT</lastBuildDate>
     <atom:link href="https://pombagiras.com/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://cdn.pombagiras.com/assets/favicon-round-512.png</url>
       <title>Pombagiras.com</title>
       <link>https://pombagiras.com/</link>
     </image>
+    <item>
+      <title>Pombagira e a Jurema: aproximações, diferenças e fronteiras entre tradições</title>
+      <link>https://pombagiras.com/pombagira-e-jurema-aproximacoes-diferencas-fronteiras/</link>
+      <guid isPermaLink="true">https://pombagiras.com/pombagira-e-jurema-aproximacoes-diferencas-fronteiras/</guid>
+      <pubDate>Wed, 25 Nov 2026 10:00:00 GMT</pubDate>
+      <dc:creator>Alexia Melusine</dc:creator>
+      <category>Estudos, Jurema e tradições religiosas</category>
+      <description>Pombagira pertence à Jurema? Um estudo sobre encontros, Mestras, vocabulários compartilhados e as fronteiras entre Umbanda, Quimbanda e Jurema.</description>
+      <media:content url="https://pombagiras.com/pombagira-e-jurema-aproximacoes-diferencas-fronteiras/capa.jpg" medium="image" />
+    </item>
     <item>
       <title>A Pombagira e a ancestralidade: memória, raízes familiares e herança espiritual</title>
       <link>https://pombagiras.com/a-pombagira-e-a-ancestralidade/</link>
