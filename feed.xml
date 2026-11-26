@@ -10,13 +10,23 @@
     <description>Portal de Desmistificação, Antropologia, Arte &amp; Filosofia Ancestral das Guardiãs de Umbanda e Quimbanda.</description>
     <language>pt-BR</language>
     <copyright>© 2026 Pombagiras.com. Todos os direitos reservados.</copyright>
-    <lastBuildDate>Wed, 25 Nov 2026 10:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 21:00:00 GMT</lastBuildDate>
     <atom:link href="https://pombagiras.com/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://cdn.pombagiras.com/assets/favicon-round-512.png</url>
       <title>Pombagiras.com</title>
       <link>https://pombagiras.com/</link>
     </image>
+    <item>
+      <title>Pombagira Sete Saias e Pombagira Cigana: Alegria, Liberdade, Prosperidade e os Caminhos do Feminino</title>
+      <link>https://pombagiras.com/pombagira-sete-saias-e-pombagira-cigana/</link>
+      <guid isPermaLink="true">https://pombagiras.com/pombagira-sete-saias-e-pombagira-cigana/</guid>
+      <pubDate>Wed, 25 Nov 2026 21:00:00 GMT</pubDate>
+      <dc:creator>Alexia Melusine</dc:creator>
+      <category>Pombagiras, espiritualidade e fundamentos religiosos</category>
+      <description>Sete Saias e Pombagira Cigana: alegria como resistência e liberdade de escolher o próprio caminho, sem reduzir nenhuma das duas a um estereótipo.</description>
+      <media:content url="https://pombagiras.com/pombagira-sete-saias-e-pombagira-cigana/capa.jpg" medium="image" />
+    </item>
     <item>
       <title>Pombagira e a Jurema: aproximações, diferenças e fronteiras entre tradições</title>
       <link>https://pombagiras.com/pombagira-e-jurema-aproximacoes-diferencas-fronteiras/</link>
