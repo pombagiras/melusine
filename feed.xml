@@ -10,13 +10,23 @@
     <description>Portal de Desmistificação, Antropologia, Arte &amp; Filosofia Ancestral das Guardiãs de Umbanda e Quimbanda.</description>
     <language>pt-BR</language>
     <copyright>© 2026 Pombagiras.com. Todos os direitos reservados.</copyright>
-    <lastBuildDate>Thu, 26 Nov 2026 10:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 10:00:00 GMT</lastBuildDate>
     <atom:link href="https://pombagiras.com/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://cdn.pombagiras.com/assets/favicon-round-512.png</url>
       <title>Pombagiras.com</title>
       <link>https://pombagiras.com/</link>
     </image>
+    <item>
+      <title>Logun Edé e Oxumarê: dualidade, transformação e a diversidade das expressões do sagrado</title>
+      <link>https://pombagiras.com/logun-ede-oxumare-dualidade-genero-transformacao/</link>
+      <guid isPermaLink="true">https://pombagiras.com/logun-ede-oxumare-dualidade-genero-transformacao/</guid>
+      <pubDate>Fri, 27 Nov 2026 10:00:00 GMT</pubDate>
+      <dc:creator>Alexia Melusine</dc:creator>
+      <category>Estudos, Orixás e diversidade de gênero</category>
+      <description>Logun Edé e Oxumarê: dualidade, transformação e diversidade — um estudo sobre os Orixás e o diálogo respeitoso com a diversidade de gênero.</description>
+      <media:content url="https://pombagiras.com/logun-ede-oxumare-dualidade-genero-transformacao/capa.jpg" medium="image" />
+    </item>
     <item>
       <title>O que acontece entre uma gira e outra? O cotidiano invisível das Pombagiras, dos terreiros e de quem mantém a vida espiritual em movimento</title>
       <link>https://pombagiras.com/o-que-acontece-entre-uma-gira-e-outra/</link>
